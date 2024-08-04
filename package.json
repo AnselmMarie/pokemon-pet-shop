@@ -6,20 +6,6 @@
     "prepare": "husky"
   },
   "private": true,
-  "lint-staged": {
-    "./apps/api/src/**/*.{js,ts,tsx}": "eslint --fix",
-    "./apps/api/src/**/*.{css,scss}": "stylelint --fix",
-    "./apps/mobile-app/src/**/*.{js,ts,tsx}": "eslint --fix",
-    "./apps/mobile-app/src/**/*.{css,scss}": "stylelint --fix",
-    "./apps/web-app/src/**/*.{js,ts,tsx}": "eslint --fix",
-    "./apps/web-app/src/**/*.{css,scss}": "stylelint --fix",
-    "./apps/web-design-system/src/**/*.{js,ts,tsx}": "eslint --fix",
-    "./apps/web-design-system/src/**/*.{css,scss}": "stylelint --fix",
-    "./libs/ui/src/**/*.{js,ts,tsx}": "eslint --fix",
-    "./libs/ui/src/**/*.{css,scss}": "stylelint --fix",
-    "./libs/utils/src/**/*.{js,ts,tsx}": "eslint --fix",
-    "./libs/typing/src/**/*.{js,ts,tsx}": "eslint --fix"
-  },
   "dependencies": {
     "@expo/metro-config": "~0.18.1",
     "@expo/metro-runtime": "~3.2.1",
@@ -93,7 +79,7 @@
     "babel-preset-expo": "~11.0.0",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-playwright": "^0.15.3",
     "eslint-plugin-react": "7.32.2",

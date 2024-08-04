@@ -1,0 +1,20 @@
+{
+  "./apps/**/*.ts(x)": [
+    "prettier --write",
+    "eslint --fix"
+  ],
+  "./libs/**/*.ts(x)": [
+    "prettier --write",
+    "eslint --fix"
+  ],
+  "./apps/**/*.html": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+    "./libs/**/*.html": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "./apps/**/*.css": ["prettier --write", "stylelint --write"],
+  "./libs/**/*.css": ["prettier --write", "stylelint --write"]
+}
