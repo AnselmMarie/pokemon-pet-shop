@@ -1,0 +1,8 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "ignoreFiles": [],
+  "rules": {
+    "no-descending-specificity": null,
+    "selector-class-pattern": "(([a-z]+[-]{2}[a-z]+([-]{1}[a-z]*)*)|([a-z]+([-]{1}[a-z]+)*))"
+  }
+}
