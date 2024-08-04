@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pokemon-pet-shop/typing": ["libs/typing/src/index.ts"],
+      "@pokemon-pet-shop/ui": ["libs/ui/src/index.ts"],
+      "@pokemon-pet-shop/utils": ["libs/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
