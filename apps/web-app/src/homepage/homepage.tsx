@@ -1,7 +1,7 @@
 const Homepage = () => {
   return (
     <div>
-      <div>header</div>
+      <header>header</header>
       <div>body</div>
       <div>footer</div>
     </div>
