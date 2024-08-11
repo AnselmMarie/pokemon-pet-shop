@@ -1,2 +1,2 @@
-export * from './lib/interface';
-export * from './lib/types';
+export * from './lib-base/interface';
+export * from './lib-base/types';
