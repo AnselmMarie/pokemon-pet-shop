@@ -1,4 +1,4 @@
-import UiCard from './card.view';
+import UiCard from './pokemon.card.view';
 
 export { UiCard };
 // export * from './card.enum';
