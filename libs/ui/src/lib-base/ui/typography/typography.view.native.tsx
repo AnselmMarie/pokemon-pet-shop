@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { memo, PropsWithChildren, ReactElement } from 'react';
 
 import { Text } from 'react-native';
 
@@ -11,4 +11,4 @@ const Typography = ({
   return <Text style={className}>{children}</Text>;
 };
 
-export default Typography;
+export default memo(Typography);

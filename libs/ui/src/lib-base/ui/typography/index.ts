@@ -1,4 +1,4 @@
-import Typography from './typography';
+import UiTypography from './typography.view';
 
-export { Typography };
+export { UiTypography };
 export * from './typography.enum';

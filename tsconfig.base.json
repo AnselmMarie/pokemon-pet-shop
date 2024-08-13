@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pokemon-pet-shop/assets": ["libs/assets/*"],
+      "@pokemon-pet-shop/assets": ["libs/assets/src/index.ts"],
       "@pokemon-pet-shop/hooks": ["libs/hooks/src/index.ts"],
       "@pokemon-pet-shop/typing": ["libs/typing/src/index.ts"],
       "@pokemon-pet-shop/typing/web": ["libs/typing/src/index_web.ts"],

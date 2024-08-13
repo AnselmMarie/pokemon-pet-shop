@@ -1,49 +1,49 @@
-import { ElementLayout, Typography } from '@pokemon-pet-shop/ui';
+import { UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
 import { View, Text } from 'react-native';
 
 export const Homepage = () => {
   return (
-    <View>
-      <ElementLayout>
+    <UiElementLayout>
+      <UiElementLayout>
         {/* <View className="logo" />
         <View></View>
         <View className="shoppingIcon" /> */}
-      </ElementLayout>
+      </UiElementLayout>
 
-      <ElementLayout>
-        <View></View>
+      <UiElementLayout>
+        <UiElementLayout></UiElementLayout>
         {/* <Image className="image" /> */}
-        <View>
-          <View>
-            <View>
-              <Typography>Basic Pokemon</Typography>
-              <Typography>NO. 001</Typography>
-            </View>
-            <Typography>Bulbasaur</Typography>
-          </View>
+        <UiElementLayout>
+          <UiElementLayout>
+            <UiElementLayout>
+              <UiTypography>Basic Pokemon</UiTypography>
+              <UiTypography>NO. 001</UiTypography>
+            </UiElementLayout>
+            <UiTypography>Bulbasaur</UiTypography>
+          </UiElementLayout>
 
-          <View>
-            <View></View>
-            <View>
-              <Typography>Razor Wind</Typography>
-            </View>
-          </View>
+          <UiElementLayout>
+            <UiElementLayout></UiElementLayout>
+            <UiElementLayout>
+              <UiTypography>Razor Wind</UiTypography>
+            </UiElementLayout>
+          </UiElementLayout>
 
-          <View>
-            <View>
-              <Typography>Get Pet</Typography>
-            </View>
-            <View>
-              <Typography>Details</Typography>
-            </View>
-          </View>
-        </View>
-      </ElementLayout>
+          <UiElementLayout>
+            <UiElementLayout>
+              <UiTypography>Get Pet</UiTypography>
+            </UiElementLayout>
+            <UiElementLayout>
+              <UiTypography>Details</UiTypography>
+            </UiElementLayout>
+          </UiElementLayout>
+        </UiElementLayout>
+      </UiElementLayout>
 
-      <View>
-        <Text>footer</Text>
-      </View>
-    </View>
+      <UiElementLayout>
+        <UiTypography>footer</UiTypography>
+      </UiElementLayout>
+    </UiElementLayout>
   );
 };
 

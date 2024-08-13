@@ -1,4 +1,4 @@
-import { createElement, PropsWithChildren, ReactElement } from 'react';
+import { createElement, memo, PropsWithChildren, ReactElement } from 'react';
 
 import { TypographyTypeEnum } from './typography.enum';
 import { TypographyProps } from './typography.interface';
@@ -11,4 +11,4 @@ const Typography = ({
   return createElement(typographyType, { className }, children);
 };
 
-export default Typography;
+export default memo(Typography);

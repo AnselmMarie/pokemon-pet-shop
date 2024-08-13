@@ -9,9 +9,11 @@
 /* Ui */
 export * from './lib-base/ui/element-layout';
 export * from './lib-base/ui/typography';
-// export * from './lib/ui/error-fallback';
-// export * from './lib/ui/screen-loader';
-// export * from './lib/ui/page-content';
+export * from './lib-base/ui/image';
+export * from './lib-base/ui/card';
+export * from './lib-base/ui/icon';
+export * from './lib-base/ui/input';
+export * from './lib-base/ui/switch';
 // export * from './lib/ui/status-body-message';
 // export * from './lib/ui/card';
 // export * from './lib/ui/steps';
@@ -37,7 +39,6 @@ export * from './lib-base/ui/typography';
 // export * from './lib/ui/checkbox';
 // export * from './lib/ui/alert';
 // export * from './lib/ui/hor-toggle-header';
-// export * from 'tamagui';
 // export * from './mobile-header';
 // export * from './slider';
 // export * from './file-upload';

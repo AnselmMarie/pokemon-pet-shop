@@ -1,4 +1,4 @@
-import ElementLayout from './element.layout';
+import UiElementLayout from './element.layout.view';
 
-export { ElementLayout };
+export { UiElementLayout };
 export * from './element.layout.enum';

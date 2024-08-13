@@ -1,0 +1,29 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  align-items: center;
+  box-shadow: 0 2px 8px 1px rgba(6, 42, 73, 0.15);
+  /* background-color: #f0f0f0; */
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  margin: 0 15px;
+  padding: 10px 15px;
+  align-items: center;
+}
+
+.navTitle {
+  margin-right: 10px;
+}
+
+.navBg {
+  border-radius: 100px;
+  background: grey;
+}
+
+.icon {
+  margin-left: 15px;
+}
