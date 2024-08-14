@@ -10,24 +10,33 @@ import styles from './pokemon.card.module.css';
 const PokemonCard = ({ classNameCardWrapper = '' }: CardProps): ReactElement => {
   return (
     <UiElementLayout className={styles.cardWrapper}>
-      <UiElementLayout className={styles.hp}></UiElementLayout>
+      <UiElementLayout className={styles.hp}>45 HP</UiElementLayout>
       <div className="image" />
 
       <UiElementLayout className={styles.cardContentWrapper}>
-        <UiElementLayout className={styles.cardHeadlineWrapper}>
-          <UiTypography typographyType={TypographyTypeEnum.H4}>Basic Pokemon</UiTypography>
-          <UiTypography typographyType={TypographyTypeEnum.H4}>NO. 001</UiTypography>
+        <UiElementLayout className={styles.cardSubHeadlineWrapper}>
+          <UiTypography className={styles.cardSubHeadline} typographyType={TypographyTypeEnum.SPAN}>
+            Basic Pokemon
+          </UiTypography>
+          <UiTypography className={styles.cardSubHeadline} typographyType={TypographyTypeEnum.SPAN}>
+            NO. 001
+          </UiTypography>
         </UiElementLayout>
-        <UiTypography typographyType={TypographyTypeEnum.H1}>Bulbasaur</UiTypography>
+        <UiTypography className={styles.cardHeadline} typographyType={TypographyTypeEnum.H1}>
+          Bulbasaur
+        </UiTypography>
 
-        <UiElementLayout>
-          <UiElementLayout></UiElementLayout>
-          <UiTypography>Razor Wind</UiTypography>
+        <UiElementLayout className={styles.atkWrapper}>
+          <UiElementLayout className={styles.atkLine}></UiElementLayout>
+          <UiElementLayout className={styles.atkCircle}></UiElementLayout>
+          <UiTypography className={styles.atkText}>Razor Wind</UiTypography>
         </UiElementLayout>
 
-        <UiElementLayout>
-          <UiButton>Get Pet</UiButton>
-          <UiButton type={ButtonTypeEnum.SECONDARY}>Details</UiButton>
+        <UiElementLayout className={styles.btnWrapper}>
+          <UiButton className={styles.btn}>Get Pet</UiButton>
+          <UiButton className={styles.btn} type={ButtonTypeEnum.SECONDARY}>
+            Details
+          </UiButton>
         </UiElementLayout>
       </UiElementLayout>
     </UiElementLayout>

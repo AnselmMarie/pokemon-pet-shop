@@ -1,2 +1,72 @@
 .cardWrapper {
+  width: 250px;
+  height: 367px;
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.hp {
+  text-align: right;
+}
+
+.cardSubHeadlineWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardSubHeadline {
+  font-size: 9px;
+}
+
+.cardHeadline {
+  font-size: 16px;
+}
+
+.cardContentWrapper {
+  height: 150px;
+  background: blue;
+  color: white;
+  align-items: end;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.atkWrapper {
+  display: flex;
+  height: 17px;
+  justify-items: center;
+  width: 100%;
+  align-items: center;
+  margin-left: -15px;
+}
+
+.atkLine {
+  background: purple;
+  height: 100%;
+  width: 30px;
+}
+
+.atkCircle {
+  background: darkcyan;
+  height: 17px;
+  width: 17px;
+  border-radius: 100px;
+  margin-left: -10px;
+  margin-right: 5px;
+}
+
+.atkText {
+  font-size: 10px;
+}
+
+.btnWrapper {
+  display: flex;
+}
+
+.btn {
+  width: 100%;
 }
