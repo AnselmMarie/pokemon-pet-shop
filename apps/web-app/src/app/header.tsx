@@ -7,6 +7,8 @@ import {
   IconTypeEnum,
   UiInput,
   UiSwitch,
+  UiTypography,
+  TypographyTypeEnum,
 } from '@pokemon-pet-shop/ui';
 import classNames from 'classnames';
 
@@ -21,9 +23,9 @@ const Header = () => {
         layoutType={ElementLayoutTypeEnum.NAV}
         className={classNames(styles.nav, styles.navBg)}
       >
-        <UiElementLayout layoutType={ElementLayoutTypeEnum.SPAN} className={styles.navTitle}>
+        <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.navTitle}>
           PETS
-        </UiElementLayout>
+        </UiTypography>
         <UiInput appendIcon={IconTypeEnum.ICON_SEARCH} />
       </UiElementLayout>
 

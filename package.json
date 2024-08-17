@@ -6,6 +6,32 @@
     "prepare": "husky"
   },
   "private": true,
+  "lint-staged": {
+    "./apps/**/*.ts(x)": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "./libs/**/*.ts(x)": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "./apps/**/*.html": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "./libs/**/*.html": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "./apps/**/*.css": [
+      "prettier --write",
+      "stylelint --write"
+    ],
+    "./libs/**/*.css": [
+      "prettier --write",
+      "stylelint --write"
+    ]
+  },
   "dependencies": {
     "@expo/metro-config": "~0.18.1",
     "@expo/metro-runtime": "~3.2.1",
