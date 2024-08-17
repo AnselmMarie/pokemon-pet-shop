@@ -5,7 +5,8 @@
 // export * from './lib/providers';
 
 /* Ui */
-export * from './lib-base/ui/element-layout';
+export * from './lib-base/ui/element.layout';
+export * from './lib-base/ui/container.layout';
 export * from './lib-base/ui/typography';
 export * from './lib-base/ui/image';
 export * from './lib-base/ui/pokemon.card';

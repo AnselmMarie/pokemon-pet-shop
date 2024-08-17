@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 import { useController } from 'react-hook-form';
 
-import { UiElementLayout } from '../element-layout';
+import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
 import { InputTypeEnum } from './input.enum';

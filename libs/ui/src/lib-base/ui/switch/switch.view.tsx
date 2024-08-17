@@ -2,7 +2,7 @@ import { memo, ReactElement, useEffect, useMemo, useState } from 'react';
 
 import classnames from 'classnames';
 
-import { UiElementLayout } from '../element-layout';
+import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
 import { ThemeModeEnum } from './switch.enum';

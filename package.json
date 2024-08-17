@@ -7,27 +7,27 @@
   },
   "private": true,
   "lint-staged": {
-    "./apps/**/*.ts(x)": [
+    "apps/**/src/**/*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "eslint --fix"
     ],
-    "./libs/**/*.ts(x)": [
+    "libs/**/src/**/*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "eslint --fix"
     ],
-    "./apps/**/*.html": [
+    "apps/**/src/**/*.html": [
       "eslint --fix",
       "prettier --write"
     ],
-    "./libs/**/*.html": [
+    "libs/**/src/**/*.html": [
       "eslint --fix",
       "prettier --write"
     ],
-    "./apps/**/*.css": [
+    "apps/**/src/**/*.css": [
       "prettier --write",
       "stylelint --write"
     ],
-    "./libs/**/*.css": [
+    "libs/**/src/**/*.css": [
       "prettier --write",
       "stylelint --write"
     ]

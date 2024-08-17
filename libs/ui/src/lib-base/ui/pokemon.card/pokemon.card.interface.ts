@@ -1,3 +1,4 @@
 export interface CardProps {
-  classNameCardWrapper?: any;
+  data?: any;
+  dataDetail?: any;
 }

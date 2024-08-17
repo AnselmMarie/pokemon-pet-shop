@@ -1,6 +1,6 @@
 import { memo, ReactElement, useCallback, useMemo } from 'react';
 
-import ElementLayout from '../element-layout/element.layout.view';
+import ElementLayout from '../element.layout/element.layout.view';
 
 import { IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
