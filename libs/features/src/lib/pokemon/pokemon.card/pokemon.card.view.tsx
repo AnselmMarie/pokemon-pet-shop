@@ -1,22 +1,24 @@
 import { memo, ReactElement, useMemo } from 'react';
 
+import {
+  UiElementLayout,
+  UiImage,
+  UiIconPokeType,
+  UiTypography,
+  ButtonTypeEnum,
+  TypographyTypeEnum,
+  UiButton,
+} from '@pokemon-pet-shop/ui';
 import classNames from 'classnames';
-
-import { ButtonTypeEnum, UiButton } from '../button';
-import { UiElementLayout } from '../element.layout';
-import { UiIconPokeType } from '../icon.poke.type';
-import { UiImage } from '../image';
-import { UiTypography, TypographyTypeEnum } from '../typography';
 
 import { CardProps } from './pokemon.card.interface';
 import styles from './pokemon.card.module.css';
 
 const PokemonCard = ({ data = {}, dataDetail = {} }: CardProps): ReactElement => {
+  /** This needs to change once the apps calls multiple different detail */
   const getPokemonDetail = useMemo(() => {
     return dataDetail;
   }, [dataDetail]);
-
-  console.log('getPokemonDetail', getPokemonDetail?.types[0]?.type?.name);
 
   const getThemeClass = useMemo(() => {
     const typeName = getPokemonDetail?.types[0]?.type?.name;

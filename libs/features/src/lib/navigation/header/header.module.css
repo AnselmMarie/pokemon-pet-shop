@@ -1,8 +1,7 @@
 .headerWrapper {
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 10px 0;
   box-shadow: 0 2px 8px 1px rgba(6, 42, 73, 0.15);
-  /* background-color: #f0f0f0; */
 }
 
 .container {
@@ -29,12 +28,4 @@
 
 .icon {
   margin-left: 15px;
-}
-
-.contentWrapper {
-  display: flex;
-  align-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 25px;
 }
