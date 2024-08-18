@@ -14,3 +14,4 @@ export * from './lib-base/ui/icon';
 export * from './lib-base/ui/input';
 export * from './lib-base/ui/switch';
 export * from './lib-base/ui/button';
+export * from './lib-base/ui/icon.poke.type';

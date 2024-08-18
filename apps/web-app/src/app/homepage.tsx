@@ -13,6 +13,7 @@ const Homepage = () => {
     <div>
       <Header />
       <UiContainer className={styles.contentWrapper}>
+        {/** Use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction  */}
         {(pokemonList?.results || []).map((el: any): ReactElement => {
           return <UiPokemonCard key={el?.name} data={el} dataDetail={pokemonDetail} />;
         })}
