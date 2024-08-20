@@ -1,4 +1,4 @@
-import { memo, ReactElement, useMemo } from 'react';
+import { memo, ReactElement } from 'react';
 
 import {
   UiElementLayout,
@@ -8,35 +8,29 @@ import {
   ButtonTypeEnum,
   TypographyTypeEnum,
   UiButton,
+  UiCard,
 } from '@pokemon-pet-shop/ui';
 import classNames from 'classnames';
 
 import { CardProps } from './pokemon.card.interface';
 import styles from './pokemon.card.module.css';
+import usePokemonCard from './use.pokemon.card.logic';
 
 const PokemonCard = ({ data = {}, dataDetail = {} }: CardProps): ReactElement => {
-  /** This needs to change once the apps calls multiple different detail */
-  const getPokemonDetail = useMemo(() => {
-    return dataDetail;
-  }, [dataDetail]);
-
-  const getThemeClass = useMemo(() => {
-    const typeName = getPokemonDetail?.types[0]?.type?.name;
-    return `${typeName}Theme`;
-  }, [getPokemonDetail]);
+  const { getPokemonDetail, getThemeClass } = usePokemonCard(dataDetail);
 
   return (
-    <UiElementLayout
-      className={classNames(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}
-    >
-      <UiElementLayout className={styles.hp}>45 HP</UiElementLayout>
-      <UiImage
-        src={getPokemonDetail?.sprites?.other?.['official-artwork']?.front_default}
-        className={styles.image}
-        alt={`${data?.name} Image`}
-      />
+    <UiCard className={classNames(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
+      <UiElementLayout className={styles.imgCardWrapper}>
+        <UiElementLayout className={styles.price}>$500.00</UiElementLayout>
+        <UiImage
+          src={getPokemonDetail?.sprites?.other?.['official-artwork']?.front_default}
+          className={styles.image}
+          alt={`${data?.name} Image`}
+        />
+      </UiElementLayout>
 
-      <UiElementLayout className={styles.cardContentWrapper}>
+      <UiElementLayout className={styles.contentCardWrapper}>
         <UiElementLayout className={styles.cardContentTopWrapper}>
           <UiElementLayout className={styles.cardSubHeadlineWrapper}>
             <UiTypography
@@ -80,7 +74,7 @@ const PokemonCard = ({ data = {}, dataDetail = {} }: CardProps): ReactElement =>
           </UiButton>
         </UiElementLayout>
       </UiElementLayout>
-    </UiElementLayout>
+    </UiCard>
   );
 };
 

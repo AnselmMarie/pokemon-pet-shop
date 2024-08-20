@@ -10,6 +10,7 @@ import { SwitchProps } from './switch.interface';
 import styles from './switch.module.css';
 
 const Switch = ({
+  className,
   iconLeft,
   iconRight,
   defaultValue = ThemeModeEnum.LIGHT,
@@ -37,7 +38,7 @@ const Switch = ({
   }, []);
 
   return (
-    <UiElementLayout className={styles.switchWrapper}>
+    <UiElementLayout className={classnames(className, styles.switchWrapper)}>
       <UiIcon
         icon={iconLeft}
         size={20}

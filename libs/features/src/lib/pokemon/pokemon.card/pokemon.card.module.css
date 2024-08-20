@@ -1,22 +1,37 @@
 .cardWrapper {
-  width: 250px;
-  height: 367px;
+  min-width: 352px;
+  height: 154px;
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
 }
 
-.hp {
-  text-align: right;
+.imgCardWrapper {
+  max-width: 115px;
+  background: red;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.price {
+  text-align: center;
 }
 
 .image {
-  position: absolute;
-  width: 92%;
-  z-index: 0;
+  width: 100%;
+}
+
+.contentCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2px 10px 2px 10px;
 }
 
 .cardSubHeadlineWrapper {
@@ -25,26 +40,13 @@
 }
 
 .cardSubHeadline {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .cardHeadline {
-  font-size: 16px;
+  font-size: 18px;
 }
 
-.cardContentWrapper {
-  height: 150px;
-  align-items: end;
-  border-radius: 10px;
-  padding: 15px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.cardContentTopWrapper,
 .btnWrapper {
   width: 100%;
 }
@@ -55,20 +57,17 @@
   justify-items: center;
   width: 100%;
   align-items: center;
-  margin-left: -15px;
   margin-bottom: 5px;
 }
 
 .atkLine {
-  height: 100%;
-  width: 30px;
+  display: none;
 }
 
 .atkCircle {
   height: 17px;
   width: 17px;
   border-radius: 100px;
-  margin-left: -10px;
   margin-right: 5px;
   display: flex;
   justify-content: center;
@@ -76,7 +75,7 @@
 }
 
 .atkText {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .btnWrapper {
@@ -88,13 +87,116 @@
   width: 100%;
 }
 
+@media only screen and (min-width: 830px) {
+  .cardWrapper {
+    min-width: auto;
+    width: 250px;
+    height: 367px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .imgCardWrapper {
+    max-width: 100%;
+    background: none;
+    /* border-radius: 10px; */
+    display: block;
+    /* justify-content: none;
+    flex-direction: column; */
+  }
+
+  .price {
+    text-align: right;
+  }
+
+  .image {
+    position: absolute;
+    width: 88%;
+    z-index: 0;
+  }
+
+  .cardSubHeadlineWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cardSubHeadline {
+    font-size: 9px;
+  }
+
+  .cardHeadline {
+    font-size: 16px;
+  }
+
+  .contentCardWrapper {
+    height: 150px;
+    align-items: end;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cardContentTopWrapper,
+  .btnWrapper {
+    width: 100%;
+  }
+
+  .atkWrapper {
+    display: flex;
+    height: 17px;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+    margin-left: -15px;
+    margin-bottom: 5px;
+  }
+
+  .atkLine {
+    height: 100%;
+    width: 30px;
+    display: block;
+  }
+
+  .atkCircle {
+    height: 17px;
+    width: 17px;
+    border-radius: 100px;
+    margin-left: -10px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .atkText {
+    font-size: 10px;
+  }
+
+  .btnWrapper {
+    display: flex;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
 /**
 Grass Theme
 **/
 .grassThemeWrapper {
   background: green;
 
-  .cardContentWrapper {
+  .contentCardWrapper {
     color: white;
     background: darkgreen;
   }

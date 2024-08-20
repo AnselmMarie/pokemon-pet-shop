@@ -26,6 +26,23 @@
   background: grey;
 }
 
-.icon {
+.iconCart {
   margin-left: 15px;
+}
+
+.logo,
+.switchTheme {
+  display: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .logo {
+    display: block;
+  }
+  .iconMenu {
+    display: none;
+  }
+  .switchTheme {
+    display: flex;
+  }
 }

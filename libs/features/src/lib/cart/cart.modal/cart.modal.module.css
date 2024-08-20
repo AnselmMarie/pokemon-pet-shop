@@ -1,0 +1,32 @@
+/* .dropdownWrapper {
+  position: relative;
+} */
+
+.modal {
+  height: 100vh;
+  width: 400px;
+  right: 0;
+  /* display: none; */
+}
+
+.dropdownTop {
+  padding: 15px;
+  height: calc(100% - 60px);
+}
+
+.dropdownHeadline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdownBtm {
+  height: 60px;
+  background-color: grey;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}

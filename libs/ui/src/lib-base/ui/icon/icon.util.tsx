@@ -4,6 +4,8 @@ import {
   IconSun,
   IconSearch,
   IconCaretDownFilled,
+  IconX,
+  IconMenu2,
 } from '@tabler/icons-react';
 
 export const IconMap = {
@@ -12,4 +14,6 @@ export const IconMap = {
   IconSun,
   IconSearch,
   IconCaretDownFilled,
+  IconX,
+  IconMenu2,
 };

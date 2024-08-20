@@ -2,26 +2,19 @@ import { memo, PropsWithChildren, ReactElement } from 'react';
 
 import classNames from 'classnames';
 
-import { ElementLayoutTypeEnum, UiElementLayout } from '../element.layout';
+import { UiCard } from '../card';
+import { UiElementLayout } from '../element.layout';
 
-import { ElementLayoutProps } from './modal.interface';
+import { ModalProps } from './modal.interface';
 import styles from './modal.module.css';
 
 const Modal = ({
   className = '',
   children = null,
-}: PropsWithChildren<ElementLayoutProps>): ReactElement => {
+}: PropsWithChildren<ModalProps>): ReactElement => {
   return (
-    <UiElementLayout
-      layoutType={ElementLayoutTypeEnum.DIV}
-      className={classNames(className, styles.dropShadow)}
-    >
-      <UiElementLayout
-        layoutType={ElementLayoutTypeEnum.DIV}
-        className={classNames(className, styles.modal)}
-      >
-        {children}
-      </UiElementLayout>
+    <UiElementLayout className={classNames(className, styles.dropShadow)}>
+      <UiCard className={classNames(className, styles.modal)}>{children}</UiCard>
     </UiElementLayout>
   );
 };
