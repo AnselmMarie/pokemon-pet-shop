@@ -7,29 +7,33 @@ import {
   UiTypography,
   UiModal,
   ModalAlignmentEnum,
+  UiSwitch,
 } from '@pokemon-pet-shop/ui';
 
-import styles from './cart.modal.module.css';
+import styles from './nav.mobile.module.css';
 
-const CartModal = ({ isModalShown = false }: any): ReactElement => {
+const NavMobileModal = ({ isModalShown = false }: any): ReactElement => {
   return (
     <UiModal
       isModalShown={isModalShown}
       classNameModal={styles.modal}
-      modalAlignment={ModalAlignmentEnum.RIGHT}
+      modalAlignment={ModalAlignmentEnum.LEFT}
     >
       <UiElementLayout className={styles.dropdownTop}>
         <UiElementLayout className={styles.dropdownHeadline}>
-          <UiTypography>Pokecart</UiTypography>
+          <UiTypography>Menu</UiTypography>
           <UiIcon icon={IconTypeEnum.ICON_X} />
         </UiElementLayout>
       </UiElementLayout>
       <UiElementLayout className={styles.dropdownBtm}>
-        <UiTypography>Total</UiTypography>
-        <UiTypography>$550.00</UiTypography>
+        <UiSwitch
+          className={styles.switchTheme}
+          iconLeft={IconTypeEnum.ICON_SUN}
+          iconRight={IconTypeEnum.ICON_MOON}
+        />
       </UiElementLayout>
     </UiModal>
   );
 };
 
-export default CartModal;
+export default NavMobileModal;
