@@ -32,11 +32,11 @@ const Header = () => {
           <UiInput appendIcon={IconTypeEnum.ICON_SEARCH} />
         </UiElementLayout>
 
-        <UiSwitch
+        {/* <UiSwitch
           className={styles.switchTheme}
           iconLeft={IconTypeEnum.ICON_SUN}
           iconRight={IconTypeEnum.ICON_MOON}
-        />
+        /> */}
 
         <UiIcon classNameIcon={styles.iconCart} />
       </UiContainer>

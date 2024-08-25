@@ -1,19 +1,17 @@
-import {
-  IconShoppingCart,
-  IconMoon,
-  IconSun,
-  IconSearch,
-  IconCaretDownFilled,
-  IconX,
-  IconMenu2,
-} from '@tabler/icons-react';
+import { IconCaretDown } from './icons/icon.caret.down';
+import { IconMenu } from './icons/icon.menu';
+import { IconMoon } from './icons/icon.moon';
+import { IconSearch } from './icons/icon.search';
+import { IconShoppingCart } from './icons/icon.shopping.cart';
+import { IconSun } from './icons/icon.sun';
+import { IconX } from './icons/icon.x';
 
 export const IconMap = {
-  IconShoppingCart,
-  IconMoon,
+  IconCaretDown,
+  IconX,
   IconSun,
   IconSearch,
-  IconCaretDownFilled,
-  IconX,
-  IconMenu2,
+  IconMoon,
+  IconMenu,
+  IconShoppingCart,
 };

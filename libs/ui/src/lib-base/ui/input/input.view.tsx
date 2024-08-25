@@ -5,6 +5,7 @@ import { useController } from 'react-hook-form';
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
+import InputElement from './input.element.view';
 import { InputTypeEnum } from './input.enum';
 import { InputProps } from './input.interface';
 import styles from './input.module.css';
@@ -24,7 +25,7 @@ const Input = ({
 
   return (
     <UiElementLayout className={styles.inputWrapper}>
-      <input
+      <InputElement
         className={styles.input}
         // id={id}
         // marginBottom={helper || errorMessage ? '$2' : '$5'}

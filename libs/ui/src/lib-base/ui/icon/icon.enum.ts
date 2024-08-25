@@ -5,5 +5,5 @@ export enum IconTypeEnum {
   ICON_SEARCH = 'IconSearch',
   ICON_CART_DOWN = 'IconCaretDownFilled',
   ICON_X = 'IconX',
-  ICON_MENU = 'IconMenu2',
+  ICON_MENU = 'IconMenu',
 }

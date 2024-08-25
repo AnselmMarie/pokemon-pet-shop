@@ -1,14 +1,16 @@
 import { memo, ReactElement, useCallback, useMemo } from 'react';
 
-import ElementLayout from '../element.layout/element.layout.view';
+import { UiElementLayout } from '../element.layout';
 
 import { IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
 import { IconMap } from './icon.util';
 
+// https://chatgpt.com/c/77e56b54-6747-43e0-8408-f21cfc9137e0
 const Icon = ({
   icon = IconTypeEnum.ICON_SHOPPING_CART,
   size = 36,
+  color = 'none',
   classNameIcon = null,
   classNameWrapper = null,
   displayWrapper = false,
@@ -35,20 +37,19 @@ const Icon = ({
     return (
       <IconComponent
         size={size}
-        color="red"
-        stroke={2}
+        fill={color}
         className={classNameIcon}
         onClick={iconClick}
         // strokeLinejoin="miter" // override other SVG props
       />
     );
-  }, [size, IconComponent, classNameIcon, iconClick]);
+  }, [size, color, IconComponent, classNameIcon, iconClick]);
 
   if (displayWrapper) {
     return (
-      <ElementLayout className={classNameWrapper} onClick={wrapperClick}>
+      <UiElementLayout className={classNameWrapper} onClick={wrapperClick}>
         {renderIcon}
-      </ElementLayout>
+      </UiElementLayout>
     );
   }
   return renderIcon;
