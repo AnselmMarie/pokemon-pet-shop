@@ -1,6 +1,6 @@
 import { memo, PropsWithChildren, ReactElement } from 'react';
 
-import classNames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiCard } from '../card';
 import { UiElementLayout } from '../element.layout';
@@ -19,9 +19,9 @@ const Modal = ({
   if (!isModalShown) return null;
   return (
     <UiElementLayout
-      className={classNames(classNameShadow, styles.dropShadow, styles[modalAlignment])}
+      className={classNamesUtil(classNameShadow, styles.dropShadow, styles[modalAlignment])}
     >
-      <UiCard className={classNames(classNameModal, styles.modal)}>{children}</UiCard>
+      <UiCard className={classNamesUtil(classNameModal, styles.modal)}>{children}</UiCard>
     </UiElementLayout>
   );
 };

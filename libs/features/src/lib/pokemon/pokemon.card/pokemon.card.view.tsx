@@ -10,7 +10,7 @@ import {
   UiButton,
   UiCard,
 } from '@pokemon-pet-shop/ui';
-import classNames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { CardProps } from './pokemon.card.interface';
 import styles from './pokemon.card.module.css';
@@ -20,7 +20,7 @@ const PokemonCard = ({ data = {}, dataDetail = {} }: CardProps): ReactElement =>
   const { getPokemonDetail, getThemeClass } = usePokemonCard(dataDetail);
 
   return (
-    <UiCard className={classNames(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
+    <UiCard className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
       <UiElementLayout className={styles.imgCardWrapper}>
         <UiElementLayout className={styles.price}>$500.00</UiElementLayout>
         <UiImage

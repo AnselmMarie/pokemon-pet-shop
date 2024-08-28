@@ -1,6 +1,6 @@
 import { memo, PropsWithChildren, ReactElement, useMemo } from 'react';
 
-import classnames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { ButtonTypeEnum } from './button.enum';
 import { ButtonProps } from './button.interface';
@@ -23,7 +23,7 @@ const Button = ({
   }, [type]);
 
   return (
-    <button className={classnames(className, styles.button, getTypeStyles)} onClick={onClick}>
+    <button className={classNamesUtil(className, styles.button, getTypeStyles)} onClick={onClick}>
       {children}
     </button>
   );

@@ -1,21 +1,18 @@
 import { memo, PropsWithChildren, ReactElement } from 'react';
 
-import classNames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
-import { ElementLayoutTypeEnum, UiElementLayout } from '../element.layout';
+import { UiElementLayout } from '../element.layout';
 
 import { ElementLayoutProps } from './container.layout.interface';
-import styles from './container.layout.module.css';
+import { styles } from './container.layout.module';
 
 const ContainerLayout = ({
   className = '',
   children = null,
 }: PropsWithChildren<ElementLayoutProps>): ReactElement => {
   return (
-    <UiElementLayout
-      layoutType={ElementLayoutTypeEnum.DIV}
-      className={classNames(className, styles.container)}
-    >
+    <UiElementLayout className={classNamesUtil(className, styles.container)}>
       {children}
     </UiElementLayout>
   );

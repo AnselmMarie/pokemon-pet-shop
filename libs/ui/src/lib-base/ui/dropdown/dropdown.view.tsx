@@ -1,6 +1,6 @@
 import { memo, PropsWithChildren, ReactElement } from 'react';
 
-import classNames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiCard } from '../card';
 
@@ -11,7 +11,7 @@ const Dropdown = ({
   className = '',
   children = null,
 }: PropsWithChildren<ModalProps>): ReactElement => {
-  return <UiCard className={classNames(className, styles.dropdown)}>{children}</UiCard>;
+  return <UiCard className={classNamesUtil(className, styles.dropdown)}>{children}</UiCard>;
 };
 
 export default memo(Dropdown);

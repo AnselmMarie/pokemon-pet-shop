@@ -1,6 +1,6 @@
 import { memo, PropsWithChildren, ReactElement } from 'react';
 
-import classNames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiElementLayout } from '../element.layout';
 
@@ -9,7 +9,7 @@ import styles from './card.module.css';
 
 const Modal = ({ className = '', children = null }: PropsWithChildren<CardProps>): ReactElement => {
   return (
-    <UiElementLayout className={classNames(className, styles.card)}>{children}</UiElementLayout>
+    <UiElementLayout className={classNamesUtil(className, styles.card)}>{children}</UiElementLayout>
   );
 };
 

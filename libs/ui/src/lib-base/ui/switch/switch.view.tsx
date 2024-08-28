@@ -1,13 +1,13 @@
 import { memo, ReactElement, useEffect, useMemo, useState } from 'react';
 
-import classnames from 'classnames';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
 import { ThemeModeEnum } from './switch.enum';
 import { SwitchProps } from './switch.interface';
-import styles from './switch.module.css';
+import { styles } from './switch.module';
 
 const Switch = ({
   className,
@@ -38,22 +38,22 @@ const Switch = ({
   }, []);
 
   return (
-    <UiElementLayout className={classnames(className, styles.switchWrapper)}>
+    <UiElementLayout className={classNamesUtil(className, styles.switchWrapper)}>
       <UiIcon
         icon={iconLeft}
         size={20}
-        classNameIcon={classnames(styles.icon, styles.iconLeft)}
+        classNameIcon={classNamesUtil(styles.icon, styles.iconLeft)}
         isDisabled={theme === ThemeModeEnum.LIGHT}
         onClick={turnLightOnClick}
       />
       <UiIcon
         icon={iconRight}
         size={20}
-        classNameIcon={classnames(styles.icon, styles.iconRight)}
+        classNameIcon={classNamesUtil(styles.icon, styles.iconRight)}
         isDisabled={theme === ThemeModeEnum.DARK}
         onClick={turnDarkOnClick}
       />
-      <UiElementLayout className={classnames(styles.iconCircle, getCircleThemeStyle)} />
+      <UiElementLayout className={classNamesUtil(styles.iconCircle, getCircleThemeStyle)} />
     </UiElementLayout>
   );
 };
