@@ -5,12 +5,12 @@ import { classNamesUtil } from '@pokemon-pet-shop/utils';
 import { UiElementLayout } from '../element.layout';
 
 import { CardProps } from './card.interface';
-import styles from './card.module.css';
+import { styles } from './card.module';
 
-const Modal = ({ className = '', children = null }: PropsWithChildren<CardProps>): ReactElement => {
+const Card = ({ className = '', children = null }: PropsWithChildren<CardProps>): ReactElement => {
   return (
     <UiElementLayout className={classNamesUtil(className, styles.card)}>{children}</UiElementLayout>
   );
 };
 
-export default memo(Modal);
+export default memo(Card);

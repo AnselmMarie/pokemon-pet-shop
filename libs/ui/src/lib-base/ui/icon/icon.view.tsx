@@ -6,7 +6,6 @@ import { IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
 import { IconMap } from './icon.util';
 
-// https://chatgpt.com/c/77e56b54-6747-43e0-8408-f21cfc9137e0
 const Icon = ({
   icon = IconTypeEnum.ICON_SHOPPING_CART,
   size = 36,

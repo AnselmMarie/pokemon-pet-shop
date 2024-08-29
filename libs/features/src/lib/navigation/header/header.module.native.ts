@@ -16,8 +16,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   nav: {
-    width: '100%',
     display: 'flex',
+    flexDirection: 'row',
+    flexGrow: 1,
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 15,

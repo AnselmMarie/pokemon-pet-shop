@@ -10,6 +10,7 @@ import {
   UiTypography,
   TypographyTypeEnum,
   UiContainer,
+  UiHideInMobile,
 } from '@pokemon-pet-shop/ui';
 
 import { styles } from './header.module';
@@ -28,11 +29,13 @@ const Header = () => {
           <UiInput appendIcon={IconTypeEnum.ICON_SEARCH} />
         </UiElementLayout>
 
-        <UiSwitch
-          className={styles.switchTheme}
-          iconLeft={IconTypeEnum.ICON_SUN}
-          iconRight={IconTypeEnum.ICON_MOON}
-        />
+        <UiHideInMobile>
+          <UiSwitch
+            className={styles.switchTheme}
+            iconLeft={IconTypeEnum.ICON_SUN}
+            iconRight={IconTypeEnum.ICON_MOON}
+          />
+        </UiHideInMobile>
 
         <UiIcon classNameIcon={styles.iconCart} />
       </UiContainer>

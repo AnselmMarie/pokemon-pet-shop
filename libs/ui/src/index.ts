@@ -17,3 +17,4 @@ export * from './lib-base/ui/icon.poke.type';
 export * from './lib-base/ui/modal';
 export * from './lib-base/ui/card';
 export * from './lib-base/ui/dropdown';
+export * from './lib-base/ui/hide.in.mobile';

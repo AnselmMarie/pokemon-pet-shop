@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from 'react-native';
+import 'react-native-svg';
 
 import Homepage from './homepage';
 
