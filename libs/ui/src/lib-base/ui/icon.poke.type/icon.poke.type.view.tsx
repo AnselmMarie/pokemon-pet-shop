@@ -8,8 +8,7 @@ import { iconPokeSvgMap } from './icon.poke.type.util';
 
 const IconPokeType = ({
   type = IconPokeTypeEnum.GRASS,
-  width = '',
-  height = '',
+  size = '',
   className = null,
 }: IconPokeTypeProps): ReactElement => {
   const getIcon = useMemo(() => {
@@ -21,8 +20,8 @@ const IconPokeType = ({
       src={getIcon}
       title={`${type} Icon`}
       beforeInjection={(svg) => {
-        svg.setAttribute('width', width);
-        svg.setAttribute('height', height);
+        svg.setAttribute('width', size);
+        svg.setAttribute('height', size);
       }}
       className={className}
     />

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 
+import { UiHeader } from '@pokemon-pet-shop/features';
 import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import 'react-native-svg';
 
@@ -16,6 +17,7 @@ export const App = () => {
           flex: 1,
         }}
       >
+        <UiHeader />
         <ScrollView
           ref={(ref) => {
             scrollViewRef.current = ref;

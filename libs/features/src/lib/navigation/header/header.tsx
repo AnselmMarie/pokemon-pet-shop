@@ -19,7 +19,9 @@ const Header = () => {
   return (
     <UiElementLayout layoutType={ElementLayoutTypeEnum.HEADER} className={styles.headerWrapper}>
       <UiContainer className={styles.container}>
-        <UiImage src={pokeshopLogo} className={styles.logo} width="160" />
+        <UiHideInMobile>
+          <UiImage src={pokeshopLogo} className={styles.logo} width="160" />
+        </UiHideInMobile>
         <UiIcon classNameIcon={styles.iconMenu} icon={IconTypeEnum.ICON_MENU} />
 
         <UiElementLayout layoutType={ElementLayoutTypeEnum.NAV} className={styles.nav}>

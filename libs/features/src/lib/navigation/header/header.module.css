@@ -2,6 +2,10 @@
   justify-content: space-between;
   padding: 10px 0;
   box-shadow: 0 2px 8px 1px rgba(6, 42, 73, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: white;
 }
 
 .container {

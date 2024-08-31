@@ -4,7 +4,6 @@ export const styles = StyleSheet.create({
   headerWrapper: {
     justifyContent: 'space-between',
     paddingTop: 10,
-    paddingBottom: 10,
     paddingLeft: 0,
     paddingRight: 0,
     // boxShadow: 0 2px 8px 1px rgba(6, 42, 73, 0.15),
@@ -37,9 +36,7 @@ export const styles = StyleSheet.create({
   iconCart: {
     marginLeft: 15,
   },
-  logo: {
-    display: 'none',
-  },
+  logo: {},
   switchTheme: {
     display: 'none',
   },

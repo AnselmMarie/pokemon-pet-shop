@@ -4,6 +4,7 @@ import { ButtonTypeEnum } from './button.enum';
 
 export interface ButtonProps {
   type?: ButtonTypeEnum;
+  text?: string | null;
   className?: any;
   onClick?: GenericNonReturnType;
 }

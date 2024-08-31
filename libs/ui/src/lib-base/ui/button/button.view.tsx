@@ -1,17 +1,18 @@
-import { memo, PropsWithChildren, ReactElement, useMemo } from 'react';
+import { memo, ReactElement, useMemo } from 'react';
 
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
+import ButtonElement from './button.element.view';
 import { ButtonTypeEnum } from './button.enum';
 import { ButtonProps } from './button.interface';
-import styles from './button.module.css';
+import { styles } from './button.module';
 
 const Button = ({
   type = ButtonTypeEnum.PRIMARY,
   className = '',
-  children = null,
+  text = null,
   onClick,
-}: PropsWithChildren<ButtonProps>): ReactElement => {
+}: ButtonProps): ReactElement => {
   const getTypeStyles = useMemo(() => {
     switch (type) {
       case ButtonTypeEnum.SECONDARY:
@@ -23,9 +24,11 @@ const Button = ({
   }, [type]);
 
   return (
-    <button className={classNamesUtil(className, styles.button, getTypeStyles)} onClick={onClick}>
-      {children}
-    </button>
+    <ButtonElement
+      text={text}
+      className={classNamesUtil(className, styles.button, getTypeStyles)}
+      onClick={onClick}
+    />
   );
 };
 

@@ -1,13 +1,18 @@
-import { UiHeader } from '@pokemon-pet-shop/features';
-import { UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
+import { ReactElement } from 'react';
 
-export const Homepage = () => {
+import { UiHeader, UiPokemonList } from '@pokemon-pet-shop/features';
+import { UiContainer, UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
+import { Text } from 'react-native';
+
+import { styles } from './homepage.module';
+
+export const Homepage = (): ReactElement => {
+  // return <Text>fadsf</Text>;
   return (
     <UiElementLayout>
-      <UiHeader />
-      {/* <UiContainer className={styles.contentWrapper}>
+      <UiContainer className={styles.contentWrapper}>
         <UiPokemonList />
-      </UiContainer> */}
+      </UiContainer>
       <UiTypography>footer</UiTypography>
     </UiElementLayout>
   );
