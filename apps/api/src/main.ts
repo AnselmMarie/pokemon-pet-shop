@@ -3,12 +3,11 @@
  * This is only a minimal backend to get started.
  */
 
-import express from 'express';
 import * as path from 'path';
 
-const app = express();
+import express from 'express';
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+const app = express();
 
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to api!' });
