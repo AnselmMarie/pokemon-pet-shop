@@ -9,10 +9,10 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "prettier --write",
-      "nx run-many --target=lint --all --fix"
+      "eslint --fix"
     ],
     "*.html": [
-      "nx run-many --target=lint --all --fix",
+      "eslint --fix",
       "prettier --write"
     ],
     "*.css": [

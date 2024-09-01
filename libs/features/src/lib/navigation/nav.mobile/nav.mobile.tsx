@@ -10,9 +10,10 @@ import {
   UiSwitch,
 } from '@pokemon-pet-shop/ui';
 
+import { NavMobileModalProps } from './nav.mobile.interface';
 import styles from './nav.mobile.module.css';
 
-const NavMobileModal = ({ isModalShown = false }: any): ReactElement => {
+const NavMobileModal = ({ isModalShown = false }: NavMobileModalProps): ReactElement => {
   return (
     <UiModal
       isModalShown={isModalShown}

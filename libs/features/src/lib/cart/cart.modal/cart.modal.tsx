@@ -9,9 +9,10 @@ import {
   ModalAlignmentEnum,
 } from '@pokemon-pet-shop/ui';
 
+import { CartModalProps } from './cart.modal.interface';
 import styles from './cart.modal.module.css';
 
-const CartModal = ({ isModalShown = false }: any): ReactElement => {
+const CartModal = ({ isModalShown = false }: CartModalProps): ReactElement => {
   return (
     <UiModal
       isModalShown={isModalShown}
