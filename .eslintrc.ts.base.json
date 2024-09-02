@@ -14,16 +14,8 @@
         "plugin:import/warnings",
         "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        "plugin:react-hooks/recommended",
-        "plugin:jsx-a11y/recommended",
         "plugin:prettier/recommended",
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended",
-        "plugin:@tanstack/eslint-plugin-query/recommended"
-        // "prettier"
-        // "plugin:eslint-plugin-prettier"
+        "plugin:jest-dom/recommended"
       ],
       "rules": {
         "@nx/enforce-module-boundaries": [
@@ -91,14 +83,12 @@
         "no-empty-function": "error",
         "no-var": "error",
 
-        // "@typescript-eslint/no-floating-promises": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/no-unused-vars": ["error", {}],
         "@typescript-eslint/explicit-function-return-type": ["off", {}],
         "@typescript-eslint/explicit-module-boundary-types": ["off", {}],
         "@typescript-eslint/no-empty-function": ["off", {}]
-        // "@typescript-eslint/no-explicit-any": ["off", {}]
       }
     },
     {
