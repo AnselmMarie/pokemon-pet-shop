@@ -46,26 +46,33 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
         )}
       >
         <UiElementLayout className={styles.cardContentTopWrapper}>
-          <UiElementLayout
-            className={classNamesUtil(
-              styles.cardSubHeadlineWrapper,
-              styles?.[`${getThemeClass}CardSubHeadlineWrapper`]
-            )}
-          >
+          <UiElementLayout className={styles.cardSubHeadlineWrapper}>
             <UiTypography
-              className={styles.cardSubHeadline}
+              className={classNamesUtil(
+                styles.cardSubHeadline,
+                styles?.[`${getThemeClass}ContentCardText`]
+              )}
               typographyType={TypographyTypeEnum.SPAN}
             >
               Basic Pokemon
             </UiTypography>
             <UiTypography
-              className={styles.cardSubHeadline}
+              className={classNamesUtil(
+                styles.cardSubHeadline,
+                styles?.[`${getThemeClass}ContentCardText`]
+              )}
               typographyType={TypographyTypeEnum.SPAN}
             >
               NO. {getPokemonDetail?.order}
             </UiTypography>
           </UiElementLayout>
-          <UiTypography className={styles.cardHeadline} typographyType={TypographyTypeEnum.H1}>
+          <UiTypography
+            className={classNamesUtil(
+              styles.cardHeadline,
+              styles?.[`${getThemeClass}ContentCardText`]
+            )}
+            typographyType={TypographyTypeEnum.H1}
+          >
             {data?.name}
           </UiTypography>
 
@@ -74,10 +81,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
               <UiElementLayout key={ability?.ability?.name} className={styles.atkWrapper}>
                 <UiHideInMobile>
                   <UiElementLayout
-                    className={classNamesUtil(
-                      styles.atkLine,
-                      styles?.[`${getThemeClass}ContentCardWrapper`]
-                    )}
+                    className={classNamesUtil(styles.atkLine, styles?.[`${getThemeClass}AtkLine`])}
                   />
                 </UiHideInMobile>
                 <UiElementLayout
@@ -88,7 +92,13 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
                 >
                   <UiIconPokeType type={getPokemonDetail?.types[0]?.type?.name} size="10" />
                 </UiElementLayout>
-                <UiTypography className={styles.atkText} typographyType={TypographyTypeEnum.SPAN}>
+                <UiTypography
+                  className={classNamesUtil(
+                    styles.atkText,
+                    styles?.[`${getThemeClass}ContentCardText`]
+                  )}
+                  typographyType={TypographyTypeEnum.SPAN}
+                >
                   {ability?.ability?.name}
                 </UiTypography>
               </UiElementLayout>
