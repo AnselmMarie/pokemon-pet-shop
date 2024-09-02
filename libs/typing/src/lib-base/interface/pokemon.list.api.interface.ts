@@ -1,4 +1,4 @@
-import { PokemonAbilityApi } from './pokemon.ability.api.interface';
+import { PokemonDetailApi } from './pokemon.detail.api.interface';
 import { PokemonsApi } from './pokemons.api.interface';
 
-export type PokemonListApi = PokemonsApi & PokemonAbilityApi;
+export type PokemonListApi = PokemonsApi & PokemonDetailApi;

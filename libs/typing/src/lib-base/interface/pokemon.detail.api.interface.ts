@@ -1,4 +1,4 @@
-interface AbilityObj {
+export interface PokemonDetailAbilityObj {
   ability: {
     name: string;
     url: string;
@@ -38,7 +38,7 @@ interface SpritesObj {
   };
 }
 
-export interface PokemonAbilityApi {
+export interface PokemonDetailApi {
   base_experience: number;
   height: number;
   id: number;
@@ -49,5 +49,5 @@ export interface PokemonAbilityApi {
   stats: StatsObj[];
   types: TypesObj[];
   sprites: SpritesObj[];
-  abilities: AbilityObj[];
+  abilities: PokemonDetailAbilityObj[];
 }

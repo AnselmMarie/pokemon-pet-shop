@@ -1,5 +1,6 @@
 import { memo, ReactElement } from 'react';
 
+import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiImage,
@@ -76,34 +77,42 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
             {data?.name}
           </UiTypography>
 
-          {(getPokemonDetail?.abilities || []).map((ability: any): ReactElement => {
-            return (
-              <UiElementLayout key={ability?.ability?.name} className={styles.atkWrapper}>
-                <UiHideInMobile>
+          {(getPokemonDetail?.abilities || []).map(
+            (abilityObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {
+              if (i > 1) {
+                return null;
+              }
+              return (
+                <UiElementLayout key={abilityObj?.ability?.name} className={styles.atkWrapper}>
+                  <UiHideInMobile>
+                    <UiElementLayout
+                      className={classNamesUtil(
+                        styles.atkLine,
+                        styles?.[`${getThemeClass}AtkLine`]
+                      )}
+                    />
+                  </UiHideInMobile>
                   <UiElementLayout
-                    className={classNamesUtil(styles.atkLine, styles?.[`${getThemeClass}AtkLine`])}
-                  />
-                </UiHideInMobile>
-                <UiElementLayout
-                  className={classNamesUtil(
-                    styles.atkCircle,
-                    styles?.[`${getThemeClass}AtkCircle`]
-                  )}
-                >
-                  <UiIconPokeType type={getPokemonDetail?.types[0]?.type?.name} size="10" />
+                    className={classNamesUtil(
+                      styles.atkCircle,
+                      styles?.[`${getThemeClass}AtkCircle`]
+                    )}
+                  >
+                    <UiIconPokeType type={getPokemonDetail?.types[0]?.type?.name} size="10" />
+                  </UiElementLayout>
+                  <UiTypography
+                    className={classNamesUtil(
+                      styles.atkText,
+                      styles?.[`${getThemeClass}ContentCardText`]
+                    )}
+                    typographyType={TypographyTypeEnum.SPAN}
+                  >
+                    {abilityObj?.ability?.name}
+                  </UiTypography>
                 </UiElementLayout>
-                <UiTypography
-                  className={classNamesUtil(
-                    styles.atkText,
-                    styles?.[`${getThemeClass}ContentCardText`]
-                  )}
-                  typographyType={TypographyTypeEnum.SPAN}
-                >
-                  {ability?.ability?.name}
-                </UiTypography>
-              </UiElementLayout>
-            );
-          })}
+              );
+            }
+          )}
         </UiElementLayout>
 
         <UiElementLayout className={styles.btnWrapper}>
