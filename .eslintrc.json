@@ -20,7 +20,8 @@
         "plugin:jsx-a11y/recommended",
         "plugin:prettier/recommended",
         "plugin:testing-library/react",
-        "plugin:jest-dom/recommended"
+        "plugin:jest-dom/recommended",
+        "plugin:@tanstack/eslint-plugin-query/recommended"
         // "prettier"
         // "plugin:eslint-plugin-prettier"
       ],

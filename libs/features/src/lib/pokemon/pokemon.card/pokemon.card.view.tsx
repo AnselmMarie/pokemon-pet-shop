@@ -18,8 +18,8 @@ import { CardProps } from './pokemon.card.interface';
 import { styles } from './pokemon.card.module';
 import usePokemonCard from './use.pokemon.card.logic';
 
-const PokemonCard = ({ data = {}, dataDetail = {} }: CardProps): ReactElement => {
-  const { getPokemonDetail, getThemeClass } = usePokemonCard(dataDetail);
+const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
+  const { getPokemonDetail, getThemeClass } = usePokemonCard(data);
 
   const handleClick = () => {
     console.log('handleClick');

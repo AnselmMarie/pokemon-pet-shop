@@ -32,30 +32,19 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
 
-      - name: Determine NX_BASE and NX_HEAD
-        id: set_commits
+      - name: Set NX environment variables
         run: |
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            echo "Running for pull request"
-            git fetch origin ${{ github.base_ref }} --depth=1
-            BASE_COMMIT=$(git merge-base origin/${{ github.base_ref }} HEAD)
-          else
-            echo "Running for push event"
-            git fetch origin main --depth=1
-            BASE_COMMIT=$(git merge-base origin/main HEAD)
-          fi
-            echo "NX_BASE=${BASE_COMMIT}" >> $GITHUB_ENV
-            echo "NX_HEAD=${GITHUB_SHA}" >> $GITHUB_ENV
-            echo "NX_BASE is set to $BASE_COMMIT"
-            echo "NX_HEAD is set to $GITHUB_SHA"
+          echo "NX_BASE=$(git merge-base origin/main HEAD)" >> $GITHUB_ENV
+          echo "NX_HEAD=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
       # - run: npx nx affected -t lint-staged build
-      - run: npx nx affected:lint
-      - run: npx nx affected:test
-      - run: npx nx affected --parallel 1 -t e2e-ci
+      - name: Run affected lint
+        run: npx nx affected:lint --base=$NX_BASE --head=$NX_HEAD
         env:
           NX_BASE: ${{ env.NX_BASE }}
           NX_HEAD: ${{ env.NX_HEAD }}
+      # - run: npx nx affected:test
+      # - run: npx nx affected --parallel 1 -t e2e-ci

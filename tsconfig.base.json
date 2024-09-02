@@ -19,6 +19,7 @@
       "@pokemon-pet-shop/assets": ["libs/assets/src/index.ts"],
       "@pokemon-pet-shop/features": ["libs/features/src/index.ts"],
       "@pokemon-pet-shop/hooks": ["libs/hooks/src/index.ts"],
+      "@pokemon-pet-shop/services": ["libs/services/src/index.ts"],
       "@pokemon-pet-shop/typing": ["libs/typing/src/index.ts"],
       "@pokemon-pet-shop/typing/web": ["libs/typing/src/index_web.ts"],
       "@pokemon-pet-shop/ui": ["libs/ui/src/index.ts"],

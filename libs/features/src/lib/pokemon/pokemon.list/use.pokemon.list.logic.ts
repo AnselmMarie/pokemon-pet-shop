@@ -1,15 +1,20 @@
-import pokemonDetail from '../temp.mock/pokemon.detail.json';
-import pokemonList from '../temp.mock/pokemon.json';
+import { useGetPokemonList } from '@pokemon-pet-shop/services';
 
 interface PokemonListReturn {
-  pokemonDetail: any;
-  pokemonList: any;
+  data: any;
+  isError: boolean;
+  isLoading: boolean;
+  isFetching: boolean;
 }
 
 const usePokemonList = (): PokemonListReturn => {
+  const { data, isError, isLoading, isFetching } = useGetPokemonList();
+
   return {
-    pokemonDetail,
-    pokemonList,
+    data,
+    isError,
+    isLoading,
+    isFetching,
   };
 };
 
