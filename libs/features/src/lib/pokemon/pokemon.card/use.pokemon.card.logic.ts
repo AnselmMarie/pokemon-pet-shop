@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 
+import { usePokemonTheme } from '../hooks/use.pokemone.theme.logic';
+
 interface UseCardReturn {
   getPokemonDetail: any;
   getThemeClass: any;
@@ -11,10 +13,7 @@ const usePokemonCard = (dataDetail: any): UseCardReturn => {
     return dataDetail;
   }, [dataDetail]);
 
-  const getThemeClass = useMemo(() => {
-    const typeName = getPokemonDetail?.types[0]?.type?.name;
-    return `${typeName}Theme`;
-  }, [getPokemonDetail]);
+  const { getThemeClass } = usePokemonTheme(getPokemonDetail?.types);
 
   return {
     getPokemonDetail,

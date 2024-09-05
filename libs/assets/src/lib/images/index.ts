@@ -16,9 +16,11 @@ import psychicIcon from './poke.type/psychic.svg';
 import rockIcon from './poke.type/rock.svg';
 import steelIcon from './poke.type/steel.svg';
 import waterIcon from './poke.type/water.svg';
+import halfCircle from './pokemon.modal/half.circle.svg';
 import pokeshopLogo from './pokeshop-logo.png';
 
 export {
+  halfCircle,
   pokeshopLogo,
   bugIcon,
   darkIcon,

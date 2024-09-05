@@ -1,0 +1,42 @@
+.modal {
+  width: 550px;
+  max-width: 550px;
+  position: relative;
+}
+
+.imageContainer {
+  /* padding: 15px; */
+  height: 450px;
+  z-index: 0;
+}
+
+.image {
+  height: 450px;
+  margin: 0 auto;
+}
+
+.contentCurve {
+  margin-top: -60px;
+}
+
+.dropdownHeadline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 15px;
+  /* width: 100%; */
+}
+
+.contentContainer {
+  height: calc(100% - 500px);
+  /* height: 60px; */
+  /* background-color: grey; */
+  border-radius: 0 0 8px 8px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+  /* padding: 15px; */
+  position: relative;
+  /* width: 100%; */
+}

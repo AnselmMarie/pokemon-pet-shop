@@ -1,19 +1,22 @@
 import { memo, ReactElement } from 'react';
 
+import { ModalHeadlineTypeEnum, useModalStore } from '@pokemon-pet-shop/store';
 import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiImage,
-  UiIconPokeType,
   UiTypography,
   ButtonTypeEnum,
   TypographyTypeEnum,
   UiButton,
   UiCard,
-  UiHideInMobile,
   mobSrcTypeEnum,
+  ModalAlignmentEnum,
 } from '@pokemon-pet-shop/ui';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
+
+import { UiPokemonDetailModal } from '..';
+import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 
 import { CardProps } from './pokemon.card.interface';
 import { styles } from './pokemon.card.module';
@@ -21,9 +24,26 @@ import usePokemonCard from './use.pokemon.card.logic';
 
 const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
   const { getPokemonDetail, getThemeClass } = usePokemonCard(data);
+  const openModal = useModalStore((state) => state.openModal);
 
-  const handleClick = () => {
-    console.log('handleClick');
+  const handleOpenDetailModalClick = () => {
+    openModal({
+      content: <UiPokemonDetailModal />,
+      options: {
+        title: 'Here',
+        data: getPokemonDetail,
+        classNameShadow: '',
+        classNameModal: '',
+        isModalShown: false,
+        headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
+        modalAlignment: ModalAlignmentEnum.CENTER,
+      },
+      onCallback: () => {},
+    });
+  };
+
+  const handleAddPetInCartClick = () => {
+    console.log('handleAddPetInCartClick');
   };
 
   return (
@@ -83,45 +103,24 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
                 return null;
               }
               return (
-                <UiElementLayout key={abilityObj?.ability?.name} className={styles.atkWrapper}>
-                  <UiHideInMobile>
-                    <UiElementLayout
-                      className={classNamesUtil(
-                        styles.atkLine,
-                        styles?.[`${getThemeClass}AtkLine`]
-                      )}
-                    />
-                  </UiHideInMobile>
-                  <UiElementLayout
-                    className={classNamesUtil(
-                      styles.atkCircle,
-                      styles?.[`${getThemeClass}AtkCircle`]
-                    )}
-                  >
-                    <UiIconPokeType type={getPokemonDetail?.types[0]?.type?.name} size="10" />
-                  </UiElementLayout>
-                  <UiTypography
-                    className={classNamesUtil(
-                      styles.atkText,
-                      styles?.[`${getThemeClass}ContentCardText`]
-                    )}
-                    typographyType={TypographyTypeEnum.SPAN}
-                  >
-                    {abilityObj?.ability?.name}
-                  </UiTypography>
-                </UiElementLayout>
+                <UiPokemonAbilityName
+                  key={i}
+                  abilityData={abilityObj}
+                  typeData={getPokemonDetail?.types}
+                  getThemeClass={getThemeClass}
+                />
               );
             }
           )}
         </UiElementLayout>
 
         <UiElementLayout className={styles.btnWrapper}>
-          <UiButton className={styles.btn} text="Get Pet" onClick={handleClick} />
+          <UiButton className={styles.btn} text="Get Pet" onClick={handleAddPetInCartClick} />
           <UiButton
             className={styles.btn}
             type={ButtonTypeEnum.SECONDARY}
             text="Details"
-            onClick={handleClick}
+            onClick={handleOpenDetailModalClick}
           />
         </UiElementLayout>
       </UiElementLayout>

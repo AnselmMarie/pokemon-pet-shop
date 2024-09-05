@@ -1,7 +1,6 @@
 import { ReactElement, StrictMode } from 'react';
 
-import { UiCartModal, UiNavMobileModal } from '@pokemon-pet-shop/features';
-import { UiElementLayout } from '@pokemon-pet-shop/ui';
+import { UiElementLayout, UiModal } from '@pokemon-pet-shop/ui';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
@@ -19,8 +18,7 @@ const App = (): ReactElement => {
           <UiElementLayout>
             <Homepage />
           </UiElementLayout>
-          <UiCartModal isModalShown={false} />
-          <UiNavMobileModal isModalShown={false} />
+          <UiModal />
         </UiElementLayout>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>

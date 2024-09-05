@@ -1,12 +1,4 @@
-import {
-  useQuery,
-  useQueries,
-  keepPreviousData,
-  useInfiniteQuery,
-  useQueryClient,
-} from '@tanstack/react-query';
-
-// import { Product } from '../types/product';
+import { useQueries, useInfiniteQuery } from '@tanstack/react-query';
 
 import { getPokemonList, getPokemonSpecies } from './api.service';
 
@@ -23,34 +15,13 @@ export function useGetPokemonList() {
     },
   });
 }
-export function useGetPokemonSpecies(ids: (number | undefined)[] | undefined) {
+export function useGetPokemonSpecies(ids: (string | undefined)[] | undefined) {
   return useQueries({
     queries: (ids ?? []).map((id) => {
       return {
         queryKey: ['species', { id }],
-        queryFn: () => getPokemonSpecies(id!),
+        queryFn: () => getPokemonSpecies(id),
       };
     }),
   });
 }
-
-// export function useProduct(id: number | null) {
-//   const queryClient = useQueryClient();
-
-//   return useQuery({
-//     queryKey: ['product', { id }],
-//     queryFn: () => getProduct(id!),
-//     enabled: !!id,
-//     placeholderData: () => {
-//       const cachedProducts = (
-//         queryClient.getQueryData(['products']) as {
-//           pages: Product[] | undefined;
-//         }
-//       )?.pages?.flat(2);
-
-//       if (cachedProducts) {
-//         return cachedProducts.find((item) => item.id === id);
-//       }
-//     },
-//   });
-// }

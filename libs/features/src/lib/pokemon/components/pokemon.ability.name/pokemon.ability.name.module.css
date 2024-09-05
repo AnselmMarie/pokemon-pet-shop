@@ -1,0 +1,257 @@
+.atkWrapper {
+  display: flex;
+  height: 17px;
+  justify-items: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.atkLine {
+  display: none;
+}
+
+.atkCircle {
+  height: 17px;
+  width: 17px;
+  border-radius: 100px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atkText {
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 830px) {
+  .atkWrapper {
+    display: flex;
+    height: 17px;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+    margin-left: -15px;
+    margin-bottom: 5px;
+  }
+
+  .atkLine {
+    height: 100%;
+    width: 30px;
+    display: block;
+  }
+
+  .atkCircle {
+    height: 17px;
+    width: 17px;
+    border-radius: 100px;
+    margin-left: -10px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .atkText {
+    font-size: 10px;
+  }
+}
+
+/**
+Grass Theme
+**/
+.grassThemeAtkLine {
+  background: greenyellow;
+}
+
+.grassThemeAtkCircle {
+  background: lightgreen;
+}
+
+/**
+Bug Theme
+**/
+.bugThemeAtkLine {
+  background: #91b53d;
+}
+
+.bugThemeAtkCircle {
+  background: #7aa515;
+}
+
+/**
+Dark Theme
+**/
+.darkThemeAtkLine {
+  background: #57565a;
+}
+
+.darkThemeAtkCircle {
+  background: #313034;
+}
+
+/**
+Dragon Theme
+**/
+.dragonThemeAtkLine {
+  background: #1663af;
+}
+
+.dragonThemeAtkCircle {
+  background: #095199;
+}
+
+/**
+Electric Theme
+**/
+.electricThemeAtkLine {
+  background: #cab74c;
+}
+
+.electricThemeAtkCircle {
+  background: #a69533;
+}
+
+/**
+Fairy Theme
+**/
+.fairyThemeAtkLine {
+  background: #784d74;
+}
+
+.fairyThemeAtkCircle {
+  background: #ee90e6;
+}
+
+/**
+Fighting Theme
+**/
+.fightingThemeAtkLine {
+  background: #cd5069;
+}
+
+.fightingThemeAtkCircle {
+  background: #94273c;
+}
+
+/**
+Fire Theme
+**/
+.fireThemeAtkLine {
+  background: #cc8e4c;
+}
+
+.fireThemeAtkCircle {
+  background: #9f682d;
+}
+
+/**
+Flying Theme
+**/
+.flyingThemeAtkLine {
+  background: #9eb0d2;
+}
+
+.flyingThemeAtkCircle {
+  background: #7186ab;
+}
+
+/**
+Ghost Theme
+**/
+.ghostThemeAtkLine {
+  background: #6671b4;
+}
+
+.ghostThemeAtkCircle {
+  background: #434d85;
+}
+
+/**
+Ground Theme
+**/
+.groundThemeAtkLine {
+  background: #b76e4a;
+}
+
+.groundThemeAtkCircle {
+  background: #9a5635;
+}
+
+/**
+Ice Theme
+**/
+.iceThemeAtkLine {
+  background: #76baaf;
+}
+
+.iceThemeAtkCircle {
+  background: #519288;
+}
+
+/**
+Normal Theme
+**/
+.normalThemeAtkLine {
+  background: #757774;
+}
+
+.normalThemeAtkCircle {
+  background: #6a6c69;
+}
+
+/**
+Poison Theme
+**/
+.poisonThemeAtkLine {
+  background: #a061b2;
+}
+
+.poisonThemeAtkCircle {
+  background: #763f86;
+}
+
+/**
+Psychic Theme
+**/
+.psychicThemeAtkLine {
+  background: #c67a77;
+}
+
+.psychicThemeAtkCircle {
+  background: #864543;
+}
+
+/**
+Rock Theme
+**/
+.rockThemeAtkLine {
+  background: #aba281;
+}
+
+.rockThemeAtkCircle {
+  background: #726a4c;
+}
+
+/**
+Steel Theme
+**/
+.steelThemeAtkLine {
+  background: #6fa7b3;
+}
+
+.steelThemeAtkCircle {
+  background: #325860;
+}
+
+/**
+Water Theme
+**/
+.waterThemeAtkLine {
+  background: #5d96c7;
+}
+
+.waterThemeAtkCircle {
+  background: #305c83;
+}
