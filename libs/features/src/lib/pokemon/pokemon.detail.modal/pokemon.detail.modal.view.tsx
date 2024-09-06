@@ -46,7 +46,7 @@ const PokemonDetailModal = (): ReactElement => {
       lbs = lbs + 2.20462;
     }
 
-    return { lbs: Math.trunc(lbs), kg: kgDecimal };
+    return { lbs: `${Math.trunc(lbs)} lbs`, kg: `(${kgDecimal} kg)` };
   }, [modalData?.weight]);
 
   const convertMetersToFtIn = useMemo(() => {
@@ -63,15 +63,25 @@ const PokemonDetailModal = (): ReactElement => {
       in: '',
       m: `(${mDecimal} m)`,
     };
-    const convertInches = (inches: string) => {
-      return `${Math.round(Number(`.${inches}`) * 12)}"`;
+
+    const convertFtInches = (dFt: string | null = null, dIn: string | null = null) => {
+      const feet = Number(dFt);
+      const inches = Math.round(Number(`.${dIn}`) * 12);
+
+      if (inches === 12) {
+        ftInObj.ft = `${feet + 1}'`;
+        ftInObj.in = `0"`;
+        return;
+      }
+
+      ftInObj.ft = `${feet}'`;
+      ftInObj.in = `${String(inches)}"`;
     };
 
     if (ftTotalSplit.length === 2) {
-      ftInObj.ft = `${ftTotalSplit[0]}'`;
-      ftInObj.in = convertInches(ftTotalSplit[1]);
+      convertFtInches(ftTotalSplit[0], ftTotalSplit[1]);
     } else {
-      ftInObj.in = convertInches(ftTotalSplit[1]);
+      convertFtInches(ftTotalSplit[1]);
     }
 
     return ftInObj;
@@ -139,7 +149,7 @@ const PokemonDetailModal = (): ReactElement => {
                 // className={classNamesUtil(styles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
-                Weight: {`${convertKgToLbs?.lbs} lbs (${convertKgToLbs?.kg} kg)`}
+                Weight: {`${convertKgToLbs?.lbs} ${convertKgToLbs?.kg}`}
               </UiTypography>
 
               <UiTypography
