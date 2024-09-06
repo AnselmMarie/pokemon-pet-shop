@@ -11,6 +11,10 @@ export interface PokemonSpeciesParamsProps {
   id: string;
 }
 
+export interface PokemonDetailsParamsProps {
+  id: string;
+}
+
 export interface PokemonEvolutionChainParamsProps {
   id: string;
 }

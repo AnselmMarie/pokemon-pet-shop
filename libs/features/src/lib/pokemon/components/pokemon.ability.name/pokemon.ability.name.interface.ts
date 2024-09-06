@@ -4,4 +4,5 @@ export interface PokemonAbilityNameProps {
   abilityData: PokemonDetailAbilityObj;
   typeData: any;
   getThemeClass: string;
+  showAtkLine?: boolean;
 }

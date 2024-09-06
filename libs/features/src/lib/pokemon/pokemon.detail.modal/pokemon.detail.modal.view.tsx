@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useMemo } from 'react';
 
 import { halfCircle } from '@pokemon-pet-shop/assets';
 import { useModalStore } from '@pokemon-pet-shop/store';
@@ -10,6 +10,8 @@ import {
   mobSrcTypeEnum,
   UiButton,
   TypographyTypeEnum,
+  UiTagWrapper,
+  UiTagItem,
 } from '@pokemon-pet-shop/ui';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 import { ReactSVG } from 'react-svg';
@@ -24,15 +26,62 @@ const PokemonDetailModal = (): ReactElement => {
   const { modalOptions } = useModalStore((state) => state);
   const { data: modalData } = modalOptions;
   const { detailData, isError, isLoading, isFetching } = usePokemonDetailModalLogic(modalData?.id);
-  const { getThemeClass } = usePokemonTheme(modalData);
+  const { getThemeClass } = usePokemonTheme(modalData.types);
 
   const handleAddPetInCartClick = () => {
     console.log('handleAddPetInCartClick');
   };
 
+  const convertKgToLbs = useMemo(() => {
+    const stringKgNoDecimal = String(modalData?.weight);
+
+    const kgDecimal = stringKgNoDecimal.replace(/\w$/, (match) => {
+      return `.${match}`;
+    });
+
+    const mathRound = Math.round(Number(kgDecimal));
+
+    let lbs = 0;
+    for (let loop = 0; loop < mathRound; loop++) {
+      lbs = lbs + 2.20462;
+    }
+
+    return { lbs: Math.trunc(lbs), kg: kgDecimal };
+  }, [modalData?.weight]);
+
+  const convertMetersToFtIn = useMemo(() => {
+    const stringKgNoDecimal = String(modalData?.height);
+
+    const mDecimal = stringKgNoDecimal.replace(/\w$/, (match) => {
+      return `.${match}`;
+    });
+
+    const ftTotal = Number(mDecimal) * 3.28084;
+    const ftTotalSplit = String(ftTotal).split('.');
+    const ftInObj = {
+      ft: '',
+      in: '',
+      m: `(${mDecimal} m)`,
+    };
+    const convertInches = (inches: string) => {
+      return `${Math.round(Number(`.${inches}`) * 12)}"`;
+    };
+
+    if (ftTotalSplit.length === 2) {
+      ftInObj.ft = `${ftTotalSplit[0]}'`;
+      ftInObj.in = convertInches(ftTotalSplit[1]);
+    } else {
+      ftInObj.in = convertInches(ftTotalSplit[1]);
+    }
+
+    return ftInObj;
+  }, [modalData?.height]);
+
   return (
     <UiElementLayout className={styles.modal}>
-      <UiElementLayout className={styles.imageContainer}>
+      <UiElementLayout
+        className={classNamesUtil(styles.imageContainer, styles?.[`${getThemeClass}ImageBg`])}
+      >
         <UiImage
           src={modalData?.sprites?.other?.['official-artwork']?.front_default}
           className={styles.image}
@@ -56,7 +105,7 @@ const PokemonDetailModal = (): ReactElement => {
             <UiElementLayout className={styles.cardSubHeadlineWrapper}>
               <UiTypography
                 className={classNamesUtil(styles.cardSubHeadline)}
-                typographyType={TypographyTypeEnum.SPAN}
+                typographyType={TypographyTypeEnum.P}
               >
                 NO. {modalData?.order}
               </UiTypography>
@@ -68,23 +117,15 @@ const PokemonDetailModal = (): ReactElement => {
               {modalData?.name}
             </UiTypography>
 
-            {(modalData?.types || []).map(
-              (typeObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {
-                return (
-                  <UiElementLayout key={i}>
-                    <UiTypography
-                      // className={classNamesUtil(
-                      //   styles.atkText,
-                      //   styles?.[`${getThemeClass}ContentCardText`]
-                      // )}
-                      typographyType={TypographyTypeEnum.SPAN}
-                    >
-                      {typeObj?.type?.name}
-                    </UiTypography>
-                  </UiElementLayout>
-                );
-              }
-            )}
+            {modalData?.types ? (
+              <UiTagWrapper>
+                {(modalData?.types || []).map(
+                  (typeObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {
+                    return <UiTagItem key={i} name={typeObj?.type?.name} />;
+                  }
+                )}
+              </UiTagWrapper>
+            ) : null}
 
             <UiTypography
               className={classNamesUtil(styles.cardHeadline)}
@@ -98,14 +139,15 @@ const PokemonDetailModal = (): ReactElement => {
                 // className={classNamesUtil(styles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
-                Weight: {modalData?.weight}
+                Weight: {`${convertKgToLbs?.lbs} lbs (${convertKgToLbs?.kg} kg)`}
               </UiTypography>
 
               <UiTypography
                 // className={classNamesUtil(styles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
-                Height: {modalData?.height}
+                Height: {convertMetersToFtIn?.ft ? `${convertMetersToFtIn?.ft} ` : null}
+                {convertMetersToFtIn?.in} {convertMetersToFtIn?.m}
               </UiTypography>
             </UiElementLayout>
 
@@ -120,6 +162,7 @@ const PokemonDetailModal = (): ReactElement => {
                     abilityData={abilityObj}
                     typeData={modalData?.types}
                     getThemeClass={getThemeClass}
+                    showAtkLine={false}
                   />
                 );
               }

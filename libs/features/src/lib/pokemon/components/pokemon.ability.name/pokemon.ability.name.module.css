@@ -26,13 +26,16 @@
 }
 
 @media only screen and (min-width: 830px) {
+  .atkWrapperWithAtkLine {
+    margin-left: -15px;
+  }
+
   .atkWrapper {
     display: flex;
     height: 17px;
     justify-items: center;
     width: 100%;
     align-items: center;
-    margin-left: -15px;
     margin-bottom: 5px;
   }
 
@@ -42,11 +45,14 @@
     display: block;
   }
 
+  .atkCircleWithAtkLine {
+    margin-left: -10px;
+  }
+
   .atkCircle {
     height: 17px;
     width: 17px;
     border-radius: 100px;
-    margin-left: -10px;
     margin-right: 5px;
     display: flex;
     justify-content: center;

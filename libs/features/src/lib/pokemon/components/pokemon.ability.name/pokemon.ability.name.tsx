@@ -1,4 +1,4 @@
-import { memo, ReactElement } from 'react';
+import { memo, ReactElement, useMemo } from 'react';
 
 import {
   UiElementLayout,
@@ -16,16 +16,31 @@ const PokemonAbilityName = ({
   abilityData,
   typeData,
   getThemeClass = '',
+  showAtkLine = true,
 }: PokemonAbilityNameProps): ReactElement => {
+  const isAtkLineShownCircleClass = useMemo(() => {
+    return showAtkLine ? styles?.atkCircleWithAtkLine : '';
+  }, [showAtkLine]);
+
+  const isAtkLineShownWrapperClass = useMemo(() => {
+    return showAtkLine ? styles?.atkWrapperWithAtkLine : '';
+  }, [showAtkLine]);
+
   return (
-    <UiElementLayout className={styles.atkWrapper}>
-      <UiHideInMobile>
-        <UiElementLayout
-          className={classNamesUtil(styles.atkLine, styles?.[`${getThemeClass}AtkLine`])}
-        />
-      </UiHideInMobile>
+    <UiElementLayout className={classNamesUtil(styles.atkWrapper, isAtkLineShownWrapperClass)}>
+      {showAtkLine ? (
+        <UiHideInMobile>
+          <UiElementLayout
+            className={classNamesUtil(styles.atkLine, styles?.[`${getThemeClass}AtkLine`])}
+          />
+        </UiHideInMobile>
+      ) : null}
       <UiElementLayout
-        className={classNamesUtil(styles.atkCircle, styles?.[`${getThemeClass}AtkCircle`])}
+        className={classNamesUtil(
+          styles.atkCircle,
+          isAtkLineShownCircleClass,
+          styles?.[`${getThemeClass}AtkCircle`]
+        )}
       >
         <UiIconPokeType type={typeData?.types?.[0]?.type?.name} size="10" />
       </UiElementLayout>

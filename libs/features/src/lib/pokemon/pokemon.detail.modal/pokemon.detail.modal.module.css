@@ -7,6 +7,8 @@
 .imageContainer {
   height: 450px;
   z-index: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .image {
@@ -30,4 +32,85 @@
   height: calc(100% - 500px);
   border-radius: 0 0 8px 8px;
   position: relative;
+}
+
+.contentCardWrapper {
+  margin-top: -45px;
+}
+
+.cardSubHeadline,
+.cardHeadline {
+  text-align: center;
+}
+
+.bugThemeImageBg {
+  background-color: green;
+}
+
+.darkThemeImageBg {
+  background-color: green;
+}
+
+.dragonThemeImageBg {
+  background-color: green;
+}
+
+.electricThemeImageBg {
+  background-color: green;
+}
+
+.fairyThemeImageBg {
+  background-color: green;
+}
+
+.fightingThemeImageBg {
+  background-color: green;
+}
+
+.fireThemeImageBg {
+  background-color: green;
+}
+
+.flyingThemeImageBg {
+  background-color: green;
+}
+
+.ghostThemeImageBg {
+  background-color: green;
+}
+
+.grassThemeImageBg {
+  background-color: green;
+}
+
+.groundThemeImageBg {
+  background-color: green;
+}
+
+.iceThemeImageBg {
+  background-color: green;
+}
+
+.normalThemeImageBg {
+  background-color: green;
+}
+
+.poisonThemeImageBg {
+  background-color: green;
+}
+
+.psychicThemeImageBg {
+  background-color: green;
+}
+
+.rockThemeImageBg {
+  background-color: green;
+}
+
+.steelThemeImageBg {
+  background-color: green;
+}
+
+.waterThemeImageBg {
+  background-color: green;
 }

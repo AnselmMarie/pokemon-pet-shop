@@ -1,0 +1,16 @@
+.tagWrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.leftAlign {
+  justify-content: flex-start;
+}
+
+.centerAlign {
+  justify-content: center;
+}
+
+.rightAlign {
+  justify-content: flex-end;
+}

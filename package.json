@@ -18,7 +18,7 @@
     ],
     "*.css": [
       "prettier --write",
-      "stylelint"
+      "stylelint --fix"
     ]
   },
   "dependencies": {
