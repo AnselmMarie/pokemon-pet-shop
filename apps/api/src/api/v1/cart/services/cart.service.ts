@@ -1,11 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { getPokemonSpeciesService } from '../../pokemon';
 import { getPokemonDetailService } from '../../pokemon/services/pokemon.detail.service';
-import {
-  clearCartDataCallUtil,
-  getCartDataCallUtil,
-  updateCartDataCallUtil,
-} from '../database/cart.database';
+import { clearCartDataCall, getCartDataCall, updateCartDataCall } from '../database/cart.database';
 
 interface CartDataProps {
   id: string;
@@ -17,21 +13,30 @@ interface CartDataProps {
   isMythical: boolean;
 }
 
-const doesItemExistKeyFn = (cartData, id) => {
-  const cartLength = cartData.length;
+const doesItemExistKeyFn = (data, id) => {
+  const cartLength = data.length;
   let key = null;
+  let counter = null;
+  let total = null;
 
   for (let loop = 0; loop < cartLength; loop++) {
-    if (cartData[loop]?.id == id) {
+    const el = data[loop];
+
+    if (el?.id == id) {
       key = loop;
-      break;
     }
+    counter = counter + el?.quantity;
+    total = total + el?.price;
   }
-  return key;
+  return {
+    key,
+    counter,
+    total,
+  };
 };
 
 const getCartService = async () => {
-  return await getCartDataCallUtil();
+  return await getCartDataCall();
 };
 
 const getSpeciesDetail = async (id: string) => {
@@ -47,13 +52,15 @@ const getSpeciesDetail = async (id: string) => {
 };
 
 const updateCartService = async (payload) => {
-  const currentCartData: any = await getCartDataCallUtil();
-  const doesItemExistKey = doesItemExistKeyFn(currentCartData, payload?.id);
-  const finalRes = currentCartData;
+  const currentCartData: any = await getCartDataCall();
+  const data = currentCartData.data;
+  const { key, counter, total } = doesItemExistKeyFn(data, payload?.id);
 
-  if (doesItemExistKey !== null) {
-    const currentObj = currentCartData[doesItemExistKey];
+  if (key !== null) {
+    const currentObj = data[key];
     currentObj.quantity = currentObj.quantity + 1;
+    currentCartData.counter = counter + 1;
+    currentCartData.total = total + 500;
 
     return currentObj;
   }
@@ -69,13 +76,16 @@ const updateCartService = async (payload) => {
     isLegendary: additionalData?.is_legendary,
     isMythical: additionalData?.is_mythical,
   };
-  finalRes.push(finalPayload);
+  currentCartData.counter = counter + 1;
+  currentCartData.total = total + 500;
+
+  data.push(finalPayload);
 
   return finalPayload;
 };
 
 const clearCartService = async () => {
-  const res = await clearCartDataCallUtil();
+  const res = await clearCartDataCall();
   return res;
 };
 

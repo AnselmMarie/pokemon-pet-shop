@@ -6,4 +6,5 @@ export enum IconTypeEnum {
   ICON_CART_DOWN = 'IconCaretDownFilled',
   ICON_X = 'IconX',
   ICON_MENU = 'IconMenu',
+  ICON_TRASH = 'IconTrash',
 }

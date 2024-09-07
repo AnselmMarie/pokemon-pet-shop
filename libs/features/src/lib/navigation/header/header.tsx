@@ -1,7 +1,7 @@
-import { useMemo } from 'react';
-
 import { pokeshopLogo } from '@pokemon-pet-shop/assets';
 import { useGetCart } from '@pokemon-pet-shop/services';
+import { ModalHeadlineTypeEnum, useModalStore } from '@pokemon-pet-shop/store';
+import { AlignmentEnum } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   ElementLayoutTypeEnum,
@@ -15,20 +15,34 @@ import {
   UiContainer,
   UiHideInMobile,
 } from '@pokemon-pet-shop/ui';
+import { noopUtil } from '@pokemon-pet-shop/utils';
+
+import { UiCartModal } from '../../cart';
 
 import { styles } from './header.module';
 
 const Header = () => {
   const { data } = useGetCart();
 
-  const getCartCounter = useMemo(() => {
-    let counter = 0;
-    (data || []).forEach((el) => {
-      counter = counter + el.quantity;
-    });
+  const openModal = useModalStore((state) => state.openModal);
 
-    return counter;
-  }, [data]);
+  const handleOpenDetailModalClick = () => {
+    openModal({
+      content: <UiCartModal />,
+      options: {
+        title: 'Pokecart',
+        data: data,
+        classNameShadow: '',
+        classNameModal: '',
+        isModalShown: false,
+        headlineType: ModalHeadlineTypeEnum.RELATIVE,
+        modalAlignment: AlignmentEnum.RIGHT,
+      },
+      onCallback: () => {
+        noopUtil();
+      },
+    });
+  };
 
   return (
     <UiElementLayout layoutType={ElementLayoutTypeEnum.HEADER} className={styles.headerWrapper}>
@@ -53,8 +67,8 @@ const Header = () => {
           />
         </UiHideInMobile>
 
-        <UiElementLayout>
-          <UiTypography>{getCartCounter}</UiTypography>
+        <UiElementLayout onClick={handleOpenDetailModalClick}>
+          <UiTypography>{data?.counter}</UiTypography>
           <UiIcon classNameIcon={styles.iconCart} />
         </UiElementLayout>
       </UiContainer>

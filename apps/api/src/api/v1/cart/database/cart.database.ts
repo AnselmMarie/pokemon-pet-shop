@@ -1,6 +1,6 @@
-export let cartDatabase = [];
+export let cartDatabase = { data: [], total: 0, counter: 0 };
 
-export const getCartDataCallUtil = async () => {
+export const getCartDataCall = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(cartDatabase);
@@ -8,19 +8,21 @@ export const getCartDataCallUtil = async () => {
   });
 };
 
-export const updateCartDataCallUtil = async (data) => {
+export const updateCartDataCall = async ({ data, counter, total }) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      cartDatabase = data;
+      cartDatabase.data = data;
+      cartDatabase.counter = counter;
+      cartDatabase.total = total;
       resolve(cartDatabase);
     }, 500);
   });
 };
 
-export const clearCartDataCallUtil = async () => {
+export const clearCartDataCall = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      cartDatabase = [];
+      cartDatabase = { data: [], total: 0, counter: 0 };
       resolve(cartDatabase);
     }, 500);
   });

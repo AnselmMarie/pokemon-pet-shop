@@ -1,29 +1,58 @@
 import { ReactElement } from 'react';
 
-import { AlignmentEnum } from '@pokemon-pet-shop/typing';
-import { UiElementLayout, UiIcon, IconTypeEnum, UiTypography, UiModal } from '@pokemon-pet-shop/ui';
+import { useGetCart } from '@pokemon-pet-shop/services';
+import {
+  UiElementLayout,
+  UiIcon,
+  IconTypeEnum,
+  UiTypography,
+  UiImage,
+  mobSrcTypeEnum,
+  TypographyTypeEnum,
+} from '@pokemon-pet-shop/ui';
 
-import { CartModalProps } from './cart.modal.interface';
 import styles from './cart.modal.module.css';
 
-const CartModal = ({ isModalShown = false }: CartModalProps): ReactElement => {
+const CartModal = (): ReactElement => {
+  const { data } = useGetCart();
+
   return (
-    <UiModal
-      isModalShown={isModalShown}
-      classNameModal={styles.modal}
-      modalAlignment={AlignmentEnum.RIGHT}
-    >
-      <UiElementLayout className={styles.dropdownTop}>
-        <UiElementLayout className={styles.dropdownHeadline}>
-          <UiTypography>Pokecart</UiTypography>
-          <UiIcon icon={IconTypeEnum.ICON_X} />
-        </UiElementLayout>
+    <UiElementLayout className={styles.modal}>
+      <UiElementLayout className={styles.cartContent}>
+        {(data?.data || [])?.map((el: any, i: number) => {
+          return (
+            <UiElementLayout key={i} className={styles?.cartWrapper}>
+              <UiElementLayout className={styles.cardContentRow}>
+                <UiImage
+                  src={el?.image}
+                  className={styles.image}
+                  alt={`${el?.name} Image`}
+                  mobSrcType={mobSrcTypeEnum.URI}
+                />
+                <UiElementLayout className={styles?.middleRow}>
+                  <UiTypography
+                    className={styles.cardHeadline}
+                    typographyType={TypographyTypeEnum.H1}
+                  >
+                    {el?.name}
+                  </UiTypography>
+                  <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.price}>
+                    {el?.price}
+                  </UiTypography>
+                </UiElementLayout>
+                <UiIcon icon={IconTypeEnum.ICON_TRASH} />
+              </UiElementLayout>
+
+              <UiElementLayout className={styles?.sep} />
+            </UiElementLayout>
+          );
+        })}
       </UiElementLayout>
-      <UiElementLayout className={styles.dropdownBtm}>
+      <UiElementLayout className={styles.totalContent}>
         <UiTypography>Total</UiTypography>
-        <UiTypography>$550.00</UiTypography>
+        <UiTypography>{data?.total}</UiTypography>
       </UiElementLayout>
-    </UiModal>
+    </UiElementLayout>
   );
 };
 

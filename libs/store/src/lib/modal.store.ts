@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { AlignmentEnum } from '@pokemon-pet-shop/typing';
 import { noopUtil } from '@pokemon-pet-shop/utils';
 import { create } from 'zustand';
 
@@ -34,7 +35,7 @@ const modalStore = (set: any) => ({
     title: '',
     data: null,
     headlineType: ModalHeadlineTypeEnum.RELATIVE,
-    modalAlignment: 'center',
+    modalAlignment: AlignmentEnum.CENTER,
   },
   onCallback: null,
   changeTitle: (title: string) => {

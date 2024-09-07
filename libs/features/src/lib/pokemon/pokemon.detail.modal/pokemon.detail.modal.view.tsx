@@ -1,7 +1,7 @@
-import { ReactElement, useCallback, useMemo } from 'react';
+import { ReactElement, useMemo } from 'react';
 
 import { halfCircle } from '@pokemon-pet-shop/assets';
-import { useCartStore, useModalStore } from '@pokemon-pet-shop/store';
+import { useModalStore } from '@pokemon-pet-shop/store';
 import {
   PokemonDetailAbilityObj,
   PokemonDetailTypesObj,
@@ -33,8 +33,6 @@ const PokemonDetailModal = (): ReactElement => {
   const modalData = {
     ...data,
   } as PokemonListApi;
-
-  const { addQuantity } = useCartStore((state) => state);
 
   const {
     speciesData: dataD = {},
