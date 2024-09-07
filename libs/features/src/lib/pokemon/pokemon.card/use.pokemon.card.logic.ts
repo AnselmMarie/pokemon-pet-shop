@@ -1,23 +1,27 @@
-import { useMemo } from 'react';
+import { useUpdateCart } from '@pokemon-pet-shop/services';
+import { PokemonListApi } from '@pokemon-pet-shop/typing';
 
 import { usePokemonTheme } from '../hooks/use.pokemone.theme.logic';
 
 interface UseCardReturn {
-  getPokemonDetail: any;
   getThemeClass: any;
+  onHandleUpdateCartSubmit: any;
 }
 
-const usePokemonCard = (dataDetail: any): UseCardReturn => {
-  /** This needs to change once the apps calls multiple different detail */
-  const getPokemonDetail = useMemo(() => {
-    return dataDetail;
-  }, [dataDetail]);
+const usePokemonCard = (data: PokemonListApi): UseCardReturn => {
+  const { getThemeClass } = usePokemonTheme(data?.types);
+  const updateCartMutation = useUpdateCart();
 
-  const { getThemeClass } = usePokemonTheme(getPokemonDetail?.types);
+  const handleUpdateCartSubmit = () => {
+    updateCartMutation.mutate({
+      id: data?.id,
+      quantity: 1,
+    });
+  };
 
   return {
-    getPokemonDetail,
     getThemeClass,
+    onHandleUpdateCartSubmit: handleUpdateCartSubmit,
   };
 };
 

@@ -22,7 +22,7 @@ import { styles } from './pokemon.card.module';
 import usePokemonCard from './use.pokemon.card.logic';
 
 const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
-  const { getPokemonDetail, getThemeClass } = usePokemonCard(data);
+  const { getThemeClass, onHandleUpdateCartSubmit } = usePokemonCard(data);
   const openModal = useModalStore((state) => state.openModal);
 
   const handleOpenDetailModalClick = () => {
@@ -30,7 +30,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
       content: <UiPokemonDetailModal />,
       options: {
         title: 'Here',
-        data: getPokemonDetail,
+        data: data,
         classNameShadow: '',
         classNameModal: '',
         isModalShown: false,
@@ -43,10 +43,6 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
     });
   };
 
-  const handleAddPetInCartClick = () => {
-    console.log('handleAddPetInCartClick');
-  };
-
   return (
     <UiCard className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
       <UiElementLayout className={styles.imgCardWrapper}>
@@ -54,7 +50,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
           $500.00
         </UiTypography>
         <UiImage
-          src={getPokemonDetail?.sprites?.other?.['official-artwork']?.front_default}
+          src={data?.sprites?.other?.['official-artwork']?.front_default}
           className={styles.image}
           alt={`${data?.name} Image`}
           mobSrcType={mobSrcTypeEnum.URI}
@@ -85,7 +81,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
               )}
               typographyType={TypographyTypeEnum.SPAN}
             >
-              NO. {getPokemonDetail?.order}
+              NO. {data?.order}
             </UiTypography>
           </UiElementLayout>
           <UiTypography
@@ -98,7 +94,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
             {data?.name}
           </UiTypography>
 
-          {(getPokemonDetail?.abilities || []).map(
+          {(data?.abilities || []).map(
             (abilityObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {
               if (i > 1) {
                 return null;
@@ -107,7 +103,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
                 <UiPokemonAbilityName
                   key={i}
                   abilityData={abilityObj}
-                  typeData={getPokemonDetail?.types}
+                  typeData={data?.types}
                   getThemeClass={getThemeClass}
                 />
               );
@@ -116,7 +112,7 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
         </UiElementLayout>
 
         <UiElementLayout className={styles.btnWrapper}>
-          <UiButton className={styles.btn} text="Get Pet" onClick={handleAddPetInCartClick} />
+          <UiButton className={styles.btn} text="Get Pet" onClick={onHandleUpdateCartSubmit} />
           <UiButton
             className={styles.btn}
             type={ButtonTypeEnum.SECONDARY}

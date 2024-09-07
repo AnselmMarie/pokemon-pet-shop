@@ -1,4 +1,7 @@
+import { useMemo } from 'react';
+
 import { pokeshopLogo } from '@pokemon-pet-shop/assets';
+import { useGetCart } from '@pokemon-pet-shop/services';
 import {
   UiElementLayout,
   ElementLayoutTypeEnum,
@@ -16,6 +19,17 @@ import {
 import { styles } from './header.module';
 
 const Header = () => {
+  const { data } = useGetCart();
+
+  const getCartCounter = useMemo(() => {
+    let counter = 0;
+    (data || []).forEach((el) => {
+      counter = counter + el.quantity;
+    });
+
+    return counter;
+  }, [data]);
+
   return (
     <UiElementLayout layoutType={ElementLayoutTypeEnum.HEADER} className={styles.headerWrapper}>
       <UiContainer className={styles.container}>
@@ -39,7 +53,10 @@ const Header = () => {
           />
         </UiHideInMobile>
 
-        <UiIcon classNameIcon={styles.iconCart} />
+        <UiElementLayout>
+          <UiTypography>{getCartCounter}</UiTypography>
+          <UiIcon classNameIcon={styles.iconCart} />
+        </UiElementLayout>
       </UiContainer>
     </UiElementLayout>
   );

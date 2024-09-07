@@ -11,8 +11,8 @@ interface PokemonDetailModalReturn {
 
 const usePokemonDetailModalLogic = (modalData: PokemonListApi): PokemonDetailModalReturn => {
   const res = useGetPokemonSpecies([String(modalData?.id)]);
-  const updateCartMutation = useUpdateCart();
   const { data, isError, isLoading, isFetching } = res[0];
+  const updateCartMutation = useUpdateCart();
 
   const handleUpdateCartSubmit = () => {
     updateCartMutation.mutate({
