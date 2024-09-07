@@ -21,7 +21,7 @@ interface StatsObj {
   };
 }
 
-interface TypesObj {
+export interface PokemonDetailTypesObj {
   slot: number;
   type: {
     name: string;
@@ -47,7 +47,9 @@ export interface PokemonDetailApi {
   order: number;
   species: SpeciesObj[];
   stats: StatsObj[];
-  types: TypesObj[];
-  sprites: SpritesObj[];
+  types: PokemonDetailTypesObj[];
+  sprites: SpritesObj;
   abilities: PokemonDetailAbilityObj[];
+  is_legendary: boolean;
+  is_mythical: boolean;
 }

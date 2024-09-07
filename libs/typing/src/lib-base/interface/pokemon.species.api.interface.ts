@@ -45,7 +45,7 @@ interface VarietiesObj {
   };
 }
 
-interface FlavorTextEntriesObj {
+export interface PokemonSpeciesFlavorTextEntriesObj {
   flavor_text: string;
   language: {
     name: string;
@@ -87,6 +87,6 @@ export interface PokemonSpeciesApi {
   order: number;
   shape: ShapeObj;
   varieties: VarietiesObj[];
-  flavor_text_entries: FlavorTextEntriesObj;
+  flavor_text_entries: PokemonSpeciesFlavorTextEntriesObj;
   genera: GeneraObj;
 }

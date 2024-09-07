@@ -1,11 +1,9 @@
-import { GenericNonReturnType } from '@pokemon-pet-shop/typing';
-
-import { ModalAlignmentEnum } from './modal.enum';
+import { AlignmentEnum, GenericNonReturnType } from '@pokemon-pet-shop/typing';
 
 export interface ModalProps {
   classNameShadow?: any;
   classNameModal?: any;
   isModalShown?: boolean;
-  modalAlignment?: ModalAlignmentEnum;
+  modalAlignment?: AlignmentEnum;
   onClick?: GenericNonReturnType;
 }

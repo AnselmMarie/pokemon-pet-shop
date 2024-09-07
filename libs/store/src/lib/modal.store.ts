@@ -13,7 +13,7 @@ interface ModalOptions {
   classNameModal?: string;
   isModalShown?: boolean;
   title?: string;
-  data?: any;
+  data?: unknown;
   headlineType?: ModalHeadlineTypeEnum;
   modalAlignment?: any;
 }

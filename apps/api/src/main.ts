@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 
+import { cartRoute } from './api/v1/cart';
 import { pokemonRoute } from './api/v1/pokemon';
 import { cacheMiddleware } from './middleware/cache.middleware';
 
@@ -15,6 +16,7 @@ app.use(cacheMiddleware);
 
 // Using Routes
 app.use('/api/pokemon', pokemonRoute);
+app.use('/api/cart', cartRoute);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

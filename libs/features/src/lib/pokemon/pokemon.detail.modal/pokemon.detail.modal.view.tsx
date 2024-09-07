@@ -1,8 +1,13 @@
-import { ReactElement, useMemo } from 'react';
+import { ReactElement, useCallback, useMemo } from 'react';
 
 import { halfCircle } from '@pokemon-pet-shop/assets';
-import { useModalStore } from '@pokemon-pet-shop/store';
-import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
+import { useCartStore, useModalStore } from '@pokemon-pet-shop/store';
+import {
+  PokemonDetailAbilityObj,
+  PokemonDetailTypesObj,
+  PokemonListApi,
+  PokemonSpeciesApi,
+} from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiTypography,
@@ -24,13 +29,25 @@ import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
 
 const PokemonDetailModal = (): ReactElement => {
   const { modalOptions } = useModalStore((state) => state);
-  const { data: modalData } = modalOptions;
-  const { detailData, isError, isLoading, isFetching } = usePokemonDetailModalLogic(modalData?.id);
-  const { getThemeClass } = usePokemonTheme(modalData.types);
+  const { data = {} } = modalOptions;
+  const modalData = {
+    ...data,
+  } as PokemonListApi;
 
-  const handleAddPetInCartClick = () => {
-    console.log('handleAddPetInCartClick');
-  };
+  const { addQuantity } = useCartStore((state) => state);
+
+  const {
+    speciesData: dataD = {},
+    isError,
+    isLoading,
+    isFetching,
+    onHandleUpdateCartSubmit,
+  } = usePokemonDetailModalLogic(modalData);
+  const speciesData = {
+    ...dataD,
+  } as PokemonSpeciesApi;
+
+  const { getThemeClass } = usePokemonTheme(modalData?.types);
 
   const convertKgToLbs = useMemo(() => {
     const stringKgNoDecimal = String(modalData?.weight);
@@ -130,7 +147,7 @@ const PokemonDetailModal = (): ReactElement => {
             {modalData?.types ? (
               <UiTagWrapper>
                 {(modalData?.types || []).map(
-                  (typeObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {
+                  (typeObj: PokemonDetailTypesObj, i: number): ReactElement | null => {
                     return <UiTagItem key={i} name={typeObj?.type?.name} />;
                   }
                 )}
@@ -141,7 +158,7 @@ const PokemonDetailModal = (): ReactElement => {
               className={classNamesUtil(styles.cardHeadline)}
               typographyType={TypographyTypeEnum.H2}
             >
-              {detailData?.flavor_text_entries?.flavor_text}
+              {speciesData?.flavor_text_entries?.flavor_text}
             </UiTypography>
 
             <UiElementLayout>
@@ -180,7 +197,7 @@ const PokemonDetailModal = (): ReactElement => {
           </UiElementLayout>
 
           <UiElementLayout className={styles.btnWrapper}>
-            <UiButton className={styles.btn} text="Get Pet" onClick={handleAddPetInCartClick} />
+            <UiButton className={styles.btn} text="Get Pet" onClick={onHandleUpdateCartSubmit} />
           </UiElementLayout>
         </UiElementLayout>
       </UiElementLayout>

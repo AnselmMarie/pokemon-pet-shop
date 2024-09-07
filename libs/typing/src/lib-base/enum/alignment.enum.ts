@@ -1,4 +1,4 @@
-export enum ModalAlignmentEnum {
+export enum AlignmentEnum {
   CENTER = 'center',
   LEFT = 'left',
   RIGHT = 'right',

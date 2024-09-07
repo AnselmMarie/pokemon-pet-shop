@@ -1,7 +1,7 @@
 import { memo, ReactElement } from 'react';
 
 import { ModalHeadlineTypeEnum, useModalStore } from '@pokemon-pet-shop/store';
-import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
+import { AlignmentEnum, PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiImage,
@@ -11,9 +11,8 @@ import {
   UiButton,
   UiCard,
   mobSrcTypeEnum,
-  ModalAlignmentEnum,
 } from '@pokemon-pet-shop/ui';
-import { classNamesUtil } from '@pokemon-pet-shop/utils';
+import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonDetailModal } from '..';
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
@@ -36,9 +35,11 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
         classNameModal: '',
         isModalShown: false,
         headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
-        modalAlignment: ModalAlignmentEnum.CENTER,
+        modalAlignment: AlignmentEnum.CENTER,
       },
-      onCallback: () => {},
+      onCallback: () => {
+        noopUtil();
+      },
     });
   };
 

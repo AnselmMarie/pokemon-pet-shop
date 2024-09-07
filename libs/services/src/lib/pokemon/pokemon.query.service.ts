@@ -1,6 +1,6 @@
 import { useQueries, useInfiniteQuery } from '@tanstack/react-query';
 
-import { getPokemonList, getPokemonSpecies } from './api.service';
+import { getPokemonList, getPokemonSpecies } from './api.pokemon.service';
 
 export function useGetPokemonList() {
   return useInfiniteQuery({
@@ -15,6 +15,7 @@ export function useGetPokemonList() {
     },
   });
 }
+
 export function useGetPokemonSpecies(ids: (string | undefined)[] | undefined) {
   return useQueries({
     queries: (ids ?? []).map((id) => {

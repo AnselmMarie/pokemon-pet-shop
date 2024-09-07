@@ -1,12 +1,12 @@
 import { ReactElement } from 'react';
 
+import { AlignmentEnum } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiIcon,
   IconTypeEnum,
   UiTypography,
   UiModal,
-  ModalAlignmentEnum,
   UiSwitch,
 } from '@pokemon-pet-shop/ui';
 
@@ -18,7 +18,7 @@ const NavMobileModal = ({ isModalShown = false }: NavMobileModalProps): ReactEle
     <UiModal
       isModalShown={isModalShown}
       classNameModal={styles.modal}
-      modalAlignment={ModalAlignmentEnum.LEFT}
+      modalAlignment={AlignmentEnum.LEFT}
     >
       <UiElementLayout className={styles.dropdownTop}>
         <UiElementLayout className={styles.dropdownHeadline}>

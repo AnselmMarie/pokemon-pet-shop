@@ -1,8 +1,4 @@
-import axios from 'axios';
-
-const BASE_URL = `http://${import.meta.env.VITE_SERVER_HOST}:${import.meta.env.VITE_SERVER_PORT}/api/`;
-
-const axiosInstance = axios.create({ baseURL: BASE_URL });
+import { axiosInstance } from '../common/utils/api.util';
 
 export const getPokemonList = async ({ pageParam }: { pageParam: number }) => {
   return (await axiosInstance.get<any[]>(`pokemon/list?limit=50&offset=${pageParam}`)).data;
