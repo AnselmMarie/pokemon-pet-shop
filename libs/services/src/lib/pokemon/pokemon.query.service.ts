@@ -8,7 +8,7 @@ export function useGetPokemonList() {
     queryFn: getPokemonList,
     initialPageParam: 0,
     getNextPageParam: (lastPage, _, lastPageParam) => {
-      if (lastPage.length === 0) {
+      if (lastPage?.length === 0) {
         return undefined;
       }
       return lastPageParam + 50;

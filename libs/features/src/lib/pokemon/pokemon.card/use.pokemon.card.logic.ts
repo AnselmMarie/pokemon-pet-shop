@@ -1,7 +1,7 @@
 import { useUpdateCart } from '@pokemon-pet-shop/services';
 import { GenericNonReturnType, PokemonListApi } from '@pokemon-pet-shop/typing';
 
-import { usePokemonTheme } from '../hooks/use.pokemone.theme.logic';
+import { usePokemonTheme } from '../hooks/use.pokemon.theme.logic';
 
 interface UseCardReturn {
   getThemeClass: any;

@@ -10,3 +10,4 @@ export * from './lib-base/utils/form.util';
 export * from './lib-base/utils/trim-content.util';
 export * from './lib-base/utils/date-format.util';
 export * from './lib-base/utils/noop.util';
+export * from './lib-base/utils/pricing.util';

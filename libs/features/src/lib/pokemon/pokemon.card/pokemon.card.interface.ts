@@ -1,4 +1,5 @@
+import { PokemonListApi } from '@pokemon-pet-shop/typing';
+
 export interface CardProps {
-  data?: any;
-  dataDetail?: any;
+  data: PokemonListApi;
 }

@@ -5,3 +5,4 @@ export * from './lib-base/interface/pokemon.detail.api.interface';
 export * from './lib-base/interface/cart.api.interface';
 export * from './lib-base/types';
 export * from './lib-base/enum';
+export * from './lib-base/interface/pricing.api.interface';

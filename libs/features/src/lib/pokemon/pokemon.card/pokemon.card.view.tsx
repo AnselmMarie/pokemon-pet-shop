@@ -21,15 +21,15 @@ import { CardProps } from './pokemon.card.interface';
 import { styles } from './pokemon.card.module';
 import usePokemonCard from './use.pokemon.card.logic';
 
-const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
-  const { getThemeClass, onHandleUpdateCartSubmit } = usePokemonCard(data);
+const PokemonCard = ({ data }: CardProps): ReactElement => {
+  const { getThemeClass } = usePokemonCard(data);
   const openModal = useModalStore((state) => state.openModal);
 
   const handleOpenDetailModalClick = () => {
     openModal({
       content: <UiPokemonDetailModal />,
       options: {
-        title: 'Here',
+        title: '',
         data: data,
         classNameShadow: '',
         classNameModal: '',
@@ -45,9 +45,6 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
   return (
     <UiCard className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
       <UiElementLayout className={styles.imgCardWrapper}>
-        <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.price}>
-          $500.00
-        </UiTypography>
         <UiImage
           src={data?.sprites?.other?.['official-artwork']?.front_default}
           className={styles.image}
@@ -111,11 +108,10 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
         </UiElementLayout>
 
         <UiElementLayout className={styles.btnWrapper}>
-          <UiButton className={styles.btn} text="Get Pet" onClick={onHandleUpdateCartSubmit} />
           <UiButton
             className={styles.btn}
             type={ButtonTypeEnum.SECONDARY}
-            text="Details"
+            text="Learn More"
             onClick={handleOpenDetailModalClick}
           />
         </UiElementLayout>

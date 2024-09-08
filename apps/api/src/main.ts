@@ -3,6 +3,7 @@ import express from 'express';
 
 import { cartRoute } from './api/v1/cart';
 import { pokemonRoute } from './api/v1/pokemon';
+import { pricingRoute } from './api/v1/pricing/routes/pricing.route';
 import { cacheMiddleware } from './middleware/cache.middleware';
 
 const app = express();
@@ -17,6 +18,7 @@ app.use(cacheMiddleware);
 // Using Routes
 app.use('/api/pokemon', pokemonRoute);
 app.use('/api/cart', cartRoute);
+app.use('/api/pricing', pricingRoute);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

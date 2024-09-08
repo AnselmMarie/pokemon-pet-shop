@@ -1,5 +1,7 @@
 import { memo, ReactElement } from 'react';
 
+import { PokemonListApi } from '@pokemon-pet-shop/typing';
+
 import { UiPokemonCard } from '../pokemon.card';
 
 import usePokemonList from './use.pokemon.list.logic';
@@ -8,7 +10,7 @@ import usePokemonList from './use.pokemon.list.logic';
 const PokemonList = (): ReactElement => {
   const { data, isError, isLoading, isFetching } = usePokemonList();
 
-  return (data?.pages[0] || []).map((el: any): ReactElement => {
+  return (data || []).map((el: PokemonListApi): ReactElement => {
     return <UiPokemonCard key={el?.name} data={el} />;
   });
 };

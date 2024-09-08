@@ -1,4 +1,4 @@
-import { ReactElement, useMemo } from 'react';
+import { ReactElement } from 'react';
 
 import { halfCircle } from '@pokemon-pet-shop/assets';
 import { useModalStore } from '@pokemon-pet-shop/store';
@@ -6,7 +6,6 @@ import {
   PokemonDetailAbilityObj,
   PokemonDetailTypesObj,
   PokemonListApi,
-  PokemonSpeciesApi,
 } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
@@ -22,7 +21,7 @@ import { classNamesUtil } from '@pokemon-pet-shop/utils';
 import { ReactSVG } from 'react-svg';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
-import { usePokemonTheme } from '../hooks/use.pokemone.theme.logic';
+import { usePokemonTheme } from '../hooks/use.pokemon.theme.logic';
 
 import styles from './pokemon.detail.modal.module.css';
 import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
@@ -33,80 +32,21 @@ const PokemonDetailModal = (): ReactElement => {
   const modalData = {
     ...data,
   } as PokemonListApi;
-
   const {
-    speciesData: dataD = {},
-    isError,
-    isLoading,
-    isFetching,
+    speciesData,
+    onConvertKgToLbs,
+    onConvertMetersToFtIn,
+    onGetPricingFormat,
     onHandleUpdateCartSubmit,
   } = usePokemonDetailModalLogic(modalData);
-  const speciesData = {
-    ...dataD,
-  } as PokemonSpeciesApi;
-
   const { getThemeClass } = usePokemonTheme(modalData?.types);
-
-  const convertKgToLbs = useMemo(() => {
-    const stringKgNoDecimal = String(modalData?.weight);
-
-    const kgDecimal = stringKgNoDecimal.replace(/\w$/, (match) => {
-      return `.${match}`;
-    });
-
-    const mathRound = Math.round(Number(kgDecimal));
-
-    let lbs = 0;
-    for (let loop = 0; loop < mathRound; loop++) {
-      lbs = lbs + 2.20462;
-    }
-
-    return { lbs: `${Math.trunc(lbs)} lbs`, kg: `(${kgDecimal} kg)` };
-  }, [modalData?.weight]);
-
-  const convertMetersToFtIn = useMemo(() => {
-    const stringKgNoDecimal = String(modalData?.height);
-
-    const mDecimal = stringKgNoDecimal.replace(/\w$/, (match) => {
-      return `.${match}`;
-    });
-
-    const ftTotal = Number(mDecimal) * 3.28084;
-    const ftTotalSplit = String(ftTotal).split('.');
-    const ftInObj = {
-      ft: '',
-      in: '',
-      m: `(${mDecimal} m)`,
-    };
-
-    const convertFtInches = (dFt: string | null = null, dIn: string | null = null) => {
-      const feet = Number(dFt);
-      const inches = Math.round(Number(`.${dIn}`) * 12);
-
-      if (inches === 12) {
-        ftInObj.ft = `${feet + 1}'`;
-        ftInObj.in = `0"`;
-        return;
-      }
-
-      ftInObj.ft = `${feet}'`;
-      ftInObj.in = `${String(inches)}"`;
-    };
-
-    if (ftTotalSplit.length === 2) {
-      convertFtInches(ftTotalSplit[0], ftTotalSplit[1]);
-    } else {
-      convertFtInches(ftTotalSplit[1]);
-    }
-
-    return ftInObj;
-  }, [modalData?.height]);
 
   return (
     <UiElementLayout className={styles.modal}>
       <UiElementLayout
         className={classNamesUtil(styles.imageContainer, styles?.[`${getThemeClass}ImageBg`])}
       >
+        <UiTypography>{onGetPricingFormat}</UiTypography>
         <UiImage
           src={modalData?.sprites?.other?.['official-artwork']?.front_default}
           className={styles.image}
@@ -164,15 +104,15 @@ const PokemonDetailModal = (): ReactElement => {
                 // className={classNamesUtil(styles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
-                Weight: {`${convertKgToLbs?.lbs} ${convertKgToLbs?.kg}`}
+                Weight: {`${onConvertKgToLbs?.lbs} ${onConvertKgToLbs?.kg}`}
               </UiTypography>
 
               <UiTypography
                 // className={classNamesUtil(styles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
-                Height: {convertMetersToFtIn?.ft ? `${convertMetersToFtIn?.ft} ` : null}
-                {convertMetersToFtIn?.in} {convertMetersToFtIn?.m}
+                Height: {onConvertMetersToFtIn?.ft ? `${onConvertMetersToFtIn?.ft} ` : null}
+                {onConvertMetersToFtIn?.in} {onConvertMetersToFtIn?.m}
               </UiTypography>
             </UiElementLayout>
 
