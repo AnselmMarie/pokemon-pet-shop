@@ -21,15 +21,3 @@ export const updateCartDataCall = async (data): Promise<CartDataApi> => {
     }, 500);
   });
 };
-
-export const clearCartDataCall = async (): Promise<CartDataApi> => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const data = { data: [], total: 0, counter: 0 };
-      cartDatabase.data = data.data;
-      cartDatabase.total = data.total;
-      cartDatabase.counter = data.counter;
-      resolve(data);
-    }, 500);
-  });
-};

@@ -15,7 +15,8 @@ import styles from './cart.modal.module.css';
 import useCartModalLogic from './use.cart.modal.logic';
 
 const CartModal = (): ReactElement => {
-  const { data, onHandleRemoveFromCart, onHandleAddToCart } = useCartModalLogic();
+  const { data, onHandleRemoveFromCart, onHandleAddToCart, onHandleRemoveCartItem } =
+    useCartModalLogic();
 
   return (
     <UiElementLayout className={styles.modal}>
@@ -53,7 +54,10 @@ const CartModal = (): ReactElement => {
                   </UiElementLayout>
                 </UiElementLayout>
 
-                <UiIcon icon={IconTypeEnum.ICON_TRASH} />
+                <UiIcon
+                  icon={IconTypeEnum.ICON_TRASH}
+                  onClick={() => onHandleRemoveCartItem(el?.id)}
+                />
               </UiElementLayout>
 
               <UiElementLayout className={styles?.sep} />

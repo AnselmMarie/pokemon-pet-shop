@@ -5,13 +5,13 @@ export const getCart = async () => {
 };
 
 export const updateCart = async (data: any) => {
-  return (await axiosInstance.put<any>(`cart/update/${data?.id}`, data)).data;
+  return (await axiosInstance.put<any>(`cart/item/${data?.id}`, data)).data;
 };
 
 export const clearCart = async () => {
   return (await axiosInstance.put<any>('cart/clear')).data;
 };
 
-export const deleteCartItem = async (id: number) => {
+export const deleteCartItem = async (id: string) => {
   return (await axiosInstance.delete<any>(`cart/item/${id}`)).data;
 };

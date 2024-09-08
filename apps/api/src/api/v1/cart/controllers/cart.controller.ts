@@ -5,7 +5,11 @@ import {
   errFormatResponseUtil,
 } from '../../../../utils/err.format.response.util';
 import { CartParamsProps } from '../interface/cart.interface';
-import { clearCartService, getCartService, updateCartItemService } from '../services/cart.service';
+import {
+  getCartService,
+  deleteCartItemService,
+  updateCartItemService,
+} from '../services/cart.service';
 
 const getCartController = async (req: Request<null, null, null, null>, res: Response) => {
   try {
@@ -40,38 +44,21 @@ const updateCartItemController = async (
   }
 };
 
-const removeCartItemController = async (
+const deleteCartItemController = async (
   req: Request<CartParamsProps, null, null, null>,
   res: Response
 ) => {
-  const { body } = req;
+  const { params } = req;
 
   try {
-    const pokemonRemoved = await updateCartItemService(body).catch(() => {
+    await deleteCartItemService(params?.id).catch(() => {
       throw errFormat500ResponseUtil();
     });
 
-    res.status(200).json(pokemonRemoved);
+    res.status(204).json();
   } catch (err) {
     res.status(err?.status).json(errFormatResponseUtil(err));
   }
 };
 
-const clearCartController = async (req: Request<null, null, null, null>, res: Response) => {
-  try {
-    const pokemonDetail = await clearCartService().catch(() => {
-      throw errFormat500ResponseUtil();
-    });
-
-    res.status(200).json(pokemonDetail);
-  } catch (err) {
-    res.status(err?.status).json(errFormatResponseUtil(err));
-  }
-};
-
-export {
-  getCartController,
-  updateCartItemController,
-  removeCartItemController,
-  clearCartController,
-};
+export { getCartController, updateCartItemController, deleteCartItemController };

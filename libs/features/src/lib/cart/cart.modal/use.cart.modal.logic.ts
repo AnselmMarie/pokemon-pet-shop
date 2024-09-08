@@ -1,15 +1,21 @@
-import { useGetCart, useUpdateCart } from '@pokemon-pet-shop/services';
+import { useGetCart, useDeleteCartItem, useUpdateCart } from '@pokemon-pet-shop/services';
 import { CartDataApi, GenericNonReturnType } from '@pokemon-pet-shop/typing';
 
 interface UseCartModalReturn {
   data: CartDataApi;
   onHandleRemoveFromCart: GenericNonReturnType;
   onHandleAddToCart: GenericNonReturnType;
+  onHandleRemoveCartItem: GenericNonReturnType;
 }
 
 const useCartModalLogic = (): UseCartModalReturn => {
   const { data } = useGetCart();
   const updateCartMutation = useUpdateCart();
+  const deleteCartMutation = useDeleteCartItem();
+
+  const handleRemoveCartItem = (id: string) => {
+    deleteCartMutation.mutate(id);
+  };
 
   const handleAddToCart = (id: string) => {
     updateCartMutation.mutate({
@@ -31,6 +37,7 @@ const useCartModalLogic = (): UseCartModalReturn => {
     data,
     onHandleRemoveFromCart: handleRemoveFromCart,
     onHandleAddToCart: handleAddToCart,
+    onHandleRemoveCartItem: handleRemoveCartItem,
   };
 };
 

@@ -8,7 +8,7 @@ import {
 } from '../../../../utils/err.format.response.util';
 import { getPokemonSpeciesService } from '../../pokemon';
 import { getPokemonDetailService } from '../../pokemon/services/pokemon.detail.service';
-import { clearCartDataCall, getCartDataCall, updateCartDataCall } from '../database/cart.database';
+import { getCartDataCall, updateCartDataCall } from '../database/cart.database';
 
 const doesItemExistKeyFn = (data, id) => {
   const cartLength = data.length;
@@ -81,6 +81,14 @@ const updateCartItemService = async (payload: CartApiPayload) => {
     return currentObj;
   }
 
+  if (payload.removeFromCart) {
+    throw errFormatResponseUtil({
+      status: 400,
+      statusText: `This action can't be completed with this endpoint.`,
+      message: 'We cannot complete this cart action at this moment.',
+    });
+  }
+
   const additionalData = await getSpeciesDetail(payload?.id).catch(() => {
     throw errFormat500ResponseUtil();
   });
@@ -106,18 +114,33 @@ const updateCartItemService = async (payload: CartApiPayload) => {
   return finalPayload;
 };
 
-const removeCartItemService = async () => {
-  const res = await clearCartDataCall().catch(() => {
+const deleteCartItemService = async (id: string) => {
+  const currentCartData: CartDataApi = clone(
+    await getCartDataCall().catch(() => {
+      throw errFormat500ResponseUtil();
+    })
+  );
+  const data = clone(currentCartData.data);
+  let key = null;
+  const dataToRemove: any = data.filter((data, i: number) => {
+    if (data?.id == id) {
+      key = i;
+      return data;
+    }
+  });
+  const totalPrice = dataToRemove[0]?.quantity * dataToRemove[0]?.price;
+
+  currentCartData.counter = currentCartData.counter - dataToRemove[0]?.quantity;
+  currentCartData.total = currentCartData.total - totalPrice;
+
+  data.splice(key, 1);
+  currentCartData.data = data;
+
+  await updateCartDataCall(currentCartData).catch(() => {
     throw errFormat500ResponseUtil();
   });
-  return res;
+
+  return;
 };
 
-const clearCartService = async () => {
-  const res = await clearCartDataCall().catch(() => {
-    throw errFormat500ResponseUtil();
-  });
-  return res;
-};
-
-export { getCartService, updateCartItemService, removeCartItemService, clearCartService };
+export { getCartService, updateCartItemService, deleteCartItemService };

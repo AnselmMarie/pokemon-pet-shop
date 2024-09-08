@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import { clearCart, deleteCartItem, updateCart } from './api.cart.service';
+import { deleteCartItem, updateCart } from './api.cart.service';
 
 export function useUpdateCart() {
   const queryClient = useQueryClient();
@@ -19,20 +19,7 @@ export function useDeleteCartItem() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (id: number) => deleteCartItem(id),
-    onSettled: async (_, error) => {
-      if (!error) {
-        await queryClient.invalidateQueries({ queryKey: ['cart'] });
-      }
-    },
-  });
-}
-
-export function useClearCart() {
-  const queryClient = useQueryClient();
-
-  return useMutation({
-    mutationFn: () => clearCart(),
+    mutationFn: (id: string) => deleteCartItem(id),
     onSettled: async (_, error) => {
       if (!error) {
         await queryClient.invalidateQueries({ queryKey: ['cart'] });
