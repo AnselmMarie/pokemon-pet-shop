@@ -1,7 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { CartApiPayload, CartDataApi } from '@pokemon-pet-shop/typing';
+import { clone } from 'lodash';
 
-import { errFormatResponseUtil } from '../../../../utils/err.format.response.util';
+import {
+  errFormat500ResponseUtil,
+  errFormatResponseUtil,
+} from '../../../../utils/err.format.response.util';
 import { getPokemonSpeciesService } from '../../pokemon';
 import { getPokemonDetailService } from '../../pokemon/services/pokemon.detail.service';
 import { clearCartDataCall, getCartDataCall, updateCartDataCall } from '../database/cart.database';
@@ -30,7 +34,9 @@ const doesItemExistKeyFn = (data, id) => {
 };
 
 const getCartService = async () => {
-  return await getCartDataCall();
+  return await getCartDataCall().catch(() => {
+    throw errFormat500ResponseUtil();
+  });
 };
 
 const getSpeciesDetail = async (id: string) => {
@@ -45,9 +51,13 @@ const getSpeciesDetail = async (id: string) => {
   });
 };
 
-const updateCartService = async (payload: CartApiPayload) => {
-  const currentCartData: CartDataApi = await getCartDataCall();
-  const data = currentCartData.data;
+const updateCartItemService = async (payload: CartApiPayload) => {
+  const currentCartData: CartDataApi = clone(
+    await getCartDataCall().catch(() => {
+      throw errFormat500ResponseUtil();
+    })
+  );
+  const data = clone(currentCartData.data);
   const { key, counter, total } = doesItemExistKeyFn(data, payload?.id);
   const currentObj = data[key];
 
@@ -64,10 +74,16 @@ const updateCartService = async (payload: CartApiPayload) => {
     currentCartData.counter = payload.addToCart ? counter + 1 : counter - 1;
     currentCartData.total = payload.addToCart ? total + 500 : total - 500;
 
+    await updateCartDataCall(currentCartData).catch(() => {
+      throw errFormat500ResponseUtil();
+    });
+
     return currentObj;
   }
 
-  const additionalData = await getSpeciesDetail(payload?.id);
+  const additionalData = await getSpeciesDetail(payload?.id).catch(() => {
+    throw errFormat500ResponseUtil();
+  });
 
   const finalPayload = {
     id: payload?.id,
@@ -81,14 +97,27 @@ const updateCartService = async (payload: CartApiPayload) => {
   currentCartData.counter = counter + 1;
   currentCartData.total = total + 500;
 
-  data.push(finalPayload);
+  currentCartData.data.push(finalPayload);
+
+  await updateCartDataCall(currentCartData).catch(() => {
+    throw errFormat500ResponseUtil();
+  });
 
   return finalPayload;
 };
 
-const clearCartService = async () => {
-  const res = await clearCartDataCall();
+const removeCartItemService = async () => {
+  const res = await clearCartDataCall().catch(() => {
+    throw errFormat500ResponseUtil();
+  });
   return res;
 };
 
-export { getCartService, updateCartService, clearCartService };
+const clearCartService = async () => {
+  const res = await clearCartDataCall().catch(() => {
+    throw errFormat500ResponseUtil();
+  });
+  return res;
+};
+
+export { getCartService, updateCartItemService, removeCartItemService, clearCartService };

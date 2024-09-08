@@ -1,6 +1,9 @@
 import { Request, Response } from 'express';
 
-import { errFormatResponseUtil } from '../../../../utils/err.format.response.util';
+import {
+  errFormat500ResponseUtil,
+  errFormatResponseUtil,
+} from '../../../../utils/err.format.response.util';
 import { DEFAULT_LIMIT } from '../const/default.prop.const';
 import { PokemonListQueryProps } from '../interface/pokemon.interface';
 import { getPokemonDetailService } from '../services/pokemon.detail.service';
@@ -24,6 +27,8 @@ const getPokemonListController = async (
     const pokemonList = await getPokemonListService({
       offset: req?.query?.offset,
       limit: limitQuery,
+    }).catch(() => {
+      throw errFormat500ResponseUtil();
     });
 
     const limitNumberQuery = Number(limitQuery) + 1;

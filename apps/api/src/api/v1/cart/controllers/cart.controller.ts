@@ -1,11 +1,17 @@
 import { Request, Response } from 'express';
 
-import { errFormatResponseUtil } from '../../../../utils/err.format.response.util';
-import { clearCartService, getCartService, updateCartService } from '../services/cart.service';
+import {
+  errFormat500ResponseUtil,
+  errFormatResponseUtil,
+} from '../../../../utils/err.format.response.util';
+import { CartParamsProps } from '../interface/cart.interface';
+import { clearCartService, getCartService, updateCartItemService } from '../services/cart.service';
 
 const getCartController = async (req: Request<null, null, null, null>, res: Response) => {
   try {
-    const pokemonDetail = await getCartService();
+    const pokemonDetail = await getCartService().catch(() => {
+      throw errFormat500ResponseUtil();
+    });
 
     res.status(200).json(pokemonDetail);
   } catch (err) {
@@ -17,16 +23,35 @@ interface CartBodyProps {
   id: string;
 }
 
-const updateCartController = async (
+const updateCartItemController = async (
   req: Request<null, null, CartBodyProps, null>,
   res: Response
 ) => {
   const { body } = req;
 
   try {
-    const pokemonDetail = await updateCartService(body);
+    const pokemonUpdate = await updateCartItemService(body).catch(() => {
+      throw errFormat500ResponseUtil();
+    });
 
-    res.status(200).json(pokemonDetail);
+    res.status(200).json(pokemonUpdate);
+  } catch (err) {
+    res.status(err?.status).json(errFormatResponseUtil(err));
+  }
+};
+
+const removeCartItemController = async (
+  req: Request<CartParamsProps, null, null, null>,
+  res: Response
+) => {
+  const { body } = req;
+
+  try {
+    const pokemonRemoved = await updateCartItemService(body).catch(() => {
+      throw errFormat500ResponseUtil();
+    });
+
+    res.status(200).json(pokemonRemoved);
   } catch (err) {
     res.status(err?.status).json(errFormatResponseUtil(err));
   }
@@ -34,7 +59,9 @@ const updateCartController = async (
 
 const clearCartController = async (req: Request<null, null, null, null>, res: Response) => {
   try {
-    const pokemonDetail = await clearCartService();
+    const pokemonDetail = await clearCartService().catch(() => {
+      throw errFormat500ResponseUtil();
+    });
 
     res.status(200).json(pokemonDetail);
   } catch (err) {
@@ -42,4 +69,9 @@ const clearCartController = async (req: Request<null, null, null, null>, res: Re
   }
 };
 
-export { getCartController, updateCartController, clearCartController };
+export {
+  getCartController,
+  updateCartItemController,
+  removeCartItemController,
+  clearCartController,
+};

@@ -3,14 +3,15 @@ import express from 'express';
 import {
   clearCartController,
   getCartController,
-  updateCartController,
+  removeCartItemController,
+  updateCartItemController,
 } from '../controllers/cart.controller';
 
 const cartRoute = express.Router();
 
 cartRoute.get('/', getCartController);
-cartRoute.put('/update/:id', updateCartController);
+cartRoute.put('/update/:id', updateCartItemController);
 cartRoute.put('/clear', clearCartController);
-// cartRoute.delete('/item/:id', clearCartController);
+cartRoute.delete('/item/:id', removeCartItemController);
 
 export { cartRoute };
