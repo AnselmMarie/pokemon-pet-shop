@@ -1,3 +1,3 @@
-import UiCartModal from './cart.modal';
+import UiCartModal from './cart.modal.view';
 
 export { UiCartModal };

@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { useGetCart } from '@pokemon-pet-shop/services';
+import { CartDataContentApi } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiIcon,
@@ -12,14 +12,15 @@ import {
 } from '@pokemon-pet-shop/ui';
 
 import styles from './cart.modal.module.css';
+import useCartModalLogic from './use.cart.modal.logic';
 
 const CartModal = (): ReactElement => {
-  const { data } = useGetCart();
+  const { data, onHandleRemoveFromCart, onHandleAddToCart } = useCartModalLogic();
 
   return (
     <UiElementLayout className={styles.modal}>
       <UiElementLayout className={styles.cartContent}>
-        {(data?.data || [])?.map((el: any, i: number) => {
+        {(data?.data || [])?.map((el: CartDataContentApi, i: number) => {
           return (
             <UiElementLayout key={i} className={styles?.cartWrapper}>
               <UiElementLayout className={styles.cardContentRow}>
@@ -39,7 +40,19 @@ const CartModal = (): ReactElement => {
                   <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.price}>
                     {el?.price}
                   </UiTypography>
+                  <UiElementLayout>
+                    <UiIcon
+                      icon={IconTypeEnum.ICON_MINUS}
+                      onClick={() => onHandleRemoveFromCart(el?.id)}
+                    />
+                    <UiTypography>{el?.quantity}</UiTypography>
+                    <UiIcon
+                      icon={IconTypeEnum.ICON_PLUS}
+                      onClick={() => onHandleAddToCart(el?.id)}
+                    />
+                  </UiElementLayout>
                 </UiElementLayout>
+
                 <UiIcon icon={IconTypeEnum.ICON_TRASH} />
               </UiElementLayout>
 

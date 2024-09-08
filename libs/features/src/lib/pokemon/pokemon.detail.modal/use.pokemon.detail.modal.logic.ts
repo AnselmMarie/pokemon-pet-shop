@@ -1,12 +1,12 @@
 import { useGetPokemonSpecies, useUpdateCart } from '@pokemon-pet-shop/services';
-import { PokemonListApi, PokemonSpeciesApi } from '@pokemon-pet-shop/typing';
+import { GenericNonReturnType, PokemonListApi, PokemonSpeciesApi } from '@pokemon-pet-shop/typing';
 
 interface PokemonDetailModalReturn {
   speciesData: PokemonSpeciesApi;
   isError: boolean;
   isLoading: boolean;
   isFetching: boolean;
-  onHandleUpdateCartSubmit: any;
+  onHandleUpdateCartSubmit: GenericNonReturnType;
 }
 
 const usePokemonDetailModalLogic = (modalData: PokemonListApi): PokemonDetailModalReturn => {
@@ -17,7 +17,7 @@ const usePokemonDetailModalLogic = (modalData: PokemonListApi): PokemonDetailMod
   const handleUpdateCartSubmit = () => {
     updateCartMutation.mutate({
       id: modalData?.id,
-      quantity: 1,
+      addToCart: true,
     });
   };
 

@@ -1,11 +1,11 @@
 import { useUpdateCart } from '@pokemon-pet-shop/services';
-import { PokemonListApi } from '@pokemon-pet-shop/typing';
+import { GenericNonReturnType, PokemonListApi } from '@pokemon-pet-shop/typing';
 
 import { usePokemonTheme } from '../hooks/use.pokemone.theme.logic';
 
 interface UseCardReturn {
   getThemeClass: any;
-  onHandleUpdateCartSubmit: any;
+  onHandleUpdateCartSubmit: GenericNonReturnType;
 }
 
 const usePokemonCard = (data: PokemonListApi): UseCardReturn => {
@@ -15,7 +15,7 @@ const usePokemonCard = (data: PokemonListApi): UseCardReturn => {
   const handleUpdateCartSubmit = () => {
     updateCartMutation.mutate({
       id: data?.id,
-      quantity: 1,
+      addToCart: true,
     });
   };
 

@@ -34,7 +34,6 @@ const Header = () => {
         data: data,
         classNameShadow: '',
         classNameModal: '',
-        isModalShown: false,
         headlineType: ModalHeadlineTypeEnum.RELATIVE,
         modalAlignment: AlignmentEnum.RIGHT,
       },

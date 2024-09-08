@@ -1,30 +1,20 @@
-import { PokemonListApi, PokemonSpeciesApi } from '@pokemon-pet-shop/typing';
+import { CartDataContentApi, PokemonListApi, PokemonSpeciesApi } from '@pokemon-pet-shop/typing';
 import { create } from 'zustand';
 
-interface CartDataProps {
+interface CartDataApi {
   modalData: PokemonListApi;
   speciesData: PokemonSpeciesApi;
 }
 
-interface CartContentProps {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-  isLegendary: boolean;
-  isMythical: boolean;
-}
-
-const doesItemExistFn = (currentData: Array<CartContentProps>, outsideData: PokemonListApi) => {
-  return currentData.find((el: CartContentProps) => {
+const doesItemExistFn = (currentData: Array<CartDataContentApi>, outsideData: PokemonListApi) => {
+  return currentData.find((el: CartDataContentApi) => {
     return String(outsideData?.id) === el?.id;
   });
 };
 
 const cartStore = (set: any, get: any) => ({
   cartContents: [],
-  addQuantity: ({ modalData, speciesData }: CartDataProps): void => {
+  addQuantity: ({ modalData, speciesData }: CartDataApi): void => {
     const currentData = get().cartContents;
     const doesItemExist = doesItemExistFn(currentData, modalData);
 

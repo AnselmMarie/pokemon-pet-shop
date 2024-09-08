@@ -16,7 +16,7 @@ interface ModalOptions {
   title?: string;
   data?: unknown;
   headlineType?: ModalHeadlineTypeEnum;
-  modalAlignment?: any;
+  modalAlignment?: AlignmentEnum;
 }
 
 interface setModalStoreProps {
@@ -31,7 +31,6 @@ const modalStore = (set: any) => ({
   modalOptions: {
     classNameShadow: '',
     classNameModal: '',
-    isModalShown: false,
     title: '',
     data: null,
     headlineType: ModalHeadlineTypeEnum.RELATIVE,

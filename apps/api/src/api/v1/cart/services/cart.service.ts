@@ -1,23 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { CartApiPayload, CartDataApi } from '@pokemon-pet-shop/typing';
+
+import { errFormatResponseUtil } from '../../../../utils/err.format.response.util';
 import { getPokemonSpeciesService } from '../../pokemon';
 import { getPokemonDetailService } from '../../pokemon/services/pokemon.detail.service';
 import { clearCartDataCall, getCartDataCall, updateCartDataCall } from '../database/cart.database';
-
-interface CartDataProps {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-  isLegendary: boolean;
-  isMythical: boolean;
-}
 
 const doesItemExistKeyFn = (data, id) => {
   const cartLength = data.length;
   let key = null;
   let counter = null;
-  let total = null;
+  let total = 0;
 
   for (let loop = 0; loop < cartLength; loop++) {
     const el = data[loop];
@@ -26,8 +19,9 @@ const doesItemExistKeyFn = (data, id) => {
       key = loop;
     }
     counter = counter + el?.quantity;
-    total = total + el?.price;
+    total = el?.price * el?.quantity + total;
   }
+
   return {
     key,
     counter,
@@ -51,16 +45,24 @@ const getSpeciesDetail = async (id: string) => {
   });
 };
 
-const updateCartService = async (payload) => {
-  const currentCartData: any = await getCartDataCall();
+const updateCartService = async (payload: CartApiPayload) => {
+  const currentCartData: CartDataApi = await getCartDataCall();
   const data = currentCartData.data;
   const { key, counter, total } = doesItemExistKeyFn(data, payload?.id);
+  const currentObj = data[key];
+
+  if (currentObj && payload.removeFromCart && currentObj.quantity === 1) {
+    throw errFormatResponseUtil({
+      status: 400,
+      statusText: `This action can't be completed with this endpoint.`,
+      message: 'We cannot complete this cart action at this moment.',
+    });
+  }
 
   if (key !== null) {
-    const currentObj = data[key];
-    currentObj.quantity = currentObj.quantity + 1;
-    currentCartData.counter = counter + 1;
-    currentCartData.total = total + 500;
+    currentObj.quantity = payload.addToCart ? currentObj.quantity + 1 : currentObj.quantity - 1;
+    currentCartData.counter = payload.addToCart ? counter + 1 : counter - 1;
+    currentCartData.total = payload.addToCart ? total + 500 : total - 500;
 
     return currentObj;
   }

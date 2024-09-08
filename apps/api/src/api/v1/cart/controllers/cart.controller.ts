@@ -14,7 +14,7 @@ const getCartController = async (req: Request<null, null, null, null>, res: Resp
 };
 
 interface CartBodyProps {
-  id: any;
+  id: string;
 }
 
 const updateCartController = async (

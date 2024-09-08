@@ -10,6 +10,7 @@
 .cartContent {
   padding: 15px;
   height: calc(100% - 60px);
+  overflow-x: scroll;
 }
 
 .middleRow {

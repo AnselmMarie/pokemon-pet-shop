@@ -33,7 +33,6 @@ const PokemonCard = ({ data = {} }: CardProps): ReactElement => {
         data: data,
         classNameShadow: '',
         classNameModal: '',
-        isModalShown: false,
         headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
         modalAlignment: AlignmentEnum.CENTER,
       },

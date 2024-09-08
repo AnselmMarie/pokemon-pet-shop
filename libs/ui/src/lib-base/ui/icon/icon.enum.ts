@@ -7,4 +7,6 @@ export enum IconTypeEnum {
   ICON_X = 'IconX',
   ICON_MENU = 'IconMenu',
   ICON_TRASH = 'IconTrash',
+  ICON_MINUS = 'IconMinus',
+  ICON_PLUS = 'IconPlus',
 }

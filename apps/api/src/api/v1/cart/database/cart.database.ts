@@ -1,6 +1,8 @@
+import { CartDataApi } from '@pokemon-pet-shop/typing';
+
 export let cartDatabase = { data: [], total: 0, counter: 0 };
 
-export const getCartDataCall = async () => {
+export const getCartDataCall = async (): Promise<CartDataApi> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(cartDatabase);
@@ -8,7 +10,7 @@ export const getCartDataCall = async () => {
   });
 };
 
-export const updateCartDataCall = async ({ data, counter, total }) => {
+export const updateCartDataCall = async ({ data, counter, total }): Promise<CartDataApi> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       cartDatabase.data = data;
@@ -19,7 +21,7 @@ export const updateCartDataCall = async ({ data, counter, total }) => {
   });
 };
 
-export const clearCartDataCall = async () => {
+export const clearCartDataCall = async (): Promise<CartDataApi> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       cartDatabase = { data: [], total: 0, counter: 0 };
