@@ -1,11 +1,14 @@
+import { GenericNonReturnType } from '@pokemon-pet-shop/typing';
+
 import { IconType } from '../icon/icon.interface';
 
-import { ThemeModeEnum } from './switch.enum';
-
 export interface SwitchProps {
-  className?: any;
+  className?: string;
   name?: string;
-  iconLeft?: IconType;
-  iconRight?: IconType;
-  defaultValue?: ThemeModeEnum;
+  iconLeft?: IconType | null;
+  iconRight?: IconType | null;
+  defaultValue?: boolean;
+  isDisabled?: boolean;
+  onLeftClick?: GenericNonReturnType;
+  onRightClick?: GenericNonReturnType;
 }

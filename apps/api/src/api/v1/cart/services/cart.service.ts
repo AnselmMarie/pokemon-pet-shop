@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { CartApiPayload, CartDataApi } from '@pokemon-pet-shop/typing';
+import { CartApiPayload, CartDataApi, PricingApi } from '@pokemon-pet-shop/typing';
+import { pricingFormatUtil } from '@pokemon-pet-shop/utils';
 import { clone } from 'lodash';
 
 import {
@@ -8,6 +9,8 @@ import {
 } from '../../../../utils/err.format.response.util';
 import { getPokemonSpeciesService } from '../../pokemon';
 import { getPokemonDetailService } from '../../pokemon/services/pokemon.detail.service';
+import { getPokemonEvolutionChainService } from '../../pokemon/services/pokemon.evolution.chain.service';
+import { getPricingService } from '../../pricing/services/pricing.service';
 import { getCartDataCall, updateCartDataCall } from '../database/cart.database';
 
 const doesItemExistKeyFn = (data, id) => {
@@ -58,6 +61,7 @@ const updateCartItemService = async (payload: CartApiPayload) => {
     })
   );
   const data = clone(currentCartData.data);
+
   const { key, counter, total } = doesItemExistKeyFn(data, payload?.id);
   const currentObj = data[key];
 
@@ -69,10 +73,38 @@ const updateCartItemService = async (payload: CartApiPayload) => {
     });
   }
 
+  const pricingData: PricingApi = await getPricingService().catch(() => {
+    throw errFormat500ResponseUtil();
+  });
+  const speciesData = await getSpeciesDetail(payload?.id).catch(() => {
+    throw errFormat500ResponseUtil();
+  });
+
+  const evolutionChainSplit = speciesData?.evolution_chain?.url?.split('/');
+
+  const evolutionData = await getPokemonEvolutionChainService({
+    id: evolutionChainSplit[evolutionChainSplit.length - 2],
+  }).catch(() => {
+    throw errFormat500ResponseUtil();
+  });
+
+  const pokemonPrice = Number(
+    pricingFormatUtil(
+      {
+        name: speciesData?.name,
+        isLegendary: speciesData?.is_legendary,
+        isMythical: speciesData?.is_mythical,
+        chainData: evolutionData?.chain,
+      },
+      pricingData,
+      true
+    )
+  );
+
   if (key !== null) {
     currentObj.quantity = payload.addToCart ? currentObj.quantity + 1 : currentObj.quantity - 1;
     currentCartData.counter = payload.addToCart ? counter + 1 : counter - 1;
-    currentCartData.total = payload.addToCart ? total + 500 : total - 500;
+    currentCartData.total = payload.addToCart ? total + pokemonPrice : total - pokemonPrice;
 
     await updateCartDataCall(currentCartData).catch(() => {
       throw errFormat500ResponseUtil();
@@ -89,21 +121,17 @@ const updateCartItemService = async (payload: CartApiPayload) => {
     });
   }
 
-  const additionalData = await getSpeciesDetail(payload?.id).catch(() => {
-    throw errFormat500ResponseUtil();
-  });
-
   const finalPayload = {
     id: payload?.id,
-    name: additionalData?.name,
-    price: 500,
+    name: speciesData?.name,
+    price: pokemonPrice,
     quantity: 1,
-    image: additionalData?.sprites?.other?.['official-artwork']?.front_default,
-    isLegendary: additionalData?.is_legendary,
-    isMythical: additionalData?.is_mythical,
+    image: speciesData?.sprites?.other?.['official-artwork']?.front_default,
+    isLegendary: speciesData?.is_legendary,
+    isMythical: speciesData?.is_mythical,
   };
   currentCartData.counter = counter + 1;
-  currentCartData.total = total + 500;
+  currentCartData.total = total + pokemonPrice;
 
   currentCartData.data.push(finalPayload);
 

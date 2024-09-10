@@ -1,18 +1,46 @@
-import { memo, ReactElement } from 'react';
+import { Fragment, memo, ReactElement } from 'react';
 
 import { PokemonListApi } from '@pokemon-pet-shop/typing';
+import { UiButton, UiElementLayout } from '@pokemon-pet-shop/ui';
 
 import { UiPokemonCard } from '../pokemon.card';
 
+import { styles } from './pokemon.list.module';
 import usePokemonList from './use.pokemon.list.logic';
 
 /** Use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction  */
 const PokemonList = (): ReactElement => {
-  const { data, isError, isLoading, isFetching } = usePokemonList();
+  const { data, isError, isLoading, isFetching, isFetchingNextPage, hasNextPage, onFetchNextPage } =
+    usePokemonList();
 
-  return (data || []).map((el: PokemonListApi): ReactElement => {
-    return <UiPokemonCard key={el?.name} data={el} />;
-  });
+  return (
+    <>
+      <UiElementLayout className={styles.cardListWrapper}>
+        {(data || []).map((arr: PokemonListApi[], i: number): ReactElement => {
+          return (
+            <Fragment key={i}>
+              {arr.map((el: PokemonListApi) => (
+                <UiPokemonCard key={el?.name} data={el} />
+              ))}
+            </Fragment>
+          );
+        })}
+      </UiElementLayout>
+      <UiButton
+        isDisabled={!hasNextPage || isFetchingNextPage}
+        text={
+          isFetchingNextPage
+            ? 'Loading more...'
+            : hasNextPage
+              ? 'Load More'
+              : 'Nothing more to load'
+        }
+        onClick={() => {
+          onFetchNextPage((old: number) => old + 1);
+        }}
+      />
+    </>
+  );
 };
 
 export default memo(PokemonList);

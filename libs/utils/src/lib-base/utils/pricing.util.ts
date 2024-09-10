@@ -1,11 +1,12 @@
 import { PricingApi } from '@pokemon-pet-shop/typing';
 
-const formatPriceUSD = (price: number): string => {
+export const pricingFormatUSD = (price: number): string => {
   return `$${String(price).replace(/\d\d$/, (el: string) => {
     return `.${el}`;
   })}`;
 };
 
+/** @todo I need to update this code to deal with possible recursive object and root array. See Eevee 215 and evolutions */
 const checkChain = (
   name: string,
   chainData: any,
@@ -25,7 +26,11 @@ const checkChain = (
   return checkChain(name, chainData?.evolves_to?.[0], pricingData, iPlus);
 };
 
-export const pricingFormatUtil = (pokemonData: any, pricingData: any): number | string => {
+export const pricingFormatUtil = (
+  pokemonData: any,
+  pricingData: any,
+  returnAsNum = false
+): number | string => {
   const { name, isMythical, isLegendary, chainData } = pokemonData;
   let price = null;
 
@@ -45,5 +50,5 @@ export const pricingFormatUtil = (pokemonData: any, pricingData: any): number | 
     price = checkChain(name, chainData, pricingData, 1);
   }
 
-  return price ? formatPriceUSD(price) : 'Price is Not Available';
+  return price ? (returnAsNum ? price : pricingFormatUSD(price)) : 'Price is Not Available';
 };

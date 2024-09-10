@@ -9,7 +9,7 @@ import {
   UiIcon,
   IconTypeEnum,
   UiInput,
-  UiSwitch,
+  UiSwitchTheme,
   UiTypography,
   TypographyTypeEnum,
   UiContainer,
@@ -59,7 +59,7 @@ const Header = () => {
         </UiElementLayout>
 
         <UiHideInMobile>
-          <UiSwitch
+          <UiSwitchTheme
             className={styles.switchTheme}
             iconLeft={IconTypeEnum.ICON_SUN}
             iconRight={IconTypeEnum.ICON_MOON}

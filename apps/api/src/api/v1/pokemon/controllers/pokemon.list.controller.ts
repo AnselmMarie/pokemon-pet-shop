@@ -4,7 +4,7 @@ import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
 } from '../../../../utils/err.format.response.util';
-import { DEFAULT_LIMIT } from '../const/default.prop.const';
+import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../const/default.prop.const';
 import { PokemonListQueryProps } from '../interface/pokemon.interface';
 import { getPokemonDetailService } from '../services/pokemon.detail.service';
 import { getPokemonListService } from '../services/pokemon.list.service';
@@ -24,16 +24,18 @@ const getPokemonListController = async (
 ) => {
   try {
     const limitQuery = req?.query?.limit || DEFAULT_LIMIT;
+    const offset = req?.query?.offset || DEFAULT_OFFSET;
+
     const pokemonList = await getPokemonListService({
-      offset: req?.query?.offset,
+      offset,
       limit: limitQuery,
     }).catch(() => {
       throw errFormat500ResponseUtil();
     });
 
-    const limitNumberQuery = Number(limitQuery) + 1;
+    const limitNumberQuery = Number(limitQuery) + 1 + Number(offset);
     const detailPromises = [];
-    for (let loop = 0; loop < limitNumberQuery; loop++) {
+    for (let loop = Number(offset); loop < limitNumberQuery; loop++) {
       const id = String(loop);
       detailPromises.push(
         await getPokemonDetailService({

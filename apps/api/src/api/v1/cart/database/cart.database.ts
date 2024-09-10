@@ -13,7 +13,6 @@ export const getCartDataCall = async (): Promise<CartDataApi> => {
 export const updateCartDataCall = async (data): Promise<CartDataApi> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log('data', data);
       cartDatabase.data = data.data;
       cartDatabase.total = data.total;
       cartDatabase.counter = data.counter;

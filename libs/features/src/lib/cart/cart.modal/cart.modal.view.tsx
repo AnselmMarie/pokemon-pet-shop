@@ -10,6 +10,7 @@ import {
   mobSrcTypeEnum,
   TypographyTypeEnum,
 } from '@pokemon-pet-shop/ui';
+import { pricingFormatUSD } from '@pokemon-pet-shop/utils';
 
 import styles from './cart.modal.module.css';
 import useCartModalLogic from './use.cart.modal.logic';
@@ -39,7 +40,7 @@ const CartModal = (): ReactElement => {
                     {el?.name}
                   </UiTypography>
                   <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.price}>
-                    {el?.price}
+                    {pricingFormatUSD(el?.price)}
                   </UiTypography>
                   <UiElementLayout>
                     <UiIcon
@@ -67,7 +68,7 @@ const CartModal = (): ReactElement => {
       </UiElementLayout>
       <UiElementLayout className={styles.totalContent}>
         <UiTypography>Total</UiTypography>
-        <UiTypography>{data?.total}</UiTypography>
+        <UiTypography>{pricingFormatUSD(data?.total)}</UiTypography>
       </UiElementLayout>
     </UiElementLayout>
   );

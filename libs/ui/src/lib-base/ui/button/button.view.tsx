@@ -11,6 +11,7 @@ const Button = ({
   type = ButtonTypeEnum.PRIMARY,
   className = '',
   text = null,
+  isDisabled = false,
   onClick,
 }: ButtonProps): ReactElement => {
   const getTypeStyles = useMemo(() => {
@@ -27,6 +28,7 @@ const Button = ({
     <ButtonElement
       text={text}
       className={classNamesUtil(className, styles.button, getTypeStyles)}
+      isDisabled={isDisabled}
       onClick={onClick}
     />
   );

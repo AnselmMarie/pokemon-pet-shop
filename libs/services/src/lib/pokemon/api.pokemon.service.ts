@@ -11,6 +11,6 @@ export const getPokemonList = async ({ pageParam }: { pageParam: number }) => {
   ).data;
 };
 
-export const getPokemonSpecies = async (id: number) => {
+export const getPokemonSpecies = async (id: string | undefined) => {
   return (await axiosInstance.get<PokemonSpeciesApi>(`pokemon/species/${id}`)).data;
 };

@@ -6,5 +6,6 @@ export interface ButtonProps {
   type?: ButtonTypeEnum;
   text?: string | null;
   className?: any;
+  isDisabled?: boolean;
   onClick?: GenericNonReturnType;
 }

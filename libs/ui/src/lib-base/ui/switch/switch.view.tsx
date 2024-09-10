@@ -1,58 +1,65 @@
-import { memo, ReactElement, useEffect, useMemo, useState } from 'react';
+import { memo, ReactElement, useMemo, useState } from 'react';
 
-import { classNamesUtil } from '@pokemon-pet-shop/utils';
+import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
-import { ThemeModeEnum } from './switch.enum';
 import { SwitchProps } from './switch.interface';
 import { styles } from './switch.module';
 
 const Switch = ({
   className,
-  iconLeft,
-  iconRight,
-  defaultValue = ThemeModeEnum.LIGHT,
+  iconLeft = null,
+  iconRight = null,
+  defaultValue = true,
+  isDisabled = false,
+  onLeftClick = () => {
+    noopUtil();
+  },
+  onRightClick = () => {
+    noopUtil();
+  },
 }: SwitchProps): ReactElement => {
-  const [theme, setTheme] = useState<ThemeModeEnum>();
+  const [switchState, setSwitch] = useState(defaultValue);
 
-  const turnLightOnClick = () => {
-    setTheme(ThemeModeEnum.LIGHT);
+  const leftClick = () => {
+    setSwitch(true);
+    onLeftClick();
   };
 
-  const turnDarkOnClick = () => {
-    setTheme(ThemeModeEnum.DARK);
+  const rightClick = () => {
+    setSwitch(false);
+    onRightClick();
   };
 
   const getCircleThemeStyle = useMemo(() => {
-    if (theme === ThemeModeEnum.LIGHT) {
+    if (switchState) {
       return styles.circleLightPosition;
     }
     return styles.circleDarkPosition;
-  }, [theme]);
-
-  useEffect(() => {
-    setTheme(defaultValue);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [switchState]);
 
   return (
     <UiElementLayout className={classNamesUtil(className, styles.switchWrapper)}>
-      <UiIcon
-        icon={iconLeft}
-        size={20}
-        classNameIcon={classNamesUtil(styles.icon, styles.iconLeft)}
-        isDisabled={theme === ThemeModeEnum.LIGHT}
-        onClick={turnLightOnClick}
-      />
-      <UiIcon
-        icon={iconRight}
-        size={20}
-        classNameIcon={classNamesUtil(styles.icon, styles.iconRight)}
-        isDisabled={theme === ThemeModeEnum.DARK}
-        onClick={turnDarkOnClick}
-      />
+      {iconLeft ? (
+        <UiIcon
+          icon={iconLeft}
+          size={20}
+          classNameIcon={classNamesUtil(styles.icon, styles.iconLeft)}
+          isDisabled={isDisabled}
+          onClick={leftClick}
+        />
+      ) : null}
+      {iconRight ? (
+        <UiIcon
+          icon={iconRight}
+          size={20}
+          classNameIcon={classNamesUtil(styles.icon, styles.iconRight)}
+          isDisabled={isDisabled}
+          onClick={rightClick}
+        />
+      ) : null}
       <UiElementLayout className={classNamesUtil(styles.iconCircle, getCircleThemeStyle)} />
     </UiElementLayout>
   );

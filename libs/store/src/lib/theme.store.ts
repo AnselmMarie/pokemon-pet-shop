@@ -5,14 +5,19 @@ export enum ThemeTypeEnum {
   DARK = 'dark',
 }
 
-interface setUpdateThemeProps {
-  newTheme: ThemeTypeEnum;
-}
-
 const themeStore = (set: any, get: any) => ({
   theme: ThemeTypeEnum.LIGHT,
-  updateTheme: ({ newTheme }: setUpdateThemeProps) => {
+  isLocked: false,
+  updateTheme: (newTheme: ThemeTypeEnum) => {
     set({ theme: newTheme });
+  },
+  toggleTheme: () => {
+    set((state: any) => ({
+      theme: state.theme === ThemeTypeEnum.LIGHT ? ThemeTypeEnum.DARK : ThemeTypeEnum.LIGHT,
+    }));
+  },
+  updateLock: (locked: boolean) => {
+    set({ isLocked: locked });
   },
 });
 

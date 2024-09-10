@@ -7,7 +7,7 @@ import {
   IconTypeEnum,
   UiTypography,
   UiModal,
-  UiSwitch,
+  UiSwitchTheme,
 } from '@pokemon-pet-shop/ui';
 
 import { NavMobileModalProps } from './nav.mobile.interface';
@@ -27,7 +27,7 @@ const NavMobileModal = ({ isModalShown = false }: NavMobileModalProps): ReactEle
         </UiElementLayout>
       </UiElementLayout>
       <UiElementLayout className={styles.dropdownBtm}>
-        <UiSwitch
+        <UiSwitchTheme
           className={styles.switchTheme}
           iconLeft={IconTypeEnum.ICON_SUN}
           iconRight={IconTypeEnum.ICON_MOON}
