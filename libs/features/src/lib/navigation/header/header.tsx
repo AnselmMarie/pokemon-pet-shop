@@ -9,7 +9,6 @@ import {
   UiIcon,
   IconTypeEnum,
   UiInput,
-  UiSwitchTheme,
   UiTypography,
   TypographyTypeEnum,
   UiContainer,
@@ -18,6 +17,7 @@ import {
 import { noopUtil } from '@pokemon-pet-shop/utils';
 
 import { UiCartModal } from '../../cart';
+import { UiSwitchTheme } from '../component/switch.theme';
 
 import { styles } from './header.module';
 
@@ -59,11 +59,8 @@ const Header = () => {
         </UiElementLayout>
 
         <UiHideInMobile>
-          <UiSwitchTheme
-            className={styles.switchTheme}
-            iconLeft={IconTypeEnum.ICON_SUN}
-            iconRight={IconTypeEnum.ICON_MOON}
-          />
+          <UiSwitchTheme className={styles.switchTheme} />
+          <UiSwitchTheme className={styles.switchTheme} />
         </UiHideInMobile>
 
         <UiElementLayout onClick={handleOpenDetailModalClick}>

@@ -1,6 +1,5 @@
 import { ThemeTypeEnum } from '@pokemon-pet-shop/store';
-
-import { IconType } from '../icon/icon.interface';
+import { IconType } from '@pokemon-pet-shop/ui';
 
 export interface SwitchProps {
   className?: string;

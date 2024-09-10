@@ -1,7 +1,9 @@
+import { CartDataApi } from '@pokemon-pet-shop/typing';
+
 import { axiosInstance } from '../common/utils/api.util';
 
 export const getCart = async () => {
-  return (await axiosInstance.get<any[]>('cart')).data;
+  return (await axiosInstance.get<CartDataApi>('cart')).data;
 };
 
 export const updateCart = async (data: any) => {

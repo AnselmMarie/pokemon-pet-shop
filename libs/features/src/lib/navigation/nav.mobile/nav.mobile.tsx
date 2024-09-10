@@ -1,14 +1,9 @@
 import { ReactElement } from 'react';
 
 import { AlignmentEnum } from '@pokemon-pet-shop/typing';
-import {
-  UiElementLayout,
-  UiIcon,
-  IconTypeEnum,
-  UiTypography,
-  UiModal,
-  UiSwitchTheme,
-} from '@pokemon-pet-shop/ui';
+import { UiElementLayout, UiIcon, IconTypeEnum, UiTypography, UiModal } from '@pokemon-pet-shop/ui';
+
+import { UiSwitchTheme } from '../component/switch.theme';
 
 import { NavMobileModalProps } from './nav.mobile.interface';
 import styles from './nav.mobile.module.css';
@@ -27,11 +22,7 @@ const NavMobileModal = ({ isModalShown = false }: NavMobileModalProps): ReactEle
         </UiElementLayout>
       </UiElementLayout>
       <UiElementLayout className={styles.dropdownBtm}>
-        <UiSwitchTheme
-          className={styles.switchTheme}
-          iconLeft={IconTypeEnum.ICON_SUN}
-          iconRight={IconTypeEnum.ICON_MOON}
-        />
+        <UiSwitchTheme className={styles.switchTheme} />
       </UiElementLayout>
     </UiModal>
   );

@@ -7,7 +7,8 @@ export interface SwitchProps {
   name?: string;
   iconLeft?: IconType | null;
   iconRight?: IconType | null;
-  defaultValue?: boolean;
+  defaultValue?: string;
+  val?: string | null;
   isDisabled?: boolean;
   onLeftClick?: GenericNonReturnType;
   onRightClick?: GenericNonReturnType;
