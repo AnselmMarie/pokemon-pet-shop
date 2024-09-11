@@ -1,6 +1,5 @@
 import { ReactElement } from 'react';
 
-import { halfCircle } from '@pokemon-pet-shop/assets';
 import { useModalStore } from '@pokemon-pet-shop/store';
 import {
   PokemonDetailAbilityObj,
@@ -23,6 +22,7 @@ import { ReactSVG } from 'react-svg';
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 import { usePokemonTheme } from '../hooks/use.pokemon.theme.logic';
 
+import halfCircle from './assets/half.circle.svg';
 import styles from './pokemon.detail.modal.module.css';
 import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
 

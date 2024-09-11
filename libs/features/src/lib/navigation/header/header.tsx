@@ -18,6 +18,7 @@ import { noopUtil } from '@pokemon-pet-shop/utils';
 
 import { UiCartModal } from '../../cart';
 import { UiSwitchTheme } from '../component/switch.theme';
+import { UiNavMobileModal } from '../nav.mobile';
 
 import { styles } from './header.module';
 
@@ -43,13 +44,31 @@ const Header = () => {
     });
   };
 
+  const handleMobileNavModalClick = () => {
+    openModal({
+      content: <UiNavMobileModal />,
+      options: {
+        title: 'Menu',
+        headlineType: ModalHeadlineTypeEnum.RELATIVE,
+        modalAlignment: AlignmentEnum.LEFT,
+      },
+      onCallback: () => {
+        noopUtil();
+      },
+    });
+  };
+
   return (
     <UiElementLayout layoutType={ElementLayoutTypeEnum.HEADER} className={styles.headerWrapper}>
       <UiContainer className={styles.container}>
         <UiHideInMobile>
           <UiImage src={pokeshopLogo} className={styles.logo} width="160" />
         </UiHideInMobile>
-        <UiIcon classNameIcon={styles.iconMenu} icon={IconTypeEnum.ICON_MENU} />
+        <UiIcon
+          classNameIcon={styles.iconMenu}
+          icon={IconTypeEnum.ICON_MENU}
+          onClick={handleMobileNavModalClick}
+        />
 
         <UiElementLayout layoutType={ElementLayoutTypeEnum.NAV} className={styles.nav}>
           <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.navTitle}>
@@ -59,7 +78,6 @@ const Header = () => {
         </UiElementLayout>
 
         <UiHideInMobile>
-          <UiSwitchTheme className={styles.switchTheme} />
           <UiSwitchTheme className={styles.switchTheme} />
         </UiHideInMobile>
 

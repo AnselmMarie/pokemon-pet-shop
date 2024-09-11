@@ -1,6 +1,4 @@
 .modal {
-  width: 390px;
-  max-width: 390px;
   position: relative;
   display: flex;
   flex-direction: column;

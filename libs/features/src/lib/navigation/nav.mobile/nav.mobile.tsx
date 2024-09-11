@@ -1,30 +1,24 @@
 import { ReactElement } from 'react';
 
-import { AlignmentEnum } from '@pokemon-pet-shop/typing';
-import { UiElementLayout, UiIcon, IconTypeEnum, UiTypography, UiModal } from '@pokemon-pet-shop/ui';
+import { UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
 
 import { UiSwitchTheme } from '../component/switch.theme';
 
-import { NavMobileModalProps } from './nav.mobile.interface';
 import styles from './nav.mobile.module.css';
 
-const NavMobileModal = ({ isModalShown = false }: NavMobileModalProps): ReactElement => {
+const NavMobileModal = (): ReactElement => {
   return (
-    <UiModal
-      isModalShown={isModalShown}
-      classNameModal={styles.modal}
-      modalAlignment={AlignmentEnum.LEFT}
-    >
-      <UiElementLayout className={styles.dropdownTop}>
-        <UiElementLayout className={styles.dropdownHeadline}>
-          <UiTypography>Menu</UiTypography>
-          <UiIcon icon={IconTypeEnum.ICON_X} />
+    <UiElementLayout className={styles.modal}>
+      <UiElementLayout className={styles.navWrapper}>
+        <UiElementLayout className={styles.linkWrapper}>
+          <UiTypography>PETS</UiTypography>
+        </UiElementLayout>
+
+        <UiElementLayout className={styles.switchWrapper}>
+          <UiSwitchTheme />
         </UiElementLayout>
       </UiElementLayout>
-      <UiElementLayout className={styles.dropdownBtm}>
-        <UiSwitchTheme className={styles.switchTheme} />
-      </UiElementLayout>
-    </UiModal>
+    </UiElementLayout>
   );
 };
 

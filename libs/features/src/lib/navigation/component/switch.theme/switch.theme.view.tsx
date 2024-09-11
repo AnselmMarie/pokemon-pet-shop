@@ -28,10 +28,6 @@ const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
     const el = document.querySelector('html');
 
     el?.classList.add(theme);
-
-    return () => {
-      el?.classList.remove(theme);
-    };
   }, [theme]);
 
   return (
