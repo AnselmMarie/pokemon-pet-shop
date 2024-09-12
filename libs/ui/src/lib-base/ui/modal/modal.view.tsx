@@ -8,7 +8,8 @@ import { UiElementLayout } from '../element.layout';
 import { IconTypeEnum, UiIcon } from '../icon';
 import { UiTypography } from '../typography';
 
-import styles from './modal.module.css';
+import ModalElement from './modal.element.view';
+import { styles } from './modal.module';
 
 const Modal = (): ReactElement | null => {
   const { isOpen, modalOptions, modalContent, closeModal } = useModalStore((state) => state);
@@ -16,8 +17,9 @@ const Modal = (): ReactElement | null => {
 
   if (!isOpen) return null;
   return (
-    <UiElementLayout
+    <ModalElement
       className={classNamesUtil(classNameShadow, styles.dropShadow, styles[modalAlignment])}
+      isOpen={isOpen}
     >
       <UiCard className={classNamesUtil(classNameModal, styles.modal)}>
         <>
@@ -28,7 +30,7 @@ const Modal = (): ReactElement | null => {
           {modalContent ? modalContent : null}
         </>
       </UiCard>
-    </UiElementLayout>
+    </ModalElement>
   );
 };
 

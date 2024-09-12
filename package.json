@@ -47,6 +47,7 @@
     "react-error-boundary": "^4.0.13",
     "react-hook-form": "^7.52.2",
     "react-native": "0.74.5",
+    "react-native-dotenv": "^3.4.11",
     "react-native-error-boundary": "^1.2.4",
     "react-native-reanimated": "^3.14.0",
     "react-native-svg": "15.2.0",

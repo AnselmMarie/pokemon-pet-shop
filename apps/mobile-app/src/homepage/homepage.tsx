@@ -6,7 +6,6 @@ import { UiContainer, UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui
 import { styles } from './homepage.module';
 
 export const Homepage = (): ReactElement => {
-  // return <Text>fadsf</Text>;
   return (
     <UiElementLayout>
       <UiContainer className={styles.contentWrapper}>

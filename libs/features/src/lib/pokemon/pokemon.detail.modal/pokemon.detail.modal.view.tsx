@@ -17,12 +17,11 @@ import {
   UiTagItem,
 } from '@pokemon-pet-shop/ui';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
-import { ReactSVG } from 'react-svg';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 import { usePokemonTheme } from '../hooks/use.pokemon.theme.logic';
 
-import halfCircle from './assets/half.circle.svg';
+import { UiHalfCircle } from './components/half.circle.svg';
 import styles from './pokemon.detail.modal.module.css';
 import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
 
@@ -53,15 +52,7 @@ const PokemonDetailModal = (): ReactElement => {
           alt={`${modalData?.name} Image`}
           mobSrcType={mobSrcTypeEnum.URI}
         />
-        <ReactSVG
-          src={halfCircle}
-          // title={`${type} Icon`}
-          beforeInjection={(svg) => {
-            // svg.setAttribute('width', '100%');
-            // svg.setAttribute('height', size);
-          }}
-          className={styles.contentCurve}
-        />
+        <UiHalfCircle />
       </UiElementLayout>
 
       <UiElementLayout className={styles.contentContainer}>

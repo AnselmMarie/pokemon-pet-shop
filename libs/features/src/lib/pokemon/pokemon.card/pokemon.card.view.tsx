@@ -14,8 +14,8 @@ import {
 } from '@pokemon-pet-shop/ui';
 import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
-import { UiPokemonDetailModal } from '..';
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
+import { UiPokemonDetailModal } from '../pokemon.detail.modal';
 
 import { CardProps } from './pokemon.card.interface';
 import { styles } from './pokemon.card.module';
@@ -77,7 +77,7 @@ const PokemonCard = ({ data }: CardProps): ReactElement => {
               )}
               typographyType={TypographyTypeEnum.SPAN}
             >
-              NO. {data?.order}
+              NO. {data?.id}
             </UiTypography>
           </UiElementLayout>
           <UiTypography
