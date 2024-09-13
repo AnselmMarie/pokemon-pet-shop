@@ -17,10 +17,15 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   relativeDropdownHeadline: {
-    flex: 1,
+    display: 'flex',
+    position: 'relative',
+    flexDirection: 'row',
+    width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 15,
+    paddingRight: 15,
+    paddingLeft: 15,
+    paddingBottom: 15,
   },
   absoluteDropdownHeadline: {
     flex: 1,

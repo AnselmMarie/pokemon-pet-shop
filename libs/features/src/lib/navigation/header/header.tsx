@@ -27,7 +27,7 @@ const Header = () => {
 
   const openModal = useModalStore((state) => state.openModal);
 
-  const handleOpenDetailModalClick = () => {
+  const handleCartModalClick = () => {
     openModal({
       content: <UiCartModal />,
       options: {
@@ -81,9 +81,9 @@ const Header = () => {
           <UiSwitchTheme className={styles.switchTheme} />
         </UiHideInMobile>
 
-        <UiElementLayout onClick={handleOpenDetailModalClick}>
+        <UiElementLayout>
           <UiTypography>{data?.counter}</UiTypography>
-          <UiIcon classNameIcon={styles.iconCart} />
+          <UiIcon classNameIcon={styles.iconCart} onClick={handleCartModalClick} />
         </UiElementLayout>
       </UiContainer>
     </UiElementLayout>

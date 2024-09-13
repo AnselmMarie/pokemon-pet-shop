@@ -12,7 +12,8 @@ import {
 } from '@pokemon-pet-shop/ui';
 import { pricingFormatUSD } from '@pokemon-pet-shop/utils';
 
-import styles from './cart.modal.module.css';
+import CartModalScroll from './cart.modal.content.scroll';
+import { styles } from './cart.modal.module';
 import useCartModalLogic from './use.cart.modal.logic';
 
 const CartModal = (): ReactElement => {
@@ -21,7 +22,7 @@ const CartModal = (): ReactElement => {
 
   return (
     <UiElementLayout className={styles.modal}>
-      <UiElementLayout className={styles.cartContent}>
+      <CartModalScroll>
         {(data?.data || [])?.map((el: CartDataContentApi, i: number) => {
           return (
             <UiElementLayout key={i} className={styles?.cartWrapper}>
@@ -65,7 +66,7 @@ const CartModal = (): ReactElement => {
             </UiElementLayout>
           );
         })}
-      </UiElementLayout>
+      </CartModalScroll>
       <UiElementLayout className={styles.totalContent}>
         <UiTypography>Total</UiTypography>
         <UiTypography>{pricingFormatUSD(data?.total)}</UiTypography>
