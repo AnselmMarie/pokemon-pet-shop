@@ -11,7 +11,7 @@ const { assetExts, sourceExts } = defaultConfig.resolver;
  *
  * @type {import('metro-config').MetroConfig}
  */
-const customConfig = {
+const svgConfig = {
   transformer: {
     babelTransformerPath: require.resolve('react-native-svg-transformer'),
   },
@@ -21,7 +21,7 @@ const customConfig = {
   },
 };
 
-module.exports = withNxMetro(mergeConfig(defaultConfig, customConfig), {
+module.exports = withNxMetro(mergeConfig(defaultConfig, svgConfig), {
   // Change this to true to see debugging info.
   // Useful if you have issues resolving modules
   debug: false,

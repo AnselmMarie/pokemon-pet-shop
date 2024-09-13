@@ -4,7 +4,6 @@ export const styles = StyleSheet.create({
   switchWrapper: {
     borderRadius: 100,
     backgroundColor: 'grey',
-    display: 'flex',
     width: 85,
     paddingTop: 14,
     paddingBottom: 14,
@@ -12,7 +11,6 @@ export const styles = StyleSheet.create({
     paddingRight: 10,
     alignItems: 'center',
     justifyContent: 'space-between',
-    position: 'relative',
     flexDirection: 'row',
   },
   icon: {
@@ -32,7 +30,6 @@ export const styles = StyleSheet.create({
     backgroundColor: 'blue',
     zIndex: 0,
     borderRadius: 100,
-    // transition: left 100ms ease-in-out;
   },
   circleLightPosition: {
     left: 8,

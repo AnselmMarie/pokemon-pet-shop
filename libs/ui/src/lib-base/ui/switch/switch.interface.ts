@@ -13,3 +13,7 @@ export interface SwitchProps {
   onLeftClick?: GenericNonReturnType;
   onRightClick?: GenericNonReturnType;
 }
+
+export interface SwitchButtonProps {
+  className?: string;
+}

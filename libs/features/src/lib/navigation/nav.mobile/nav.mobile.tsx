@@ -4,7 +4,7 @@ import { UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
 
 import { UiSwitchTheme } from '../component/switch.theme';
 
-import styles from './nav.mobile.module.css';
+import { styles } from './nav.mobile.module';
 
 const NavMobileModal = (): ReactElement => {
   return (

@@ -1,19 +1,20 @@
 import { memo, ReactElement, useEffect } from 'react';
 
 import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
-import { IconTypeEnum, SwitchStatusEnum, UiSwitch } from '@pokemon-pet-shop/ui';
+import { IconTypeEnum, SwitchStatusEnum, UiSwitch, UiTypography } from '@pokemon-pet-shop/ui';
 
 import { SwitchProps } from './switch.theme.interface';
 
+/** @todo hiding this code until a way to create a theming process for web and mobile */
 const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   const { theme, updateTheme } = useThemeStore();
 
   const updateTheming = (newTheme: ThemeTypeEnum) => {
     updateTheme(newTheme);
-    const el = document.querySelector('html');
+    // const el = document.querySelector('html');
 
-    el?.classList.toggle(ThemeTypeEnum.DARK);
-    el?.classList.toggle(ThemeTypeEnum.LIGHT);
+    // el?.classList.toggle(ThemeTypeEnum.DARK);
+    // el?.classList.toggle(ThemeTypeEnum.LIGHT);
   };
 
   const turnLightOnClick = () => {
@@ -25,9 +26,8 @@ const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   };
 
   useEffect(() => {
-    const el = document.querySelector('html');
-
-    el?.classList.add(theme);
+    // const el = document.querySelector('html');
+    // el?.classList.add(theme);
   }, [theme]);
 
   return (
