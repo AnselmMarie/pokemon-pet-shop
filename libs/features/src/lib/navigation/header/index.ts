@@ -1,3 +1,3 @@
-import UiHeader from './header';
+import UiHeader from './header.view';
 
 export { UiHeader };

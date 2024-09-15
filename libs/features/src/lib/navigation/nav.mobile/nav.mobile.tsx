@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
 
 import { UiSwitchTheme } from '../component/switch.theme';
@@ -7,14 +8,16 @@ import { UiSwitchTheme } from '../component/switch.theme';
 import { styles } from './nav.mobile.module';
 
 const NavMobileModal = (): ReactElement => {
+  const { newStyles } = useRenderStyles(styles);
+
   return (
-    <UiElementLayout className={styles.modal}>
-      <UiElementLayout className={styles.navWrapper}>
-        <UiElementLayout className={styles.linkWrapper}>
+    <UiElementLayout className={newStyles.modal}>
+      <UiElementLayout className={newStyles.navWrapper}>
+        <UiElementLayout className={newStyles.linkWrapper}>
           <UiTypography>PETS</UiTypography>
         </UiElementLayout>
 
-        <UiElementLayout className={styles.switchWrapper}>
+        <UiElementLayout className={newStyles.switchWrapper}>
           <UiSwitchTheme />
         </UiElementLayout>
       </UiElementLayout>

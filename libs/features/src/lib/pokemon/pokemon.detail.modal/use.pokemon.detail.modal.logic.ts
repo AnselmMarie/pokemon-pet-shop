@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
 import { useGetPokemonSpecies, useGetPricing, useUpdateCart } from '@pokemon-pet-shop/services';
+import { useModalStore } from '@pokemon-pet-shop/store';
 import {
   GenericNonReturnType,
   PokemonListApi,
@@ -10,6 +11,7 @@ import {
 import { pricingFormatUtil } from '@pokemon-pet-shop/utils';
 
 interface PokemonDetailModalReturn {
+  modalData: PokemonListApi;
   speciesData: PokemonSpeciesApi | undefined;
   speciesIsError: boolean;
   speciesIsLoading: boolean;
@@ -24,7 +26,13 @@ interface PokemonDetailModalReturn {
   onHandleUpdateCartSubmit: GenericNonReturnType;
 }
 
-const usePokemonDetailModalLogic = (modalData: PokemonListApi): PokemonDetailModalReturn => {
+const usePokemonDetailModalLogic = (): PokemonDetailModalReturn => {
+  const { modalOptions } = useModalStore((state) => state);
+  const { data = {} } = modalOptions;
+  const modalData = {
+    ...data,
+  } as PokemonListApi;
+
   const res = useGetPokemonSpecies([String(modalData?.id)]);
   const {
     data: speciesData,
@@ -123,6 +131,7 @@ const usePokemonDetailModalLogic = (modalData: PokemonListApi): PokemonDetailMod
   ]);
 
   return {
+    modalData,
     speciesData,
     speciesIsError,
     speciesIsLoading,

@@ -1,5 +1,6 @@
 import { memo, ReactElement, useMemo } from 'react';
 
+import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import ButtonElement from './button.element.view';
@@ -14,20 +15,22 @@ const Button = ({
   isDisabled = false,
   onClick,
 }: ButtonProps): ReactElement => {
+  const { newStyles } = useRenderStyles(styles);
+
   const getTypeStyles = useMemo(() => {
     switch (type) {
       case ButtonTypeEnum.SECONDARY:
-        return styles.buttonSecondary;
+        return newStyles.buttonSecondary;
       case ButtonTypeEnum.PRIMARY:
       default:
-        return styles.buttonPrimary;
+        return newStyles.buttonPrimary;
     }
-  }, [type]);
+  }, [type, newStyles]);
 
   return (
     <ButtonElement
       text={text}
-      className={classNamesUtil(className, styles.button, getTypeStyles)}
+      className={classNamesUtil(className, newStyles.button, getTypeStyles)}
       isDisabled={isDisabled}
       onClick={onClick}
     />

@@ -1,5 +1,6 @@
 import { memo, ReactElement, useMemo } from 'react';
 
+import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import {
   UiElementLayout,
   UiIconPokeType,
@@ -18,34 +19,38 @@ const PokemonAbilityName = ({
   getThemeClass = '',
   showAtkLine = true,
 }: PokemonAbilityNameProps): ReactElement => {
+  const { newStyles } = useRenderStyles(styles);
   const isAtkLineShownCircleClass = useMemo(() => {
-    return showAtkLine ? styles?.atkCircleWithAtkLine : '';
-  }, [showAtkLine]);
+    return showAtkLine ? newStyles?.atkCircleWithAtkLine : '';
+  }, [showAtkLine, newStyles]);
 
   const isAtkLineShownWrapperClass = useMemo(() => {
-    return showAtkLine ? styles?.atkWrapperWithAtkLine : '';
-  }, [showAtkLine]);
+    return showAtkLine ? newStyles?.atkWrapperWithAtkLine : '';
+  }, [showAtkLine, newStyles]);
 
   return (
-    <UiElementLayout className={classNamesUtil(styles.atkWrapper, isAtkLineShownWrapperClass)}>
+    <UiElementLayout className={classNamesUtil(newStyles.atkWrapper, isAtkLineShownWrapperClass)}>
       {showAtkLine ? (
         <UiHideInMobile>
           <UiElementLayout
-            className={classNamesUtil(styles.atkLine, styles?.[`${getThemeClass}AtkLine`])}
+            className={classNamesUtil(newStyles.atkLine, newStyles?.[`${getThemeClass}AtkLine`])}
           />
         </UiHideInMobile>
       ) : null}
       <UiElementLayout
         className={classNamesUtil(
-          styles.atkCircle,
+          newStyles.atkCircle,
           isAtkLineShownCircleClass,
-          styles?.[`${getThemeClass}AtkCircle`]
+          newStyles?.[`${getThemeClass}AtkCircle`]
         )}
       >
         <UiIconPokeType type={typeData?.types?.[0]?.type?.name} size="10" />
       </UiElementLayout>
       <UiTypography
-        className={classNamesUtil(styles.atkText, styles?.[`${getThemeClass}ContentCardText`])}
+        className={classNamesUtil(
+          newStyles.atkText,
+          newStyles?.[`${getThemeClass}ContentCardText`]
+        )}
         typographyType={TypographyTypeEnum.SPAN}
       >
         {abilityData?.ability?.name}

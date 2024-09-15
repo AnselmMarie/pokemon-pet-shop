@@ -1,7 +1,6 @@
 import { memo, ReactElement } from 'react';
 
-import { ModalHeadlineTypeEnum, useModalStore } from '@pokemon-pet-shop/store';
-import { AlignmentEnum, PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
+import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiImage,
@@ -12,35 +11,16 @@ import {
   UiCard,
   mobSrcTypeEnum,
 } from '@pokemon-pet-shop/ui';
-import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
-import { UiPokemonDetailModal } from '../pokemon.detail.modal';
 
 import { CardProps } from './pokemon.card.interface';
 import { styles } from './pokemon.card.module';
-import usePokemonCard from './use.pokemon.card.logic';
+import usePokemonCardLogic from './use.pokemon.card.logic';
 
 const PokemonCard = ({ data }: CardProps): ReactElement => {
-  const { getThemeClass } = usePokemonCard(data);
-  const openModal = useModalStore((state) => state.openModal);
-
-  const handleOpenDetailModalClick = () => {
-    openModal({
-      content: <UiPokemonDetailModal />,
-      options: {
-        title: '',
-        data: data,
-        classNameShadow: '',
-        classNameModal: '',
-        headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
-        modalAlignment: AlignmentEnum.CENTER,
-      },
-      onCallback: () => {
-        noopUtil();
-      },
-    });
-  };
+  const { getThemeClass, onHandleOpenDetailModalClick } = usePokemonCardLogic(data);
 
   return (
     <UiCard className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
@@ -112,7 +92,7 @@ const PokemonCard = ({ data }: CardProps): ReactElement => {
             className={styles.btn}
             type={ButtonTypeEnum.SECONDARY}
             text="Learn More"
-            onClick={handleOpenDetailModalClick}
+            onClick={onHandleOpenDetailModalClick}
           />
         </UiElementLayout>
       </UiElementLayout>

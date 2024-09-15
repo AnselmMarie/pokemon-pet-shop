@@ -1,5 +1,6 @@
-import { memo, ReactElement, useEffect, useMemo, useState } from 'react';
+import { memo, ReactElement } from 'react';
 
+import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
 import { UiElementLayout } from '../element.layout';
@@ -8,6 +9,7 @@ import { UiIcon } from '../icon';
 import { SwitchStatusEnum } from './switch.enum';
 import { SwitchProps } from './switch.interface';
 import { styles } from './switch.module';
+import useSwitchLogic from './use.switch.logic';
 
 const Switch = ({
   className,
@@ -23,53 +25,36 @@ const Switch = ({
     noopUtil();
   },
 }: SwitchProps): ReactElement => {
-  const [switchState, setSwitch] = useState(defaultValue);
-
-  const leftClick = () => {
-    setSwitch(SwitchStatusEnum.ON);
-    onLeftClick();
-  };
-
-  const rightClick = () => {
-    setSwitch(SwitchStatusEnum.OFF);
-    onRightClick();
-  };
-
-  const getCircleThemeStyle = useMemo(() => {
-    if (switchState === SwitchStatusEnum.ON) {
-      return styles.circleLightPosition;
-    }
-    return styles.circleDarkPosition;
-  }, [switchState]);
-
-  useEffect(() => {
-    if (val) {
-      setSwitch(val);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [val]);
+  const { newStyles } = useRenderStyles(styles);
+  const { onInitLeftClick, onInitRightClick, onGetCircleThemeStyle } = useSwitchLogic(
+    defaultValue,
+    val,
+    newStyles,
+    onLeftClick,
+    onRightClick
+  );
 
   return (
-    <UiElementLayout className={classNamesUtil(className, styles.switchWrapper)}>
+    <UiElementLayout className={classNamesUtil(className, newStyles.switchWrapper)}>
       {iconLeft ? (
         <UiIcon
           icon={iconLeft}
           size={20}
-          classNameIcon={classNamesUtil(styles.icon, styles.iconLeft)}
+          classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconLeft)}
           isDisabled={val === SwitchStatusEnum.ON || isDisabled}
-          onClick={leftClick}
+          onClick={onInitLeftClick}
         />
       ) : null}
       {iconRight ? (
         <UiIcon
           icon={iconRight}
           size={20}
-          classNameIcon={classNamesUtil(styles.icon, styles.iconRight)}
+          classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconRight)}
           isDisabled={val === SwitchStatusEnum.OFF || isDisabled}
-          onClick={rightClick}
+          onClick={onInitRightClick}
         />
       ) : null}
-      <UiElementLayout className={classNamesUtil(styles.iconCircle, getCircleThemeStyle)} />
+      <UiElementLayout className={classNamesUtil(newStyles.iconCircle, onGetCircleThemeStyle)} />
     </UiElementLayout>
   );
 };

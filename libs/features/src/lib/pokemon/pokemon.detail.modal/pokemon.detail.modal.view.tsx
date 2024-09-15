@@ -1,11 +1,7 @@
 import { ReactElement } from 'react';
 
-import { useModalStore } from '@pokemon-pet-shop/store';
-import {
-  PokemonDetailAbilityObj,
-  PokemonDetailTypesObj,
-  PokemonListApi,
-} from '@pokemon-pet-shop/typing';
+import { useRenderStyles } from '@pokemon-pet-shop/hooks';
+import { PokemonDetailAbilityObj, PokemonDetailTypesObj } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
   UiTypography,
@@ -19,55 +15,52 @@ import {
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
-import { usePokemonTheme } from '../hooks/use.pokemon.theme.logic';
+import { usePokemonThemeLogic } from '../hooks/use.pokemon.theme.logic';
 
 import { UiHalfCircle } from './components/half.circle.svg';
-import styles from './pokemon.detail.modal.module.css';
+import { styles } from './pokemon.detail.modal.module';
 import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
 
 const PokemonDetailModal = (): ReactElement => {
-  const { modalOptions } = useModalStore((state) => state);
-  const { data = {} } = modalOptions;
-  const modalData = {
-    ...data,
-  } as PokemonListApi;
   const {
+    modalData,
     speciesData,
     onConvertKgToLbs,
     onConvertMetersToFtIn,
     onGetPricingFormat,
     onHandleUpdateCartSubmit,
-  } = usePokemonDetailModalLogic(modalData);
-  const { getThemeClass } = usePokemonTheme(modalData?.types);
+  } = usePokemonDetailModalLogic();
+  const { getThemeClass } = usePokemonThemeLogic(modalData?.types);
+  const { newStyles } = useRenderStyles(styles);
 
   return (
-    <UiElementLayout className={styles.modal}>
+    <UiElementLayout className={newStyles.modal}>
       <UiElementLayout
-        className={classNamesUtil(styles.imageContainer, styles?.[`${getThemeClass}ImageBg`])}
+        className={classNamesUtil(newStyles.imageContainer, styles?.[`${getThemeClass}ImageBg`])}
       >
         <UiTypography>{onGetPricingFormat}</UiTypography>
         <UiImage
           src={modalData?.sprites?.other?.['official-artwork']?.front_default}
-          className={styles.image}
+          className={newStyles.image}
           alt={`${modalData?.name} Image`}
           mobSrcType={mobSrcTypeEnum.URI}
         />
         <UiHalfCircle />
       </UiElementLayout>
 
-      <UiElementLayout className={styles.contentContainer}>
-        <UiElementLayout className={classNamesUtil(styles.contentCardWrapper)}>
-          <UiElementLayout className={styles.cardContentTopWrapper}>
-            <UiElementLayout className={styles.cardSubHeadlineWrapper}>
+      <UiElementLayout className={newStyles.contentContainer}>
+        <UiElementLayout className={classNamesUtil(newStyles.contentCardWrapper)}>
+          <UiElementLayout className={newStyles.cardContentTopWrapper}>
+            <UiElementLayout className={newStyles.cardSubHeadlineWrapper}>
               <UiTypography
-                className={classNamesUtil(styles.cardSubHeadline)}
+                className={classNamesUtil(newStyles.cardSubHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
                 NO. {modalData?.order}
               </UiTypography>
             </UiElementLayout>
             <UiTypography
-              className={classNamesUtil(styles.cardHeadline)}
+              className={classNamesUtil(newStyles.cardHeadline)}
               typographyType={TypographyTypeEnum.H1}
             >
               {modalData?.name}
@@ -84,7 +77,7 @@ const PokemonDetailModal = (): ReactElement => {
             ) : null}
 
             <UiTypography
-              className={classNamesUtil(styles.cardHeadline)}
+              className={classNamesUtil(newStyles.cardHeadline)}
               typographyType={TypographyTypeEnum.H2}
             >
               {speciesData?.flavor_text_entries?.flavor_text}
@@ -92,14 +85,14 @@ const PokemonDetailModal = (): ReactElement => {
 
             <UiElementLayout>
               <UiTypography
-                // className={classNamesUtil(styles.cardHeadline)}
+                // className={classNamesUtil(newStyles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
                 Weight: {`${onConvertKgToLbs?.lbs} ${onConvertKgToLbs?.kg}`}
               </UiTypography>
 
               <UiTypography
-                // className={classNamesUtil(styles.cardHeadline)}
+                // className={classNamesUtil(newStyles.cardHeadline)}
                 typographyType={TypographyTypeEnum.P}
               >
                 Height: {onConvertMetersToFtIn?.ft ? `${onConvertMetersToFtIn?.ft} ` : null}
@@ -125,8 +118,8 @@ const PokemonDetailModal = (): ReactElement => {
             )}
           </UiElementLayout>
 
-          <UiElementLayout className={styles.btnWrapper}>
-            <UiButton className={styles.btn} text="Get Pet" onClick={onHandleUpdateCartSubmit} />
+          <UiElementLayout className={newStyles.btnWrapper}>
+            <UiButton className={newStyles.btn} text="Get Pet" onClick={onHandleUpdateCartSubmit} />
           </UiElementLayout>
         </UiElementLayout>
       </UiElementLayout>

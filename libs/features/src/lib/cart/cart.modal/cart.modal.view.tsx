@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { CartDataContentApi } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
@@ -19,29 +20,32 @@ import useCartModalLogic from './use.cart.modal.logic';
 const CartModal = (): ReactElement => {
   const { data, onHandleRemoveFromCart, onHandleAddToCart, onHandleRemoveCartItem } =
     useCartModalLogic();
-  // const { newStyles } = useRenderStyles(styles);
+  const { newStyles } = useRenderStyles(styles);
 
   return (
-    <UiElementLayout className={styles.modal}>
+    <UiElementLayout className={newStyles.modal}>
       <CartModalScroll>
         {(data?.data || [])?.map((el: CartDataContentApi, i: number) => {
           return (
-            <UiElementLayout key={i} className={styles?.cartWrapper}>
-              <UiElementLayout className={styles.cardContentRow}>
+            <UiElementLayout key={i} className={newStyles?.cartWrapper}>
+              <UiElementLayout className={newStyles.cardContentRow}>
                 <UiImage
                   src={el?.image}
-                  className={styles.image}
+                  className={newStyles.image}
                   alt={`${el?.name} Image`}
                   mobSrcType={mobSrcTypeEnum.URI}
                 />
-                <UiElementLayout className={styles?.middleRow}>
+                <UiElementLayout className={newStyles?.middleRow}>
                   <UiTypography
-                    className={styles.cardHeadline}
+                    className={newStyles.cardHeadline}
                     typographyType={TypographyTypeEnum.H1}
                   >
                     {el?.name}
                   </UiTypography>
-                  <UiTypography typographyType={TypographyTypeEnum.SPAN} className={styles.price}>
+                  <UiTypography
+                    typographyType={TypographyTypeEnum.SPAN}
+                    className={newStyles.price}
+                  >
                     {pricingFormatUSD(el?.price)}
                   </UiTypography>
                   <UiElementLayout>
@@ -63,12 +67,12 @@ const CartModal = (): ReactElement => {
                 />
               </UiElementLayout>
 
-              <UiElementLayout className={styles?.sep} />
+              <UiElementLayout className={newStyles?.sep} />
             </UiElementLayout>
           );
         })}
       </CartModalScroll>
-      <UiElementLayout className={styles.totalContent}>
+      <UiElementLayout className={newStyles.totalContent}>
         <UiTypography>Total</UiTypography>
         <UiTypography>{pricingFormatUSD(data?.total)}</UiTypography>
       </UiElementLayout>

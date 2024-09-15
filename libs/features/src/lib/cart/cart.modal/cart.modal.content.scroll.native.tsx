@@ -7,7 +7,7 @@ import { styles } from './cart.modal.module';
 
 const CartModalScroll = ({ children }: PropsWithChildren): ReactElement => {
   const scrollViewRef = useRef<null | ScrollView>(null);
-  // const { newStyles } = useRenderStyles(styles);
+  const { newStyles } = useRenderStyles(styles);
 
   return (
     <ScrollView
@@ -15,7 +15,7 @@ const CartModalScroll = ({ children }: PropsWithChildren): ReactElement => {
         scrollViewRef.current = ref;
       }}
       contentInsetAdjustmentBehavior="automatic"
-      style={styles.cartContent}
+      style={newStyles.cartContent}
     >
       {children}
     </ScrollView>
