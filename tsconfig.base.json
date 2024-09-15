@@ -25,6 +25,7 @@
       "@pokemon-pet-shop/typing/web": ["libs/typing/src/index_web.ts"],
       "@pokemon-pet-shop/ui": ["libs/ui/src/index.ts"],
       "@pokemon-pet-shop/ui/native": ["libs/ui/src/index_native.ts"],
+      "@pokemon-pet-shop/ui/styles": ["libs/ui/src/lib-base/styles/css/global.css"],
       "@pokemon-pet-shop/utils": ["libs/utils/src/index.ts"]
     }
   },

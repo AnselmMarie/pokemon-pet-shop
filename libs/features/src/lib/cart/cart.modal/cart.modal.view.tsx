@@ -19,6 +19,7 @@ import useCartModalLogic from './use.cart.modal.logic';
 const CartModal = (): ReactElement => {
   const { data, onHandleRemoveFromCart, onHandleAddToCart, onHandleRemoveCartItem } =
     useCartModalLogic();
+  // const { newStyles } = useRenderStyles(styles);
 
   return (
     <UiElementLayout className={styles.modal}>

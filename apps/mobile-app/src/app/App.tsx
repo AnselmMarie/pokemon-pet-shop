@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { UiHeader } from '@pokemon-pet-shop/features';
 import { UiModal } from '@pokemon-pet-shop/ui';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
 import 'react-native-svg';
 import Homepage from '../homepage/homepage';
@@ -30,7 +30,6 @@ export const App = () => {
             scrollViewRef.current = ref;
           }}
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}
         >
           <Homepage />
         </ScrollView>
@@ -38,10 +37,5 @@ export const App = () => {
     </QueryClientProvider>
   );
 };
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: '#ffffff',
-  },
-});
 
 export default App;

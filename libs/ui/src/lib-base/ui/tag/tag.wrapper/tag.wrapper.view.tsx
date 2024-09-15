@@ -1,11 +1,11 @@
-import { memo, PropsWithChildren, ReactElement } from 'react';
+import { memo, type PropsWithChildren, type ReactElement } from 'react';
 
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiElementLayout } from '../../element.layout';
 
 import { TagWrapperAlignEnum } from './tag.wrapper.enum';
-import { TagProps } from './tag.wrapper.interface';
+import type { TagProps } from './tag.wrapper.interface';
 import { styles } from './tag.wrapper.module';
 
 const Tag = ({

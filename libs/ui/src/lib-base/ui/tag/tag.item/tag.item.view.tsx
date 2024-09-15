@@ -1,11 +1,11 @@
-import { memo, PropsWithChildren, ReactElement } from 'react';
+import { memo, type PropsWithChildren, type ReactElement } from 'react';
 
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiTypography, TypographyTypeEnum } from '../../typography';
 
 import { TagItemColorEnum } from './tag.item.enum';
-import { TagProps } from './tag.item.interface';
+import type { TagProps } from './tag.item.interface';
 import { styles } from './tag.item.module';
 
 const Tag = ({

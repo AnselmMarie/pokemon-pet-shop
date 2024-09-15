@@ -11,3 +11,4 @@ export * from './lib-base/utils/trim-content.util';
 export * from './lib-base/utils/date-format.util';
 export * from './lib-base/utils/noop.util';
 export * from './lib-base/utils/pricing.util';
+export * from './lib-base/utils/detect.util';

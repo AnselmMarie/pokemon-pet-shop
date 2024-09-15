@@ -8,8 +8,8 @@
 /* Prevent font size inflation */
 html,
 body {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  text-size-adjust: none;
   text-size-adjust: none;
   margin: 0;
 }
@@ -66,7 +66,7 @@ h6 {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  color: currentColor;
+  color: currentcolor;
 }
 
 /* Make images easier to work with */
