@@ -28,7 +28,7 @@
 
 .contentContainer {
   height: calc(100% - 500px);
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--theme-spacing-5) var(--theme-spacing-5);
   position: relative;
 }
 

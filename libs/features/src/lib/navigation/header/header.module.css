@@ -19,8 +19,8 @@
   margin: 0 var(--theme-spacing-15);
   padding: var(--theme-spacing-10) var(--theme-spacing-15);
   align-items: center;
-  border-radius: 100px;
-  background: grey;
+  border-radius: var(--theme-radius-pill);
+  background: var(--theme-netural-200);
 }
 
 .navTitle {

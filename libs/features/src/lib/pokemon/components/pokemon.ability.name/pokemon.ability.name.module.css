@@ -4,7 +4,7 @@
   justify-items: center;
   width: 100%;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: var(--theme-spacing-5);
 }
 
 .atkLine {
@@ -14,8 +14,8 @@
 .atkCircle {
   height: 17px;
   width: 17px;
-  border-radius: 100px;
-  margin-right: 5px;
+  border-radius: var(--theme-radius-circle);
+  margin-right: var(--theme-spacing-5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,14 +30,14 @@
     margin-left: -15px;
   }
 
-  .atkWrapper {
+  /* .atkWrapper {
     display: flex;
     height: 17px;
     justify-items: center;
     width: 100%;
     align-items: center;
-    margin-bottom: 5px;
-  }
+    margin-bottom: var(--theme-spacing-5);
+  } */
 
   .atkLine {
     height: 100%;
@@ -49,15 +49,15 @@
     margin-left: -10px;
   }
 
-  .atkCircle {
+  /* .atkCircle {
     height: 17px;
     width: 17px;
-    border-radius: 100px;
-    margin-right: 5px;
+    border-radius: var(--theme-radius-circle);
+    margin-right: var(--theme-spacing-5);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
   .atkText {
     font-size: 10px;

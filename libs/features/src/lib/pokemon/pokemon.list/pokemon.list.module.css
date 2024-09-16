@@ -1,7 +1,7 @@
 .cardListWrapper {
   display: flex;
   align-content: space-between;
-  gap: 25px;
+  gap: var(--theme-spacing-30);
   flex-wrap: wrap;
   justify-content: center;
 }

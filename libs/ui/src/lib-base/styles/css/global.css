@@ -6,6 +6,8 @@ html[data-theme='dark'] {
   --theme-netural-200: var(--theme-netural-200-dark);
   --theme-netural-400: var(--theme-netural-400-dark);
   --theme-netural-600: var(--theme-netural-600-dark);
+
+  /* --theme-netural-900: var(--theme-netural-100); */
   --theme-blue-100: var(--theme-blue-100-dark);
   --theme-blue-600: var(--theme-blue-600-dark);
   --theme-green-200: var(--theme-green-200-dark);
@@ -16,8 +18,11 @@ html[data-theme='dark'] {
 
 body {
   background-color: var(--theme-blue-100);
+  color: var(--theme-netural-900);
 }
 
 * {
-  transition: background-color 0.5s;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }

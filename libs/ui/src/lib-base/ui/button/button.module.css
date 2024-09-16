@@ -8,11 +8,11 @@
 }
 
 .buttonPrimary {
-  background: blue;
-  color: white;
+  background: var(--theme-blue-600);
+  color: var(--theme-netural-100);
 }
 
 .buttonSecondary {
-  background: white;
-  color: blue;
+  background: var(--theme-netural-100);
+  color: var(--theme-blue-600);
 }
