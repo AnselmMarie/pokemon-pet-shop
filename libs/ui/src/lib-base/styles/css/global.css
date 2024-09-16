@@ -1,15 +1,23 @@
 @import url('reset.css');
 @import url('_variables.css');
 
-/* :root,
-html[data-theme='light'] {
-  --background-color: #fff;
-  --text-color: #121416d8;
-  --link-color: #543fd7;
+html[data-theme='dark'] {
+  --theme-netural-100: var(--theme-netural-100-dark);
+  --theme-netural-200: var(--theme-netural-200-dark);
+  --theme-netural-400: var(--theme-netural-400-dark);
+  --theme-netural-600: var(--theme-netural-600-dark);
+  --theme-blue-100: var(--theme-blue-100-dark);
+  --theme-blue-600: var(--theme-blue-600-dark);
+  --theme-green-200: var(--theme-green-200-dark);
+  --theme-green-400: var(--theme-green-400-dark);
+  --theme-green-600: var(--theme-green-600-dark);
+  --theme-green-800: var(--theme-green-800-dark);
 }
 
-html[data-theme='dark'] {
-  --background-color: #212a2e;
-  --text-color: #f7f8f8;
-  --link-color: #828fff;
-} */
+body {
+  background-color: var(--theme-blue-100);
+}
+
+* {
+  transition: background-color 0.5s;
+}

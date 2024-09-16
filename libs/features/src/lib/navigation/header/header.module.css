@@ -1,11 +1,11 @@
 .headerWrapper {
   justify-content: space-between;
-  padding: 10px 0;
-  box-shadow: 0 2px 8px 1px rgba(6, 42, 73, 0.15);
+  padding: var(--theme-spacing-10) 0;
+  box-shadow: 0 2px 8px 1px rgb(6 42 73 / 15%);
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: white;
+  background-color: var(--theme-netural-100);
 }
 
 .container {
@@ -16,19 +16,19 @@
 .nav {
   width: 100%;
   display: flex;
-  margin: 0 15px;
-  padding: 10px 15px;
+  margin: 0 var(--theme-spacing-15);
+  padding: var(--theme-spacing-10) var(--theme-spacing-15);
   align-items: center;
   border-radius: 100px;
   background: grey;
 }
 
 .navTitle {
-  margin-right: 10px;
+  margin-right: var(--theme-spacing-10);
 }
 
 .iconCart {
-  margin-left: 15px;
+  margin-left: var(--theme-spacing-15);
 }
 
 .logo,
@@ -40,9 +40,11 @@
   .logo {
     display: block;
   }
+
   .iconMenu {
     display: none;
   }
+
   .switchTheme {
     display: flex;
   }
