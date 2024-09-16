@@ -1,0 +1,70 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 16 Sep 2024 02:02:34 GMT
+ */
+
+:root {
+  --theme-netural-100: #ffff;
+  --theme-netural-200: #f2f2f2ff;
+  --theme-netural-400: #d5d5d5ff;
+  --theme-netural-600: #707274ff;
+  --theme-netural-800: #434343ff;
+  --theme-netural-900: #212121ff;
+  --theme-netural-100-dark: #424242ff;
+  --theme-netural-200-dark: #8c8c8cff;
+  --theme-netural-400-dark: #707274ff;
+  --theme-netural-600-dark: #434343ff;
+  --theme-netural-900-loading: #21212180;
+  --theme-blue-100: #f5f8fdff;
+  --theme-blue-200: #adc6f5ff;
+  --theme-blue-400: #6089d6ff;
+  --theme-blue-600: #365facff;
+  --theme-blue-800: #26457fff;
+  --theme-blue-900: #152f61ff;
+  --theme-blue-600-dark: #ffff;
+  --theme-blue-600-dark-button: #26457fff;
+  --theme-blue-800-dark-button: #152f61ff;
+  --theme-blue-100-dark: #696c72ff;
+  --theme-yellow-100: #fff5ccff;
+  --theme-yellow-200: #ffe991ff;
+  --theme-yellow-400: #ffdb4bff;
+  --theme-yellow-600: #ffcc01ff;
+  --theme-yellow-800: #d2a800ff;
+  --theme-yellow-900: #a48300ff;
+  --theme-green-100: #b1e6bbff;
+  --theme-green-200: #69b076ff;
+  --theme-green-400: #579d63ff;
+  --theme-green-600: #4a8554ff;
+  --theme-green-800: #295630ff;
+  --theme-green-900: #1a3c1fff;
+  --theme-green-200-dark: #579d63ff;
+  --theme-green-400-dark: #4a8554ff;
+  --theme-green-600-dark: #295630ff;
+  --theme-green-800-dark: #1a3c1fff;
+  --theme-red-100: #ffb6b6ff;
+  --theme-red-200: #fb9090ff;
+  --theme-red-400: #f76767ff;
+  --theme-red-600: #d63535ff;
+  --theme-red-800: #ab0e0eff;
+  --theme-red-900: #7a0a0aff;
+  --theme-font-10: 10px;
+  --theme-font-13: 13px;
+  --theme-font-16: 16px;
+  --theme-font-18: 18px;
+  --theme-font-24: 24px;
+  --theme-radius-8: 8px;
+  --theme-radius-16: 16px;
+  --theme-radius-pill: 100px;
+  --theme-radius-circle: 100px;
+  --theme-breakpoints-lg: 1280px;
+  --theme-breakpoints-md: 736px;
+  --theme-breakpoints-sm: 375px;
+  --theme-spacing-2: 2px;
+  --theme-spacing-5: 5px;
+  --theme-spacing-10: 10px;
+  --theme-spacing-15: 15px;
+  --theme-spacing-30: 30px;
+  --theme-spacing-35: 35px;
+  --theme-spacing-40: 40px;
+  --theme-spacing-45: 45px;
+}

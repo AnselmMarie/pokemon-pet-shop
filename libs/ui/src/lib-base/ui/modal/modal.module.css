@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: var(--theme-spacing-15);
 }
 
 .absoluteDropdownHeadline {
@@ -41,7 +41,7 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  padding: 15px;
+  padding: var(--theme-spacing-15);
   top: 0;
   left: 0;
   width: 100%;

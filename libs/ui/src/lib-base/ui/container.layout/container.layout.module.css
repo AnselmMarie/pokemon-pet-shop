@@ -1,7 +1,7 @@
 .container {
-  max-width: 1300px;
+  max-width: var(--theme-breakpoints-lg);
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--theme-spacing-15);
+  padding-right: var(--theme-spacing-15);
 }

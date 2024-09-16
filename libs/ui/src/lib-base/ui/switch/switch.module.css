@@ -14,11 +14,11 @@
 }
 
 .iconLeft {
-  margin-left: 6px;
+  margin-left: var(--theme-spacing-5);
 }
 
 .iconRight {
-  margin-right: 3px;
+  margin-right: var(--theme-spacing-2);
 }
 
 .iconCircle {
@@ -28,7 +28,7 @@
   height: 36px;
   background-color: blue;
   z-index: 0;
-  border-radius: 100px;
+  border-radius: var(--theme-radius-circle);
   transition: left 100ms ease-in-out;
 }
 

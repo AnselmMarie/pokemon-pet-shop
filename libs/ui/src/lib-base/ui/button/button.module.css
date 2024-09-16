@@ -1,9 +1,9 @@
 .button {
-  border-radius: 30px;
+  border-radius: var(--theme-radius-pill);
   cursor: pointer;
   background: none;
   border: 0;
-  padding: 10px 15px;
+  padding: var(--theme-spacing-10) var(--theme-spacing-15);
   text-align: center;
 }
 

@@ -1,6 +1,6 @@
 .tagWrapper {
   display: flex;
-  gap: 15px;
+  gap: var(--theme-spacing-15);
 }
 
 .leftAlign {
