@@ -2,7 +2,7 @@
   min-width: 352px;
   height: 154px;
   display: flex;
-  padding: 5px;
+  padding: var(--theme-spacing-5);
   border-radius: var(--theme-radius-8);
   flex-direction: row;
   position: relative;
@@ -10,7 +10,6 @@
 
 .imgCardWrapper {
   max-width: 115px;
-  background: red;
   border-radius: var(--theme-radius-8);
   padding: var(--theme-spacing-5);
   display: flex;
@@ -37,14 +36,16 @@
 .cardSubHeadlineWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--theme-spacing-10);
 }
 
 .cardSubHeadline {
-  font-size: 10px;
+  font-size: var(--theme-font-10);
 }
 
 .cardHeadline {
-  font-size: 18px;
+  font-size: var(--theme-font-18);
 }
 
 .btnWrapper {
@@ -91,12 +92,8 @@
     justify-content: space-between;
   }
 
-  .cardSubHeadline {
-    font-size: 9px;
-  }
-
   .cardHeadline {
-    font-size: 16px;
+    font-size: var(--theme-font-16);
   }
 
   .contentCardWrapper {

@@ -176,6 +176,22 @@
             "exportKey": "variables"
           }
         }
+      },
+      "900-dark": {
+        "type": "color",
+        "value": "#ffffffff",
+        "blendMode": "normal",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Theme",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:486:5189",
+            "exportKey": "variables"
+          }
+        }
       }
     },
     "blue": {

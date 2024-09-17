@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 import { useController } from 'react-hook-form';
 
 import { UiElementLayout } from '../element.layout';
@@ -14,6 +15,7 @@ const Input = ({
   name = '',
   type = InputTypeEnum.TEXT,
   control = null,
+  iconClassname = '',
   appendIcon = null,
   defaultValue = '',
 }: InputProps): ReactElement => {
@@ -33,7 +35,13 @@ const Input = ({
         // value={field?.value}
         // onChange={field?.onChange}
       />
-      {appendIcon ? <UiIcon icon={appendIcon} classNameIcon={styles.icon} size={29} /> : null}
+      {appendIcon ? (
+        <UiIcon
+          icon={appendIcon}
+          classNameIcon={classNamesUtil(iconClassname, styles.icon)}
+          size={29}
+        />
+      ) : null}
     </UiElementLayout>
   );
 };

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 16 Sep 2024 02:09:33 GMT
+ * Generated on Mon, 16 Sep 2024 17:53:32 GMT
  */
 
 export const THEME_NETURAL_100 = '#ffffffff';
@@ -14,6 +14,7 @@ export const THEME_NETURAL_200_DARK = '#8c8c8cff';
 export const THEME_NETURAL_400_DARK = '#707274ff';
 export const THEME_NETURAL_600_DARK = '#434343ff';
 export const THEME_NETURAL_900_LOADING = '#21212180';
+export const THEME_NETURAL_900_DARK = '#ffffffff';
 export const THEME_BLUE_100 = '#f5f8fdff';
 export const THEME_BLUE_200 = '#adc6f5ff';
 export const THEME_BLUE_400 = '#6089d6ff';

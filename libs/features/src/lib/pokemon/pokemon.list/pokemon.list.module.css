@@ -5,3 +5,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.btnWrapper {
+  text-align: center;
+  margin-top: var(--theme-spacing-35);
+  margin-bottom: var(--theme-spacing-35);
+}

@@ -25,6 +25,15 @@
   height: 115px;
 }
 
+.quantityWrapper {
+  display: flex;
+  background-color: var(--theme-netural-200);
+  gap: var(--theme-spacing-10);
+  border-radius: var(--theme-radius-pill);
+  width: fit-content;
+  align-items: center;
+}
+
 .sep {
   background-color: var(--theme-netural-400);
   width: 100%;

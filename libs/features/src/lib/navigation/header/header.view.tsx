@@ -11,6 +11,7 @@ import {
   TypographyTypeEnum,
   UiContainer,
   UiHideInMobile,
+  IconColorEnum,
 } from '@pokemon-pet-shop/ui';
 
 import { UiSwitchTheme } from '../component/switch.theme';
@@ -38,16 +39,24 @@ const Header = () => {
           <UiTypography typographyType={TypographyTypeEnum.SPAN} className={newStyles.navTitle}>
             PETS
           </UiTypography>
-          <UiInput appendIcon={IconTypeEnum.ICON_SEARCH} />
+          <UiInput iconClassname={styles.icon} appendIcon={IconTypeEnum.ICON_SEARCH} />
         </UiElementLayout>
 
         <UiHideInMobile>
           <UiSwitchTheme className={newStyles.switchTheme} />
         </UiHideInMobile>
 
-        <UiElementLayout>
-          <UiTypography>{data?.counter}</UiTypography>
-          <UiIcon classNameIcon={newStyles.iconCart} onClick={onHandleCartModalClick} />
+        <UiElementLayout className={styles.cartWrapper}>
+          {data?.counter ? (
+            <UiElementLayout className={styles.counterWrapper} onClick={onHandleCartModalClick}>
+              <UiTypography typographyType={TypographyTypeEnum.SPAN}>{data?.counter}</UiTypography>
+            </UiElementLayout>
+          ) : null}
+          <UiIcon
+            classNameIcon={newStyles.iconCart}
+            color={IconColorEnum.BLUE}
+            onClick={onHandleCartModalClick}
+          />
         </UiElementLayout>
       </UiContainer>
     </UiElementLayout>

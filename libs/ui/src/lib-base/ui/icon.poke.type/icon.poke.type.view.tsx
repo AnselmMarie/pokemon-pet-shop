@@ -1,9 +1,11 @@
 import { memo, ReactElement, useMemo } from 'react';
 
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
 import { ReactSVG } from 'react-svg';
 
 import { IconPokeTypeEnum } from './icon.poke.type.enum';
 import { IconPokeTypeProps } from './icon.poke.type.interface';
+import styles from './icon.poke.type.module.css';
 import { iconPokeSvgMap } from './icon.poke.type.util';
 
 const IconPokeType = ({
@@ -23,7 +25,7 @@ const IconPokeType = ({
         svg.setAttribute('width', size);
         svg.setAttribute('height', size);
       }}
-      className={className}
+      className={classNamesUtil(className, styles.wrapper)}
     />
   );
 };

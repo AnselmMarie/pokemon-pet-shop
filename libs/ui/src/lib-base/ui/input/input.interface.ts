@@ -9,6 +9,7 @@ export interface InputProps {
   type?: InputTypeEnum;
   control?: any;
   value?: any;
+  iconClassname?: any;
   appendIcon?: IconTypeEnum | null;
   defaultValue?: any;
   onChange?: GenericNonReturnType;

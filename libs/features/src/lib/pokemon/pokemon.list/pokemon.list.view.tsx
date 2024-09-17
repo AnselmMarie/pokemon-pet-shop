@@ -26,19 +26,21 @@ const PokemonList = (): ReactElement => {
           );
         })}
       </UiElementLayout>
-      <UiButton
-        isDisabled={!hasNextPage || isFetchingNextPage}
-        text={
-          isFetchingNextPage
-            ? 'Loading more...'
-            : hasNextPage
-              ? 'Load More'
-              : 'Nothing more to load'
-        }
-        onClick={() => {
-          onFetchNextPage((old: number) => old + 1);
-        }}
-      />
+      <UiElementLayout className={styles.btnWrapper}>
+        <UiButton
+          isDisabled={!hasNextPage || isFetchingNextPage}
+          text={
+            isFetchingNextPage
+              ? 'Loading More...'
+              : hasNextPage
+                ? 'Load More'
+                : 'Nothing more to load'
+          }
+          onClick={() => {
+            onFetchNextPage((old: number) => old + 1);
+          }}
+        />
+      </UiElementLayout>
     </>
   );
 };

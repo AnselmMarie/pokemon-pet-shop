@@ -1,12 +1,13 @@
 .switchWrapper {
-  border-radius: 100px;
-  background: grey;
+  border-radius: var(--theme-radius-pill);
+  background: var(--theme-netural-200);
   display: flex;
   min-width: 85px;
-  padding: 14px 10px;
+  padding: var(--theme-spacing-15) var(--theme-spacing-10);
   align-items: center;
   justify-content: space-between;
   position: relative;
+  box-shadow: inset 0 3px 3px rgb(0 0 0 / 10%);
 }
 
 .icon {
@@ -15,10 +16,12 @@
 
 .iconLeft {
   margin-left: var(--theme-spacing-5);
+  cursor: pointer;
 }
 
 .iconRight {
   margin-right: var(--theme-spacing-2);
+  cursor: pointer;
 }
 
 .iconCircle {
@@ -26,7 +29,7 @@
   top: 6px;
   width: 36px;
   height: 36px;
-  background-color: blue;
+  background-color: var(--theme-blue-600);
   z-index: 0;
   border-radius: var(--theme-radius-circle);
   transition: left 100ms ease-in-out;

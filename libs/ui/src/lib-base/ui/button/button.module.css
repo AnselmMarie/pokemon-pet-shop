@@ -3,7 +3,6 @@
   cursor: pointer;
   background: none;
   border: 0;
-  padding: var(--theme-spacing-10) var(--theme-spacing-15);
   text-align: center;
 }
 
@@ -15,4 +14,14 @@
 .buttonSecondary {
   background: var(--theme-netural-100);
   color: var(--theme-blue-600);
+}
+
+.standard {
+  padding: var(--theme-spacing-10) var(--theme-spacing-15);
+  font-size: var(--theme-font-13);
+}
+
+.large {
+  padding: var(--theme-spacing-15) var(--theme-spacing-30);
+  font-size: var(--theme-font-18);
 }

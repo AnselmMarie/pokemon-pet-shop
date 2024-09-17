@@ -4,7 +4,7 @@ import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import ButtonElement from './button.element.view';
-import { ButtonTypeEnum } from './button.enum';
+import { ButtonSizeEnum, ButtonTypeEnum } from './button.enum';
 import { ButtonProps } from './button.interface';
 import { styles } from './button.module';
 
@@ -12,6 +12,7 @@ const Button = ({
   type = ButtonTypeEnum.PRIMARY,
   className = '',
   text = null,
+  size = ButtonSizeEnum.STANDARD,
   isDisabled = false,
   onClick,
 }: ButtonProps): ReactElement => {
@@ -27,10 +28,20 @@ const Button = ({
     }
   }, [type, newStyles]);
 
+  const getSizeStyles = useMemo(() => {
+    switch (size) {
+      case ButtonSizeEnum.LARGE:
+        return newStyles.large;
+      case ButtonSizeEnum.STANDARD:
+      default:
+        return newStyles.standard;
+    }
+  }, [size, newStyles]);
+
   return (
     <ButtonElement
       text={text}
-      className={classNamesUtil(className, newStyles.button, getTypeStyles)}
+      className={classNamesUtil(className, newStyles.button, getTypeStyles, getSizeStyles)}
       isDisabled={isDisabled}
       onClick={onClick}
     />

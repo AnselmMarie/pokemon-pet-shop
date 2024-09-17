@@ -1,9 +1,12 @@
 import { memo, ReactElement, useCallback, useMemo } from 'react';
 
+import { classNamesUtil } from '@pokemon-pet-shop/utils';
+
 import { UiElementLayout } from '../element.layout';
 
 import { IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
+import styles from './icon.module.css';
 import { IconMap } from './icon.util';
 
 const Icon = ({
@@ -36,17 +39,18 @@ const Icon = ({
     return (
       <IconComponent
         size={size}
-        fill={color}
-        className={classNameIcon}
+        className={classNamesUtil(classNameIcon, onClick ? styles.icon : '')}
         onClick={iconClick}
-        // strokeLinejoin="miter" // override other SVG props
       />
     );
-  }, [size, color, IconComponent, classNameIcon, iconClick]);
+  }, [size, IconComponent, classNameIcon, iconClick, onClick]);
 
   if (displayWrapper) {
     return (
-      <UiElementLayout className={classNameWrapper} onClick={wrapperClick}>
+      <UiElementLayout
+        className={classNamesUtil(classNameWrapper, styles.iconWrapper)}
+        onClick={wrapperClick}
+      >
         {renderIcon}
       </UiElementLayout>
     );

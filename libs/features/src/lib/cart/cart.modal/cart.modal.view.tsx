@@ -48,7 +48,8 @@ const CartModal = (): ReactElement => {
                   >
                     {pricingFormatUSD(el?.price)}
                   </UiTypography>
-                  <UiElementLayout>
+
+                  <UiElementLayout className={styles.quantityWrapper}>
                     <UiIcon
                       icon={IconTypeEnum.ICON_MINUS}
                       onClick={() => onHandleRemoveFromCart(el?.id)}

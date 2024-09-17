@@ -41,6 +41,7 @@
 
 .grassThemeBg {
   background-color: green;
+  color: var(--theme-netural-100);
 }
 
 .groundThemeBg {

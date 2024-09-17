@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 16 Sep 2024 02:02:34 GMT
+ * Generated on Mon, 16 Sep 2024 17:53:32 GMT
  */
 
 :root {
@@ -15,6 +15,7 @@
   --theme-netural-400-dark: #707274ff;
   --theme-netural-600-dark: #434343ff;
   --theme-netural-900-loading: #21212180;
+  --theme-netural-900-dark: #ffff;
   --theme-blue-100: #f5f8fdff;
   --theme-blue-200: #adc6f5ff;
   --theme-blue-400: #6089d6ff;

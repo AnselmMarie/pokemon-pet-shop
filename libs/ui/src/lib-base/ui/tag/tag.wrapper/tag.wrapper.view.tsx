@@ -10,10 +10,11 @@ import { styles } from './tag.wrapper.module';
 
 const Tag = ({
   tagAlign = TagWrapperAlignEnum.CENTER,
+  className,
   children,
 }: PropsWithChildren<TagProps>): ReactElement => {
   return (
-    <UiElementLayout className={classNamesUtil(styles.tagWrapper, styles?.[tagAlign])}>
+    <UiElementLayout className={classNamesUtil(className, styles.tagWrapper, styles?.[tagAlign])}>
       {children}
     </UiElementLayout>
   );

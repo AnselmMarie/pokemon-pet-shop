@@ -1,4 +1,4 @@
-import { memo, type PropsWithChildren, type ReactElement } from 'react';
+import { memo, useMemo, type PropsWithChildren, type ReactElement } from 'react';
 
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
@@ -12,12 +12,18 @@ const Tag = ({
   name = '',
   colorTheme = TagItemColorEnum.GRASS,
 }: PropsWithChildren<TagProps>): ReactElement => {
+  const capitalizeName = useMemo(() => {
+    return name.replace(/^\w/, (el) => {
+      return el.toUpperCase();
+    });
+  }, [name]);
+
   return (
     <UiTypography
       className={classNamesUtil(styles.tag, styles?.[`${colorTheme}Bg`])}
       typographyType={TypographyTypeEnum.SPAN}
     >
-      {name}
+      {capitalizeName}
     </UiTypography>
   );
 };

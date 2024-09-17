@@ -4,7 +4,8 @@
   justify-items: center;
   width: 100%;
   align-items: center;
-  margin-bottom: var(--theme-spacing-5);
+  color: var(--theme-netural-100);
+  margin-bottom: var(--theme-spacing-10);
 }
 
 .atkLine {
@@ -22,22 +23,30 @@
 }
 
 .atkText {
-  font-size: 13px;
+  font-size: var(--theme-font-13);
+}
+
+.atkWrapperDetailModal {
+  color: var(--theme-netural-900);
+  margin-bottom: var(--theme-spacing-15);
+  height: auto;
+}
+
+.atkCircleDetailModal {
+  height: 35px;
+  width: 35px;
+  margin-right: var(--theme-spacing-10);
+}
+
+.atkTextDetailModal {
+  color: var(--theme-netural-900);
+  font-size: var(--theme-font-18);
 }
 
 @media only screen and (min-width: 830px) {
   .atkWrapperWithAtkLine {
     margin-left: -15px;
   }
-
-  /* .atkWrapper {
-    display: flex;
-    height: 17px;
-    justify-items: center;
-    width: 100%;
-    align-items: center;
-    margin-bottom: var(--theme-spacing-5);
-  } */
 
   .atkLine {
     height: 100%;
@@ -47,20 +56,6 @@
 
   .atkCircleWithAtkLine {
     margin-left: -10px;
-  }
-
-  /* .atkCircle {
-    height: 17px;
-    width: 17px;
-    border-radius: var(--theme-radius-circle);
-    margin-right: var(--theme-spacing-5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-
-  .atkText {
-    font-size: 10px;
   }
 }
 

@@ -1,4 +1,4 @@
-import { memo, ReactElement } from 'react';
+import { memo, ReactElement, useMemo } from 'react';
 
 import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 import {
@@ -22,6 +22,12 @@ import usePokemonCardLogic from './use.pokemon.card.logic';
 const PokemonCard = ({ data }: CardProps): ReactElement => {
   const { getThemeClass, onHandleOpenDetailModalClick } = usePokemonCardLogic(data);
 
+  const capitalizeName = useMemo(() => {
+    return data?.name.replace(/^\w/, (el) => {
+      return el.toUpperCase();
+    });
+  }, [data?.name]);
+
   return (
     <UiCard className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
       <UiElementLayout className={styles.imgCardWrapper}>
@@ -43,12 +49,12 @@ const PokemonCard = ({ data }: CardProps): ReactElement => {
           <UiElementLayout className={styles.cardSubHeadlineWrapper}>
             <UiTypography
               className={classNamesUtil(
-                styles.cardSubHeadline,
+                styles.cardHeadline,
                 styles?.[`${getThemeClass}ContentCardText`]
               )}
-              typographyType={TypographyTypeEnum.SPAN}
+              typographyType={TypographyTypeEnum.H1}
             >
-              Basic Pokemon
+              {capitalizeName}
             </UiTypography>
             <UiTypography
               className={classNamesUtil(
@@ -60,15 +66,6 @@ const PokemonCard = ({ data }: CardProps): ReactElement => {
               NO. {data?.id}
             </UiTypography>
           </UiElementLayout>
-          <UiTypography
-            className={classNamesUtil(
-              styles.cardHeadline,
-              styles?.[`${getThemeClass}ContentCardText`]
-            )}
-            typographyType={TypographyTypeEnum.H1}
-          >
-            {data?.name}
-          </UiTypography>
 
           {(data?.abilities || []).map(
             (abilityObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {

@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useMemo } from 'react';
 
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { PokemonDetailAbilityObj, PokemonDetailTypesObj } from '@pokemon-pet-shop/typing';
@@ -11,6 +11,7 @@ import {
   TypographyTypeEnum,
   UiTagWrapper,
   UiTagItem,
+  ButtonSizeEnum,
 } from '@pokemon-pet-shop/ui';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
@@ -33,12 +34,20 @@ const PokemonDetailModal = (): ReactElement => {
   const { getThemeClass } = usePokemonThemeLogic(modalData?.types);
   const { newStyles } = useRenderStyles(styles);
 
+  const capitalizeName = useMemo(() => {
+    return modalData?.name.replace(/^\w/, (el) => {
+      return el.toUpperCase();
+    });
+  }, [modalData?.name]);
+
   return (
     <UiElementLayout className={newStyles.modal}>
       <UiElementLayout
         className={classNamesUtil(newStyles.imageContainer, styles?.[`${getThemeClass}ImageBg`])}
       >
-        <UiTypography>{onGetPricingFormat}</UiTypography>
+        <UiElementLayout className={styles.priceWrapper}>
+          <UiTypography className={styles.priceText}>{onGetPricingFormat}</UiTypography>
+        </UiElementLayout>
         <UiImage
           src={modalData?.sprites?.other?.['official-artwork']?.front_default}
           className={newStyles.image}
@@ -63,11 +72,11 @@ const PokemonDetailModal = (): ReactElement => {
               className={classNamesUtil(newStyles.cardHeadline)}
               typographyType={TypographyTypeEnum.H1}
             >
-              {modalData?.name}
+              {capitalizeName}
             </UiTypography>
 
             {modalData?.types ? (
-              <UiTagWrapper>
+              <UiTagWrapper className={styles.tagWrapper}>
                 {(modalData?.types || []).map(
                   (typeObj: PokemonDetailTypesObj, i: number): ReactElement | null => {
                     return <UiTagItem key={i} name={typeObj?.type?.name} />;
@@ -77,22 +86,22 @@ const PokemonDetailModal = (): ReactElement => {
             ) : null}
 
             <UiTypography
-              className={classNamesUtil(newStyles.cardHeadline)}
-              typographyType={TypographyTypeEnum.H2}
+              className={classNamesUtil(newStyles.cardDescription)}
+              typographyType={TypographyTypeEnum.P}
             >
               {speciesData?.flavor_text_entries?.flavor_text}
             </UiTypography>
 
-            <UiElementLayout>
+            <UiElementLayout className={styles.weightHeightWrapper}>
               <UiTypography
-                // className={classNamesUtil(newStyles.cardHeadline)}
+                className={classNamesUtil(newStyles.weight)}
                 typographyType={TypographyTypeEnum.P}
               >
                 Weight: {`${onConvertKgToLbs?.lbs} ${onConvertKgToLbs?.kg}`}
               </UiTypography>
 
               <UiTypography
-                // className={classNamesUtil(newStyles.cardHeadline)}
+                className={classNamesUtil(newStyles.height)}
                 typographyType={TypographyTypeEnum.P}
               >
                 Height: {onConvertMetersToFtIn?.ft ? `${onConvertMetersToFtIn?.ft} ` : null}
@@ -112,6 +121,7 @@ const PokemonDetailModal = (): ReactElement => {
                     typeData={modalData?.types}
                     getThemeClass={getThemeClass}
                     showAtkLine={false}
+                    displayInDetail
                   />
                 );
               }
@@ -119,7 +129,12 @@ const PokemonDetailModal = (): ReactElement => {
           </UiElementLayout>
 
           <UiElementLayout className={newStyles.btnWrapper}>
-            <UiButton className={newStyles.btn} text="Get Pet" onClick={onHandleUpdateCartSubmit} />
+            <UiButton
+              className={newStyles.btn}
+              text="Get Pet"
+              onClick={onHandleUpdateCartSubmit}
+              size={ButtonSizeEnum.LARGE}
+            />
           </UiElementLayout>
         </UiElementLayout>
       </UiElementLayout>
