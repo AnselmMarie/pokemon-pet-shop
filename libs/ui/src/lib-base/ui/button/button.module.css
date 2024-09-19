@@ -22,6 +22,7 @@
 }
 
 .large {
+  min-width: 230px;
   padding: var(--theme-spacing-15) var(--theme-spacing-30);
-  font-size: var(--theme-font-18);
+  font-size: var(--theme-font-24);
 }

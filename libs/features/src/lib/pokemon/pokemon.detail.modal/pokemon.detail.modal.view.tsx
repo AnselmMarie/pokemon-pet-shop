@@ -13,6 +13,7 @@ import {
   UiTagItem,
   ButtonSizeEnum,
 } from '@pokemon-pet-shop/ui';
+import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
@@ -79,32 +80,40 @@ const PokemonDetailModal = (): ReactElement => {
               <UiTagWrapper className={styles.tagWrapper}>
                 {(modalData?.types || []).map(
                   (typeObj: PokemonDetailTypesObj, i: number): ReactElement | null => {
-                    return <UiTagItem key={i} name={typeObj?.type?.name} />;
+                    return (
+                      <UiTagItem key={i} name={typeObj?.type?.name} colorTheme={getThemeClass} />
+                    );
                   }
                 )}
               </UiTagWrapper>
             ) : null}
 
             <UiTypography
-              className={classNamesUtil(newStyles.cardDescription)}
+              className={newStyles.cardDescription}
               typographyType={TypographyTypeEnum.P}
             >
               {speciesData?.flavor_text_entries?.flavor_text}
             </UiTypography>
 
             <UiElementLayout className={styles.weightHeightWrapper}>
-              <UiTypography
-                className={classNamesUtil(newStyles.weight)}
-                typographyType={TypographyTypeEnum.P}
-              >
-                Weight: {`${onConvertKgToLbs?.lbs} ${onConvertKgToLbs?.kg}`}
+              <UiTypography className={newStyles.weight} typographyType={TypographyTypeEnum.P}>
+                <UiTypography
+                  typographyType={TypographyTypeEnum.SPAN}
+                  className={globalStyles.fontBold}
+                >
+                  Weight:
+                </UiTypography>{' '}
+                {`${onConvertKgToLbs?.lbs} ${onConvertKgToLbs?.kg}`}
               </UiTypography>
 
-              <UiTypography
-                className={classNamesUtil(newStyles.height)}
-                typographyType={TypographyTypeEnum.P}
-              >
-                Height: {onConvertMetersToFtIn?.ft ? `${onConvertMetersToFtIn?.ft} ` : null}
+              <UiTypography className={newStyles.height} typographyType={TypographyTypeEnum.P}>
+                <UiTypography
+                  typographyType={TypographyTypeEnum.SPAN}
+                  className={globalStyles.fontBold}
+                >
+                  Height:
+                </UiTypography>{' '}
+                {onConvertMetersToFtIn?.ft ? `${onConvertMetersToFtIn?.ft} ` : null}
                 {onConvertMetersToFtIn?.in} {onConvertMetersToFtIn?.m}
               </UiTypography>
             </UiElementLayout>

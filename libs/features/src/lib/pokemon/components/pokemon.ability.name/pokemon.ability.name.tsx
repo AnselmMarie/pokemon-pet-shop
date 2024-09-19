@@ -69,10 +69,7 @@ const PokemonAbilityName = ({
           newStyles?.[`${getThemeClass}AtkCircle`]
         )}
       >
-        <UiIconPokeType
-          type={typeData?.types?.[0]?.type?.name}
-          size={displayInDetail ? '18' : '10'}
-        />
+        <UiIconPokeType type={typeData?.[0]?.type?.name} size={displayInDetail ? '18' : '10'} />
       </UiElementLayout>
       <UiTypography
         className={classNamesUtil(

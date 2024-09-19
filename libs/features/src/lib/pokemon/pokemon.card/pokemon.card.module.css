@@ -126,412 +126,268 @@
 Grass Theme
 **/
 .grassThemeWrapper {
-  background: green;
+  background: var(--theme-type-grass-600);
 }
 
 .grassThemeContentCardWrapper {
-  background: darkgreen;
+  background: var(--theme-type-grass-800);
 }
 
 .grassThemeContentCardText {
   color: white;
 }
 
-.grassThemeAtkLine {
-  background: greenyellow;
-}
-
-.grassThemeAtkCircle {
-  background: lightgreen;
-}
-
 /**
 Bug Theme
 **/
 .bugThemeWrapper {
-  background: #92bc2c;
+  background: var(--theme-type-bug-600);
 }
 
 .bugThemeContentCardWrapper {
-  background: #759823;
+  background: var(--theme-type-bug-800);
 }
 
 .bugThemeContentCardText {
   color: white;
 }
 
-.bugThemeAtkLine {
-  background: #91b53d;
-}
-
-.bugThemeAtkCircle {
-  background: #7aa515;
-}
-
 /**
 Dark Theme
 **/
 .darkThemeWrapper {
-  background: #595761;
+  background: var(--theme-type-dark-600);
 }
 
 .darkThemeContentCardWrapper {
-  background: #38363d;
+  background: var(--theme-type-dark-800);
 }
 
 .darkThemeContentCardText {
   color: white;
 }
 
-.darkThemeAtkLine {
-  background: #57565a;
-}
-
-.darkThemeAtkCircle {
-  background: #313034;
-}
-
 /**
 Dragon Theme
 **/
 .dragonThemeWrapper {
-  background: #0c69c8;
+  background: var(--theme-type-dragon-600);
 }
 
 .dragonThemeContentCardWrapper {
-  background: #0958a7;
+  background: var(--theme-type-dragon-800);
 }
 
 .dragonThemeContentCardText {
   color: white;
 }
 
-.dragonThemeAtkLine {
-  background: #1663af;
-}
-
-.dragonThemeAtkCircle {
-  background: #095199;
-}
-
 /**
 Electric Theme
 **/
 .electricThemeWrapper {
-  background: #f2d94e;
+  background: var(--theme-type-electric-600);
 }
 
 .electricThemeContentCardWrapper {
-  background: #cab642;
+  background: var(--theme-type-electric-800);
 }
 
 .electricThemeContentCardText {
   color: white;
 }
 
-.electricThemeAtkLine {
-  background: #cab74c;
-}
-
-.electricThemeAtkCircle {
-  background: #a69533;
-}
-
 /**
 Fairy Theme
 **/
 .fairyThemeWrapper {
-  background: #ee90e6;
+  background: var(--theme-type-fairy-600);
 }
 
 .fairyThemeContentCardWrapper {
-  background: #bc71b6;
+  background: var(--theme-type-fairy-800);
 }
 
 .fairyThemeContentCardText {
   color: white;
 }
 
-.fairyThemeAtkLine {
-  background: #784d74;
-}
-
-.fairyThemeAtkCircle {
-  background: #ee90e6;
-}
-
 /**
 Fighting Theme
 **/
 .fightingThemeWrapper {
-  background: #d3425f;
+  background: var(--theme-type-fighting-600);
 }
 
 .fightingThemeContentCardWrapper {
-  background: #b83f57;
+  background: var(--theme-type-fighting-800);
 }
 
 .fightingThemeContentCardText {
   color: white;
 }
 
-.fightingThemeAtkLine {
-  background: #cd5069;
-}
-
-.fightingThemeAtkCircle {
-  background: #94273c;
-}
-
 /**
 Fire Theme
 **/
 .fireThemeWrapper {
-  background: #fba54c;
+  background: var(--theme-type-fire-600);
 }
 
 .fireThemeContentCardWrapper {
-  background: #ca863e;
+  background: var(--theme-type-fire-800);
 }
 
 .fireThemeContentCardText {
   color: white;
 }
 
-.fireThemeAtkLine {
-  background: #cc8e4c;
-}
-
-.fireThemeAtkCircle {
-  background: #9f682d;
-}
-
 /**
 Flying Theme
 **/
 .flyingThemeWrapper {
-  background: #a1bbec;
+  background: var(--theme-type-flying-600);
 }
 
 .flyingThemeContentCardWrapper {
-  background: #7d92b9;
+  background: var(--theme-type-flying-800);
 }
 
 .flyingThemeContentCardText {
   color: white;
 }
 
-.flyingThemeAtkLine {
-  background: #9eb0d2;
-}
-
-.flyingThemeAtkCircle {
-  background: #7186ab;
-}
-
 /**
 Ghost Theme
 **/
 .ghostThemeWrapper {
-  background: #5f6dbc;
+  background: var(--theme-type-ghost-600);
 }
 
 .ghostThemeContentCardWrapper {
-  background: #47528e;
+  background: var(--theme-type-ghost-800);
 }
 
 .ghostThemeContentCardText {
   color: white;
 }
 
-.ghostThemeAtkLine {
-  background: #6671b4;
-}
-
-.ghostThemeAtkCircle {
-  background: #434d85;
-}
-
 /**
 Ground Theme
 **/
 .groundThemeWrapper {
-  background: #da7c4d;
+  background: var(--theme-type-ground-600);
 }
 
 .groundThemeContentCardWrapper {
-  background: #b3663f;
+  background: var(--theme-type-ground-800);
 }
 
 .groundThemeContentCardText {
   color: white;
 }
 
-.groundThemeAtkLine {
-  background: #b76e4a;
-}
-
-.groundThemeAtkCircle {
-  background: #9a5635;
-}
-
 /**
 Ice Theme
 **/
 .iceThemeWrapper {
-  background: #75d0c1;
+  background: var(--theme-type-ice-600);
 }
 
 .iceThemeContentCardWrapper {
-  background: #5da89c;
+  background: var(--theme-type-ice-800);
 }
 
 .iceThemeContentCardText {
   color: white;
 }
 
-.iceThemeAtkLine {
-  background: #76baaf;
-}
-
-.iceThemeAtkCircle {
-  background: #519288;
-}
-
 /**
 Normal Theme
 **/
 .normalThemeWrapper {
-  background: #a0a29f;
+  background: var(--theme-type-normal-600);
 }
 
 .normalThemeContentCardWrapper {
-  background: #949494;
+  background: var(--theme-type-normal-800);
 }
 
 .normalThemeContentCardText {
   color: white;
 }
 
-.normalThemeAtkLine {
-  background: #757774;
-}
-
-.normalThemeAtkCircle {
-  background: #6a6c69;
-}
-
 /**
 Poison Theme
 **/
 .poisonThemeWrapper {
-  background: #b763cf;
+  background: var(--theme-type-poison-600);
 }
 
 .poisonThemeContentCardWrapper {
-  background: #9751aa;
+  background: var(--theme-type-poison-800);
 }
 
 .poisonThemeContentCardText {
   color: white;
 }
 
-.poisonThemeAtkLine {
-  background: #a061b2;
-}
-
-.poisonThemeAtkCircle {
-  background: #763f86;
-}
-
 /**
 Psychic Theme
 **/
 .psychicThemeWrapper {
-  background: #fa8581;
+  background: var(--theme-type-psychic-600);
 }
 
 .psychicThemeContentCardWrapper {
-  background: #c76a67;
+  background: var(--theme-type-psychic-800);
 }
 
 .psychicThemeContentCardText {
   color: white;
 }
 
-.psychicThemeAtkLine {
-  background: #c67a77;
-}
-
-.psychicThemeAtkCircle {
-  background: #864543;
-}
-
 /**
 Rock Theme
 **/
 .rockThemeWrapper {
-  background: #c9bb8a;
+  background: var(--theme-type-rock-600);
 }
 
 .rockThemeContentCardWrapper {
-  background: #9d926b;
+  background: var(--theme-type-rock-800);
 }
 
 .rockThemeContentCardText {
   color: white;
 }
 
-.rockThemeAtkLine {
-  background: #aba281;
-}
-
-.rockThemeAtkCircle {
-  background: #726a4c;
-}
-
 /**
 Steel Theme
 **/
 .steelThemeWrapper {
-  background: #5695a3;
+  background: var(--theme-type-steel-600);
 }
 
 .steelThemeContentCardWrapper {
-  background: #345b64;
+  background: var(--theme-type-steel-800);
 }
 
 .steelThemeContentCardText {
   color: white;
 }
 
-.steelThemeAtkLine {
-  background: #6fa7b3;
-}
-
-.steelThemeAtkCircle {
-  background: #325860;
-}
-
 /**
 Water Theme
 **/
 .waterThemeWrapper {
-  background: #539ddf;
+  background: var(--theme-type-water-600);
 }
 
 .waterThemeContentCardWrapper {
-  background: #4381b7;
+  background: var(--theme-type-water-800);
 }
 
 .waterThemeContentCardText {
   color: white;
-}
-
-.waterThemeAtkLine {
-  background: #5d96c7;
-}
-
-.waterThemeAtkCircle {
-  background: #305c83;
 }

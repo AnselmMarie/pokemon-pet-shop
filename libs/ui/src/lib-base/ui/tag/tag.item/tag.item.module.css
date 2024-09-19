@@ -4,74 +4,73 @@
 }
 
 .bugThemeBg {
-  background-color: green;
+  background: var(--theme-type-bug-400);
 }
 
 .darkThemeBg {
-  background-color: green;
+  background: var(--theme-type-dark-400);
 }
 
 .dragonThemeBg {
-  background-color: green;
+  background: var(--theme-type-dragon-400);
 }
 
 .electricThemeBg {
-  background-color: green;
+  background: var(--theme-type-electric-400);
 }
 
 .fairyThemeBg {
-  background-color: green;
+  background: var(--theme-type-fairy-400);
 }
 
 .fightingThemeBg {
-  background-color: green;
+  background: var(--theme-type-fighting-400);
 }
 
 .fireThemeBg {
-  background-color: green;
+  background: var(--theme-type-fire-400);
 }
 
 .flyingThemeBg {
-  background-color: green;
+  background: var(--theme-type-flying-400);
 }
 
 .ghostThemeBg {
-  background-color: green;
+  background: var(--theme-type-ghost-400);
 }
 
 .grassThemeBg {
-  background-color: green;
-  color: var(--theme-netural-100);
+  background: var(--theme-type-grass-400);
 }
 
 .groundThemeBg {
-  background-color: green;
+  background: var(--theme-type-ground-400);
 }
 
 .iceThemeBg {
-  background-color: green;
+  background: var(--theme-type-ice-400);
 }
 
 .normalThemeBg {
-  background-color: green;
+  background: var(--theme-type-normal-400);
 }
 
 .poisonThemeBg {
-  background-color: green;
+  background: var(--theme-type-poison-400);
 }
 
 .psychicThemeBg {
-  background-color: green;
+  background: var(--theme-type-psychic-400);
 }
 
 .rockThemeBg {
-  background-color: green;
+  background: var(--theme-type-rock-400);
 }
 
 .steelThemeBg {
-  background-color: green;
+  background: var(--theme-type-steel-400);
 }
 
 .waterThemeBg {
-  background-color: green;
+  background: var(--theme-type-water-400);
 }

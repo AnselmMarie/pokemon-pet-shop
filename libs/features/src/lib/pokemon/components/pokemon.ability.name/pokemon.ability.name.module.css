@@ -28,7 +28,7 @@
 
 .atkWrapperDetailModal {
   color: var(--theme-netural-900);
-  margin-bottom: var(--theme-spacing-15);
+  margin-bottom: var(--theme-spacing-20);
   height: auto;
 }
 
@@ -63,196 +63,196 @@
 Grass Theme
 **/
 .grassThemeAtkLine {
-  background: greenyellow;
+  background: var(--theme-type-grass-400);
 }
 
 .grassThemeAtkCircle {
-  background: lightgreen;
+  background: var(--theme-type-grass-900);
 }
 
 /**
 Bug Theme
 **/
 .bugThemeAtkLine {
-  background: #91b53d;
+  background: var(--theme-type-bug-400);
 }
 
 .bugThemeAtkCircle {
-  background: #7aa515;
+  background: var(--theme-type-bug-900);
 }
 
 /**
 Dark Theme
 **/
 .darkThemeAtkLine {
-  background: #57565a;
+  background: var(--theme-type-dark-400);
 }
 
 .darkThemeAtkCircle {
-  background: #313034;
+  background: var(--theme-type-dark-900);
 }
 
 /**
 Dragon Theme
 **/
 .dragonThemeAtkLine {
-  background: #1663af;
+  background: var(--theme-type-dragon-400);
 }
 
 .dragonThemeAtkCircle {
-  background: #095199;
+  background: var(--theme-type-dragon-900);
 }
 
 /**
 Electric Theme
 **/
 .electricThemeAtkLine {
-  background: #cab74c;
+  background: var(--theme-type-electric-400);
 }
 
 .electricThemeAtkCircle {
-  background: #a69533;
+  background: var(--theme-type-electric-900);
 }
 
 /**
 Fairy Theme
 **/
 .fairyThemeAtkLine {
-  background: #784d74;
+  background: var(--theme-type-fairy-400);
 }
 
 .fairyThemeAtkCircle {
-  background: #ee90e6;
+  background: var(--theme-type-fairy-900);
 }
 
 /**
 Fighting Theme
 **/
 .fightingThemeAtkLine {
-  background: #cd5069;
+  background: var(--theme-type-fighting-400);
 }
 
 .fightingThemeAtkCircle {
-  background: #94273c;
+  background: var(--theme-type-fighting-900);
 }
 
 /**
 Fire Theme
 **/
 .fireThemeAtkLine {
-  background: #cc8e4c;
+  background: var(--theme-type-fire-400);
 }
 
 .fireThemeAtkCircle {
-  background: #9f682d;
+  background: var(--theme-type-fire-900);
 }
 
 /**
 Flying Theme
 **/
 .flyingThemeAtkLine {
-  background: #9eb0d2;
+  background: var(--theme-type-flying-400);
 }
 
 .flyingThemeAtkCircle {
-  background: #7186ab;
+  background: var(--theme-type-flying-900);
 }
 
 /**
 Ghost Theme
 **/
 .ghostThemeAtkLine {
-  background: #6671b4;
+  background: var(--theme-type-ghost-400);
 }
 
 .ghostThemeAtkCircle {
-  background: #434d85;
+  background: var(--theme-type-ghost-900);
 }
 
 /**
 Ground Theme
 **/
 .groundThemeAtkLine {
-  background: #b76e4a;
+  background: var(--theme-type-ground-400);
 }
 
 .groundThemeAtkCircle {
-  background: #9a5635;
+  background: var(--theme-type-ground-900);
 }
 
 /**
 Ice Theme
 **/
 .iceThemeAtkLine {
-  background: #76baaf;
+  background: var(--theme-type-ice-400);
 }
 
 .iceThemeAtkCircle {
-  background: #519288;
+  background: var(--theme-type-ice-900);
 }
 
 /**
 Normal Theme
 **/
 .normalThemeAtkLine {
-  background: #757774;
+  background: var(--theme-type-normal-400);
 }
 
 .normalThemeAtkCircle {
-  background: #6a6c69;
+  background: var(--theme-type-normal-900);
 }
 
 /**
 Poison Theme
 **/
 .poisonThemeAtkLine {
-  background: #a061b2;
+  background: var(--theme-type-poison-400);
 }
 
 .poisonThemeAtkCircle {
-  background: #763f86;
+  background: var(--theme-type-poison-900);
 }
 
 /**
 Psychic Theme
 **/
 .psychicThemeAtkLine {
-  background: #c67a77;
+  background: var(--theme-type-psychic-400);
 }
 
 .psychicThemeAtkCircle {
-  background: #864543;
+  background: var(--theme-type-psychic-900);
 }
 
 /**
 Rock Theme
 **/
 .rockThemeAtkLine {
-  background: #aba281;
+  background: var(--theme-type-rock-400);
 }
 
 .rockThemeAtkCircle {
-  background: #726a4c;
+  background: var(--theme-type-rock-900);
 }
 
 /**
 Steel Theme
 **/
 .steelThemeAtkLine {
-  background: #6fa7b3;
+  background: var(--theme-type-steel-400);
 }
 
 .steelThemeAtkCircle {
-  background: #325860;
+  background: var(--theme-type-steel-900);
 }
 
 /**
 Water Theme
 **/
 .waterThemeAtkLine {
-  background: #5d96c7;
+  background: var(--theme-type-water-400);
 }
 
 .waterThemeAtkCircle {
-  background: #305c83;
+  background: var(--theme-type-water-900);
 }

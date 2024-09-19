@@ -15,19 +15,15 @@
 }
 
 .imageContainer {
-  height: 450px;
   z-index: 0;
   border-top-left-radius: var(--theme-radius-8);
   border-top-right-radius: var(--theme-radius-8);
+  position: relative;
 }
 
 .image {
-  height: 450px;
+  height: 100%;
   margin: 0 auto;
-}
-
-.contentCurve {
-  margin-top: -60px;
 }
 
 .dropdownHeadline {
@@ -45,7 +41,7 @@
 }
 
 .contentCardWrapper {
-  margin-top: -25px;
+  margin-top: -45px;
   margin-left: var(--theme-spacing-30);
   margin-right: var(--theme-spacing-30);
 }
@@ -53,27 +49,31 @@
 .cardSubHeadline,
 .cardHeadline {
   text-align: center;
-  margin-bottom: var(--theme-spacing-15);
+  margin-bottom: var(--theme-spacing-20);
 }
 
 .cardSubHeadline {
-  margin-bottom: var(--theme-spacing-5);
+  margin-bottom: var(--theme-spacing-10);
 }
 
 .cardDescription {
   font-size: var(--theme-font-16);
-  margin-bottom: var(--theme-spacing-30);
+  margin-bottom: var(--theme-spacing-25);
 }
 
 .weightHeightWrapper {
   display: flex;
-  gap: var(--theme-spacing-35);
-  margin-bottom: var(--theme-spacing-30);
+  flex-direction: column;
+  margin-bottom: var(--theme-spacing-25);
 }
 
 .weight,
 .height {
-  font-size: var(--theme-font-16);
+  font-size: var(--theme-font-18);
+}
+
+.weight {
+  margin-bottom: var(--theme-spacing-10);
 }
 
 .tagWrapper {
@@ -81,78 +81,90 @@
 }
 
 .btnWrapper {
-  margin-top: var(--theme-spacing-30);
+  margin-top: var(--theme-spacing-35);
   text-align: center;
 }
 
 .bugThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-bug-600);
 }
 
 .darkThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-dark-600);
 }
 
 .dragonThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-dragon-600);
 }
 
 .electricThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-electric-600);
 }
 
 .fairyThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-fairy-600);
 }
 
 .fightingThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-fighting-600);
 }
 
 .fireThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-fire-600);
 }
 
 .flyingThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-flying-600);
 }
 
 .ghostThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-ghost-600);
 }
 
 .grassThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-grass-600);
 }
 
 .groundThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-ground-600);
 }
 
 .iceThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-ice-600);
 }
 
 .normalThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-normal-600);
 }
 
 .poisonThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-poison-600);
 }
 
 .psychicThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-psychic-600);
 }
 
 .rockThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-rock-600);
 }
 
 .steelThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-steel-600);
 }
 
 .waterThemeImageBg {
-  background-color: green;
+  background: var(--theme-type-water-600);
+}
+
+@media only screen and (min-width: 630px) {
+  .weightHeightWrapper {
+    display: flex;
+    gap: var(--theme-spacing-35);
+    flex-direction: row;
+  }
+
+  .weight {
+    margin-bottom: 0;
+  }
 }
