@@ -39,17 +39,22 @@ const Header = () => {
           <UiTypography typographyType={TypographyTypeEnum.SPAN} className={newStyles.navTitle}>
             PETS
           </UiTypography>
-          <UiInput iconClassname={styles.icon} appendIcon={IconTypeEnum.ICON_SEARCH} />
+          <UiInput iconClassname={newStyles.icon} appendIcon={IconTypeEnum.ICON_SEARCH} />
         </UiElementLayout>
 
         <UiHideInMobile>
           <UiSwitchTheme className={newStyles.switchTheme} />
         </UiHideInMobile>
 
-        <UiElementLayout className={styles.cartWrapper}>
+        <UiElementLayout className={newStyles.cartWrapper}>
           {data?.counter ? (
-            <UiElementLayout className={styles.counterWrapper} onClick={onHandleCartModalClick}>
-              <UiTypography typographyType={TypographyTypeEnum.SPAN}>{data?.counter}</UiTypography>
+            <UiElementLayout className={newStyles.counterWrapper} onClick={onHandleCartModalClick}>
+              <UiTypography
+                typographyType={TypographyTypeEnum.SPAN}
+                className={newStyles.counterText}
+              >
+                {data?.counter}
+              </UiTypography>
             </UiElementLayout>
           ) : null}
           <UiIcon

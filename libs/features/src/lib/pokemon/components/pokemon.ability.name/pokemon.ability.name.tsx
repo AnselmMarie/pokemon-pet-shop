@@ -8,7 +8,7 @@ import {
   TypographyTypeEnum,
   UiHideInMobile,
 } from '@pokemon-pet-shop/ui';
-import { classNamesUtil } from '@pokemon-pet-shop/utils';
+import { capitalizeNameUtil, classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { PokemonAbilityNameProps } from './pokemon.ability.name.interface';
 import { styles } from './pokemon.ability.name.module';
@@ -34,9 +34,7 @@ const PokemonAbilityName = ({
     const splitName = abilityData?.ability?.name.split('-');
 
     const capitalizeName = splitName.map((el) => {
-      return el?.replace(/^\w/, (el) => {
-        return el.toUpperCase();
-      });
+      return capitalizeNameUtil(el);
     });
 
     return capitalizeName.join(' ');

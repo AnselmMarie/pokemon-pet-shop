@@ -13,6 +13,9 @@ const PokemonList = (): ReactElement => {
   const { data, isError, isLoading, isFetching, isFetchingNextPage, hasNextPage, onFetchNextPage } =
     usePokemonList();
 
+  console.log('isLoading', isLoading);
+  console.log('isFetching', isFetching);
+
   return (
     <>
       <UiElementLayout className={styles.cardListWrapper}>

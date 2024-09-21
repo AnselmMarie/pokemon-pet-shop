@@ -11,7 +11,8 @@ import {
   mobSrcTypeEnum,
   TypographyTypeEnum,
 } from '@pokemon-pet-shop/ui';
-import { pricingFormatUSD } from '@pokemon-pet-shop/utils';
+import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
+import { capitalizeNameUtil, classNamesUtil, pricingFormatUSD } from '@pokemon-pet-shop/utils';
 
 import CartModalScroll from './cart.modal.content.scroll';
 import { styles } from './cart.modal.module';
@@ -37,14 +38,14 @@ const CartModal = (): ReactElement => {
                 />
                 <UiElementLayout className={newStyles?.middleRow}>
                   <UiTypography
-                    className={newStyles.cardHeadline}
+                    className={newStyles.itemName}
                     typographyType={TypographyTypeEnum.H1}
                   >
-                    {el?.name}
+                    {capitalizeNameUtil(el?.name)}
                   </UiTypography>
                   <UiTypography
                     typographyType={TypographyTypeEnum.SPAN}
-                    className={newStyles.price}
+                    className={classNamesUtil(newStyles.price, globalStyles.fontBold)}
                   >
                     {pricingFormatUSD(el?.price)}
                   </UiTypography>
@@ -52,11 +53,13 @@ const CartModal = (): ReactElement => {
                   <UiElementLayout className={styles.quantityWrapper}>
                     <UiIcon
                       icon={IconTypeEnum.ICON_MINUS}
+                      classNameIcon={styles.quantityIcon}
                       onClick={() => onHandleRemoveFromCart(el?.id)}
                     />
                     <UiTypography>{el?.quantity}</UiTypography>
                     <UiIcon
                       icon={IconTypeEnum.ICON_PLUS}
+                      classNameIcon={styles.quantityIcon}
                       onClick={() => onHandleAddToCart(el?.id)}
                     />
                   </UiElementLayout>

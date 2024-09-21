@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 19 Sep 2024 01:49:53 GMT
+ * Generated on Sat, 21 Sep 2024 03:13:43 GMT
  */
 
 export const THEME_NETURAL_100 = '#ffffffff';
@@ -47,28 +47,28 @@ export const THEME_RED_400 = '#f76767ff';
 export const THEME_RED_600 = '#d63535ff';
 export const THEME_RED_800 = '#ab0e0eff';
 export const THEME_RED_900 = '#7a0a0aff';
-export const THEME_FONT_10 = '10px';
-export const THEME_FONT_13 = '13px';
-export const THEME_FONT_16 = '16px';
-export const THEME_FONT_18 = '18px';
-export const THEME_FONT_24 = '24px';
-export const THEME_RADIUS_8 = '8px';
-export const THEME_RADIUS_16 = '16px';
-export const THEME_RADIUS_PILL = '100px';
-export const THEME_RADIUS_CIRCLE = '100px';
-export const THEME_BREAKPOINTS_LG = '1280px';
-export const THEME_BREAKPOINTS_MD = '736px';
-export const THEME_BREAKPOINTS_SM = '375px';
-export const THEME_SPACING_2 = '2px';
-export const THEME_SPACING_5 = '5px';
-export const THEME_SPACING_10 = '10px';
-export const THEME_SPACING_15 = '15px';
-export const THEME_SPACING_20 = '20px';
-export const THEME_SPACING_25 = '25px';
-export const THEME_SPACING_30 = '30px';
-export const THEME_SPACING_35 = '35px';
-export const THEME_SPACING_40 = '40px';
-export const THEME_SPACING_45 = '45px';
+export const THEME_FONT_10 = 10;
+export const THEME_FONT_13 = 13;
+export const THEME_FONT_16 = 16;
+export const THEME_FONT_18 = 18;
+export const THEME_FONT_24 = 24;
+export const THEME_RADIUS_8 = 8;
+export const THEME_RADIUS_16 = 16;
+export const THEME_RADIUS_PILL = 100;
+export const THEME_RADIUS_CIRCLE = 100;
+export const THEME_BREAKPOINTS_LG = 1280;
+export const THEME_BREAKPOINTS_MD = 736;
+export const THEME_BREAKPOINTS_SM = 375;
+export const THEME_SPACING_2 = 2;
+export const THEME_SPACING_5 = 5;
+export const THEME_SPACING_10 = 10;
+export const THEME_SPACING_15 = 15;
+export const THEME_SPACING_20 = 20;
+export const THEME_SPACING_25 = 25;
+export const THEME_SPACING_30 = 30;
+export const THEME_SPACING_35 = 35;
+export const THEME_SPACING_40 = 40;
+export const THEME_SPACING_45 = 45;
 export const THEME_TYPE_GRASS_100 = '#b1e6bbff';
 export const THEME_TYPE_GRASS_200 = '#69b076ff';
 export const THEME_TYPE_GRASS_400 = '#579d63ff';

@@ -3,3 +3,9 @@ export const capitalizeContentUtil = (str: string): string => {
     return el.toUpperCase();
   });
 };
+
+export const capitalizeNameUtil = (name: string): string => {
+  return name.replace(/^\w/, (el: string) => {
+    return el.toUpperCase();
+  });
+};

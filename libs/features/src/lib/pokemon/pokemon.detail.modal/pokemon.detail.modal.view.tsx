@@ -14,7 +14,7 @@ import {
   ButtonSizeEnum,
 } from '@pokemon-pet-shop/ui';
 import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
-import { classNamesUtil } from '@pokemon-pet-shop/utils';
+import { capitalizeNameUtil, classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 import { usePokemonThemeLogic } from '../hooks/use.pokemon.theme.logic';
@@ -35,10 +35,8 @@ const PokemonDetailModal = (): ReactElement => {
   const { getThemeClass } = usePokemonThemeLogic(modalData?.types);
   const { newStyles } = useRenderStyles(styles);
 
-  const capitalizeName = useMemo(() => {
-    return modalData?.name.replace(/^\w/, (el) => {
-      return el.toUpperCase();
-    });
+  const capitalizeName = useMemo((): string => {
+    return capitalizeNameUtil(modalData?.name);
   }, [modalData?.name]);
 
   return (

@@ -11,7 +11,7 @@ import {
   UiCard,
   mobSrcTypeEnum,
 } from '@pokemon-pet-shop/ui';
-import { classNamesUtil } from '@pokemon-pet-shop/utils';
+import { capitalizeNameUtil, classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 
@@ -22,10 +22,8 @@ import usePokemonCardLogic from './use.pokemon.card.logic';
 const PokemonCard = ({ data }: CardProps): ReactElement => {
   const { getThemeClass, onHandleOpenDetailModalClick } = usePokemonCardLogic(data);
 
-  const capitalizeName = useMemo(() => {
-    return data?.name.replace(/^\w/, (el) => {
-      return el.toUpperCase();
-    });
+  const capitalizeName = useMemo((): string => {
+    return capitalizeNameUtil(data?.name);
   }, [data?.name]);
 
   return (

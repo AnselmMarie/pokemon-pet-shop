@@ -13,7 +13,7 @@
   border-radius: var(--theme-radius-8);
   padding: var(--theme-spacing-5);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -30,7 +30,8 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: var(--theme-spacing-2) var(--theme-spacing-5);
+  border-radius: var(--theme-radius-8);
+  padding: var(--theme-spacing-10) var(--theme-spacing-10);
 }
 
 .cardSubHeadlineWrapper {
@@ -41,7 +42,7 @@
 }
 
 .cardSubHeadline {
-  font-size: var(--theme-font-10);
+  font-size: var(--theme-font-13);
 }
 
 .cardHeadline {
@@ -99,7 +100,6 @@
   .contentCardWrapper {
     height: 150px;
     align-items: end;
-    border-radius: var(--theme-radius-8);
     padding: var(--theme-spacing-15);
     z-index: 1;
     display: flex;
@@ -134,7 +134,7 @@ Grass Theme
 }
 
 .grassThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -149,7 +149,7 @@ Bug Theme
 }
 
 .bugThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -179,7 +179,7 @@ Dragon Theme
 }
 
 .dragonThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -194,7 +194,7 @@ Electric Theme
 }
 
 .electricThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -209,7 +209,7 @@ Fairy Theme
 }
 
 .fairyThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -224,7 +224,7 @@ Fighting Theme
 }
 
 .fightingThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -239,7 +239,7 @@ Fire Theme
 }
 
 .fireThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -254,7 +254,7 @@ Flying Theme
 }
 
 .flyingThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -269,7 +269,7 @@ Ghost Theme
 }
 
 .ghostThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -284,7 +284,7 @@ Ground Theme
 }
 
 .groundThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -299,7 +299,7 @@ Ice Theme
 }
 
 .iceThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -314,7 +314,7 @@ Normal Theme
 }
 
 .normalThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -329,7 +329,7 @@ Poison Theme
 }
 
 .poisonThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -344,7 +344,7 @@ Psychic Theme
 }
 
 .psychicThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -359,7 +359,7 @@ Rock Theme
 }
 
 .rockThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -374,7 +374,7 @@ Steel Theme
 }
 
 .steelThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }
 
 /**
@@ -389,5 +389,5 @@ Water Theme
 }
 
 .waterThemeContentCardText {
-  color: white;
+  color: var(--theme-netural-100);
 }

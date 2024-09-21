@@ -43,7 +43,7 @@ const config: Config | Config[] = {
 
     js: {
       transformGroup: 'ts',
-      transforms: ['custom/dimension-to-pixel', 'custom/name/native'],
+      transforms: ['custom/name/native'],
       buildPath: 'build/ts/',
       files: [
         {
