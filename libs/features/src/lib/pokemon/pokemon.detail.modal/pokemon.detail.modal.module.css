@@ -52,7 +52,12 @@
   margin-bottom: var(--theme-spacing-20);
 }
 
+.cardHeadline {
+  font-size: var(--theme-font-32);
+}
+
 .cardSubHeadline {
+  font-size: var(--theme-font-16);
   margin-bottom: var(--theme-spacing-10);
 }
 

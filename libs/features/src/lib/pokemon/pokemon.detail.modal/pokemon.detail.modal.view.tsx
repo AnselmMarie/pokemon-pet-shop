@@ -14,7 +14,11 @@ import {
   ButtonSizeEnum,
 } from '@pokemon-pet-shop/ui';
 import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
-import { capitalizeNameUtil, classNamesUtil } from '@pokemon-pet-shop/utils';
+import {
+  capitalizeNameUtil,
+  classNamesUtil,
+  removeHtmlCodeInStringUtil,
+} from '@pokemon-pet-shop/utils';
 
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 import { usePokemonThemeLogic } from '../hooks/use.pokemon.theme.logic';
@@ -39,13 +43,17 @@ const PokemonDetailModal = (): ReactElement => {
     return capitalizeNameUtil(modalData?.name);
   }, [modalData?.name]);
 
+  const removeHtmlCodeInDescription = useMemo((): string => {
+    return removeHtmlCodeInStringUtil(speciesData?.flavor_text_entries?.flavor_text);
+  }, [speciesData?.flavor_text_entries?.flavor_text]);
+
   return (
     <UiElementLayout className={newStyles.modal}>
       <UiElementLayout
-        className={classNamesUtil(newStyles.imageContainer, styles?.[`${getThemeClass}ImageBg`])}
+        className={classNamesUtil(newStyles.imageContainer, newStyles?.[`${getThemeClass}ImageBg`])}
       >
-        <UiElementLayout className={styles.priceWrapper}>
-          <UiTypography className={styles.priceText}>{onGetPricingFormat}</UiTypography>
+        <UiElementLayout className={newStyles.priceWrapper}>
+          <UiTypography className={newStyles.priceText}>{onGetPricingFormat}</UiTypography>
         </UiElementLayout>
         <UiImage
           src={modalData?.sprites?.other?.['official-artwork']?.front_default}
@@ -57,25 +65,22 @@ const PokemonDetailModal = (): ReactElement => {
       </UiElementLayout>
 
       <UiElementLayout className={newStyles.contentContainer}>
-        <UiElementLayout className={classNamesUtil(newStyles.contentCardWrapper)}>
+        <UiElementLayout className={newStyles.contentCardWrapper}>
           <UiElementLayout className={newStyles.cardContentTopWrapper}>
             <UiElementLayout className={newStyles.cardSubHeadlineWrapper}>
               <UiTypography
-                className={classNamesUtil(newStyles.cardSubHeadline)}
+                className={newStyles.cardSubHeadline}
                 typographyType={TypographyTypeEnum.P}
               >
                 NO. {modalData?.order}
               </UiTypography>
             </UiElementLayout>
-            <UiTypography
-              className={classNamesUtil(newStyles.cardHeadline)}
-              typographyType={TypographyTypeEnum.H1}
-            >
+            <UiTypography className={newStyles.cardHeadline} typographyType={TypographyTypeEnum.H1}>
               {capitalizeName}
             </UiTypography>
 
             {modalData?.types ? (
-              <UiTagWrapper className={styles.tagWrapper}>
+              <UiTagWrapper className={newStyles.tagWrapper}>
                 {(modalData?.types || []).map(
                   (typeObj: PokemonDetailTypesObj, i: number): ReactElement | null => {
                     return (
@@ -90,10 +95,10 @@ const PokemonDetailModal = (): ReactElement => {
               className={newStyles.cardDescription}
               typographyType={TypographyTypeEnum.P}
             >
-              {speciesData?.flavor_text_entries?.flavor_text}
+              {removeHtmlCodeInDescription}
             </UiTypography>
 
-            <UiElementLayout className={styles.weightHeightWrapper}>
+            <UiElementLayout className={newStyles.weightHeightWrapper}>
               <UiTypography className={newStyles.weight} typographyType={TypographyTypeEnum.P}>
                 <UiTypography
                   typographyType={TypographyTypeEnum.SPAN}

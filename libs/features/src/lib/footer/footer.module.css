@@ -1,0 +1,12 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.footerDivider {
+  padding: 0 var(--theme-spacing-10);
+}
+
+.githubIcon {
+  margin-right: var(--theme-spacing-5);
+}

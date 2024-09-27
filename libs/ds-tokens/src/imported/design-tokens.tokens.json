@@ -789,6 +789,21 @@
             "exportKey": "variables"
           }
         }
+      },
+      "32": {
+        "type": "dimension",
+        "value": 32,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Theme",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:543:3632",
+            "exportKey": "variables"
+          }
+        }
       }
     },
     "radius": {

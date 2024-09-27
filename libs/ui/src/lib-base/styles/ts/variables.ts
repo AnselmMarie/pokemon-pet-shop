@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 21 Sep 2024 03:13:43 GMT
+ * Generated on Mon, 23 Sep 2024 18:42:48 GMT
  */
 
 export const THEME_NETURAL_100 = '#ffffffff';
@@ -52,6 +52,7 @@ export const THEME_FONT_13 = 13;
 export const THEME_FONT_16 = 16;
 export const THEME_FONT_18 = 18;
 export const THEME_FONT_24 = 24;
+export const THEME_FONT_32 = 32;
 export const THEME_RADIUS_8 = 8;
 export const THEME_RADIUS_16 = 16;
 export const THEME_RADIUS_PILL = 100;

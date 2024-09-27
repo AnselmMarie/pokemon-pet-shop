@@ -1,9 +1,8 @@
-import { useRef } from 'react';
-
 import { UiHeader } from '@pokemon-pet-shop/features';
 import { UiModal } from '@pokemon-pet-shop/ui';
+import { UiScrollWrapper } from '@pokemon-pet-shop/ui/native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 import 'react-native-svg';
 import Homepage from '../homepage/homepage';
@@ -13,8 +12,6 @@ const queryClient = new QueryClient({
 });
 
 export const App = () => {
-  const scrollViewRef = useRef<null | ScrollView>(null);
-
   return (
     <QueryClientProvider client={queryClient}>
       <StatusBar barStyle="dark-content" />
@@ -25,14 +22,9 @@ export const App = () => {
         }}
       >
         <UiHeader />
-        <ScrollView
-          ref={(ref) => {
-            scrollViewRef.current = ref;
-          }}
-          contentInsetAdjustmentBehavior="automatic"
-        >
+        <UiScrollWrapper>
           <Homepage />
-        </ScrollView>
+        </UiScrollWrapper>
       </SafeAreaView>
     </QueryClientProvider>
   );

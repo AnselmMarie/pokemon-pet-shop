@@ -1,7 +1,8 @@
-import { Fragment, memo, ReactElement } from 'react';
+import { Fragment, memo, ReactElement, useMemo } from 'react';
 
 import { PokemonListApi } from '@pokemon-pet-shop/typing';
-import { UiButton, UiElementLayout } from '@pokemon-pet-shop/ui';
+import { UiButton, UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
+import { skeletonLoadDataUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonCard } from '../pokemon.card';
 
@@ -10,11 +11,30 @@ import usePokemonList from './use.pokemon.list.logic';
 
 /** Use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction  */
 const PokemonList = (): ReactElement => {
-  const { data, isError, isLoading, isFetching, isFetchingNextPage, hasNextPage, onFetchNextPage } =
-    usePokemonList();
+  const {
+    data = [],
+    isError,
+    isLoading,
+    isFetchingNextPage,
+    hasNextPage,
+    onFetchNextPage,
+  } = usePokemonList();
 
-  console.log('isLoading', isLoading);
-  console.log('isFetching', isFetching);
+  console.log('data', data);
+
+  // const newData = useMemo(() => {
+  //   const template = { abilities: [{}, {}] };
+  //   return skeletonLoadDataUtil(data, isLoading, template, true);
+  // }, [data, isLoading]);
+
+  if (data?.length === 0 && !hasNextPage) {
+    return (
+      <UiElementLayout className={styles.failureWrapper}>
+        <UiTypography>No Pets are available at the moment. Please check back again.</UiTypography>
+        {/** Note add a photo of a sad Pokemon or a image showing something sad */}
+      </UiElementLayout>
+    );
+  }
 
   return (
     <>
@@ -22,28 +42,30 @@ const PokemonList = (): ReactElement => {
         {(data || []).map((arr: PokemonListApi[], i: number): ReactElement => {
           return (
             <Fragment key={i}>
-              {arr.map((el: PokemonListApi) => (
-                <UiPokemonCard key={el?.name} data={el} />
+              {arr.map((el: PokemonListApi, i: number) => (
+                <UiPokemonCard key={el?.name || i} data={el} />
               ))}
             </Fragment>
           );
         })}
       </UiElementLayout>
-      <UiElementLayout className={styles.btnWrapper}>
-        <UiButton
-          isDisabled={!hasNextPage || isFetchingNextPage}
-          text={
-            isFetchingNextPage
-              ? 'Loading More...'
-              : hasNextPage
-                ? 'Load More'
-                : 'Nothing more to load'
-          }
-          onClick={() => {
-            onFetchNextPage((old: number) => old + 1);
-          }}
-        />
-      </UiElementLayout>
+      {hasNextPage ? (
+        <UiElementLayout className={styles.btnWrapper}>
+          <UiButton
+            isDisabled={!hasNextPage || isFetchingNextPage}
+            text={
+              isFetchingNextPage
+                ? 'Loading More...'
+                : hasNextPage
+                  ? 'Load More'
+                  : 'Nothing more to load'
+            }
+            onClick={() => {
+              onFetchNextPage((old: number) => old + 1);
+            }}
+          />
+        </UiElementLayout>
+      ) : null}
     </>
   );
 };

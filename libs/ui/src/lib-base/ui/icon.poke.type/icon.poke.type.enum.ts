@@ -17,4 +17,5 @@ export enum IconPokeTypeEnum {
   ROCK = 'rock',
   STEEL = 'steel',
   WATER = 'water',
+  GITHUB = 'github',
 }

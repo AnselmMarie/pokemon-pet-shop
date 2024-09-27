@@ -1,0 +1,11 @@
+.marginBottom {
+  margin-bottom: var(--theme-spacing-15);
+}
+
+.pill {
+  border-radius: var(--theme-radius-pill);
+}
+
+.circle {
+  border-radius: var(--theme-radius-circle);
+}

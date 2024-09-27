@@ -1,4 +1,5 @@
 import { IconCaretDown } from './icons/icon.caret.down';
+import { IconGithub } from './icons/icon.github';
 import { IconMenu } from './icons/icon.menu';
 import { IconMinus } from './icons/icon.minus';
 import { IconMoon } from './icons/icon.moon';
@@ -10,6 +11,7 @@ import { IconTrash } from './icons/icon.trash';
 import { IconX } from './icons/icon.x';
 
 export const IconMap = {
+  IconGithub,
   IconCaretDown,
   IconX,
   IconSun,

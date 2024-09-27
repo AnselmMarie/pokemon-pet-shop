@@ -1,5 +1,5 @@
 .tag {
-  border-radius: var(--theme-radius-circle);
+  border-radius: var(--theme-radius-pill);
   padding: var(--theme-spacing-10) var(--theme-spacing-15);
 }
 

@@ -6,9 +6,8 @@ interface PokemonListReturn {
   data: InfiniteData<PokemonListApi, unknown> | undefined;
   isError: boolean;
   isLoading: boolean;
-  isFetching: boolean;
+  isFetchingNextPage: boolean;
   isPlaceholderData?: boolean;
-  isFetchingNextPage?: boolean;
   hasNextPage?: boolean;
   onFetchNextPage: any;
 }
@@ -28,10 +27,9 @@ const usePokemonList = (): PokemonListReturn => {
   return {
     data: data?.pages,
     isError,
-    isLoading,
-    isFetching,
-    isPlaceholderData,
+    isLoading: isLoading || isFetching || isFetchingNextPage,
     isFetchingNextPage,
+    isPlaceholderData,
     hasNextPage,
     onFetchNextPage: fetchNextPage,
   };

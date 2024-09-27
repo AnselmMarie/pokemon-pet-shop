@@ -2,6 +2,7 @@ import { memo, useMemo, type PropsWithChildren, type ReactElement } from 'react'
 
 import { capitalizeNameUtil, classNamesUtil } from '@pokemon-pet-shop/utils';
 
+import { UiElementLayout } from '../../element.layout';
 import { UiTypography, TypographyTypeEnum } from '../../typography';
 
 import { TagItemColorEnum } from './tag.item.enum';
@@ -17,12 +18,9 @@ const Tag = ({
   }, [name]);
 
   return (
-    <UiTypography
-      className={classNamesUtil(styles.tag, styles?.[`${colorTheme}Bg`])}
-      typographyType={TypographyTypeEnum.SPAN}
-    >
-      {capitalizeName}
-    </UiTypography>
+    <UiElementLayout className={classNamesUtil(styles.tag, styles?.[`${colorTheme}Bg`])}>
+      <UiTypography typographyType={TypographyTypeEnum.SPAN}>{capitalizeName}</UiTypography>
+    </UiElementLayout>
   );
 };
 

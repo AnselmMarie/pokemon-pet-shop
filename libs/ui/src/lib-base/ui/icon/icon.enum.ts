@@ -11,6 +11,7 @@ export enum IconTypeEnum {
   ICON_TRASH = 'IconTrash',
   ICON_MINUS = 'IconMinus',
   ICON_PLUS = 'IconPlus',
+  ICON_GITHUB = 'IconGithub',
 }
 
 export enum IconColorEnum {

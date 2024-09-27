@@ -1,24 +1,3 @@
-// import {
-//   bugIcon,
-//   darkIcon,
-//   dragonIcon,
-//   electricIcon,
-//   fairyIcon,
-//   fightingIcon,
-//   fireIcon,
-//   flyingIcon,
-//   ghostIcon,
-//   grassIcon,
-//   groundIcon,
-//   iceIcon,
-//   normalIcon,
-//   poisonIcon,
-//   psychicIcon,
-//   rockIcon,
-//   steelIcon,
-//   waterIcon,
-// } from '@pokemon-pet-shop/assets';
-
 import bugIcon from './assets/bug.svg';
 import darkIcon from './assets/dark.svg';
 import dragonIcon from './assets/dragon.svg';

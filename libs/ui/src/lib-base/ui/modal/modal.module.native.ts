@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
 
+import { THEME_NETURAL_100, THEME_SPACING_15 } from '../../styles/ts/variables';
+
 export const styles = () =>
   StyleSheet.create({
     modal: {
       width: '100%',
       height: '100%',
-      backgroundColor: 'white',
+      backgroundColor: THEME_NETURAL_100,
       position: 'relative',
     },
     center: {
@@ -24,9 +26,9 @@ export const styles = () =>
       width: '100%',
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingRight: 15,
-      paddingLeft: 15,
-      paddingBottom: 15,
+      paddingRight: THEME_SPACING_15,
+      paddingLeft: THEME_SPACING_15,
+      paddingBottom: THEME_SPACING_15,
     },
     absoluteDropdownHeadline: {
       flex: 1,
@@ -34,7 +36,7 @@ export const styles = () =>
       justifyContent: 'space-between',
       alignItems: 'center',
       position: 'absolute',
-      padding: 15,
+      padding: THEME_SPACING_15,
       top: 0,
       left: 0,
       width: '100%',

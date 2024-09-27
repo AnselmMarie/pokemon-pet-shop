@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 19 Sep 2024 01:49:53 GMT
+ * Generated on Mon, 23 Sep 2024 18:42:48 GMT
  */
 
 :root {
@@ -53,6 +53,7 @@
   --theme-font-16: 16px;
   --theme-font-18: 18px;
   --theme-font-24: 24px;
+  --theme-font-32: 32px;
   --theme-radius-8: 8px;
   --theme-radius-16: 16px;
   --theme-radius-pill: 100px;
