@@ -129,6 +129,7 @@ const updateCartItemService = async (payload: CartApiPayload) => {
     image: speciesData?.sprites?.other?.['official-artwork']?.front_default,
     isLegendary: speciesData?.is_legendary,
     isMythical: speciesData?.is_mythical,
+    types: speciesData?.types,
   };
   currentCartData.counter = counter + 1;
   currentCartData.total = total + pokemonPrice;

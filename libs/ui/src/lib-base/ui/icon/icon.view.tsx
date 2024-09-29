@@ -4,7 +4,7 @@ import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { UiElementLayout } from '../element.layout';
 
-import { IconTypeEnum } from './icon.enum';
+import { IconColorEnum, IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
 import styles from './icon.module.css';
 import { IconMap } from './icon.util';
@@ -12,7 +12,7 @@ import { IconMap } from './icon.util';
 const Icon = ({
   icon = IconTypeEnum.ICON_SHOPPING_CART,
   size = 36,
-  color = 'none',
+  color = IconColorEnum.BLUE,
   classNameIcon = null,
   classNameWrapper = null,
   displayWrapper = false,
@@ -39,6 +39,7 @@ const Icon = ({
     return (
       <IconComponent
         size={size}
+        color={color}
         className={classNamesUtil(classNameIcon, onClick ? styles.icon : '')}
         onClick={iconClick}
       />

@@ -1,29 +1,18 @@
-import {
-  IconTypeEnum,
-  UiElementLayout,
-  UiIcon,
-  UiIconPokeType,
-  UiTypography,
-  IconPokeTypeEnum,
-} from '@pokemon-pet-shop/ui';
+import { IconTypeEnum, UiElementLayout, UiIcon, UiTypography } from '@pokemon-pet-shop/ui';
 
 import { styles } from './footer.module';
 
 const Footer = () => {
   const goToGithubProject = () => {
-    window.location.href = 'http://www.apple.com';
+    window.open('https://github.com/AnselmMarie/pokemon-pet-shop', '_blank');
   };
 
   return (
     <UiElementLayout className={styles.footerWrapper}>
-      <UiIcon
-        icon={IconTypeEnum.ICON_GITHUB}
-        size={20}
-        classNameIcon={styles.githubIcon}
-        onClick={goToGithubProject}
-      />
-      <UiIconPokeType type={IconPokeTypeEnum.GITHUB} size="30px" />
-      <UiTypography>Github Project</UiTypography>
+      <UiElementLayout className={styles.githubWrapper} onClick={goToGithubProject}>
+        <UiIcon icon={IconTypeEnum.ICON_GITHUB} size={20} classNameIcon={styles.githubIcon} />
+        <UiTypography>Github Project</UiTypography>
+      </UiElementLayout>
       <UiTypography className={styles.footerDivider}>|</UiTypography> <UiIcon />
       <UiTypography>Scan QR code for mobile app</UiTypography>
     </UiElementLayout>

@@ -20,6 +20,185 @@
   gap: var(--theme-spacing-15);
 }
 
+.imageWrapper {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: var(--theme-radius-8);
+  padding: var(--theme-spacing-5);
+}
+
+.bugThemeImageWrapper {
+  border-color: var(--theme-type-bug-800);
+  background: var(--theme-type-bug-800);
+  background: linear-gradient(45deg, var(--theme-type-bug-800) 0%, var(--theme-type-bug-400) 100%);
+}
+
+.darkThemeImageWrapper {
+  border-color: var(--theme-type-dark-800);
+  background: var(--theme-type-dark-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-dark-800) 0%,
+    var(--theme-type-dark-400) 100%
+  );
+}
+
+.dragonThemeImageWrapper {
+  border-color: var(--theme-type-dragon-800);
+  background: var(--theme-type-dragon-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-dragon-800) 0%,
+    var(--theme-type-dragon-400) 100%
+  );
+}
+
+.electricThemeImageWrapper {
+  border-color: var(--theme-type-electric-800);
+  background: var(--theme-type-electric-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-electric-800) 0%,
+    var(--theme-type-electric-400) 100%
+  );
+}
+
+.fairyThemeImageWrapper {
+  border-color: var(--theme-type-fairy-800);
+  background: var(--theme-type-fairy-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-fairy-800) 0%,
+    var(--theme-type-fairy-400) 100%
+  );
+}
+
+.fightingThemeImageWrapper {
+  border-color: var(--theme-type-fighting-800);
+  background: var(--theme-type-fighting-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-fighting-800) 0%,
+    var(--theme-type-fighting-400) 100%
+  );
+}
+
+.fireThemeImageWrapper {
+  border-color: var(--theme-type-fire-800);
+  background: var(--theme-type-fire-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-fire-800) 0%,
+    var(--theme-type-fire-400) 100%
+  );
+}
+
+.flyingThemeImageWrapper {
+  border-color: var(--theme-type-flying-800);
+  background: var(--theme-type-flying-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-flying-800) 0%,
+    var(--theme-type-flying-400) 100%
+  );
+}
+
+.ghostThemeImageWrapper {
+  border-color: var(--theme-type-ghost-800);
+  background: var(--theme-type-ghost-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-ghost-800) 0%,
+    var(--theme-type-ghost-400) 100%
+  );
+}
+
+.grassThemeImageWrapper {
+  border-color: var(--theme-type-grass-800);
+  background: var(--theme-type-grass-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-grass-800) 0%,
+    var(--theme-type-grass-400) 100%
+  );
+}
+
+.groundThemeImageWrapper {
+  border-color: var(--theme-type-ground-800);
+  background: var(--theme-type-ground-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-ground-800) 0%,
+    var(--theme-type-ground-400) 100%
+  );
+}
+
+.iceThemeImageWrapper {
+  border-color: var(--theme-type-ice-800);
+  background: var(--theme-type-ice-800);
+  background: linear-gradient(45deg, var(--theme-type-ice-800) 0%, var(--theme-type-ice-400) 100%);
+}
+
+.normalThemeImageWrapper {
+  border-color: var(--theme-type-normal-800);
+  background: var(--theme-type-normal-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-normal-800) 0%,
+    var(--theme-type-normal-400) 100%
+  );
+}
+
+.poisonThemeImageWrapper {
+  border-color: var(--theme-type-poison-800);
+  background: var(--theme-type-poison-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-poison-800) 0%,
+    var(--theme-type-poison-400) 100%
+  );
+}
+
+.psychicThemeImageWrapper {
+  border-color: var(--theme-type-psychic-800);
+  background: var(--theme-type-psychic-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-psychic-800) 0%,
+    var(--theme-type-psychic-400) 100%
+  );
+}
+
+.rockThemeImageWrapper {
+  border-color: var(--theme-type-rock-800);
+  background: var(--theme-type-rock-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-rock-800) 0%,
+    var(--theme-type-rock-400) 100%
+  );
+}
+
+.steelThemeImageWrapper {
+  border-color: var(--theme-type-steel-800);
+  background: var(--theme-type-steel-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-steel-800) 0%,
+    var(--theme-type-steel-400) 100%
+  );
+}
+
+.waterThemeImageWrapper {
+  border-color: var(--theme-type-water-800);
+  background: var(--theme-type-water-800);
+  background: linear-gradient(
+    45deg,
+    var(--theme-type-water-800) 0%,
+    var(--theme-type-water-400) 100%
+  );
+}
+
 .image {
   width: 115px;
   height: 115px;
@@ -57,7 +236,7 @@
   margin-bottom: var(--theme-spacing-30);
 }
 
-.totalContent {
+.totalWrapper {
   height: 60px;
   background-color: var(--theme-netural-200);
   border-radius: 0 0 var(--theme-radius-8) var(--theme-radius-8);
@@ -66,4 +245,10 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--theme-spacing-15);
+}
+
+.totalContent,
+.totalPrice {
+  font-size: var(--theme-font-18);
+  font-weight: bold;
 }

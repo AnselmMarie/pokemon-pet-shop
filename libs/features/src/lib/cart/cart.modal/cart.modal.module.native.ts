@@ -32,7 +32,7 @@ export const styles = () =>
       marginTop: 25,
       marginBottom: 25,
     },
-    totalContent: {
+    totalWrapper: {
       height: 60,
       backgroundColor: 'grey',
       display: 'flex',

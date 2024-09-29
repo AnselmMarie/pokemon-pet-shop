@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { THEME_NETURAL_100, THEME_SPACING_15 } from '../../styles/ts/variables';
+import { THEME_FONT_24, THEME_NETURAL_100, THEME_SPACING_15 } from '../../styles/ts/variables';
 
 export const styles = () =>
   StyleSheet.create({
@@ -41,5 +41,9 @@ export const styles = () =>
       left: 0,
       width: '100%',
       zIndex: 10,
+    },
+    modalHeadline: {
+      fontSize: THEME_FONT_24,
+      fontWeight: 'bold',
     },
   });

@@ -26,7 +26,7 @@ const Modal = (): ReactElement | null => {
       <UiCard className={classNamesUtil(classNameModal, newStyles.modal)}>
         <>
           <UiElementLayout className={newStyles[`${headlineType}DropdownHeadline`]}>
-            <UiTypography>{title}</UiTypography>
+            <UiTypography className={newStyles.modalHeadline}>{title}</UiTypography>
             <UiIcon icon={IconTypeEnum.ICON_X} onClick={closeModal} />
           </UiElementLayout>
           {modalContent ? modalContent : null}

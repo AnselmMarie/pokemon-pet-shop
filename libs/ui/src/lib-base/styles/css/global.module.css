@@ -1,3 +1,7 @@
 .fontBold {
   font-weight: bold;
 }
+
+.pointerCursor {
+  cursor: pointer;
+}

@@ -48,6 +48,11 @@
   z-index: 10;
 }
 
+.modalHeadline {
+  font-size: var(--theme-font-24);
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
   .modal {
     max-width: 600px;

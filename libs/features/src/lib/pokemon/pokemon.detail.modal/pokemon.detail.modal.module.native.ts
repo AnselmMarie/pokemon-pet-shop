@@ -89,7 +89,7 @@ export const styles = () =>
       marginBottom: THEME_SPACING_20,
     },
     cardDescription: {
-      fontSize: THEME_FONT_16,
+      fontSize: THEME_FONT_18,
       marginBottom: THEME_SPACING_25,
     },
     weightHeightWrapper: {

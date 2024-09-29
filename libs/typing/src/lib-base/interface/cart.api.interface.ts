@@ -1,3 +1,5 @@
+import { PokemonDetailTypesObj } from './pokemon.detail.api.interface';
+
 export interface CartApiPayload {
   id: string;
   addToCart?: boolean;
@@ -10,6 +12,7 @@ export interface CartDataContentApi {
   price: number;
   quantity: number;
   image: string;
+  types: PokemonDetailTypesObj;
   isLegendary: boolean;
   isMythical: boolean;
 }
