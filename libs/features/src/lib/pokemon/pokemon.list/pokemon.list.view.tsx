@@ -20,14 +20,12 @@ const PokemonList = (): ReactElement => {
     onFetchNextPage,
   } = usePokemonList();
 
-  console.log('data', data);
+  const newData = useMemo(() => {
+    const template = { abilities: [{}, {}] };
+    return skeletonLoadDataUtil(data, isLoading, template, true);
+  }, [data, isLoading]);
 
-  // const newData = useMemo(() => {
-  //   const template = { abilities: [{}, {}] };
-  //   return skeletonLoadDataUtil(data, isLoading, template, true);
-  // }, [data, isLoading]);
-
-  if (data?.length === 0 && !hasNextPage) {
+  if (newData?.length === 0 && !hasNextPage) {
     return (
       <UiElementLayout className={styles.failureWrapper}>
         <UiTypography>No Pets are available at the moment. Please check back again.</UiTypography>
@@ -39,11 +37,11 @@ const PokemonList = (): ReactElement => {
   return (
     <>
       <UiElementLayout className={styles.cardListWrapper}>
-        {(data || []).map((arr: PokemonListApi[], i: number): ReactElement => {
+        {(newData || []).map((arr: PokemonListApi[], i: number): ReactElement => {
           return (
             <Fragment key={i}>
               {arr.map((el: PokemonListApi, i: number) => (
-                <UiPokemonCard key={el?.name || i} data={el} />
+                <UiPokemonCard key={el?.name || i} data={el} isLoading={isLoading} />
               ))}
             </Fragment>
           );

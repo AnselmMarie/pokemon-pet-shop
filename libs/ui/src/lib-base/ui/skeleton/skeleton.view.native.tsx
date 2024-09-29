@@ -8,7 +8,7 @@ import { UiElementLayout } from '../element.layout';
 import { styles } from './shkeleon.module.native';
 import { SkeletonProps } from './skeleton.interface';
 
-const Skeleton = ({
+const SkeletonView = ({
   count = 1,
   width = '100%',
   height = 15,
@@ -48,4 +48,4 @@ const Skeleton = ({
   );
 };
 
-export default Skeleton;
+export default SkeletonView;

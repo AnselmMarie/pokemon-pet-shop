@@ -7,9 +7,14 @@ import { UiElementLayout } from '../element.layout';
 import { CardProps } from './card.interface';
 import { styles } from './card.module';
 
-const Card = ({ className = '', children = null }: PropsWithChildren<CardProps>): ReactElement => {
+const Card = ({
+  className = '',
+  isLoading = false,
+  children = null,
+}: PropsWithChildren<CardProps>): ReactElement => {
+  const cardStyle = isLoading ? styles.cardLoading : styles.card;
   return (
-    <UiElementLayout className={classNamesUtil(className, styles.card)}>{children}</UiElementLayout>
+    <UiElementLayout className={classNamesUtil(className, cardStyle)}>{children}</UiElementLayout>
   );
 };
 

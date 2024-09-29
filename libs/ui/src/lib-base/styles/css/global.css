@@ -1,5 +1,6 @@
 @import url('reset.css');
 @import url('_variables.css');
+@import url('react-loading-skeleton/dist/skeleton.css');
 
 html[data-theme='dark'] {
   --theme-netural-100: var(--theme-netural-100-dark);

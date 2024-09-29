@@ -19,7 +19,7 @@ import { CardProps } from './pokemon.card.interface';
 import { styles } from './pokemon.card.module';
 import usePokemonCardLogic from './use.pokemon.card.logic';
 
-const PokemonCard = ({ data }: CardProps): ReactElement => {
+const PokemonCard = ({ data, isLoading }: CardProps): ReactElement => {
   const { getThemeClass, onHandleOpenDetailModalClick } = usePokemonCardLogic(data);
 
   const capitalizeName = useMemo((): string => {
@@ -27,13 +27,17 @@ const PokemonCard = ({ data }: CardProps): ReactElement => {
   }, [data?.name]);
 
   return (
-    <UiCard className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}>
+    <UiCard
+      className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}
+      isLoading={isLoading}
+    >
       <UiElementLayout className={styles.imgCardWrapper}>
         <UiImage
           src={data?.sprites?.other?.['official-artwork']?.front_default}
           className={styles.image}
           alt={`${data?.name} Image`}
           mobSrcType={mobSrcTypeEnum.URI}
+          isLoading={isLoading}
         />
       </UiElementLayout>
 
