@@ -1,7 +1,24 @@
 .fontBold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .pointerCursor {
-  cursor: pointer;
+  cursor: pointer !important;
+}
+
+.disabledElement {
+  cursor: not-allowed !important;
+
+  /* opacity: 0.5 !important; */
+}
+
+.disabledElementText {
+  cursor: not-allowed !important;
+  color: var(--theme-netural-600) !important;
+}
+
+.disabledElementBg {
+  cursor: not-allowed !important;
+  color: var(--theme-netural-100) !important;
+  background-color: var(--theme-netural-600) !important;
 }

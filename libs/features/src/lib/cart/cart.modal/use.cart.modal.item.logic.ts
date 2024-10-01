@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
+
 import { useDeleteCartItem, useUpdateCart } from '@pokemon-pet-shop/services';
 import { GenericNonReturnType } from '@pokemon-pet-shop/typing';
 
 interface UseCartModalReturn {
+  updateIsPending: boolean;
+  deleteIsPending: boolean;
   onHandleRemoveFromCart: GenericNonReturnType;
   onHandleAddToCart: GenericNonReturnType;
   onHandleRemoveCartItem: GenericNonReturnType;
@@ -31,7 +35,14 @@ const useCartModalItemLogic = (): UseCartModalReturn => {
     });
   };
 
+  useEffect(() => {
+    console.log('updateCartMutation.error', updateCartMutation.error);
+    console.log('deleteCartMutation.error', deleteCartMutation.error);
+  }, [updateCartMutation.error, deleteCartMutation.error]);
+
   return {
+    updateIsPending: updateCartMutation.isPending,
+    deleteIsPending: deleteCartMutation.isPending,
     onHandleRemoveFromCart: handleRemoveFromCart,
     onHandleAddToCart: handleAddToCart,
     onHandleRemoveCartItem: handleRemoveCartItem,

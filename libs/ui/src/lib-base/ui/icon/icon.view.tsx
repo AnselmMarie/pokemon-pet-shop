@@ -2,11 +2,12 @@ import { memo, ReactElement, useCallback, useMemo } from 'react';
 
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
+import { globalStyles } from '../../styles/css/global.module';
+import { THEME_NETURAL_600 } from '../../styles/ts/variables';
 import { UiElementLayout } from '../element.layout';
 
 import { IconColorEnum, IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
-import styles from './icon.module.css';
 import { IconMap } from './icon.util';
 
 const Icon = ({
@@ -36,20 +37,23 @@ const Icon = ({
   }, [onClick, isDisabled]);
 
   const renderIcon = useMemo(() => {
+    const disabledStyles = isDisabled ? globalStyles.disabledElement : '';
+    const clickableStyles = onClick ? globalStyles.pointerCursor : '';
+
     return (
       <IconComponent
         size={size}
-        color={color}
-        className={classNamesUtil(classNameIcon, onClick ? styles.icon : '')}
+        color={isDisabled ? THEME_NETURAL_600 : color}
+        className={classNamesUtil(classNameIcon, clickableStyles, disabledStyles)}
         onClick={iconClick}
       />
     );
-  }, [size, IconComponent, classNameIcon, iconClick, onClick]);
+  }, [size, IconComponent, color, classNameIcon, iconClick, isDisabled, onClick]);
 
   if (displayWrapper) {
     return (
       <UiElementLayout
-        className={classNamesUtil(classNameWrapper, styles.iconWrapper)}
+        className={classNamesUtil(classNameWrapper, globalStyles.pointerCursor)}
         onClick={wrapperClick}
       >
         {renderIcon}

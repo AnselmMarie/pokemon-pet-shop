@@ -2,8 +2,7 @@ import { ReactElement } from 'react';
 
 import Skeleton from 'react-loading-skeleton';
 
-import { THEME_RADIUS_8, THEME_RADIUS_CIRCLE } from '../../styles/ts/variables';
-import { UiElementLayout } from '../element.layout';
+import { THEME_RADIUS_8 } from '../../styles/ts/variables';
 
 import { SkeletonProps } from './skeleton.interface';
 
@@ -31,6 +30,7 @@ const SkeletonView = ({
         return (
           <Skeleton
             key={i}
+            width={width}
             height={circle ? '100%' : height}
             borderRadius={THEME_RADIUS_8}
             circle={circle}

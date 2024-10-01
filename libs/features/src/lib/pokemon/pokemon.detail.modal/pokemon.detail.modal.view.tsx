@@ -12,6 +12,7 @@ import {
   UiTagWrapper,
   UiTagItem,
   ButtonSizeEnum,
+  UiSkeleton,
 } from '@pokemon-pet-shop/ui';
 import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
 import {
@@ -31,6 +32,9 @@ const PokemonDetailModal = (): ReactElement => {
   const {
     modalData,
     speciesData,
+    isPendingUpdateCart,
+    speciesIsLoading,
+    pricingIsLoading,
     onConvertKgToLbs,
     onConvertMetersToFtIn,
     onGetPricingFormat,
@@ -53,7 +57,13 @@ const PokemonDetailModal = (): ReactElement => {
         className={classNamesUtil(newStyles.imageContainer, newStyles?.[`${getThemeClass}ImageBg`])}
       >
         <UiElementLayout className={newStyles.priceWrapper}>
-          <UiTypography className={newStyles.priceText}>{onGetPricingFormat}</UiTypography>
+          <UiTypography className={newStyles.priceText}>
+            {!pricingIsLoading && !speciesIsLoading ? (
+              onGetPricingFormat
+            ) : (
+              <UiSkeleton width="100px" />
+            )}
+          </UiTypography>
         </UiElementLayout>
         <UiImage
           src={modalData?.sprites?.other?.['official-artwork']?.front_default}
@@ -95,7 +105,7 @@ const PokemonDetailModal = (): ReactElement => {
               className={newStyles.cardDescription}
               typographyType={TypographyTypeEnum.P}
             >
-              {removeHtmlCodeInDescription}
+              {!speciesIsLoading ? removeHtmlCodeInDescription : <UiSkeleton count={2} />}
             </UiTypography>
 
             <UiElementLayout className={newStyles.weightHeightWrapper}>
@@ -144,8 +154,9 @@ const PokemonDetailModal = (): ReactElement => {
             <UiButton
               className={newStyles.btn}
               text="Get Pet"
-              onClick={onHandleUpdateCartSubmit}
               size={ButtonSizeEnum.LARGE}
+              isDisabled={isPendingUpdateCart}
+              onClick={onHandleUpdateCartSubmit}
             />
           </UiElementLayout>
         </UiElementLayout>

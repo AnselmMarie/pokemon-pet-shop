@@ -20,8 +20,13 @@ import { styles } from './cart.modal.module';
 import useCartModalItemLogic from './use.cart.modal.item.logic';
 
 const CartModalItem = ({ el }: any): ReactElement => {
-  const { onHandleRemoveFromCart, onHandleAddToCart, onHandleRemoveCartItem } =
-    useCartModalItemLogic();
+  const {
+    updateIsPending,
+    deleteIsPending,
+    onHandleRemoveFromCart,
+    onHandleAddToCart,
+    onHandleRemoveCartItem,
+  } = useCartModalItemLogic();
   const { newStyles } = useRenderStyles(styles);
   const { getThemeClass } = usePokemonThemeLogic(el?.types);
 
@@ -56,12 +61,14 @@ const CartModalItem = ({ el }: any): ReactElement => {
             <UiIcon
               icon={IconTypeEnum.ICON_MINUS}
               classNameIcon={styles.quantityIcon}
+              isDisabled={el?.quantity === 1 || updateIsPending}
               onClick={() => onHandleRemoveFromCart(el?.id)}
             />
             <UiTypography>{el?.quantity}</UiTypography>
             <UiIcon
               icon={IconTypeEnum.ICON_PLUS}
               classNameIcon={styles.quantityIcon}
+              isDisabled={updateIsPending}
               onClick={() => onHandleAddToCart(el?.id)}
             />
           </UiElementLayout>
@@ -70,6 +77,7 @@ const CartModalItem = ({ el }: any): ReactElement => {
         <UiIcon
           icon={IconTypeEnum.ICON_TRASH}
           color={IconColorEnum.RED}
+          isDisabled={deleteIsPending}
           onClick={() => onHandleRemoveCartItem(el?.id)}
         />
       </UiElementLayout>
