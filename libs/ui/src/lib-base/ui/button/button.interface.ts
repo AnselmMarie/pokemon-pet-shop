@@ -7,6 +7,10 @@ export interface ButtonProps {
   text?: string | null;
   className?: any;
   size?: ButtonSizeEnum;
+  appendIcon?: string;
+  timerText?: string;
+  timerStyle?: string;
   isDisabled?: boolean;
+  isSuccess?: boolean;
   onClick?: GenericNonReturnType;
 }

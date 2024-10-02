@@ -13,6 +13,7 @@ import {
   UiTagItem,
   ButtonSizeEnum,
   UiSkeleton,
+  IconTypeEnum,
 } from '@pokemon-pet-shop/ui';
 import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
 import {
@@ -32,6 +33,7 @@ const PokemonDetailModal = (): ReactElement => {
   const {
     modalData,
     speciesData,
+    isSuccessUpdateCart,
     isPendingUpdateCart,
     speciesIsLoading,
     pricingIsLoading,
@@ -153,8 +155,11 @@ const PokemonDetailModal = (): ReactElement => {
           <UiElementLayout className={newStyles.btnWrapper}>
             <UiButton
               className={newStyles.btn}
-              text="Get Pet"
+              text={isPendingUpdateCart ? `Catching ${capitalizeName}` : 'Get Pet'}
               size={ButtonSizeEnum.LARGE}
+              appendIcon={isPendingUpdateCart ? IconTypeEnum.ICON_POKEBALL : null}
+              timerText="Caught"
+              isSuccess={isSuccessUpdateCart}
               isDisabled={isPendingUpdateCart}
               onClick={onHandleUpdateCartSubmit}
             />

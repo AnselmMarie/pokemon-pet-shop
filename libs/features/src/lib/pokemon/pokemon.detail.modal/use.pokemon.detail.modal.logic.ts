@@ -12,13 +12,14 @@ import { pricingFormatUtil } from '@pokemon-pet-shop/utils';
 
 interface PokemonDetailModalReturn {
   modalData: PokemonListApi;
-  isPendingUpdateCart: boolean;
   speciesData: PokemonSpeciesApi | undefined;
   speciesIsError: boolean;
   speciesIsLoading: boolean;
   pricingData: PricingApi | undefined;
   pricingIsError: boolean;
   pricingIsLoading: boolean;
+  isPendingUpdateCart: boolean;
+  isSuccessUpdateCart: boolean;
   onConvertKgToLbs: any;
   onConvertMetersToFtIn: any;
   onGetPricingFormat: any;
@@ -134,6 +135,7 @@ const usePokemonDetailModalLogic = (): PokemonDetailModalReturn => {
   return {
     modalData,
     speciesData,
+    isSuccessUpdateCart: updateCartMutation?.isSuccess,
     isPendingUpdateCart: updateCartMutation?.isPending,
     speciesIsError,
     speciesIsLoading: speciesIsLoading || speciesIsFetching,

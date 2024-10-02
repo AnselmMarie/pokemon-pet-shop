@@ -4,6 +4,7 @@ import { IconMenu } from './icons/icon.menu';
 import { IconMinus } from './icons/icon.minus';
 import { IconMoon } from './icons/icon.moon';
 import { IconPlus } from './icons/icon.plus';
+import { IconPokeBall } from './icons/icon.pokeball';
 import { IconSearch } from './icons/icon.search';
 import { IconShoppingCart } from './icons/icon.shopping.cart';
 import { IconSun } from './icons/icon.sun';
@@ -22,4 +23,5 @@ export const IconMap = {
   IconTrash,
   IconMinus,
   IconPlus,
+  IconPokeBall,
 };

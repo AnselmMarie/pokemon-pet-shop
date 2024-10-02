@@ -15,6 +15,11 @@
   color: var(--theme-blue-600);
 }
 
+.buttonSuccess {
+  background: var(--theme-green-400);
+  color: var(--theme-netural-100);
+}
+
 .standard {
   padding: var(--theme-spacing-10) var(--theme-spacing-15);
   font-size: var(--theme-font-13);
@@ -22,6 +27,14 @@
 
 .large {
   min-width: 230px;
+  height: 66px;
   padding: var(--theme-spacing-15) var(--theme-spacing-30);
   font-size: var(--theme-font-24);
+}
+
+.buttonInnerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--theme-spacing-10);
 }

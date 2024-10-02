@@ -1,4 +1,4 @@
-import { memo, ReactElement, useMemo } from 'react';
+import { memo, ReactElement, useEffect, useMemo, useState } from 'react';
 
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
@@ -15,9 +15,14 @@ const Button = ({
   className = '',
   text = null,
   size = ButtonSizeEnum.STANDARD,
+  appendIcon = '',
+  timerText = '',
+  timerStyle = styles.buttonSuccess,
   isDisabled = false,
+  isSuccess = false,
   onClick,
 }: ButtonProps): ReactElement => {
+  const [displaySuccessStyle, setDisplaySuccessStyle] = useState(false);
   const { newStyles } = useRenderStyles(styles);
 
   const getTypeStyles = useMemo(() => {
@@ -44,16 +49,31 @@ const Button = ({
     return isDisabled ? globalStyles.disabledElementBg : '';
   }, [isDisabled]);
 
+  const getText = useMemo(() => {
+    return displaySuccessStyle ? timerText : text;
+  }, [timerText, text, displaySuccessStyle]);
+
+  useEffect(() => {
+    if (isSuccess) {
+      setDisplaySuccessStyle(true);
+      setTimeout(() => {
+        setDisplaySuccessStyle(false);
+      }, 2000);
+    }
+  }, [isSuccess]);
+
   return (
     <ButtonElement
-      text={text}
+      text={getText}
       className={classNamesUtil(
         className,
         newStyles.button,
         getTypeStyles,
         getSizeStyles,
-        getDisabledStyles
+        getDisabledStyles,
+        displaySuccessStyle ? timerStyle : ''
       )}
+      appendIcon={appendIcon}
       isDisabled={isDisabled}
       onClick={onClick}
     />

@@ -48,7 +48,7 @@ const Icon = ({
         onClick={iconClick}
       />
     );
-  }, [size, IconComponent, color, classNameIcon, iconClick, isDisabled, onClick]);
+  }, [size, IconComponent, color, classNameIcon, isDisabled, iconClick, onClick]);
 
   if (displayWrapper) {
     return (
