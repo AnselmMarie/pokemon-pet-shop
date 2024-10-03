@@ -3,6 +3,7 @@ import { memo, ReactElement } from 'react';
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
+import { THEME_BLUE_400, THEME_NETURAL_100 } from '../../styles/ts/variables';
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
@@ -41,7 +42,9 @@ const Switch = ({
           icon={iconLeft}
           size={20}
           classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconLeft)}
+          classNameWrapper={newStyles.iconWrapper}
           isDisabled={val === SwitchStatusEnum.ON || isDisabled}
+          displayWrapper
           onClick={onInitLeftClick}
         />
       ) : null}
@@ -50,7 +53,9 @@ const Switch = ({
           icon={iconRight}
           size={20}
           classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconRight)}
+          classNameWrapper={newStyles.iconWrapper}
           isDisabled={val === SwitchStatusEnum.OFF || isDisabled}
+          displayWrapper
           onClick={onInitRightClick}
         />
       ) : null}

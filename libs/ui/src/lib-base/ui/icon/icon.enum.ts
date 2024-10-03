@@ -1,10 +1,3 @@
-import {
-  THEME_NETURAL_100,
-  THEME_RED_600,
-  THEME_BLUE_600,
-  THEME_NETURAL_900,
-} from '../../styles/ts/variables';
-
 export enum IconTypeEnum {
   ICON_SHOPPING_CART = 'IconShoppingCart',
   ICON_MOON = 'IconMoon',
@@ -18,11 +11,4 @@ export enum IconTypeEnum {
   ICON_PLUS = 'IconPlus',
   ICON_GITHUB = 'IconGithub',
   ICON_POKEBALL = 'IconPokeBall',
-}
-
-export enum IconColorEnum {
-  BLUE = THEME_BLUE_600,
-  RED = THEME_RED_600,
-  WHITE = THEME_NETURAL_100,
-  BLACK = THEME_NETURAL_900,
 }

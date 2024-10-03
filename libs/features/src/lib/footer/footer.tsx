@@ -1,14 +1,12 @@
-import {
-  IconColorEnum,
-  IconTypeEnum,
-  UiElementLayout,
-  UiIcon,
-  UiTypography,
-} from '@pokemon-pet-shop/ui';
+import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
+import { IconTypeEnum, UiElementLayout, UiIcon, UiTypography } from '@pokemon-pet-shop/ui';
+import { THEME_NETURAL_100, THEME_NETURAL_900 } from '@pokemon-pet-shop/ui/styles/var';
 
 import { styles } from './footer.module';
 
 const Footer = () => {
+  const { theme } = useThemeStore();
+
   const goToGithubProject = () => {
     window.open('https://github.com/AnselmMarie/pokemon-pet-shop', '_blank');
   };
@@ -20,12 +18,12 @@ const Footer = () => {
           icon={IconTypeEnum.ICON_GITHUB}
           size={20}
           classNameIcon={styles.githubIcon}
-          color={IconColorEnum.BLACK}
+          color={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100}
         />
         <UiTypography>Github Project</UiTypography>
       </UiElementLayout>
       <UiTypography className={styles.footerDivider}>|</UiTypography>
-      <UiIcon color={IconColorEnum.BLACK} />
+      <UiIcon color={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100} />
       <UiTypography>Scan QR code for mobile app</UiTypography>
     </UiElementLayout>
   );

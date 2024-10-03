@@ -74,7 +74,7 @@ const Button = ({
         displaySuccessStyle ? timerStyle : ''
       )}
       appendIcon={appendIcon}
-      isDisabled={isDisabled}
+      isDisabled={isDisabled || displaySuccessStyle}
       onClick={onClick}
     />
   );

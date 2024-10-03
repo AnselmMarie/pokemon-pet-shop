@@ -27,7 +27,12 @@ const Modal = (): ReactElement | null => {
         <>
           <UiElementLayout className={newStyles[`${headlineType}DropdownHeadline`]}>
             <UiTypography className={newStyles.modalHeadline}>{title}</UiTypography>
-            <UiIcon icon={IconTypeEnum.ICON_X} onClick={closeModal} />
+            <UiIcon
+              icon={IconTypeEnum.ICON_X}
+              classNameWrapper={newStyles.iconWrapper}
+              displayWrapper
+              onClick={closeModal}
+            />
           </UiElementLayout>
           {modalContent ? modalContent : null}
         </>

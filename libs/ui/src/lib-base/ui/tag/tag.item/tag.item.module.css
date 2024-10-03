@@ -1,6 +1,7 @@
 .tag {
   border-radius: var(--theme-radius-pill);
   padding: var(--theme-spacing-10) var(--theme-spacing-15);
+  color: var(--theme-netural-900);
 }
 
 .bugThemeBg {

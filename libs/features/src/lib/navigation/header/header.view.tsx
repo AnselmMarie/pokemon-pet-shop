@@ -11,8 +11,8 @@ import {
   TypographyTypeEnum,
   UiContainer,
   UiHideInMobile,
-  IconColorEnum,
 } from '@pokemon-pet-shop/ui';
+import { THEME_BLUE_400 } from '@pokemon-pet-shop/ui/styles/var';
 
 import { UiSwitchTheme } from '../component/switch.theme';
 
@@ -59,7 +59,7 @@ const Header = () => {
           ) : null}
           <UiIcon
             classNameIcon={newStyles.iconCart}
-            color={IconColorEnum.BLUE}
+            color={THEME_BLUE_400}
             onClick={onHandleCartModalClick}
           />
         </UiElementLayout>

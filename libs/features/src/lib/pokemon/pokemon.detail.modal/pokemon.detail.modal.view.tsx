@@ -25,7 +25,7 @@ import {
 import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 import { usePokemonThemeLogic } from '../hooks/use.pokemon.theme.logic';
 
-import { UiHalfCircle } from './components/half.circle.svg';
+import { UiHalfCircle } from './components/half.circle';
 import { styles } from './pokemon.detail.modal.module';
 import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
 

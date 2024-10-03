@@ -1,8 +1,8 @@
 import { ImageBackground } from 'react-native';
 
-import { styles } from './half.circle.svg.module.native';
+import { styles } from './half.circle.module.native';
 
-const halfCircleSvg = () => {
+const HalfCircle = () => {
   return (
     <ImageBackground
       source={require('../../assets/half.circle.png')}
@@ -12,4 +12,4 @@ const halfCircleSvg = () => {
   );
 };
 
-export default halfCircleSvg;
+export default HalfCircle;

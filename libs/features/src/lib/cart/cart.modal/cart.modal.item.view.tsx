@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
+import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
 import {
   UiElementLayout,
   UiIcon,
@@ -9,9 +10,9 @@ import {
   UiImage,
   mobSrcTypeEnum,
   TypographyTypeEnum,
-  IconColorEnum,
 } from '@pokemon-pet-shop/ui';
 import { globalStyles } from '@pokemon-pet-shop/ui/styles/global';
+import { THEME_BLUE_600, THEME_NETURAL_100, THEME_RED_400 } from '@pokemon-pet-shop/ui/styles/var';
 import { capitalizeNameUtil, classNamesUtil, pricingFormatUSD } from '@pokemon-pet-shop/utils';
 
 import { usePokemonThemeLogic } from '../../pokemon/hooks/use.pokemon.theme.logic';
@@ -27,6 +28,7 @@ const CartModalItem = ({ el }: any): ReactElement => {
     onHandleAddToCart,
     onHandleRemoveCartItem,
   } = useCartModalItemLogic();
+  const { theme } = useThemeStore();
   const { newStyles } = useRenderStyles(styles);
   const { getThemeClass } = usePokemonThemeLogic(el?.types);
 
@@ -61,12 +63,14 @@ const CartModalItem = ({ el }: any): ReactElement => {
             <UiIcon
               icon={IconTypeEnum.ICON_MINUS}
               classNameIcon={styles.quantityIcon}
+              color={theme === ThemeTypeEnum.LIGHT ? THEME_BLUE_600 : THEME_NETURAL_100}
               isDisabled={el?.quantity === 1 || updateIsPending}
               onClick={() => onHandleRemoveFromCart(el?.id)}
             />
             <UiTypography>{el?.quantity}</UiTypography>
             <UiIcon
               icon={IconTypeEnum.ICON_PLUS}
+              color={theme === ThemeTypeEnum.LIGHT ? THEME_BLUE_600 : THEME_NETURAL_100}
               classNameIcon={styles.quantityIcon}
               isDisabled={updateIsPending}
               onClick={() => onHandleAddToCart(el?.id)}
@@ -76,7 +80,7 @@ const CartModalItem = ({ el }: any): ReactElement => {
 
         <UiIcon
           icon={IconTypeEnum.ICON_TRASH}
-          color={IconColorEnum.RED}
+          color={THEME_RED_400}
           isDisabled={deleteIsPending}
           onClick={() => onHandleRemoveCartItem(el?.id)}
         />

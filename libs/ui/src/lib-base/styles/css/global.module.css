@@ -19,6 +19,6 @@
 
 .disabledElementBg {
   cursor: not-allowed !important;
-  color: var(--theme-netural-100) !important;
+  color: var(--theme-netural-100-mode) !important;
   background-color: var(--theme-netural-600) !important;
 }

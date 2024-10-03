@@ -2,23 +2,37 @@
 @import url('_variables.css');
 @import url('react-loading-skeleton/dist/skeleton.css');
 
+html {
+  --theme-netural-100-mode: var(--theme-netural-100);
+  --theme-netural-200-mode: var(--theme-netural-200);
+  --theme-netural-400-mode: var(--theme-netural-400);
+  --theme-netural-600-mode: var(--theme-netural-600);
+  --theme-netural-900-mode: var(--theme-netural-900);
+  --theme-blue-100-mode: var(--theme-blue-100);
+  --theme-blue-600-mode: var(--theme-blue-600);
+  --theme-green-200-mode: var(--theme-green-200);
+  --theme-green-400-mode: var(--theme-green-400);
+  --theme-green-600-mode: var(--theme-green-600);
+  --theme-green-800-mode: var(--theme-green-800);
+}
+
 html[data-theme='dark'] {
-  --theme-netural-100: var(--theme-netural-100-dark);
-  --theme-netural-200: var(--theme-netural-200-dark);
-  --theme-netural-400: var(--theme-netural-400-dark);
-  --theme-netural-600: var(--theme-netural-600-dark);
-  --theme-netural-900: var(--theme-netural-900-dark);
-  --theme-blue-100: var(--theme-blue-100-dark);
-  --theme-blue-600: var(--theme-blue-600-dark);
-  --theme-green-200: var(--theme-green-200-dark);
-  --theme-green-400: var(--theme-green-400-dark);
-  --theme-green-600: var(--theme-green-600-dark);
-  --theme-green-800: var(--theme-green-800-dark);
+  --theme-netural-100-mode: var(--theme-netural-100-dark);
+  --theme-netural-200-mode: var(--theme-netural-200-dark);
+  --theme-netural-400-mode: var(--theme-netural-400-dark);
+  --theme-netural-600-mode: var(--theme-netural-600-dark);
+  --theme-netural-900-mode: var(--theme-netural-900-dark);
+  --theme-blue-100-mode: var(--theme-blue-100-dark);
+  --theme-blue-600-mode: var(--theme-blue-600-dark);
+  --theme-green-200-mode: var(--theme-green-200-dark);
+  --theme-green-400-mode: var(--theme-green-400-dark);
+  --theme-green-600-mode: var(--theme-green-600-dark);
+  --theme-green-800-mode: var(--theme-green-800-dark);
 }
 
 body {
-  background-color: var(--theme-blue-100);
-  color: var(--theme-netural-900);
+  background-color: var(--theme-blue-100-mode);
+  color: var(--theme-netural-900-mode);
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 

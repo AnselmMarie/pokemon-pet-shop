@@ -5,7 +5,6 @@ import { IconTypeEnum, SwitchStatusEnum, UiSwitch } from '@pokemon-pet-shop/ui';
 
 import { SwitchProps } from './switch.theme.interface';
 
-/** @todo hiding this code until a way to create a theming process for web and mobile */
 const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   const { theme, updateTheme } = useThemeStore();
 

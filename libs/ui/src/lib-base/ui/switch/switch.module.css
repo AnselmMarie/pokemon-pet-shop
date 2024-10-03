@@ -1,9 +1,9 @@
 .switchWrapper {
   border-radius: var(--theme-radius-pill);
-  background: var(--theme-netural-200);
+  background: var(--theme-netural-200-mode);
   display: flex;
   min-width: 85px;
-  padding: var(--theme-spacing-15) var(--theme-spacing-10);
+  padding: var(--theme-spacing-5) var(--theme-spacing-10);
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -14,13 +14,21 @@
   z-index: 10;
 }
 
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 39px;
+  padding: 2px;
+}
+
 .iconLeft {
-  margin-left: var(--theme-spacing-5);
+  stroke: var(--theme-netural-100);
   cursor: pointer;
 }
 
 .iconRight {
-  margin-right: var(--theme-spacing-2);
   cursor: pointer;
 }
 
@@ -29,7 +37,7 @@
   top: 6px;
   width: 36px;
   height: 36px;
-  background-color: var(--theme-blue-600);
+  background-color: var(--theme-blue-600-mode);
   z-index: 0;
   border-radius: var(--theme-radius-circle);
   transition: left 100ms ease-in-out;

@@ -16,6 +16,7 @@
 }
 
 .buttonSuccess {
+  cursor: not-allowed;
   background: var(--theme-green-400);
   color: var(--theme-netural-100);
 }

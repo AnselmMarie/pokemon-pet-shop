@@ -14,6 +14,10 @@
   border-radius: var(--theme-radius-8);
 }
 
+.priceText {
+  color: var(--theme-netural-900);
+}
+
 .imageContainer {
   z-index: 0;
   border-top-left-radius: var(--theme-radius-8);

@@ -27,7 +27,7 @@
 }
 
 .atkWrapperDetailModal {
-  color: var(--theme-netural-900);
+  color: var(--theme-netural-900-mode);
   margin-bottom: var(--theme-spacing-20);
   height: auto;
 }
@@ -39,7 +39,7 @@
 }
 
 .atkTextDetailModal {
-  color: var(--theme-netural-900);
+  color: var(--theme-netural-900-mode);
   font-size: var(--theme-font-18);
 }
 

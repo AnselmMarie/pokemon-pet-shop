@@ -3,17 +3,17 @@ import { memo, ReactElement, useCallback, useMemo } from 'react';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
 
 import { globalStyles } from '../../styles/css/global.module';
-import { THEME_NETURAL_600 } from '../../styles/ts/variables';
+import { THEME_BLUE_400, THEME_NETURAL_600 } from '../../styles/ts/variables';
 import { UiElementLayout } from '../element.layout';
 
-import { IconColorEnum, IconTypeEnum } from './icon.enum';
+import { IconTypeEnum } from './icon.enum';
 import { IconProps } from './icon.interface';
 import { IconMap } from './icon.util';
 
 const Icon = ({
   icon = IconTypeEnum.ICON_SHOPPING_CART,
   size = 36,
-  color = IconColorEnum.BLUE,
+  color = THEME_BLUE_400,
   classNameIcon = null,
   classNameWrapper = null,
   displayWrapper = false,
@@ -31,7 +31,7 @@ const Icon = ({
   }, [displayWrapper, onClick, isDisabled]);
 
   const wrapperClick = useCallback(() => {
-    if (isDisabled && typeof onClick === 'function' && !isDisabled) {
+    if (typeof onClick === 'function' && !isDisabled) {
       onClick();
     }
   }, [onClick, isDisabled]);
