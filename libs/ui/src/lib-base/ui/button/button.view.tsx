@@ -16,6 +16,7 @@ const Button = ({
   text = null,
   size = ButtonSizeEnum.STANDARD,
   appendIcon = '',
+  appendImage = '',
   timerText = '',
   timerStyle = styles.buttonSuccess,
   isDisabled = false,
@@ -69,10 +70,11 @@ const Button = ({
         className,
         newStyles.button,
         getTypeStyles,
-        getSizeStyles,
         getDisabledStyles,
         displaySuccessStyle ? timerStyle : ''
       )}
+      classNameText={getSizeStyles}
+      appendImage={appendImage}
       appendIcon={appendIcon}
       isDisabled={isDisabled || displaySuccessStyle}
       onClick={onClick}

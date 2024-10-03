@@ -3,6 +3,7 @@
   cursor: pointer;
   border: 0;
   text-align: center;
+  padding: var(--theme-spacing-5);
 }
 
 .buttonPrimary {
@@ -22,20 +23,30 @@
 }
 
 .standard {
-  padding: var(--theme-spacing-10) var(--theme-spacing-15);
+  padding: var(--theme-spacing-5) var(--theme-spacing-15);
   font-size: var(--theme-font-13);
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .large {
   min-width: 230px;
   height: 66px;
-  padding: var(--theme-spacing-15) var(--theme-spacing-30);
+  padding: var(--theme-spacing-10) var(--theme-spacing-30);
   font-size: var(--theme-font-24);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.appendImage {
+  width: 22px;
+  margin-right: var(--theme-spacing-5);
 }
 
 .buttonInnerWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--theme-spacing-10);
 }

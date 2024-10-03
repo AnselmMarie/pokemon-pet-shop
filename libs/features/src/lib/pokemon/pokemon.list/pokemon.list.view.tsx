@@ -6,6 +6,7 @@ import { skeletonLoadDataUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonCard } from '../pokemon.card';
 
+import image from './assets/bulbasaur.gif';
 import { styles } from './pokemon.list.module';
 import usePokemonList from './use.pokemon.list.logic';
 
@@ -51,13 +52,8 @@ const PokemonList = (): ReactElement => {
         <UiElementLayout className={styles.btnWrapper}>
           <UiButton
             isDisabled={!hasNextPage || isFetchingNextPage}
-            text={
-              isFetchingNextPage
-                ? 'Loading More...'
-                : hasNextPage
-                  ? 'Load More'
-                  : 'Nothing more to load'
-            }
+            text={isFetchingNextPage ? 'Loading' : 'Load More'}
+            appendImage={isFetchingNextPage ? image : ''}
             onClick={() => {
               onFetchNextPage((old: number) => old + 1);
             }}

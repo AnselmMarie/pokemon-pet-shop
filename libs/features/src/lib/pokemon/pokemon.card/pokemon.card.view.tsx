@@ -1,5 +1,6 @@
 import { memo, ReactElement, useMemo } from 'react';
 
+import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
 import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 import {
   UiElementLayout,
@@ -21,6 +22,7 @@ import usePokemonCardLogic from './use.pokemon.card.logic';
 
 const PokemonCard = ({ data, isLoading }: CardProps): ReactElement => {
   const { getThemeClass, onHandleOpenDetailModalClick } = usePokemonCardLogic(data);
+  const { theme } = useThemeStore();
 
   const capitalizeName = useMemo((): string => {
     return capitalizeNameUtil(data?.name);
@@ -28,7 +30,11 @@ const PokemonCard = ({ data, isLoading }: CardProps): ReactElement => {
 
   return (
     <UiCard
-      className={classNamesUtil(styles.cardWrapper, styles?.[`${getThemeClass}Wrapper`])}
+      className={classNamesUtil(
+        styles.cardWrapper,
+        styles?.[`${getThemeClass}Wrapper`],
+        styles?.[theme === ThemeTypeEnum.LIGHT ? 'cardWrapperShadowLight' : 'cardWrapperShadowDark']
+      )}
       isLoading={isLoading}
     >
       <UiElementLayout className={styles.imgCardWrapper}>

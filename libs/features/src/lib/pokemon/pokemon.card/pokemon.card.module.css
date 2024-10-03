@@ -8,6 +8,14 @@
   position: relative;
 }
 
+.cardWrapperShadowLight {
+  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
+}
+
+.cardWrapperShadowDark {
+  box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+}
+
 .imgCardWrapper {
   max-width: 115px;
   border-radius: var(--theme-radius-8);
