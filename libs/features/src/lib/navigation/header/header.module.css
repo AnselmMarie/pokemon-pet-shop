@@ -11,6 +11,17 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.leftWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rightWrapper {
+  display: flex;
+  align-items: center;
 }
 
 .nav {
@@ -34,7 +45,6 @@
   stroke-width: 1.5;
 }
 
-.logo,
 .switchTheme {
   display: none;
 }
@@ -70,10 +80,6 @@
 }
 
 @media only screen and (min-width: 830px) {
-  .logo {
-    display: block;
-  }
-
   .iconMenu {
     display: none;
   }

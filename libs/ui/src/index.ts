@@ -16,3 +16,4 @@ export * from './lib-base/ui/hide.in.mobile';
 export * from './lib-base/ui/tag';
 export * from './lib-base/ui/switch';
 export * from './lib-base/ui/skeleton';
+export * from './lib-base/ui/scroll.wrapper';

@@ -23,8 +23,10 @@ const Footer = () => {
         <UiTypography>Github Project</UiTypography>
       </UiElementLayout>
       <UiTypography className={styles.footerDivider}>|</UiTypography>
-      <UiIcon color={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100} />
-      <UiTypography>Scan QR code for mobile app</UiTypography>
+      <UiElementLayout className={styles.scanWrapper}>
+        <UiIcon color={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100} />
+        <UiTypography>Scan QR code for mobile app</UiTypography>
+      </UiElementLayout>
     </UiElementLayout>
   );
 };

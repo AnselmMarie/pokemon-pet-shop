@@ -1,6 +1,5 @@
 import { UiHeader } from '@pokemon-pet-shop/features';
-import { UiModal } from '@pokemon-pet-shop/ui';
-import { UiScrollWrapper } from '@pokemon-pet-shop/ui/native';
+import { UiModal, UiScrollWrapper } from '@pokemon-pet-shop/ui';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SafeAreaView, StatusBar } from 'react-native';
 

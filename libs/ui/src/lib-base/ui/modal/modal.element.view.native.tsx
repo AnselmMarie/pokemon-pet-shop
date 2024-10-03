@@ -2,7 +2,7 @@ import { memo, PropsWithChildren, ReactElement } from 'react';
 
 import { Modal, SafeAreaView } from 'react-native';
 
-import { UiScrollWrapper } from '../../../lib-native/ui/scroll.wrapper';
+import { UiScrollWrapper } from '../scroll.wrapper';
 
 import { ModalElementProps } from './modal.interface';
 
