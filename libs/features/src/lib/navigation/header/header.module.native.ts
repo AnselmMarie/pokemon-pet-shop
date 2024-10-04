@@ -1,6 +1,4 @@
 import {
-  THEME_NETURAL_100,
-  THEME_NETURAL_200,
   THEME_RADIUS_CIRCLE,
   THEME_RADIUS_PILL,
   THEME_SPACING_10,
@@ -10,7 +8,7 @@ import {
 } from '@pokemon-pet-shop/ui/styles/var';
 import { StyleSheet } from 'react-native';
 
-export const styles = () =>
+export const styles = (varThemeMode: any) =>
   StyleSheet.create({
     headerWrapper: {
       justifyContent: 'space-between',
@@ -24,14 +22,24 @@ export const styles = () =>
       shadowRadius: 5,
       elevation: 2,
       // boxShadow: 0 2px 8px 1px rgba(6, 42, 73, 0.15),
-      backgroundColor: THEME_NETURAL_100,
+      backgroundColor: varThemeMode?.THEME_NETURAL_100_MODE,
     },
     container: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
+      justifyContent: 'space-between',
       paddingLeft: THEME_SPACING_15,
       paddingRight: THEME_SPACING_15,
+    },
+    leftWrapper: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    rightWrapper: {
+      display: 'flex',
+      alignItems: 'center',
     },
     nav: {
       display: 'flex',
@@ -47,7 +55,7 @@ export const styles = () =>
       paddingRight: THEME_SPACING_15,
       alignItems: 'center',
       borderRadius: THEME_RADIUS_PILL,
-      backgroundColor: THEME_NETURAL_200,
+      backgroundColor: varThemeMode?.THEME_NETURAL_200_MODE,
       // box-shadow: inset 0 3px 3px rgb(0 0 0 / 10%);
     },
     navTitle: {
@@ -56,7 +64,10 @@ export const styles = () =>
     iconCart: {
       marginLeft: THEME_SPACING_15,
     },
-    logo: {},
+    logo: {
+      width: 160,
+      height: 65,
+    },
     switchTheme: {
       display: 'none',
     },

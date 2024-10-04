@@ -11,7 +11,7 @@ const NavMobileModal = (): ReactElement => {
   const { newStyles } = useRenderStyles(styles);
 
   return (
-    <UiElementLayout className={newStyles.modal}>
+    <UiElementLayout className={newStyles.innerModal}>
       <UiElementLayout className={newStyles.navWrapper}>
         <UiElementLayout className={newStyles.linkWrapper}>
           <UiTypography>PETS</UiTypography>

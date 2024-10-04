@@ -33,7 +33,7 @@ const Header = () => {
             icon={IconTypeEnum.ICON_MENU}
             onClick={onHandleMobileNavModalClick}
           />
-          <UiImage src={pokeshopLogo} className={newStyles.logo} width="160" />
+          <UiImage src={pokeshopLogo} className={newStyles.logo} />
         </UiElementLayout>
 
         {NAV_FEATURE_FLAG ? (

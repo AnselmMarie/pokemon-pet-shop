@@ -32,7 +32,7 @@ import {
 } from '@pokemon-pet-shop/ui/styles/var';
 import { StyleSheet } from 'react-native';
 
-export const styles = () =>
+export const styles = (varThemeMode: any) =>
   StyleSheet.create({
     innerModalContent: {
       position: 'relative',
@@ -82,15 +82,18 @@ export const styles = () =>
       fontSize: THEME_FONT_16,
       textAlign: 'center',
       marginBottom: THEME_SPACING_10,
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
     },
     cardHeadline: {
       fontSize: THEME_FONT_32,
       textAlign: 'center',
       marginBottom: THEME_SPACING_20,
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
     },
     cardDescription: {
       fontSize: THEME_FONT_18,
       marginBottom: THEME_SPACING_25,
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
     },
     weightHeightWrapper: {
       display: 'flex',
@@ -100,9 +103,11 @@ export const styles = () =>
     weight: {
       fontSize: THEME_FONT_18,
       marginBottom: THEME_SPACING_10,
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
     },
     height: {
       fontSize: THEME_FONT_18,
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
     },
     tagWrapper: {
       marginBottom: THEME_SPACING_30,

@@ -5,8 +5,8 @@ import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { THEME_RADIUS_8, THEME_RADIUS_CIRCLE, THEME_SPACING_15 } from '../../styles/ts/variables';
 import { UiElementLayout } from '../element.layout';
 
-import { styles } from './shkeleon.module.native';
 import { SkeletonProps } from './skeleton.interface';
+import { styles } from './skeleton.module.native';
 
 const SkeletonView = ({
   count = 1,

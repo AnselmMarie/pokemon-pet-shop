@@ -1,15 +1,15 @@
+import { THEME_SPACING_15, THEME_SPACING_25 } from '@pokemon-pet-shop/ui/styles/var';
 import { StyleSheet } from 'react-native';
 
-export const styles = () =>
+export const styles = (varThemeMode: any) =>
   StyleSheet.create({
     modal: {
-      backgroundColor: 'white',
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
     },
     cartContent: {
-      padding: 15,
+      padding: THEME_SPACING_15,
       height: '86%',
       flexGrow: 1,
     },
@@ -19,26 +19,26 @@ export const styles = () =>
     cardContentRow: {
       display: 'flex',
       flexDirection: 'row',
-      gap: 15,
+      gap: THEME_SPACING_15,
     },
     image: {
       width: 115,
       height: 115,
     },
     sep: {
-      backgroundColor: '#666',
+      backgroundColor: varThemeMode?.THEME_NETURAL_400_MODE,
       width: '100%',
       height: 1,
-      marginTop: 25,
-      marginBottom: 25,
+      marginTop: THEME_SPACING_25,
+      marginBottom: THEME_SPACING_25,
     },
     totalWrapper: {
       height: 60,
-      backgroundColor: 'grey',
+      backgroundColor: varThemeMode?.THEME_NETURAL_200_MODE,
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: 15,
+      padding: THEME_SPACING_15,
     },
   });

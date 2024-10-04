@@ -1,7 +1,10 @@
 import { memo, ReactElement, useEffect } from 'react';
 
 import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
+import { DetectEnum } from '@pokemon-pet-shop/typing';
 import { IconTypeEnum, SwitchStatusEnum, UiSwitch } from '@pokemon-pet-shop/ui';
+import { variableThemeMode } from '@pokemon-pet-shop/ui/styles/var';
+import { detectUtil } from '@pokemon-pet-shop/utils';
 
 import { SwitchProps } from './switch.theme.interface';
 
@@ -9,10 +12,13 @@ const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   const { theme, updateTheme } = useThemeStore();
 
   const updateTheming = (newTheme: ThemeTypeEnum) => {
-    updateTheme(newTheme);
+    const varThemeMode = variableThemeMode(newTheme);
+    updateTheme(newTheme, varThemeMode);
 
-    const el = document.querySelector('html');
-    el?.setAttribute('data-theme', newTheme);
+    if (detectUtil() === DetectEnum.IS_WEB) {
+      const el = document.querySelector('html');
+      el?.setAttribute('data-theme', newTheme);
+    }
   };
 
   const turnLightOnClick = () => {
@@ -24,8 +30,10 @@ const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   };
 
   useEffect(() => {
-    const el = document.querySelector('html');
-    el?.setAttribute('data-theme', theme);
+    if (detectUtil() === DetectEnum.IS_WEB) {
+      const el = document.querySelector('html');
+      el?.setAttribute('data-theme', theme);
+    }
   }, [theme]);
 
   return (

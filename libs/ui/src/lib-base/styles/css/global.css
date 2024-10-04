@@ -3,6 +3,8 @@
 @import url('react-loading-skeleton/dist/skeleton.css');
 
 html {
+  color-scheme: light;
+
   --theme-netural-100-mode: var(--theme-netural-100);
   --theme-netural-200-mode: var(--theme-netural-200);
   --theme-netural-400-mode: var(--theme-netural-400);
@@ -17,6 +19,8 @@ html {
 }
 
 html[data-theme='dark'] {
+  color-scheme: dark;
+
   --theme-netural-100-mode: var(--theme-netural-100-dark);
   --theme-netural-200-mode: var(--theme-netural-200-dark);
   --theme-netural-400-mode: var(--theme-netural-400-dark);

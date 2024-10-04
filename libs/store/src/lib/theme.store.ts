@@ -5,11 +5,12 @@ export enum ThemeTypeEnum {
   DARK = 'dark',
 }
 
-const themeStore = (set: any, get: any) => ({
+const themeStore = (set: any) => ({
   theme: ThemeTypeEnum.LIGHT,
+  varThemeMode: null,
   isLocked: false,
-  updateTheme: (newTheme: ThemeTypeEnum) => {
-    set({ theme: newTheme });
+  updateTheme: (newTheme: ThemeTypeEnum, varThemeMode: any) => {
+    set({ theme: newTheme, varThemeMode });
   },
   toggleTheme: () => {
     set((state: any) => ({

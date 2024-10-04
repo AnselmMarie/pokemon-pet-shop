@@ -1,13 +1,22 @@
 import { StyleSheet } from 'react-native';
 
-import { THEME_FONT_24, THEME_NETURAL_100, THEME_SPACING_15 } from '../../styles/ts/variables';
+import {
+  THEME_FONT_24,
+  THEME_RADIUS_CIRCLE,
+  THEME_SPACING_15,
+  THEME_SPACING_5,
+} from '../../styles/ts/variables';
 
-export const styles = () =>
+export const styles = (varThemeMode: any) =>
   StyleSheet.create({
+    safeArea: {
+      flex: 1,
+      backgroundColor: varThemeMode?.THEME_NETURAL_100_MODE,
+    },
     modal: {
       width: '100%',
       height: '100%',
-      backgroundColor: THEME_NETURAL_100,
+      backgroundColor: varThemeMode?.THEME_NETURAL_100_MODE,
       position: 'relative',
     },
     center: {
@@ -45,5 +54,11 @@ export const styles = () =>
     modalHeadline: {
       fontSize: THEME_FONT_24,
       fontWeight: 'bold',
+    },
+    iconWrapper: {
+      backgroundColor: varThemeMode?.THEME_NETURAL_100_MODE,
+      borderRadius: THEME_RADIUS_CIRCLE,
+      padding: THEME_SPACING_5,
+      display: 'flex',
     },
   });

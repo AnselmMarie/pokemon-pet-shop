@@ -25,16 +25,10 @@ const Icon = ({
   }, [icon]);
 
   const iconClick = useCallback(() => {
-    if (!displayWrapper && typeof onClick === 'function' && !isDisabled) {
-      onClick();
-    }
-  }, [displayWrapper, onClick, isDisabled]);
-
-  const wrapperClick = useCallback(() => {
     if (typeof onClick === 'function' && !isDisabled) {
       onClick();
     }
-  }, [onClick, isDisabled]);
+  }, [isDisabled, onClick]);
 
   const renderIcon = useMemo(() => {
     const disabledStyles = isDisabled ? globalStyles.disabledElement : '';
@@ -52,10 +46,7 @@ const Icon = ({
 
   if (displayWrapper) {
     return (
-      <UiElementLayout
-        className={classNamesUtil(classNameWrapper, globalStyles.pointerCursor)}
-        onClick={wrapperClick}
-      >
+      <UiElementLayout className={classNamesUtil(classNameWrapper, globalStyles.pointerCursor)}>
         {renderIcon}
       </UiElementLayout>
     );
