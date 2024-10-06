@@ -5,13 +5,14 @@ import { ButtonSizeEnum, ButtonTypeEnum } from './button.enum';
 export interface ButtonProps {
   type?: ButtonTypeEnum;
   text?: string | null;
-  classNameText: string;
+  classNameText?: string;
+  classNameIcon?: string;
   className?: any;
   size?: ButtonSizeEnum;
-  appendIcon?: string;
-  appendImage?: string;
+  appendIcon?: string | null;
+  appendImage?: string | null;
   timerText?: string;
-  timerStyle?: string;
+  timerStyle?: string | null;
   isDisabled?: boolean;
   isSuccess?: boolean;
   onClick?: GenericNonReturnType;

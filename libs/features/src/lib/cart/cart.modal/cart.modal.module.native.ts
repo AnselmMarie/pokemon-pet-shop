@@ -41,4 +41,16 @@ export const styles = (varThemeMode: any) =>
       alignItems: 'center',
       padding: THEME_SPACING_15,
     },
+    totalContent: {
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
+    },
+    totalPrice: {
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
+    },
+    itemName: {
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
+    },
+    price: {
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
+    },
   });

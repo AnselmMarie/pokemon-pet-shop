@@ -8,11 +8,18 @@
 
 .buttonPrimary {
   background: var(--theme-blue-600);
+}
+
+.buttonPrimaryText {
   color: var(--theme-netural-100);
 }
 
 .buttonSecondary {
   background: var(--theme-netural-100);
+  color: var(--theme-blue-600);
+}
+
+.buttonSecondaryText {
   color: var(--theme-blue-600);
 }
 
@@ -23,7 +30,7 @@
 }
 
 .standard {
-  padding: var(--theme-spacing-5) var(--theme-spacing-15);
+  padding: var(--theme-spacing-10) var(--theme-spacing-15);
   font-size: var(--theme-font-13);
   align-items: center;
   justify-content: center;

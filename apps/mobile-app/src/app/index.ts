@@ -1,3 +1,3 @@
-import App from './bapp';
+import App from './app';
 
 export { App };

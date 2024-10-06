@@ -1,8 +1,11 @@
 import {
   THEME_FONT_13,
+  THEME_FONT_18,
   THEME_NETURAL_100,
   THEME_RADIUS_CIRCLE,
   THEME_SPACING_10,
+  THEME_SPACING_20,
+  THEME_SPACING_30,
   THEME_SPACING_5,
   THEME_TYPE_BUG_400,
   THEME_TYPE_BUG_900,
@@ -41,7 +44,7 @@ import {
 } from '@pokemon-pet-shop/ui/styles/var';
 import { StyleSheet } from 'react-native';
 
-export const styles = () =>
+export const styles = (varThemeMode) =>
   StyleSheet.create({
     atkWrapper: {
       display: 'flex',
@@ -64,6 +67,20 @@ export const styles = () =>
     atkText: {
       fontSize: THEME_FONT_13,
       color: THEME_NETURAL_100,
+    },
+    atkWrapperDetailModal: {
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
+      marginBottom: THEME_SPACING_30,
+      // height: auto,
+    },
+    atkCircleDetailModal: {
+      height: 35,
+      width: 35,
+      marginRight: THEME_SPACING_10,
+    },
+    atkTextDetailModal: {
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
+      fontSize: THEME_FONT_18,
     },
     /**
 Grass Theme

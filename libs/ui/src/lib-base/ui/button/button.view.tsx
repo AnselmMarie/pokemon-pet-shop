@@ -13,18 +13,24 @@ import { styles } from './button.module';
 const Button = ({
   type = ButtonTypeEnum.PRIMARY,
   className = '',
+  classNameText = '',
   text = null,
   size = ButtonSizeEnum.STANDARD,
   appendIcon = '',
   appendImage = '',
   timerText = '',
-  timerStyle = styles.buttonSuccess,
+  timerStyle = null,
   isDisabled = false,
   isSuccess = false,
   onClick,
 }: ButtonProps): ReactElement => {
   const [displaySuccessStyle, setDisplaySuccessStyle] = useState(false);
   const { newStyles } = useRenderStyles(styles);
+  const { newStyles: newGlobalStyles } = useRenderStyles(globalStyles);
+
+  const getTimerStyle = useMemo(() => {
+    return timerStyle || newStyles.buttonSuccess;
+  }, [timerStyle, newStyles]);
 
   const getTypeStyles = useMemo(() => {
     switch (type) {
@@ -33,6 +39,16 @@ const Button = ({
       case ButtonTypeEnum.PRIMARY:
       default:
         return newStyles.buttonPrimary;
+    }
+  }, [type, newStyles]);
+
+  const getTypeTextStyles = useMemo(() => {
+    switch (type) {
+      case ButtonTypeEnum.SECONDARY:
+        return newStyles.buttonSecondaryText;
+      case ButtonTypeEnum.PRIMARY:
+      default:
+        return newStyles.buttonPrimaryText;
     }
   }, [type, newStyles]);
 
@@ -46,9 +62,19 @@ const Button = ({
     }
   }, [size, newStyles]);
 
+  const getSizeTextStyles = useMemo(() => {
+    switch (size) {
+      case ButtonSizeEnum.LARGE:
+        return newStyles.largeText;
+      case ButtonSizeEnum.STANDARD:
+      default:
+        return newStyles.standardText;
+    }
+  }, [size, newStyles]);
+
   const getDisabledStyles = useMemo(() => {
-    return isDisabled ? globalStyles.disabledElementBg : '';
-  }, [isDisabled]);
+    return isDisabled ? newGlobalStyles.disabledElementBg : '';
+  }, [isDisabled, newGlobalStyles]);
 
   const getText = useMemo(() => {
     return displaySuccessStyle ? timerText : text;
@@ -71,9 +97,10 @@ const Button = ({
         newStyles.button,
         getTypeStyles,
         getDisabledStyles,
-        displaySuccessStyle ? timerStyle : ''
+        getSizeStyles,
+        displaySuccessStyle ? getTimerStyle : ''
       )}
-      classNameText={getSizeStyles}
+      classNameText={classNamesUtil(classNameText, getTypeTextStyles, getSizeTextStyles)}
       appendImage={appendImage}
       appendIcon={appendIcon}
       isDisabled={isDisabled || displaySuccessStyle}

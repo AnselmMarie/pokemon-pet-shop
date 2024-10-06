@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 
-import { UiPokemonList } from '@pokemon-pet-shop/features';
-import { UiContainer, UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
+import { UiFooter, UiPokemonList } from '@pokemon-pet-shop/features';
+import { UiContainer, UiElementLayout } from '@pokemon-pet-shop/ui';
 
 import { styles } from './homepage.module';
 
@@ -11,7 +11,7 @@ export const Homepage = (): ReactElement => {
       <UiContainer className={styles.contentWrapper}>
         <UiPokemonList />
       </UiContainer>
-      <UiTypography>footer</UiTypography>
+      <UiFooter />
     </UiElementLayout>
   );
 };

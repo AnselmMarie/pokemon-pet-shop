@@ -34,6 +34,8 @@ const Icon = ({
     const disabledStyles = isDisabled ? globalStyles.disabledElement : '';
     const clickableStyles = onClick ? globalStyles.pointerCursor : '';
 
+    console.log('IconComponent', IconComponent);
+
     return (
       <IconComponent
         size={size}

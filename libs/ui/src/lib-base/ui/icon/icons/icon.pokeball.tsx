@@ -3,12 +3,12 @@ import { ReactElement } from 'react';
 import { UiElementLayout } from '../../element.layout';
 import pokeBallImage from '../assets/poke.ball.png';
 
-import { IconSvgProps } from './icon.svg.interface';
+import { IconImageProps } from './icon.svg.interface';
 
-const IconPokeBall = ({ size, onClick }: IconSvgProps): ReactElement => {
+const IconPokeBall = ({ className, onClick }: IconImageProps): ReactElement => {
   return (
     <UiElementLayout onClick={onClick}>
-      <img width={size} height={size} src={pokeBallImage} alt="Pokeball" />
+      <img className={className} src={pokeBallImage} alt="Pokeball" />
     </UiElementLayout>
   );
 };

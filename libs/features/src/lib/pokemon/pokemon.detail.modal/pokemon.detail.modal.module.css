@@ -91,7 +91,8 @@
 
 .btnWrapper {
   margin-top: var(--theme-spacing-35);
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .bugThemeImageBg {

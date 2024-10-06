@@ -5,7 +5,7 @@ import { Svg, Path } from 'react-native-svg';
 
 import { IconSvgProps } from './icon.svg.interface';
 
-const IconCaretDown = ({ size, fill, onClick }: IconSvgProps): ReactElement => {
+const IconGithub = ({ size, fill, onClick }: IconSvgProps): ReactElement => {
   return (
     <TouchableHighlight onPress={onClick}>
       <Svg width={size} height={size} fill={fill} viewBox="0 0 24 24">
@@ -16,4 +16,4 @@ const IconCaretDown = ({ size, fill, onClick }: IconSvgProps): ReactElement => {
   );
 };
 
-export { IconCaretDown };
+export { IconGithub };

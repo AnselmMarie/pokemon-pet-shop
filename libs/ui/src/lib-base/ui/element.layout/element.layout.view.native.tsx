@@ -12,7 +12,7 @@ const ElementLayout = ({
   if (onClick !== null) {
     return (
       <TouchableHighlight style={className} onPress={onClick}>
-        {children}
+        <View>{children}</View>
       </TouchableHighlight>
     );
   }

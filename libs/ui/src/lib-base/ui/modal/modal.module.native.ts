@@ -54,6 +54,7 @@ export const styles = (varThemeMode: any) =>
     modalHeadline: {
       fontSize: THEME_FONT_24,
       fontWeight: 'bold',
+      color: varThemeMode?.THEME_NETURAL_900_MODE,
     },
     iconWrapper: {
       backgroundColor: varThemeMode?.THEME_NETURAL_100_MODE,

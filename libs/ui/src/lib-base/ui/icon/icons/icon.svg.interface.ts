@@ -5,3 +5,8 @@ export interface IconSvgProps {
   fill?: string;
   onClick?: GenericNonReturnType;
 }
+
+export interface IconImageProps {
+  className?: string;
+  onClick?: GenericNonReturnType;
+}
