@@ -7,8 +7,13 @@ import { TypographyProps } from './typography.interface';
 const Typography = ({
   className = '',
   children = null,
+  onClick,
 }: PropsWithChildren<TypographyProps>): ReactElement => {
-  return <Text style={className}>{children}</Text>;
+  return (
+    <Text style={className} onPress={onClick}>
+      {children}
+    </Text>
+  );
 };
 
 export default memo(Typography);

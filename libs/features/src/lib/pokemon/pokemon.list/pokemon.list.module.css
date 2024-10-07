@@ -14,7 +14,8 @@
 }
 
 .btnWrapper {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-top: var(--theme-spacing-35);
   margin-bottom: var(--theme-spacing-35);
 }

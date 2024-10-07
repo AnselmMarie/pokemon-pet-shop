@@ -11,8 +11,8 @@ const ElementLayout = ({
 }: PropsWithChildren<ElementLayoutProps>): ReactElement => {
   if (onClick !== null) {
     return (
-      <TouchableHighlight style={className} onPress={onClick}>
-        <View>{children}</View>
+      <TouchableHighlight onPress={onClick}>
+        <View style={className}>{children}</View>
       </TouchableHighlight>
     );
   }

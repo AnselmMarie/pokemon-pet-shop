@@ -1,10 +1,9 @@
 import { memo, ReactElement, useEffect } from 'react';
 
 import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
-import { DetectEnum } from '@pokemon-pet-shop/typing';
 import { IconTypeEnum, SwitchStatusEnum, UiSwitch } from '@pokemon-pet-shop/ui';
 import { variableThemeMode } from '@pokemon-pet-shop/ui/styles/var';
-import { detectUtil } from '@pokemon-pet-shop/utils';
+import { isWebUtil } from '@pokemon-pet-shop/utils';
 
 import { SwitchProps } from './switch.theme.interface';
 
@@ -15,7 +14,7 @@ const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
     const varThemeMode = variableThemeMode(newTheme);
     updateTheme(newTheme, varThemeMode);
 
-    if (detectUtil() === DetectEnum.IS_WEB) {
+    if (isWebUtil()) {
       const el = document.querySelector('html');
       el?.setAttribute('data-theme', newTheme);
     }
@@ -30,7 +29,7 @@ const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   };
 
   useEffect(() => {
-    if (detectUtil() === DetectEnum.IS_WEB) {
+    if (isWebUtil()) {
       const el = document.querySelector('html');
       el?.setAttribute('data-theme', theme);
     }

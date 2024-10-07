@@ -17,3 +17,4 @@ export * from './lib-base/ui/tag';
 export * from './lib-base/ui/switch';
 export * from './lib-base/ui/skeleton';
 export * from './lib-base/ui/scroll.wrapper';
+export * from './lib-base/ui/link';
