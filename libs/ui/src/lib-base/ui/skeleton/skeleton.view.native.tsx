@@ -1,12 +1,11 @@
 import { ReactElement } from 'react';
 
-import { useRenderStyles } from '@pokemon-pet-shop/hooks';
+import Skeleton from 'react-native-reanimated-skeleton';
 
-import { THEME_RADIUS_8, THEME_RADIUS_CIRCLE, THEME_SPACING_15 } from '../../styles/ts/variables';
+import { THEME_RADIUS_PILL, THEME_SPACING_15 } from '../../styles/ts/variables';
 import { UiElementLayout } from '../element.layout';
 
 import { SkeletonProps } from './skeleton.interface';
-import { styles } from './skeleton.module.native';
 
 const SkeletonView = ({
   count = 1,
@@ -14,8 +13,7 @@ const SkeletonView = ({
   height = 15,
   circle = false,
 }: SkeletonProps): ReactElement => {
-  const { newStyles } = useRenderStyles(styles);
-  const borderRadiusStyle = circle ? THEME_RADIUS_CIRCLE : THEME_RADIUS_8;
+  // const borderRadiusStyle = circle ? THEME_RADIUS_CIRCLE : THEME_RADIUS_8;
   let newCount;
 
   if (circle) {
@@ -29,22 +27,25 @@ const SkeletonView = ({
   const arr = Array(newCount).fill({});
 
   return (
-    <>
+    <UiElementLayout>
       {arr.map((el: any, i: number): ReactElement => {
         return (
-          <UiElementLayout key={i} className={{ marginBottom: count > 1 ? THEME_SPACING_15 : '' }}>
-            <UiElementLayout
-              className={{
-                width: count > 1 && i === arr.length - 1 ? '50%' : width,
+          <Skeleton
+            key={i}
+            layout={[
+              {
+                key: 'someId',
+                width,
                 height,
-                backgroundColor: newStyles.skeletonBg,
-                borderRadius: borderRadiusStyle,
-              }}
-            />
-          </UiElementLayout>
+                borderRadius: THEME_RADIUS_PILL,
+                marginBottom: count === 1 ? 0 : THEME_SPACING_15,
+              },
+            ]}
+            isLoading
+          />
         );
       })}
-    </>
+    </UiElementLayout>
   );
 };
 

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "postinstall": "sh ./tools/scripts/postinstall.sh",
     "prepare": "husky",
     "lint-staged": "npx lint-staged --verbose"
   },
@@ -52,6 +53,7 @@
     "react-native-dotenv": "^3.4.11",
     "react-native-error-boundary": "^1.2.4",
     "react-native-reanimated": "~3.10.1",
+    "react-native-reanimated-skeleton": "^1.5.1",
     "react-native-svg": "15.2.0",
     "react-native-svg-transformer": "^1.5.0",
     "react-native-web": "~0.19.11",
@@ -62,7 +64,8 @@
     "tslib": "^2.3.0",
     "usehooks-ts": "^3.1.0",
     "yup": "^1.4.0",
-    "zustand": "^4.5.4"
+    "zustand": "^4.5.4",
+    "expo-linear-gradient": "~13.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",

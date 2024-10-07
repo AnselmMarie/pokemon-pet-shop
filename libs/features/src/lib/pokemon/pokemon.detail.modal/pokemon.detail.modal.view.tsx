@@ -68,7 +68,7 @@ const PokemonDetailModal = (): ReactElement => {
               {!pricingIsLoading && !speciesIsLoading ? (
                 onGetPricingFormat
               ) : (
-                <UiSkeleton width="100px" />
+                <UiSkeleton width={100} />
               )}
             </UiTypography>
           </UiElementLayout>
@@ -111,12 +111,16 @@ const PokemonDetailModal = (): ReactElement => {
                 </UiTagWrapper>
               ) : null}
 
-              <UiTypography
-                className={newStyles.cardDescription}
-                typographyType={TypographyTypeEnum.P}
-              >
-                {!speciesIsLoading ? removeHtmlCodeInDescription : <UiSkeleton count={2} />}
-              </UiTypography>
+              {!speciesIsLoading ? (
+                <UiTypography
+                  className={newStyles.cardDescription}
+                  typographyType={TypographyTypeEnum.P}
+                >
+                  {removeHtmlCodeInDescription}
+                </UiTypography>
+              ) : (
+                <UiSkeleton count={2} />
+              )}
 
               <UiElementLayout className={newStyles.weightHeightWrapper}>
                 <UiTypography className={newStyles.weight} typographyType={TypographyTypeEnum.P}>

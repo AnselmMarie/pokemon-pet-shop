@@ -130,8 +130,6 @@ const usePokemonDetailModalLogic = (): PokemonDetailModalReturn => {
     pricingData,
   ]);
 
-  console.log('updateCartMutation', updateCartMutation);
-
   return {
     modalData,
     speciesData,
