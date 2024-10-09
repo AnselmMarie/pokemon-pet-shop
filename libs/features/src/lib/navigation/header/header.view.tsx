@@ -11,6 +11,7 @@ import {
   TypographyTypeEnum,
   UiContainer,
   UiHideInMobile,
+  UiServerError,
 } from '@pokemon-pet-shop/ui';
 import { THEME_BLUE_400 } from '@pokemon-pet-shop/ui/styles/var';
 
@@ -72,6 +73,7 @@ const Header = () => {
           </UiElementLayout>
         </UiElementLayout>
       </UiContainer>
+      <UiServerError />
     </UiElementLayout>
   );
 };

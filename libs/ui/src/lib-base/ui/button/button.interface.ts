@@ -15,5 +15,6 @@ export interface ButtonProps {
   timerStyle?: string | null;
   isDisabled?: boolean;
   isSuccess?: boolean;
+  isLoading?: boolean;
   onClick?: GenericNonReturnType;
 }

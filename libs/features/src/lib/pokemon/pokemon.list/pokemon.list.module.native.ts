@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     alignContent: 'space-between',
     gap: THEME_SPACING_15,
     flexWrap: 'wrap',
+    marginBottom: THEME_SPACING_45,
     justifyContent: 'center',
   },
   failureWrapper: {

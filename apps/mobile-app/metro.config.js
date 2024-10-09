@@ -24,6 +24,7 @@ const svgConfig = {
 module.exports = withNxMetro(mergeConfig(defaultConfig, svgConfig), {
   // Change this to true to see debugging info.
   // Useful if you have issues resolving modules
+  // cacheVersion: process.env.APP_ENV,
   debug: false,
   // all the file extensions used for imports other than 'ts', 'tsx', 'js', 'jsx', 'json'
   extensions: [],

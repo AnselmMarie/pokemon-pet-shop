@@ -6,4 +6,5 @@ export interface PokemonAbilityNameProps {
   getThemeClass: string;
   showAtkLine?: boolean;
   displayInDetail?: boolean;
+  isLoading?: boolean;
 }

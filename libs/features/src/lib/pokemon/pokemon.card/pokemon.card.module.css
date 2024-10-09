@@ -8,6 +8,14 @@
   position: relative;
 }
 
+.cardWrapperLoading {
+  background: var(--theme-netural-200-mode);
+}
+
+.contentCardWrapperIsLoading {
+  background-color: var(--theme-netural-400-mode);
+}
+
 .cardWrapperShadowLight {
   box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
 }
@@ -25,6 +33,12 @@
   flex-direction: column;
 }
 
+.imgCardIsLoadingWrapper {
+  width: 50%;
+  height: 70%;
+  margin: var(--theme-spacing-20) var(--theme-spacing-15);
+}
+
 .price {
   text-align: center;
 }
@@ -40,6 +54,10 @@
   width: 100%;
   border-radius: var(--theme-radius-8);
   padding: var(--theme-spacing-10) var(--theme-spacing-10);
+}
+
+.cardContentTopIsLoadingWrapper {
+  margin-bottom: var(--theme-spacing-5);
 }
 
 .cardSubHeadlineWrapper {
@@ -84,6 +102,13 @@
     max-width: 100%;
     background: none;
     display: block;
+  }
+
+  .imgCardIsLoadingWrapper {
+    flex: 1;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto var(--theme-spacing-15);
   }
 
   .price {

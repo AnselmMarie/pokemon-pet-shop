@@ -73,4 +73,11 @@ export const styles = () =>
       alignItems: 'center',
       justifyContent: 'center',
     },
+    buttonInnerIsLoadingWrapper: {
+      width: '100%',
+      paddingTop: THEME_SPACING_10,
+      paddingBottom: THEME_SPACING_10,
+      paddingLeft: THEME_SPACING_15,
+      paddingRight: THEME_SPACING_15,
+    },
   });

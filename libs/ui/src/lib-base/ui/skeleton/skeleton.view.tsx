@@ -31,7 +31,7 @@ const SkeletonView = ({
           <Skeleton
             key={i}
             width={width}
-            height={circle ? '100%' : height}
+            height={height}
             style={{ marginBottom: count === 1 ? 0 : THEME_SPACING_15 }}
             borderRadius={THEME_RADIUS_8}
             circle={circle}

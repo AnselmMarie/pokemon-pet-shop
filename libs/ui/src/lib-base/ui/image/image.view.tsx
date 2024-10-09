@@ -6,7 +6,7 @@ import { ImageProps } from './image.interface';
 
 const Image = ({ src = '', alt = '', className = null, isLoading }: ImageProps): ReactElement => {
   if (isLoading) {
-    return <UiSkeleton circle />;
+    return <UiSkeleton height="100%" circle />;
   }
   return <img src={src} alt={alt} className={className} />;
 };

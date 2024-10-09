@@ -4,4 +4,5 @@ export interface IconPokeTypeProps {
   type: IconPokeTypeEnum;
   size: string;
   className?: any;
+  isLoading?: boolean;
 }

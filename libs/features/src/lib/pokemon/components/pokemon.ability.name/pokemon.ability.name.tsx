@@ -7,6 +7,7 @@ import {
   UiTypography,
   TypographyTypeEnum,
   UiHideInMobile,
+  UiSkeleton,
 } from '@pokemon-pet-shop/ui';
 import { capitalizeNameUtil, classNamesUtil } from '@pokemon-pet-shop/utils';
 
@@ -19,6 +20,7 @@ const PokemonAbilityName = ({
   getThemeClass = '',
   showAtkLine = true,
   displayInDetail = false,
+  isLoading = false,
 }: PokemonAbilityNameProps): ReactElement => {
   const { newStyles } = useRenderStyles(styles);
 
@@ -31,6 +33,9 @@ const PokemonAbilityName = ({
   }, [showAtkLine, newStyles]);
 
   const formatName = useMemo(() => {
+    if (!abilityData?.ability?.name) {
+      return;
+    }
     const splitName = abilityData?.ability?.name.split('-');
 
     const capitalizeName = splitName.map((el) => {
@@ -59,6 +64,7 @@ const PokemonAbilityName = ({
           />
         </UiHideInMobile>
       ) : null}
+
       <UiElementLayout
         className={classNamesUtil(
           newStyles.atkCircle,
@@ -67,8 +73,13 @@ const PokemonAbilityName = ({
           newStyles?.[`${getThemeClass}AtkCircle`]
         )}
       >
-        <UiIconPokeType type={typeData?.[0]?.type?.name} size={displayInDetail ? '18' : '10'} />
+        {isLoading ? (
+          <UiIconPokeType type={typeData?.[0]?.type?.name} size={12} isLoading={isLoading} />
+        ) : (
+          <UiIconPokeType type={typeData?.[0]?.type?.name} size={displayInDetail ? '18' : '10'} />
+        )}
       </UiElementLayout>
+
       <UiTypography
         className={classNamesUtil(
           newStyles.atkText,
@@ -77,7 +88,7 @@ const PokemonAbilityName = ({
         )}
         typographyType={TypographyTypeEnum.SPAN}
       >
-        {formatName}
+        {isLoading ? <UiSkeleton width={100} /> : formatName}
       </UiTypography>
     </UiElementLayout>
   );

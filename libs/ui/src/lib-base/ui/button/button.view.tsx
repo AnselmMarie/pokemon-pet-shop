@@ -22,6 +22,7 @@ const Button = ({
   timerStyle = null,
   isDisabled = false,
   isSuccess = false,
+  isLoading = false,
   onClick,
 }: ButtonProps): ReactElement => {
   const [displaySuccessStyle, setDisplaySuccessStyle] = useState(false);
@@ -104,6 +105,7 @@ const Button = ({
       appendImage={appendImage}
       appendIcon={appendIcon}
       isDisabled={isDisabled || displaySuccessStyle}
+      isLoading={isLoading}
       onClick={onClick}
     />
   );
