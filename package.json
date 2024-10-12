@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "postinstall": "sh ./tools/scripts/postinstall.sh",
     "prepare": "husky",
-    "lint-staged": "npx lint-staged --verbose"
+    "lint-staged": "npx lint-staged --verbose",
+    "docker-web-build:dev": "docker-compose -f docker-compose.dev.yml build",
+    "docker-web-up:dev": "docker-compose -f docker-compose.dev.yml up",
+    "docker-web-build:prod": "docker-compose -f docker-compose.prod.yml build",
+    "docker-web-up:prod": "docker-compose -f docker-compose.prod.yml up"
   },
   "private": true,
   "lint-staged": {

@@ -1,0 +1,28 @@
+# Stage 1: Build
+FROM node:20.18.0-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+RUN npm install prune --legacy-peer-deps
+
+# Copy the project files
+COPY . .
+RUN npx nx run web-app:build
+
+# Stage 2: Serve
+FROM nginx:alpine AS production
+
+# WORKDIR /app
+
+# Copy the build from the previous stage
+COPY --from=builder /app/dist/apps/web-app /usr/share/nginx/html
+
+# Expose the port the app runs on
+EXPOSE 80
+
+# Serve the app in production mode
+CMD ["nginx", "-g", "daemon off;"]

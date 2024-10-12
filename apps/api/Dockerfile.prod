@@ -1,0 +1,48 @@
+# Stage 1: Build
+FROM node:20.18.0-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+
+# Copy the project files
+COPY . .
+RUN npx nx run api:build
+
+# Stage 2: Serve
+FROM node:18-alpine AS runtime
+
+WORKDIR /app
+
+# Copy the build from the previous stage
+COPY --from=builder /app/dist/apps/api ./dist
+COPY package*.json ./
+
+# Install a lightweight HTTP server to serve the static files
+RUN npm install --legacy-peer-deps
+RUN npm install prune --legacy-peer-deps
+
+# Expose the port the app runs on
+EXPOSE 3333
+
+# Serve the app in production mode
+CMD ["node", "dist/main.js"]
+
+
+
+
+
+# Expose the Node.js server port
+# EXPOSE 3001
+
+# Start the server with nodemon for hot reloading
+# CMD ["npm", "start", "api"]
+
+# RUN npx nx run api:serve --configuration=production
+# CMD ["serve", "-s", "dist", "-l", "5000"]
+# CMD ["npm", "serve", "api"]
+# CMD npx nx reset && npx nx run api:serve --configuration=production
+# CMD ["serve", "-s", "dist", "-l", "3333"]

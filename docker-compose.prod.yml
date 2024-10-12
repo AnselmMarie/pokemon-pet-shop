@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./apps/web-app/Dockerfile.prod
+    ports:
+      - '4200:80'
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile.prod
+    ports:
+      - '3333:3333'
+    environment:
+      - NODE_ENV=production

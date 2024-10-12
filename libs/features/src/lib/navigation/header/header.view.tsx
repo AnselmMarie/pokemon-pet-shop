@@ -1,4 +1,3 @@
-import { pokeshopLogo } from '@pokemon-pet-shop/assets';
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import {
   UiElementLayout,
@@ -19,6 +18,7 @@ import { UiSwitchTheme } from '../component/switch.theme';
 
 import { NAV_FEATURE_FLAG } from './header.const';
 import { styles } from './header.module';
+import pokeshopLogo from './pokeshop-logo.png';
 import useHeaderLogic from './use.header.logic';
 
 const Header = () => {
