@@ -4,14 +4,17 @@ FROM node:20.18.0-alpine AS builder
 # Set working directory
 WORKDIR /app
 
+ENV HUSKY_SKIP_INSTALL=1
+
 # Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
-RUN npm install prune --legacy-peer-deps
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+RUN npm ci nx@19.5.6
 
 # Copy the project files
+COPY .env.production .env
 COPY . .
-RUN npx nx run web-app:build
+RUN npx nx run web-app:build -- --mode production
 
 # Stage 2: Serve
 FROM nginx:alpine AS production

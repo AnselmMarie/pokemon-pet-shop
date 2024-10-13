@@ -46,6 +46,7 @@ node_modules/
 .expo/
 .yarn/
 .env
+.env.production
 dist/
 npm-debug.*
 *.jks

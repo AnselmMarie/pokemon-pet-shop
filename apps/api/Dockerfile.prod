@@ -4,11 +4,15 @@ FROM node:20.18.0-alpine AS builder
 # Set working directory
 WORKDIR /app
 
+ENV HUSKY_SKIP_INSTALL=1
+
 # Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+RUN npm ci nx@19.5.6
 
 # Copy the project files
+COPY .env.production .env
 COPY . .
 RUN npx nx run api:build
 
@@ -22,8 +26,8 @@ COPY --from=builder /app/dist/apps/api ./dist
 COPY package*.json ./
 
 # Install a lightweight HTTP server to serve the static files
-RUN npm install --legacy-peer-deps
-RUN npm install prune --legacy-peer-deps
+RUN npm ci
+#--legacy-peer-deps
 
 # Expose the port the app runs on
 EXPOSE 3333

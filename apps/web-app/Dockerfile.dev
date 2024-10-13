@@ -5,7 +5,6 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package*.json ./
-# COPY tools/scripts/postinstall.sh ./tools/scripts/postinstall.sh
 RUN npm install --legacy-peer-deps
 
 # Copy the project files

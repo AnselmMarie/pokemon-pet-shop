@@ -1,11 +1,19 @@
 /// <reference types='vitest' />
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
 import { defineConfig } from 'vite';
+
+dotenv.config();
+
+console.log('process.env', process.env);
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/web-app',
+  // define: {
+  //   'process.env': process.env,
+  // },
 
   server: {
     port: 4200,

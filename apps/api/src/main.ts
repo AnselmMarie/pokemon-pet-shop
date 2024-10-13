@@ -12,7 +12,18 @@ const app = express();
 app.set('trust proxy', true);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+const whitelist = ['http://localhost:4200', 'http://localhost:80', 'http://localhost:3333'];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+  })
+);
 app.use(cacheMiddleware);
 
 // Using Routes

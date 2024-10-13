@@ -5,8 +5,8 @@ services:
       dockerfile: ./apps/web-app/Dockerfile.prod
     ports:
       - '4200:80'
-    environment:
-      - NODE_ENV=production
+    env_file:
+      - .env.production
     depends_on:
       - api
 
@@ -16,5 +16,5 @@ services:
       dockerfile: ./apps/api/Dockerfile.prod
     ports:
       - '3333:3333'
-    environment:
-      - NODE_ENV=production
+    env_file:
+      - .env.production

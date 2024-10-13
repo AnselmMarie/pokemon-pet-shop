@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "if [ \"$NODE_ENV\" = \"development\" ]; then husky install; fi",
     "lint-staged": "npx lint-staged --verbose",
     "docker-web-build:dev": "docker-compose -f docker-compose.dev.yml build",
     "docker-web-up:dev": "docker-compose -f docker-compose.dev.yml up",
@@ -35,6 +35,7 @@
     "axios": "^1.6.0",
     "classnames": "^2.5.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "eslint-plugin-prettier": "^5.2.1",
     "expo": "^51.0.37",
     "expo-linear-gradient": "~13.0.2",
