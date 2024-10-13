@@ -8,8 +8,8 @@ ENV HUSKY_SKIP_INSTALL=1
 
 # Copy package files and install dependencies
 COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
-RUN npm ci nx@19.5.6
+RUN npm install --omit=dev
+RUN npm install nx@19.5.6
 
 # Copy the project files
 COPY .env.production .env
