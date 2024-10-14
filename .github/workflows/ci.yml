@@ -29,13 +29,18 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: npm ci --legacy-peer-deps
+      - run: npm install
       - uses: nrwl/nx-set-shas@v4
 
       - name: Set NX environment variables
         run: |
           echo "NX_BASE=$(git merge-base origin/main HEAD)" >> $GITHUB_ENV
           echo "NX_HEAD=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
+      - name: Debug NX variables
+        run: |
+          echo "NX_BASE=$NX_BASE"
+          echo "NX_HEAD=$NX_HEAD"
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
