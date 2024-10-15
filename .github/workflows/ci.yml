@@ -47,9 +47,11 @@ jobs:
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
       # - run: npx nx affected -t lint-staged build
       - name: Run affected lint
-        run: npx nx affected:lint --base=$NX_BASE --head=$NX_HEAD
         env:
+          NODE_OPTIONS: '--experimental-vm-modules'
           NX_BASE: ${{ env.NX_BASE }}
           NX_HEAD: ${{ env.NX_HEAD }}
+        run: NX_VERBOSE_LOGGING=true npx nx affected:lint --base=$NX_BASE --head=$NX_HEAD
+
       # - run: npx nx affected:test
       # - run: npx nx affected --parallel 1 -t e2e-ci
