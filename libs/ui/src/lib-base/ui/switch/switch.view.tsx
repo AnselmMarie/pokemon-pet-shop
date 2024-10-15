@@ -3,7 +3,6 @@ import { memo, ReactElement } from 'react';
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
-import { THEME_BLUE_400, THEME_NETURAL_100 } from '../../styles/ts/variables';
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 

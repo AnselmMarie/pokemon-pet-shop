@@ -37,11 +37,6 @@ jobs:
           echo "NX_BASE=$(git merge-base origin/main HEAD)" >> $GITHUB_ENV
           echo "NX_HEAD=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
-      - name: Debug NX variables
-        run: |
-          echo "NX_BASE=$NX_BASE"
-          echo "NX_HEAD=$NX_HEAD"
-
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected

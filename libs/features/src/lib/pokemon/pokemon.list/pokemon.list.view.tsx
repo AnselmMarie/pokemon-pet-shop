@@ -10,11 +10,10 @@ import image from './assets/bulbasaur.gif';
 import { styles } from './pokemon.list.module';
 import usePokemonList from './use.pokemon.list.logic';
 
-/** Use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction  */
+/** @todo Use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction but I need to see find a React Native alternative  */
 const PokemonList = (): ReactElement => {
   const {
     data = [],
-    isError,
     isLoading,
     isFetchingNextPage,
     hasNextPage,

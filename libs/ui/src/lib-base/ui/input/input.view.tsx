@@ -1,23 +1,25 @@
+/* @todo this component needs to be updated */
+
 import { ReactElement } from 'react';
 
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
-import { useController } from 'react-hook-form';
+// import { useController } from 'react-hook-form';
 
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
 
 import InputElement from './input.element.view';
-import { InputTypeEnum } from './input.enum';
+// import { InputTypeEnum } from './input.enum';
 import { InputProps } from './input.interface';
 import styles from './input.module.css';
 
 const Input = ({
-  name = '',
-  type = InputTypeEnum.TEXT,
-  control = null,
+  // name = '',
+  // type = InputTypeEnum.TEXT,
+  // control = null,
   iconClassname = '',
   appendIcon = null,
-  defaultValue = '',
+  // defaultValue = '',
 }: InputProps): ReactElement => {
   // const { field } = useController({
   //   control,

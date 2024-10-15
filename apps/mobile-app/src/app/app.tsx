@@ -22,6 +22,7 @@ export const App = () => {
   const { theme, updateTheme } = useThemeStore();
   const { newStyles } = useRenderStyles(styles);
 
+  /** @todo update the useEffect to add dependencies but test it to work sure it doesn't break */
   useEffect(() => {
     const varThemeMode = variableThemeMode(theme);
     updateTheme(theme, varThemeMode);
