@@ -5,6 +5,7 @@ FROM node:20.18.0-alpine AS builder
 WORKDIR /app
 
 ENV HUSKY_SKIP_INSTALL=1
+ENV npm_config_ignore_scripts=true
 
 # Copy package files and install dependencies
 COPY package.json package-lock.json ./
