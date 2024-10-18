@@ -1,5 +1,7 @@
 # Pokéshop
 
+This project is still under development, so you may encounter some features or sections that are not yet fully completed.
+
 ## Table of Contents
 
 - [Overview](#overview)
