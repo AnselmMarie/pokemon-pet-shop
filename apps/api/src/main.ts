@@ -16,7 +16,7 @@ const whitelist = ['http://localhost:4200', 'http://localhost:80', 'http://local
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (whitelist.indexOf(origin) !== -1) {
+      if (whitelist.indexOf(origin) !== -1 || !origin) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));

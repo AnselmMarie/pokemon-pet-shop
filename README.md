@@ -17,7 +17,6 @@ As a personal challenge, I set out to build a project that maximizes code sharin
 - Web: https://github.com/user-attachments/assets/202ef1ff-fc2c-4e2b-83b1-113bf1d0503b
 - Mobile: https://github.com/user-attachments/assets/3f150cd7-f978-4f99-ab90-bc87b070e27b (The Ui currently needs to match up with the web version)
 
-
 ## Installation
 
 You can either use the nx commands or use docker compose
