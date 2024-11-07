@@ -15,7 +15,7 @@ As a personal challenge, I set out to build a project that maximizes code sharin
 
 - Figma: TBD
 - Web: https://github.com/user-attachments/assets/202ef1ff-fc2c-4e2b-83b1-113bf1d0503b
-- Mobile: https://github.com/user-attachments/assets/3f150cd7-f978-4f99-ab90-bc87b070e27b
+- Mobile: https://github.com/user-attachments/assets/3f150cd7-f978-4f99-ab90-bc87b070e27b (The Ui currently needs to match up with the web version)
 
 
 ## Installation
@@ -103,7 +103,7 @@ Docker
 - Style Directory
 - Figma
 - Husky / ESLint / Prettier / Stylelint
-- Github Actions
+- GitHub Actions
 - Future Additions
   - Storybook
   - React Testing Library and Jest
@@ -111,7 +111,7 @@ Docker
 
 ## Process of the building Pokéshop
 
-This application covers key stages of building a Greenfield project, including design, app architecture, APIs, CI/CD, and future deployment. Below, I’ve outlined each step of the process with a detailed explanation. Since this is a personal project, there are certain aspects I approached differently compared to how I would handle a client project.
+This application covers key stages of building a Greenfield project, including design, app architecture, APIs, CI/CD, and future deployment. Below, I’ve outlined each step of the process with a detailed explanation. Since this is a personal project, there are certain aspects I would approach differently compared to how I would handle a client project.
 
 ### Design
 
@@ -119,13 +119,13 @@ Once I decided to build a Pokédex with a unique twist—allowing users to purch
 
 ### Design/App DS Token Handoff
 
-To simplify the handoff process, I installed the "Design Tokens" plugin, which allows me to export local variables in JSON format. I then add this JSON file to the "libs/ds-token" project and run a command that compiles the design tokens into both CSS and JS formats. This setup makes it easy to update tokens across applications whenever I modify Figma's local variables, ensuring a smooth and efficient workflow.
+To simplify the handoff process, I installed the "Design Tokens" plugin, which allows me to export local variables in JSON format. I then add this JSON file to the "libs/ds-token" project and run a command that compiles the design tokens for CSS and JS formats. This setup makes it easy to update tokens across applications whenever I modify Figma's local variables, ensuring a smooth and efficient workflow.
 
 ### App Architecture
 
-When building the applications, my primary goal was to maximize code reusability across all platforms without compromising the unique capabilities of each. As the sole developer, sharing code between platforms was essential for maintaining efficiency. To achieve this, I used Nx to set up a monorepo, organizing the codebase into apps (API, web, mobile) and libraries (features, types, store, UI) to ensure clear separation of concerns.
+When building the applications, my primary goal was to maximize code reusability across all platforms without compromising the unique capabilities of each. As the sole developer, sharing code between platforms was essential for maintaining efficiency. To achieve this, I used Nx to set up a monorepo, organizing the codebase into apps (API, web, mobile) and libraries (features, types, store, UI) to ensure a separation of concern.
 
-While I considered using React Native and React Native Web for quicker development, I chose not to, as it would limit my flexibility on the web. Specifically, I wanted to keep options open for using technologies like micro-frontends, Vite, CSS modules, and React-specific components. This approach allowed me to maintain flexibility and avoid constraints. For the API project, I structured the directory with scalability in mind, enabling a smooth transition to microservices if needed in the future.
+While I considered using React Native and React Native Web for quicker development, I chose not to, as it would limit my flexibility on the web. Specifically, I wanted to keep options open for using technologies like micro-frontends, Vite, CSS modules, and React-specific components. This approach allowed me to maintain flexibility and avoid constraints. For the API project, I structured the directory with scalability in mind, enabling a smooth transition to microservices if needed.
 
 ### CI/CD
 
