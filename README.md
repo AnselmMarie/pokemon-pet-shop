@@ -1,6 +1,6 @@
 # Pokéshop
 
-This project is still under development, so you may encounter some features or sections that are not yet fully completed.
+!! This project is still under development, so you may encounter some features or sections that are not yet fully completed !!
 
 ## Table of Contents
 
@@ -13,9 +13,10 @@ This project is still under development, so you may encounter some features or s
 
 As a personal challenge, I set out to build a project that maximizes code sharing across web, native, and API applications, without compromising the capabilities of any platform. Below are links showcasing various parts of the project.
 
-- Figma -> TBD
-- Web -> TBD
-- Mobile -> TBD
+- Figma: TBD
+- Web: https://github.com/user-attachments/assets/202ef1ff-fc2c-4e2b-83b1-113bf1d0503b
+- Mobile: https://github.com/user-attachments/assets/3f150cd7-f978-4f99-ab90-bc87b070e27b
+
 
 ## Installation
 
