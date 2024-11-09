@@ -17,13 +17,14 @@ const Footer = () => {
           icon={IconTypeEnum.ICON_GITHUB}
           size={20}
           classNameIcon={styles.githubIcon}
-          color={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100}
+          stroke="none"
+          fill={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100}
         />
         <UiTypography>Github Project</UiTypography>
       </UiLink>
       <UiTypography className={styles.footerDivider}>|</UiTypography>
       <UiElementLayout className={styles.scanWrapper}>
-        <UiIcon color={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100} />
+        <UiIcon stroke={theme === ThemeTypeEnum.LIGHT ? THEME_NETURAL_900 : THEME_NETURAL_100} />
         <UiTypography>Scan QR code for mobile app</UiTypography>
       </UiElementLayout>
     </UiElementLayout>

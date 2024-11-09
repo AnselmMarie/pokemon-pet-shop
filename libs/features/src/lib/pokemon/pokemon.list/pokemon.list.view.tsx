@@ -26,8 +26,10 @@ const PokemonList = (): ReactElement => {
   } = usePokemonList();
 
   const newData = useMemo(() => {
+    const countNum = 50;
     const template = { abilities: [{}, {}] };
-    return skeletonLoadDataUtil(data, isLoading, template, true, data?.length * 50);
+    const arrCount = data && data.length !== 0 ? data.length * countNum : countNum;
+    return skeletonLoadDataUtil(data, isLoading, template, true, arrCount);
   }, [data, isLoading]);
 
   if (newData?.length === 0 && !hasNextPage) {

@@ -13,7 +13,8 @@ import { IconMap } from './icon.util';
 const Icon = ({
   icon = IconTypeEnum.ICON_SHOPPING_CART,
   size = 36,
-  color = THEME_BLUE_400,
+  fill = 'white',
+  stroke = THEME_BLUE_400,
   classNameIcon = null,
   classNameWrapper = null,
   displayWrapper = false,
@@ -37,12 +38,13 @@ const Icon = ({
     return (
       <IconComponent
         size={size}
-        color={isDisabled ? THEME_NETURAL_600 : color}
+        fill={!isDisabled ? fill || 'white' : THEME_NETURAL_600}
+        stroke={!isDisabled ? stroke : THEME_NETURAL_600}
         className={classNamesUtil(classNameIcon, clickableStyles, disabledStyles)}
         onClick={iconClick}
       />
     );
-  }, [size, IconComponent, color, classNameIcon, isDisabled, iconClick, onClick]);
+  }, [size, IconComponent, fill, stroke, classNameIcon, isDisabled, iconClick, onClick]);
 
   if (displayWrapper) {
     return (

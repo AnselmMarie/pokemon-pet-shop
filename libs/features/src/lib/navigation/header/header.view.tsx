@@ -65,11 +65,7 @@ const Header = () => {
                 </UiTypography>
               </UiElementLayout>
             ) : null}
-            <UiIcon
-              classNameIcon={newStyles.iconCart}
-              color={THEME_BLUE_400}
-              onClick={onHandleCartModalClick}
-            />
+            <UiIcon classNameIcon={newStyles.iconCart} onClick={onHandleCartModalClick} />
           </UiElementLayout>
         </UiElementLayout>
       </UiContainer>

@@ -59,19 +59,19 @@ const CartModalItem = ({ el }: any): ReactElement => {
             {pricingFormatUSD(el?.price)}
           </UiTypography>
 
-          <UiElementLayout className={styles.quantityWrapper}>
+          <UiElementLayout className={newStyles?.countPillWrapper}>
             <UiIcon
               icon={IconTypeEnum.ICON_MINUS}
-              classNameIcon={styles.quantityIcon}
-              color={theme === ThemeTypeEnum.LIGHT ? THEME_BLUE_600 : THEME_NETURAL_100}
+              size={24}
+              stroke={theme === ThemeTypeEnum.LIGHT ? THEME_BLUE_600 : THEME_NETURAL_100}
               isDisabled={el?.quantity === 1 || updateIsPending}
               onClick={() => onHandleRemoveFromCart(el?.id)}
             />
             <UiTypography>{el?.quantity}</UiTypography>
             <UiIcon
               icon={IconTypeEnum.ICON_PLUS}
-              color={theme === ThemeTypeEnum.LIGHT ? THEME_BLUE_600 : THEME_NETURAL_100}
-              classNameIcon={styles.quantityIcon}
+              size={24}
+              stroke={theme === ThemeTypeEnum.LIGHT ? THEME_BLUE_600 : THEME_NETURAL_100}
               isDisabled={updateIsPending}
               onClick={() => onHandleAddToCart(el?.id)}
             />
@@ -80,7 +80,7 @@ const CartModalItem = ({ el }: any): ReactElement => {
 
         <UiIcon
           icon={IconTypeEnum.ICON_TRASH}
-          color={THEME_RED_400}
+          stroke={THEME_RED_400}
           isDisabled={deleteIsPending}
           onClick={() => onHandleRemoveCartItem(el?.id)}
         />

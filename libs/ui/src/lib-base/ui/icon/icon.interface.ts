@@ -7,7 +7,8 @@ export type IconType = IconTypeEnum | null;
 export interface IconProps {
   icon?: IconType;
   size?: number;
-  color?: string;
+  fill?: string;
+  stroke?: string;
   classNameWrapper?: any;
   classNameIcon?: any;
   displayWrapper?: boolean;

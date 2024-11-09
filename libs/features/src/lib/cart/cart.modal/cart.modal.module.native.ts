@@ -1,4 +1,10 @@
-import { THEME_SPACING_15, THEME_SPACING_25 } from '@pokemon-pet-shop/ui/styles/var';
+import {
+  THEME_RADIUS_PILL,
+  THEME_SPACING_10,
+  THEME_SPACING_15,
+  THEME_SPACING_25,
+  THEME_SPACING_5,
+} from '@pokemon-pet-shop/ui/styles/var';
 import { StyleSheet } from 'react-native';
 
 export const styles = (varThemeMode: any) =>
@@ -40,6 +46,18 @@ export const styles = (varThemeMode: any) =>
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: THEME_SPACING_15,
+    },
+    countPillWrapper: {
+      display: 'flex',
+      flexDirection: 'row',
+      backgroundColor: varThemeMode?.THEME_NETURAL_200_MODE,
+      gap: THEME_SPACING_10,
+      borderRadius: THEME_RADIUS_PILL,
+      alignItems: 'center',
+      alignSelf: 'flex-start',
+      // box-shadow: inset 0 3px 3px rgb(0 0 0 / 10%);
+      padding: THEME_SPACING_5,
+      marginTop: THEME_SPACING_5,
     },
     totalContent: {
       color: varThemeMode?.THEME_NETURAL_900_MODE,
