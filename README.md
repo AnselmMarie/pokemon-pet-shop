@@ -116,7 +116,7 @@ This application covers key stages of building a Greenfield project, including d
 
 Once I decided to build a Pokédex with a unique twist—allowing users to purchase Pokémon as pets—I turned my attention to designing in Figma. I created three distinct pages, focusing on the Design System, Web, and App. By creating reusable components and leveraging styles, light, and dark themes, I was able to streamline the design process and ensure consistency across the project.
 
-### Design/App DS Token Handoff
+### Designer/Developer DS Token Handoff
 
 To simplify the handoff process, I installed the "Design Tokens" plugin, which allows me to export local variables in JSON format. I then add this JSON file to the "libs/ds-token" project and run a command that compiles the design tokens for CSS and JS formats. This setup makes it easy to update tokens across applications whenever I modify Figma's local variables, ensuring a smooth and efficient workflow.
 
