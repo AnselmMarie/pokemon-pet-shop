@@ -79,6 +79,14 @@ export const styles = (varThemeMode: any) =>
       alignItems: 'center',
       position: 'relative',
     },
+    cartOverlayWrapper: {
+      position: 'absolute',
+      width: '100%',
+      height: 38,
+      zIndex: 1,
+      top: -40,
+      right: -17,
+    },
     counterWrapper: {
       borderRadius: THEME_RADIUS_CIRCLE,
       backgroundColor: THEME_YELLOW_600,
@@ -90,9 +98,9 @@ export const styles = (varThemeMode: any) =>
       paddingLeft: THEME_SPACING_10,
       paddingRight: THEME_SPACING_10,
       position: 'absolute',
-      right: -25,
-      top: -45,
-      zIndex: 1,
+      right: -8,
+      top: -7,
+      zIndex: 0,
       cursor: 'pointer',
     },
     counterText: {

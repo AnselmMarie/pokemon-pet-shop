@@ -64,6 +64,14 @@
   position: relative;
 }
 
+.cartOverlayWrapper {
+  position: absolute;
+  width: 51px;
+  height: 47px;
+  z-index: 13;
+  top: -14px;
+}
+
 .icon {
   stroke: var(--theme-blue-600-mode);
 }

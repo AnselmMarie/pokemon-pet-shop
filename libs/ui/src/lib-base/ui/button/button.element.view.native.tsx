@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 import { classNamesUtil } from '@pokemon-pet-shop/utils';
-import { TouchableHighlight, Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 import { UiElementLayout } from '../element.layout';
 import { UiIcon } from '../icon';
@@ -25,13 +25,7 @@ const ButtonElement = ({
   const { newStyles } = useRenderStyles(styles);
 
   return (
-    <TouchableHighlight
-      // activeOpacity={0.6}
-      // underlayColor="#DDDDDD"
-      style={className}
-      disabled={isDisabled || isLoading}
-      onPress={onClick}
-    >
+    <TouchableOpacity style={className} disabled={isDisabled || isLoading} onPress={onClick}>
       {isLoading ? (
         <UiElementLayout className={classNamesUtil(newStyles.buttonInnerIsLoadingWrapper)}>
           <UiSkeleton />
@@ -43,7 +37,7 @@ const ButtonElement = ({
           {appendIcon ? <UiIcon icon={appendIcon} /> : null}
         </UiElementLayout>
       )}
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };
 

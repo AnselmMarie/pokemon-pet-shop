@@ -1,6 +1,6 @@
 import { PropsWithChildren, ReactElement } from 'react';
 
-import { TouchableHighlight, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import { ElementLayoutProps } from './element.layout.interface';
 
@@ -11,9 +11,9 @@ const ElementLayout = ({
 }: PropsWithChildren<ElementLayoutProps>): ReactElement => {
   if (onClick !== null) {
     return (
-      <TouchableHighlight onPress={onClick}>
+      <TouchableOpacity onPress={onClick}>
         <View style={className}>{children}</View>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   }
   return <View style={className}>{children}</View>;
