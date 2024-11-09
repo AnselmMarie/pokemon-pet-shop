@@ -49,7 +49,7 @@
 
 .appendImage {
   width: 22px;
-  margin-right: var(--theme-spacing-5);
+  margin-left: var(--theme-spacing-5);
 }
 
 .buttonInnerWrapper {

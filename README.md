@@ -110,11 +110,11 @@ Docker
 
 ## Process of the building Pokéshop
 
-This application covers key stages of building a Greenfield project, including design, app architecture, APIs, CI/CD, and future deployment. Below, I’ve outlined each step of the process with a detailed explanation. Since this is a personal project, there are certain aspects I would approach differently compared to how I would handle a client project.
+This application covers key stages of building a Greenfield project, including design, app architecture, APIs, CI/CD, and future deployment. Below, I’ve outlined each step of the process with a detailed explanation. Since this is a personal project, there are certain aspects I would approach differently when handling a client project.
 
 ### Design
 
-Once I decided to build a Pokédex with a unique twist—allowing users to purchase Pokémon as pets—I turned my attention to designing in Figma. I created three distinct pages, focusing on the Design System, Web, and App. By creating reusable components and leveraging local variables for general, light, and dark themes, I was able to streamline the design process and ensure consistency across the project.
+Once I decided to build a Pokédex with a unique twist—allowing users to purchase Pokémon as pets—I turned my attention to designing in Figma. I created three distinct pages, focusing on the Design System, Web, and App. By creating reusable components and leveraging styles, light, and dark themes, I was able to streamline the design process and ensure consistency across the project.
 
 ### Design/App DS Token Handoff
 

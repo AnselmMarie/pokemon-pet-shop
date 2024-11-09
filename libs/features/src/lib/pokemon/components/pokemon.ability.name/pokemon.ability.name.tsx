@@ -36,7 +36,7 @@ const PokemonAbilityName = ({
     if (!abilityData?.ability?.name) {
       return;
     }
-    const splitName = abilityData?.ability?.name.split('-');
+    const splitName = abilityData?.ability?.name?.split('-');
 
     const capitalizeName = splitName.map((el) => {
       return capitalizeNameUtil(el);

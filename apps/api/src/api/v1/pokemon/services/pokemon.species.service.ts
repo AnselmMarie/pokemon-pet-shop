@@ -19,8 +19,8 @@ const getPokemonSpeciesService = async ({ id }: PokemonSpeciesParamsProps) => {
     } = await res.json();
     return {
       ...args,
-      flavor_text_entries: flavor_text_entries.shift(),
-      genera: genera.find((el) => el.language.name === 'en'),
+      flavor_text_entries: flavor_text_entries.find((el) => el?.language?.name === 'en'),
+      genera: genera.find((el) => el?.language?.name === 'en'),
     };
   }
   throw res;

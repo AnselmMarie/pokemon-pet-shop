@@ -10,7 +10,12 @@ import image from './assets/bulbasaur.gif';
 import { styles } from './pokemon.list.module';
 import usePokemonList from './use.pokemon.list.logic';
 
-/** @todo Use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction but I need to see find a React Native alternative  */
+/**
+ * @todo
+ * Create a new component for this
+ * React, use tanstack virtual for long lists -> https://tanstack.com/virtual/latest/docs/introduction
+ * React Native, use flashlist for long lists -> https://shopify.github.io/flash-list/
+ * */
 const PokemonList = (): ReactElement => {
   const {
     data = [],
@@ -22,14 +27,14 @@ const PokemonList = (): ReactElement => {
 
   const newData = useMemo(() => {
     const template = { abilities: [{}, {}] };
-    return skeletonLoadDataUtil(data, isLoading, template, true);
+    return skeletonLoadDataUtil(data, isLoading, template, true, data?.length * 50);
   }, [data, isLoading]);
 
   if (newData?.length === 0 && !hasNextPage) {
     return (
       <UiElementLayout className={styles.failureWrapper}>
         <UiTypography>No Pets are available at the moment. Please check back again.</UiTypography>
-        {/** Note add a photo of a sad Pokemon or a image showing something sad */}
+        {/** @todo Note add a photo of a sad Pokemon or a image showing something sad */}
       </UiElementLayout>
     );
   }
