@@ -52,6 +52,7 @@ const Header = () => {
           </UiHideInMobile>
 
           <UiElementLayout className={newStyles.cartWrapper}>
+            <UiIcon classNameIcon={newStyles.iconCart} onClick={onHandleCartModalClick} />
             {data?.counter ? (
               <UiElementLayout
                 className={newStyles.counterWrapper}
@@ -65,7 +66,6 @@ const Header = () => {
                 </UiTypography>
               </UiElementLayout>
             ) : null}
-            <UiIcon classNameIcon={newStyles.iconCart} onClick={onHandleCartModalClick} />
           </UiElementLayout>
         </UiElementLayout>
       </UiContainer>

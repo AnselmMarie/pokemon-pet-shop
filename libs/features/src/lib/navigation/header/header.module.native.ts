@@ -63,6 +63,8 @@ export const styles = (varThemeMode: any) =>
     },
     iconCart: {
       marginLeft: THEME_SPACING_15,
+      position: 'relative',
+      zIndex: 0,
     },
     logo: {
       width: 160,
@@ -88,8 +90,9 @@ export const styles = (varThemeMode: any) =>
       paddingLeft: THEME_SPACING_10,
       paddingRight: THEME_SPACING_10,
       position: 'absolute',
-      right: -11,
-      top: -15,
+      right: -25,
+      top: -45,
+      zIndex: 1,
       cursor: 'pointer',
     },
     counterText: {
