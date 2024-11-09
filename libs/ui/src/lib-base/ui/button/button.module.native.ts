@@ -64,8 +64,9 @@ export const styles = () =>
       fontSize: THEME_FONT_24,
     },
     appendImage: {
-      width: 22,
-      marginRight: THEME_SPACING_5,
+      display: 'flex',
+      alignSelf: 'flex-start',
+      marginLeft: THEME_SPACING_5,
     },
     buttonInnerWrapper: {
       display: 'flex',

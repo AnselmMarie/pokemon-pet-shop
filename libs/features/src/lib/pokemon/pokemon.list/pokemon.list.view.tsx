@@ -6,7 +6,7 @@ import { skeletonLoadDataUtil } from '@pokemon-pet-shop/utils';
 
 import { UiPokemonCard } from '../pokemon.card';
 
-import image from './assets/bulbasaur.gif';
+import image from './assets/bulbasaur.small.gif';
 import { styles } from './pokemon.list.module';
 import usePokemonList from './use.pokemon.list.logic';
 
