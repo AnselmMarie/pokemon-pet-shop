@@ -106,6 +106,7 @@ Docker
 - Future Additions
   - Storybook
   - React Testing Library and Jest
+  - E2E Testing
   - Azure
 
 ## Process of the building Pokéshop

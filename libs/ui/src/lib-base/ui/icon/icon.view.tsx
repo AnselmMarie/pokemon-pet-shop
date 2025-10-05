@@ -31,7 +31,7 @@ const Icon = ({
     }
   }, [isDisabled, onClick]);
 
-  const renderIcon = useMemo(() => {
+  const RenderIcon = useCallback(() => {
     const disabledStyles = isDisabled ? globalStyles.disabledElement : '';
     const clickableStyles = onClick ? globalStyles.pointerCursor : '';
 
@@ -49,11 +49,11 @@ const Icon = ({
   if (displayWrapper) {
     return (
       <UiElementLayout className={classNamesUtil(classNameWrapper, globalStyles.pointerCursor)}>
-        {renderIcon}
+        <RenderIcon />
       </UiElementLayout>
     );
   }
-  return renderIcon;
+  return <RenderIcon />;
 };
 
 export default memo(Icon);

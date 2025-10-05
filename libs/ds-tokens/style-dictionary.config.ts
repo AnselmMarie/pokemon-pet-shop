@@ -27,6 +27,15 @@ const config: Config | Config[] = {
         return `${prop.value}px`;
       },
     },
+    // 'custom/string-to-rem': {
+    //   type: 'value',
+    //   matcher: (prop) => {
+    //     return prop.type === 'dimension';
+    //   },
+    //   transformer: (prop) => {
+    //     return `${prop.value}px`;
+    //   },
+    // },
   },
   platforms: {
     css: {
