@@ -1,0 +1,18 @@
+{
+  "name": "homepage",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web/homepage/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "options": {
+        "port": 4203
+      },
+      "dependsOn": ["typecheck"]
+    },
+    "build": {
+      "dependsOn": ["^build", "typecheck"]
+    }
+  }
+}

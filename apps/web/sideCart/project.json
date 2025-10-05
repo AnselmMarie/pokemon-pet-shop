@@ -1,0 +1,18 @@
+{
+  "name": "sideCart",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web/sideCart/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "options": {
+        "port": 4204
+      },
+      "dependsOn": ["typecheck"]
+    },
+    "build": {
+      "dependsOn": ["^build", "typecheck"]
+    }
+  }
+}

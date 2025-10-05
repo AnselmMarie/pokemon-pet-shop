@@ -8,6 +8,42 @@
     },
     {
       "path": "./apps/api"
+    },
+    {
+      "path": "./apps/web/shell-e2e"
+    },
+    {
+      "path": "./apps/web/shell"
+    },
+    {
+      "path": "./apps/web/header-e2e"
+    },
+    {
+      "path": "./apps/web/header"
+    },
+    {
+      "path": "./apps/web/footer-e2e"
+    },
+    {
+      "path": "./apps/web/footer"
+    },
+    {
+      "path": "./apps/web/footer-e2e"
+    },
+    {
+      "path": "./apps/web/header-e2e"
+    },
+    {
+      "path": "./apps/web/homepage-e2e"
+    },
+    {
+      "path": "./apps/web/homepage"
+    },
+    {
+      "path": "./apps/web/sideCart-e2e"
+    },
+    {
+      "path": "./apps/web/sideCart"
     }
   ]
 }
