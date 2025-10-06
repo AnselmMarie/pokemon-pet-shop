@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { RouterProvider } from '../route/route-provider';
 
+import '../styles.css';
+
 const HeaderModule = React.lazy(() => import('header/Module'));
 const FooterModule = React.lazy(() => import('footer/Module'));
 
