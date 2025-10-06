@@ -1,9 +1,12 @@
-export function PokemonPetShopTypography() {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to PokemonPetShopTypography!</h1>
-    </div>
-  );
-}
+import { createElement, PropsWithChildren, ReactElement } from 'react';
 
-export default PokemonPetShopTypography;
+import { TypographyProps } from './typography.interface';
+
+export const Typography = ({
+  typographyType = 'p',
+  className = '',
+  onClick,
+  children = null,
+}: PropsWithChildren<TypographyProps>): ReactElement => {
+  return createElement(typographyType, { className, onClick }, children);
+};

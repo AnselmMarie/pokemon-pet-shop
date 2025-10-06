@@ -1,5 +1,5 @@
 export interface ElementLayoutProps {
-  layoutType?: 'div' | 'section' | 'header' | 'footer' | 'nav';
+  layoutType?: 'div' | 'span' | 'section' | 'header' | 'footer' | 'nav';
   className?: any;
   onClick?: () => void;
 }

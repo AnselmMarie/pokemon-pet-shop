@@ -1,9 +1,13 @@
-export function PokemonPetShopServerError() {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to PokemonPetShopServerError!</h1>
-    </div>
-  );
-}
+import { ReactElement } from 'react';
 
-export default PokemonPetShopServerError;
+import { Box } from '@ui/box';
+
+export const serverError = ({ messages = [] }): ReactElement => {
+  return (
+    <Box>
+      {messages.map((el, i: number): ReactElement => {
+        return <Box key={i}>testing</Box>;
+      })}
+    </Box>
+  );
+};
