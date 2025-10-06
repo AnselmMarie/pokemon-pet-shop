@@ -1,9 +1,17 @@
-export function PokemonPetShopImage() {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to PokemonPetShopImage!</h1>
-    </div>
-  );
-}
+import { ReactElement } from 'react';
 
-export default PokemonPetShopImage;
+// import { UiSkeleton } from '../skeleton';
+
+import { ImageProps } from './image.interface';
+
+export const Image = ({
+  src = '',
+  alt = '',
+  className = null,
+  isLoading,
+}: ImageProps): ReactElement => {
+  // if (isLoading) {
+  //   return <UiSkeleton height="100%" circle />;
+  // }
+  return <img src={src} alt={alt} className={className} />;
+};

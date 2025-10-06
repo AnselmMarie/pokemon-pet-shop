@@ -3,6 +3,12 @@
   "include": [],
   "references": [
     {
+      "path": "../../ui/icon"
+    },
+    {
+      "path": "../../ui/container"
+    },
+    {
       "path": "../../ui/box"
     },
     {

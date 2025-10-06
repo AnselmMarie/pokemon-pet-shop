@@ -1,10 +1,10 @@
 import { ReactElement, useMemo } from 'react';
 
-import { Image } from 'react-native';
+import { Image as ImageNative } from 'react-native';
 
 import { ImageProps } from './image.interface';
 
-const ElementLayout = ({
+export const Image = ({
   src = '',
   alt = '',
   className = '',
@@ -20,7 +20,5 @@ const ElementLayout = ({
     }
   }, [mobSrcType, src]);
 
-  return <Image source={getSrcType} alt={alt} style={className} />;
+  return <ImageNative source={getSrcType} alt={alt} style={className} />;
 };
-
-export default ElementLayout;

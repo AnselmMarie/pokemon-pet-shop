@@ -3,13 +3,13 @@
   "include": [],
   "references": [
     {
+      "path": "../box"
+    },
+    {
       "path": "./tsconfig.lib.json"
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../ui/box"
     }
   ],
   "extends": "../../../tsconfig.base.json"

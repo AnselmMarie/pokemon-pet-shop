@@ -1,10 +1,11 @@
+import { join } from 'path';
+
 import { NxAppRspackPlugin } from '@nx/rspack/app-plugin.js';
 import { NxReactRspackPlugin } from '@nx/rspack/react-plugin.js';
 import {
   NxModuleFederationPlugin,
   NxModuleFederationDevServerPlugin,
 } from '@nx/module-federation/rspack.js';
-import { join } from 'path';
 
 import config from './module-federation.config';
 
@@ -23,7 +24,8 @@ export default {
   },
   resolve: {
     alias: {
-      'react-native$': 'react-native-web',
+      'react-native': require.resolve('react-native-web'),
+      // 'react-native$': 'react-native-web',
     },
   },
   plugins: [

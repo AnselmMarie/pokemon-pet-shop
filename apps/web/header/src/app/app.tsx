@@ -1,9 +1,9 @@
-import { PokemonPetShopHeader } from '@features/header';
+import { Header } from '@features/header';
 
 import '../styles.css';
 
 export function App() {
-  return <PokemonPetShopHeader />;
+  return <Header />;
 }
 
 export default App;

@@ -1,10 +1,13 @@
 import { ReactElement } from 'react';
 
-import ElementLayout from '../../container.layout/container.layout.view.native';
-
 import { IconSvgProps } from './icon.svg.interface';
 
-const IconTrash = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
+export const IconTrash = ({
+  size,
+  fill,
+  stroke,
+  onClick,
+}: IconSvgProps): ReactElement => {
   return (
     <svg
       width={size}
@@ -25,5 +28,3 @@ const IconTrash = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement 
     </svg>
   );
 };
-
-export { IconTrash };
