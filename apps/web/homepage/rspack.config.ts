@@ -27,10 +27,12 @@ export default {
   },
   resolve: {
     alias: {
+      'react-native$': 'react-native-web',
       '@features/pokemon': join(
         __dirname,
         '../../../libs/features/pokemon/src/index.ts'
       ),
+      '@ui/box': join(__dirname, '../../../libs/ui/box/src/index.ts'),
     },
   },
   plugins: [

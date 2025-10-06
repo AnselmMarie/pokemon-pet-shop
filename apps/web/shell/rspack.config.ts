@@ -21,6 +21,11 @@ export default {
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
   },
+  resolve: {
+    alias: {
+      'react-native$': 'react-native-web',
+    },
+  },
   plugins: [
     new NxAppRspackPlugin({
       tsConfig: './tsconfig.app.json',

@@ -27,6 +27,7 @@ export default {
   },
   resolve: {
     alias: {
+      'react-native$': 'react-native-web',
       '@features/footer': join(
         __dirname,
         '../../../libs/features/footer/src/index.ts'

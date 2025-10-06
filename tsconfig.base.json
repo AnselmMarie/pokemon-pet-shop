@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@features/*": ["libs/features/*"],
+      "@ui/*": ["libs/ui/*"],
       "footer/Module": ["apps/web/footer/src/remote-entry.ts"],
       "header/Module": ["apps/web/header/src/remote-entry.ts"],
       "homepage/Module": ["apps/web/homepage/src/remote-entry.ts"],

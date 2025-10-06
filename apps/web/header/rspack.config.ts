@@ -27,10 +27,12 @@ export default {
   },
   resolve: {
     alias: {
+      'react-native$': 'react-native-web',
       '@features/header': join(
         __dirname,
         '../../../libs/features/header/src/index.ts'
       ),
+      '@ui/box': join(__dirname, '../../../libs/ui/box/src/index.ts'),
     },
   },
   plugins: [

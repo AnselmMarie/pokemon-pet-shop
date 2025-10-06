@@ -1,8 +1,10 @@
+import { Box } from '@ui/box';
+
 export function PokemonPetShopHeader() {
   return (
-    <div>
+    <Box>
       <h1>Welcome to PokemonPetShopHeader!</h1>
-    </div>
+    </Box>
   );
 }
 

@@ -43,6 +43,7 @@
     "@types/react-dom": "19.0.0",
     "autoprefixer": "10.4.13",
     "babel-jest": "^30.0.2",
+    "babel-plugin-react-native-web": "^0.21.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "2.31.0",
@@ -82,6 +83,7 @@
     "react-native": "0.79.3",
     "react-native-reanimated": "^4.1.2",
     "react-native-safe-area-context": "5.4.0",
+    "react-native-web": "^0.21.1",
     "react-router-dom": "6.29.0",
     "tailwind-variants": "^3.1.1"
   }

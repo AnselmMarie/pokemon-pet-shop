@@ -1,9 +1,14 @@
-export function PokemonPetShopBox() {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to PokemonPetShopBox!</h1>
-    </div>
-  );
+import { createElement, PropsWithChildren } from 'react';
+
+import { ElementLayoutProps } from './box.interface';
+
+export function Box({
+  layoutType = 'div',
+  className = '',
+  children = null,
+  onClick = undefined,
+}: PropsWithChildren<ElementLayoutProps>) {
+  return createElement(layoutType, { className, onClick }, children);
 }
 
-export default PokemonPetShopBox;
+export default Box;
