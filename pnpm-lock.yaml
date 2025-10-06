@@ -275,6 +275,16 @@ importers:
 
   libs/features/pokemon: {}
 
+  libs/ui/box: {}
+
+  libs/ui/icon: {}
+
+  libs/ui/image: {}
+
+  libs/ui/serverError: {}
+
+  libs/ui/typography: {}
+
 packages:
 
   '@0no-co/graphql.web@1.2.0':

@@ -47,6 +47,21 @@
     },
     {
       "path": "./libs/features/pokemon"
+    },
+    {
+      "path": "./libs/ui/box"
+    },
+    {
+      "path": "./libs/ui/serverError"
+    },
+    {
+      "path": "./libs/ui/typography"
+    },
+    {
+      "path": "./libs/ui/icon"
+    },
+    {
+      "path": "./libs/ui/image"
     }
   ]
 }
