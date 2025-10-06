@@ -39,6 +39,12 @@ importers:
         specifier: 6.29.0
         version: 6.29.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
+      '@babel/core':
+        specifier: ^7.14.5
+        version: 7.28.4
+      '@babel/preset-react':
+        specifier: ^7.14.5
+        version: 7.27.1(@babel/core@7.28.4)
       '@eslint/js':
         specifier: ^9.8.0
         version: 9.37.0
@@ -247,6 +253,12 @@ importers:
   apps/web/sideCart: {}
 
   apps/web/sideCart-e2e: {}
+
+  libs/features/footer: {}
+
+  libs/features/header: {}
+
+  libs/features/pokemon: {}
 
 packages:
 

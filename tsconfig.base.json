@@ -19,6 +19,7 @@
     "customConditions": ["@pokemon-pet-shop/source"],
     "baseUrl": ".",
     "paths": {
+      "@features/*": ["libs/features/*"],
       "footer/Module": ["apps/web/footer/src/remote-entry.ts"],
       "header/Module": ["apps/web/header/src/remote-entry.ts"],
       "homepage/Module": ["apps/web/homepage/src/remote-entry.ts"],

@@ -38,6 +38,15 @@
     },
     {
       "path": "./apps/web/sideCart"
+    },
+    {
+      "path": "./libs/features/header"
+    },
+    {
+      "path": "./libs/features/footer"
+    },
+    {
+      "path": "./libs/features/pokemon"
     }
   ]
 }

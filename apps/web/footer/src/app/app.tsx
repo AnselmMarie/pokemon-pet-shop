@@ -1,5 +1,7 @@
+import { PokemonPetShopFooter } from '@features/footer';
+
 export function App() {
-  return <div>Footer Components</div>;
+  return <PokemonPetShopFooter />;
 }
 
 export default App;

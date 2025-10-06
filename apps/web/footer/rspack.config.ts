@@ -25,6 +25,14 @@ export default {
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
   },
+  resolve: {
+    alias: {
+      '@features/footer': join(
+        __dirname,
+        '../../../libs/features/footer/src/index.ts'
+      ),
+    },
+  },
   plugins: [
     new NxAppRspackPlugin({
       tsConfig: './tsconfig.app.json',

@@ -1,5 +1,7 @@
+import { PokemonPetShopHeader } from '@features/header';
+
 export function App() {
-  return <div>Header Components</div>;
+  return <PokemonPetShopHeader />;
 }
 
 export default App;

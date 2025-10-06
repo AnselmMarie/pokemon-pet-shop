@@ -25,6 +25,14 @@ export default {
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
   },
+  resolve: {
+    alias: {
+      '@features/pokemon': join(
+        __dirname,
+        '../../../libs/features/pokemon/src/index.ts'
+      ),
+    },
+  },
   plugins: [
     new NxAppRspackPlugin({
       tsConfig: './tsconfig.app.json',
