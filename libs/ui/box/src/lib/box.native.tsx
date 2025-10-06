@@ -3,11 +3,11 @@ import { TouchableOpacity, View } from 'react-native';
 
 import { ElementLayoutProps } from './box.interface';
 
-export function Box({
+export const Box = ({
   className = '',
   children = null,
   onClick = undefined,
-}: PropsWithChildren<ElementLayoutProps>) {
+}: PropsWithChildren<ElementLayoutProps>) => {
   if (typeof onClick === 'function') {
     return (
       <TouchableOpacity onPress={onClick}>
@@ -16,6 +16,4 @@ export function Box({
     );
   }
   return <View style={className}>{children}</View>;
-}
-
-export default Box;
+};
