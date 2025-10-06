@@ -289,6 +289,8 @@ importers:
 
   libs/ui/box: {}
 
+  libs/ui/container: {}
+
   libs/ui/icon: {}
 
   libs/ui/image: {}
