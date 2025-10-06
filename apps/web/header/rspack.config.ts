@@ -14,9 +14,10 @@ export default {
     publicPath: 'auto',
   },
   devServer: {
-    port: 4202,
+    port: 4205,
     headers: {
       'Access-Control-Allow-Origin': '*',
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
     },
     historyApiFallback: {
       index: '/index.html',

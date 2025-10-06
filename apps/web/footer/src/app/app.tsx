@@ -1,12 +1,5 @@
-import NxWelcome from './nx-welcome';
-import '../styles.css';
-
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="footer" />
-    </div>
-  );
+  return <div>Footer Components</div>;
 }
 
 export default App;

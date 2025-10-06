@@ -28,12 +28,6 @@
       "path": "./apps/web/footer"
     },
     {
-      "path": "./apps/web/footer-e2e"
-    },
-    {
-      "path": "./apps/web/header-e2e"
-    },
-    {
       "path": "./apps/web/homepage-e2e"
     },
     {

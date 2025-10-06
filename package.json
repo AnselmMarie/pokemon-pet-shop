@@ -68,6 +68,8 @@
   },
   "dependencies": {
     "@module-federation/enhanced": "^0.18.0",
+    "@tanstack/react-router": "^1.132.37",
+    "@tanstack/react-router-devtools": "^1.132.37",
     "axios": "^1.6.0",
     "expo": "~53.0.10",
     "express": "^4.21.2",

@@ -17,6 +17,7 @@ export default {
     port: 4203,
     headers: {
       'Access-Control-Allow-Origin': '*',
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
     },
     historyApiFallback: {
       index: '/index.html',

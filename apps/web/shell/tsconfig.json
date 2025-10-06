@@ -3,6 +3,15 @@
   "include": [],
   "references": [
     {
+      "path": "../homepage"
+    },
+    {
+      "path": "../footer"
+    },
+    {
+      "path": "../header"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

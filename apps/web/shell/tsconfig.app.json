@@ -10,10 +10,16 @@
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts"
     ],
-    "rootDir": "src",
     "module": "esnext",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "paths": {
+      "footer/Module": ["src/types/remote-modules.d.ts"],
+      "header/Module": ["src/types/remote-modules.d.ts"],
+      "homepage/Module": ["src/types/remote-modules.d.ts"],
+      "sideCart/Module": ["src/types/remote-modules.d.ts"]
+    }
   },
+  "rootDir": "../../",
   "exclude": [
     "out-tsc",
     "dist",
@@ -30,5 +36,22 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/types/**/*.d.ts"
+  ],
+  "references": [
+    {
+      "path": "../homepage/tsconfig.app.json"
+    },
+    {
+      "path": "../footer/tsconfig.app.json"
+    },
+    {
+      "path": "../header/tsconfig.app.json"
+    }
+  ]
 }

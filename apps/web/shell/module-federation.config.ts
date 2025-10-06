@@ -14,7 +14,19 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: [],
+  // remotes: [
+  //   ['homepage', 'homepage@http://localhost:4203/remoteEntry.js'],
+  //   ['header', 'header@http://localhost:4202/remoteEntry.js'],
+  //   ['footer', 'footer@http://localhost:4201/remoteEntry.js'],
+  // ],
+  remotes: ['homepage', 'header', 'footer', 'homepage'],
+  // remotes: ['header', 'footer', 'sideCart', 'homepage'],
+  //   shared: (pkg) => ({
+  //   ...pkg,
+  //   react: { singleton: true, eager: true },
+  //   'react-dom': { singleton: true, eager: true },
+  //   '@tanstack/react-router': { singleton: true },
+  // }),
 };
 
 /**
