@@ -1,9 +1,9 @@
-import { PokemonPetShopFooter } from '@features/footer';
+import { Footer } from '@features/footer';
 
 import '../styles.css';
 
 export function App() {
-  return <PokemonPetShopFooter />;
+  return <Footer />;
 }
 
 export default App;

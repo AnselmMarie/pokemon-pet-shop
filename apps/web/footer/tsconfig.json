@@ -3,13 +3,13 @@
   "include": [],
   "references": [
     {
+      "path": "../../../libs/features/footer"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../../libs/features/footer"
     }
   ],
   "extends": "../../../tsconfig.base.json"

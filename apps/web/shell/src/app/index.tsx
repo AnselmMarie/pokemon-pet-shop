@@ -10,11 +10,11 @@ const FooterModule = React.lazy(() => import('footer/Module'));
 export function App() {
   return (
     <React.Suspense fallback={null}>
-      <React.Suspense fallback="loading Header">
+      <React.Suspense fallback="Loading Header">
         <HeaderModule />
       </React.Suspense>
       <RouterProvider />
-      <React.Suspense fallback="loading Footer">
+      <React.Suspense fallback="Loading Footer">
         <FooterModule />
       </React.Suspense>
     </React.Suspense>

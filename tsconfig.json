@@ -65,6 +65,9 @@
     },
     {
       "path": "./libs/ui/container"
+    },
+    {
+      "path": "./libs/ui/link"
     }
   ]
 }

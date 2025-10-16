@@ -33,6 +33,13 @@ export default {
         __dirname,
         '../../../libs/features/footer/src/index.ts'
       ),
+      '@ui/typography': join(
+        __dirname,
+        '../../../libs/ui/typography/src/index.ts'
+      ),
+      '@ui/box': join(__dirname, '../../../libs/ui/box/src/index.ts'),
+      '@ui/icon': join(__dirname, '../../../libs/ui/icon/src/index.ts'),
+      '@ui/link': join(__dirname, '../../../libs/ui/link/src/index.ts'),
     },
   },
   plugins: [

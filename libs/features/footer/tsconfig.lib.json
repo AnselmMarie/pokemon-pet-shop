@@ -29,5 +29,19 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+  "references": [
+    {
+      "path": "../../ui/icon/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/link/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/box/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/typography/tsconfig.lib.json"
+    }
+  ]
 }
