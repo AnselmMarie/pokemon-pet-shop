@@ -4,18 +4,18 @@ import { RouterProvider } from '../route/route-provider';
 
 import '../styles.css';
 
-const HeaderModule = React.lazy(() => import('header/Module'));
-const FooterModule = React.lazy(() => import('footer/Module'));
+const Header = React.lazy(() => import('header/Module'));
+const Footer = React.lazy(() => import('footer/Module'));
 
 export function App() {
   return (
     <React.Suspense fallback={null}>
       <React.Suspense fallback="Loading Header">
-        <HeaderModule />
+        <Header />
       </React.Suspense>
       <RouterProvider />
       <React.Suspense fallback="Loading Footer">
-        <FooterModule />
+        <Footer />
       </React.Suspense>
     </React.Suspense>
   );
