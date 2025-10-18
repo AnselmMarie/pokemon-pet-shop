@@ -13,15 +13,15 @@ export const Footer = () => {
 
   return (
     <Box
-      className="flex flex-col items-center justify-center mb-12"
+      className="flex flex-col md:flex-row items-center justify-center mb-12"
       // layoutType="footer"
     >
       <Link
-        className="flex items-center pointer"
+        className="flex items-center"
         link="https://github.com/AnselmMarie/pokemon-pet-shop"
       >
         <Icon
-          // icon={IconTypeEnum.ICON_GITHUB}
+          icon="IconGithub"
           size={20}
           classNameIcon="mr-2"
           stroke="none"

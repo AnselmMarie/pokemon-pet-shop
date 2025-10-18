@@ -17,7 +17,7 @@ export const Link = ({
   };
 
   return (
-    <Box className={className} onClick={goToLink}>
+    <Box className={`cursor-pointer ${className}`} onClick={goToLink}>
       {children}
     </Box>
   );
