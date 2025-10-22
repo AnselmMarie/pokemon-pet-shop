@@ -6,12 +6,14 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nxkit/style-dictionary:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/ds-tokens/tailwind",
+        "{workspaceRoot}/dist/libs/ds-tokens/scss"
+      ],
       "options": {
-        "outputPath": "dist/libs/ds-tokens",
-        "styleDictionaryConfig": "libs/ds-tokens/style-dictionary.config.ts",
-        "tsConfig": "libs/ds-tokens/tsconfig.json"
+        "cwd": "libs/ds-tokens",
+        "command": "NODE_OPTIONS='--experimental-vm-modules' node src/build-tokens.mjs"
       }
     },
     "lint": {
