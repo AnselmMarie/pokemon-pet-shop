@@ -1,0 +1,18 @@
+{
+  "name": "@pokemon-pet-shop/footer",
+  "version": "0.0.1",
+  "main": "./build/semantic.tailwind.js",
+  "types": "./build/semantic.tailwind.js",
+  "exports": {
+    ".": {
+      "types": "./build/semantic.tailwind.js",
+      "import": "./build/semantic.tailwind.js",
+      "default": "./build/semantic.tailwind.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "sd-tailwindcss-transformer": "^2.2.1",
+    "style-dictionary": "^5.1.1"
+  }
+}

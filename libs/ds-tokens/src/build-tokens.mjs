@@ -1,4 +1,17 @@
 import StyleDictionary from 'style-dictionary';
+import { makeSdTailwindConfig } from 'sd-tailwindcss-transformer';
 
-const sd = new StyleDictionary('style-dictionary.config.json');
-await sd.buildAllPlatforms();
+const types = ['semantic'];
+
+for (const type of types) {
+  const tailwindConfig = makeSdTailwindConfig({
+    source: ['src/tokens/**/*.json'],
+    type,
+    buildPath: "./build/"
+  });
+
+  const styleDictionaryTailwind = new StyleDictionary(tailwindConfig);
+
+  await styleDictionaryTailwind.hasInitialized;
+  await styleDictionaryTailwind.buildAllPlatforms();
+}

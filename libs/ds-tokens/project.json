@@ -1,5 +1,5 @@
 {
-  "name": "ds-tokens",
+  "name": "@pokemon-pet-shop/ds-tokens",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ds-tokens/src",
