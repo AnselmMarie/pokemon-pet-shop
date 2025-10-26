@@ -76,13 +76,16 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
     "@module-federation/enhanced": "^0.18.0",
     "@tabler/icons-react": "^3.35.0",
     "@tanstack/react-router": "^1.132.37",
     "@tanstack/react-router-devtools": "^1.132.37",
     "axios": "^1.6.0",
     "expo": "~53.0.10",
+    "expo-image": "^3.0.10",
     "expo-linking": "^8.0.8",
+    "expo-modules-core": "^3.0.22",
     "express": "^4.21.2",
     "nativewind": "^4.2.1",
     "react": "19.0.0",
@@ -95,6 +98,7 @@
     "react-native-svg": "^15.13.0",
     "react-native-web": "^0.21.1",
     "react-router-dom": "6.29.0",
+    "swc-loader": "^0.2.6",
     "tailwind-variants": "^3.1.1"
   }
 }

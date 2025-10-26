@@ -10,11 +10,13 @@ import { IconShoppingCart } from './icons/icon.shopping.cart';
 import { IconSun } from './icons/icon.sun';
 import { IconTrash } from './icons/icon.trash';
 import { IconX } from './icons/icon.x';
+import { IconPhoto } from './icons/icon.photo';
 
 export const IconMap = {
   IconGithub,
   IconCaretDown,
   IconX,
+  IconPhoto,
   IconSun,
   IconSearch,
   IconMoon,

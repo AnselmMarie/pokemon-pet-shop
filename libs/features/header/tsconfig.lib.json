@@ -39,6 +39,9 @@
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/image/tsconfig.lib.json"
     }
   ]
 }

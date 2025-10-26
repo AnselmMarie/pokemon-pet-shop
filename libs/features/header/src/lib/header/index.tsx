@@ -19,11 +19,12 @@
 import { Box } from '@ui/box';
 import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
+import { Image } from '@ui/image';
 // import { Image } from '@ui/image';
 
 import { NAV_FEATURE_FLAG } from './header.const';
 // import { styles } from './header.module';
-// import pokeshopLogo from './pokeshop-logo.png';
+import pokeshopLogo from './assets/pokeshop-logo.png';
 // import useHeaderLogic from './use.header.logic';
 
 export const Header = () => {
@@ -33,16 +34,20 @@ export const Header = () => {
   return (
     <Box
       layoutType="header"
-      className="space-between sticky z-99 p-sm shadow bg-white"
+      className="space-between sticky z-99 p-md shadow bg-white"
     >
       <Container className="flex item-center justify-between">
-        <Box className="flex item-center">
+        <Box className="flex justify-center items-center">
           <Icon
             classNameIcon="hidden-md"
             icon="IconMenu"
             // onClick={onHandleMobileNavModalClick}
           />
-          {/* <Image src={pokeshopLogo} className="w-[160px]" /> */}
+          <Image
+            src={pokeshopLogo}
+            className="w-[160px]"
+            alt="Pokemon Pet Shop Logo"
+          />
         </Box>
 
         {NAV_FEATURE_FLAG ? (

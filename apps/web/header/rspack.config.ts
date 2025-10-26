@@ -39,6 +39,7 @@ export default {
         __dirname,
         '../../../libs/ui/container/src/index.ts'
       ),
+      '@ui/image': join(__dirname, '../../../libs/ui/image/src/index.ts'),
     },
   },
   plugins: [

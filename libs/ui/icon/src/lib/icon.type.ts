@@ -9,5 +9,6 @@ export type IconType =
   | 'IconTrash'
   | 'IconMinus'
   | 'IconPlus'
+  | 'IconPhoto'
   | 'IconGithub'
   | 'IconPokeBall';

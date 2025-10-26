@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@expo/vector-icons':
+        specifier: ^15.0.3
+        version: 15.0.3(expo-font@13.3.2(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
       '@module-federation/enhanced':
         specifier: ^0.18.0
         version: 0.18.4(@rspack/core@1.5.8(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.9.3)(webpack@5.102.0)
@@ -26,9 +29,15 @@ importers:
       expo:
         specifier: ~53.0.10
         version: 53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
+      expo-image:
+        specifier: ^3.0.10
+        version: 3.0.10(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native-web@0.21.1(encoding@0.1.13)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
       expo-linking:
         specifier: ^8.0.8
         version: 8.0.8(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
+      expo-modules-core:
+        specifier: ^3.0.22
+        version: 3.0.22(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
       express:
         specifier: ^4.21.2
         version: 4.21.2
@@ -65,6 +74,9 @@ importers:
       react-router-dom:
         specifier: 6.29.0
         version: 6.29.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      swc-loader:
+        specifier: ^0.2.6
+        version: 0.2.6(@swc/core@1.5.29(@swc/helpers@0.5.17))(webpack@5.102.0)
       tailwind-variants:
         specifier: ^3.1.1
         version: 3.1.1(tailwindcss@3.4.18(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.17))(@types/node@20.19.9)(typescript@5.9.3)))
@@ -304,6 +316,8 @@ importers:
   apps/web/sideCart: {}
 
   apps/web/sideCart-e2e: {}
+
+  libs/ds-tokens: {}
 
   libs/features/footer: {}
 
@@ -1540,6 +1554,13 @@ packages:
     resolution: {integrity: sha512-7T09UE9h8QDTsUeMGymB4i+iqvtEeaO5VvUjryFB4tugDTG/bkzViWA74hm5pfjjDEhYMXWaX112mcvhccmIwQ==, tarball: https://registry.npmjs.org/@expo/vector-icons/-/vector-icons-14.1.0.tgz}
     peerDependencies:
       expo-font: '*'
+      react: '*'
+      react-native: '*'
+
+  '@expo/vector-icons@15.0.3':
+    resolution: {integrity: sha512-SBUyYKphmlfUBqxSfDdJ3jAdEVSALS2VUPOUyqn48oZmb2TL/O7t7/PQm5v4NQujYEPLPMTLn9KVw6H7twwbTA==, tarball: https://registry.npmjs.org/@expo/vector-icons/-/vector-icons-15.0.3.tgz}
+    peerDependencies:
+      expo-font: '>=14.0.4'
       react: '*'
       react-native: '*'
 
@@ -5213,6 +5234,17 @@ packages:
       expo: '*'
       react: '*'
 
+  expo-image@3.0.10:
+    resolution: {integrity: sha512-i4qNCEf9Ur7vDqdfDdFfWnNCAF2efDTdahuDy9iELPS2nzMKBLeeGA2KxYEPuRylGCS96Rwm+SOZJu6INc2ADQ==, tarball: https://registry.npmjs.org/expo-image/-/expo-image-3.0.10.tgz}
+    peerDependencies:
+      expo: '*'
+      react: '*'
+      react-native: '*'
+      react-native-web: '*'
+    peerDependenciesMeta:
+      react-native-web:
+        optional: true
+
   expo-keep-awake@14.1.4:
     resolution: {integrity: sha512-wU9qOnosy4+U4z/o4h8W9PjPvcFMfZXrlUoKTMBW7F4pLqhkkP/5G4EviPZixv4XWFMjn1ExQ5rV6BX8GwJsWA==, tarball: https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-14.1.4.tgz}
     peerDependencies:
@@ -5231,6 +5263,12 @@ packages:
 
   expo-modules-core@2.5.0:
     resolution: {integrity: sha512-aIbQxZE2vdCKsolQUl6Q9Farlf8tjh/ROR4hfN1qT7QBGPl1XrJGnaOKkcgYaGrlzCPg/7IBe0Np67GzKMZKKQ==, tarball: https://registry.npmjs.org/expo-modules-core/-/expo-modules-core-2.5.0.tgz}
+
+  expo-modules-core@3.0.22:
+    resolution: {integrity: sha512-FqG5oelITFTLcIfGwoJP8Qsk65be/eiEjz354NdAurnhFARHAVYOOIsUehArvm75ISdZOIZEaTSjCudmkA3kKg==, tarball: https://registry.npmjs.org/expo-modules-core/-/expo-modules-core-3.0.22.tgz}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
 
   expo@53.0.23:
     resolution: {integrity: sha512-6TOLuNCP3AsSkXBJA5W6U/7wpZUop3Q6BxHMtRD2OOgT7CCPvnYgJdnTzqU+gD1hMfcryD8Ejq9RdHbLduXohg==, tarball: https://registry.npmjs.org/expo/-/expo-53.0.23.tgz}
@@ -9023,6 +9061,12 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  swc-loader@0.2.6:
+    resolution: {integrity: sha512-9Zi9UP2YmDpgmQVbyOPJClY0dwf58JDyDMQ7uRc4krmc72twNI2fvlBWHLqVekBpPc7h5NJkGVT1zNDxFrqhvg==, tarball: https://registry.npmjs.org/swc-loader/-/swc-loader-0.2.6.tgz}
+    peerDependencies:
+      '@swc/core': ^1.2.147
+      webpack: '>=2'
+
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==, tarball: https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz}
 
@@ -11383,6 +11427,12 @@ snapshots:
   '@expo/sudo-prompt@9.3.2': {}
 
   '@expo/vector-icons@14.1.0(expo-font@13.3.2(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      expo-font: 13.3.2(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-native: 0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0)
+
+  '@expo/vector-icons@15.0.3(expo-font@13.3.2(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)':
     dependencies:
       expo-font: 13.3.2(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react@19.0.0)
       react: 19.0.0
@@ -16278,6 +16328,14 @@ snapshots:
       fontfaceobserver: 2.3.0
       react: 19.0.0
 
+  expo-image@3.0.10(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native-web@0.21.1(encoding@0.1.13)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      expo: 53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-native: 0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0)
+    optionalDependencies:
+      react-native-web: 0.21.1(encoding@0.1.13)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+
   expo-keep-awake@14.1.4(expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react@19.0.0):
     dependencies:
       expo: 53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)
@@ -16306,6 +16364,12 @@ snapshots:
   expo-modules-core@2.5.0:
     dependencies:
       invariant: 2.2.4
+
+  expo-modules-core@3.0.22(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      invariant: 2.2.4
+      react: 19.0.0
+      react-native: 0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0)
 
   expo@53.0.23(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0):
     dependencies:
@@ -20628,6 +20692,12 @@ snapshots:
       css-what: 6.2.2
       csso: 5.0.5
       picocolors: 1.1.1
+
+  swc-loader@0.2.6(@swc/core@1.5.29(@swc/helpers@0.5.17))(webpack@5.102.0):
+    dependencies:
+      '@swc/core': 1.5.29(@swc/helpers@0.5.17)
+      '@swc/counter': 0.1.3
+      webpack: 5.102.0(@swc/core@1.5.29(@swc/helpers@0.5.17))(webpack-cli@5.1.4)
 
   symbol-tree@3.2.4: {}
 
