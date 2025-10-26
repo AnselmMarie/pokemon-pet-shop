@@ -3,9 +3,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../ui/image"
-    },
-    {
       "path": "../../ui/icon"
     },
     {
@@ -13,6 +10,12 @@
     },
     {
       "path": "../../ui/box"
+    },
+    {
+      "path": "../../ui/input"
+    },
+    {
+      "path": "../../ui/image"
     },
     {
       "path": "./tsconfig.lib.json"

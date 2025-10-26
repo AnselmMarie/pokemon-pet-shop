@@ -40,6 +40,7 @@ export default {
         '../../../libs/ui/container/src/index.ts'
       ),
       '@ui/image': join(__dirname, '../../../libs/ui/image/src/index.ts'),
+      '@ui/input': join(__dirname, '../../../libs/ui/input/src/index.ts'),
     },
   },
   plugins: [

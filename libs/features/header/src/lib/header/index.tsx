@@ -19,8 +19,8 @@
 import { Box } from '@ui/box';
 import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
+import { Input } from '@ui/input';
 import { Image } from '@ui/image';
-// import { Image } from '@ui/image';
 
 import { NAV_FEATURE_FLAG } from './header.const';
 // import { styles } from './header.module';
@@ -58,10 +58,10 @@ export const Header = () => {
             <Box layoutType="span" className="mr-1">
               PETS
             </Box>
-            {/* <UiInput
-              iconClassname={newStyles.icon}
-              appendIcon={IconTypeEnum.ICON_SEARCH}
-            /> */}
+            <Input
+            // iconClassname={newStyles.icon}
+            // appendIcon={IconTypeEnum.ICON_SEARCH}
+            />
           </Box>
         ) : null}
         <Box className="flex items-center">
