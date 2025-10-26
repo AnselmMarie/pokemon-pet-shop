@@ -71,6 +71,12 @@
     },
     {
       "path": "./libs/ui/skeleton"
+    },
+    {
+      "path": "./libs/ds-tokens"
+    },
+    {
+      "path": "./libs/ui/switch"
     }
   ]
 }

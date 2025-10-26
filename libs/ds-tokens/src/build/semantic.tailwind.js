@@ -160,24 +160,22 @@ module.exports = {
       secondary: "Inter"
     }
   },
-  size: {
-    spacing: {
-      "5xl": 64,
-      "4xl": 28,
-      "2xl": 32,
-      xl: 24,
-      "3xl": 40,
-      lg: 20,
-      xs: 8,
-      md: 16,
-      sm: 12,
-      "2xs": 4
-    },
-    borderRadius: {
-      pill: 50,
-      circle: 100,
-      icon: 100,
-      img: 16
-    }
+  spacing: {
+    "5xl": 64,
+    "4xl": 28,
+    "2xl": 32,
+    xl: 24,
+    "3xl": 40,
+    lg: 20,
+    xs: 8,
+    md: 16,
+    sm: 12,
+    "2xs": 4
+  },
+  borderRadius: {
+    pill: 50,
+    circle: 100,
+    icon: 100,
+    img: 16
   }
 }

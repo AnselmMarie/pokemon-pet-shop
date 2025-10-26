@@ -7,7 +7,7 @@ for (const type of types) {
   const tailwindConfig = makeSdTailwindConfig({
     source: ['src/tokens/**/*.json'],
     type,
-    buildPath: "./build/"
+    buildPath: "./src/build/"
   });
 
   const styleDictionaryTailwind = new StyleDictionary(tailwindConfig);

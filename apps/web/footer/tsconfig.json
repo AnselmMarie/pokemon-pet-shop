@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../../libs/ds-tokens"
+    },
+    {
       "path": "../../../libs/features/footer"
     },
     {

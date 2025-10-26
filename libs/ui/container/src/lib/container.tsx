@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactElement } from 'react';
-import { View } from 'react-native';
+
+import { Box } from '@ui/box';
 
 import { ContainerProps } from './container.interface';
 
@@ -7,5 +8,5 @@ export const Container = ({
   className = '',
   children = null,
 }: PropsWithChildren<ContainerProps>): ReactElement => {
-  return <View className={`mx-auto ${className}`}>{children}</View>;
+  return <Box className={`mx-auto ${className}`}>{children}</Box>;
 };

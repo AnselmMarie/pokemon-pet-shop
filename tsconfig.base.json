@@ -19,6 +19,7 @@
     "customConditions": ["@pokemon-pet-shop/source"],
     "baseUrl": ".",
     "paths": {
+      "@dsTokens": ["libs/ds-tokens/src/index.ts"],
       "@features/*": ["libs/features/*"],
       "@ui/*": ["libs/ui/*"],
       "footer/Module": ["apps/web/footer/src/remote-entry.ts"],

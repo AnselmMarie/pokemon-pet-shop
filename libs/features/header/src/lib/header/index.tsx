@@ -33,9 +33,9 @@ export const Header = () => {
   return (
     <Box
       layoutType="header"
-      className="space-between sticky z-99 p-10 shadow bg-slate-100"
+      className="space-between sticky z-99 p-sm shadow bg-white"
     >
-      <Container className="flex item-center space-between">
+      <Container className="flex item-center justify-between">
         <Box className="flex item-center">
           <Icon
             classNameIcon="hidden-md"
@@ -48,7 +48,7 @@ export const Header = () => {
         {NAV_FEATURE_FLAG ? (
           <Box
             layoutType="nav"
-            className="w-full flex my-0 mx-1 p-1 items-center rounded-sm shadow bg-slate-100"
+            className="w-full flex my-0 mx-1 p-1 items-center rounded-sm shadow bg-white"
           >
             <Box layoutType="span" className="mr-1">
               PETS

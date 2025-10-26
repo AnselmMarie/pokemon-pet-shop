@@ -45,6 +45,9 @@
   ],
   "references": [
     {
+      "path": "../../../libs/ds-tokens/tsconfig.lib.json"
+    },
+    {
       "path": "../homepage/tsconfig.app.json"
     },
     {

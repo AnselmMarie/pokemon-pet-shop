@@ -7,6 +7,9 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../box"
     }
   ],
   "extends": "../../../tsconfig.base.json"

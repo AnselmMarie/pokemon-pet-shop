@@ -19,7 +19,7 @@ export default {
       transformGroup: transformGroups.css,
       files: [
         {
-          destination: 'build/css/primitive.css',
+          destination: 'primitive.css',
           format: cssVariables,
           // filter only the tokens that are inside the primitive object
           filter: (token) => token.path[0] === 'primitive',
