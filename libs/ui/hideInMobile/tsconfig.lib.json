@@ -5,8 +5,10 @@
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",
-      "@nx/react/typings/image.d.ts"
+      "@nx/react/typings/image.d.ts",
+      "nativewind/types"
     ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "rootDir": "src",
     "jsx": "react-jsx",
     "module": "esnext",
@@ -30,27 +32,5 @@
     "eslint.config.mjs"
   ],
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
-  "references": [
-    {
-      "path": "../../ui/hideInMobile/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/image/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/switch/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/input/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/icon/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/container/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/box/tsconfig.lib.json"
-    }
-  ]
+  "references": []
 }

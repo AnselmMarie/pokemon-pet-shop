@@ -34,6 +34,11 @@ export default {
         '../../../libs/features/header/src/index.ts'
       ),
       '@ui/box': join(__dirname, '../../../libs/ui/box/src/index.ts'),
+      '@ui/switch': join(__dirname, '../../../libs/ui/switch/src/index.ts'),
+      '@ui/hideInMobile': join(
+        __dirname,
+        '../../../libs/ui/hideInMobile/src/index.ts'
+      ),
       '@ui/icon': join(__dirname, '../../../libs/ui/icon/src/index.ts'),
       '@ui/container': join(
         __dirname,

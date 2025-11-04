@@ -3,19 +3,25 @@
   "include": [],
   "references": [
     {
+      "path": "../../ui/hideInMobile"
+    },
+    {
+      "path": "../../ui/image"
+    },
+    {
+      "path": "../../ui/input"
+    },
+    {
       "path": "../../ui/icon"
     },
     {
       "path": "../../ui/container"
     },
     {
+      "path": "../../ui/switch"
+    },
+    {
       "path": "../../ui/box"
-    },
-    {
-      "path": "../../ui/input"
-    },
-    {
-      "path": "../../ui/image"
     },
     {
       "path": "./tsconfig.lib.json"
