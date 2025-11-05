@@ -1,0 +1,34 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../ui/hideInMobile"
+    },
+    {
+      "path": "../../ui/image"
+    },
+    {
+      "path": "../../ui/input"
+    },
+    {
+      "path": "../../ui/icon"
+    },
+    {
+      "path": "../../ui/container"
+    },
+    {
+      "path": "../../ui/switch"
+    },
+    {
+      "path": "../../ui/box"
+    },
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}

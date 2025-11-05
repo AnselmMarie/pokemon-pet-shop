@@ -41,6 +41,9 @@ importers:
       express:
         specifier: ^4.21.2
         version: 4.21.2
+      jotai:
+        specifier: ^2.15.1
+        version: 2.15.1(@babel/core@7.28.4)(@babel/template@7.27.2)(@types/react@19.0.0)(react@19.0.0)
       nativewind:
         specifier: ^4.2.1
         version: 4.2.1(react-native-reanimated@4.1.2(@babel/core@7.28.4)(react-native-worklets@0.6.0(@babel/core@7.28.4)(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native-safe-area-context@5.4.0(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native-svg@15.13.0(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0))(react-native@0.79.3(@babel/core@7.28.4)(@types/react@19.0.0)(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.18(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.17))(@types/node@20.19.9)(typescript@5.9.3)))
@@ -325,13 +328,19 @@ importers:
 
   libs/features/pokemon: {}
 
+  libs/features/switchTheme: {}
+
   libs/ui/box: {}
 
   libs/ui/container: {}
 
+  libs/ui/hideInMobile: {}
+
   libs/ui/icon: {}
 
   libs/ui/image: {}
+
+  libs/ui/input: {}
 
   libs/ui/link: {}
 
@@ -6444,6 +6453,24 @@ packages:
   jiti@2.6.1:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==, tarball: https://registry.npmjs.org/jiti/-/jiti-2.6.1.tgz}
     hasBin: true
+
+  jotai@2.15.1:
+    resolution: {integrity: sha512-yHT1HAZ3ba2Q8wgaUQ+xfBzEtcS8ie687I8XVCBinfg4bNniyqLIN+utPXWKQE93LMF5fPbQSVRZqgpcN5yd6Q==, tarball: https://registry.npmjs.org/jotai/-/jotai-2.15.1.tgz}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@babel/core': '>=7.0.0'
+      '@babel/template': '>=7.0.0'
+      '@types/react': '>=17.0.0'
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@babel/template':
+        optional: true
+      '@types/react':
+        optional: true
+      react:
+        optional: true
 
   js-message@1.0.7:
     resolution: {integrity: sha512-efJLHhLjIyKRewNS9EGZ4UpI8NguuL6fKkhRxVuMmrGV2xN/0APGdQYwLFky5w9naebSZ0OwAGp0G6/2Cg90rA==, tarball: https://registry.npmjs.org/js-message/-/js-message-1.0.7.tgz}
@@ -17879,6 +17906,13 @@ snapshots:
   jiti@1.21.7: {}
 
   jiti@2.6.1: {}
+
+  jotai@2.15.1(@babel/core@7.28.4)(@babel/template@7.27.2)(@types/react@19.0.0)(react@19.0.0):
+    optionalDependencies:
+      '@babel/core': 7.28.4
+      '@babel/template': 7.27.2
+      '@types/react': 19.0.0
+      react: 19.0.0
 
   js-message@1.0.7:
     optional: true

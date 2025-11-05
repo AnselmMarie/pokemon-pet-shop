@@ -33,6 +33,12 @@ const config: ModuleFederationConfig = {
       };
     }
 
+    // if (['jotai'].includes(libraryName)) {
+    //   return {
+    //     singleton: true,
+    //   };
+    // }
+
     if (libraryName === 'react-native') {
       return {
         singleton: true,
