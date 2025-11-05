@@ -3,14 +3,14 @@
   "include": [],
   "references": [
     {
-      "path": "../../ui/icon"
+      "path": "../../libs/ds-tokens"
     },
     {
-      "path": "./tsconfig.lib.json"
+      "path": "./tsconfig.app.json"
     },
     {
       "path": "./tsconfig.spec.json"
     }
   ],
-  "extends": "../../../tsconfig.base.json"
+  "extends": "../../tsconfig.base.json"
 }

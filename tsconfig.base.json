@@ -22,10 +22,10 @@
       "@dsTokens": ["libs/ds-tokens/src/index.ts"],
       "@features/*": ["libs/features/*"],
       "@ui/*": ["libs/ui/*"],
-      "footer/Module": ["apps/web/footer/src/remote-entry.ts"],
-      "header/Module": ["apps/web/header/src/remote-entry.ts"],
-      "homepage/Module": ["apps/web/homepage/src/remote-entry.ts"],
-      "sideCart/Module": ["apps/web/sideCart/src/remote-entry.ts"]
+      "footer/Module": ["remotes/web/footer/src/remote-entry.ts"],
+      "header/Module": ["remotes/web/header/src/remote-entry.ts"],
+      "homepage/Module": ["remotes/web/homepage/src/remote-entry.ts"],
+      "sideCart/Module": ["remotes/web/sideCart/src/remote-entry.ts"]
     }
   }
 }
