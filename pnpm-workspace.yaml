@@ -1,0 +1,8 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'apps/web/*'
+  - 'libs/features/*'
+  - 'libs/ui/*'
+  - 'libs/ds-tokens'
+  - 'remotes/*'

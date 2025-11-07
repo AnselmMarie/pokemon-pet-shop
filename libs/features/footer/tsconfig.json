@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../ui/icon"
+    },
+    {
+      "path": "../../ui/link"
+    },
+    {
+      "path": "../../ui/box"
+    },
+    {
+      "path": "../../ui/typography"
+    },
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}

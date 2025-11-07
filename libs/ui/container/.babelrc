@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["babel-preset-expo", { "jsxImportSource": "nativewind" }],
+    "nativewind/babel",
+    [
+      "@nx/react/babel",
+      {
+        "runtime": "automatic",
+        "useBuiltIns": "usage"
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-export-namespace-from",
+    "react-native-reanimated/plugin"
+  ]
+}

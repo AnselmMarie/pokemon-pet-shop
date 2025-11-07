@@ -5,19 +5,42 @@
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/eslint.config.mjs",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/src/test-setup.[jt]s",
-      "!{projectRoot}/test-setup.[jt]s",
-      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-      "!{projectRoot}/.storybook/**/*",
-      "!{projectRoot}/tsconfig.storybook.json"
+      "!{projectRoot}/test-setup.[jt]s"
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
+  "nxCloudId": "68e1f5ecb3d9b2316c250ce8",
   "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
@@ -25,17 +48,11 @@
       }
     },
     {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    },
-    {
       "plugin": "@nx/jest/plugin",
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/api-e2e/**/*", "apps/api-e2e/**/*"]
+      "exclude": ["apps/api-e2e/**/*"]
     },
     {
       "plugin": "@nx/expo/plugin",
@@ -48,61 +65,61 @@
         "exportTargetName": "export",
         "submitTargetName": "submit",
         "runIosTargetName": "run-ios",
-        "runAndroidTargetName": "run-android"
+        "runAndroidTargetName": "run-android",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
       }
     },
     {
-      "plugin": "@nx/webpack/plugin",
+      "plugin": "@nx/rspack/plugin",
       "options": {
         "buildTargetName": "build",
         "serveTargetName": "serve",
-        "previewTargetName": "preview"
-      }
-    },
-    {
-      "plugin": "@nx/storybook/plugin",
-      "options": {
-        "serveStorybookTargetName": "storybook",
-        "buildStorybookTargetName": "build-storybook",
-        "testStorybookTargetName": "test-storybook",
-        "staticStorybookTargetName": "static-storybook"
-      }
-    },
-    {
-      "plugin": "@nx/vite/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "testTargetName": "test",
-        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static",
         "previewTargetName": "preview",
-        "serveStaticTargetName": "serve-static"
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
       }
     }
   ],
+  "targetDefaults": {
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "@nx/rspack:rspack": {
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "env": "NX_MF_DEV_REMOTES"
+        }
+      ],
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  },
   "generators": {
     "@nx/react": {
       "application": {
         "babel": true,
-        "style": "css",
+        "style": "tailwind",
         "linter": "eslint",
         "bundler": "rspack"
       },
       "component": {
-        "style": "css"
+        "style": "tailwind"
       },
       "library": {
-        "style": "css",
+        "style": "tailwind",
         "linter": "eslint",
         "unitTestRunner": "jest"
       }
-    }
-  },
-  "nxCloudAccessToken": "MDliNGQ3ODktZWE2My00ZjNlLTk5NGMtNDJiODNiN2I1ZmU0fHJlYWQtd3JpdGU=",
-  "targetDefaults": {
-    "@nx/js:tsc": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "options": {
+        "port": 4200,
+        "devRemotes": ["homepage", "header", "footer", "store"]
+      },
+      "dependsOn": ["typecheck"]
+    },
+    "build": {
+      "dependsOn": ["^build", "typecheck"]
+    }
+  }
+}

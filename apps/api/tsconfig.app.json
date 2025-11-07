@@ -1,10 +1,20 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
-    "types": ["node", "express"]
+    "outDir": "dist",
+    "types": ["node", "express"],
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
   },
-  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "out-tsc",
+    "dist",
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "eslint.config.js",
+    "eslint.config.cjs",
+    "eslint.config.mjs"
+  ]
 }

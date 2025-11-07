@@ -1,7 +1,0 @@
-.container {
-  max-width: var(--theme-breakpoints-lg);
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: var(--theme-spacing-15);
-  padding-right: var(--theme-spacing-15);
-}

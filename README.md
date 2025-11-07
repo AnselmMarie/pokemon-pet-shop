@@ -1,136 +1,90 @@
-# Pokéshop
+# PokemonPetShop
 
-!! This project is still under development, so you may encounter some features or sections that are not yet fully completed !!
+<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-## Table of Contents
+✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
 
-- [Overview](#overview)
-- [Installation](#installation)
-- [Built With](#built-with)
-- [Process of the building Pokeshop](#process-of-the-building-pokeshop)
+[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
-## Overview
+## Finish your CI setup
 
-As a personal challenge, I set out to build a project that maximizes code sharing across web, native, and API applications, without compromising the capabilities of any platform. Below are links showcasing various parts of the project.
+[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/sahptKT4H3)
 
-- Figma: TBD
-- Web: https://github.com/user-attachments/assets/202ef1ff-fc2c-4e2b-83b1-113bf1d0503b
-- Mobile: https://github.com/user-attachments/assets/3f150cd7-f978-4f99-ab90-bc87b070e27b (The Ui currently needs to match up with the web version)
 
-## Installation
+## Generate a library
 
-You can either use the nx commands or use docker compose
+```sh
+npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
+```
 
-### General
+## Run tasks
 
-1. install npm modules
+To build the library use:
 
-   ```
-   npm install
-   ```
+```sh
+npx nx build pkg1
+```
 
-2. Update .env file
+To run any task with Nx use:
 
-   Refer to the .env.example file for easy setup instructions.
+```sh
+npx nx <target> <project-name>
+```
 
-### Known Issues
+These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
 
-If the 'npx nx' command below returns an error, try running 'npx nx reset' first, then run the original command again.
+[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-### Web Development Serve
+## Versioning and releasing
 
-Nx commands
+To version and release the library use
 
-- Run API App
+```
+npx nx release
+```
 
-  ```
-  npx nx run api:serve --configuration=development
-  ```
+Pass `--dry-run` to see what would happen without actually releasing the library.
 
-- Run Web App
+[Learn more about Nx release &raquo;](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-  ```
-  npx nx run web-app:serve
-  ```
+## Keep TypeScript project references up to date
 
-Docker
+Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
 
-1. Run the build dev Docker command
+To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
 
-   ```
-   npm run docker-web-build:dev
-   ```
+```sh
+npx nx sync
+```
 
-2. then run the start dev Docker command
+You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
 
-   ```
-   npm run docker-web-up:dev
-   ```
+```sh
+npx nx sync:check
+```
 
-### Mobile Development Serve
+[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
 
-(ie: the .env variables needs to be updated)
 
-Nx commands
+[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-- Run API App
+## Install Nx Console
 
-  ```
-  npx nx run api:serve --configuration=development
-  ```
+Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
 
-- Run Mobile App
+[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-  ```
-  npx nx run mobile-app:serve
-  ```
+## Useful links
 
-Docker
+Learn more:
 
-- Currently being worked on
+- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
+- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-## Built With
-
-- Nx
-- React
-- Vite (I’m considering switching to Rspack based on Zack's feedback and once Nx adds those changes: [Zack's X comment - last paragraph](https://x.com/scriptedalchemy/status/1844142742747955410?s=46&t=5iUg3_2JUDlizQ0tJFJ3mA))
-- React Native (Expo)
-- Node JS (Express)
-- Zustand
-- Tanstack Query
-- Docker and Docker Compose
-- Style Directory
-- Figma
-- Husky / ESLint / Prettier / Stylelint
-- GitHub Actions
-- Future Additions
-  - Storybook
-  - React Testing Library and Jest
-  - E2E Testing
-  - Azure
-
-## Process of the building Pokéshop
-
-This application covers key stages of building a Greenfield project, including design, app architecture, APIs, CI/CD, and future deployment. Below, I’ve outlined each step of the process with a detailed explanation. Since this is a personal project, there are certain aspects I would approach differently when handling a client project.
-
-### Design
-
-Once I decided to build a Pokédex with a unique twist—allowing users to purchase Pokémon as pets—I turned my attention to designing in Figma. I created three distinct pages, focusing on the Design System, Web, and App. By creating reusable components and leveraging styles, light, and dark themes, I was able to streamline the design process and ensure consistency across the project.
-
-### Designer/Developer DS Token Handoff
-
-To simplify the handoff process, I installed the "Design Tokens" plugin, which allows me to export local variables in JSON format. I then add this JSON file to the "libs/ds-token" project and run a command that compiles the design tokens for CSS and JS formats. This setup makes it easy to update tokens across applications whenever I modify Figma's local variables, ensuring a smooth and efficient workflow.
-
-### App Architecture
-
-When building the applications, my primary goal was to maximize code reusability across all platforms without compromising the unique capabilities of each. As the sole developer, sharing code between platforms was essential for maintaining efficiency. To achieve this, I used Nx to set up a monorepo, organizing the codebase into apps (API, web, mobile) and libraries (features, types, store, UI) to ensure a separation of concern.
-
-While I considered using React Native and React Native Web for quicker development, I chose not to, as it would limit my flexibility on the web. Specifically, I wanted to keep options open for using technologies like micro-frontends, Vite, CSS modules, and React-specific components. This approach allowed me to maintain flexibility and avoid constraints. For the API project, I structured the directory with scalability in mind, enabling a smooth transition to microservices if needed.
-
-### CI/CD
-
-In this project, I aimed to demonstrate my expertise in CI/CD deployments by utilizing GitHub Actions.
-
-### Deployment
-
-TBD
+And join the Nx community:
+- [Discord](https://go.nx.dev/community)
+- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
+- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
+- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)

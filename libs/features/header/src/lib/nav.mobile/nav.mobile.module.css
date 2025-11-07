@@ -1,0 +1,20 @@
+/* .innerModal {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 65px);
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: column;
+  margin: 0 var(--theme-spacing-15) var(--theme-spacing-15);
+}
+
+.switchWrapper {
+  display: flex;
+  justify-content: center;
+} */
