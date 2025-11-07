@@ -5,3 +5,4 @@ packages:
   - 'libs/features/*'
   - 'libs/ui/*'
   - 'libs/ds-tokens'
+  - 'remotes/*'

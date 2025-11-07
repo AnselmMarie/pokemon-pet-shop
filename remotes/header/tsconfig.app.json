@@ -1,22 +1,22 @@
 {
-  "extends": "../../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
+    "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo",
+    "jsx": "react-jsx",
+    "lib": ["dom"],
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts"
     ],
     "rootDir": "src",
-    "jsx": "react-jsx",
     "module": "esnext",
-    "moduleResolution": "bundler",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+    "moduleResolution": "bundler"
   },
   "exclude": [
     "out-tsc",
     "dist",
-    "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
     "src/**/*.spec.tsx",
@@ -25,6 +25,7 @@
     "src/**/*.test.js",
     "src/**/*.spec.jsx",
     "src/**/*.test.jsx",
+    "jest.config.ts",
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
@@ -32,7 +33,13 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../ui/icon/tsconfig.lib.json"
+      "path": "../../libs/ds-tokens/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/features/header/tsconfig.lib.json"
+    },
+    {
+      "path": "../store/tsconfig.app.json"
     }
   ]
 }

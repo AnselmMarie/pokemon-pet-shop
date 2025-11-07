@@ -1,0 +1,22 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../libs/ds-tokens"
+    },
+    {
+      "path": "../../libs/features/footer"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../store"
+    }
+  ],
+  "extends": "../../tsconfig.base.json"
+}
