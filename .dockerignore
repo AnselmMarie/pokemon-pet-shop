@@ -1,0 +1,17 @@
+node_modules
+dist
+.git
+Dockerfile
+.dockerignore
+.env
+coverage
+tests
+logs
+docker
+tools
+Dockerfile*
+README.md
+LICENSE
+.vscode
+.git
+.gitignore
