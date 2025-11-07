@@ -8,6 +8,7 @@ const config: ModuleFederationConfig = {
   exposes: {
     './Module': './src/remote-entry.ts',
   },
+  remotes: ['store'],
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {
@@ -15,6 +16,10 @@ const config: ModuleFederationConfig = {
         strictVersion: false,
         requiredVersion: deps[libraryName],
       };
+    }
+
+    if (libraryName === 'jotai') {
+      return { singleton: true };
     }
 
     if (libraryName === 'react-native') {

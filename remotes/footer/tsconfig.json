@@ -13,6 +13,9 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../store"
     }
   ],
   "extends": "../../tsconfig.base.json"
