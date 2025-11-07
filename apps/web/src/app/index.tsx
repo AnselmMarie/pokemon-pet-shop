@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { useAtom } from 'jotai';
+
+import { themeAtom } from 'store/theme';
 
 import { RouterProvider } from '../route/route-provider';
 
@@ -8,6 +11,10 @@ const Header = React.lazy(() => import('header/Module'));
 const Footer = React.lazy(() => import('footer/Module'));
 
 export function App() {
+  const [theme] = useAtom(themeAtom);
+
+  console.log('Current theme:', theme);
+
   return (
     <React.Suspense fallback={null}>
       <React.Suspense fallback="Loading Header">

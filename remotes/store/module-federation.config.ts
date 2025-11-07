@@ -4,26 +4,10 @@ import { workspaceRoot } from '@nx/devkit';
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
 
 const config: ModuleFederationConfig = {
-  name: 'web',
-  /**
-   * To use a remote that does not exist in your current Nx Workspace
-   * You can use the tuple-syntax to define your remote
-   *
-   * remotes: [['my-external-remote', 'https://nx-angular-remote.netlify.app']]
-   *
-   * You _may_ need to add a `remotes.d.ts` file to your `src/` folder declaring the external remote for tsc, with the
-   * following content:
-   *
-   * declare module 'my-external-remote';
-   *
-   */
-  // remotes: [
-  //   ['homepage', 'homepage@http://localhost:4203/remoteEntry.js'],
-  //   ['header', 'header@http://localhost:4202/remoteEntry.js'],
-  //   ['footer', 'footer@http://localhost:4201/remoteEntry.js'],
-  // ],
-  remotes: ['homepage', 'header', 'footer', 'store'],
-  // remotes: ['header', 'footer', 'sideCart', 'homepage'],
+  name: 'store',
+  exposes: {
+    './theme': './src/remote-entry.ts',
+  },
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {
@@ -31,10 +15,6 @@ const config: ModuleFederationConfig = {
         strictVersion: false,
         requiredVersion: deps[libraryName],
       };
-    }
-
-    if (libraryName === 'jotai') {
-      return { singleton: true };
     }
 
     if (libraryName === 'react-native') {
@@ -47,6 +27,10 @@ const config: ModuleFederationConfig = {
         requiredVersion: false,
         eager: true, // optional: ensures only one copy is loaded early
       };
+    }
+
+    if (libraryName === 'jotai') {
+      return { singleton: true };
     }
 
     return defaultConfig;

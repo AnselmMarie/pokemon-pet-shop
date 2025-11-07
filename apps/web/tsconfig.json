@@ -6,6 +6,18 @@
       "path": "../../libs/ds-tokens"
     },
     {
+      "path": "../../remotes/homepage"
+    },
+    {
+      "path": "../../remotes/footer"
+    },
+    {
+      "path": "../../remotes/header"
+    },
+    {
+      "path": "../../remotes/store"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

@@ -71,6 +71,12 @@
     },
     {
       "path": "./libs/features/switchTheme"
+    },
+    {
+      "path": "./remotes/store-e2e"
+    },
+    {
+      "path": "./remotes/store"
     }
   ]
 }
