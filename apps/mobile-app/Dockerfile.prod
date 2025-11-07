@@ -1,0 +1,26 @@
+# Use an official Node.js image
+FROM alpine:3.20
+
+ENV NODE_VERSION 20.18.0
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package.json package-lock ./
+RUN npm install
+
+# Copy the project files
+COPY . .
+
+# Build the React app for production
+RUN yarn nx build web --prod
+
+# Install 'serve' to serve the built app
+RUN npm install -g serve
+
+# Expose the port to serve the static files
+EXPOSE 5000
+
+# Serve the production build
+CMD ["serve", "-s", "dist/apps/web", "-l", "5000"]

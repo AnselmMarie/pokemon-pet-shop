@@ -1,19 +1,17 @@
 {
-  "name": "@pokemon-pet-shop/ds-tokens",
+  "name": "ds-tokens",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ds-tokens/src",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "nx:run-commands",
-      "outputs": [
-        "{workspaceRoot}/dist/libs/ds-tokens/tailwind",
-        "{workspaceRoot}/dist/libs/ds-tokens/scss"
-      ],
+      "executor": "@nxkit/style-dictionary:build",
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "cwd": "libs/ds-tokens",
-        "command": "NODE_OPTIONS='--experimental-vm-modules' node src/build-tokens.mjs"
+        "outputPath": "dist/libs/ds-tokens",
+        "styleDictionaryConfig": "libs/ds-tokens/style-dictionary.config.ts",
+        "tsConfig": "libs/ds-tokens/tsconfig.json"
       }
     },
     "lint": {

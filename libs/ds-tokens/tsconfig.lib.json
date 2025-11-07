@@ -6,10 +6,5 @@
     "allowJs": true,
     "types": ["node"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.js",
-    "style-dictionary.config.ts",
-    "src/build-tokens.mjs"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.js", "style-dictionary.config.ts"]
 }
