@@ -14,8 +14,6 @@
 // } from '@pokemon-pet-shop/ui';
 // import { THEME_BLUE_400 } from '@pokemon-pet-shop/ui/styles/var';
 
-// import { UiSwitchTheme } from '../component/switch.theme';
-
 import { SwitchTheme } from '@features/switchTheme';
 
 import { Box } from '@ui/box';
@@ -26,13 +24,12 @@ import { Image } from '@ui/image';
 import { HideInMobile } from '@ui/hideInMobile';
 
 import { NAV_FEATURE_FLAG } from './header.const';
-// import { styles } from './header.module';
 import pokeshopLogo from './assets/pokeshop-logo.png';
-// import useHeaderLogic from './use.header.logic';
+import useHeaderLogic from './use.header.logic';
 
 export const Header = () => {
-  // const { data, onHandleCartModalClick, onHandleMobileNavModalClick } =
-  //   useHeaderLogic();
+  const { data, onHandleCartModalClick, onHandleMobileNavModalClick } =
+    useHeaderLogic();
 
   return (
     <Box
@@ -84,7 +81,7 @@ export const Header = () => {
 
             <Box
               className="absolute w-[51px] h-[47px] z-13 -top-[14px]"
-              // onClick={onHandleCartModalClick}
+              onClick={onHandleCartModalClick}
             />
           </Box>
         </Box>
