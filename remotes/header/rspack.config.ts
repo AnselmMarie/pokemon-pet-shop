@@ -33,6 +33,14 @@ export default {
         __dirname,
         '../../libs/features/header/src/index.ts'
       ),
+      '@features/switchTheme': join(
+        __dirname,
+        '../../libs/features/switchTheme/src/index.ts'
+      ),
+      '@features/atomTheme': join(
+        __dirname,
+        '../../libs/features/atomTheme/src/index.ts'
+      ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
       '@ui/switch': join(__dirname, '../../libs/ui/switch/src/index.ts'),
       '@ui/hideInMobile': join(

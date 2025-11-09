@@ -38,9 +38,6 @@
       "path": "../../ui/image/tsconfig.lib.json"
     },
     {
-      "path": "../../ui/switch/tsconfig.lib.json"
-    },
-    {
       "path": "../../ui/input/tsconfig.lib.json"
     },
     {
@@ -51,6 +48,9 @@
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
+    },
+    {
+      "path": "../switchTheme/tsconfig.lib.json"
     }
   ]
 }

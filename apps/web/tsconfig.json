@@ -15,9 +15,6 @@
       "path": "../../remotes/header"
     },
     {
-      "path": "../../remotes/store"
-    },
-    {
       "path": "./tsconfig.app.json"
     },
     {

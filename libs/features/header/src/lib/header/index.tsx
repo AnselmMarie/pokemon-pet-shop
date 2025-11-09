@@ -16,13 +16,14 @@
 
 // import { UiSwitchTheme } from '../component/switch.theme';
 
+import { SwitchTheme } from '@features/switchTheme';
+
 import { Box } from '@ui/box';
 import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
 import { Input } from '@ui/input';
 import { Image } from '@ui/image';
 import { HideInMobile } from '@ui/hideInMobile';
-import { Switch } from '@ui/switch';
 
 import { NAV_FEATURE_FLAG } from './header.const';
 // import { styles } from './header.module';
@@ -67,9 +68,9 @@ export const Header = () => {
           </Box>
         ) : null}
 
-        <Box className="flex items-center">
+        <Box className="flex items-center gap-sm">
           <HideInMobile>
-            <Switch className="hidden md:block border-2 border-lightGrey" />
+            <SwitchTheme className="invisible md:visible border-2 border-lightGrey" />
           </HideInMobile>
           <Box className="flex justify-center items-center relative">
             <Icon classNameIcon="ml-2" />

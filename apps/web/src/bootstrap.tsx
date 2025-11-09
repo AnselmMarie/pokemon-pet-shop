@@ -2,7 +2,6 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { Provider } from 'jotai';
 
-import { globalStore } from 'store/theme';
 import App from './app';
 
 const root = ReactDOM.createRoot(
@@ -10,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <Provider store={globalStore}>
+    <Provider>
       <App />
     </Provider>
   </StrictMode>

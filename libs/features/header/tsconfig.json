@@ -18,10 +18,10 @@
       "path": "../../ui/container"
     },
     {
-      "path": "../../ui/switch"
+      "path": "../../ui/box"
     },
     {
-      "path": "../../ui/box"
+      "path": "../switchTheme"
     },
     {
       "path": "./tsconfig.lib.json"

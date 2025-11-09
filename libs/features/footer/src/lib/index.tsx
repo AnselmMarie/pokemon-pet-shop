@@ -2,7 +2,6 @@ import { Box } from '@ui/box';
 import { Link } from '@ui/link';
 import { Icon } from '@ui/icon';
 import { Typography } from '@ui/typography';
-// import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
 // import { IconTypeEnum, UiElementLayout, UiIcon, UiLink, UiTypography } from '@pokemon-pet-shop/ui';
 // import { THEME_NETURAL_100, THEME_NETURAL_900 } from '@pokemon-pet-shop/ui/styles/var';
 

@@ -1,6 +1,5 @@
 import { ReactElement } from 'react';
 
-// import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 // import { classNamesUtil, noopUtil } from '@pokemon-pet-shop/utils';
 
 import { Box } from '@ui/box';
@@ -24,11 +23,8 @@ export const Switch = ({
     // noopUtil();
   },
 }: SwitchProps): ReactElement => {
-  // const { newStyles } = useRenderStyles(styles);
   const { getCircleThemeStyle, onInitLeftClick, onInitRightClick } =
     useSwitchLogic(defaultValue, val, onLeftClick, onRightClick);
-
-  console.log('getCircleThemeStyle', getCircleThemeStyle);
 
   // background: var(--theme-netural-200-mode);
   // padding: var(--theme-spacing-5) var(--theme-spacing-10);
@@ -37,7 +33,7 @@ export const Switch = ({
 
   return (
     <Box
-      className={`flex w-[72px] h-[42px] items-center justify-center relative rounded-pill ${className}`}
+      className={`flex flex-row w-[72px] h-[43px] items-center justify-center relative rounded-pill ${className}`}
     >
       {iconLeft ? (
         <Icon
@@ -72,7 +68,7 @@ export const Switch = ({
       var(--theme-blue-600-mode);  border-radius:
       var(--theme-radius-circle); transition: left 100ms ease-in-out; */}
       <Box
-        className={`absolute top-[1px] h-[36px] w-[36px] bg-lightBlue z-10 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
+        className={`absolute top-[1px] h-[36px] w-[36px] bg-lightBlue z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
         // className={classNamesUtil(newStyles.iconCircle, getCircleThemeStyle)}
       />
     </Box>

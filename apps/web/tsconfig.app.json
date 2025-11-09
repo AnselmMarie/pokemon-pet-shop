@@ -16,7 +16,6 @@
       "footer/Module": ["src/types/remote-modules.d.ts"],
       "header/Module": ["src/types/remote-modules.d.ts"],
       "homepage/Module": ["src/types/remote-modules.d.ts"],
-      "store/theme": ["src/types/remote-modules.d.ts"],
       "sideCart/Module": ["src/types/remote-modules.d.ts"]
     }
   },
@@ -56,9 +55,6 @@
     },
     {
       "path": "../../remotes/header/tsconfig.app.json"
-    },
-    {
-      "path": "../../remotes/store/tsconfig.app.json"
     }
   ]
 }

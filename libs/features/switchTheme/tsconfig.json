@@ -3,6 +3,12 @@
   "include": [],
   "references": [
     {
+      "path": "../../ui/switch"
+    },
+    {
+      "path": "../atomTheme"
+    },
+    {
       "path": "../../ui/icon"
     },
     {
