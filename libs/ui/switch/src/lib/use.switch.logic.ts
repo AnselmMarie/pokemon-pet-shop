@@ -30,9 +30,9 @@ const useSwitchLogic = (
 
   const getCircleThemeStyle = useMemo(() => {
     if (switchState === 'ON') {
-      return 'left-[2px]';
+      return 'left-[10px]';
     }
-    return 'left-[30px]';
+    return 'left-[60px]';
   }, [switchState]);
 
   useEffect(() => {

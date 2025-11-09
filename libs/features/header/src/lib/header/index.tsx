@@ -37,18 +37,18 @@ export const Header = () => {
   return (
     <Box
       layoutType="header"
-      className="space-between sticky z-99 p-md shadow bg-white"
+      className="space-between h-[93px] sticky z-99 px-md py-xs shadow bg-white"
     >
       <Container className="flex item-center justify-between">
         <Box className="flex justify-center items-center">
           <Icon
-            classNameIcon="hidden-md"
+            classNameIcon="md:hidden"
             icon="IconMenu"
             // onClick={onHandleMobileNavModalClick}
           />
           <Image
             src={pokeshopLogo}
-            className="w-[160px]"
+            className="w-[195px]"
             alt="Pokemon Pet Shop Logo"
           />
         </Box>
@@ -70,10 +70,10 @@ export const Header = () => {
 
         <Box className="flex items-center gap-sm">
           <HideInMobile>
-            <SwitchTheme className="invisible md:visible border-2 border-lightGrey" />
+            <SwitchTheme className="invisible md:visible" />
           </HideInMobile>
           <Box className="flex justify-center items-center relative">
-            <Icon classNameIcon="ml-2" />
+            <Icon classNameIcon="ml-2 red" size={28} />
             {/* {data?.counter ? (
               <Box className="rounded-sm min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
                 <Box layoutType="span" className="align-center">

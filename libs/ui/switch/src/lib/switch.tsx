@@ -33,7 +33,7 @@ export const Switch = ({
 
   return (
     <Box
-      className={`flex flex-row w-[72px] h-[43px] items-center justify-center relative rounded-pill ${className}`}
+      className={`flex flex-row bg-lightGrey pl-2xs pr-2xs w-[109px] h-[61px] items-center justify-between relative rounded-pill ${className}`}
     >
       {iconLeft ? (
         <Icon
@@ -42,7 +42,7 @@ export const Switch = ({
           // classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconLeft)}
           // classNameWrapper={newStyles.iconWrapper}
           classNameIcon="z-10 cursor-pointer border-lightGrey"
-          classNameWrapper="flex justify-center items-center w-[31px] h-[39px] p-[2px]"
+          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px]"
           isDisabled={val === 'ON' || isDisabled}
           displayWrapper
           onClick={onInitLeftClick}
@@ -58,7 +58,7 @@ export const Switch = ({
           // classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconRight)}
           // classNameWrapper={newStyles.iconWrapper}
           classNameIcon="z-10 cursor-pointer"
-          classNameWrapper="flex justify-center items-center w-[31px] h-[39px] p-[2px]"
+          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px]"
           isDisabled={val === 'OFF' || isDisabled}
           displayWrapper
           onClick={onInitRightClick}
@@ -67,8 +67,9 @@ export const Switch = ({
       {/*  background-color:
       var(--theme-blue-600-mode);  border-radius:
       var(--theme-radius-circle); transition: left 100ms ease-in-out; */}
+      {/* h-[31px] w-[31px] */}
       <Box
-        className={`absolute top-[1px] h-[36px] w-[36px] bg-lightBlue z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
+        className={`absolute top-[11px] h-[38px] w-[38px] bg-lightBlue z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
         // className={classNamesUtil(newStyles.iconCircle, getCircleThemeStyle)}
       />
     </Box>

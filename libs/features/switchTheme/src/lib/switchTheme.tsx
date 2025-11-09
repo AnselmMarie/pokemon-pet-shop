@@ -4,33 +4,29 @@ import { useAtom } from 'jotai';
 import { Switch } from '@ui/switch';
 import { toggleThemeAtom } from '@features/atomTheme';
 
-// import { variableThemeMode } from '@pokemon-pet-shop/ui/styles/var';
-// import { isWebUtil } from '@pokemon-pet-shop/utils';
-
 import { SwitchProps } from './switchTheme.interface';
 
+/**
+ * SwitchTheme
+ *
+ * Small wrapper component that renders the UI switch bound to the global theme atom.
+ * It reads the current theme value and dispatches the toggle action when the switch
+ * is clicked. The component intentionally delegates visuals to the shared `Switch`
+ * component and only wires up behavior.
+ *
+ * @param {SwitchProps} props - Component props
+ * @param {string} [props.className] - Optional className passed down to the Switch
+ * @returns {ReactElement} The themed Switch component
+ *
+ * @example
+ * <SwitchTheme className="my-switch" />
+ */
 export const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   const [theme, toggleTheme] = useAtom(toggleThemeAtom);
-
-  // const updateTheming = (newTheme: ThemeTypeEnum) => {
-  //   const varThemeMode = variableThemeMode(newTheme);
-  //   updateTheme(newTheme, varThemeMode);
-  //   if (isWebUtil()) {
-  //     const el = document.querySelector('html');
-  //     el?.setAttribute('data-theme', newTheme);
-  //   }
-  // };
 
   const toggleThemeClick = () => {
     toggleTheme();
   };
-
-  // useEffect(() => {
-  //   if (isWebUtil()) {
-  //     const el = document.querySelector('html');
-  //     el?.setAttribute('data-theme', theme);
-  //   }
-  // }, [theme]);
 
   return (
     <Switch

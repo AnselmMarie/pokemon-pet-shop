@@ -1,4 +1,5 @@
-// import { ThemeTypeEnum } from '@pokemon-pet-shop/store';
+import type { Theme } from '@features/atomTheme';
+
 import { IconType } from '@ui/icon';
 
 export interface SwitchProps {
@@ -6,5 +7,5 @@ export interface SwitchProps {
   name?: string;
   iconLeft?: IconType;
   iconRight?: IconType;
-  defaultValue?: boolean; //ThemeTypeEnum;
+  defaultValue?: Theme;
 }
