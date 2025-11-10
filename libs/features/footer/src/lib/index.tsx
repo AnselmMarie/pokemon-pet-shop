@@ -13,7 +13,7 @@ export const Footer = () => {
   return (
     <Box
       className="flex flex-col md:flex-row items-center justify-center mb-12"
-      // layoutType="footer"
+      // as="footer"
     >
       <Link
         className="flex items-center"

@@ -1,7 +1,7 @@
 // import { useRenderStyles } from '@pokemon-pet-shop/hooks';
 // import {
 //   UiElementLayout,
-//   ElementLayoutTypeEnum,
+//   ElementasEnum,
 //   UiImage,
 //   UiIcon,
 //   IconTypeEnum,
@@ -33,7 +33,7 @@ export const Header = () => {
 
   return (
     <Box
-      layoutType="header"
+      as="header"
       className="space-between h-[93px] sticky z-99 px-md py-xs shadow bg-white"
     >
       <Container className="flex item-center justify-between">
@@ -52,10 +52,10 @@ export const Header = () => {
 
         {NAV_FEATURE_FLAG ? (
           <Box
-            layoutType="nav"
+            as="nav"
             className="w-full flex my-0 mx-1 p-1 items-center rounded-sm shadow bg-white"
           >
-            <Box layoutType="span" className="mr-1">
+            <Box as="span" className="mr-1">
               PETS
             </Box>
             <Input
@@ -73,7 +73,7 @@ export const Header = () => {
             <Icon classNameIcon="ml-2 red" size={28} />
             {/* {data?.counter ? (
               <Box className="rounded-sm min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
-                <Box layoutType="span" className="align-center">
+                <Box as="span" className="align-center">
                   {data?.counter}
                 </Box>
               </Box>
