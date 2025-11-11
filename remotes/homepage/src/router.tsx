@@ -1,7 +1,7 @@
 import { createRouter, Outlet } from '@tanstack/react-router';
 import { createRootRoute, createRoute } from '@tanstack/react-router';
 
-// import { PokemonPetShopPokemon } from '@features/pokemon';
+import { PokemonList } from '@features/pokemon';
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,
@@ -10,8 +10,7 @@ const rootRoute = createRootRoute({
 const homepageRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
-  component: () => <div>Pokemon</div>,
-  // component: () => <PokemonPetShopPokemon />,
+  component: () => <PokemonList />,
 });
 
 const routeTree = rootRoute.addChildren([homepageRoute]);

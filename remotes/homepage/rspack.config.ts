@@ -34,6 +34,10 @@ export default {
         '../../libs/features/pokemon/src/index.ts'
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
+      '@ui/typography': join(
+        __dirname,
+        '../../libs/ui/typography/src/index.ts'
+      ),
     },
   },
   plugins: [
