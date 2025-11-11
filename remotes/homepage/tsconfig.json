@@ -6,9 +6,6 @@
       "path": "../../libs/ds-tokens"
     },
     {
-      "path": "../../libs/features/pokemon"
-    },
-    {
       "path": "./tsconfig.app.json"
     },
     {

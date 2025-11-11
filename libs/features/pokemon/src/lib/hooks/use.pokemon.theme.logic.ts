@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
-import { PokemonDetailTypesObj } from '@pokemon-pet-shop/typing';
+// import { PokemonDetailTypesObj } from '@pokemon-pet-shop/typing';
 
-const usePokemonThemeLogic = (typeData: PokemonDetailTypesObj[]) => {
+const usePokemonThemeLogic = (typeData: any[]) => {
   const getThemeClass = useMemo(() => {
     const typeName = typeData?.[0]?.type?.name;
     return `${typeName}Theme`;

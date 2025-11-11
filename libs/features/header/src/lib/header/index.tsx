@@ -28,8 +28,7 @@ import pokeshopLogo from './assets/pokeshop-logo.png';
 import useHeaderLogic from './use.header.logic';
 
 export const Header = () => {
-  const { data, onHandleCartModalClick, onHandleMobileNavModalClick } =
-    useHeaderLogic();
+  const { onHandleCartModalClick } = useHeaderLogic();
 
   return (
     <Box

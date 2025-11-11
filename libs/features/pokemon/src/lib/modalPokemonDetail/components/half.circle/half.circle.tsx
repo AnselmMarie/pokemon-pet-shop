@@ -1,17 +1,19 @@
-import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
-import { UiElementLayout } from '@pokemon-pet-shop/ui';
-import { classNamesUtil } from '@pokemon-pet-shop/utils';
+import { Box } from '@ui/box';
 
-import { styles } from './half.circle.module';
+// import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
+
+// import { styles } from './half.circle.module';
 
 const HalfCircle = () => {
-  const { theme } = useThemeStore();
+  // const { theme } = useThemeStore();
   return (
-    <UiElementLayout
-      className={classNamesUtil(
-        styles.contentCurve,
-        theme === ThemeTypeEnum.LIGHT ? styles.contentCurveLight : styles.contentCurveDark
-      )}
+    <Box
+    // className={`
+    //   ${styles.contentCurve},
+    //   ${theme === ThemeTypeEnum.LIGHT
+    //     ? styles.contentCurveLight
+    //     : styles.contentCurveDark}
+    // `}
     />
   );
 };

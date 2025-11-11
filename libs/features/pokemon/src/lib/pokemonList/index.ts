@@ -1,3 +1,3 @@
-import UiPokemonList from './pokemon.list.view';
+import UiPokemonList from './pokemonList';
 
 export { UiPokemonList };

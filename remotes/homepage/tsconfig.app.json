@@ -34,9 +34,6 @@
   "references": [
     {
       "path": "../../libs/ds-tokens/tsconfig.lib.json"
-    },
-    {
-      "path": "../../libs/features/pokemon/tsconfig.lib.json"
     }
   ]
 }

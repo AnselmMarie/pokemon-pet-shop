@@ -1,7 +1,7 @@
-import { TypographyType } from './typography.type';
+import { TypographyVariant } from './typography.type';
 
 export interface TypographyProps {
-  typographyType?: TypographyType;
+  variant?: TypographyVariant;
   className?: any;
   onClick?: () => void;
 }

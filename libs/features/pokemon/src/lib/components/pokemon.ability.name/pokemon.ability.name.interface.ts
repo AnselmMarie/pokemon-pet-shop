@@ -1,7 +1,7 @@
-import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
+// import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
 
 export interface PokemonAbilityNameProps {
-  abilityData: PokemonDetailAbilityObj;
+  abilityData: any; // PokemonDetailAbilityObj;
   typeData: any;
   getThemeClass: string;
   showAtkLine?: boolean;

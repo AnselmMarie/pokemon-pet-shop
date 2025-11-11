@@ -1,3 +1,3 @@
-import UiPokemonAbilityName from './pokemon.ability.name';
+// import UiPokemonAbilityName from './pokemon.ability.name';
 
-export { UiPokemonAbilityName };
+// export { UiPokemonAbilityName };

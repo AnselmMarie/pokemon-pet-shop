@@ -74,6 +74,12 @@
     },
     {
       "path": "./libs/features/atomTheme"
+    },
+    {
+      "path": "./libs/features/modalCart"
+    },
+    {
+      "path": "./libs/ui/modal"
     }
   ]
 }
