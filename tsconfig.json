@@ -80,6 +80,12 @@
     },
     {
       "path": "./libs/ui/modal"
+    },
+    {
+      "path": "./libs/services/pokemon-api"
+    },
+    {
+      "path": "./libs/utils/apiClient"
     }
   ]
 }

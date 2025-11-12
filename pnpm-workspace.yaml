@@ -6,3 +6,5 @@ packages:
   - 'libs/ui/*'
   - 'libs/ds-tokens'
   - 'remotes/*'
+  - 'libs/services/*'
+  - 'libs/utils/*'

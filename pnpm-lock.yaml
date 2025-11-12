@@ -17,6 +17,9 @@ importers:
       '@tabler/icons-react':
         specifier: ^3.35.0
         version: 3.35.0(react@19.0.0)
+      '@tanstack/react-query':
+        specifier: ^5.90.7
+        version: 5.90.7(react@19.0.0)
       '@tanstack/react-router':
         specifier: ^1.132.37
         version: 1.132.37(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -24,7 +27,7 @@ importers:
         specifier: ^1.132.37
         version: 1.132.37(@tanstack/react-router@1.132.37(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@tanstack/router-core@1.132.37)(@types/node@20.19.9)(csstype@3.1.3)(jiti@2.6.1)(less@4.4.1)(lightningcss@1.27.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass-embedded@1.93.2)(sass@1.93.2)(solid-js@1.9.9)(terser@5.44.0)(tiny-invariant@1.3.3)(yaml@2.8.1)
       axios:
-        specifier: ^1.6.0
+        specifier: ^1.12.2
         version: 1.12.2
       expo:
         specifier: ~53.0.10
@@ -300,35 +303,25 @@ importers:
 
   apps/api-e2e: {}
 
-  apps/web/footer: {}
+  apps/web: {}
 
-  apps/web/footer-e2e: {}
-
-  apps/web/header: {}
-
-  apps/web/header-e2e: {}
-
-  apps/web/homepage: {}
-
-  apps/web/homepage-e2e: {}
-
-  apps/web/shell: {}
-
-  apps/web/shell-e2e: {}
-
-  apps/web/sideCart: {}
-
-  apps/web/sideCart-e2e: {}
+  apps/web-e2e: {}
 
   libs/ds-tokens: {}
+
+  libs/features/atomTheme: {}
 
   libs/features/footer: {}
 
   libs/features/header: {}
 
+  libs/features/modalCart: {}
+
   libs/features/pokemon: {}
 
   libs/features/switchTheme: {}
+
+  libs/services/pokemon-api: {}
 
   libs/ui/box: {}
 
@@ -344,6 +337,8 @@ importers:
 
   libs/ui/link: {}
 
+  libs/ui/modal: {}
+
   libs/ui/serverError: {}
 
   libs/ui/skeleton: {}
@@ -351,6 +346,24 @@ importers:
   libs/ui/switch: {}
 
   libs/ui/typography: {}
+
+  libs/utils/apiClient: {}
+
+  remotes/footer: {}
+
+  remotes/footer-e2e: {}
+
+  remotes/header: {}
+
+  remotes/header-e2e: {}
+
+  remotes/homepage: {}
+
+  remotes/homepage-e2e: {}
+
+  remotes/sideCart: {}
+
+  remotes/sideCart-e2e: {}
 
 packages:
 
@@ -2997,6 +3010,14 @@ packages:
   '@tanstack/history@1.132.31':
     resolution: {integrity: sha512-UCHM2uS0t/uSszqPEo+SBSSoQVeQ+LlOWAVBl5SA7+AedeAbKafIPjFn8huZCXNLAYb0WKV2+wETr7lDK9uz7g==, tarball: https://registry.npmjs.org/@tanstack/history/-/history-1.132.31.tgz}
     engines: {node: '>=12'}
+
+  '@tanstack/query-core@5.90.7':
+    resolution: {integrity: sha512-6PN65csiuTNfBMXqQUxQhCNdtm1rV+9kC9YwWAIKcaxAauq3Wu7p18j3gQY3YIBJU70jT/wzCCZ2uqto/vQgiQ==, tarball: https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.90.7.tgz}
+
+  '@tanstack/react-query@5.90.7':
+    resolution: {integrity: sha512-wAHc/cgKzW7LZNFloThyHnV/AX9gTg3w5yAv0gvQHPZoCnepwqCMtzbuPbb2UvfvO32XZ46e8bPOYbfZhzVnnQ==, tarball: https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.90.7.tgz}
+    peerDependencies:
+      react: ^18 || ^19
 
   '@tanstack/react-router-devtools@1.132.37':
     resolution: {integrity: sha512-6zKjnB1gTfM1UZiEe2I4bSIxxJ0Z1xC57R02l6ogRzyaqEimMIUFv873earTiWNlWwvKVuiBrwgE5/hsivgqNg==, tarball: https://registry.npmjs.org/@tanstack/react-router-devtools/-/react-router-devtools-1.132.37.tgz}
@@ -13659,6 +13680,13 @@ snapshots:
   '@tabler/icons@3.35.0': {}
 
   '@tanstack/history@1.132.31': {}
+
+  '@tanstack/query-core@5.90.7': {}
+
+  '@tanstack/react-query@5.90.7(react@19.0.0)':
+    dependencies:
+      '@tanstack/query-core': 5.90.7
+      react: 19.0.0
 
   '@tanstack/react-router-devtools@1.132.37(@tanstack/react-router@1.132.37(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@tanstack/router-core@1.132.37)(@types/node@20.19.9)(csstype@3.1.3)(jiti@2.6.1)(less@4.4.1)(lightningcss@1.27.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass-embedded@1.93.2)(sass@1.93.2)(solid-js@1.9.9)(terser@5.44.0)(tiny-invariant@1.3.3)(yaml@2.8.1)':
     dependencies:
