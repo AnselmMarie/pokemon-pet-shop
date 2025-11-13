@@ -33,10 +33,19 @@ export default {
         __dirname,
         '../../libs/features/pokemon/src/index.ts'
       ),
+      '@utils/apiClient': join(
+        __dirname,
+        '../../libs/utils/apiClient/src/index.ts'
+      ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
+      '@ui/skeleton': join(__dirname, '../../libs/ui/skeleton/src/index.ts'),
       '@ui/typography': join(
         __dirname,
         '../../libs/ui/typography/src/index.ts'
+      ),
+      '@services/pokemon-api': join(
+        __dirname,
+        '../../libs/services/pokemon-api/src/index.ts'
       ),
     },
   },

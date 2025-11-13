@@ -14,7 +14,11 @@
 //   mobSrcTypeEnum,
 //   UiSkeleton,
 // } from '@pokemon-pet-shop/ui';
-// import { capitalizeNameUtil, classNamesUtil, isWebUtil } from '@pokemon-pet-shop/utils';
+// import {
+//   capitalizeNameUtil,
+//   classNamesUtil,
+//   isWebUtil,
+// } from '@pokemon-pet-shop/utils';
 
 // import { UiPokemonAbilityName } from '../components/pokemon.ability.name';
 
@@ -22,8 +26,9 @@
 // import { styles } from './pokemon.card.module';
 // import usePokemonCardLogic from './use.pokemon.card.logic';
 
-// const PokemonCard = ({ data, isLoading }: CardProps): ReactElement => {
-//   const { getThemeClass, onHandleOpenDetailModalClick } = usePokemonCardLogic(data);
+// export const PokemonCard = ({ data, isLoading }: CardProps): ReactElement => {
+//   const { getThemeClass, onHandleOpenDetailModalClick } =
+//     usePokemonCardLogic(data);
 //   const { theme } = useThemeStore();
 //   const { newStyles } = useRenderStyles(styles);
 
@@ -37,7 +42,9 @@
 //         newStyles.cardWrapper,
 //         newStyles?.[`${getThemeClass}Wrapper`],
 //         newStyles?.[
-//           theme === ThemeTypeEnum.LIGHT ? 'cardWrapperShadowLight' : 'cardWrapperShadowDark'
+//           theme === ThemeTypeEnum.LIGHT
+//             ? 'cardWrapperShadowLight'
+//             : 'cardWrapperShadowDark'
 //         ],
 //         isLoading ? newStyles.cardWrapperLoading : ''
 //       )}
@@ -67,7 +74,9 @@
 //       >
 //         <UiElementLayout className={newStyles.cardContentTopWrapper}>
 //           {isLoading ? (
-//             <UiElementLayout className={newStyles.cardContentTopIsLoadingWrapper}>
+//             <UiElementLayout
+//               className={newStyles.cardContentTopIsLoadingWrapper}
+//             >
 //               <UiSkeleton />
 //             </UiElementLayout>
 //           ) : (
@@ -94,7 +103,10 @@
 //           )}
 
 //           {(data?.abilities || []).map(
-//             (abilityObj: PokemonDetailAbilityObj, i: number): ReactElement | null => {
+//             (
+//               abilityObj: PokemonDetailAbilityObj,
+//               i: number
+//             ): ReactElement | null => {
 //               if (i > 1) {
 //                 return null;
 //               }
@@ -124,5 +136,3 @@
 //     </UiCard>
 //   );
 // };
-
-// export default memo(PokemonCard);

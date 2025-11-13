@@ -36,6 +36,12 @@
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
+    },
+    {
+      "path": "../../services/pokemon-api/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/skeleton/tsconfig.lib.json"
     }
   ]
 }

@@ -6,7 +6,7 @@ import {
 
 import { axiosInstance } from '@utils/apiClient';
 
-export function useGetPokemonList({ pageParam }: { pageParam: number }) {
+export function useGetPokemonList({ pageParam = 0 }: { pageParam?: number }) {
   // return useInfiniteQuery({
   //   queryKey: ['pokemonList'],
   //   queryFn: getPokemonList,
@@ -26,9 +26,9 @@ export function useGetPokemonList({ pageParam }: { pageParam: number }) {
   return useInfiniteQuery({
     queryKey,
     queryFn,
-    select: (r) => r?.data,
+    select: (r: any) => r,
     initialPageParam: 0,
-    getNextPageParam: (lastPage, _, lastPageParam) => {
+    getNextPageParam: (lastPage: any, _, lastPageParam) => {
       if (lastPage?.length === 0) {
         return undefined;
       }
@@ -46,7 +46,7 @@ export function useGetPokemonSpecies(ids: (string | undefined)[] | undefined) {
       return {
         queryKey: ['species', { id }],
         queryFn: () => queryFn(id),
-        select: (r) => r?.data,
+        select: (r: any) => r?.data,
       };
     }),
   });

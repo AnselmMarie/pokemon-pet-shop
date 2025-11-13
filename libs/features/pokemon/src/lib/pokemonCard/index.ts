@@ -1,3 +1,1 @@
-// import UiPokemonCard from './pokemon.card.view';
-
-// export { UiPokemonCard };
+// export * from './pokemon.card';

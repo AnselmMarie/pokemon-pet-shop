@@ -13,6 +13,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../../services/pokemon-api"
+    },
+    {
+      "path": "../../ui/skeleton"
     }
   ],
   "extends": "../../../tsconfig.base.json"
