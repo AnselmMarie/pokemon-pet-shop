@@ -6,7 +6,7 @@
   border-radius: var(--theme-radius-8);
   flex-direction: row;
   position: relative;
-}
+} */
 
 .cardWrapperLoading {
   background: var(--theme-netural-200-mode);
@@ -47,25 +47,25 @@
   width: 100%;
 }
 
-.contentCardWrapper {
+/* .contentCardWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   border-radius: var(--theme-radius-8);
   padding: var(--theme-spacing-10) var(--theme-spacing-10);
-}
+} */
 
-.cardContentTopIsLoadingWrapper {
+/* .cardContentTopIsLoadingWrapper {
   margin-bottom: var(--theme-spacing-5);
-}
+} */
 
-.cardSubHeadlineWrapper {
+/* .cardSubHeadlineWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--theme-spacing-10);
-}
+} */
 
 .cardSubHeadline {
   font-size: var(--theme-font-13);
@@ -141,9 +141,9 @@
     justify-content: space-between;
   }
 
-  .cardContentTopWrapper {
+  /* .cardContentTopWrapper {
     width: 100%;
-  }
+  } */
 
   .btnWrapper {
     display: flex;
@@ -423,4 +423,4 @@ Water Theme
 
 .waterThemeContentCardText {
   color: var(--theme-netural-100);
-} */
+}

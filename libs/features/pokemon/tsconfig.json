@@ -3,7 +3,16 @@
   "include": [],
   "references": [
     {
+      "path": "../../services/pokemon-api"
+    },
+    {
       "path": "../../ui/typography"
+    },
+    {
+      "path": "../../ui/skeleton"
+    },
+    {
+      "path": "../../ui/card"
     },
     {
       "path": "../../ui/box"
@@ -13,12 +22,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../services/pokemon-api"
-    },
-    {
-      "path": "../../ui/skeleton"
     }
   ],
   "extends": "../../../tsconfig.base.json"

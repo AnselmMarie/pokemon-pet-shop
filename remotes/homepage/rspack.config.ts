@@ -39,6 +39,7 @@ export default {
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
       '@ui/skeleton': join(__dirname, '../../libs/ui/skeleton/src/index.ts'),
+      '@ui/card': join(__dirname, '../../libs/ui/card/src/index.ts'),
       '@ui/typography': join(
         __dirname,
         '../../libs/ui/typography/src/index.ts'

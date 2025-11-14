@@ -1,4 +1,4 @@
-import { ReactElement, useMemo } from 'react';
+import { ReactElement, useMemo, Fragment } from 'react';
 
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
@@ -7,7 +7,7 @@ import { skeletonLoadDataUtil } from '@ui/skeleton';
 // import { PokemonListApi } from '@pokemon-pet-shop/typing';
 // import { UiButton, UiElementLayout, UiTypography } from '@pokemon-pet-shop/ui';
 
-// import { UiPokemonCard } from '../pokemon.card';
+import { PokemonCard } from '../pokemonCard';
 
 // import image from './assets/bulbasaur.small.gif';
 // import { styles } from './pokemon.list.module';
@@ -36,6 +36,8 @@ export const PokemonList = (): ReactElement => {
     return skeletonLoadDataUtil(data, isLoading, template, true, arrCount);
   }, [data, isLoading]);
 
+  console.log('newData', newData);
+
   if (newData?.length === 0 && !hasNextPage) {
     return (
       <Box className="flex justify-center my-md">
@@ -47,15 +49,21 @@ export const PokemonList = (): ReactElement => {
     );
   }
 
+  //   display: flex;
+  // align-content: space-between;
+  // gap: var(--theme-spacing-30);
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // margin - bottom: var(--theme - spacing - 45);
+
   return (
     <>
-      <div>Pokemon List Component Works!</div>
-      {/* <Box className={styles.cardListWrapper}>
-        {(newData || []).map((arr: any[], i: number): ReactElement => {
+      <Box className="flex justify-center flex-wrap gap-md mb-sm">
+        {(newData ?? []).map((arr: any, i: number): ReactElement => {
           return (
             <Fragment key={i}>
-              {arr.map((el: any, i: number) => (
-                <UiPokemonCard
+              {(arr?.data ?? []).map((el: any, i: number) => (
+                <PokemonCard
                   key={el?.name || i}
                   data={el}
                   isLoading={isLoading}
@@ -65,7 +73,7 @@ export const PokemonList = (): ReactElement => {
           );
         })}
       </Box>
-      {hasNextPage ? (
+      {/* {hasNextPage ? (
         <Box className={styles.btnWrapper}>
           <UiButton
             isDisabled={!hasNextPage || isFetchingNextPage}
@@ -80,5 +88,3 @@ export const PokemonList = (): ReactElement => {
     </>
   );
 };
-
-export default PokemonList;

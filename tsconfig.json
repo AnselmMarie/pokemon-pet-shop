@@ -86,6 +86,12 @@
     },
     {
       "path": "./libs/utils/apiClient"
+    },
+    {
+      "path": "./libs/utils/textTransform"
+    },
+    {
+      "path": "./libs/ui/card"
     }
   ]
 }

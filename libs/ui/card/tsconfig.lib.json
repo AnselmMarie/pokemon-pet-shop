@@ -6,8 +6,7 @@
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
-      "pokemon",
-      "pokemon/species"
+      "nativewind/types"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",
@@ -34,19 +33,7 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../services/pokemon-api/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/typography/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/skeleton/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/card/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/box/tsconfig.lib.json"
+      "path": "../box/tsconfig.lib.json"
     }
   ]
 }

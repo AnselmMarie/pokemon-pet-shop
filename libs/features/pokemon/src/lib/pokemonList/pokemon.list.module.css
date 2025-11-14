@@ -1,11 +1,11 @@
-.cardListWrapper {
+/* .cardListWrapper {
   display: flex;
   align-content: space-between;
   gap: var(--theme-spacing-30);
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: var(--theme-spacing-45);
-}
+} */
 
 /* .failureWrapper {
   display: flex;
