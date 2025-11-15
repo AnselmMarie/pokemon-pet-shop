@@ -12,7 +12,7 @@
   display: none;
 } */
 
-.atkCircle {
+/* .atkCircle {
   height: 17px;
   width: 17px;
   border-radius: var(--theme-radius-circle);
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .atkText {
   font-size: var(--theme-font-13);
@@ -32,11 +32,11 @@
   height: auto;
 } */
 
-.atkCircleDetailModal {
+/* .atkCircleDetailModal {
   height: 35px;
   width: 35px;
   margin-right: var(--theme-spacing-10);
-}
+} */
 
 .atkTextDetailModal {
   color: var(--theme-netural-900-mode);

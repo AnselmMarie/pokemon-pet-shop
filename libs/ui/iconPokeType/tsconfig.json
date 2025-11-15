@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../skeleton"
+    },
+    {
+      "path": "../../utils/textTransform"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}

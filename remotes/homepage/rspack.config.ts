@@ -48,6 +48,10 @@ export default {
       '@ui/button': join(__dirname, '../../libs/ui/button/src/index.ts'),
       '@ui/image': join(__dirname, '../../libs/ui/image/src/index.ts'),
       '@ui/icon': join(__dirname, '../../libs/ui/icon/src/index.ts'),
+      '@ui/iconPokeType': join(
+        __dirname,
+        '../../libs/ui/iconPokeType/src/index.ts'
+      ),
       '@ui/typography': join(
         __dirname,
         '../../libs/ui/typography/src/index.ts'

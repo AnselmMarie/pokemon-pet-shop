@@ -98,6 +98,9 @@
     },
     {
       "path": "./libs/utils/detect"
+    },
+    {
+      "path": "./libs/ui/iconPokeType"
     }
   ]
 }

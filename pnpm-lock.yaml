@@ -86,6 +86,9 @@ importers:
       react-router-dom:
         specifier: 6.29.0
         version: 6.29.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-svg:
+        specifier: ^16.3.0
+        version: 16.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       swc-loader:
         specifier: ^0.2.6
         version: 0.2.6(@swc/core@1.5.29(@swc/helpers@0.5.17))(webpack@5.102.0)
@@ -337,11 +340,17 @@ importers:
 
   libs/ui/box: {}
 
+  libs/ui/button: {}
+
+  libs/ui/card: {}
+
   libs/ui/container: {}
 
   libs/ui/hideInMobile: {}
 
   libs/ui/icon: {}
+
+  libs/ui/iconPokeType: {}
 
   libs/ui/image: {}
 
@@ -360,6 +369,10 @@ importers:
   libs/ui/typography: {}
 
   libs/utils/apiClient: {}
+
+  libs/utils/detect: {}
+
+  libs/utils/textTransform: {}
 
   remotes/footer: {}
 
@@ -3019,6 +3032,9 @@ packages:
   '@tabler/icons@3.35.0':
     resolution: {integrity: sha512-yYXe+gJ56xlZFiXwV9zVoe3FWCGuZ/D7/G4ZIlDtGxSx5CGQK110wrnT29gUj52kEZoxqF7oURTk97GQxELOFQ==, tarball: https://registry.npmjs.org/@tabler/icons/-/icons-3.35.0.tgz}
 
+  '@tanem/svg-injector@10.1.68':
+    resolution: {integrity: sha512-UkJajeR44u73ujtr5GVSbIlELDWD/mzjqWe54YMK61ljKxFcJoPd9RBSaO7xj02ISCWUqJW99GjrS+sVF0UnrA==, tarball: https://registry.npmjs.org/@tanem/svg-injector/-/svg-injector-10.1.68.tgz}
+
   '@tanstack/history@1.132.31':
     resolution: {integrity: sha512-UCHM2uS0t/uSszqPEo+SBSSoQVeQ+LlOWAVBl5SA7+AedeAbKafIPjFn8huZCXNLAYb0WKV2+wETr7lDK9uz7g==, tarball: https://registry.npmjs.org/@tanstack/history/-/history-1.132.31.tgz}
     engines: {node: '>=12'}
@@ -3237,6 +3253,9 @@ packages:
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==, tarball: https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.2.tgz}
+
+  '@types/prop-types@15.7.15':
+    resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.15.tgz}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==, tarball: https://registry.npmjs.org/@types/qs/-/qs-6.14.0.tgz}
@@ -8317,6 +8336,12 @@ packages:
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
+
+  react-svg@16.3.0:
+    resolution: {integrity: sha512-MvoQbITgkmpPJYwDTNdiUyoncJFfoa0D86WzoZuMQ9c/ORJURPR6rPMnXDsLOWDCAyXuV9nKZhQhGyP0HZ0MVQ==, tarball: https://registry.npmjs.org/react-svg/-/react-svg-16.3.0.tgz}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==, tarball: https://registry.npmjs.org/react/-/react-19.0.0.tgz}
@@ -13715,6 +13740,12 @@ snapshots:
 
   '@tabler/icons@3.35.0': {}
 
+  '@tanem/svg-injector@10.1.68':
+    dependencies:
+      '@babel/runtime': 7.28.4
+      content-type: 1.0.5
+      tslib: 2.8.1
+
   '@tanstack/history@1.132.31': {}
 
   '@tanstack/query-core@5.90.7': {}
@@ -14006,6 +14037,8 @@ snapshots:
       undici-types: 6.21.0
 
   '@types/parse-json@4.0.2': {}
+
+  '@types/prop-types@15.7.15': {}
 
   '@types/qs@6.14.0': {}
 
@@ -19874,6 +19907,15 @@ snapshots:
     dependencies:
       '@remix-run/router': 1.22.0
       react: 19.0.0
+
+  react-svg@16.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      '@babel/runtime': 7.28.4
+      '@tanem/svg-injector': 10.1.68
+      '@types/prop-types': 15.7.15
+      prop-types: 15.8.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
 
   react@19.0.0: {}
 

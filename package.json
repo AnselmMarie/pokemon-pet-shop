@@ -104,6 +104,7 @@
     "react-native-svg": "^15.13.0",
     "react-native-web": "^0.21.1",
     "react-router-dom": "6.29.0",
+    "react-svg": "^16.3.0",
     "swc-loader": "^0.2.6",
     "tailwind-variants": "^3.1.1"
   }

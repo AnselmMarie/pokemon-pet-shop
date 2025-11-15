@@ -2,6 +2,7 @@ import { ReactElement, useMemo } from 'react';
 
 import { Box } from '@ui/box';
 import { HideInMobile } from '@ui/hideInMobile';
+import { IconPokeType } from '@ui/iconPokeType';
 // import { Typography } from '@ui/typography';
 // import { Skeleton } from '@ui/skeleton';
 
@@ -28,11 +29,9 @@ export const PokemonAbilityName = ({
   displayInDetail = false,
   isLoading = false,
 }: PokemonAbilityNameProps): ReactElement => {
-  // const { newStyles } = useRenderStyles(styles);
-
-  // const isAtkLineShownCircleClass = useMemo(() => {
-  //   return showAtkLine ? '-ml-sm' : '';
-  // }, [showAtkLine]);
+  const isAtkLineShownCircleClass = useMemo(() => {
+    return showAtkLine ? '-ml-sm' : '';
+  }, [showAtkLine]);
 
   const isAtkLineShownWrapperClass = useMemo(() => {
     return showAtkLine ? '-ml-sm' : '';
@@ -71,27 +70,27 @@ export const PokemonAbilityName = ({
         </HideInMobile>
       ) : null}
 
-      {/* <Box
-        className={classNamesUtil(
-          newStyles.atkCircle,
-          displayInDetail ? newStyles.atkCircleDetailModal : '',
-          isAtkLineShownCircleClass,
-          newStyles?.[`${getThemeClass}AtkCircle`]
-        )}
+      <Box
+        className={`h-[17px] w-[17px] rounded-circle mr-sm flex justify-center items-center ${
+          displayInDetail ? 'w-[35px] h-[35px] mr-md' : ''
+        } ${isAtkLineShownCircleClass}`}
+        // className={classNamesUtil(
+        //   newStyles?.[`${getThemeClass}AtkCircle`]
+        // )}
       >
         {isLoading ? (
-          <UiIconPokeType
+          <IconPokeType
             type={typeData?.[0]?.type?.name}
             size={12}
             isLoading={isLoading}
           />
         ) : (
-          <UiIconPokeType
+          <IconPokeType
             type={typeData?.[0]?.type?.name}
             size={displayInDetail ? '18' : '10'}
           />
         )}
-      </Box> */}
+      </Box>
 
       {/* <Typography
         className={classNamesUtil(
