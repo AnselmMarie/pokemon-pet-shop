@@ -92,6 +92,12 @@
     },
     {
       "path": "./libs/ui/card"
+    },
+    {
+      "path": "./libs/ui/button"
+    },
+    {
+      "path": "./libs/utils/detect"
     }
   ]
 }

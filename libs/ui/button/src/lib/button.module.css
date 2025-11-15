@@ -1,35 +1,35 @@
-.button {
+/* .button {
   border-radius: var(--theme-radius-pill);
   cursor: pointer;
   border: 0;
   text-align: center;
   padding: var(--theme-spacing-5);
-}
+} */
 
-.buttonPrimary {
+/* .buttonPrimary {
   background: var(--theme-blue-600);
-}
+} */
 
-.buttonPrimaryText {
+/* .buttonPrimaryText {
   color: var(--theme-netural-100);
-}
+} */
 
-.buttonSecondary {
+/* .buttonSecondary {
   background: var(--theme-netural-100);
   color: var(--theme-blue-600);
-}
+} */
 
-.buttonSecondaryText {
+/* .buttonSecondaryText {
   color: var(--theme-blue-600);
-}
+} */
 
-.buttonSuccess {
+/* .buttonSuccess {
   cursor: not-allowed;
   background: var(--theme-green-400);
   color: var(--theme-netural-100);
-}
+} */
 
-.standard {
+/* .standard {
   padding: var(--theme-spacing-10) var(--theme-spacing-15);
   font-size: var(--theme-font-13);
   align-items: center;
@@ -45,19 +45,19 @@
   align-items: center;
   justify-content: center;
   display: flex;
-}
+} */
 
-.appendImage {
+/* .appendImage {
   margin-left: var(--theme-spacing-5);
-}
+} */
 
-.buttonInnerWrapper {
+/* .buttonInnerWrapper {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.buttonInnerIsLoadingWrapper {
+/* .buttonInnerIsLoadingWrapper {
   width: 100%;
-}
+} */

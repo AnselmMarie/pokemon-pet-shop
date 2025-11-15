@@ -9,10 +9,22 @@
       "path": "../../ui/typography"
     },
     {
+      "path": "../../utils/detect"
+    },
+    {
+      "path": "../../ui/image"
+    },
+    {
+      "path": "../../ui/button"
+    },
+    {
       "path": "../../ui/skeleton"
     },
     {
       "path": "../../ui/card"
+    },
+    {
+      "path": "../../ui/hideInMobile"
     },
     {
       "path": "../../ui/box"

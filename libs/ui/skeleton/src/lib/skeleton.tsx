@@ -4,14 +4,14 @@ import ReactSkeleton from 'react-loading-skeleton';
 
 // import { THEME_RADIUS_8, THEME_SPACING_15 } from '../../styles/ts/variables';
 
-import { SkeletonProps } from './skeleton.interface';
+import { SkeletonWebProps } from './skeleton.interface';
 
 export const Skeleton = ({
   count = 1,
   width,
   height = 15,
   circle = false,
-}: SkeletonProps): ReactElement => {
+}: SkeletonWebProps): ReactElement => {
   let newCount;
 
   if (circle) {

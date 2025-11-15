@@ -1,20 +1,20 @@
-import { GenericNonReturnType } from '@pokemon-pet-shop/typing';
+import { IconType } from '@ui/icon';
 
-import { ButtonSizeEnum, ButtonTypeEnum } from './button.enum';
+import type { ButtonSize, ButtonType } from './button.type';
 
 export interface ButtonProps {
-  type?: ButtonTypeEnum;
+  type?: ButtonType;
   text?: string | null;
   classNameText?: string;
   classNameIcon?: string;
-  className?: any;
-  size?: ButtonSizeEnum;
-  appendIcon?: string | null;
+  className?: string;
+  size?: ButtonSize;
+  appendIcon?: IconType;
   appendImage?: string | null;
   timerText?: string;
   timerStyle?: string | null;
   isDisabled?: boolean;
   isSuccess?: boolean;
   isLoading?: boolean;
-  onClick?: GenericNonReturnType;
+  onClick?: () => void;
 }

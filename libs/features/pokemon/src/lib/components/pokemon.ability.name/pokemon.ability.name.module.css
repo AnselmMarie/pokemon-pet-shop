@@ -1,4 +1,4 @@
-.atkWrapper {
+/* .atkWrapper {
   display: flex;
   height: 17px;
   justify-items: center;
@@ -6,11 +6,11 @@
   align-items: center;
   color: var(--theme-netural-100);
   margin-bottom: var(--theme-spacing-10);
-}
+} */
 
-.atkLine {
+/* .atkLine {
   display: none;
-}
+} */
 
 .atkCircle {
   height: 17px;
@@ -26,11 +26,11 @@
   font-size: var(--theme-font-13);
 }
 
-.atkWrapperDetailModal {
+/* .atkWrapperDetailModal {
   color: var(--theme-netural-900-mode);
   margin-bottom: var(--theme-spacing-20);
   height: auto;
-}
+} */
 
 .atkCircleDetailModal {
   height: 35px;
@@ -48,15 +48,15 @@
     margin-left: -15px;
   }
 
-  .atkLine {
+  /* .atkLine {
     height: 100%;
     width: 30px;
     display: block;
-  }
+  } */
 
-  .atkCircleWithAtkLine {
+  /* .atkCircleWithAtkLine {
     margin-left: -10px;
-  }
+  } */
 }
 
 /**

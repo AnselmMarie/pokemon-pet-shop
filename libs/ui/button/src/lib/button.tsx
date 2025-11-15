@@ -1,115 +1,115 @@
-// import { memo, ReactElement, useEffect, useMemo, useState } from 'react';
+import { ReactElement, useEffect, useMemo, useState } from 'react';
 
-// // import { useRenderStyles } from '@pokemon-pet-shop/hooks';
-// // import { classNamesUtil } from '@pokemon-pet-shop/utils';
+// import { globalStyles } from '../../styles/css/global.module';
 
-// // import { globalStyles } from '../../styles/css/global.module';
+import ButtonElement from './button.element';
+import { ButtonProps } from './button.interface';
 
-// import ButtonElement from './button.element.view';
-// import { ButtonSizeEnum, ButtonTypeEnum } from './button.enum';
-// import { ButtonProps } from './button.interface';
+export const Button = ({
+  type = 'primary',
+  className = '',
+  classNameText = '',
+  text = null,
+  size = 'standard',
+  appendIcon,
+  appendImage = '',
+  timerText = '',
+  timerStyle = null,
+  isDisabled = false,
+  isSuccess = false,
+  isLoading = false,
+  onClick,
+}: ButtonProps): ReactElement => {
+  const [displaySuccessStyle, setDisplaySuccessStyle] = useState(false);
+  // const { newStyles } = useRenderStyles(styles);
+  // const { newStyles: newGlobalStyles } = useRenderStyles(globalStyles);
 
-// export const Button = ({
-//   type = ButtonTypeEnum.PRIMARY,
-//   className = '',
-//   classNameText = '',
-//   text = null,
-//   size = ButtonSizeEnum.STANDARD,
-//   appendIcon = '',
-//   appendImage = '',
-//   timerText = '',
-//   timerStyle = null,
-//   isDisabled = false,
-//   isSuccess = false,
-//   isLoading = false,
-//   onClick,
-// }: ButtonProps): ReactElement => {
-//   const [displaySuccessStyle, setDisplaySuccessStyle] = useState(false);
-//   // const { newStyles } = useRenderStyles(styles);
-//   // const { newStyles: newGlobalStyles } = useRenderStyles(globalStyles);
+  const getTimerStyle = useMemo(() => {
+    return timerStyle || 'cursor-not-allowed opacity-50 bg-success text-white';
+  }, [timerStyle]);
 
-//   const getTimerStyle = useMemo(() => {
-//     return timerStyle || newStyles.buttonSuccess;
-//   }, [timerStyle, newStyles]);
+  const getTypeStyles = useMemo(() => {
+    switch (type) {
+      case 'secondary':
+        return 'bg-white';
+      case 'primary':
+      default:
+        return 'bg-primary';
+    }
+  }, [type]);
 
-//   const getTypeStyles = useMemo(() => {
-//     switch (type) {
-//       case ButtonTypeEnum.SECONDARY:
-//         return newStyles.buttonSecondary;
-//       case ButtonTypeEnum.PRIMARY:
-//       default:
-//         return newStyles.buttonPrimary;
-//     }
-//   }, [type, newStyles]);
+  const getTypeTextStyles = useMemo(() => {
+    switch (type) {
+      case 'secondary':
+        return 'text-primary';
+      case 'primary':
+      default:
+        return 'text-white';
+    }
+  }, [type]);
 
-//   const getTypeTextStyles = useMemo(() => {
-//     switch (type) {
-//       case ButtonTypeEnum.SECONDARY:
-//         return newStyles.buttonSecondaryText;
-//       case ButtonTypeEnum.PRIMARY:
-//       default:
-//         return newStyles.buttonPrimaryText;
-//     }
-//   }, [type, newStyles]);
+  const getSizeStyles = useMemo(() => {
+    switch (size) {
+      case 'large':
+        return 'min-w-[230px] h-[66px] px-[30px] py-[10px] flex items-center justify-center';
+      case 'standard':
+      default:
+        return 'px-[15px] py-[10px] flex items-center justify-center';
+    }
+  }, [size]);
 
-//   const getSizeStyles = useMemo(() => {
-//     switch (size) {
-//       case ButtonSizeEnum.LARGE:
-//         return newStyles.large;
-//       case ButtonSizeEnum.STANDARD:
-//       default:
-//         return newStyles.standard;
-//     }
-//   }, [size, newStyles]);
+  // const getSizeTextStyles = useMemo(() => {
+  //   switch (size) {
+  //     case ButtonSizeEnum.LARGE:
+  //       return newStyles.largeText;
+  //     case ButtonSizeEnum.STANDARD:
+  //     default:
+  //       return newStyles.standardText;
+  //   }
+  // }, [size]);
 
-//   const getSizeTextStyles = useMemo(() => {
-//     switch (size) {
-//       case ButtonSizeEnum.LARGE:
-//         return newStyles.largeText;
-//       case ButtonSizeEnum.STANDARD:
-//       default:
-//         return newStyles.standardText;
-//     }
-//   }, [size, newStyles]);
+  // const getDisabledStyles = useMemo(() => {
+  //   return isDisabled ? newGlobalStyles.disabledElementBg : '';
+  // }, [isDisabled]);
 
-//   const getDisabledStyles = useMemo(() => {
-//     return isDisabled ? newGlobalStyles.disabledElementBg : '';
-//   }, [isDisabled, newGlobalStyles]);
+  const getText = useMemo(() => {
+    return displaySuccessStyle ? timerText : text;
+  }, [timerText, text, displaySuccessStyle]);
 
-//   const getText = useMemo(() => {
-//     return displaySuccessStyle ? timerText : text;
-//   }, [timerText, text, displaySuccessStyle]);
+  useEffect(() => {
+    if (isSuccess) {
+      setDisplaySuccessStyle(true);
+      setTimeout(() => {
+        setDisplaySuccessStyle(false);
+      }, 2000);
+    }
+  }, [isSuccess]);
 
-//   useEffect(() => {
-//     if (isSuccess) {
-//       setDisplaySuccessStyle(true);
-//       setTimeout(() => {
-//         setDisplaySuccessStyle(false);
-//       }, 2000);
-//     }
-//   }, [isSuccess]);
-
-//   return (
-//     <ButtonElement
-//       text={getText}
-//       className={classNamesUtil(
-//         className,
-//         newStyles.button,
-//         getTypeStyles,
-//         getDisabledStyles,
-//         getSizeStyles,
-//         displaySuccessStyle ? getTimerStyle : ''
-//       )}
-//       classNameText={classNamesUtil(
-//         classNameText,
-//         getTypeTextStyles,
-//         getSizeTextStyles
-//       )}
-//       appendImage={appendImage}
-//       appendIcon={appendIcon}
-//       isDisabled={isDisabled || displaySuccessStyle}
-//       isLoading={isLoading}
-//       onClick={onClick}
-//     />
-//   );
-// };
+  return (
+    <ButtonElement
+      text={getText}
+      className={`
+        ${className}
+        'rounded-pill cursor-pointer border-0 text-center p-sm'
+        ${getTypeStyles}
+        ${getSizeStyles}
+        ${displaySuccessStyle ? getTimerStyle : ''}
+      `}
+      // ${getDisabledStyles}
+      classNameText={`
+        ${classNameText}
+        ${getTypeTextStyles}
+      `}
+      // classNameText={classNamesUtil(
+      //   classNameText,
+      //   getTypeTextStyles,
+      //   getSizeTextStyles
+      // )}
+      appendImage={appendImage}
+      appendIcon={appendIcon}
+      isDisabled={isDisabled || displaySuccessStyle}
+      isLoading={isLoading}
+      onClick={onClick}
+    />
+  );
+};

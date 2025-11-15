@@ -5,14 +5,14 @@ import { Box } from '@ui/box';
 
 // import { THEME_RADIUS_PILL, THEME_SPACING_15 } from '../../styles/ts/variables';
 
-import { SkeletonProps } from './skeleton.interface';
+import { SkeletonNativeProps } from './skeleton.interface';
 
 export const SkeletonView = ({
   count = 1,
   width,
   height = 15,
   circle = false,
-}: SkeletonProps): ReactElement => {
+}: SkeletonNativeProps): ReactElement => {
   // const borderRadiusStyle = circle ? THEME_RADIUS_CIRCLE : THEME_RADIUS_8;
   let newCount;
 
