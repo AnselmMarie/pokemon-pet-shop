@@ -8,59 +8,53 @@ import { Card } from '@ui/card';
 import { Skeleton } from '@ui/skeleton';
 import { Button } from '@ui/button';
 import { Image } from '@ui/image';
+import { Typography } from '@ui/typography';
 
 import { isWeb } from '@utils/detect';
-// import { Typography } from '@ui/typography';
-// import { capitalizeName } from '@utils/textTransform';
+import { capitalizeName } from '@utils/textTransform';
 
 import { PokemonAbilityName } from '../components/pokemon.ability.name';
 import { CardProps } from './pokemon.card.interface';
 
-// import { useRenderStyles } from '@pokemon-pet-shop/hooks';
-// import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
-// import { PokemonDetailAbilityObj } from '@pokemon-pet-shop/typing';
-// import {
-//   UiElementLayout,
-//   UiImage,
-//   UiTypography,
-//   ButtonTypeEnum,
-//   TypographyTypeEnum,
-//   UiButton,
-//   UiCard,
-//   mobSrcTypeEnum,
-//   UiSkeleton,
-// } from '@pokemon-pet-shop/ui';
-// import {
-//   capitalizeNameUtil,
-//   classNamesUtil,
-//   isWebUtil,
-// } from '@pokemon-pet-shop/utils';
-
-// import { styles } from './pokemon.card.module';
-// import usePokemonCardLogic from './use.pokemon.card.logic';
+import { pokeCardTypeMap } from './pokemon.card.type.map.util';
+import { usePokemonTypeLogic } from '../hooks/use.pokemon.type.logic';
 
 export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
-  // const { getThemeClass, onHandleOpenDetailModalClick } =
-  //   usePokemonCardLogic(data);
+  const { getPokeTypeClass } = usePokemonTypeLogic(item?.types);
   // const [theme] = useAtom(toggleThemeAtom);
-  // const { newStyles } = useRenderStyles(styles);
 
-  console.log('item', item);
+  // const handleOpenDetailModalClick = () => {
+  //   openModal({
+  //     content: <UiPokemonDetailModal />,
+  //     options: {
+  //       title: '',
+  //       data: data,
+  //       classNameShadow: '',
+  //       classNameModal: '',
+  //       headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
+  //       modalAlignment: AlignmentEnum.CENTER,
+  //     },
+  //     onCallback: () => {
+  //       noopUtil();
+  //     },
+  //   });
+  // };
 
   return (
     <Card
       className={`min-w-[352px] h-[154px] flex p-sm rounded-md flex-row relative ${
         isLoading ? 'bg-medGrey' : ''
+      } ${
+        pokeCardTypeMap.get(getPokeTypeClass)?.[
+          `${getPokeTypeClass}Wrapper` as keyof object
+        ] ?? ''
       }`}
       // className={classNamesUtil(
-      //   newStyles.cardWrapper,
-      //   newStyles?.[`${getThemeClass}Wrapper`],
       //   newStyles?.[
       //     theme === ThemeTypeEnum.LIGHT
       //       ? 'cardWrapperShadowLight'
       //       : 'cardWrapperShadowDark'
       //   ],
-      //   isLoading ? newStyles.cardWrapperLoading : ''
       // )}
     >
       {isLoading ? (
@@ -81,12 +75,11 @@ export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
       <Box
         className={`flex flex-col justify-between w-full rounded-md p-md ${
           isLoading ? 'bg-darkGrey' : ''
+        } ${
+          pokeCardTypeMap.get(getPokeTypeClass)?.[
+            `${getPokeTypeClass}ContentCardWrapper` as keyof object
+          ] ?? ''
         }`}
-        // className={classNamesUtil(
-        //   newStyles.contentCardWrapper,
-        //   newStyles?.[`${getThemeClass}ContentCardWrapper`],
-        //   isLoading ? newStyles.contentCardWrapperIsLoading : ''
-        // )}
       >
         <Box className="w-full">
           {isLoading ? (
@@ -95,23 +88,25 @@ export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
             </Box>
           ) : (
             <Box className="flex justify-between items-center mb-sm">
-              {/* <Typography
-                // className={classNamesUtil(
-                //   newStyles.cardHeadline,
-                //   newStyles?.[`${getThemeClass}ContentCardText`]
-                // )}
+              <Typography
+                className={`text-md md:text-lg ${
+                  pokeCardTypeMap.get(getPokeTypeClass)?.[
+                    `${getPokeTypeClass}ContentCardText` as keyof object
+                  ] ?? ''
+                }`}
                 variant="h1"
               >
                 {capitalizeName(item?.name)}
               </Typography>
               <Typography
-              // className={classNamesUtil(
-              //   newStyles.cardSubHeadline,
-              //   newStyles?.[`${getThemeClass}ContentCardText`]
-              // )}
+                className={`text-sm md:text-md ${
+                  pokeCardTypeMap.get(getPokeTypeClass)?.[
+                    `${getPokeTypeClass}ContentCardText` as keyof object
+                  ] ?? ''
+                }`}
               >
                 NO. {item?.id}
-              </Typography> */}
+              </Typography>
             </Box>
           )}
 
@@ -128,8 +123,7 @@ export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
                   key={i}
                   abilityData={abilityObj}
                   typeData={item?.types}
-                  getThemeClass=""
-                  // getThemeClass={getThemeClass}
+                  getPokeTypeClass={getPokeTypeClass}
                   isLoading={isLoading}
                 />
               );
@@ -143,7 +137,7 @@ export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
             type="secondary"
             text="Learn More"
             isLoading={isLoading}
-            // onClick={onHandleOpenDetailModalClick}
+            // onClick={handleOpenDetailModalClick}
           />
         </Box>
       </Box>

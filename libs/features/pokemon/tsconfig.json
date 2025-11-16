@@ -6,9 +6,6 @@
       "path": "../../services/pokemon-api"
     },
     {
-      "path": "../../ui/typography"
-    },
-    {
       "path": "../../utils/detect"
     },
     {
@@ -18,10 +15,19 @@
       "path": "../../ui/button"
     },
     {
+      "path": "../../ui/card"
+    },
+    {
+      "path": "../../utils/textTransform"
+    },
+    {
       "path": "../../ui/skeleton"
     },
     {
-      "path": "../../ui/card"
+      "path": "../../ui/typography"
+    },
+    {
+      "path": "../../ui/iconPokeType"
     },
     {
       "path": "../../ui/hideInMobile"
@@ -34,9 +40,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../ui/iconPokeType"
     }
   ],
   "extends": "../../../tsconfig.base.json"

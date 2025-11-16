@@ -67,13 +67,13 @@
   margin-bottom: var(--theme-spacing-10);
 } */
 
-.cardSubHeadline {
+/* .cardSubHeadline {
   font-size: var(--theme-font-13);
-}
+} */
 
-.cardHeadline {
+/* .cardHeadline {
   font-size: var(--theme-font-18);
-}
+} */
 
 /* .btnWrapper {
   width: 100%;
@@ -126,9 +126,9 @@
     justify-content: space-between;
   }
 
-  .cardHeadline {
+  /* .cardHeadline {
     font-size: var(--theme-font-16);
-  }
+  } */
 
   .contentCardWrapper {
     height: 150px;
@@ -158,7 +158,7 @@
 /**
 Grass Theme
 **/
-.grassThemeWrapper {
+/* .grassThemeWrapper {
   background: var(--theme-type-grass-600);
 }
 
@@ -168,12 +168,12 @@ Grass Theme
 
 .grassThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Bug Theme
 **/
-.bugThemeWrapper {
+/* .bugThemeWrapper {
   background: var(--theme-type-bug-600);
 }
 
@@ -183,12 +183,12 @@ Bug Theme
 
 .bugThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Dark Theme
 **/
-.darkThemeWrapper {
+/* .darkThemeWrapper {
   background: var(--theme-type-dark-600);
 }
 
@@ -198,12 +198,12 @@ Dark Theme
 
 .darkThemeContentCardText {
   color: white;
-}
+} */
 
 /**
 Dragon Theme
 **/
-.dragonThemeWrapper {
+/* .dragonThemeWrapper {
   background: var(--theme-type-dragon-600);
 }
 
@@ -213,12 +213,12 @@ Dragon Theme
 
 .dragonThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Electric Theme
 **/
-.electricThemeWrapper {
+/* .electricThemeWrapper {
   background: var(--theme-type-electric-600);
 }
 
@@ -228,12 +228,12 @@ Electric Theme
 
 .electricThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Fairy Theme
 **/
-.fairyThemeWrapper {
+/* .fairyThemeWrapper {
   background: var(--theme-type-fairy-600);
 }
 
@@ -243,12 +243,12 @@ Fairy Theme
 
 .fairyThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Fighting Theme
 **/
-.fightingThemeWrapper {
+/* .fightingThemeWrapper {
   background: var(--theme-type-fighting-600);
 }
 
@@ -258,12 +258,12 @@ Fighting Theme
 
 .fightingThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Fire Theme
 **/
-.fireThemeWrapper {
+/* .fireThemeWrapper {
   background: var(--theme-type-fire-600);
 }
 
@@ -273,12 +273,12 @@ Fire Theme
 
 .fireThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Flying Theme
 **/
-.flyingThemeWrapper {
+/* .flyingThemeWrapper {
   background: var(--theme-type-flying-600);
 }
 
@@ -288,12 +288,12 @@ Flying Theme
 
 .flyingThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Ghost Theme
 **/
-.ghostThemeWrapper {
+/* .ghostThemeWrapper {
   background: var(--theme-type-ghost-600);
 }
 
@@ -303,12 +303,12 @@ Ghost Theme
 
 .ghostThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Ground Theme
 **/
-.groundThemeWrapper {
+/* .groundThemeWrapper {
   background: var(--theme-type-ground-600);
 }
 
@@ -318,12 +318,12 @@ Ground Theme
 
 .groundThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Ice Theme
 **/
-.iceThemeWrapper {
+/* .iceThemeWrapper {
   background: var(--theme-type-ice-600);
 }
 
@@ -333,12 +333,12 @@ Ice Theme
 
 .iceThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Normal Theme
 **/
-.normalThemeWrapper {
+/* .normalThemeWrapper {
   background: var(--theme-type-normal-600);
 }
 
@@ -348,12 +348,12 @@ Normal Theme
 
 .normalThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Poison Theme
 **/
-.poisonThemeWrapper {
+/* .poisonThemeWrapper {
   background: var(--theme-type-poison-600);
 }
 
@@ -363,12 +363,12 @@ Poison Theme
 
 .poisonThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Psychic Theme
 **/
-.psychicThemeWrapper {
+/* .psychicThemeWrapper {
   background: var(--theme-type-psychic-600);
 }
 
@@ -378,12 +378,12 @@ Psychic Theme
 
 .psychicThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Rock Theme
 **/
-.rockThemeWrapper {
+/* .rockThemeWrapper {
   background: var(--theme-type-rock-600);
 }
 
@@ -393,12 +393,12 @@ Rock Theme
 
 .rockThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Steel Theme
 **/
-.steelThemeWrapper {
+/* .steelThemeWrapper {
   background: var(--theme-type-steel-600);
 }
 
@@ -408,12 +408,12 @@ Steel Theme
 
 .steelThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */
 
 /**
 Water Theme
 **/
-.waterThemeWrapper {
+/* .waterThemeWrapper {
   background: var(--theme-type-water-600);
 }
 
@@ -423,4 +423,4 @@ Water Theme
 
 .waterThemeContentCardText {
   color: var(--theme-netural-100);
-}
+} */

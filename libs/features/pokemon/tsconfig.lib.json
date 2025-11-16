@@ -37,9 +37,6 @@
       "path": "../../services/pokemon-api/tsconfig.lib.json"
     },
     {
-      "path": "../../ui/typography/tsconfig.lib.json"
-    },
-    {
       "path": "../../utils/detect/tsconfig.lib.json"
     },
     {
@@ -49,19 +46,25 @@
       "path": "../../ui/button/tsconfig.lib.json"
     },
     {
+      "path": "../../ui/card/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/textTransform/tsconfig.lib.json"
+    },
+    {
       "path": "../../ui/skeleton/tsconfig.lib.json"
     },
     {
-      "path": "../../ui/card/tsconfig.lib.json"
+      "path": "../../ui/typography/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/iconPokeType/tsconfig.lib.json"
     },
     {
       "path": "../../ui/hideInMobile/tsconfig.lib.json"
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/iconPokeType/tsconfig.lib.json"
     }
   ]
 }
