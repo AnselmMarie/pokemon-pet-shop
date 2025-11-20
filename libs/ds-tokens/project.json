@@ -13,7 +13,7 @@
       ],
       "options": {
         "cwd": "libs/ds-tokens",
-        "command": "NODE_OPTIONS='--experimental-vm-modules' node src/build-tokens.mjs"
+        "command": "NODE_OPTIONS='--experimental-vm-modules' node src/build-tokens.mjs --verbose"
       }
     },
     "lint": {

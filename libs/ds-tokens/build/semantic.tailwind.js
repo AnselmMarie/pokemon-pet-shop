@@ -80,8 +80,8 @@ module.exports = {
       secondaryBtn: "#ffffffff",
       error: "#d63535ff",
       errorHover: "#ab0e0eff",
-      whiteBg: "#ffffffff",
-      whiteBgDark: "#404040ff",
+      white: "#ffffffff",
+      whiteDark: "#404040ff",
       lightGrey: "#d5d5d5ff",
       lightGreyDark: "#868686ff",
       medGrey: "#a4a4a4ff",
@@ -134,52 +134,94 @@ module.exports = {
     }
   },
   typography: {
-    font-size: {
-      body: 16,
-      "2xl": 32,
-      sm: 14,
-      xl: 24,
-      lg: 20,
-      md: 16,
-      "3xl": 40,
-      xs: 10
-    },
-    font-weight: {
+    fontWeight: {
       normal: 400,
       bold: 700,
-      font-light: 200
+      light: 200
     },
-    line-height: {
-      body: 24,
-      md: 32,
-      xl: 48,
-      lg: 40,
-      xs: 28
+    lineHeight: {
+      sm: "21px",
+      md: "24px",
+      xl: "34px",
+      lg: "28px",
+      xs: "18px",
+      "2xl": "42px",
+      "3xl": "48px"
     },
-    font-family: {
-      body: "Inter",
-      primary: "Helvetica Neue",
-      font-secondary: "Inter"
+    fontSize: {
+      "2xl": [
+        "32px",
+        {
+          lineHeight: "42px"
+        }
+      ],
+      sm: [
+        "14px",
+        {
+          lineHeight: "21px"
+        }
+      ],
+      xl: [
+        "24px",
+        {
+          lineHeight: "34px"
+        }
+      ],
+      lg: [
+        "20px",
+        {
+          lineHeight: "28px"
+        }
+      ],
+      md: [
+        "16px",
+        {
+          lineHeight: "24px"
+        }
+      ],
+      "3xl": [
+        "40px",
+        {
+          lineHeight: "48px"
+        }
+      ],
+      xs: [
+        "12px",
+        {
+          lineHeight: "18px"
+        }
+      ]
+    },
+    fontFamily: {
+      sansFallback: "Helvetica, Arial, sans-serif",
+      sans: [
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ],
+      sansMobile: "Helvetica Neue"
     }
   },
   size: {
     spacing: {
-      "5xl": 64,
-      "4xl": 28,
-      "2xl": 32,
-      xl: 24,
-      "3xl": 40,
-      lg: 20,
-      xs: 8,
-      md: 16,
-      sm: 12,
-      "2xs": 4
+      "5xl": "64px",
+      "4xl": "28px",
+      "2xl": "32px",
+      xl: "24px",
+      "3xl": "40px",
+      lg: "20px",
+      xs: "8px",
+      md: "16px",
+      sm: "12px",
+      "2xs": "4px"
     },
     borderRadius: {
-      pill: 50,
-      circle: 100,
-      icon: 100,
-      roundedImg: 16
+      pill: "50px",
+      circle: "100px",
+      icon: "100px",
+      md: "16px",
+      sm: "8px"
     }
   }
 }

@@ -14,6 +14,15 @@ module.exports = {
   ],
   theme: {
     ...themeConfig,
+    colors: themeConfig.color.colors,
+    borderColor: themeConfig.color.borderColor,
+    backgroundColor: themeConfig.color.backgroundColor,
+    spacing: themeConfig.size.spacing,
+    borderRadius: themeConfig.size.borderRadius,
+    fontSize: themeConfig.typography.fontSize,
+    fontFamily: themeConfig.typography.fontFamily,
+    fontWeight: themeConfig.typography.fontWeight,
+    lineHeight: themeConfig.typography.lineHeight
   },
   plugins: [],
 };

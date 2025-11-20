@@ -152,7 +152,7 @@
             }
           }
         },
-        "100-dark": {
+        "100Dark": {
           "type": "color",
           "value": "#424242ff",
           "blendMode": "normal",
@@ -167,7 +167,7 @@
             }
           }
         },
-        "200-dark": {
+        "200Dark": {
           "type": "color",
           "value": "#8c8c8cff",
           "blendMode": "normal",
@@ -182,7 +182,7 @@
             }
           }
         },
-        "400-dark": {
+        "400Dark": {
           "type": "color",
           "value": "#707274ff",
           "blendMode": "normal",
@@ -197,7 +197,7 @@
             }
           }
         },
-        "600-dark": {
+        "600Dark": {
           "type": "color",
           "value": "#434343ff",
           "blendMode": "normal",
@@ -212,7 +212,7 @@
             }
           }
         },
-        "900-loading": {
+        "900Loading": {
           "type": "color",
           "value": "#21212180",
           "blendMode": "normal",
@@ -227,7 +227,7 @@
             }
           }
         },
-        "900-dark": {
+        "900Dark": {
           "type": "color",
           "value": "#ffffffff",
           "blendMode": "normal",
@@ -638,7 +638,7 @@
             }
           }
         },
-        "200-dark": {
+        "200Dark": {
           "type": "color",
           "value": "#579d63ff",
           "blendMode": "normal",
@@ -653,7 +653,7 @@
             }
           }
         },
-        "400-dark": {
+        "400Dark": {
           "type": "color",
           "value": "#4a8554ff",
           "blendMode": "normal",
@@ -668,7 +668,7 @@
             }
           }
         },
-        "600-dark": {
+        "600Dark": {
           "type": "color",
           "value": "#295630ff",
           "blendMode": "normal",
@@ -683,7 +683,7 @@
             }
           }
         },
-        "800-dark": {
+        "800Dark": {
           "type": "color",
           "value": "#1a3c1fff",
           "blendMode": "normal",
@@ -2508,7 +2508,7 @@
         },
         "xs": {
           "type": "dimension",
-          "value": 10,
+          "value": 12,
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "Primitive",
@@ -2550,20 +2550,6 @@
         }
       },
       "family": {
-        "secondary": {
-          "type": "string",
-          "value": "Inter",
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Primitive",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2019:5810",
-              "exportKey": "variables"
-            }
-          }
-        },
         "primary": {
           "type": "string",
           "value": "Helvetica Neue",
@@ -2873,8 +2859,8 @@
   },
   "semantic": {
     "color": {
-      "background-color": {
-        "med-grass": {
+      "backgroundColor": {
+        "medGrass": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.grass.600}",
@@ -2889,7 +2875,7 @@
             }
           }
         },
-        "light-grass": {
+        "lightGrass": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.grass.400}",
@@ -2904,7 +2890,7 @@
             }
           }
         },
-        "very-light-grass": {
+        "veryLightGrass": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.grass.200}",
@@ -2919,7 +2905,7 @@
             }
           }
         },
-        "dark-grass": {
+        "darkGrass": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.grass.800}",
@@ -2934,7 +2920,7 @@
             }
           }
         },
-        "dark-bug": {
+        "darkBug": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.bug.800}",
@@ -2949,7 +2935,7 @@
             }
           }
         },
-        "med-bug": {
+        "medBug": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.bug.600}",
@@ -2964,7 +2950,7 @@
             }
           }
         },
-        "light-bug": {
+        "lightBug": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.bug.400}",
@@ -2979,7 +2965,7 @@
             }
           }
         },
-        "very-light-bug": {
+        "veryLightBug": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.bug.200}",
@@ -2994,7 +2980,7 @@
             }
           }
         },
-        "very-light-fire": {
+        "veryLightFire": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fire.200}",
@@ -3009,7 +2995,7 @@
             }
           }
         },
-        "dark-fire": {
+        "darkFire": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fire.800}",
@@ -3024,7 +3010,7 @@
             }
           }
         },
-        "light-fire": {
+        "lightFire": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fire.400}",
@@ -3039,7 +3025,7 @@
             }
           }
         },
-        "med-fire": {
+        "medFire": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fire.600}",
@@ -3054,7 +3040,7 @@
             }
           }
         },
-        "light-normal": {
+        "lightNormal": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.normal.400}",
@@ -3069,7 +3055,7 @@
             }
           }
         },
-        "very-light-normal": {
+        "veryLightNormal": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.normal.200}",
@@ -3084,7 +3070,7 @@
             }
           }
         },
-        "dark-normal": {
+        "darkNormal": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.normal.800}",
@@ -3099,7 +3085,7 @@
             }
           }
         },
-        "med-normal": {
+        "medNormal": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.normal.600}",
@@ -3114,7 +3100,7 @@
             }
           }
         },
-        "light-water": {
+        "lightWater": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.water.400}",
@@ -3129,7 +3115,7 @@
             }
           }
         },
-        "med-water": {
+        "medWater": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.water.600}",
@@ -3144,7 +3130,7 @@
             }
           }
         },
-        "very-light-water": {
+        "veryLightWater": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.water.200}",
@@ -3159,7 +3145,7 @@
             }
           }
         },
-        "dark-water": {
+        "darkWater": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.water.800}",
@@ -3174,7 +3160,7 @@
             }
           }
         },
-        "med-poison": {
+        "medPoison": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.poison.600}",
@@ -3189,7 +3175,7 @@
             }
           }
         },
-        "light-poison": {
+        "lightPoison": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.poison.400}",
@@ -3204,7 +3190,7 @@
             }
           }
         },
-        "very-light-poison": {
+        "veryLightPoison": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.poison.200}",
@@ -3219,7 +3205,7 @@
             }
           }
         },
-        "dark-poison": {
+        "darkPoison": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.poison.800}",
@@ -3234,7 +3220,7 @@
             }
           }
         },
-        "very-light-electric": {
+        "veryLightElectric": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.electric.200}",
@@ -3249,7 +3235,7 @@
             }
           }
         },
-        "dark-electric": {
+        "darkElectric": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.electric.800}",
@@ -3264,7 +3250,7 @@
             }
           }
         },
-        "light-electric": {
+        "lightElectric": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.electric.400}",
@@ -3279,7 +3265,7 @@
             }
           }
         },
-        "med-electric": {
+        "medElectric": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.electric.600}",
@@ -3294,7 +3280,7 @@
             }
           }
         },
-        "med-ground": {
+        "medGround": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ground.600}",
@@ -3309,7 +3295,7 @@
             }
           }
         },
-        "dark-ground": {
+        "darkGround": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ground.800}",
@@ -3324,7 +3310,7 @@
             }
           }
         },
-        "light-ground": {
+        "lightGround": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ground.400}",
@@ -3339,7 +3325,7 @@
             }
           }
         },
-        "very-light-ground": {
+        "veryLightGround": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ground.200}",
@@ -3354,7 +3340,7 @@
             }
           }
         },
-        "med-fairy": {
+        "medFairy": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fairy.600}",
@@ -3369,7 +3355,7 @@
             }
           }
         },
-        "dark-fairy": {
+        "darkFairy": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fairy.800}",
@@ -3384,7 +3370,7 @@
             }
           }
         },
-        "light-fairy": {
+        "lightFairy": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fairy.400}",
@@ -3399,7 +3385,7 @@
             }
           }
         },
-        "very-light-fairy": {
+        "veryLightFairy": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fairy.200}",
@@ -3414,7 +3400,7 @@
             }
           }
         },
-        "dark-fighting": {
+        "darkFighting": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fighting.800}",
@@ -3429,7 +3415,7 @@
             }
           }
         },
-        "very-light-fighting": {
+        "veryLightFighting": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fighting.200}",
@@ -3444,7 +3430,7 @@
             }
           }
         },
-        "med-fighting": {
+        "medFighting": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fighting.600}",
@@ -3459,7 +3445,7 @@
             }
           }
         },
-        "light-fighting": {
+        "lightFighting": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fighting.400}",
@@ -3474,7 +3460,7 @@
             }
           }
         },
-        "dark-psychic": {
+        "darkPsychic": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.psychic.800}",
@@ -3489,7 +3475,7 @@
             }
           }
         },
-        "light-psychic": {
+        "lightPsychic": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.psychic.400}",
@@ -3504,7 +3490,7 @@
             }
           }
         },
-        "med-psychic": {
+        "medPsychic": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.psychic.600}",
@@ -3519,7 +3505,7 @@
             }
           }
         },
-        "very-light-psychic": {
+        "veryLightPsychic": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.psychic.200}",
@@ -3534,7 +3520,7 @@
             }
           }
         },
-        "dark-rock": {
+        "darkRock": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.rock.800}",
@@ -3549,7 +3535,7 @@
             }
           }
         },
-        "light-rock": {
+        "lightRock": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.rock.400}",
@@ -3564,7 +3550,7 @@
             }
           }
         },
-        "very-light-rock": {
+        "veryLightRock": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.rock.200}",
@@ -3579,7 +3565,7 @@
             }
           }
         },
-        "med-rock": {
+        "medRock": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.rock.600}",
@@ -3594,7 +3580,7 @@
             }
           }
         },
-        "light-ghost": {
+        "lightGhost": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ghost.400}",
@@ -3609,7 +3595,7 @@
             }
           }
         },
-        "dark-ghost": {
+        "darkGhost": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ghost.800}",
@@ -3624,7 +3610,7 @@
             }
           }
         },
-        "very-light-ghost": {
+        "veryLightGhost": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ghost.200}",
@@ -3639,7 +3625,7 @@
             }
           }
         },
-        "med-ghost": {
+        "medGhost": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ghost.600}",
@@ -3654,7 +3640,7 @@
             }
           }
         },
-        "light-ice": {
+        "lightIce": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ice.400}",
@@ -3669,7 +3655,7 @@
             }
           }
         },
-        "med-ice": {
+        "medIce": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ice.600}",
@@ -3684,7 +3670,7 @@
             }
           }
         },
-        "very-light-ice": {
+        "veryLightIce": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ice.200}",
@@ -3699,7 +3685,7 @@
             }
           }
         },
-        "dark-ice": {
+        "darkIce": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ice.800}",
@@ -3714,7 +3700,7 @@
             }
           }
         },
-        "dark-steel": {
+        "darkSteel": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.steel.800}",
@@ -3729,7 +3715,7 @@
             }
           }
         },
-        "light-steel": {
+        "lightSteel": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.steel.400}",
@@ -3744,7 +3730,7 @@
             }
           }
         },
-        "med-steel": {
+        "medSteel": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.steel.600}",
@@ -3759,7 +3745,7 @@
             }
           }
         },
-        "very-light-steel": {
+        "veryLightSteel": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.steel.200}",
@@ -3774,7 +3760,7 @@
             }
           }
         },
-        "dark-flying": {
+        "darkFlying": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.flying.800}",
@@ -3789,7 +3775,7 @@
             }
           }
         },
-        "med-flying": {
+        "medFlying": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.flying.600}",
@@ -3804,7 +3790,7 @@
             }
           }
         },
-        "light-flying": {
+        "lightFlying": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.flying.400}",
@@ -3819,7 +3805,7 @@
             }
           }
         },
-        "very-light-flying": {
+        "veryLightFlying": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.flying.200}",
@@ -3834,7 +3820,7 @@
             }
           }
         },
-        "dark-dark": {
+        "darkDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dark.800}",
@@ -3849,7 +3835,7 @@
             }
           }
         },
-        "light-dark": {
+        "lightDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dark.400}",
@@ -3864,7 +3850,7 @@
             }
           }
         },
-        "med-dark": {
+        "medDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dark.600}",
@@ -3879,7 +3865,7 @@
             }
           }
         },
-        "very-light-dark": {
+        "veryLightDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dark.200}",
@@ -3894,7 +3880,7 @@
             }
           }
         },
-        "med-dragon": {
+        "medDragon": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dragon.600}",
@@ -3909,7 +3895,7 @@
             }
           }
         },
-        "light-dragon": {
+        "lightDragon": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dragon.400}",
@@ -3924,7 +3910,7 @@
             }
           }
         },
-        "very-light-dragon": {
+        "veryLightDragon": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dragon.200}",
@@ -3939,7 +3925,7 @@
             }
           }
         },
-        "dark-dragon": {
+        "darkDragon": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dragon.800}",
@@ -3969,7 +3955,7 @@
             }
           }
         },
-        "primary-btn-hover": {
+        "primaryBtnHover": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.blue.800}",
@@ -3984,7 +3970,7 @@
             }
           }
         },
-        "secondary-btn-hover": {
+        "secondaryBtnHover": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.200}",
@@ -4014,7 +4000,7 @@
             }
           }
         },
-        "secondary-btn": {
+        "secondaryBtn": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.50}",
@@ -4044,7 +4030,7 @@
             }
           }
         },
-        "error-hover": {
+        "errorHover": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.red.800}",
@@ -4059,7 +4045,7 @@
             }
           }
         },
-        "white-bg": {
+        "white": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.50}",
@@ -4074,7 +4060,7 @@
             }
           }
         },
-        "white-bg-dark": {
+        "whiteDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.700}",
@@ -4089,7 +4075,7 @@
             }
           }
         },
-        "light-grey": {
+        "lightGrey": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.200}",
@@ -4104,7 +4090,7 @@
             }
           }
         },
-        "light-grey-dark": {
+        "lightGreyDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.500}",
@@ -4119,7 +4105,7 @@
             }
           }
         },
-        "med-grey": {
+        "medGrey": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.400}",
@@ -4134,7 +4120,7 @@
             }
           }
         },
-        "dark-grey": {
+        "darkGrey": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.600}",
@@ -4149,7 +4135,7 @@
             }
           }
         },
-        "med-grey-dark": {
+        "medGreyDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.600}",
@@ -4164,7 +4150,7 @@
             }
           }
         },
-        "dark-grey-dark": {
+        "darkGreyDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.700}",
@@ -4179,7 +4165,7 @@
             }
           }
         },
-        "med-yellow": {
+        "medYellow": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.yellow.600}",
@@ -4194,7 +4180,7 @@
             }
           }
         },
-        "light-blue": {
+        "lightBlue": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.blue.50}",
@@ -4209,7 +4195,7 @@
             }
           }
         },
-        "light-blue-dark": {
+        "lightBlueDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.300}",
@@ -4224,7 +4210,7 @@
             }
           }
         },
-        "very-dark-grass": {
+        "veryDarkGrass": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.grass.900}",
@@ -4239,7 +4225,7 @@
             }
           }
         },
-        "very-dark-fire": {
+        "veryDarkFire": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fire.900}",
@@ -4254,7 +4240,7 @@
             }
           }
         },
-        "very-dark-bug": {
+        "veryDarkBug": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.bug.900}",
@@ -4269,7 +4255,7 @@
             }
           }
         },
-        "very-dark-water": {
+        "veryDarkWater": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.water.900}",
@@ -4284,7 +4270,7 @@
             }
           }
         },
-        "very-dark-normal": {
+        "veryDarkNormal": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.normal.900}",
@@ -4299,7 +4285,7 @@
             }
           }
         },
-        "very-dark-poison": {
+        "veryDarkPoison": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.poison.900}",
@@ -4314,7 +4300,7 @@
             }
           }
         },
-        "very-dark-electric": {
+        "veryDarkElectric": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.electric.900}",
@@ -4329,7 +4315,7 @@
             }
           }
         },
-        "very-dark-ground": {
+        "veryDarkGround": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ground.900}",
@@ -4344,7 +4330,7 @@
             }
           }
         },
-        "very-dark-fairy": {
+        "veryDarkFairy": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fairy.900}",
@@ -4359,7 +4345,7 @@
             }
           }
         },
-        "very-dark-fighting": {
+        "veryDarkFighting": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.fighting.900}",
@@ -4374,7 +4360,7 @@
             }
           }
         },
-        "very-dark-psychic": {
+        "veryDarkPsychic": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.psychic.900}",
@@ -4389,7 +4375,7 @@
             }
           }
         },
-        "very-dark-rock": {
+        "veryDarkRock": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.rock.900}",
@@ -4404,7 +4390,7 @@
             }
           }
         },
-        "very-dark-ghost": {
+        "veryDarkGhost": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ghost.900}",
@@ -4419,7 +4405,7 @@
             }
           }
         },
-        "very-dark-ice": {
+        "veryDarkIce": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.ice.900}",
@@ -4434,7 +4420,7 @@
             }
           }
         },
-        "very-dark-steel": {
+        "veryDarkSteel": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.steel.900}",
@@ -4449,7 +4435,7 @@
             }
           }
         },
-        "very-dark-flying": {
+        "veryDarkFlying": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.flying.900}",
@@ -4464,7 +4450,7 @@
             }
           }
         },
-        "very-dark-dark": {
+        "veryDarkDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dark.900}",
@@ -4479,7 +4465,7 @@
             }
           }
         },
-        "very-dark-dragon": {
+        "veryDarkDragon": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.dragon.900}",
@@ -4511,7 +4497,7 @@
             }
           }
         },
-        "primary-hover": {
+        "primaryHover": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.blue.800}",
@@ -4541,7 +4527,7 @@
             }
           }
         },
-        "secondary-hover": {
+        "secondaryHover": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.200}",
@@ -4556,7 +4542,7 @@
             }
           }
         },
-        "primary-disabled": {
+        "primaryDisabled": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.600}",
@@ -4571,7 +4557,7 @@
             }
           }
         },
-        "secondary-disabled": {
+        "secondaryDisabled": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.600}",
@@ -4616,7 +4602,7 @@
             }
           }
         },
-        "default-dark": {
+        "defaultDark": {
           "description": "",
           "type": "color",
           "value": "{semantic.color.colors.white}",
@@ -4632,8 +4618,8 @@
           }
         }
       },
-      "border-color": {
-        "light-grey": {
+      "borderColor": {
+        "lightGrey": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.200}",
@@ -4663,7 +4649,7 @@
             }
           }
         },
-        "med-grey": {
+        "medGrey": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.400}",
@@ -4693,7 +4679,7 @@
             }
           }
         },
-        "primary-dark": {
+        "primaryDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.50}",
@@ -4708,7 +4694,7 @@
             }
           }
         },
-        "med-grey-dark": {
+        "medGreyDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.600}",
@@ -4753,7 +4739,7 @@
             }
           }
         },
-        "default-dark": {
+        "defaultDark": {
           "description": "",
           "type": "color",
           "value": "{primitive.color.netural.50}",
@@ -4771,22 +4757,154 @@
       }
     },
     "typography": {
-      "font-size": {
-        "body": {
+      "fontWeight": {
+        "normal": {
           "description": "",
           "type": "dimension",
-          "value": "{primitive.typography.font.md}",
+          "value": "{primitive.typography.weight.regular}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "Semantic",
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:2017:5780",
+              "variableId": "VariableID:2017:5782",
               "exportKey": "variables"
             }
           }
         },
+        "bold": {
+          "description": "",
+          "type": "dimension",
+          "value": "{primitive.typography.weight.bold}",
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2017:5783",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "light": {
+          "description": "",
+          "type": "dimension",
+          "value": "{primitive.typography.weight.light}",
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2030:4882",
+              "exportKey": "variables"
+            }
+          }
+        }
+      },
+      "lineHeight": {
+        "sm": {
+          "type": "dimension",
+          "value": 21,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2017:5789",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "md": {
+          "type": "dimension",
+          "value": 24,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2033:493",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "xl": {
+          "type": "dimension",
+          "value": 34,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2033:494",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "lg": {
+          "type": "dimension",
+          "value": 28,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2033:495",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "xs": {
+          "type": "dimension",
+          "value": 18,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2033:496",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "2xl": {
+          "type": "dimension",
+          "value": 42,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2454:3649",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "3xl": {
+          "type": "dimension",
+          "value": 48,
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2454:3650",
+              "exportKey": "variables"
+            }
+          }
+        }
+      },
+      "fontSize": {
         "2xl": {
           "description": "",
           "type": "dimension",
@@ -4893,142 +5011,22 @@
           }
         }
       },
-      "font-weight": {
-        "normal": {
-          "description": "",
-          "type": "dimension",
-          "value": "{primitive.typography.weight.regular}",
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2017:5782",
-              "exportKey": "variables"
-            }
-          }
-        },
-        "bold": {
-          "description": "",
-          "type": "dimension",
-          "value": "{primitive.typography.weight.bold}",
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2017:5783",
-              "exportKey": "variables"
-            }
-          }
-        },
-        "font-light": {
-          "description": "",
-          "type": "dimension",
-          "value": "{primitive.typography.weight.light}",
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2030:4882",
-              "exportKey": "variables"
-            }
-          }
-        }
-      },
-      "line-height": {
-        "body": {
-          "type": "dimension",
-          "value": 24,
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2017:5789",
-              "exportKey": "variables"
-            }
-          }
-        },
-        "md": {
-          "type": "dimension",
-          "value": 32,
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2033:493",
-              "exportKey": "variables"
-            }
-          }
-        },
-        "xl": {
-          "type": "dimension",
-          "value": 48,
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2033:494",
-              "exportKey": "variables"
-            }
-          }
-        },
-        "lg": {
-          "type": "dimension",
-          "value": 40,
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2033:495",
-              "exportKey": "variables"
-            }
-          }
-        },
-        "xs": {
-          "type": "dimension",
-          "value": 28,
-          "extensions": {
-            "org.lukasoppermann.figmaDesignTokens": {
-              "collection": "Semantic",
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "variableId": "VariableID:2033:496",
-              "exportKey": "variables"
-            }
-          }
-        }
-      },
-      "font-family": {
-        "body": {
-          "description": "",
+      "fontFamily": {
+        "sansFallback": {
           "type": "string",
-          "value": "{primitive.typography.family.secondary}",
+          "value": "Helvetica, Arial, sans-serif",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "Semantic",
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:2030:523",
+              "variableId": "VariableID:2469:4712",
               "exportKey": "variables"
             }
           }
         },
-        "primary": {
+        "sans": {
           "description": "",
           "type": "string",
           "value": "{primitive.typography.family.primary}",
@@ -5038,22 +5036,22 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:2030:524",
+              "variableId": "VariableID:2469:4713",
               "exportKey": "variables"
             }
           }
         },
-        "font-secondary": {
+        "sansMobile": {
           "description": "",
           "type": "string",
-          "value": "{primitive.typography.family.secondary}",
+          "value": "{primitive.typography.family.primary}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "Semantic",
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:2030:4885",
+              "variableId": "VariableID:2469:4714",
               "exportKey": "variables"
             }
           }
@@ -5213,7 +5211,7 @@
           }
         }
       },
-      "border-radius": {
+      "borderRadius": {
         "pill": {
           "description": "",
           "type": "dimension",
@@ -5259,7 +5257,7 @@
             }
           }
         },
-        "rounded-img": {
+        "md": {
           "description": "",
           "type": "dimension",
           "value": "{primitive.size.radius.md}",
@@ -5270,6 +5268,21 @@
                 "ALL_SCOPES"
               ],
               "variableId": "VariableID:2027:492",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "sm": {
+          "description": "",
+          "type": "dimension",
+          "value": "{primitive.size.radius.sm}",
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "collection": "Semantic",
+              "scopes": [
+                "ALL_SCOPES"
+              ],
+              "variableId": "VariableID:2412:3646",
               "exportKey": "variables"
             }
           }
