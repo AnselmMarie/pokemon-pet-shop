@@ -5,6 +5,7 @@ const types = ['semantic'];
 const lineHeightMap = new Map();
 let sansFallback = [];
 
+// Add px to spacing, line height, and border radius values
 StyleDictionaryModule.registerTransform({
   type: `value`,
   transitive: true,
@@ -28,6 +29,7 @@ StyleDictionaryModule.registerTransform({
   }
 })
 
+// Combine font size with line height
 StyleDictionaryModule.registerTransform({
   type: `value`,
   transitive: true,
@@ -43,6 +45,7 @@ StyleDictionaryModule.registerTransform({
   }
 })
 
+// Combine font family with fallback fonts
 StyleDictionaryModule.registerTransform({
   type: `value`,
   transitive: true,
@@ -63,6 +66,7 @@ StyleDictionaryModule.registerTransform({
   }
 })
 
+// Build root types of the design token JSON
 types.map((type) => {
   const StyleDictionary = new StyleDictionaryModule(
     makeSdTailwindConfig({
