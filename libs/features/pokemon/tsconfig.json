@@ -40,6 +40,9 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../../ui/scrollWrapper"
     }
   ],
   "extends": "../../../tsconfig.base.json"
