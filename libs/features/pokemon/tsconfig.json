@@ -43,6 +43,9 @@
     },
     {
       "path": "../../ui/scrollWrapper"
+    },
+    {
+      "path": "../../ui/tag"
     }
   ],
   "extends": "../../../tsconfig.base.json"

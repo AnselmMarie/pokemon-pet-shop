@@ -68,6 +68,9 @@
     },
     {
       "path": "../../ui/scrollWrapper/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/tag/tsconfig.lib.json"
     }
   ]
 }

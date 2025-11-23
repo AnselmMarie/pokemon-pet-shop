@@ -1,1 +1,2 @@
-export * from './lib/tag';
+export * from './lib/tagItem';
+export * from './lib/tagWrapper';
