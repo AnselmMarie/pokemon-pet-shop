@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 // import { useAtom } from 'jotai';
 
 // import { toggleThemeAtom } from '@features/atomTheme';
@@ -14,13 +14,19 @@ import { isWeb } from '@utils/detect';
 import { capitalizeName } from '@utils/textTransform';
 
 import { PokemonAbilityName } from '../components/pokemon.ability.name';
-import { CardProps } from './pokemon.card.interface';
+import { PokemonCardProps } from './pokemon.card.interface';
 
 import { pokeCardTypeMap } from './pokemon.card.type.map.util';
 import { usePokemonTypeLogic } from '../hooks/use.pokemon.type.logic';
+import { PokemonDetailModal } from '../modalPokemonDetail/pokemonDetailModal';
 
-export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
-  const { getPokeTypeClass } = usePokemonTypeLogic(item?.types);
+export const PokemonCard = ({
+  pokeCreature,
+  isLoading,
+}: PokemonCardProps): ReactElement => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const { getPokeTypeClass } = usePokemonTypeLogic(pokeCreature?.types);
   // const [theme] = useAtom(toggleThemeAtom);
 
   // const handleOpenDetailModalClick = () => {
@@ -41,106 +47,116 @@ export const PokemonCard = ({ item, isLoading }: CardProps): ReactElement => {
   // };
 
   return (
-    <Card
-      className={`min-w-[352px] h-[154px] flex p-sm rounded-md flex-row relative ${
-        isLoading ? 'bg-medGrey' : ''
-      } ${
-        pokeCardTypeMap.get(getPokeTypeClass)?.[
-          `${getPokeTypeClass}Wrapper` as keyof object
-        ] ?? ''
-      }`}
-      // className={classNamesUtil(
-      //   newStyles?.[
-      //     theme === ThemeTypeEnum.LIGHT
-      //       ? 'cardWrapperShadowLight'
-      //       : 'cardWrapperShadowDark'
-      //   ],
-      // )}
-    >
-      {isLoading ? (
-        <Box className="w-[50%] h-[70%] my-lg mx-md md:flex-1 md:w-[80%] md:h-full md:mx-auto md:mb-md">
-          <Skeleton height={isWeb() ? '100%' : 100} circle />
-        </Box>
-      ) : (
-        <Box className="flex justify-center items-center w-full max-w-[115px] rounded-md p-sm">
-          <Image
-            src={item?.sprites?.other?.['official-artwork']?.front_default}
-            className="w-full h-auto position-absolute md:w-[88%] md:z-0"
-            alt={`${item?.name} Image`}
-            isLoading={isLoading}
-          />
-        </Box>
-      )}
-
-      <Box
-        className={`flex flex-col justify-between w-full rounded-md p-md ${
-          isLoading ? 'bg-darkGrey' : ''
+    <>
+      <PokemonDetailModal
+        pokeCreature={pokeCreature}
+        isOpen={isModalOpen}
+        onCloseModal={() => setIsModalOpen(false)}
+      />
+      <Card
+        className={`min-w-[352px] h-[154px] flex p-sm rounded-md flex-row relative ${
+          isLoading ? 'bg-medGrey' : ''
         } ${
           pokeCardTypeMap.get(getPokeTypeClass)?.[
-            `${getPokeTypeClass}ContentCardWrapper` as keyof object
+            `${getPokeTypeClass}Wrapper` as keyof object
           ] ?? ''
         }`}
+        // className={classNamesUtil(
+        //   newStyles?.[
+        //     theme === ThemeTypeEnum.LIGHT
+        //       ? 'cardWrapperShadowLight'
+        //       : 'cardWrapperShadowDark'
+        //   ],
+        // )}
       >
-        <Box className="w-full">
-          {isLoading ? (
-            <Box className="mb-sm">
-              <Skeleton />
-            </Box>
-          ) : (
-            <Box className="flex justify-between items-center mb-sm">
-              <Typography
-                className={`text-md md:text-lg ${
-                  pokeCardTypeMap.get(getPokeTypeClass)?.[
-                    `${getPokeTypeClass}ContentCardText` as keyof object
-                  ] ?? ''
-                }`}
-                variant="h1"
-              >
-                {capitalizeName(item?.name)}
-              </Typography>
-              <Typography
-                className={`text-sm md:text-md ${
-                  pokeCardTypeMap.get(getPokeTypeClass)?.[
-                    `${getPokeTypeClass}ContentCardText` as keyof object
-                  ] ?? ''
-                }`}
-              >
-                NO. {item?.id}
-              </Typography>
-            </Box>
-          )}
-
-          {(item?.abilities || []).map(
-            (
-              abilityObj: any, // PokemonDetailAbilityObj,
-              i: number
-            ): ReactElement | null => {
-              if (i > 1) {
-                return null;
+        {isLoading ? (
+          <Box className="w-[50%] h-[70%] my-lg mx-md md:flex-1 md:w-[80%] md:h-full md:mx-auto md:mb-md">
+            <Skeleton height={isWeb() ? '100%' : 100} circle />
+          </Box>
+        ) : (
+          <Box className="flex justify-center items-center w-full max-w-[115px] rounded-md p-sm">
+            <Image
+              src={
+                pokeCreature?.sprites?.other?.['official-artwork']
+                  ?.front_default
               }
-              return (
-                <PokemonAbilityName
-                  key={i}
-                  abilityData={abilityObj}
-                  typeData={item?.types}
-                  getPokeTypeClass={getPokeTypeClass}
-                  isLoading={isLoading}
-                />
-              );
-            }
-          )}
-        </Box>
+              className="w-full h-auto position-absolute md:w-[88%] md:z-0"
+              alt={`${pokeCreature?.name} Image`}
+              isLoading={isLoading}
+            />
+          </Box>
+        )}
 
-        <Box className="w-full flex gap-sm">
-          <Button
-            className="w-full"
-            type="secondary"
-            text="Learn More"
-            isLoading={isLoading}
-            // onClick={handleOpenDetailModalClick}
-          />
+        <Box
+          className={`flex flex-col justify-between w-full rounded-md p-md ${
+            isLoading ? 'bg-darkGrey' : ''
+          } ${
+            pokeCardTypeMap.get(getPokeTypeClass)?.[
+              `${getPokeTypeClass}ContentCardWrapper` as keyof object
+            ] ?? ''
+          }`}
+        >
+          <Box className="w-full">
+            {isLoading ? (
+              <Box className="mb-sm">
+                <Skeleton />
+              </Box>
+            ) : (
+              <Box className="flex justify-between items-center mb-sm">
+                <Typography
+                  className={`text-md md:text-lg ${
+                    pokeCardTypeMap.get(getPokeTypeClass)?.[
+                      `${getPokeTypeClass}ContentCardText` as keyof object
+                    ] ?? ''
+                  }`}
+                  variant="h1"
+                >
+                  {capitalizeName(pokeCreature?.name)}
+                </Typography>
+                <Typography
+                  className={`text-sm md:text-md ${
+                    pokeCardTypeMap.get(getPokeTypeClass)?.[
+                      `${getPokeTypeClass}ContentCardText` as keyof object
+                    ] ?? ''
+                  }`}
+                >
+                  NO. {pokeCreature?.id}
+                </Typography>
+              </Box>
+            )}
+
+            {(pokeCreature?.abilities || []).map(
+              (
+                abilityObj: any, // PokemonDetailAbilityObj,
+                i: number
+              ): ReactElement | null => {
+                if (i > 1) {
+                  return null;
+                }
+                return (
+                  <PokemonAbilityName
+                    key={i}
+                    abilityData={abilityObj}
+                    typeData={pokeCreature?.types}
+                    getPokeTypeClass={getPokeTypeClass}
+                    isLoading={isLoading}
+                  />
+                );
+              }
+            )}
+          </Box>
+
+          <Box className="w-full flex gap-sm">
+            <Button
+              className="w-full"
+              type="secondary"
+              text="Learn More"
+              isLoading={isLoading}
+              onClick={() => setIsModalOpen(true)}
+            />
+          </Box>
         </Box>
-      </Box>
-    </Card>
+      </Card>
+    </>
   );
 };

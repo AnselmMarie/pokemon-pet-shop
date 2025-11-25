@@ -10,6 +10,9 @@
     },
     {
       "path": "../box"
+    },
+    {
+      "path": "../icon"
     }
   ],
   "extends": "../../../tsconfig.base.json"

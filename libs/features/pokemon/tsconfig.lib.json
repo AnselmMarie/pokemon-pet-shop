@@ -71,6 +71,9 @@
     },
     {
       "path": "../../ui/tag/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/modal/tsconfig.lib.json"
     }
   ]
 }

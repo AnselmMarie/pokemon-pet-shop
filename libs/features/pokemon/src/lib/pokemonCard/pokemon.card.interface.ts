@@ -1,6 +1,6 @@
 // import { PokemonListApi } from '@pokemon-pet-shop/typing';
 
-export interface CardProps {
-  item: any; //Pokemon.Base;
+export interface PokemonCardProps {
+  pokeCreature: any; //Pokemon.Base;
   isLoading: boolean;
 }

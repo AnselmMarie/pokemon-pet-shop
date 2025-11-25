@@ -44,6 +44,12 @@ export default {
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
       '@ui/skeleton': join(__dirname, '../../libs/ui/skeleton/src/index.ts'),
+      '@ui/modal': join(__dirname, '../../libs/ui/modal/src/index.ts'),
+      '@ui/tag': join(__dirname, '../../libs/ui/tag/src/index.ts'),
+      '@ui/scrollWrapper': join(
+        __dirname,
+        '../../libs/ui/scrollWrapper/src/index.ts'
+      ),
       '@ui/card': join(__dirname, '../../libs/ui/card/src/index.ts'),
       '@ui/hideInMobile': join(
         __dirname,

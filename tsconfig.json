@@ -101,6 +101,12 @@
     },
     {
       "path": "./libs/ui/iconPokeType"
+    },
+    {
+      "path": "./libs/ui/scrollWrapper"
+    },
+    {
+      "path": "./libs/ui/tag"
     }
   ]
 }

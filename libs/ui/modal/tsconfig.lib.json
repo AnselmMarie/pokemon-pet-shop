@@ -35,6 +35,9 @@
   "references": [
     {
       "path": "../box/tsconfig.lib.json"
+    },
+    {
+      "path": "../icon/tsconfig.lib.json"
     }
   ]
 }

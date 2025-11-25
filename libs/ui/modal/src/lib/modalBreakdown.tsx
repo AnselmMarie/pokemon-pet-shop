@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
 
 import { Box } from '@ui/box';
+import { Icon } from '@ui/icon';
 
 export const ModalCard = ({
   classNameCard,
@@ -12,7 +13,7 @@ export const ModalCard = ({
 );
 
 export const ModalClose = ({ onClick }: { onClick: () => void }) => (
-  <button onClick={onClick}>X</button>
+  <Icon icon="IconX" size={24} onClick={onClick} />
 );
 
 export const ModalTitle = ({ title }: { title: string }) => <h1> {title} </h1>;

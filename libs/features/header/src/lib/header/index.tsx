@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <Box
       as="header"
-      className="space-between h-[93px] sticky z-99 px-md py-xs shadow bg-white"
+      className="space-between h-[93px] sticky z-40 px-md py-xs shadow bg-white"
     >
       <Container className="flex item-center justify-between">
         <Box className="flex justify-center items-center">

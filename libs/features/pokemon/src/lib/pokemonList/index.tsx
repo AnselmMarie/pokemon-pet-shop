@@ -55,7 +55,7 @@ export const PokemonList = (): ReactElement => {
               {(arr?.data ?? []).map((el: any, i: number) => (
                 <PokemonCard
                   key={el?.name || i}
-                  item={el}
+                  pokeCreature={el}
                   isLoading={isLoading}
                 />
               ))}
