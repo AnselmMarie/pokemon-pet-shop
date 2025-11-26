@@ -14,7 +14,7 @@ import { pokeAbilityTypeMap } from './pokemon.ability.type.map.util';
 export const PokemonAbilityName = ({
   abilityData,
   typeData,
-  getPokeTypeClass,
+  pokeTypeClass,
   showAtkLine = true,
   displayInDetail = false,
   isLoading = false,
@@ -51,8 +51,8 @@ export const PokemonAbilityName = ({
         <HideInMobile>
           <Box
             className={`hidden md:block w-[30px] h-full ${
-              pokeAbilityTypeMap.get(getPokeTypeClass)?.[
-                `${getPokeTypeClass}AtkLine` as keyof object
+              pokeAbilityTypeMap.get(pokeTypeClass)?.[
+                `${pokeTypeClass}AtkLine` as keyof object
               ] ?? ''
             }`}
             // className={classNamesUtil(
@@ -66,8 +66,8 @@ export const PokemonAbilityName = ({
         className={`h-[17px] w-[17px] rounded-circle mr-sm flex justify-center items-center ${
           displayInDetail ? 'w-[35px] h-[35px] mr-md' : ''
         } ${isAtkLineShownCircleClass} ${
-          pokeAbilityTypeMap.get(getPokeTypeClass)?.[
-            `${getPokeTypeClass}AtkCircle` as keyof object
+          pokeAbilityTypeMap.get(pokeTypeClass)?.[
+            `${pokeTypeClass}AtkCircle` as keyof object
           ] ?? ''
         }`}
       >
@@ -79,8 +79,8 @@ export const PokemonAbilityName = ({
 
       <Typography
         className={`text-sm ${displayInDetail ? 'color-default text-lg' : ''} ${
-          pokeAbilityTypeMap.get(getPokeTypeClass)?.[
-            `${getPokeTypeClass}ContentCardText` as keyof object
+          pokeAbilityTypeMap.get(pokeTypeClass)?.[
+            `${pokeTypeClass}ContentCardText` as keyof object
           ] ?? ''
         }`}
       >

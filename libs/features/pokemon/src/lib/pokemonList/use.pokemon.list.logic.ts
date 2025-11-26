@@ -1,6 +1,7 @@
 // import { InfiniteData } from '@tanstack/react-query';
 
 import { useGetPokemonList } from '@services/pokemon-api';
+
 // import { PokemonListApi } from '@pokemon-pet-shop/typing';
 
 // interface PokemonListReturn {

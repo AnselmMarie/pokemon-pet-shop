@@ -38,6 +38,10 @@ export default {
         '../../libs/utils/apiClient/src/index.ts'
       ),
       '@utils/detect': join(__dirname, '../../libs/utils/detect/src/index.ts'),
+      '@utils/pricing': join(
+        __dirname,
+        '../../libs/utils/pricing/src/index.ts'
+      ),
       '@utils/textTransform': join(
         __dirname,
         '../../libs/utils/textTransform/src/index.ts'

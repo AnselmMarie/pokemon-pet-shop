@@ -32,22 +32,16 @@ export const Icon = ({
   }, [isDisabled, onClick]);
 
   const RenderIcon = useCallback(() => {
-    // const disabledStyles = isDisabled ? globalStyles.disabledElement : '';
-    // const clickableStyles = onClick ? globalStyles.pointerCursor : '';
-
     return (
       <IconComponent
         size={size}
         fill={!isDisabled ? fill || 'white' : ''}
         stroke={!isDisabled ? stroke : ''}
-        className={classNameIcon}
+        className={`${classNameIcon} ${onClick ? 'cursor-pointer' : ''} ${
+          isDisabled ? 'opacity-50 pointer-events-none' : ''
+        }`}
         // fill={!isDisabled ? fill || 'white' : THEME_NETURAL_600}
         // stroke={!isDisabled ? stroke : THEME_NETURAL_600}
-        // className={classNamesUtil(
-        //   classNameIcon,
-        //   clickableStyles,
-        //   disabledStyles
-        // )}
         onClick={iconClick}
       />
     );
@@ -59,7 +53,7 @@ export const Icon = ({
     classNameIcon,
     iconClick,
     isDisabled,
-    // onClick,
+    onClick,
   ]);
 
   if (displayWrapper) {

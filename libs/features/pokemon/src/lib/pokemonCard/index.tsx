@@ -138,7 +138,7 @@ export const PokemonCard = ({
                     key={i}
                     abilityData={abilityObj}
                     typeData={pokeCreature?.types}
-                    getPokeTypeClass={getPokeTypeClass}
+                    pokeTypeClass={getPokeTypeClass}
                     isLoading={isLoading}
                   />
                 );

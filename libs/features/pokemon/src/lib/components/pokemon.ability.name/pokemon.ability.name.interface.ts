@@ -3,7 +3,7 @@
 export interface PokemonAbilityNameProps {
   abilityData: any; // PokemonDetailAbilityObj;
   typeData: any;
-  getPokeTypeClass: string;
+  pokeTypeClass: string;
   showAtkLine?: boolean;
   displayInDetail?: boolean;
   isLoading?: boolean;

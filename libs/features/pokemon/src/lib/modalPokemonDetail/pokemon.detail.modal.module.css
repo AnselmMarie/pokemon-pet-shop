@@ -65,16 +65,16 @@
   margin-bottom: var(--theme-spacing-10);
 }
 
-.cardDescription {
+/* .cardDescription {
   font-size: var(--theme-font-18);
   margin-bottom: var(--theme-spacing-25);
-}
+} */
 
-.weightHeightWrapper {
+/* .weightHeightWrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: var(--theme-spacing-25);
-}
+} */
 
 .weight,
 .height {
@@ -168,11 +168,11 @@
 }
 
 @media only screen and (min-width: 630px) {
-  .weightHeightWrapper {
+  /* .weightHeightWrapper {
     display: flex;
     gap: var(--theme-spacing-35);
     flex-direction: row;
-  }
+  } */
 
   .weight {
     margin-bottom: 0;

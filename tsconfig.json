@@ -107,6 +107,9 @@
     },
     {
       "path": "./libs/ui/tag"
+    },
+    {
+      "path": "./libs/utils/pricing"
     }
   ]
 }

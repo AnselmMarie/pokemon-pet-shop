@@ -49,6 +49,9 @@
     },
     {
       "path": "../../ui/modal"
+    },
+    {
+      "path": "../../utils/pricing"
     }
   ],
   "extends": "../../../tsconfig.base.json"

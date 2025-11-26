@@ -4,7 +4,7 @@ import { Box } from '@ui/box';
 import { Icon } from '@ui/icon';
 
 export const ModalCard = ({
-  classNameCard,
+  classNameCard = '',
   children,
 }: PropsWithChildren<{ classNameCard?: string }>) => (
   <Box className={`bg-white rounded-lg shadow-lg ${classNameCard}`}>

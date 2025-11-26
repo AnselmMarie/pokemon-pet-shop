@@ -62,9 +62,11 @@ export const Modal = ({
   if (!isVisible) return null;
 
   return (
-    <Box className="fixed top-[0px] left-[0px] z-50 w-full h-full bg-[#000000] bg-opacity-50">
+    <Box
+      className={`fixed flex top-[0px] left-[0px] z-50 w-full h-full bg-[#000000] bg-opacity-50 ${getModalAlignmentClasses}`}
+    >
       <Box
-        className={`inset-0 z-50 flex items-center ${getModalAlignmentClasses} ${
+        className={`relative inset-0 z-50 flex bg-white w-full md:max-w-[600px] rounded-sm ${
           startAnimation
             ? 'ease-in duration-300 opacity-100'
             : 'ease-out duration-300 opacity-0'
