@@ -73,9 +73,6 @@
       "path": "./libs/features/switchTheme"
     },
     {
-      "path": "./libs/features/atomTheme"
-    },
-    {
       "path": "./libs/features/modalCart"
     },
     {
