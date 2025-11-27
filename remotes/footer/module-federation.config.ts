@@ -17,7 +17,7 @@ const config: ModuleFederationConfig = {
       };
     }
 
-    if (libraryName === 'jotai') {
+    if (libraryName === 'jotai' || libraryName === 'jotai/utils') {
       return { singleton: true };
     }
 

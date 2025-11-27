@@ -4,11 +4,10 @@ import { workspaceRoot } from '@nx/devkit';
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
 
 const config: ModuleFederationConfig = {
-  name: 'header',
+  name: 'atomTheme',
   exposes: {
-    './Module': './src/remote-entry.ts',
+    './State': './src/state/index.ts',
   },
-  remotes: ['atomTheme'],
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {

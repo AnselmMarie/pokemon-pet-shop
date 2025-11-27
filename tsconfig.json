@@ -122,6 +122,12 @@
     },
     {
       "path": "./remotes/storeTheme"
+    },
+    {
+      "path": "./remotes/atomTheme-e2e"
+    },
+    {
+      "path": "./remotes/atomTheme"
     }
   ]
 }

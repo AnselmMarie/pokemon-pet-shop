@@ -1,7 +1,4 @@
 import { ReactElement, useState } from 'react';
-// import { useAtom } from 'jotai';
-
-// import { toggleThemeAtom } from '@features/atomTheme';
 
 import { Box } from '@ui/box';
 import { Card } from '@ui/card';
@@ -27,7 +24,6 @@ export const PokemonCard = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { getPokeTypeClass } = usePokemonTypeLogic(pokeCreature?.types);
-  // const [theme] = useAtom(toggleThemeAtom);
 
   // const handleOpenDetailModalClick = () => {
   //   openModal({

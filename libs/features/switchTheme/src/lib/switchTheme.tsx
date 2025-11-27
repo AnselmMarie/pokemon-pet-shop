@@ -2,7 +2,8 @@ import { ReactElement } from 'react';
 import { useAtom } from 'jotai';
 
 import { Switch } from '@ui/switch';
-import { toggleThemeAtom } from '@features/atomTheme';
+
+import { toggleThemeAtom } from 'atomTheme/State';
 
 import { SwitchProps } from './switchTheme.interface';
 

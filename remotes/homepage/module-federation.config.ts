@@ -8,6 +8,7 @@ const config: ModuleFederationConfig = {
   exposes: {
     './Module': './src/remote-entry.ts',
   },
+  remotes: ['atomTheme'],
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {
@@ -17,7 +18,7 @@ const config: ModuleFederationConfig = {
       };
     }
 
-    if (libraryName === 'jotai') {
+    if (libraryName === 'jotai' || libraryName === 'jotai/utils') {
       return { singleton: true };
     }
 
