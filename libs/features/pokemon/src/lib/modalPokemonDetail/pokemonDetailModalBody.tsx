@@ -23,6 +23,8 @@ export const PokemonDetailModalBody = ({
     isFetching: speciesIsFetching,
   }: any = res[0];
 
+  // const updateCartMutation = useUpdateCart();
+
   const convertKgToLbs = useMemo(() => {
     const stringKgNoDecimal = String(pokeCreature?.weight);
 

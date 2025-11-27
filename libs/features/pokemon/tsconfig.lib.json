@@ -7,7 +7,8 @@
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
       "pokemon",
-      "pokemon/species"
+      "pokemon/species",
+      "global"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",
