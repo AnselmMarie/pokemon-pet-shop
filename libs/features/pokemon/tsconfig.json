@@ -21,6 +21,9 @@
       "path": "../../services/pokemon-api"
     },
     {
+      "path": "../../services/cart-api"
+    },
+    {
       "path": "../../ui/tag"
     },
     {

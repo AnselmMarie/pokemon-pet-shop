@@ -3,10 +3,11 @@ import { ReactElement, useMemo } from 'react';
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
-// import { Button } from '@ui/button';
+import { Button } from '@ui/button';
 import { TagWrapper, TagItem } from '@ui/tag';
 
 import { useGetPokemonSpecies } from '@services/pokemon-api';
+import { useUpdateCart } from '@services/cart-api';
 
 import { capitalizeName, removeHtmlCodeInString } from '@utils/textTransform';
 
@@ -16,14 +17,25 @@ export const PokemonDetailModalBody = ({
   pokeCreature,
   pokeTypeClass,
 }: any): ReactElement => {
-  const res = useGetPokemonSpecies([String(pokeCreature?.id)]);
+  const pokeSpeciesRes = useGetPokemonSpecies([String(pokeCreature?.id)]);
   const {
     data: speciesData,
     isLoading: speciesIsLoading,
     isFetching: speciesIsFetching,
-  }: any = res[0];
+  }: any = pokeSpeciesRes[0];
 
-  // const updateCartMutation = useUpdateCart();
+  const {
+    mutate: mutateUpdateCart,
+    isPending: isPendingUpdateCart,
+    isSuccess: isSuccessUpdateCart,
+  } = useUpdateCart();
+
+  const handleUpdateCartSubmit = () => {
+    mutateUpdateCart({
+      id: pokeCreature?.id,
+      addToCart: true,
+    });
+  };
 
   const convertKgToLbs = useMemo(() => {
     const stringKgNoDecimal = String(pokeCreature?.weight);
@@ -167,19 +179,19 @@ export const PokemonDetailModalBody = ({
         </Box>
 
         <Box className="mt-lg flex justify-center">
-          {/* <Button
+          <Button
             text={
               isPendingUpdateCart
                 ? `Catching ${capitalizeName(pokeCreature?.name)}`
                 : 'Get Pet'
             }
             size="large"
-            appendIcon={isPendingUpdateCart ? 'IconPokeBall' : null}
+            appendIcon={isPendingUpdateCart ? 'IconPokeBall' : undefined}
             timerText="Caught"
             isSuccess={isSuccessUpdateCart}
             isDisabled={isPendingUpdateCart}
-            onClick={onHandleUpdateCartSubmit}
-          /> */}
+            onClick={handleUpdateCartSubmit}
+          />
         </Box>
       </Box>
     </Box>

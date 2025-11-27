@@ -74,6 +74,10 @@ export default {
         __dirname,
         '../../libs/services/pokemon-api/src/index.ts'
       ),
+      '@services/cart-api': join(
+        __dirname,
+        '../../libs/services/cart-api/src/index.ts'
+      ),
     },
   },
   plugins: [

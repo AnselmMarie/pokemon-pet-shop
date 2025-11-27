@@ -1,30 +1,8 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
-// import express from 'express';
-// import * as path from 'path';
-
-// const app = express();
-
-// app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
-// app.get('/api', (req, res) => {
-//   res.send({ message: 'Welcome to api!' });
-// });
-
-// const port = process.env.PORT || 3333;
-// const server = app.listen(port, () => {
-//   console.log(`Listening at http://localhost:${port}/api`);
-// });
-// server.on('error', console.error);
-
 import cors from 'cors';
 import express from 'express';
 
-// import { cartRoute } from './api/v1/cart';
 import { pokemonRoute } from './api/pokemon';
+import { cartRoute } from './api/cart';
 // import { pricingRoute } from './api/v1/pricing/routes/pricing.route';
 import { cacheMiddleware } from './middleware/cache.middleware';
 
@@ -54,8 +32,7 @@ app.use(cacheMiddleware);
 
 // Using Routes
 app.use('/api/pokemon', pokemonRoute);
-// app.use('/api/cart', cartRoute);
-// app.use('/api/pricing', pricingRoute);
+app.use('/api/cart', cartRoute);
 
 // Error Handling Middleware
 app.use((err: any, req: any, res: any, next: any) => {

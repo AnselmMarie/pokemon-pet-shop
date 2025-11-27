@@ -8,6 +8,14 @@ module.exports = {
       devtoolModuleFilenameTemplate: '[absolute-resource-path]',
     }),
   },
+  resolve: {
+    alias: {
+      '@utils/pricing': join(
+        __dirname,
+        '../../libs/utils/pricing/src/index.ts'
+      ),
+    },
+  },
   plugins: [
     new NxAppWebpackPlugin({
       target: 'node',
