@@ -125,6 +125,9 @@
     },
     {
       "path": "./remotes/atomTheme"
+    },
+    {
+      "path": "./libs/services/cart-api"
     }
   ]
 }

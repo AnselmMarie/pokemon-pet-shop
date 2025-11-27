@@ -343,6 +343,8 @@ importers:
 
   libs/features/switchTheme: {}
 
+  libs/services/cart-api: {}
+
   libs/services/pokemon-api: {}
 
   libs/ui/box: {}
