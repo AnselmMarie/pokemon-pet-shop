@@ -2,7 +2,7 @@ import { errFormat500ResponseUtil } from '../../../../utils/err.format.response.
 import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../const/default.prop.const';
 import { PokemonListQueryProps } from '../interface/pokemon.interface';
 
-const getPokemonListService = async ({
+export const getPokemonListService = async ({
   limit = DEFAULT_LIMIT,
   offset = DEFAULT_OFFSET,
 }: PokemonListQueryProps) => {
@@ -18,5 +18,3 @@ const getPokemonListService = async ({
 
   return res;
 };
-
-export { getPokemonListService };

@@ -2,7 +2,13 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "types": ["node", "express", "pokemon/pricing"],
+    "types": [
+      "node",
+      "express",
+      "pokemon/pricing",
+      "cart",
+      "pokemon/evolutionChain"
+    ],
     "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
   },
@@ -16,5 +22,10 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../../libs/utils/pricing/tsconfig.lib.json"
+    }
   ]
 }

@@ -45,7 +45,7 @@ declare global {
       };
     }
 
-    interface EvolutionChain {
+    interface Base {
       baby_trigger_item: null;
       chain: Chain;
       id: number;

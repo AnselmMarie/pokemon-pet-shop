@@ -40,7 +40,7 @@ declare global {
       };
     }
 
-    interface Detail {
+    interface Base {
       base_experience: number;
       height: number;
       id: number;

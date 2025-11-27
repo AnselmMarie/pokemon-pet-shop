@@ -1,9 +1,9 @@
 import { errFormat500ResponseUtil } from '../../../../utils/err.format.response.util';
 import { PokemonEvolutionChainParamsProps } from '../interface/pokemon.interface';
 
-const getPokemonEvolutionChainService = async ({
+export const getPokemonEvolutionChainService = async ({
   id,
-}: PokemonEvolutionChainParamsProps) => {
+}: PokemonEvolutionChainParamsProps): Promise<PokemonEvolution.Base> => {
   const res = await fetch(
     `https://pokeapi.co/api/v2/evolution-chain/${id}`
   ).catch(() => {
@@ -11,9 +11,7 @@ const getPokemonEvolutionChainService = async ({
   });
 
   if (res.ok) {
-    return await res.json();
+    return (await res.json()) as Promise<PokemonEvolution.Base>;
   }
   throw res;
 };
-
-export { getPokemonEvolutionChainService };

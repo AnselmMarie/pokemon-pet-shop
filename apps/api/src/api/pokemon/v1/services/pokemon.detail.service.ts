@@ -2,7 +2,9 @@
 import { errFormat500ResponseUtil } from '../../../../utils/err.format.response.util';
 import { PokemonDetailQueryProps } from '../interface/pokemon.interface';
 
-const getPokemonDetailService = async ({ id }: PokemonDetailQueryProps) => {
+export const getPokemonDetailService = async ({
+  id,
+}: PokemonDetailQueryProps) => {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).catch(
     () => {
       throw errFormat500ResponseUtil();
@@ -33,5 +35,3 @@ const getPokemonDetailService = async ({ id }: PokemonDetailQueryProps) => {
     };
   }
 };
-
-export { getPokemonDetailService };
