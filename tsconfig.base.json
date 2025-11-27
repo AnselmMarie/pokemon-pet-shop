@@ -33,7 +33,9 @@
       "footer/Module": ["remotes/footer/src/remote-entry.ts"],
       "header/Module": ["remotes/header/src/remote-entry.ts"],
       "homepage/Module": ["remotes/homepage/src/remote-entry.ts"],
-      "sideCart/Module": ["remotes/sideCart/src/remote-entry.ts"]
+      "sideCart/Module": ["remotes/sideCart/src/remote-entry.ts"],
+      "storeCart/Module": ["remotes/storeCart/src/remote-entry.ts"],
+      "storeTheme/Module": ["remotes/storeTheme/src/remote-entry.ts"]
     }
   }
 }

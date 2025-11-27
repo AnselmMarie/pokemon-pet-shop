@@ -95,6 +95,9 @@ importers:
       tailwind-variants:
         specifier: ^3.1.1
         version: 3.1.1(tailwindcss@3.4.18(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.17))(@types/node@20.19.9)(typescript@5.9.3)))
+      zustand:
+        specifier: ^5.0.8
+        version: 5.0.8(@types/react@19.0.0)(react@19.0.0)(use-sync-external-store@1.6.0(react@19.0.0))
     devDependencies:
       '@babel/core':
         specifier: ^7.14.5
@@ -360,17 +363,23 @@ importers:
 
   libs/ui/modal: {}
 
+  libs/ui/scrollWrapper: {}
+
   libs/ui/serverError: {}
 
   libs/ui/skeleton: {}
 
   libs/ui/switch: {}
 
+  libs/ui/tag: {}
+
   libs/ui/typography: {}
 
   libs/utils/apiClient: {}
 
   libs/utils/detect: {}
+
+  libs/utils/pricing: {}
 
   libs/utils/textTransform: {}
 
@@ -10070,6 +10079,24 @@ packages:
   yocto-queue@1.2.1:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==, tarball: https://registry.npmjs.org/yocto-queue/-/yocto-queue-1.2.1.tgz}
     engines: {node: '>=12.20'}
+
+  zustand@5.0.8:
+    resolution: {integrity: sha512-gyPKpIaxY9XcO2vSMrLbiER7QMAMGOQZVRdJ6Zi782jkbzZygq5GI9nG8g+sMgitRtndwaBSl7uiqC49o1SSiw==, tarball: https://registry.npmjs.org/zustand/-/zustand-5.0.8.tgz}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
 
 snapshots:
 
@@ -21838,3 +21865,9 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.2.1: {}
+
+  zustand@5.0.8(@types/react@19.0.0)(react@19.0.0)(use-sync-external-store@1.6.0(react@19.0.0)):
+    optionalDependencies:
+      '@types/react': 19.0.0
+      react: 19.0.0
+      use-sync-external-store: 1.6.0(react@19.0.0)

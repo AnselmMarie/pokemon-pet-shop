@@ -35,19 +35,31 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../services/pokemon-api/tsconfig.lib.json"
-    },
-    {
       "path": "../../utils/detect/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/image/tsconfig.lib.json"
     },
     {
       "path": "../../ui/button/tsconfig.lib.json"
     },
     {
       "path": "../../ui/card/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/pricing/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/image/tsconfig.lib.json"
+    },
+    {
+      "path": "../../services/pokemon-api/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/tag/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/modal/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/scrollWrapper/tsconfig.lib.json"
     },
     {
       "path": "../../utils/textTransform/tsconfig.lib.json"
@@ -66,18 +78,6 @@
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/scrollWrapper/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/tag/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/modal/tsconfig.lib.json"
-    },
-    {
-      "path": "../../utils/pricing/tsconfig.lib.json"
     }
   ]
 }

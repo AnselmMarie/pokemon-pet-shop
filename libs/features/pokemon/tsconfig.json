@@ -3,19 +3,31 @@
   "include": [],
   "references": [
     {
-      "path": "../../services/pokemon-api"
-    },
-    {
       "path": "../../utils/detect"
-    },
-    {
-      "path": "../../ui/image"
     },
     {
       "path": "../../ui/button"
     },
     {
       "path": "../../ui/card"
+    },
+    {
+      "path": "../../utils/pricing"
+    },
+    {
+      "path": "../../ui/image"
+    },
+    {
+      "path": "../../services/pokemon-api"
+    },
+    {
+      "path": "../../ui/tag"
+    },
+    {
+      "path": "../../ui/modal"
+    },
+    {
+      "path": "../../ui/scrollWrapper"
     },
     {
       "path": "../../utils/textTransform"
@@ -40,18 +52,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../ui/scrollWrapper"
-    },
-    {
-      "path": "../../ui/tag"
-    },
-    {
-      "path": "../../ui/modal"
-    },
-    {
-      "path": "../../utils/pricing"
     }
   ],
   "extends": "../../../tsconfig.base.json"

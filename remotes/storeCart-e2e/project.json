@@ -1,0 +1,10 @@
+{
+  "name": "storeCart-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "remotes/storeCart-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["storeCart"],
+  "// targets": "to see all targets run: nx show project storeCart-e2e --web",
+  "targets": {}
+}
