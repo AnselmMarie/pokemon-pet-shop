@@ -32,13 +32,13 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../../services/cart-api/tsconfig.lib.json"
+    },
+    {
       "path": "../../ui/hideInMobile/tsconfig.lib.json"
     },
     {
       "path": "../../ui/image/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/input/tsconfig.lib.json"
     },
     {
       "path": "../../ui/icon/tsconfig.lib.json"
@@ -48,6 +48,9 @@
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
+    },
+    {
+      "path": "../modalCart/tsconfig.lib.json"
     },
     {
       "path": "../switchTheme/tsconfig.lib.json"

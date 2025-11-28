@@ -3,6 +3,33 @@
   "include": [],
   "references": [
     {
+      "path": "../../ui/scrollWrapper"
+    },
+    {
+      "path": "../../ui/typography"
+    },
+    {
+      "path": "../../ui/modal"
+    },
+    {
+      "path": "../../utils/textTransform"
+    },
+    {
+      "path": "../../utils/pricing"
+    },
+    {
+      "path": "../../services/cart-api"
+    },
+    {
+      "path": "../../ui/icon"
+    },
+    {
+      "path": "../../ui/image"
+    },
+    {
+      "path": "../../ui/box"
+    },
+    {
       "path": "./tsconfig.lib.json"
     },
     {

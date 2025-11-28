@@ -7,7 +7,7 @@ export const ModalCard = ({
   classNameCard = '',
   children,
 }: PropsWithChildren<{ classNameCard?: string }>) => (
-  <Box className={`bg-white rounded-lg shadow-lg ${classNameCard}`}>
+  <Box className={`w-full bg-white rounded-lg shadow-lg ${classNameCard}`}>
     {children}
   </Box>
 );

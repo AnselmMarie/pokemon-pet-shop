@@ -5,7 +5,8 @@
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",
-      "@nx/react/typings/image.d.ts"
+      "@nx/react/typings/image.d.ts",
+      "cart"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",
@@ -30,5 +31,33 @@
     "eslint.config.mjs"
   ],
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
-  "references": []
+  "references": [
+    {
+      "path": "../../ui/scrollWrapper/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/typography/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/modal/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/textTransform/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/pricing/tsconfig.lib.json"
+    },
+    {
+      "path": "../../services/cart-api/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/icon/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/image/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/box/tsconfig.lib.json"
+    }
+  ]
 }

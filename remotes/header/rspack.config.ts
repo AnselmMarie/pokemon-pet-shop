@@ -33,11 +33,35 @@ export default {
         __dirname,
         '../../libs/features/header/src/index.ts'
       ),
+      '@features/modalCart': join(
+        __dirname,
+        '../../libs/features/modalCart/src/index.ts'
+      ),
       '@features/switchTheme': join(
         __dirname,
         '../../libs/features/switchTheme/src/index.ts'
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
+      '@utils/apiClient': join(
+        __dirname,
+        '../../libs/utils/apiClient/src/index.ts'
+      ),
+      '@utils/textTransform': join(
+        __dirname,
+        '../../libs/utils/textTransform/src/index.ts'
+      ),
+      '@utils/pricing': join(
+        __dirname,
+        '../../libs/utils/pricing/src/index.ts'
+      ),
+      '@ui/typography': join(
+        __dirname,
+        '../../libs/ui/typography/src/index.ts'
+      ),
+      '@services/cart-api': join(
+        __dirname,
+        '../../libs/services/cart-api/src/index.ts'
+      ),
       '@ui/switch': join(__dirname, '../../libs/ui/switch/src/index.ts'),
       '@ui/hideInMobile': join(
         __dirname,
@@ -47,6 +71,11 @@ export default {
       '@ui/container': join(__dirname, '../../libs/ui/container/src/index.ts'),
       '@ui/image': join(__dirname, '../../libs/ui/image/src/index.ts'),
       '@ui/input': join(__dirname, '../../libs/ui/input/src/index.ts'),
+      '@ui/modal': join(__dirname, '../../libs/ui/modal/src/index.ts'),
+      '@ui/scrollWrapper': join(
+        __dirname,
+        '../../libs/ui/scrollWrapper/src/index.ts'
+      ),
     },
   },
   plugins: [

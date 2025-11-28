@@ -57,12 +57,12 @@
   stroke: var(--theme-netural-100);
 }
 
-.cartWrapper {
+/* .cartWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-}
+} */
 
 .cartOverlayWrapper {
   position: absolute;

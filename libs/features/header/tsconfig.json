@@ -3,13 +3,13 @@
   "include": [],
   "references": [
     {
+      "path": "../../services/cart-api"
+    },
+    {
       "path": "../../ui/hideInMobile"
     },
     {
       "path": "../../ui/image"
-    },
-    {
-      "path": "../../ui/input"
     },
     {
       "path": "../../ui/icon"
@@ -19,6 +19,9 @@
     },
     {
       "path": "../../ui/box"
+    },
+    {
+      "path": "../modalCart"
     },
     {
       "path": "../switchTheme"

@@ -1,46 +1,38 @@
-// import { useRenderStyles } from '@pokemon-pet-shop/hooks';
-// import {
-//   UiElementLayout,
-//   ElementasEnum,
-//   UiImage,
-//   UiIcon,
-//   IconTypeEnum,
-//   UiInput,
-//   UiTypography,
-//   TypographyTypeEnum,
-//   UiContainer,
-//   UiHideInMobile,
-//   UiServerError,
-// } from '@pokemon-pet-shop/ui';
-// import { THEME_BLUE_400 } from '@pokemon-pet-shop/ui/styles/var';
+import { useState } from 'react';
 
 import { SwitchTheme } from '@features/switchTheme';
+import { CartModal } from '@features/modalCart';
 
 import { Box } from '@ui/box';
 import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
-import { Input } from '@ui/input';
 import { Image } from '@ui/image';
 import { HideInMobile } from '@ui/hideInMobile';
 
+import { useGetCart } from '@services/cart-api';
+
 import { NAV_FEATURE_FLAG } from './header.const';
 import pokeshopLogo from './assets/pokeshop-logo.png';
-import useHeaderLogic from './use.header.logic';
 
 export const Header = () => {
-  const { onHandleCartModalClick } = useHeaderLogic();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { data } = useGetCart();
 
   return (
     <Box
       as="header"
       className="space-between h-[93px] sticky z-40 px-md py-xs shadow bg-white"
     >
+      <CartModal
+        isOpen={isModalOpen}
+        onCloseModal={() => setIsModalOpen(false)}
+      />
       <Container className="flex item-center justify-between">
         <Box className="flex justify-center items-center">
           <Icon
             classNameIcon="md:hidden"
             icon="IconMenu"
-            // onClick={onHandleMobileNavModalClick}
+            // onClick={() => setIsModalOpen(true)}
           />
           <Image
             src={pokeshopLogo}
@@ -57,10 +49,10 @@ export const Header = () => {
             <Box as="span" className="mr-1">
               PETS
             </Box>
-            <Input
-            // iconClassname={newStyles.icon}
-            // appendIcon={IconTypeEnum.ICON_SEARCH}
-            />
+            {/* <Input
+            iconClassname={newStyles.icon}
+            appendIcon={IconTypeEnum.ICON_SEARCH}
+            /> */}
           </Box>
         ) : null}
 
@@ -70,17 +62,17 @@ export const Header = () => {
           </HideInMobile>
           <Box className="flex justify-center items-center relative">
             <Icon classNameIcon="ml-2 red" size={28} />
-            {/* {data?.counter ? (
+            {data?.counter ? (
               <Box className="rounded-sm min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
                 <Box as="span" className="align-center">
                   {data?.counter}
                 </Box>
               </Box>
-            ) : null} */}
+            ) : null}
 
             <Box
               className="absolute w-[51px] h-[47px] z-13 -top-[14px]"
-              onClick={onHandleCartModalClick}
+              onClick={() => setIsModalOpen(true)}
             />
           </Box>
         </Box>
