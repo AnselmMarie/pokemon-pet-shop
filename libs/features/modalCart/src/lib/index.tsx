@@ -2,8 +2,7 @@ import { ReactElement } from 'react';
 
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
-import { Modal } from '@ui/modal';
-import { ScrollWrapper } from '@ui/scrollWrapper';
+import { Modal, ModalScroll } from '@ui/modal';
 
 import { useGetCart } from '@services/cart-api';
 
@@ -16,11 +15,11 @@ export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
 
   return (
     <Modal isOpen={isOpen} onClick={onCloseModal}>
-      <ScrollWrapper>
+      <ModalScroll>
         {(data?.data || [])?.map((el: Cart.Data[], i: number) => {
           return <CartModalItem key={i} el={el} />;
         })}
-      </ScrollWrapper>
+      </ModalScroll>
 
       <Box className="rounded-md flex flex-row justify-between items-center padding-md bg-lightGrey">
         <Typography className="text-bold text-lg">Total</Typography>

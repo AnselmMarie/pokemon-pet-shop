@@ -5,11 +5,11 @@
   height: calc(100% - 73px);
 }
 
-.cartContent {
+/* .cartContent {
   padding: var(--theme-spacing-15);
   height: calc(100% - 60px);
   overflow-x: scroll;
-}
+} */
 
 /* .middleRow {
   flex: 1;

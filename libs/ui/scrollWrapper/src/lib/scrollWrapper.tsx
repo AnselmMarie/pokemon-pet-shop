@@ -2,8 +2,15 @@ import { PropsWithChildren, ReactElement } from 'react';
 
 import { Box } from '@ui/box';
 
+interface ScrollWrapperProps {
+  className?: string;
+}
+
 export const ScrollWrapper = ({
+  className = '',
   children,
-}: PropsWithChildren): ReactElement => {
-  return <Box className="h-full overflow-x-scroll">{children}</Box>;
+}: PropsWithChildren<ScrollWrapperProps>): ReactElement => {
+  return (
+    <Box className={`h-full overflow-x-scroll ${className}`}>{children}</Box>
+  );
 };

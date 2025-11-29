@@ -36,7 +36,7 @@ const CartModalItem = ({ el }: any): ReactElement => {
   };
 
   return (
-    <Box className="flex justify-center items-center relative">
+    <Box className="flex flex-col justify-center relative">
       <Box className="flex flex-row gap-md">
         <Box
           className="rounded-sm p-sm border-2 border-solid"

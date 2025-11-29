@@ -59,7 +59,7 @@ export const updateCartItemService = async (payload: Cart.Payload) => {
   const data = clone(currentCartData.data);
 
   const { key, counter, total } = doesItemExistKeyFn(data, payload?.id);
-  const currentObj = key && data[key];
+  const currentObj = typeof key === 'number' && data[key];
 
   if (currentObj && payload.removeFromCart && currentObj.quantity === 1) {
     throw errFormatResponseUtil({
@@ -100,9 +100,11 @@ export const updateCartItemService = async (payload: Cart.Payload) => {
   );
 
   if (key !== null) {
-    // currentObj.quantity = payload.addToCart
-    //   ? currentObj.quantity + 1
-    //   : currentObj.quantity - 1;
+    if (currentObj) {
+      currentObj.quantity = payload.addToCart
+        ? currentObj.quantity + 1
+        : currentObj.quantity - 1;
+    }
     currentCartData.counter = payload.addToCart ? counter + 1 : counter - 1;
     currentCartData.total = payload.addToCart
       ? total + pokemonPrice

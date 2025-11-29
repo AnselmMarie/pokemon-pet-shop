@@ -33,12 +33,6 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../ui/scrollWrapper/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/typography/tsconfig.lib.json"
-    },
-    {
       "path": "../../ui/modal/tsconfig.lib.json"
     },
     {
@@ -55,6 +49,9 @@
     },
     {
       "path": "../../ui/image/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/typography/tsconfig.lib.json"
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"

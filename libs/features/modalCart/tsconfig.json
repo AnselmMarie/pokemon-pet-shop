@@ -3,12 +3,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../ui/scrollWrapper"
-    },
-    {
-      "path": "../../ui/typography"
-    },
-    {
       "path": "../../ui/modal"
     },
     {
@@ -25,6 +19,9 @@
     },
     {
       "path": "../../ui/image"
+    },
+    {
+      "path": "../../ui/typography"
     },
     {
       "path": "../../ui/box"

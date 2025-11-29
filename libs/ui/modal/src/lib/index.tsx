@@ -3,7 +3,6 @@ import { PropsWithChildren, useEffect, useMemo, useState } from 'react';
 import { Box } from '@ui/box';
 
 import { ModalBody, ModalCard, ModalClose, ModalTitle } from './modalBreakdown';
-import { ModalScroll } from './modalScroll';
 
 export const Modal = ({
   title = '',
@@ -77,9 +76,7 @@ export const Modal = ({
             {title && <ModalTitle title={title} />}
             <ModalClose onClick={onClick} />
           </Box>
-          <ModalBody>
-            <ModalScroll>{children}</ModalScroll>
-          </ModalBody>
+          <ModalBody>{children}</ModalBody>
         </ModalCard>
       </Box>
     </Box>
