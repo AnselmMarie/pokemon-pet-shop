@@ -11,11 +11,13 @@ import { HideInMobile } from '@ui/hideInMobile';
 
 import { useGetCart } from '@services/cart-api';
 
+import { NavMobileModal } from '../modalMobileNav/nav.mobile';
 import { NAV_FEATURE_FLAG } from './header.const';
 import pokeshopLogo from './assets/pokeshop-logo.png';
 
 export const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
   const { data } = useGetCart();
 
   return (
@@ -24,15 +26,19 @@ export const Header = () => {
       className="space-between h-[93px] sticky z-40 px-md py-xs shadow bg-white"
     >
       <CartModal
-        isOpen={isModalOpen}
-        onCloseModal={() => setIsModalOpen(false)}
+        isOpen={isCartModalOpen}
+        onCloseModal={() => setIsCartModalOpen(false)}
+      />
+      <NavMobileModal
+        isOpen={isNavModalOpen}
+        onCloseModal={() => setIsCartModalOpen(false)}
       />
       <Container className="flex item-center justify-between">
         <Box className="flex justify-center items-center">
           <Icon
             classNameIcon="md:hidden"
             icon="IconMenu"
-            // onClick={() => setIsModalOpen(true)}
+            onClick={() => setIsNavModalOpen(true)}
           />
           <Image
             src={pokeshopLogo}
@@ -72,7 +78,7 @@ export const Header = () => {
 
             <Box
               className="absolute w-[51px] h-[47px] z-13 -top-[14px]"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsCartModalOpen(true)}
             />
           </Box>
         </Box>

@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   height: calc(100% - 65px);
-}
+} */
 
-.navWrapper {
+/* .navWrapper {
   display: flex;
   justify-content: space-between;
   flex: 1;

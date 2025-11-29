@@ -5,10 +5,10 @@ import { Typography } from '@ui/typography';
 import { skeletonLoadDataUtil } from '@ui/skeleton';
 import { Button } from '@ui/button';
 
-import { PokemonCard } from '../pokemonCard';
+import { useGetPokemonList } from '@services/pokemon-api';
 
+import { PokemonCard } from '../pokemonCard';
 import image from './assets/bulbasaur.small.gif';
-import { usePokemonList } from './use.pokemon.list.logic';
 
 /**
  * @todo
@@ -18,22 +18,24 @@ import { usePokemonList } from './use.pokemon.list.logic';
  * */
 export const PokemonList = (): ReactElement => {
   const {
-    data = [],
+    data,
     isLoading,
+    isFetching,
     isFetchingNextPage,
     hasNextPage,
-    onFetchNextPage,
-  } = usePokemonList();
+    fetchNextPage,
+  } = useGetPokemonList();
+
+  const isDataLoading = isLoading || isFetching || isFetchingNextPage;
 
   const newData = useMemo(() => {
+    const pageData = data?.pages;
     const countNum = 50;
     const template = { abilities: [{}, {}] };
     const arrCount =
-      data && data.length !== 0 ? data.length * countNum : countNum;
-    return skeletonLoadDataUtil(data, isLoading, template, true, arrCount);
+      pageData && pageData.length !== 0 ? pageData.length * countNum : countNum;
+    return skeletonLoadDataUtil(pageData, isLoading, template, true, arrCount);
   }, [data, isLoading]);
-
-  console.log('newData', newData);
 
   if (newData?.length === 0 && !hasNextPage) {
     return (
@@ -56,7 +58,7 @@ export const PokemonList = (): ReactElement => {
                 <PokemonCard
                   key={el?.name || i}
                   pokeCreature={el}
-                  isLoading={isLoading}
+                  isLoading={isDataLoading}
                 />
               ))}
             </Fragment>
@@ -70,7 +72,7 @@ export const PokemonList = (): ReactElement => {
             text={isFetchingNextPage ? 'Loading' : 'Load More'}
             appendImage={isFetchingNextPage ? image : ''}
             onClick={() => {
-              onFetchNextPage((old: number) => old + 1);
+              fetchNextPage();
             }}
           />
         </Box>

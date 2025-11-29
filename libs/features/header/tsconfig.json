@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../ui/modal"
+    },
+    {
       "path": "../../services/cart-api"
     },
     {
