@@ -37,8 +37,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
   [
     'fairyType',
     {
-      grassTypeAtkLine: 'bg-lightGrass',
-      grassTypeAtkCircle: 'bg-medGrass',
+      fairyTypeAtkLine: 'bg-lightFairy',
+      fairyTypeAtkCircle: 'bg-medFairy',
     },
   ],
   [
