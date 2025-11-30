@@ -64,21 +64,19 @@ export const Modal = ({
     <Box
       className={`fixed flex top-[0px] left-[0px] z-50 w-full h-full bg-[#000000] bg-opacity-50 ${getModalAlignmentClasses}`}
     >
-      <Box
-        className={`relative inset-0 z-50 flex bg-white w-full md:max-w-[600px] rounded-sm ${
+      <ModalCard
+        className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[600px] rounded-sm ${
           startAnimation
             ? 'ease-in duration-300 opacity-100'
             : 'ease-out duration-300 opacity-0'
         }`}
       >
-        <ModalCard>
-          <Box className={getHeadlineClasses}>
-            {title && <ModalTitle title={title} />}
-            <ModalClose onClick={onClick} />
-          </Box>
-          <ModalBody>{children}</ModalBody>
-        </ModalCard>
-      </Box>
+        <Box className={getHeadlineClasses}>
+          {title && <ModalTitle title={title} />}
+          <ModalClose onClick={onClick} />
+        </Box>
+        <ModalBody>{children}</ModalBody>
+      </ModalCard>
     </Box>
   );
 };

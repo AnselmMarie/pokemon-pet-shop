@@ -4,10 +4,10 @@ import { Box } from '@ui/box';
 import { Icon } from '@ui/icon';
 
 export const ModalCard = ({
-  classNameCard = '',
+  className = '',
   children,
-}: PropsWithChildren<{ classNameCard?: string }>) => (
-  <Box className={`w-full bg-white rounded-lg shadow-lg ${classNameCard}`}>
+}: PropsWithChildren<{ className?: string }>) => (
+  <Box className={`w-full bg-white rounded-lg shadow-lg ${className}`}>
     {children}
   </Box>
 );
@@ -16,10 +16,14 @@ export const ModalClose = ({ onClick }: { onClick: () => void }) => (
   <Icon icon="IconX" size={24} onClick={onClick} />
 );
 
-export const ModalTitle = ({ title }: { title: string }) => <h1> {title} </h1>;
+export const ModalTitle = ({ title }: { title: string }) => (
+  <h1 className="text-bold text-xl">{title}</h1>
+);
 
 export const ModalBody = ({ children }: PropsWithChildren) => (
-  <Box as="section"> {children} </Box>
+  <Box as="section" className="flex flex-col h-full">
+    {children}
+  </Box>
 );
 
 export const ModalActions = ({ children }: PropsWithChildren) => (

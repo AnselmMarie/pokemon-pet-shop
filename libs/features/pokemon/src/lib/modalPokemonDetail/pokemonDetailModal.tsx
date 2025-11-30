@@ -4,7 +4,7 @@ import { Box } from '@ui/box';
 import { ScrollWrapper } from '@ui/scrollWrapper';
 import { Modal } from '@ui/modal';
 
-import { usePokemonTypeLogic } from '../hooks/use.pokemon.type.logic';
+import { useGetPokemonType } from '../hooks/use.pokemon.type';
 
 import { PokemonDetailModalBody } from './pokemonDetailModalBody';
 import { PokemonDetailModalHeader } from './pokemonDetailModalHeader';
@@ -14,24 +14,7 @@ export const PokemonDetailModal = ({
   isOpen,
   onCloseModal,
 }: any): ReactElement => {
-  const { getPokeTypeClass } = usePokemonTypeLogic(pokeCreature?.types);
-
-  // const handleOpenDetailModalClick = () => {
-  //   openModal({
-  //     content: <UiPokemonDetailModal />,
-  //     options: {
-  //       title: '',
-  //       data: data,
-  //       classNameShadow: '',
-  //       classNameModal: '',
-  //       headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
-  //       modalAlignment: AlignmentEnum.CENTER,
-  //     },
-  //     onCallback: () => {
-  //       noopUtil();
-  //     },
-  //   });
-  // };
+  const { pokeTypeClass } = useGetPokemonType(pokeCreature?.types);
 
   return (
     <Modal isOpen={isOpen} onClick={onCloseModal}>
@@ -39,12 +22,12 @@ export const PokemonDetailModal = ({
         <Box className="relative">
           <PokemonDetailModalHeader
             pokeCreature={pokeCreature}
-            pokeTypeClass={getPokeTypeClass}
+            pokeTypeClass={pokeTypeClass}
           />
 
           <PokemonDetailModalBody
             pokeCreature={pokeCreature}
-            pokeTypeClass={getPokeTypeClass}
+            pokeTypeClass={pokeTypeClass}
           />
         </Box>
       </ScrollWrapper>

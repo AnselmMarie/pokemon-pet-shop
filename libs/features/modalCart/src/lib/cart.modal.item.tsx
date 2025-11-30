@@ -10,7 +10,7 @@ import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 import { pricingFormatUSD } from '@utils/pricing';
 import { capitalizeName } from '@utils/textTransform';
 
-const CartModalItem = ({ el }: any): ReactElement => {
+const CartModalItem = ({ el, currItem, lastItem }: any): ReactElement => {
   const { mutate: updateMutate, isPending: updateIsPending } = useUpdateCart();
   const { mutate: deleteMutate, isPending: deleteIsPending } =
     useDeleteCartItem();
@@ -93,7 +93,9 @@ const CartModalItem = ({ el }: any): ReactElement => {
           onClick={() => handleRemoveCartItem(el?.id)}
         />
       </Box>
-      <Box className="w-full border my-lg border-t-medGrey" />
+      {currItem !== lastItem && (
+        <Box className="w-full border my-lg border-t-medGrey" />
+      )}
     </Box>
   );
 };

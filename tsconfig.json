@@ -109,18 +109,6 @@
       "path": "./libs/utils/pricing"
     },
     {
-      "path": "./remotes/storeCart-e2e"
-    },
-    {
-      "path": "./remotes/storeCart"
-    },
-    {
-      "path": "./remotes/storeTheme-e2e"
-    },
-    {
-      "path": "./remotes/storeTheme"
-    },
-    {
       "path": "./remotes/atomTheme-e2e"
     },
     {

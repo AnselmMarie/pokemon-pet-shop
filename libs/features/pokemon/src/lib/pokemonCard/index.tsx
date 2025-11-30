@@ -14,7 +14,7 @@ import { PokemonAbilityName } from '../components/pokemon.ability.name';
 import { PokemonCardProps } from './pokemon.card.interface';
 
 import { pokeCardTypeMap } from './pokemon.card.type.map.util';
-import { usePokemonTypeLogic } from '../hooks/use.pokemon.type.logic';
+import { useGetPokemonType } from '../hooks/use.pokemon.type';
 import { PokemonDetailModal } from '../modalPokemonDetail/pokemonDetailModal';
 
 export const PokemonCard = ({
@@ -23,24 +23,7 @@ export const PokemonCard = ({
 }: PokemonCardProps): ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const { getPokeTypeClass } = usePokemonTypeLogic(pokeCreature?.types);
-
-  // const handleOpenDetailModalClick = () => {
-  //   openModal({
-  //     content: <UiPokemonDetailModal />,
-  //     options: {
-  //       title: '',
-  //       data: data,
-  //       classNameShadow: '',
-  //       classNameModal: '',
-  //       headlineType: ModalHeadlineTypeEnum.ABSOLUTE,
-  //       modalAlignment: AlignmentEnum.CENTER,
-  //     },
-  //     onCallback: () => {
-  //       noopUtil();
-  //     },
-  //   });
-  // };
+  const { pokeTypeClass } = useGetPokemonType(pokeCreature?.types);
 
   return (
     <>
@@ -54,8 +37,8 @@ export const PokemonCard = ({
         className={`m-w-[352px] md:m-w-auto md:w-[250px] h-[367px] md:h-[367px] flex p-sm md:p-md rounded-md flex-row md:flex-col relative md:justify-between ${
           isLoading ? 'bg-medGrey' : ''
         } ${
-          pokeCardTypeMap.get(getPokeTypeClass)?.[
-            `${getPokeTypeClass}Wrapper` as keyof object
+          pokeCardTypeMap.get(pokeTypeClass)?.[
+            `${pokeTypeClass}Wrapper` as keyof object
           ] ?? ''
         }`}
         // className={classNamesUtil(
@@ -88,8 +71,8 @@ export const PokemonCard = ({
           className={`flex flex-col justify-between w-full rounded-md p-lg md:p-md md:z-10 md:h-[180px] md:items-end ${
             isLoading ? 'bg-darkGrey' : ''
           } ${
-            pokeCardTypeMap.get(getPokeTypeClass)?.[
-              `${getPokeTypeClass}ContentCardWrapper` as keyof object
+            pokeCardTypeMap.get(pokeTypeClass)?.[
+              `${pokeTypeClass}ContentCardWrapper` as keyof object
             ] ?? ''
           }`}
         >
@@ -102,8 +85,8 @@ export const PokemonCard = ({
               <Box className="flex justify-between items-center mb-sm">
                 <Typography
                   className={`text-md md:text-lg ${
-                    pokeCardTypeMap.get(getPokeTypeClass)?.[
-                      `${getPokeTypeClass}ContentCardText` as keyof object
+                    pokeCardTypeMap.get(pokeTypeClass)?.[
+                      `${pokeTypeClass}ContentCardText` as keyof object
                     ] ?? ''
                   }`}
                   variant="h1"
@@ -112,8 +95,8 @@ export const PokemonCard = ({
                 </Typography>
                 <Typography
                   className={`text-sm ${
-                    pokeCardTypeMap.get(getPokeTypeClass)?.[
-                      `${getPokeTypeClass}ContentCardText` as keyof object
+                    pokeCardTypeMap.get(pokeTypeClass)?.[
+                      `${pokeTypeClass}ContentCardText` as keyof object
                     ] ?? ''
                   }`}
                 >
@@ -135,7 +118,7 @@ export const PokemonCard = ({
                     key={i}
                     abilityData={abilityObj}
                     typeData={pokeCreature?.types}
-                    pokeTypeClass={getPokeTypeClass}
+                    pokeTypeClass={pokeTypeClass}
                     isLoading={isLoading}
                   />
                 );
