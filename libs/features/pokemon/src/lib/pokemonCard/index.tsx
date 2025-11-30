@@ -9,12 +9,12 @@ import { Typography } from '@ui/typography';
 
 import { isWeb } from '@utils/detect';
 import { capitalizeName } from '@utils/textTransform';
+import { getPokeTypePrefixClass } from '@utils/pokeType';
 
 import { PokemonAbilityName } from '../components/pokemon.ability.name';
 import { PokemonCardProps } from './pokemon.card.interface';
 
 import { pokeCardTypeMap } from './pokemon.card.type.map.util';
-import { useGetPokemonType } from '../hooks/use.pokemon.type';
 import { PokemonDetailModal } from '../modalPokemonDetail/pokemonDetailModal';
 
 export const PokemonCard = ({
@@ -23,7 +23,7 @@ export const PokemonCard = ({
 }: PokemonCardProps): ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const { pokeTypeClass } = useGetPokemonType(pokeCreature?.types);
+  const pokeTypeClass = getPokeTypePrefixClass(pokeCreature?.types);
 
   return (
     <>

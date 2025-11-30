@@ -39,6 +39,9 @@
       "path": "../../utils/textTransform/tsconfig.lib.json"
     },
     {
+      "path": "../../utils/pokeType/tsconfig.lib.json"
+    },
+    {
       "path": "../../utils/pricing/tsconfig.lib.json"
     },
     {

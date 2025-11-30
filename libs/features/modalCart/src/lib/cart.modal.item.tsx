@@ -9,8 +9,13 @@ import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 
 import { pricingFormatUSD } from '@utils/pricing';
 import { capitalizeName } from '@utils/textTransform';
+import { getPokeTypePrefixClass } from '@utils/pokeType';
 
 const CartModalItem = ({ el, currItem, lastItem }: any): ReactElement => {
+  const pokeTypeClass = getPokeTypePrefixClass(currItem?.types);
+
+  console.log('pokeTypeClass', pokeTypeClass);
+
   const { mutate: updateMutate, isPending: updateIsPending } = useUpdateCart();
   const { mutate: deleteMutate, isPending: deleteIsPending } =
     useDeleteCartItem();

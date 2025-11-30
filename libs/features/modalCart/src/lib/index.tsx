@@ -22,19 +22,21 @@ export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
       onClick={onCloseModal}
     >
       <ModalScroll>
-        {(data?.data || [])?.map((el: Cart.Data[], i: number) => {
-          return (
-            <CartModalItem
-              key={i}
-              el={el}
-              currItem={i}
-              lastItem={data?.data.length - 1}
-            />
-          );
-        })}
+        <Box className="pb-[150px]">
+          {(data?.data || [])?.map((el: Cart.Data[], i: number) => {
+            return (
+              <CartModalItem
+                key={i}
+                el={el}
+                currItem={i}
+                lastItem={data?.data.length - 1}
+              />
+            );
+          })}
+        </Box>
       </ModalScroll>
 
-      <Box className="rounded-b-sm flex flex-row justify-between items-center p-md bg-lightGrey">
+      <Box className="rounded-b-sm w-full absolute bottom-[0px] flex flex-row justify-between items-center p-md bg-lightGrey">
         <Typography className="text-bold text-lg">Total</Typography>
         <Typography className="text-bold text-lg">
           {pricingFormatUSD(data?.total)}

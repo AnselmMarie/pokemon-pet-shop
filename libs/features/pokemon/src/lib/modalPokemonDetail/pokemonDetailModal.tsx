@@ -4,7 +4,7 @@ import { Box } from '@ui/box';
 import { ScrollWrapper } from '@ui/scrollWrapper';
 import { Modal } from '@ui/modal';
 
-import { useGetPokemonType } from '../hooks/use.pokemon.type';
+import { getPokeTypePrefixClass } from '@utils/pokeType';
 
 import { PokemonDetailModalBody } from './pokemonDetailModalBody';
 import { PokemonDetailModalHeader } from './pokemonDetailModalHeader';
@@ -14,7 +14,7 @@ export const PokemonDetailModal = ({
   isOpen,
   onCloseModal,
 }: any): ReactElement => {
-  const { pokeTypeClass } = useGetPokemonType(pokeCreature?.types);
+  const pokeTypeClass = getPokeTypePrefixClass(pokeCreature?.types);
 
   return (
     <Modal isOpen={isOpen} onClick={onCloseModal}>

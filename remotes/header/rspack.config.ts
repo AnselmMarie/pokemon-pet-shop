@@ -46,6 +46,10 @@ export default {
         __dirname,
         '../../libs/utils/apiClient/src/index.ts'
       ),
+      '@utils/pokeType': join(
+        __dirname,
+        '../../libs/utils/pokeType/src/index.ts'
+      ),
       '@utils/textTransform': join(
         __dirname,
         '../../libs/utils/textTransform/src/index.ts'

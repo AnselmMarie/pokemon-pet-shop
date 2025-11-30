@@ -38,6 +38,9 @@
       "path": "../../utils/detect/tsconfig.lib.json"
     },
     {
+      "path": "../../utils/pokeType/tsconfig.lib.json"
+    },
+    {
       "path": "../../ui/button/tsconfig.lib.json"
     },
     {
