@@ -90,7 +90,7 @@ export const Button = ({
       text={getText}
       className={`
         ${className}
-        'rounded-pill cursor-pointer border-0 text-center p-sm'
+        rounded-pill cursor-pointer border-0 text-center p-sm
         ${getTypeStyles}
         ${getSizeStyles}
         ${displaySuccessStyle ? getTimerStyle : ''}

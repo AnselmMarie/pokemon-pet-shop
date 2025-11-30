@@ -49,8 +49,9 @@ export const PokemonCard = ({
         isOpen={isModalOpen}
         onCloseModal={() => setIsModalOpen(false)}
       />
+
       <Card
-        className={`min-w-[352px] h-[154px] flex p-sm rounded-md flex-row relative ${
+        className={`m-w-[352px] md:m-w-auto md:w-[250px] h-[367px] md:h-[367px] flex p-sm md:p-md rounded-md flex-row md:flex-col relative md:justify-between ${
           isLoading ? 'bg-medGrey' : ''
         } ${
           pokeCardTypeMap.get(getPokeTypeClass)?.[
@@ -70,13 +71,13 @@ export const PokemonCard = ({
             <Skeleton height={isWeb() ? '100%' : 100} circle />
           </Box>
         ) : (
-          <Box className="flex justify-center items-center w-full max-w-[115px] rounded-md p-sm">
+          <Box className="flex flex-col md:block justify-center items-center max-w-[115px] md:max-w-[100%] md:bg-none rounded-md p-sm md:p-[0px]">
             <Image
               src={
                 pokeCreature?.sprites?.other?.['official-artwork']
                   ?.front_default
               }
-              className="w-full h-auto position-absolute md:w-[88%] md:z-0"
+              className="w-full md:w-[100%] h-auto md:absolute md:w-[87.5%] md:z-0"
               alt={`${pokeCreature?.name} Image`}
               isLoading={isLoading}
             />
@@ -84,7 +85,7 @@ export const PokemonCard = ({
         )}
 
         <Box
-          className={`flex flex-col justify-between w-full rounded-md p-md ${
+          className={`flex flex-col justify-between w-full rounded-md p-lg md:p-md md:z-10 md:h-[180px] md:items-end ${
             isLoading ? 'bg-darkGrey' : ''
           } ${
             pokeCardTypeMap.get(getPokeTypeClass)?.[
@@ -110,7 +111,7 @@ export const PokemonCard = ({
                   {capitalizeName(pokeCreature?.name)}
                 </Typography>
                 <Typography
-                  className={`text-sm md:text-md ${
+                  className={`text-sm ${
                     pokeCardTypeMap.get(getPokeTypeClass)?.[
                       `${getPokeTypeClass}ContentCardText` as keyof object
                     ] ?? ''

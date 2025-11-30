@@ -20,11 +20,11 @@ export const PokemonAbilityName = ({
   isLoading = false,
 }: PokemonAbilityNameProps): ReactElement => {
   const isAtkLineShownCircleClass = useMemo(() => {
-    return showAtkLine ? '-ml-sm' : '';
+    return showAtkLine ? '-ml-[12px]' : '';
   }, [showAtkLine]);
 
   const isAtkLineShownWrapperClass = useMemo(() => {
-    return showAtkLine ? '-ml-sm' : '';
+    return showAtkLine ? '-ml-[16px]' : '';
   }, [showAtkLine]);
 
   const formatName = useMemo(() => {
@@ -42,7 +42,7 @@ export const PokemonAbilityName = ({
 
   return (
     <Box
-      className={`flex h-[17px] justify-items-center w-full items-center text-white mb-md ${
+      className={`flex h-[16px] justify-items-center w-full items-center text-white mb-md ${
         displayInDetail ? 'color-default mb-md h-auto' : ''
       } ${isAtkLineShownWrapperClass}
       `}

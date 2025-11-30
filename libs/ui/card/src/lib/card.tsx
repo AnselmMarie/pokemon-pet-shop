@@ -8,5 +8,5 @@ export const Card = ({
   className = '',
   children,
 }: PropsWithChildren<CardProps>): ReactElement => {
-  return <Box className={`rounded-sm bg-white ${className}`}>{children}</Box>;
+  return <Box className={`rounded-sm ${className}`}>{children}</Box>;
 };
