@@ -38,7 +38,7 @@ export const Icon = ({
         fill={!isDisabled ? fill || 'white' : ''}
         stroke={!isDisabled ? stroke : ''}
         className={`${classNameIcon} ${onClick ? 'cursor-pointer' : ''} ${
-          isDisabled ? 'opacity-50 pointer-events-none' : ''
+          isDisabled ? 'opacity-90 pointer-events-none' : ''
         }`}
         // fill={!isDisabled ? fill || 'white' : THEME_NETURAL_600}
         // stroke={!isDisabled ? stroke : THEME_NETURAL_600}

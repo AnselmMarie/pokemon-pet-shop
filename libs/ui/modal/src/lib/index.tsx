@@ -80,3 +80,4 @@ export const Modal = ({
     </Box>
   );
 };
+//  cursor-pointer

@@ -10,11 +10,10 @@ import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 import { pricingFormatUSD } from '@utils/pricing';
 import { capitalizeName } from '@utils/textTransform';
 import { getPokeTypePrefixClass } from '@utils/pokeType';
+import { cartModalTypeMap } from './cart.modal.type.map.util';
 
-const CartModalItem = ({ el, currItem, lastItem }: any): ReactElement => {
-  const pokeTypeClass = getPokeTypePrefixClass(currItem?.types);
-
-  console.log('pokeTypeClass', pokeTypeClass);
+const CartModalItem = ({ el, currIndex, lastIndex }: any): ReactElement => {
+  const pokeTypeClass = getPokeTypePrefixClass(el?.types);
 
   const { mutate: updateMutate, isPending: updateIsPending } = useUpdateCart();
   const { mutate: deleteMutate, isPending: deleteIsPending } =
@@ -44,11 +43,11 @@ const CartModalItem = ({ el, currItem, lastItem }: any): ReactElement => {
     <Box className="flex flex-col justify-center relative">
       <Box className="flex flex-row gap-md">
         <Box
-          className="rounded-sm p-sm border-2 border-solid"
-          // className={classNamesUtil(
-          //   newStyles.imageWrapper,
-          //   newStyles?.[`${getThemeClass}ImageWrapper`]
-          // )}
+          className={`rounded-sm p-sm border-4 border-solid ${
+            cartModalTypeMap.get(pokeTypeClass)?.[
+              `${pokeTypeClass}ImageWrapper` as keyof object
+            ] ?? ''
+          }`}
         >
           <Image
             src={el?.image}
@@ -64,7 +63,7 @@ const CartModalItem = ({ el, currItem, lastItem }: any): ReactElement => {
             {pricingFormatUSD(el?.price)}
           </Typography>
 
-          <Box className="flex bg-lightGray gap-md rounded-pill w-fit items-center p-sm mt-sm">
+          <Box className="flex bg-lightGrey gap-md rounded-pill w-fit items-center p-sm mt-sm">
             <Icon
               icon="IconMinus"
               size={24}
@@ -98,7 +97,7 @@ const CartModalItem = ({ el, currItem, lastItem }: any): ReactElement => {
           onClick={() => handleRemoveCartItem(el?.id)}
         />
       </Box>
-      {currItem !== lastItem && (
+      {currIndex !== lastIndex && (
         <Box className="w-full border my-lg border-t-medGrey" />
       )}
     </Box>

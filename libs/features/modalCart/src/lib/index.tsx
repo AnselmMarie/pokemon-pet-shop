@@ -28,8 +28,8 @@ export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
               <CartModalItem
                 key={i}
                 el={el}
-                currItem={i}
-                lastItem={data?.data.length - 1}
+                currIndex={i}
+                lastIndex={data?.data.length - 1}
               />
             );
           })}
