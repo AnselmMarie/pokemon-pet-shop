@@ -62,7 +62,7 @@ export const Modal = ({
 
   return (
     <Box
-      className={`fixed flex top-[0px] left-[0px] z-50 w-full h-full bg-[#000000] bg-opacity-50 ${getModalAlignmentClasses}`}
+      className={`fixed flex top-[0px] left-[0px] z-50 w-full h-full ${getModalAlignmentClasses}`}
     >
       <ModalCard
         className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[600px] rounded-sm ${
@@ -77,7 +77,10 @@ export const Modal = ({
         </Box>
         <ModalBody>{children}</ModalBody>
       </ModalCard>
+      <Box
+        className="fixed cursor-pointer bg-[#000000] bg-opacity-50 z-0 w-full h-full"
+        onClick={onClick}
+      />
     </Box>
   );
 };
-//  cursor-pointer

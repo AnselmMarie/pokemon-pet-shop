@@ -50,7 +50,7 @@ export const PokemonList = (): ReactElement => {
 
   return (
     <>
-      <Box className="flex justify-center flex-wrap gap-md mb-sm">
+      <Box className="flex justify-center flex-wrap gap-md my-lg">
         {(newData ?? []).map((arr: any, i: number): ReactElement => {
           return (
             <Fragment key={i}>

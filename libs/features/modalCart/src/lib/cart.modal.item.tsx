@@ -92,13 +92,13 @@ const CartModalItem = ({ el, currIndex, lastIndex }: any): ReactElement => {
 
         <Icon
           icon="IconTrash"
-          stroke="border-error"
+          fill="bg-error"
           isDisabled={deleteIsPending}
           onClick={() => handleRemoveCartItem(el?.id)}
         />
       </Box>
       {currIndex !== lastIndex && (
-        <Box className="w-full border my-lg border-t-medGrey" />
+        <Box className="w-full my-lg border-t-[1px] border-medGrey" />
       )}
     </Box>
   );

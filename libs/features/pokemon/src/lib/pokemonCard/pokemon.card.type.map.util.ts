@@ -2,7 +2,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'grassType',
     {
-      grassTypeWrapper: 'bg-medGrass',
+      grassTypeWrapper:
+        'bg-veryDarkGrass bg-gradient-to-tr from-veryDarkGrass to-lightGrass',
       grassTypeContentCardWrapper: 'bg-darkGrass',
       grassTypeContentCardText: 'text-white',
     },
@@ -10,7 +11,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'bugType',
     {
-      bugTypeWrapper: 'bg-medBug',
+      bugTypeWrapper:
+        'bg-veryDarkBug bg-gradient-to-tr from-veryDarkBug to-lightBug',
       bugTypeContentCardWrapper: 'bg-darkBug',
       bugTypeContentCardText: 'text-white',
     },
@@ -18,7 +20,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'darkType',
     {
-      darkTypeWrapper: 'bg-medDark',
+      darkTypeWrapper:
+        'bg-veryDarkDark bg-gradient-to-tr from-veryDarkDark to-lightDark',
       darkTypeContentCardWrapper: 'bg-darkDark',
       darkTypeContentCardText: 'text-white',
     },
@@ -26,7 +29,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'dragonType',
     {
-      dragonTypeWrapper: 'bg-medDragon',
+      dragonTypeWrapper:
+        'bg-veryDarkDragon bg-gradient-to-tr from-veryDarkDragon to-lightDragon',
       dragonTypeContentCardWrapper: 'bg-darkDragon',
       dragonTypeContentCardText: 'text-white',
     },
@@ -34,7 +38,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'electricType',
     {
-      electricTypeWrapper: 'bg-medElectric',
+      electricTypeWrapper:
+        'bg-veryDarkElectric bg-gradient-to-tr from-veryDarkElectric to-lightElectric',
       electricTypeContentCardWrapper: 'bg-darkElectric',
       electricTypeContentCardText: 'text-white',
     },
@@ -42,7 +47,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'fairyType',
     {
-      fairyTypeWrapper: 'bg-medFairy',
+      fairyTypeWrapper:
+        'bg-veryDarkFairy bg-gradient-to-tr from-veryDarkFairy to-lightFairy',
       fairyTypeContentCardWrapper: 'bg-darkFairy',
       fairyTypeContentCardText: 'text-white',
     },
@@ -50,7 +56,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'fightingType',
     {
-      fightingTypeWrapper: 'bg-medFighting',
+      fightingTypeWrapper:
+        'bg-veryDarkFighting bg-gradient-to-tr from-veryDarkFighting to-lightFighting',
       fightingTypeContentCardWrapper: 'bg-darkFighting',
       fightingTypeContentCardText: 'text-white',
     },
@@ -58,7 +65,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'fireType',
     {
-      fireTypeWrapper: 'bg-medFire',
+      fireTypeWrapper:
+        'bg-veryDarkFire bg-gradient-to-tr from-veryDarkFire to-lightFire',
       fireTypeContentCardWrapper: 'bg-darkFire',
       fireTypeContentCardText: 'text-white',
     },
@@ -66,7 +74,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'flyingType',
     {
-      flyingTypeWrapper: 'bg-medFlying',
+      flyingTypeWrapper:
+        'bg-veryDarkFlying bg-gradient-to-tr from-veryDarkFlying to-lightFlying',
       flyingTypeContentCardWrapper: 'bg-darkFlying',
       flyingTypeContentCardText: 'text-white',
     },
@@ -74,7 +83,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'ghostType',
     {
-      ghostTypeWrapper: 'bg-medGhost',
+      ghostTypeWrapper:
+        'bg-veryDarkGhost bg-gradient-to-tr from-veryDarkGhost to-lightGhost',
       ghostTypeContentCardWrapper: 'bg-darkGhost',
       ghostTypeContentCardText: 'text-white',
     },
@@ -82,7 +92,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'groundType',
     {
-      groundTypeWrapper: 'bg-medGround',
+      groundTypeWrapper:
+        'bg-veryDarkGround bg-gradient-to-tr from-veryDarkGround to-lightGround',
       groundTypeContentCardWrapper: 'bg-darkGround',
       groundTypeContentCardText: 'text-white',
     },
@@ -90,7 +101,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'iceType',
     {
-      iceTypeWrapper: 'bg-medIce',
+      iceTypeWrapper:
+        'bg-veryDarkIce bg-gradient-to-tr from-veryDarkIce to-lightIce',
       iceTypeContentCardWrapper: 'bg-darkIce',
       iceTypeContentCardText: 'text-white',
     },
@@ -98,7 +110,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'normalType',
     {
-      normalTypeWrapper: 'bg-medNormal',
+      normalTypeWrapper:
+        'bg-veryDarkNormal bg-gradient-to-tr from-veryDarkNormal to-lightNormal',
       normalTypeContentCardWrapper: 'bg-darkNormal',
       normalTypeContentCardText: 'text-white',
     },
@@ -106,7 +119,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'poisonType',
     {
-      poisonTypeWrapper: 'bg-medPoison',
+      poisonTypeWrapper:
+        'bg-veryDarkPoison bg-gradient-to-tr from-veryDarkPoison to-lightPoison',
       poisonTypeContentCardWrapper: 'bg-darkPoison',
       poisonTypeContentCardText: 'text-white',
     },
@@ -114,7 +128,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'psychicType',
     {
-      psychicTypeWrapper: 'bg-medPsychic',
+      psychicTypeWrapper:
+        'bg-veryDarkPsychic bg-gradient-to-tr from-veryDarkPsychic to-lightPsychic',
       psychicTypeContentCardWrapper: 'bg-darkPsychic',
       psychicTypeContentCardText: 'text-white',
     },
@@ -122,7 +137,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'rockType',
     {
-      rockTypeWrapper: 'bg-medRock',
+      rockTypeWrapper:
+        'bg-veryDarkRock bg-gradient-to-tr from-veryDarkRock to-lightRock',
       rockTypeContentCardWrapper: 'bg-darkRock',
       rockTypeContentCardText: 'text-white',
     },
@@ -130,7 +146,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'steelType',
     {
-      steelTypeWrapper: 'bg-medSteel',
+      steelTypeWrapper:
+        'bg-veryDarkSteel bg-gradient-to-tr from-veryDarkSteel to-lightSteel',
       steelTypeContentCardWrapper: 'bg-darkSteel',
       steelTypeContentCardText: 'text-white',
     },
@@ -138,7 +155,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'waterType',
     {
-      waterTypeWrapper: 'bg-medWater',
+      waterTypeWrapper:
+        'bg-veryDarkWater bg-gradient-to-tr from-veryDarkWater to-lightWater',
       waterTypeContentCardWrapper: 'bg-darkWater',
       waterTypeContentCardText: 'text-white',
     },
