@@ -78,7 +78,7 @@ export const PokemonAbilityName = ({
       </Box>
 
       <Typography
-        className={`text-sm ${displayInDetail ? 'color-default text-lg' : ''} ${
+        className={`${displayInDetail ? '!text-default text-lg' : 'text-sm'} ${
           pokeAbilityTypeMap.get(pokeTypeClass)?.[
             `${pokeTypeClass}ContentCardText` as keyof object
           ] ?? ''

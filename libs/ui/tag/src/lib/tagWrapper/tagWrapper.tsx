@@ -8,5 +8,5 @@ export const TagWrapper = ({
   tagAlign = 'center',
   children,
 }: PropsWithChildren<TagProps>): ReactElement => {
-  return <Box className={`flex gap-md text-${tagAlign}`}>{children}</Box>;
+  return <Box className={`flex gap-md justify-${tagAlign}`}>{children}</Box>;
 };

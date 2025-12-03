@@ -95,7 +95,7 @@
   justify-content: center;
 } */
 
-.bugThemeImageBg {
+/* .bugThemeImageBg {
   background: var(--theme-type-bug-600);
 }
 
@@ -165,7 +165,7 @@
 
 .waterThemeImageBg {
   background: var(--theme-type-water-600);
-}
+} */
 
 @media only screen and (min-width: 630px) {
   /* .weightHeightWrapper {

@@ -1,3 +1,1 @@
-import UiHalfCircle from './half.circle';
-
-export { UiHalfCircle };
+export * from './half.circle';

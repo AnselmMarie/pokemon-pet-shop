@@ -14,7 +14,7 @@ const combineListAndDetailDataUtil = (
   pokemonList: any,
   detailPromisesRes: any
 ) => {
-  return (pokemonList?.results || []).map((el: any, i: number) => {
+  return (pokemonList?.results ?? []).map((el: any, i: number) => {
     return {
       ...el,
       ...detailPromisesRes[i + 1],

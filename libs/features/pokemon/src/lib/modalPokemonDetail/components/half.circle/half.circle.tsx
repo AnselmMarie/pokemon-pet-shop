@@ -1,21 +1,9 @@
-import { Box } from '@ui/box';
+import { Image } from '@ui/image';
 
-// import { ThemeTypeEnum, useThemeStore } from '@pokemon-pet-shop/store';
+import halfCircleSvg from '../../assets/half.circle.png';
 
-// import { styles } from './half.circle.module';
-
-const HalfCircle = () => {
-  // const { theme } = useThemeStore();
+export const HalfCircle = () => {
   return (
-    <Box
-    // className={`
-    //   ${styles.contentCurve},
-    //   ${theme === ThemeTypeEnum.LIGHT
-    //     ? styles.contentCurveLight
-    //     : styles.contentCurveDark}
-    // `}
-    />
+    <Image src={halfCircleSvg} className="w-full" alt="Pokemon Pet Shop Logo" />
   );
 };
-
-export default HalfCircle;

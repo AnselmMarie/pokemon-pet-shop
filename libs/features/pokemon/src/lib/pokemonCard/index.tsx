@@ -105,7 +105,7 @@ export const PokemonCard = ({
               </Box>
             )}
 
-            {(pokeCreature?.abilities || []).map(
+            {(pokeCreature?.abilities ?? []).map(
               (
                 abilityObj: any, // PokemonDetailAbilityObj,
                 i: number

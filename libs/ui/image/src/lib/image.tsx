@@ -23,8 +23,8 @@ export const Image = ({
     <img
       src={src}
       alt={alt}
-      width={width}
-      height={height}
+      // width={width}
+      // height={height}
       className={className}
     />
   );

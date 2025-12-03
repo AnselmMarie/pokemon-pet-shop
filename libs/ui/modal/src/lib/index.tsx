@@ -27,7 +27,7 @@ export const Modal = ({
         return 'flex relative w-full items-center justify-between p-md';
       case 'absolute':
       default:
-        return 'flex absolute top-0 left-0 w-full items-center justify-between p-md z-10';
+        return 'flex absolute top-0 left-0 w-full items-center justify-end p-md z-10';
     }
   }, [headlineType]);
 
@@ -65,7 +65,7 @@ export const Modal = ({
       className={`fixed flex top-[0px] left-[0px] z-50 w-full h-full ${getModalAlignmentClasses}`}
     >
       <ModalCard
-        className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[600px] rounded-sm ${
+        className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[450px] rounded-sm ${
           startAnimation
             ? 'ease-in duration-300 opacity-100'
             : 'ease-out duration-300 opacity-0'

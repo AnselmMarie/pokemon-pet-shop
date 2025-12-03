@@ -103,20 +103,23 @@ export const PokemonDetailModalBody = ({
 
   return (
     <Box className="h-[calc(100%_-_500px)] relative rounded-b-md">
-      <Box className="-mt-[45px] ml-2xl mr-2xl">
+      <Box className="-mt-[30px] ml-2xl mr-2xl">
         <Box className="w-full">
           <Box className="flex justify-between items-center mb-sm">
-            <Typography className="text-center mb-sm text-md">
+            <Typography className="w-full text-center mb-sm text-md">
               NO. {pokeCreature?.order}
             </Typography>
           </Box>
-          <Typography className="text-center mb-sm text-xl" variant="h1">
+          <Typography
+            className="text-center mb-sm -mt-xl text-2xl"
+            variant="h1"
+          >
             {capitalizeName(pokeCreature?.name)}
           </Typography>
           {pokeCreature?.types ? (
-            <Box className="mb-md">
+            <Box className="mb-xl">
               <TagWrapper>
-                {(pokeCreature?.types || []).map(
+                {(pokeCreature?.types ?? []).map(
                   (
                     typeObj: any, // PokemonDetailTypesObj,
                     i: number
@@ -125,7 +128,7 @@ export const PokemonDetailModalBody = ({
                       <TagItem
                         key={i}
                         name={typeObj?.type?.name}
-                        colorTheme={pokeTypeClass}
+                        pokeTypeClass={pokeTypeClass}
                       />
                     );
                   }
@@ -135,7 +138,7 @@ export const PokemonDetailModalBody = ({
           ) : null}
 
           {!speciesIsLoading || !speciesIsFetching ? (
-            <Typography className="text-lg mb-lg">
+            <Typography className="text-md mb-lg">
               {removeHtmlCodeInDescription}
             </Typography>
           ) : (
@@ -143,12 +146,12 @@ export const PokemonDetailModalBody = ({
           )}
 
           <Box className="flex flex-col md:flex-row gap-md mb-lg">
-            <Box className="text-lg md:mb-sm">
+            <Box className="flex flex-row md:flex-auto gap-xs text-md md:mb-sm">
               <Typography className="font-bold">Weight:</Typography>{' '}
               <Typography>{`${convertKgToLbs?.lbs} ${convertKgToLbs?.kg}`}</Typography>
             </Box>
 
-            <Box className="text-lg md:mb-sm">
+            <Box className="flex flex-row md:flex-auto gap-xs text-md md:mb-sm">
               <Typography className="font-bold">Height:</Typography>{' '}
               <Typography>
                 {convertMetersToFtIn?.ft ? `${convertMetersToFtIn?.ft} ` : null}
@@ -156,25 +159,29 @@ export const PokemonDetailModalBody = ({
               </Typography>
             </Box>
           </Box>
-          {(pokeCreature?.abilities || []).map(
-            (
-              abilityObj: any, // PokemonDetailAbilityObj,
-              i: number
-            ): ReactElement | null => {
-              if (i > 1) {
-                return null;
-              }
-              return (
-                <PokemonAbilityName
-                  key={i}
-                  abilityData={abilityObj}
-                  typeData={pokeCreature?.types}
-                  pokeTypeClass={pokeTypeClass}
-                  showAtkLine={false}
-                  displayInDetail
-                />
-              );
-            }
+          {pokeCreature?.abilities.length > 0 && (
+            <Box className="mb-2xl">
+              {(pokeCreature?.abilities ?? []).map(
+                (
+                  abilityObj: any, // PokemonDetailAbilityObj,
+                  i: number
+                ): ReactElement | null => {
+                  if (i > 1) {
+                    return null;
+                  }
+                  return (
+                    <PokemonAbilityName
+                      key={i}
+                      abilityData={abilityObj}
+                      typeData={pokeCreature?.types}
+                      pokeTypeClass={pokeTypeClass}
+                      showAtkLine={false}
+                      displayInDetail
+                    />
+                  );
+                }
+              )}
+            </Box>
           )}
         </Box>
 

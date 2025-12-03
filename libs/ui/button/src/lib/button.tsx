@@ -1,7 +1,5 @@
 import { ReactElement, useEffect, useMemo, useState } from 'react';
 
-// import { globalStyles } from '../../styles/css/global.module';
-
 import ButtonElement from './button.element';
 import { ButtonProps } from './button.interface';
 
@@ -21,8 +19,6 @@ export const Button = ({
   onClick,
 }: ButtonProps): ReactElement => {
   const [displaySuccessStyle, setDisplaySuccessStyle] = useState(false);
-  // const { newStyles } = useRenderStyles(styles);
-  // const { newStyles: newGlobalStyles } = useRenderStyles(globalStyles);
 
   const getTimerStyle = useMemo(() => {
     return timerStyle || 'cursor-not-allowed opacity-50 bg-success text-white';
@@ -58,19 +54,19 @@ export const Button = ({
     }
   }, [size]);
 
-  // const getSizeTextStyles = useMemo(() => {
-  //   switch (size) {
-  //     case ButtonSizeEnum.LARGE:
-  //       return newStyles.largeText;
-  //     case ButtonSizeEnum.STANDARD:
-  //     default:
-  //       return newStyles.standardText;
-  //   }
-  // }, [size]);
+  const getSizeTextStyles = useMemo(() => {
+    switch (size) {
+      case 'large':
+        return 'text-xl';
+      case 'standard':
+      default:
+        return 'text-md';
+    }
+  }, [size]);
 
-  // const getDisabledStyles = useMemo(() => {
-  //   return isDisabled ? newGlobalStyles.disabledElementBg : '';
-  // }, [isDisabled]);
+  const getDisabledStyles = useMemo(() => {
+    return isDisabled ? 'bg-primaryDisabled' : '';
+  }, [isDisabled]);
 
   const getText = useMemo(() => {
     return displaySuccessStyle ? timerText : text;
@@ -93,12 +89,13 @@ export const Button = ({
         rounded-pill cursor-pointer border-0 text-center p-sm
         ${getTypeStyles}
         ${getSizeStyles}
+        ${getDisabledStyles}
         ${displaySuccessStyle ? getTimerStyle : ''}
       `}
-      // ${getDisabledStyles}
       classNameText={`
         ${classNameText}
         ${getTypeTextStyles}
+        ${getSizeTextStyles}
       `}
       // classNameText={classNamesUtil(
       //   classNameText,

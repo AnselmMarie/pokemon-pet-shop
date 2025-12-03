@@ -5,20 +5,22 @@ import { Typography } from '@ui/typography';
 
 import { capitalizeName } from '@utils/textTransform';
 
-// import { TagItemColorEnum } from './tag.item.enum';
 import type { TagProps } from './tagItem.interface';
-
-// colorTheme = TagItemColorEnum.GRASS,
+import { pokeTagTypeMap } from './pokemon.tag.type.map.util';
 
 export const TagItem = ({
   name = '',
+  pokeTypeClass,
 }: PropsWithChildren<TagProps>): ReactElement => {
   return (
     <Box
-      className={`rounded-pill py-sm px-md`}
-      // className={classNamesUtil(newStyles.tag, newStyles?.[`${colorTheme}Bg`])}
+      className={`rounded-pill py-xs px-md ${
+        pokeTagTypeMap.get(pokeTypeClass)?.[
+          `${pokeTypeClass}Bg` as keyof object
+        ] ?? ''
+      }`}
     >
-      <Typography>{capitalizeName(name)}</Typography>
+      <Typography className="text-white">{capitalizeName(name)}</Typography>
     </Box>
   );
 };

@@ -13,9 +13,8 @@ import {
   useGetPokemonPricing,
 } from '@services/pokemon-api';
 
-import { UiHalfCircle } from './components/half.circle';
-
-// import usePokemonDetailModalLogic from './use.pokemon.detail.modal.logic';
+import { HalfCircle } from './components/half.circle';
+import { pokeDetailTypeMap } from './pokemon.detail.type.map.util';
 
 export const PokemonDetailModalHeader = ({
   pokeCreature,
@@ -55,12 +54,13 @@ export const PokemonDetailModalHeader = ({
 
   return (
     <Box
-      className="z-0 relative rounded-t-md"
-      // className={classNamesUtil(
-      //   newStyles?.[`${getThemeClass}ImageBg`]
-      // )}
+      className={`z-0 relative rounded-t-sm ${
+        pokeDetailTypeMap.get(pokeTypeClass)?.[
+          `${pokeTypeClass}ImageBg` as keyof object
+        ] ?? ''
+      }`}
     >
-      <Box className="absolute flex w-fit mt-md ml-md text-xl py-sm px-md rounded-md">
+      <Box className="absolute flex w-fit bg-medYellow mt-md ml-md text-xl py-xs px-sm rounded-sm">
         <Typography>
           {(!pricingIsLoading || !pricingIsFetching) &&
           (!speciesIsLoading || !speciesIsFetching) ? (
@@ -70,13 +70,12 @@ export const PokemonDetailModalHeader = ({
           )}
         </Typography>
       </Box>
-
       <Image
         src={pokeCreature?.sprites?.other?.['official-artwork']?.front_default}
         className="h-full m-0 mx-auto"
         alt={`${capitalizeName(pokeCreature?.name)} Image`}
       />
-      <UiHalfCircle />
+      <HalfCircle />
     </Box>
   );
 };

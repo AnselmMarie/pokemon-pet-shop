@@ -23,7 +23,7 @@ export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
     >
       <ModalScroll>
         <Box className="pb-[150px]">
-          {(data?.data || [])?.map((el: Cart.Data[], i: number) => {
+          {(data?.data ?? []).map((el: Cart.Data[], i: number) => {
             return (
               <CartModalItem
                 key={i}
