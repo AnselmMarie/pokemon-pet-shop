@@ -31,7 +31,7 @@ export const Header = () => {
       />
       <NavMobileModal
         isOpen={isNavModalOpen}
-        onCloseModal={() => setIsCartModalOpen(false)}
+        onCloseModal={() => setIsNavModalOpen(false)}
       />
       <Container className="flex item-center justify-between">
         <Box className="flex justify-center items-center">

@@ -20,11 +20,11 @@ export const PokemonAbilityName = ({
   isLoading = false,
 }: PokemonAbilityNameProps): ReactElement => {
   const isAtkLineShownCircleClass = useMemo(() => {
-    return showAtkLine ? '-ml-[12px]' : '';
+    return showAtkLine ? 'md:-ml-[12px]' : '';
   }, [showAtkLine]);
 
   const isAtkLineShownWrapperClass = useMemo(() => {
-    return showAtkLine ? '-ml-[16px]' : '';
+    return showAtkLine ? 'md:-ml-[16px]' : '';
   }, [showAtkLine]);
 
   const formatName = useMemo(() => {
@@ -42,7 +42,7 @@ export const PokemonAbilityName = ({
 
   return (
     <Box
-      className={`flex h-[16px] justify-items-center w-full items-center text-white mb-md ${
+      className={`flex h-[16px] justify-items-center w-full items-center text-white mb-sm md:mb-md ${
         displayInDetail ? 'color-default mb-md h-auto' : ''
       } ${isAtkLineShownWrapperClass}
       `}
@@ -55,15 +55,12 @@ export const PokemonAbilityName = ({
                 `${pokeTypeClass}AtkLine` as keyof object
               ] ?? ''
             }`}
-            // className={classNamesUtil(
-            //   displayInDetail ? newStyles.atkLineDetailModal : '',
-            // )}
           />
         </HideInMobile>
       ) : null}
 
       <Box
-        className={`h-[17px] w-[17px] rounded-circle mr-sm flex justify-center items-center ${
+        className={`h-[17px] w-[17px] rounded-circle mr-xs md:mr-sm flex justify-center items-center ${
           displayInDetail ? 'w-[35px] h-[35px] mr-md' : ''
         } ${isAtkLineShownCircleClass} ${
           pokeAbilityTypeMap.get(pokeTypeClass)?.[

@@ -20,7 +20,15 @@ export const TagItem = ({
         ] ?? ''
       }`}
     >
-      <Typography className="text-white">{capitalizeName(name)}</Typography>
+      <Typography
+        className={`${
+          pokeTagTypeMap.get(pokeTypeClass)?.[
+            `${pokeTypeClass}Text` as keyof object
+          ] ?? ''
+        }`}
+      >
+        {capitalizeName(name)}
+      </Typography>
     </Box>
   );
 };

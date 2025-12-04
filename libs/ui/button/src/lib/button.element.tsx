@@ -25,9 +25,9 @@ const ButtonElement = ({
           <Skeleton />
         </Box>
       ) : (
-        <Box className="flex flex-1 items-center justify-center">
+        <Box className="flex flex-1 items-center justify-center gap-xs">
           <Typography className={classNameText}>{text}</Typography>
-          {appendImage ? <Image src={appendImage} className="ml-2" /> : null}
+          {appendImage ? <Image src={appendImage} /> : null}
           {appendIcon ? <Icon icon={appendIcon} /> : null}
         </Box>
       )}

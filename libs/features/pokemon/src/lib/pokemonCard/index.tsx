@@ -34,27 +34,26 @@ export const PokemonCard = ({
       />
 
       <Card
-        className={`m-w-[352px] md:m-w-auto md:w-[250px] h-[367px] md:h-[367px] flex p-sm md:p-md rounded-md flex-row md:flex-col relative md:justify-between ${
+        className={`w-[352px] h-[167px] md:m-w-auto md:w-[250px] md:h-[367px] flex p-sm md:p-md rounded-md flex-row md:flex-col relative md:justify-between ${
           isLoading ? 'bg-medGrey' : ''
         } ${
           pokeCardTypeMap.get(pokeTypeClass)?.[
             `${pokeTypeClass}Wrapper` as keyof object
           ] ?? ''
         }`}
-        // className={classNamesUtil(
-        //   newStyles?.[
-        //     theme === ThemeTypeEnum.LIGHT
-        //       ? 'cardWrapperShadowLight'
-        //       : 'cardWrapperShadowDark'
-        //   ],
-        // )}
       >
         {isLoading ? (
           <Box className="w-[50%] h-[70%] my-lg mx-md md:flex-1 md:w-[80%] md:h-full md:mx-auto md:mb-md">
             <Skeleton height={isWeb() ? '100%' : 100} circle />
           </Box>
         ) : (
-          <Box className="flex flex-col md:block justify-center items-center max-w-[115px] md:max-w-[100%] md:bg-none rounded-md p-sm md:p-[0px]">
+          <Box
+            className={`flex flex-col md:block justify-center items-center max-w-[115px] md:max-w-[100%] md:bg-none rounded-sm p-sm md:p-[0px] mr-md md:mr-none md:bg-none ${
+              pokeCardTypeMap.get(pokeTypeClass)?.[
+                `${pokeTypeClass}ImageWrapper` as keyof object
+              ] ?? ''
+            }`}
+          >
             <Image
               src={
                 pokeCreature?.sprites?.other?.['official-artwork']
@@ -68,7 +67,7 @@ export const PokemonCard = ({
         )}
 
         <Box
-          className={`flex flex-col justify-between w-full rounded-md p-lg md:p-md md:z-10 md:h-[180px] md:items-end ${
+          className={`flex flex-col justify-between w-full rounded-md p-0 md:p-md md:z-10 md:h-[180px] md:items-end ${
             isLoading ? 'bg-darkGrey' : ''
           } ${
             pokeCardTypeMap.get(pokeTypeClass)?.[
@@ -84,7 +83,7 @@ export const PokemonCard = ({
             ) : (
               <Box className="flex justify-between items-center mb-sm">
                 <Typography
-                  className={`text-md md:text-lg ${
+                  className={`text-lg text-bold ${
                     pokeCardTypeMap.get(pokeTypeClass)?.[
                       `${pokeTypeClass}ContentCardText` as keyof object
                     ] ?? ''
