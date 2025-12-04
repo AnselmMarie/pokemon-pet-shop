@@ -59,7 +59,7 @@ const CartModalItem = ({ el, currIndex, lastIndex }: any): ReactElement => {
           <Typography className="text-lg mb-sm" variant="h1">
             {capitalizeName(el?.name)}
           </Typography>
-          <Typography className="text-bold text-lg">
+          <Typography className="font-bold text-lg">
             {pricingFormatUSD(el?.price)}
           </Typography>
 

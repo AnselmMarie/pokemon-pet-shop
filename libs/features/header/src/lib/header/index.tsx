@@ -8,6 +8,7 @@ import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
 import { Image } from '@ui/image';
 import { HideInMobile } from '@ui/hideInMobile';
+import { Typography } from '@ui/typography';
 
 import { useGetCart } from '@services/cart-api';
 
@@ -23,7 +24,7 @@ export const Header = () => {
   return (
     <Box
       as="header"
-      className="space-between h-[93px] sticky z-40 px-md py-xs shadow bg-white"
+      className="space-between h-[93px] fixed w-full top-[0px] z-40 px-md py-xs shadow bg-white"
     >
       <CartModal
         isOpen={isCartModalOpen}
@@ -69,10 +70,10 @@ export const Header = () => {
           <Box className="flex justify-center items-center relative">
             <Icon classNameIcon="ml-2 red" size={28} />
             {data?.counter ? (
-              <Box className="rounded-sm min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
-                <Box as="span" className="align-center">
+              <Box className="rounded-circle bg-medYellow min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
+                <Typography className="flex justify-center item-center text-primary font-bold">
                   {data?.counter}
-                </Box>
+                </Typography>
               </Box>
             ) : null}
 

@@ -69,7 +69,7 @@ export const Switch = ({
       var(--theme-radius-circle); transition: left 100ms ease-in-out; */}
       {/* h-[31px] w-[31px] */}
       <Box
-        className={`absolute top-[11px] h-[38px] w-[38px] bg-lightBlue z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
+        className={`absolute top-[11px] h-[38px] w-[38px] bg-primary z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
         // className={classNamesUtil(newStyles.iconCircle, getCircleThemeStyle)}
       />
     </Box>

@@ -37,8 +37,8 @@ export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
       </ModalScroll>
 
       <Box className="rounded-b-sm w-full absolute bottom-[0px] flex flex-row justify-between items-center p-md bg-lightGrey">
-        <Typography className="text-bold text-lg">Total</Typography>
-        <Typography className="text-bold text-lg">
+        <Typography className="font-bold text-lg">Total</Typography>
+        <Typography className="font-bold text-lg">
           {pricingFormatUSD(data?.total)}
         </Typography>
       </Box>

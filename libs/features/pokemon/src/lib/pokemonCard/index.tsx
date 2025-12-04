@@ -83,7 +83,7 @@ export const PokemonCard = ({
             ) : (
               <Box className="flex justify-between items-center mb-sm">
                 <Typography
-                  className={`text-lg text-bold ${
+                  className={`text-lg font-bold ${
                     pokeCardTypeMap.get(pokeTypeClass)?.[
                       `${pokeTypeClass}ContentCardText` as keyof object
                     ] ?? ''

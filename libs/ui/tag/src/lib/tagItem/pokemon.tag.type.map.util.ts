@@ -17,7 +17,7 @@ export const pokeTagTypeMap = new Map<string, object>([
     'darkType',
     {
       darkTypeBg: 'bg-lightDark',
-      darkTypeText: 'text-default',
+      darkTypeText: 'text-white',
     },
   ],
   [

@@ -16,9 +16,7 @@ export const NavMobileModal = ({ isOpen, onCloseModal }: any): ReactElement => {
     >
       <Box className="w-full flex flex-col h-full relative">
         <Box className="flex flex-1 flex-col justify-between mt-0 mr-md mb-md">
-          <Box>
-            <Box>PETS</Box>
-          </Box>
+          <Box>{/* <Box>PETS</Box> */}</Box>
 
           <Box className="flex justify-center">
             <SwitchTheme />

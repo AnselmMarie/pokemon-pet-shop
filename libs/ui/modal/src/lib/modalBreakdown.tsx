@@ -17,7 +17,7 @@ export const ModalClose = ({ onClick }: { onClick: () => void }) => (
 );
 
 export const ModalTitle = ({ title }: { title: string }) => (
-  <h1 className="text-bold text-xl">{title}</h1>
+  <h1 className="font-bold text-xl">{title}</h1>
 );
 
 export const ModalBody = ({ children }: PropsWithChildren) => (
