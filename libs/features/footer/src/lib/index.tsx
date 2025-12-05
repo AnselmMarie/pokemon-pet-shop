@@ -2,22 +2,16 @@ import { Box } from '@ui/box';
 import { Link } from '@ui/link';
 import { Icon } from '@ui/icon';
 import { Typography } from '@ui/typography';
-// import { IconTypeEnum, UiElementLayout, UiIcon, UiLink, UiTypography } from '@pokemon-pet-shop/ui';
-// import { THEME_NETURAL_100, THEME_NETURAL_900 } from '@pokemon-pet-shop/ui/styles/var';
-
-// import { styles } from './footer.module';
 
 export const Footer = () => {
-  // const { theme } = useThemeStore();
-
   return (
     <Box
-      className="flex flex-col md:flex-row items-center justify-center mb-12"
-      // as="footer"
+      className="flex flex-col md:flex-row items-center justify-center h-[40px] mt-2xl mx-md"
+      as="footer"
     >
       <Link
         className="flex items-center"
-        link="https://github.com/AnselmMarie/pokemon-pet-shop"
+        link="https://github.com/AnselmMarie/pokemon-pet-shop/tree/mfe"
       >
         <Icon
           icon="IconGithub"
@@ -33,7 +27,8 @@ export const Footer = () => {
         <Typography>Github Project</Typography>
       </Link>
 
-      <Typography className="hidden md:p-10 md:block">|</Typography>
+      {/* Once the mobile app version is built out I can uncomment the code below. */}
+      {/* <Typography className="hidden md:p-10 md:block">|</Typography>
       <Box className="flex items-center">
         <Icon
         // stroke={
@@ -43,7 +38,7 @@ export const Footer = () => {
         // }
         />
         <Typography>Scan QR code for mobile app</Typography>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

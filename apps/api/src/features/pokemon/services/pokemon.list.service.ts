@@ -1,5 +1,5 @@
 import { errFormat500ResponseUtil } from '../../../shared/middleware/error.middleware';
-import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../../../shared/constants/httpCodes';
+import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../constants';
 import { PokemonListQueryProps } from '../pokemon.types';
 
 export const getPokemonListService = async ({
@@ -18,4 +18,3 @@ export const getPokemonListService = async ({
 
   return res;
 };
-

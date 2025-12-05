@@ -5,7 +5,7 @@ import {
   errFormatResponseUtil,
 } from '../../../shared/middleware/error.middleware';
 
-import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../../../shared/constants/httpCodes';
+import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../constants';
 import { PokemonListQueryProps } from '../pokemon.types';
 import { getPokemonDetailService } from '../services/pokemon.detail.service';
 import { getPokemonListService } from '../services/pokemon.list.service';
@@ -66,4 +66,3 @@ const getPokemonListController = async (
 };
 
 export { getPokemonListController };
-
