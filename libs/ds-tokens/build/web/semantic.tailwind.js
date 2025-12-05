@@ -320,89 +320,48 @@ module.exports = {
       light: 200
     },
     lineHeight: {
-      sm: "21px",
-      md: "24px",
-      xl: "34px",
-      lg: "28px",
-      xs: "18px",
-      "2xl": "42px",
-      "3xl": "48px"
+      sm: 21,
+      md: 24,
+      xl: 34,
+      lg: 28,
+      xs: 18,
+      "2xl": 42,
+      "3xl": 48
     },
     fontSize: {
-      "2xl": [
-        "32px",
-        {
-          lineHeight: "42px"
-        }
-      ],
-      sm: [
-        "14px",
-        {
-          lineHeight: "21px"
-        }
-      ],
-      xl: [
-        "24px",
-        {
-          lineHeight: "34px"
-        }
-      ],
-      lg: [
-        "20px",
-        {
-          lineHeight: "28px"
-        }
-      ],
-      md: [
-        "16px",
-        {
-          lineHeight: "24px"
-        }
-      ],
-      "3xl": [
-        "40px",
-        {
-          lineHeight: "48px"
-        }
-      ],
-      xs: [
-        "12px",
-        {
-          lineHeight: "18px"
-        }
-      ]
+      "2xl": 32,
+      sm: 14,
+      xl: 24,
+      lg: 20,
+      md: 16,
+      "3xl": 40,
+      xs: 12
     },
     fontFamily: {
       sansFallback: "Helvetica, Arial, sans-serif",
-      sans: [
-        "Helvetica Neue",
-        "Helvetica Neue",
-        "Helvetica",
-        "Arial",
-        "sans-serif"
-      ],
+      sans: "Helvetica Neue",
       sansMobile: "Helvetica Neue"
     }
   },
   size: {
     spacing: {
-      "5xl": "64px",
-      "4xl": "28px",
-      "2xl": "32px",
-      xl: "24px",
-      "3xl": "40px",
-      lg: "20px",
-      xs: "8px",
-      md: "16px",
-      sm: "12px",
-      "2xs": "4px"
+      "5xl": 64,
+      "4xl": 28,
+      "2xl": 32,
+      xl: 24,
+      "3xl": 40,
+      lg: 20,
+      xs: 8,
+      md: 16,
+      sm: 12,
+      "2xs": 4
     },
     borderRadius: {
-      pill: "50px",
-      circle: "100px",
-      icon: "100px",
-      md: "16px",
-      sm: "8px"
+      pill: 50,
+      circle: 100,
+      icon: 100,
+      md: 16,
+      sm: 8
     }
   }
 }

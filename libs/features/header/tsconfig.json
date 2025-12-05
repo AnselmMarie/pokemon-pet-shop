@@ -9,6 +9,9 @@
       "path": "../../services/cart-api"
     },
     {
+      "path": "../../ui/typography"
+    },
+    {
       "path": "../../ui/hideInMobile"
     },
     {

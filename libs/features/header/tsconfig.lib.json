@@ -38,6 +38,9 @@
       "path": "../../services/cart-api/tsconfig.lib.json"
     },
     {
+      "path": "../../ui/typography/tsconfig.lib.json"
+    },
+    {
       "path": "../../ui/hideInMobile/tsconfig.lib.json"
     },
     {
