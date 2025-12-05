@@ -72,8 +72,8 @@ export const pokeDetailTypeMap = new Map<string, object>([
   [
     'groundType',
     {
-      grassTypeImageBg:
-        'bg-veryDarkGrass bg-gradient-to-t from-veryDarkGrass to-lightGrass',
+      groundTypeImageBg:
+        'bg-veryDarkGround bg-gradient-to-t from-veryDarkGround to-lightGround',
     },
   ],
   [
