@@ -11,7 +11,7 @@ import { useUpdateCart } from '@services/cart-api';
 
 import { capitalizeName, removeHtmlCodeInString } from '@utils/textTransform';
 
-import { PokemonAbilityName } from '../components/pokemon.ability.name';
+import { PokemonAbilityName } from '../components/pokemon-ability-name';
 
 export const PokemonDetailModalBody = ({
   pokeCreature,

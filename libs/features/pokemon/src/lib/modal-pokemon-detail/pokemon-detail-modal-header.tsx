@@ -14,7 +14,7 @@ import {
 } from '@services/pokemon-api';
 
 import { HalfCircle } from './components/half.circle';
-import { pokeDetailTypeMap } from './pokemon.detail.type.map.util';
+import { pokeDetailTypeMap } from './pokemon-detail-type-map.util';
 
 export const PokemonDetailModalHeader = ({
   pokeCreature,

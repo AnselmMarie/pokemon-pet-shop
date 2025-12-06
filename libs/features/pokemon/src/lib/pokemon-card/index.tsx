@@ -11,11 +11,11 @@ import { isWeb } from '@utils/detect';
 import { capitalizeName } from '@utils/textTransform';
 import { getPokeTypePrefixClass } from '@utils/pokeType';
 
-import { PokemonAbilityName } from '../components/pokemon.ability.name';
-import { PokemonCardProps } from './pokemon.card.interface';
+import { PokemonAbilityName } from '../components/pokemon-ability-name';
+import { PokemonCardProps } from './pokemon-card.interface';
 
-import { pokeCardTypeMap } from './pokemon.card.type.map.util';
-import { PokemonDetailModal } from '../modalPokemonDetail/pokemonDetailModal';
+import { pokeCardTypeMap } from './pokemon-card-type-map.util';
+import { PokemonDetailModal } from '../modal-pokemon-detail/pokemon-detail-modal';
 
 export const PokemonCard = ({
   pokeCreature,

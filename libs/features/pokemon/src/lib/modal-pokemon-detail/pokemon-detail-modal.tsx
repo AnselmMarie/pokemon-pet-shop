@@ -6,8 +6,8 @@ import { Modal } from '@ui/modal';
 
 import { getPokeTypePrefixClass } from '@utils/pokeType';
 
-import { PokemonDetailModalBody } from './pokemonDetailModalBody';
-import { PokemonDetailModalHeader } from './pokemonDetailModalHeader';
+import { PokemonDetailModalBody } from './pokemon-detail-modal-body';
+import { PokemonDetailModalHeader } from './pokemon-detail-modal-header';
 
 export const PokemonDetailModal = ({
   pokeCreature,

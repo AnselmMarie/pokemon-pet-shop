@@ -8,7 +8,7 @@ import { useGetCart } from '@services/cart-api';
 
 import { pricingFormatUSD } from '@utils/pricing';
 
-import CartModalItem from './cart.modal.item';
+import CartModalItem from './cart-modal-item';
 
 export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
   const { data } = useGetCart();

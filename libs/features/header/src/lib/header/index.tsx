@@ -12,7 +12,7 @@ import { Typography } from '@ui/typography';
 
 import { useGetCart } from '@services/cart-api';
 
-import { NavMobileModal } from '../modalMobileNav/nav.mobile';
+import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { NAV_FEATURE_FLAG } from './header.const';
 import pokeshopLogo from './assets/pokeshop-logo.png';
 

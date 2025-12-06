@@ -7,7 +7,7 @@ import { Button } from '@ui/button';
 
 import { useGetPokemonList } from '@services/pokemon-api';
 
-import { PokemonCard } from '../pokemonCard';
+import { PokemonCard } from '../pokemon-card';
 import image from './assets/bulbasaur.small.gif';
 
 /**

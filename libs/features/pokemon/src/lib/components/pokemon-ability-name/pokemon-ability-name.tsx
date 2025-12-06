@@ -9,7 +9,7 @@ import { Skeleton } from '@ui/skeleton';
 import { capitalizeName } from '@utils/textTransform';
 
 import { PokemonAbilityNameProps } from './pokemon.ability.name.interface';
-import { pokeAbilityTypeMap } from './pokemon.ability.type.map.util';
+import { pokeAbilityTypeMap } from './pokemon-ability-type-map.util';
 
 export const PokemonAbilityName = ({
   abilityData,
