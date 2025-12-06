@@ -7,7 +7,7 @@ import { Box } from '@ui/box';
 import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
 import { Image } from '@ui/image';
-import { HideInMobile } from '@ui/hideInMobile';
+import { HideInMobile } from '@ui/hide-in-mobile';
 import { Typography } from '@ui/typography';
 
 import { useGetCart } from '@services/cart-api';

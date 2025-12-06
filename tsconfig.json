@@ -37,7 +37,7 @@
       "path": "./libs/ui/box"
     },
     {
-      "path": "./libs/ui/serverError"
+      "path": "./libs/ui/server-error"
     },
     {
       "path": "./libs/ui/typography"
@@ -67,7 +67,7 @@
       "path": "./libs/ui/input"
     },
     {
-      "path": "./libs/ui/hideInMobile"
+      "path": "./libs/ui/hide-in-mobile"
     },
     {
       "path": "./libs/features/switch-theme"
@@ -97,10 +97,10 @@
       "path": "./libs/utils/detect"
     },
     {
-      "path": "./libs/ui/iconPokeType"
+      "path": "./libs/ui/icon-poke-type"
     },
     {
-      "path": "./libs/ui/scrollWrapper"
+      "path": "./libs/ui/scroll-wrapper"
     },
     {
       "path": "./libs/ui/tag"

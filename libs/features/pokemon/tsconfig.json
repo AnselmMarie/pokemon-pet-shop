@@ -33,7 +33,7 @@
       "path": "../../ui/modal"
     },
     {
-      "path": "../../ui/scrollWrapper"
+      "path": "../../ui/scroll-wrapper"
     },
     {
       "path": "../../utils/text-transform"
@@ -45,10 +45,10 @@
       "path": "../../ui/typography"
     },
     {
-      "path": "../../ui/iconPokeType"
+      "path": "../../ui/icon-poke-type"
     },
     {
-      "path": "../../ui/hideInMobile"
+      "path": "../../ui/hide-in-mobile"
     },
     {
       "path": "../../ui/box"

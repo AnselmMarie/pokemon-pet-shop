@@ -67,18 +67,18 @@ export default {
         '../../libs/services/cart-api/src/index.ts'
       ),
       '@ui/switch': join(__dirname, '../../libs/ui/switch/src/index.ts'),
-      '@ui/hideInMobile': join(
+      '@ui/hide-in-mobile': join(
         __dirname,
-        '../../libs/ui/hideInMobile/src/index.ts'
+        '../../libs/ui/hide-in-mobile/src/index.ts'
       ),
       '@ui/icon': join(__dirname, '../../libs/ui/icon/src/index.ts'),
       '@ui/container': join(__dirname, '../../libs/ui/container/src/index.ts'),
       '@ui/image': join(__dirname, '../../libs/ui/image/src/index.ts'),
       '@ui/input': join(__dirname, '../../libs/ui/input/src/index.ts'),
       '@ui/modal': join(__dirname, '../../libs/ui/modal/src/index.ts'),
-      '@ui/scrollWrapper': join(
+      '@ui/scroll-wrapper': join(
         __dirname,
-        '../../libs/ui/scrollWrapper/src/index.ts'
+        '../../libs/ui/scroll-wrapper/src/index.ts'
       ),
     },
   },

@@ -41,7 +41,7 @@
       "path": "../../ui/typography/tsconfig.lib.json"
     },
     {
-      "path": "../../ui/hideInMobile/tsconfig.lib.json"
+      "path": "../../ui/hide-in-mobile/tsconfig.lib.json"
     },
     {
       "path": "../../ui/image/tsconfig.lib.json"

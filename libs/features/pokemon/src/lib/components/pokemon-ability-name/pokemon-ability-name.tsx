@@ -1,8 +1,8 @@
 import { ReactElement, useMemo } from 'react';
 
 import { Box } from '@ui/box';
-import { HideInMobile } from '@ui/hideInMobile';
-import { IconPokeType } from '@ui/iconPokeType';
+import { HideInMobile } from '@ui/hide-in-mobile';
+import { IconPokeType } from '@ui/icon-poke-type';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
 

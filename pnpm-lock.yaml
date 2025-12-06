@@ -360,11 +360,11 @@ importers:
 
   libs/ui/container: {}
 
-  libs/ui/hideInMobile: {}
+  libs/ui/hide-in-mobile: {}
 
   libs/ui/icon: {}
 
-  libs/ui/iconPokeType: {}
+  libs/ui/icon-poke-type: {}
 
   libs/ui/image: {}
 
@@ -374,9 +374,9 @@ importers:
 
   libs/ui/modal: {}
 
-  libs/ui/scrollWrapper: {}
+  libs/ui/scroll-wrapper: {}
 
-  libs/ui/serverError: {}
+  libs/ui/server-error: {}
 
   libs/ui/skeleton: {}
 

@@ -54,21 +54,21 @@ export default {
       '@ui/skeleton': join(__dirname, '../../libs/ui/skeleton/src/index.ts'),
       '@ui/modal': join(__dirname, '../../libs/ui/modal/src/index.ts'),
       '@ui/tag': join(__dirname, '../../libs/ui/tag/src/index.ts'),
-      '@ui/scrollWrapper': join(
+      '@ui/scroll-wrapper': join(
         __dirname,
-        '../../libs/ui/scrollWrapper/src/index.ts'
+        '../../libs/ui/scroll-wrapper/src/index.ts'
       ),
       '@ui/card': join(__dirname, '../../libs/ui/card/src/index.ts'),
-      '@ui/hideInMobile': join(
+      '@ui/hide-in-mobile': join(
         __dirname,
-        '../../libs/ui/hideInMobile/src/index.ts'
+        '../../libs/ui/hide-in-mobile/src/index.ts'
       ),
       '@ui/button': join(__dirname, '../../libs/ui/button/src/index.ts'),
       '@ui/image': join(__dirname, '../../libs/ui/image/src/index.ts'),
       '@ui/icon': join(__dirname, '../../libs/ui/icon/src/index.ts'),
-      '@ui/iconPokeType': join(
+      '@ui/icon-poke-type': join(
         __dirname,
-        '../../libs/ui/iconPokeType/src/index.ts'
+        '../../libs/ui/icon-poke-type/src/index.ts'
       ),
       '@ui/typography': join(
         __dirname,

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 
 import { Box } from '@ui/box';
-import { ScrollWrapper } from '@ui/scrollWrapper';
+import { ScrollWrapper } from '@ui/scroll-wrapper';
 import { Modal } from '@ui/modal';
 
 import { getPokeTypePrefixClass } from '@utils/poke-type';
