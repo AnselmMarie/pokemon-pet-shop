@@ -1,4 +1,4 @@
-declare module 'atomTheme/State' {
+declare module 'atom-theme/State' {
   import type { Atom, Getter, Setter } from 'jotai';
 
   export type Theme = 'light' | 'dark';

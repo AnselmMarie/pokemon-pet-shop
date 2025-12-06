@@ -1,4 +1,4 @@
-import type { Theme } from 'atomTheme/State';
+import type { Theme } from 'atom-theme/State';
 
 import { IconType } from '@ui/icon';
 

@@ -396,9 +396,9 @@ importers:
 
   libs/utils/text-transform: {}
 
-  remotes/atomTheme: {}
+  remotes/atom-theme: {}
 
-  remotes/atomTheme-e2e: {}
+  remotes/atom-theme-e2e: {}
 
   remotes/footer: {}
 
@@ -412,9 +412,9 @@ importers:
 
   remotes/homepage-e2e: {}
 
-  remotes/sideCart: {}
+  remotes/side-cart: {}
 
-  remotes/sideCart-e2e: {}
+  remotes/side-cart-e2e: {}
 
 packages:
   '@0no-co/graphql.web@1.2.0':

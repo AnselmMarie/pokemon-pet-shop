@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 
 import { Switch } from '@ui/switch';
 
-import { toggleThemeAtom } from 'atomTheme/State';
+import { toggleThemeAtom } from 'atom-theme/State';
 
 import { SwitchProps } from './switch-theme.interface';
 

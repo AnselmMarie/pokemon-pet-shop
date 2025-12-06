@@ -16,7 +16,7 @@ declare module 'homepage/Module' {
   export default Module;
 }
 
-declare module 'sideCart/Module' {
+declare module 'side-cart/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;

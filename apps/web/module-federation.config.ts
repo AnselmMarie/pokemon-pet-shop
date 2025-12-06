@@ -23,7 +23,7 @@ const config: ModuleFederationConfig = {
   //   ['footer', 'footer@http://localhost:4201/remoteEntry.js'],
   // ],
   remotes: ['homepage', 'header', 'footer'],
-  // remotes: ['header', 'footer', 'sideCart', 'homepage'],
+  // remotes: ['header', 'footer', 'side-cart', 'homepage'],
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {

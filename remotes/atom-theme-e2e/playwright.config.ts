@@ -24,7 +24,7 @@ export default defineConfig({
   },
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'pnpm exec nx run atomTheme:preview',
+    command: 'pnpm exec nx run atom-theme:preview',
     url: 'http://localhost:4208',
     reuseExistingServer: true,
     cwd: workspaceRoot,

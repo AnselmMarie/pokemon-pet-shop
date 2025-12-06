@@ -22,7 +22,7 @@
       "path": "./remotes/homepage"
     },
     {
-      "path": "./remotes/sideCart"
+      "path": "./remotes/side-cart"
     },
     {
       "path": "./libs/features/header"
@@ -109,10 +109,10 @@
       "path": "./libs/utils/pricing"
     },
     {
-      "path": "./remotes/atomTheme-e2e"
+      "path": "./remotes/atom-theme-e2e"
     },
     {
-      "path": "./remotes/atomTheme"
+      "path": "./remotes/atom-theme"
     },
     {
       "path": "./libs/services/cart-api"

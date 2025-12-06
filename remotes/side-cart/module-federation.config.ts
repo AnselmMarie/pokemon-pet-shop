@@ -4,7 +4,7 @@ import { workspaceRoot } from '@nx/devkit';
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
 
 const config: ModuleFederationConfig = {
-  name: 'sideCart',
+  name: 'side-cart',
   exposes: {
     './Module': './src/remote-entry.ts',
   },

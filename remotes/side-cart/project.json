@@ -1,13 +1,13 @@
 {
-  "name": "atomTheme",
+  "name": "side-cart",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "remotes/atomTheme/src",
+  "sourceRoot": "remotes/side-cart/src",
   "projectType": "application",
   "tags": [],
   "targets": {
     "serve": {
       "options": {
-        "port": 4208
+        "port": 4204
       },
       "dependsOn": ["typecheck"]
     },
