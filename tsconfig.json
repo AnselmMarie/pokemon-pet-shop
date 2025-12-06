@@ -118,7 +118,7 @@
       "path": "./libs/services/cart-api"
     },
     {
-      "path": "./libs/utils/pokeType"
+      "path": "./libs/utils/poke-type"
     }
   ]
 }

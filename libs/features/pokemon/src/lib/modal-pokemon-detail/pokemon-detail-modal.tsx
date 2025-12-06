@@ -4,7 +4,7 @@ import { Box } from '@ui/box';
 import { ScrollWrapper } from '@ui/scrollWrapper';
 import { Modal } from '@ui/modal';
 
-import { getPokeTypePrefixClass } from '@utils/pokeType';
+import { getPokeTypePrefixClass } from '@utils/poke-type';
 
 import { PokemonDetailModalBody } from './pokemon-detail-modal-body';
 import { PokemonDetailModalHeader } from './pokemon-detail-modal-header';

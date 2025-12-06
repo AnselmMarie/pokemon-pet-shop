@@ -9,7 +9,7 @@ import { Typography } from '@ui/typography';
 
 import { isWeb } from '@utils/detect';
 import { capitalizeName } from '@utils/textTransform';
-import { getPokeTypePrefixClass } from '@utils/pokeType';
+import { getPokeTypePrefixClass } from '@utils/poke-type';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
 import { PokemonCardProps } from './pokemon-card.interface';

@@ -6,7 +6,7 @@
       "path": "../../utils/detect"
     },
     {
-      "path": "../../utils/pokeType"
+      "path": "../../utils/poke-type"
     },
     {
       "path": "../../ui/button"

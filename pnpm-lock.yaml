@@ -294,6 +294,9 @@ importers:
       react-refresh:
         specifier: ~0.14.0
         version: 0.14.2
+      rimraf:
+        specifier: ^6.1.2
+        version: 6.1.2
       sd-tailwindcss-transformer:
         specifier: ^2.2.1
         version: 2.2.1(style-dictionary@5.1.1)
@@ -388,7 +391,7 @@ importers:
 
   libs/utils/detect: {}
 
-  libs/utils/pokeType: {}
+  libs/utils/poke-type: {}
 
   libs/utils/pricing: {}
 
@@ -413,14 +416,6 @@ importers:
   remotes/sideCart: {}
 
   remotes/sideCart-e2e: {}
-
-  remotes/storeCart: {}
-
-  remotes/storeCart-e2e: {}
-
-  remotes/storeTheme: {}
-
-  remotes/storeTheme-e2e: {}
 
 packages:
 
@@ -5739,6 +5734,10 @@ packages:
     engines: {node: 20 || >=22}
     hasBin: true
 
+  glob@13.0.0:
+    resolution: {integrity: sha512-tvZgpqk6fz4BaNZ66ZsRaZnbHvP/jG3uKJvAZOwEVUL4RTA5nJeeLYfyN9/VA8NX/V3IBG+hkeuGpKjvELkVhA==, tarball: https://registry.npmjs.org/glob/-/glob-13.0.0.tgz}
+    engines: {node: 20 || >=22}
+
   glob@6.0.4:
     resolution: {integrity: sha512-MKZeRNyYZAVVVG1oZeLaWie1uweH40m9AZwIwxyPbTSX4hHrVYSzLg0Ro5Z5R7XKkIX+Cc6oD1rqeDJnwsB8/A==, tarball: https://registry.npmjs.org/glob/-/glob-6.0.4.tgz}
     deprecated: Glob versions prior to v9 are no longer supported
@@ -7115,6 +7114,10 @@ packages:
 
   minimatch@10.0.3:
     resolution: {integrity: sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==, tarball: https://registry.npmjs.org/minimatch/-/minimatch-10.0.3.tgz}
+    engines: {node: 20 || >=22}
+
+  minimatch@10.1.1:
+    resolution: {integrity: sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==, tarball: https://registry.npmjs.org/minimatch/-/minimatch-10.1.1.tgz}
     engines: {node: 20 || >=22}
 
   minimatch@3.1.2:
@@ -8536,6 +8539,11 @@ packages:
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==, tarball: https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz}
     deprecated: Rimraf versions prior to v4 are no longer supported
+    hasBin: true
+
+  rimraf@6.1.2:
+    resolution: {integrity: sha512-cFCkPslJv7BAXJsYlK1dZsbP8/ZNLkCAQ0bi1hf5EKX2QHegmDFEFA6QhuYJlk7UDdc+02JjO80YSOrWPpw06g==, tarball: https://registry.npmjs.org/rimraf/-/rimraf-6.1.2.tgz}
+    engines: {node: 20 || >=22}
     hasBin: true
 
   rollup-plugin-copy@3.5.0:
@@ -17004,6 +17012,12 @@ snapshots:
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
 
+  glob@13.0.0:
+    dependencies:
+      minimatch: 10.1.1
+      minipass: 7.1.2
+      path-scurry: 2.0.0
+
   glob@6.0.4:
     dependencies:
       inflight: 1.0.6
@@ -18717,6 +18731,10 @@ snapshots:
     dependencies:
       '@isaacs/brace-expansion': 5.0.0
 
+  minimatch@10.1.1:
+    dependencies:
+      '@isaacs/brace-expansion': 5.0.0
+
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.12
@@ -20148,6 +20166,11 @@ snapshots:
   rimraf@3.0.2:
     dependencies:
       glob: 7.2.3
+
+  rimraf@6.1.2:
+    dependencies:
+      glob: 13.0.0
+      package-json-from-dist: 1.0.1
 
   rollup-plugin-copy@3.5.0:
     dependencies:

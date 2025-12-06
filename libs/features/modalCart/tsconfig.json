@@ -6,7 +6,7 @@
       "path": "../../ui/modal"
     },
     {
-      "path": "../../utils/pokeType"
+      "path": "../../utils/poke-type"
     },
     {
       "path": "../../utils/textTransform"

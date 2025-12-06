@@ -9,7 +9,7 @@ import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 
 import { pricingFormatUSD } from '@utils/pricing';
 import { capitalizeName } from '@utils/textTransform';
-import { getPokeTypePrefixClass } from '@utils/pokeType';
+import { getPokeTypePrefixClass } from '@utils/poke-type';
 import { cartModalTypeMap } from './cart-modal-type-map.util';
 
 const CartModalItem = ({ el, currIndex, lastIndex }: any): ReactElement => {
