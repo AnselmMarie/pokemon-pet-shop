@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 import { Svg, Path } from 'react-native-svg';
 
-import { IconSvgProps } from './icon.svg.interface';
+import { IconSvgProps } from './icon-svg.interface';
 
 const IconDragon = ({ size, fill = 'none' }: IconSvgProps): ReactElement => {
   return (

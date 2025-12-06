@@ -1,4 +1,4 @@
-import { IconPokeListType } from './iconPokeType.type';
+import { IconPokeListType } from './icon-poke-type.type';
 
 export interface IconPokeTypeProps {
   type: IconPokeListType;

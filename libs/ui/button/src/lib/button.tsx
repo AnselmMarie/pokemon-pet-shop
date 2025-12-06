@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useMemo, useState } from 'react';
 
-import ButtonElement from './button.element';
-import { ButtonProps } from './button.interface';
+import ButtonElement from './button-element';
+import { ButtonProps } from './button-interface';
 
 export const Button = ({
   type = 'primary',

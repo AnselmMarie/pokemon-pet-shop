@@ -4,7 +4,7 @@ import { ReactSVG } from 'react-svg';
 import { Skeleton } from '@ui/skeleton';
 
 // import { IconPokeTypeProps } from './icon.poke.type.interface';
-import { iconPokeSvgMap } from './icon.poke.type.util';
+import { iconPokeSvgMap } from './icon-poke-type.util';
 
 export const IconPokeType = ({
   type = 'grass',

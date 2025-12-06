@@ -5,7 +5,7 @@ import { capitalizeContent } from '@utils/textTransform';
 import { Skeleton } from '@ui/skeleton';
 
 // import { IconPokeTypeProps } from './icon.poke.type.interface';
-import { IconPokeSvgMap } from './icon.poke.type.util.native';
+import { IconPokeSvgMap } from './icon-poke-type.util.native';
 
 // classNameIcon = null,
 const Icon = ({

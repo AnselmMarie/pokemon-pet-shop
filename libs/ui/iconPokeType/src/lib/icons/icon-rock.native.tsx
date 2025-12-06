@@ -2,9 +2,9 @@ import { ReactElement } from 'react';
 
 import { Svg, Path } from 'react-native-svg';
 
-import { IconSvgProps } from './icon.svg.interface';
+import { IconSvgProps } from './icon-svg.interface';
 
-const IconPsychic = ({ size, fill = 'none' }: IconSvgProps): ReactElement => {
+const IconRock = ({ size, fill = 'none' }: IconSvgProps): ReactElement => {
   return (
     <Svg width={size} height={size} fill={fill} viewBox="0 0 512 512">
       <Path
@@ -17,4 +17,4 @@ const IconPsychic = ({ size, fill = 'none' }: IconSvgProps): ReactElement => {
   );
 };
 
-export { IconPsychic };
+export { IconRock };

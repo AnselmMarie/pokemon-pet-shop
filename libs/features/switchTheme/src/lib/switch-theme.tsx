@@ -5,7 +5,7 @@ import { Switch } from '@ui/switch';
 
 import { toggleThemeAtom } from 'atomTheme/State';
 
-import { SwitchProps } from './switchTheme.interface';
+import { SwitchProps } from './switch-theme.interface';
 
 /**
  * SwitchTheme

@@ -1,1 +1,1 @@
-export * from './lib/hideInMobile';
+export * from './lib/hide-in-mobile';

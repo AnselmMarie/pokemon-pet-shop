@@ -7,7 +7,7 @@ import { Image } from '@ui/image';
 import { Skeleton } from '@ui/skeleton';
 import { Typography } from '@ui/typography';
 
-import { ButtonProps } from './button.interface';
+import { ButtonProps } from './button-interface';
 
 const ButtonElement = ({
   className = '',
