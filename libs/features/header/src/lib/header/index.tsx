@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { SwitchTheme } from '@features/switchTheme';
-import { CartModal } from '@features/modalCart';
+import { SwitchTheme } from '@features/switch-theme';
+import { CartModal } from '@features/modal-cart';
 
 import { Box } from '@ui/box';
 import { Container } from '@ui/container';

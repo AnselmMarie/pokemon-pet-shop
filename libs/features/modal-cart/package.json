@@ -1,5 +1,5 @@
 {
-  "name": "@pokemon-pet-shop/switchTheme",
+  "name": "@pokemon-pet-shop/modal-cart",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

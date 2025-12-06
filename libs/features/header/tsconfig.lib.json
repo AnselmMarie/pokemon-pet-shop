@@ -56,10 +56,10 @@
       "path": "../../ui/box/tsconfig.lib.json"
     },
     {
-      "path": "../modalCart/tsconfig.lib.json"
+      "path": "../modal-cart/tsconfig.lib.json"
     },
     {
-      "path": "../switchTheme/tsconfig.lib.json"
+      "path": "../switch-theme/tsconfig.lib.json"
     }
   ]
 }

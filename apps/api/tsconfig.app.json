@@ -7,7 +7,7 @@
       "express",
       "pokemon/pricing",
       "cart",
-      "pokemon/evolutionChain"
+      "pokemon/evolution-chain"
     ],
     "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"

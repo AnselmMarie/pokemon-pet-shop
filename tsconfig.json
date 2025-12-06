@@ -70,10 +70,10 @@
       "path": "./libs/ui/hideInMobile"
     },
     {
-      "path": "./libs/features/switchTheme"
+      "path": "./libs/features/switch-theme"
     },
     {
-      "path": "./libs/features/modalCart"
+      "path": "./libs/features/modal-cart"
     },
     {
       "path": "./libs/ui/modal"

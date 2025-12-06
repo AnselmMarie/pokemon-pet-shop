@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { SwitchTheme } from '@features/switchTheme';
+import { SwitchTheme } from '@features/switch-theme';
 
 import { Modal } from '@ui/modal';
 import { Box } from '@ui/box';

@@ -342,11 +342,11 @@ importers:
 
   libs/features/header: {}
 
-  libs/features/modalCart: {}
+  libs/features/modal-cart: {}
 
   libs/features/pokemon: {}
 
-  libs/features/switchTheme: {}
+  libs/features/switch-theme: {}
 
   libs/services/cart-api: {}
 

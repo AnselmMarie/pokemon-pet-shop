@@ -27,10 +27,10 @@
       "path": "../../ui/box"
     },
     {
-      "path": "../modalCart"
+      "path": "../modal-cart"
     },
     {
-      "path": "../switchTheme"
+      "path": "../switch-theme"
     },
     {
       "path": "./tsconfig.lib.json"

@@ -33,13 +33,13 @@ export default {
         __dirname,
         '../../libs/features/header/src/index.ts'
       ),
-      '@features/modalCart': join(
+      '@features/modal-cart': join(
         __dirname,
-        '../../libs/features/modalCart/src/index.ts'
+        '../../libs/features/modal-cart/src/index.ts'
       ),
-      '@features/switchTheme': join(
+      '@features/switch-theme': join(
         __dirname,
-        '../../libs/features/switchTheme/src/index.ts'
+        '../../libs/features/switch-theme/src/index.ts'
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
       '@utils/api-client': join(
