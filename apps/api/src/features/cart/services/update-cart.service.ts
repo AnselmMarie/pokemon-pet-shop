@@ -5,12 +5,15 @@ import { pricingFormat } from '@utils/pricing';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
-import { getCartDataCall, updateCartDataCall } from '../../../database/repositories/cart.repository';
-import { getPokemonSpeciesService } from '../../pokemon/services/pokemon.species.service';
-import { getPokemonDetailService } from '../../pokemon/services/pokemon.detail.service';
+} from '../../../shared/middleware';
+import {
+  getCartDataCall,
+  updateCartDataCall,
+} from '../../../database/repositories';
+import { getPokemonSpeciesService } from '../../pokemon/services/pokemon-species.service';
+import { getPokemonDetailService } from '../../pokemon/services/pokemon-detail.service';
 import { getPricingService } from '../../pokemon/services/pricing.service';
-import { getPokemonEvolutionChainService } from '../../pokemon/services/pokemon.evolution.chain.service';
+import { getPokemonEvolutionChainService } from '../../pokemon/services/pokemon-evolution-chain.service';
 
 const doesItemExistKeyFn = (
   data: Cart.Data[],
@@ -146,4 +149,3 @@ export const updateCartItemService = async (payload: Cart.Payload) => {
 
   return finalPayload;
 };
-

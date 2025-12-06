@@ -3,11 +3,11 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
+} from '../../../shared/middleware';
 
 import { PokemonSpeciesParamsProps } from '../pokemon.types';
-import { getPokemonEvolutionChainService } from '../services/pokemon.evolution.chain.service';
-import { getPokemonSpeciesService } from '../services/pokemon.species.service';
+import { getPokemonEvolutionChainService } from '../services/pokemon-evolution-chain.service';
+import { getPokemonSpeciesService } from '../services/pokemon-species.service';
 
 const getPokemonSpeciesController = async (
   req: Request<PokemonSpeciesParamsProps, null, null, null>,
@@ -43,4 +43,3 @@ const getPokemonSpeciesController = async (
 };
 
 export { getPokemonSpeciesController };
-

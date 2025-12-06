@@ -1,4 +1,4 @@
-import { errFormat500ResponseUtil } from '../../../shared/middleware/error.middleware';
+import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { PokemonEvolutionChainParamsProps } from '../pokemon.types';
 
 export const getPokemonEvolutionChainService = async ({
@@ -15,4 +15,3 @@ export const getPokemonEvolutionChainService = async ({
   }
   throw res;
 };
-

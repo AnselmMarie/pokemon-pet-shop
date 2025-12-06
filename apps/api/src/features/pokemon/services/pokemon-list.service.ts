@@ -1,4 +1,4 @@
-import { errFormat500ResponseUtil } from '../../../shared/middleware/error.middleware';
+import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../constants';
 import { PokemonListQueryProps } from '../pokemon.types';
 

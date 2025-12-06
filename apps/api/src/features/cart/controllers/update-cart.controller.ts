@@ -3,9 +3,9 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
+} from '../../../shared/middleware';
 import type { CartBodyProps } from '../cart.types';
-import { updateCartItemService } from '../services/update.cart.service';
+import { updateCartItemService } from '../services/update-cart.service';
 
 export const updateCartItemController = async (
   req: Request<null, null, CartBodyProps, null>,
@@ -23,4 +23,3 @@ export const updateCartItemController = async (
     res.status(err?.status).json(errFormatResponseUtil(err));
   }
 };
-

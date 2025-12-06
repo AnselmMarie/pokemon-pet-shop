@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { errFormat500ResponseUtil } from '../../../shared/middleware/error.middleware';
+import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { PokemonDetailQueryProps } from '../pokemon.types';
 
 export const getPokemonDetailService = async ({
@@ -35,4 +35,3 @@ export const getPokemonDetailService = async ({
     };
   }
 };
-

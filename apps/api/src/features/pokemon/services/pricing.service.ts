@@ -1,5 +1,5 @@
-import { errFormat500ResponseUtil } from '../../../shared/middleware/error.middleware';
-import { getPricingDataCall } from '../../../database/repositories/pokemon.repository';
+import { errFormat500ResponseUtil } from '../../../shared/middleware';
+import { getPricingDataCall } from '../../../database/repositories';
 
 const getPricingService = async () => {
   return await getPricingDataCall().catch(() => {
@@ -8,4 +8,3 @@ const getPricingService = async () => {
 };
 
 export { getPricingService };
-

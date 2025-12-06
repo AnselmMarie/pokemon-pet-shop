@@ -3,12 +3,12 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
+} from '../../../shared/middleware';
 
 import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../constants';
 import { PokemonListQueryProps } from '../pokemon.types';
-import { getPokemonDetailService } from '../services/pokemon.detail.service';
-import { getPokemonListService } from '../services/pokemon.list.service';
+import { getPokemonDetailService } from '../services/pokemon-detail.service';
+import { getPokemonListService } from '../services/pokemon-list.service';
 
 const combineListAndDetailDataUtil = (
   pokemonList: any,

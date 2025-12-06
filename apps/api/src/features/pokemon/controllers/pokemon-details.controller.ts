@@ -3,10 +3,10 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
+} from '../../../shared/middleware';
 
 import { PokemonDetailsParamsProps } from '../pokemon.types';
-import { getPokemonDetailService } from '../services/pokemon.detail.service';
+import { getPokemonDetailService } from '../services/pokemon-detail.service';
 
 const getPokemonDetailsController = async (
   req: Request<PokemonDetailsParamsProps, null, null, null>,
@@ -28,4 +28,3 @@ const getPokemonDetailsController = async (
 };
 
 export { getPokemonDetailsController };
-

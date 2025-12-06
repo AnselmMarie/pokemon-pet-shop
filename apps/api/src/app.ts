@@ -1,7 +1,6 @@
 import express from 'express';
 import { corsConfig } from './config';
-import { cacheMiddleware } from './shared/middleware/cache.middleware';
-import { errorMiddleware } from './shared/middleware/error.middleware';
+import { cacheMiddleware, errorMiddleware } from './shared/middleware';
 import { registerRoutes } from './routes';
 
 const app = express();
@@ -20,4 +19,3 @@ registerRoutes(app);
 app.use(errorMiddleware);
 
 export { app };
-

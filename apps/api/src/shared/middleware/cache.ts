@@ -8,7 +8,6 @@ const cacheMiddleware = (req: any, res: any, next: any) => {
   const cachedResponse = !noCaching ? cache.get(key) : null;
 
   if (cachedResponse) {
-    console.log('cached');
     return res.send(cachedResponse);
   }
 
@@ -23,4 +22,3 @@ const cacheMiddleware = (req: any, res: any, next: any) => {
 };
 
 export { cacheMiddleware };
-

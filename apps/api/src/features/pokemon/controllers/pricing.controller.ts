@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
+} from '../../../shared/middleware/error';
 import { getPricingService } from '../services/pricing.service';
 
 const getPricingController = async (
@@ -15,10 +15,9 @@ const getPricingController = async (
       throw errFormat500ResponseUtil();
     });
     res.status(200).json(finalRes);
-  } catch (err) {
+  } catch (err: any) {
     res.status(err?.status).json(errFormatResponseUtil(err));
   }
 };
 
 export { getPricingController };
-

@@ -3,8 +3,8 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
-import { getCartService } from '../services/get.cart.service';
+} from '../../../shared/middleware/error';
+import { getCartService } from '../services/get-cart.service';
 
 export const getCartController = async (
   req: Request<null, null, null, null>,
@@ -20,4 +20,3 @@ export const getCartController = async (
     res.status(err?.status).json(errFormatResponseUtil(err));
   }
 };
-

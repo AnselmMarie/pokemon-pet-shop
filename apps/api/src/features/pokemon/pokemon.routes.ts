@@ -1,8 +1,8 @@
 import express from 'express';
 
-import { getPokemonDetailsController } from './controllers/pokemon.details.controller';
-import { getPokemonListController } from './controllers/pokemon.list.controller';
-import { getPokemonSpeciesController } from './controllers/pokemon.species.controller';
+import { getPokemonDetailsController } from './controllers/pokemon-details.controller';
+import { getPokemonListController } from './controllers/pokemon-list.controller';
+import { getPokemonSpeciesController } from './controllers/pokemon-species.controller';
 import { getPricingController } from './controllers/pricing.controller';
 
 const pokemonRoute: any = express.Router();

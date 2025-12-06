@@ -3,9 +3,9 @@ import { Request, Response } from 'express';
 import {
   errFormat500ResponseUtil,
   errFormatResponseUtil,
-} from '../../../shared/middleware/error.middleware';
+} from '../../../shared/middleware/error';
 import { CartParamsProps } from '../cart.types';
-import { deleteCartItemService } from '../services/delete.cart.service';
+import { deleteCartItemService } from '../services/delete-cart.service';
 
 export const deleteCartItemController = async (
   req: Request<CartParamsProps, null, null, null>,
@@ -23,4 +23,3 @@ export const deleteCartItemController = async (
     res.status(err?.status).json(errFormatResponseUtil(err));
   }
 };
-
