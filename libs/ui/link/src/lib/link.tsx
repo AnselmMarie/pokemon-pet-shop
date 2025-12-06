@@ -3,7 +3,7 @@ import { PropsWithChildren, ReactElement } from 'react';
 import { Box } from '@ui/box';
 
 import { LinkProps } from './link.interface';
-import { openLinkUtil } from './open.link.util';
+import { openLinkUtil } from './open-link.util';
 
 export const Link = ({
   link = null,

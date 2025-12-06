@@ -1,1 +1,1 @@
-export * from './lib/scrollWrapper';
+export * from './lib/scroll-wrapper';

@@ -7,7 +7,7 @@ import { ReactElement } from 'react';
 import { Box } from '@ui/box';
 import { Icon } from '@ui/icon';
 
-import InputElement from './input.element';
+import InputElement from './input-element';
 import { InputProps } from './input.interface';
 // import styles from './input.module.css';
 

@@ -2,7 +2,12 @@ import { PropsWithChildren, useEffect, useMemo, useState } from 'react';
 
 import { Box } from '@ui/box';
 
-import { ModalBody, ModalCard, ModalClose, ModalTitle } from './modalBreakdown';
+import {
+  ModalBody,
+  ModalCard,
+  ModalClose,
+  ModalTitle,
+} from './modal-breakdown';
 
 export const Modal = ({
   title = '',

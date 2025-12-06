@@ -1,3 +1,3 @@
-export * from './lib/capitalizeContent';
-export * from './lib/capitalizeName';
-export * from './lib/removeHtmlCodeInString';
+export * from './lib/capitalize-content';
+export * from './lib/capitalize-name';
+export * from './lib/remove-html-code-in-string';

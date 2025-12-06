@@ -3,7 +3,7 @@ import type {
   AsyncStorage,
 } from 'jotai/vanilla/utils/atomWithStorage';
 
-import { createInMemoryStorage } from './inStoreStorage';
+import { createInMemoryStorage } from './in-store-storage';
 
 export const createStorage = <T>(): SyncStorage<T> | AsyncStorage<T> => {
   let AsyncStorageModule: any;

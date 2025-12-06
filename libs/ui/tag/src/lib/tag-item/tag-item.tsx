@@ -6,7 +6,7 @@ import { Typography } from '@ui/typography';
 import { capitalizeName } from '@utils/textTransform';
 
 import type { TagProps } from './tagItem.interface';
-import { pokeTagTypeMap } from './pokemon.tag.type.map.util';
+import { pokeTagTypeMap } from './pokemon-tag-type-map.util';
 
 export const TagItem = ({
   name = '',
