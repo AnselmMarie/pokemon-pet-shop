@@ -9,7 +9,7 @@
       "path": "./tsconfig.spec.json"
     },
     {
-      "path": "../../utils/apiClient"
+      "path": "../../utils/api-client"
     }
   ],
   "extends": "../../../tsconfig.base.json"

@@ -5,7 +5,7 @@ import { Image } from '@ui/image';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
 
-import { capitalizeName } from '@utils/textTransform';
+import { capitalizeName } from '@utils/text-transform';
 import { pricingFormat } from '@utils/pricing';
 
 import {

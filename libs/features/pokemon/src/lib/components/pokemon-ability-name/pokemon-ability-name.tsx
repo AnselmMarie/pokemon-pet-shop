@@ -6,7 +6,7 @@ import { IconPokeType } from '@ui/iconPokeType';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
 
-import { capitalizeName } from '@utils/textTransform';
+import { capitalizeName } from '@utils/text-transform';
 
 import { PokemonAbilityNameProps } from './pokemon.ability.name.interface';
 import { pokeAbilityTypeMap } from './pokemon-ability-type-map.util';

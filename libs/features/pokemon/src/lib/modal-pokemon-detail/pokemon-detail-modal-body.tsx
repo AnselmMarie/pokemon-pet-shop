@@ -9,7 +9,7 @@ import { TagWrapper, TagItem } from '@ui/tag';
 import { useGetPokemonSpecies } from '@services/pokemon-api';
 import { useUpdateCart } from '@services/cart-api';
 
-import { capitalizeName, removeHtmlCodeInString } from '@utils/textTransform';
+import { capitalizeName, removeHtmlCodeInString } from '@utils/text-transform';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
 

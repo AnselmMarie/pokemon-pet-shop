@@ -82,10 +82,10 @@
       "path": "./libs/services/pokemon-api"
     },
     {
-      "path": "./libs/utils/apiClient"
+      "path": "./libs/utils/api-client"
     },
     {
-      "path": "./libs/utils/textTransform"
+      "path": "./libs/utils/text-transform"
     },
     {
       "path": "./libs/ui/card"

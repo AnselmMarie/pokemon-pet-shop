@@ -36,7 +36,7 @@
       "path": "../../ui/modal/tsconfig.lib.json"
     },
     {
-      "path": "../../utils/textTransform/tsconfig.lib.json"
+      "path": "../../utils/text-transform/tsconfig.lib.json"
     },
     {
       "path": "../../utils/poke-type/tsconfig.lib.json"

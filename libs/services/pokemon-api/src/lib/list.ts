@@ -1,6 +1,6 @@
 import { useInfiniteQuery, InfiniteData } from '@tanstack/react-query';
 
-import { axiosInstance } from '@utils/apiClient';
+import { axiosInstance } from '@utils/api-client';
 
 export const useGetPokemonList = () => {
   const queryKey = ['pokemon-list'];

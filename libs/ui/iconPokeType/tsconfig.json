@@ -12,7 +12,7 @@
       "path": "../skeleton"
     },
     {
-      "path": "../../utils/textTransform"
+      "path": "../../utils/text-transform"
     }
   ],
   "extends": "../../../tsconfig.base.json"

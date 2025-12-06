@@ -42,17 +42,17 @@ export default {
         '../../libs/features/switchTheme/src/index.ts'
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
-      '@utils/apiClient': join(
+      '@utils/api-client': join(
         __dirname,
-        '../../libs/utils/apiClient/src/index.ts'
+        '../../libs/utils/api-client/src/index.ts'
       ),
       '@utils/poke-type': join(
         __dirname,
         '../../libs/utils/poke-type/src/index.ts'
       ),
-      '@utils/textTransform': join(
+      '@utils/text-transform': join(
         __dirname,
-        '../../libs/utils/textTransform/src/index.ts'
+        '../../libs/utils/text-transform/src/index.ts'
       ),
       '@utils/pricing': join(
         __dirname,

@@ -1,6 +1,6 @@
 import { memo, ReactElement, useMemo } from 'react';
 
-import { capitalizeContent } from '@utils/textTransform';
+import { capitalizeContent } from '@utils/text-transform';
 
 import { Skeleton } from '@ui/skeleton';
 

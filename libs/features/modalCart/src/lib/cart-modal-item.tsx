@@ -8,7 +8,7 @@ import { Icon } from '@ui/icon';
 import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 
 import { pricingFormatUSD } from '@utils/pricing';
-import { capitalizeName } from '@utils/textTransform';
+import { capitalizeName } from '@utils/text-transform';
 import { getPokeTypePrefixClass } from '@utils/poke-type';
 import { cartModalTypeMap } from './cart-modal-type-map.util';
 

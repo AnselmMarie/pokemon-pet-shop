@@ -33,7 +33,7 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../utils/apiClient/tsconfig.lib.json"
+      "path": "../../utils/api-client/tsconfig.lib.json"
     }
   ]
 }
