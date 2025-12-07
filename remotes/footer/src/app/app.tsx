@@ -2,8 +2,6 @@ import { Footer } from '@features/footer';
 
 import '../styles.css';
 
-export function App() {
+export default function App() {
   return <Footer />;
 }
-
-export default App;

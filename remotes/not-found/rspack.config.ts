@@ -24,6 +24,15 @@ export default {
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
   },
+  resolve: {
+    alias: {
+      'react-native': require.resolve('react-native-web'),
+      '@features/page-not-found': join(
+        __dirname,
+        '../../libs/features/page-not-found/src/index.ts'
+      ),
+    },
+  },
   plugins: [
     new NxAppRspackPlugin({
       tsConfig: './tsconfig.app.json',
