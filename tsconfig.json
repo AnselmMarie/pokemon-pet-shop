@@ -119,6 +119,12 @@
     },
     {
       "path": "./libs/utils/poke-type"
+    },
+    {
+      "path": "./remotes/not-found-e2e"
+    },
+    {
+      "path": "./remotes/not-found"
     }
   ]
 }

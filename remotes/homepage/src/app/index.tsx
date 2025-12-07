@@ -1,8 +1,6 @@
-import { RouterProvider } from '@tanstack/react-router';
-
-import { router } from '../router';
+import { PokemonList } from '@features/pokemon';
 import '../styles.css';
 
 export default function HomepageModule() {
-  return <RouterProvider router={router} />;
+  return <PokemonList />;
 }

@@ -33,6 +33,7 @@
       "footer/Module": ["remotes/footer/src/remote-entry.ts"],
       "header/Module": ["remotes/header/src/remote-entry.ts"],
       "homepage/Module": ["remotes/homepage/src/remote-entry.ts"],
+      "not-found/Module": ["remotes/not-found/src/remote-entry.ts"],
       "side-cart/Module": ["remotes/side-cart/src/remote-entry.ts"],
       "storeCart/Module": ["remotes/storeCart/src/remote-entry.ts"],
       "storeTheme/Module": ["remotes/storeTheme/src/remote-entry.ts"]

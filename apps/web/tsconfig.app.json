@@ -48,6 +48,9 @@
       "path": "../../libs/ds-tokens/tsconfig.lib.json"
     },
     {
+      "path": "../../remotes/not-found/tsconfig.app.json"
+    },
+    {
       "path": "../../remotes/homepage/tsconfig.app.json"
     },
     {
