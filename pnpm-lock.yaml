@@ -355,7 +355,7 @@ importers:
 
   libs/services/pokemon-api: {}
 
-  libs/states/side-cart-modal: {}
+  libs/states/atom-side-cart: {}
 
   libs/ui/box: {}
 

@@ -1,5 +1,5 @@
 export default {
-  displayName: '@pokemon-pet-shop/side-cart-modal',
+  displayName: '@pokemon-pet-shop/atom-side-cart',
   preset: '../../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
