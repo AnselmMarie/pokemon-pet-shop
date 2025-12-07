@@ -1,1 +1,1 @@
-export * from './lib/getPokeTypePrefixClass';
+export * from './lib/get-poke-type-prefix-class';

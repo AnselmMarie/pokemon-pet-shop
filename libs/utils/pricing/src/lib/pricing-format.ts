@@ -1,4 +1,4 @@
-import { pricingFormatUSD } from './pricingFormatCountry';
+import { pricingFormatUSD } from './pricing-format-country';
 
 /** @todo I need to update this code to deal with possible recursive object and root array. See Eevee 215 and evolutions */
 const checkChain = (

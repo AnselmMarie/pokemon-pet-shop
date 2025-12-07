@@ -8,3 +8,4 @@ packages:
   - 'remotes/*'
   - 'libs/services/*'
   - 'libs/utils/*'
+  - 'libs/states/*'

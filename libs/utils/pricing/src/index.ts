@@ -1,2 +1,2 @@
-export * from './lib/pricingFormat';
-export * from './lib/pricingFormatCountry';
+export * from './lib/pricing-format';
+export * from './lib/pricing-format-country';
