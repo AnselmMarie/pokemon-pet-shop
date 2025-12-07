@@ -31,13 +31,13 @@ export const CartModal = (): ReactElement => {
     >
       <ModalScroll>
         <Box className="pb-[150px]">
-          {(data?.data ?? []).map((el: Cart.Data[], i: number) => {
+          {(data?.data ?? []).map((el: Cart.Data, i: number) => {
             return (
               <CartModalItem
                 key={i}
                 el={el}
                 currIndex={i}
-                lastIndex={data?.data.length - 1}
+                lastIndex={data?.data ? data?.data.length - 1 : 0}
               />
             );
           })}
@@ -47,7 +47,7 @@ export const CartModal = (): ReactElement => {
       <Box className="rounded-b-sm w-full absolute bottom-[0px] flex flex-row justify-between items-center p-md bg-lightGrey">
         <Typography className="font-bold text-lg">Total</Typography>
         <Typography className="font-bold text-lg">
-          {pricingFormatUSD(data?.total)}
+          {pricingFormatUSD(Number(data?.total))}
         </Typography>
       </Box>
     </Modal>

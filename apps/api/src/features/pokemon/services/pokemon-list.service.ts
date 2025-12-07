@@ -5,7 +5,7 @@ import { PokemonListQueryProps } from '../pokemon.types';
 export const getPokemonListService = async ({
   limit = DEFAULT_LIMIT,
   offset = DEFAULT_OFFSET,
-}: PokemonListQueryProps) => {
+}: PokemonListQueryProps): Promise<Pokemon.Base> => {
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
   ).catch(() => {
@@ -13,8 +13,8 @@ export const getPokemonListService = async ({
   });
 
   if (res.ok) {
-    return await res.json();
+    return (await res.json()) as Pokemon.Base;
   }
 
-  return res;
+  throw res;
 };

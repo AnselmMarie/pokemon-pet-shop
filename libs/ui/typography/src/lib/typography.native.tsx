@@ -9,7 +9,7 @@ export const Typography = ({
   onClick,
 }: PropsWithChildren<TypographyProps>): ReactElement => {
   return (
-    <Text style={className} onPress={onClick}>
+    <Text className={className} onPress={onClick}>
       {children}
     </Text>
   );

@@ -51,19 +51,26 @@ export const PokemonList = (): ReactElement => {
   return (
     <>
       <Box className="flex justify-center flex-wrap gap-md m-lg pt-lg">
-        {(newData ?? []).map((arr: any, i: number): ReactElement => {
-          return (
-            <Fragment key={i}>
-              {(arr?.data ?? []).map((el: any, i: number) => (
-                <PokemonCard
-                  key={el?.name || i}
-                  pokeCreature={el}
-                  isLoading={isDataLoading}
-                />
-              ))}
-            </Fragment>
-          );
-        })}
+        {(newData ?? []).map(
+          (
+            arr: { data: (PokemonDetail.Base & { name: string })[] },
+            i: number
+          ): ReactElement => {
+            return (
+              <Fragment key={i}>
+                {(arr?.data ?? []).map(
+                  (el: PokemonDetail.Base & { name: string }, i: number) => (
+                    <PokemonCard
+                      key={el?.name || i}
+                      pokeCreature={el}
+                      isLoading={isDataLoading}
+                    />
+                  )
+                )}
+              </Fragment>
+            );
+          }
+        )}
       </Box>
       {hasNextPage ? (
         <Box className="flex justify-center my-md">

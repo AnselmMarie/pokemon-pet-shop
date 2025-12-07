@@ -11,10 +11,10 @@ import { getPokemonDetailService } from '../services/pokemon-detail.service';
 import { getPokemonListService } from '../services/pokemon-list.service';
 
 const combineListAndDetailDataUtil = (
-  pokemonList: any,
-  detailPromisesRes: any
+  pokemonList: Pokemon.Base,
+  detailPromisesRes: (PokemonDetail.Base | { id: string; err: unknown })[]
 ) => {
-  return (pokemonList?.results ?? []).map((el: any, i: number) => {
+  return (pokemonList?.results ?? []).map((el: Pokemon.Creature, i: number) => {
     return {
       ...el,
       ...detailPromisesRes[i + 1],
@@ -22,7 +22,7 @@ const combineListAndDetailDataUtil = (
   });
 };
 
-const getPokemonListController = async (
+export const getPokemonListController = async (
   req: Request<null, null, null, PokemonListQueryProps>,
   res: Response
 ) => {
@@ -60,9 +60,9 @@ const getPokemonListController = async (
     );
 
     res.status(200).json(finalRes);
-  } catch (err: any) {
-    res.status(err?.status).json(errFormatResponseUtil(err));
+  } catch (err: unknown) {
+    res
+      .status((err as { status: number })?.status || 500)
+      .json(errFormatResponseUtil(err));
   }
 };
-
-export { getPokemonListController };

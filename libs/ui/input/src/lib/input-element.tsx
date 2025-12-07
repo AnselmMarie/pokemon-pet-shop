@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-const Input = ({ className = '' }: any): ReactElement => {
+const Input = ({ className = '' }: { className?: string }): ReactElement => {
   return (
     <input
       className={`w-full ${className}`}

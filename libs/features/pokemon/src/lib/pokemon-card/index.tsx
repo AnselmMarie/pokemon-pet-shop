@@ -12,10 +12,14 @@ import { capitalizeName } from '@utils/text-transform';
 import { getPokeTypePrefixClass } from '@utils/poke-type';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
-import { PokemonCardProps } from './pokemon-card.interface';
+import { PokemonDetailModal } from '../modal-pokemon-detail/pokemon-detail-modal';
 
 import { pokeCardTypeMap } from './pokemon-card-type-map.util';
-import { PokemonDetailModal } from '../modal-pokemon-detail/pokemon-detail-modal';
+
+interface PokemonCardProps {
+  pokeCreature: PokemonDetail.Base & { name: string };
+  isLoading: boolean;
+}
 
 export const PokemonCard = ({
   pokeCreature,
@@ -106,7 +110,7 @@ export const PokemonCard = ({
 
             {(pokeCreature?.abilities ?? []).map(
               (
-                abilityObj: any, // PokemonDetailAbilityObj,
+                abilityObj: PokemonDetail.PokemonDetailAbility,
                 i: number
               ): ReactElement | null => {
                 if (i > 1) {

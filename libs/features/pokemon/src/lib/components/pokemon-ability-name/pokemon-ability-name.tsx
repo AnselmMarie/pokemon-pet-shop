@@ -8,8 +8,16 @@ import { Skeleton } from '@ui/skeleton';
 
 import { capitalizeName } from '@utils/text-transform';
 
-import { PokemonAbilityNameProps } from './pokemon.ability.name.interface';
 import { pokeAbilityTypeMap } from './pokemon-ability-type-map.util';
+
+interface PokemonAbilityNameProps {
+  abilityData: PokemonDetail.PokemonDetailAbility;
+  typeData: PokemonDetail.PokemonDetailTypes[];
+  pokeTypeClass: PokemonTypes.IconPokeListType;
+  showAtkLine?: boolean;
+  displayInDetail?: boolean;
+  isLoading?: boolean;
+}
 
 export const PokemonAbilityName = ({
   abilityData,
@@ -69,7 +77,7 @@ export const PokemonAbilityName = ({
         }`}
       >
         <IconPokeType
-          type={typeData?.[0]?.type?.name}
+          type={typeData?.[0]?.type?.name as PokemonTypes.IconPokeList}
           size={displayInDetail ? 18 : 10}
         />
       </Box>

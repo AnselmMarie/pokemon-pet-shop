@@ -4,15 +4,14 @@ import { capitalizeContent } from '@utils/text-transform';
 
 import { Skeleton } from '@ui/skeleton';
 
-// import { IconPokeTypeProps } from './icon.poke.type.interface';
 import { IconPokeSvgMap } from './icon-poke-type.util.native';
+import { IconPokeTypeProps } from './icon-poke-type.interface';
 
-// classNameIcon = null,
 const Icon = ({
   type = 'grass',
   size = 32,
   isLoading = false,
-}: any): ReactElement => {
+}: IconPokeTypeProps): ReactElement => {
   const IconComponent = useMemo(() => {
     return IconPokeSvgMap[`Icon${capitalizeContent(type)}`];
   }, [type]);
@@ -23,7 +22,7 @@ const Icon = ({
 
   return (
     <IconComponent
-      size={size}
+      size={String(size)}
       // fill={color}
       // className={classNameIcon}
       // onClick={iconClick}

@@ -7,10 +7,10 @@ import { InputTypeEnum } from './input.enum';
 export interface InputProps {
   name?: string;
   type?: InputTypeEnum;
-  control?: any;
-  value?: any;
-  iconClassname?: any;
-  appendIcon?: any | null;
-  defaultValue?: any;
+  control?: unknown;
+  value?: string | number;
+  iconClassname?: string;
+  appendIcon?: unknown;
+  defaultValue?: string | number;
   onChange?: () => void;
 }

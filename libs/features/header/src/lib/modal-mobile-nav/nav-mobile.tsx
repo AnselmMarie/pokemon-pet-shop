@@ -5,7 +5,15 @@ import { SwitchTheme } from '@features/switch-theme';
 import { Modal } from '@ui/modal';
 import { Box } from '@ui/box';
 
-export const NavMobileModal = ({ isOpen, onCloseModal }: any): ReactElement => {
+interface NavMobileModalProps {
+  isOpen: boolean;
+  onCloseModal: () => void;
+}
+
+export const NavMobileModal = ({
+  isOpen,
+  onCloseModal,
+}: NavMobileModalProps): ReactElement => {
   return (
     <Modal
       isOpen={isOpen}

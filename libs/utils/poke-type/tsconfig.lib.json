@@ -5,7 +5,9 @@
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",
-      "@nx/react/typings/image.d.ts"
+      "@nx/react/typings/image.d.ts",
+      "pokemon/detail",
+      "pokemon/types"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",

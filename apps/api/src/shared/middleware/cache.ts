@@ -1,24 +1,32 @@
+import { Request, Response, NextFunction } from 'express';
 import NodeCache from 'node-cache';
 
 const cache = new NodeCache({ stdTTL: 100, checkperiod: 120 });
 
-const cacheMiddleware = (req: any, res: any, next: any) => {
+export const cacheMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   const noCaching = req.originalUrl.includes('cart');
   const key = req.originalUrl;
   const cachedResponse = !noCaching ? cache.get(key) : null;
 
   if (cachedResponse) {
-    return res.send(cachedResponse);
+    res.send(cachedResponse);
+    return;
   }
 
-  res.sendResponse = res.send;
-  res.send = (body: any) => {
+  const resWithSendResponse = res as unknown as {
+    sendResponse: (body: unknown) => import('express').Response;
+  } & import('express').Response;
+
+  resWithSendResponse.sendResponse = res.send;
+  res.send = (body: unknown) => {
     if (!noCaching) {
       cache.set(key, body);
     }
-    res.sendResponse(body);
+    return resWithSendResponse.sendResponse(body);
   };
   next();
 };
-
-export { cacheMiddleware };

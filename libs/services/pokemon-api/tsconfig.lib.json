@@ -8,7 +8,8 @@
       "@nx/react/typings/image.d.ts",
       "pokemon",
       "pokemon/species",
-      "pokemon/pricing"
+      "pokemon/pricing",
+      "pokemon/detail"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",

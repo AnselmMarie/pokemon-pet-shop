@@ -14,11 +14,12 @@ export const deleteCartItemService = async (id: string) => {
   );
   const data = clone(currentCartData.data);
   let keySplice: number | null = null;
-  const dataToRemove: any = data.filter((data, i: number) => {
+  const dataToRemove: Cart.Data[] = data.filter((data, i: number) => {
     if (data?.id == id) {
       keySplice = i;
-      return data;
+      return true;
     }
+    return false;
   });
   const totalPrice = dataToRemove[0]?.quantity * dataToRemove[0]?.price;
 

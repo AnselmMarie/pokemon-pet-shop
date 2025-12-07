@@ -1,3 +1,4 @@
+import { AxiosResponse } from 'axios';
 import { useQueries } from '@tanstack/react-query';
 
 import { axiosInstance } from '@utils/api-client';
@@ -13,7 +14,7 @@ export const useGetPokemonSpecies = (
       return {
         queryKey: ['species', { id }],
         queryFn: () => queryFn(id),
-        select: (r: any) => r?.data,
+        select: (r: AxiosResponse<PokemonSpecies.Species>) => r?.data,
       };
     }),
   });

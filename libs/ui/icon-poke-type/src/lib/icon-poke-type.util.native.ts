@@ -1,3 +1,6 @@
+import { ComponentType } from 'react';
+
+import { IconSvgProps } from './icons/icon-svg.interface';
 import { IconBug } from './icons/icon-bug.native';
 import { IconDark } from './icons/icon-dark.native';
 import { IconDragon } from './icons/icon-dragon.native';
@@ -17,7 +20,7 @@ import { IconRock } from './icons/icon-rock.native';
 import { IconSteel } from './icons/icon-steel.native';
 import { IconWater } from './icons/icon-water.native';
 
-export const IconPokeSvgMap: any = {
+export const IconPokeSvgMap: Record<string, ComponentType<IconSvgProps>> = {
   IconBug,
   IconDark,
   IconDragon,

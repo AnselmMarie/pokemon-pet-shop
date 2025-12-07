@@ -1,4 +1,4 @@
-export const cartDatabase = { data: [], total: 0, counter: 0 };
+export const cartDatabase: Cart.Base = { data: [], total: 0, counter: 0 };
 
 export const getCartDataCall = async (): Promise<Cart.Base> => {
   return new Promise((resolve) => {
@@ -8,7 +8,9 @@ export const getCartDataCall = async (): Promise<Cart.Base> => {
   });
 };
 
-export const updateCartDataCall = async (data: any): Promise<Cart.Base> => {
+export const updateCartDataCall = async (
+  data: Cart.Base
+): Promise<Cart.Base> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       cartDatabase.data = data.data;
@@ -18,4 +20,3 @@ export const updateCartDataCall = async (data: any): Promise<Cart.Base> => {
     }, 500);
   });
 };
-

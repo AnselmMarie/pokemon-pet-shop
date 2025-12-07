@@ -8,6 +8,9 @@
       "@nx/react/typings/image.d.ts",
       "pokemon",
       "pokemon/species",
+      "pokemon/detail",
+      "pokemon/evolution-chain",
+      "pokemon/types",
       "global"
     ],
     "rootDir": "src",

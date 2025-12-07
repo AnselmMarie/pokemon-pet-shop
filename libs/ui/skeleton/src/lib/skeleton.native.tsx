@@ -28,7 +28,7 @@ export const SkeletonView = ({
 
   return (
     <Box>
-      {arr.map((el: any, i: number): ReactElement => {
+      {arr.map((el: unknown, i: number): ReactElement => {
         return (
           <ReactNativeSkeleton
             key={i}

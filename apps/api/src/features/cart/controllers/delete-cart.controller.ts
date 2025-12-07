@@ -19,7 +19,9 @@ export const deleteCartItemController = async (
     });
 
     res.status(204).json();
-  } catch (err: any) {
-    res.status(err?.status).json(errFormatResponseUtil(err));
+  } catch (err: unknown) {
+    res
+      .status((err as { status: number })?.status || 500)
+      .json(errFormatResponseUtil(err));
   }
 };

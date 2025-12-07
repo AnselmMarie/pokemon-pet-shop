@@ -17,7 +17,7 @@ import rockIcon from './assets/rock.svg?url';
 import steelIcon from './assets/steel.svg?url';
 import waterIcon from './assets/water.svg?url';
 
-export const iconPokeSvgMap: any = {
+export const iconPokeSvgMap: Record<string, string> = {
   bugIcon,
   darkIcon,
   dragonIcon,

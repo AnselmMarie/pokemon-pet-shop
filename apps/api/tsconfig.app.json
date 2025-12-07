@@ -5,9 +5,12 @@
     "types": [
       "node",
       "express",
+      "pokemon",
       "pokemon/pricing",
       "cart",
-      "pokemon/evolution-chain"
+      "pokemon/evolution-chain",
+      "pokemon/detail",
+      "pokemon/species"
     ],
     "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"

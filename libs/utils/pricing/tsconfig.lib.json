@@ -6,7 +6,8 @@
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
-      "pokemon/pricing"
+      "pokemon/pricing",
+      "pokemon/evolution-chain"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",

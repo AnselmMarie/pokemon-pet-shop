@@ -3,15 +3,15 @@ import { ReactSVG } from 'react-svg';
 
 import { Skeleton } from '@ui/skeleton';
 
-// import { IconPokeTypeProps } from './icon.poke.type.interface';
 import { iconPokeSvgMap } from './icon-poke-type.util';
+import { IconPokeTypeProps } from './icon-poke-type.interface';
 
 export const IconPokeType = ({
   type = 'grass',
   size,
-  className = null,
+  className = '',
   isLoading = false,
-}: any): ReactElement => {
+}: IconPokeTypeProps): ReactElement => {
   const getIcon = useMemo(() => {
     return iconPokeSvgMap[`${type}Icon`];
   }, [type]);
@@ -24,9 +24,9 @@ export const IconPokeType = ({
     <ReactSVG
       src={getIcon}
       title={`${type} Icon`}
-      beforeInjection={(svg: any) => {
-        svg.setAttribute('width', size);
-        svg.setAttribute('height', size);
+      beforeInjection={(svg: Element) => {
+        svg.setAttribute('width', String(size));
+        svg.setAttribute('height', String(size));
       }}
       className={`${className} [&>div]:flex [&>div]:justify-center [&>div]:items-center`}
     />

@@ -9,11 +9,17 @@ import { getPokeTypePrefixClass } from '@utils/poke-type';
 import { PokemonDetailModalBody } from './pokemon-detail-modal-body';
 import { PokemonDetailModalHeader } from './pokemon-detail-modal-header';
 
+interface PokemonDetailModalProps {
+  pokeCreature: PokemonDetail.Base & { name: string };
+  isOpen: boolean;
+  onCloseModal: () => void;
+}
+
 export const PokemonDetailModal = ({
   pokeCreature,
   isOpen,
   onCloseModal,
-}: any): ReactElement => {
+}: PokemonDetailModalProps): ReactElement => {
   const pokeTypeClass = getPokeTypePrefixClass(pokeCreature?.types);
 
   return (

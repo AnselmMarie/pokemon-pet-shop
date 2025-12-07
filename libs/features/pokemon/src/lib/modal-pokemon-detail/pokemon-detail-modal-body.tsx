@@ -13,16 +13,27 @@ import { capitalizeName, removeHtmlCodeInString } from '@utils/text-transform';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
 
+interface PokemonDetailModalBodyProps {
+  pokeCreature: PokemonDetail.Base & { name: string };
+  pokeTypeClass: PokemonTypes.IconPokeListType;
+}
+
+interface PokeSpeciesResProps {
+  data: PokemonSpecies.Species;
+  isLoading: boolean;
+  isFetching: boolean;
+}
+
 export const PokemonDetailModalBody = ({
   pokeCreature,
   pokeTypeClass,
-}: any): ReactElement => {
+}: PokemonDetailModalBodyProps): ReactElement => {
   const pokeSpeciesRes = useGetPokemonSpecies([String(pokeCreature?.id)]);
   const {
     data: speciesData,
     isLoading: speciesIsLoading,
     isFetching: speciesIsFetching,
-  }: any = pokeSpeciesRes[0];
+  } = pokeSpeciesRes[0] as PokeSpeciesResProps;
 
   const {
     mutate: mutateUpdateCart,
@@ -121,7 +132,7 @@ export const PokemonDetailModalBody = ({
               <TagWrapper>
                 {(pokeCreature?.types ?? []).map(
                   (
-                    typeObj: any, // PokemonDetailTypesObj,
+                    typeObj: PokemonDetail.PokemonDetailTypes,
                     i: number
                   ): ReactElement | null => {
                     return (
@@ -163,7 +174,7 @@ export const PokemonDetailModalBody = ({
             <Box className="mb-2xl">
               {(pokeCreature?.abilities ?? []).map(
                 (
-                  abilityObj: any, // PokemonDetailAbilityObj,
+                  abilityObj: PokemonDetail.PokemonDetailAbility,
                   i: number
                 ): ReactElement | null => {
                   if (i > 1) {

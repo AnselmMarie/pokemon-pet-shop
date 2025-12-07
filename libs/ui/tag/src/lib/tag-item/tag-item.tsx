@@ -5,12 +5,12 @@ import { Typography } from '@ui/typography';
 
 import { capitalizeName } from '@utils/text-transform';
 
-import type { TagProps } from './tagItem.interface';
+import type { TagProps } from './tag-item.interface';
 import { pokeTagTypeMap } from './pokemon-tag-type-map.util';
 
 export const TagItem = ({
   name = '',
-  pokeTypeClass,
+  pokeTypeClass = '',
 }: PropsWithChildren<TagProps>): ReactElement => {
   return (
     <Box

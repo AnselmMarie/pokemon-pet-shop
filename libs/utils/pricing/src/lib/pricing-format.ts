@@ -2,8 +2,8 @@ import { pricingFormatUSD } from './pricing-format-country';
 
 /** @todo I need to update this code to deal with possible recursive object and root array. See Eevee 215 and evolutions */
 const checkChain = (
-  name: string,
-  chainData: any,
+  name: string | undefined,
+  chainData: PokemonEvolution.Chain | undefined,
   pricingData: PokemonPricing.Base,
   i: number
 ): string | null => {
@@ -17,12 +17,22 @@ const checkChain = (
   if (name === currentName) {
     return String(pricingData?.stages?.[String(iPlus)]?.price);
   }
-  return checkChain(name, chainData?.evolves_to?.[0], pricingData, iPlus);
+  return checkChain(
+    name,
+    chainData?.evolves_to?.[0] as unknown as PokemonEvolution.Chain,
+    pricingData,
+    iPlus
+  );
 };
 
 export const pricingFormat = (
-  pokemonData: any,
-  pricingData: any,
+  pokemonData: {
+    name?: string;
+    isMythical?: boolean;
+    isLegendary?: boolean;
+    chainData?: PokemonEvolution.Chain;
+  },
+  pricingData: PokemonPricing.Base,
   returnAsNum = false
 ): number | string => {
   const { name, isMythical, isLegendary, chainData } = pokemonData;
@@ -47,6 +57,6 @@ export const pricingFormat = (
   return price
     ? returnAsNum
       ? price
-      : pricingFormatUSD(price)
+      : pricingFormatUSD(Number(price))
     : 'Price is Not Available';
 };

@@ -10,9 +10,20 @@ import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 import { pricingFormatUSD } from '@utils/pricing';
 import { capitalizeName } from '@utils/text-transform';
 import { getPokeTypePrefixClass } from '@utils/poke-type';
+
 import { cartModalTypeMap } from './cart-modal-type-map.util';
 
-const CartModalItem = ({ el, currIndex, lastIndex }: any): ReactElement => {
+interface CartModalItemProps {
+  el: Cart.Data;
+  currIndex: number;
+  lastIndex: number;
+}
+
+const CartModalItem = ({
+  el,
+  currIndex,
+  lastIndex,
+}: CartModalItemProps): ReactElement => {
   const pokeTypeClass = getPokeTypePrefixClass(el?.types);
 
   const { mutate: updateMutate, isPending: updateIsPending } = useUpdateCart();

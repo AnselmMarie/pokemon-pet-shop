@@ -16,16 +16,29 @@ import {
 import { HalfCircle } from './components/half.circle';
 import { pokeDetailTypeMap } from './pokemon-detail-type-map.util';
 
+interface PokemonDetailModalHeaderProps {
+  pokeCreature: PokemonDetail.Base & { name: string };
+  pokeTypeClass: PokemonTypes.IconPokeListType;
+}
+
+interface PokeSpeciesResProps {
+  data: Omit<PokemonSpecies.Species, 'evolution_chain'> & {
+    evolution_chain: PokemonEvolution.Base;
+  };
+  isLoading: boolean;
+  isFetching: boolean;
+}
+
 export const PokemonDetailModalHeader = ({
   pokeCreature,
   pokeTypeClass,
-}: any): ReactElement => {
-  const res: any = useGetPokemonSpecies([String(pokeCreature?.id)]);
+}: PokemonDetailModalHeaderProps): ReactElement => {
+  const res = useGetPokemonSpecies([String(pokeCreature?.id)]);
   const {
     data: speciesData,
     isLoading: speciesIsLoading,
     isFetching: speciesIsFetching,
-  } = res[0];
+  } = res[0] as unknown as PokeSpeciesResProps;
 
   const pricingRes = useGetPokemonPricing();
   const {
