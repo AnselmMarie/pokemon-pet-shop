@@ -130,9 +130,6 @@
       "path": "./remotes/not-found"
     },
     {
-      "path": "./libs/states/atom-side-cart"
-    },
-    {
       "path": "./libs/utils/storage"
     }
   ]

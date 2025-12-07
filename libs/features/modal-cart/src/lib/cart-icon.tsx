@@ -7,8 +7,8 @@ import { Icon } from '@ui/icon';
 
 import { useGetCart } from '@services/cart-api';
 
-import { openSideCartModalAtom } from '@states/atom-side-cart';
 import { CartModal } from './cart-modal';
+import { openSideCartModalAtom } from './cart-modal-atom.state';
 
 export const CartIcon = (): ReactElement => {
   const openCartModal = useSetAtom(openSideCartModalAtom);
@@ -21,7 +21,9 @@ export const CartIcon = (): ReactElement => {
       <Box className="flex justify-center items-center relative">
         <Box
           className="absolute w-[51px] h-[47px] z-10 -top-[14px]"
-          onClick={() => openCartModal}
+          onClick={() => {
+            openCartModal();
+          }}
         />
         <Icon classNameIcon="ml-2 red" size={28} />
         {data?.counter ? (

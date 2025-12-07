@@ -33,10 +33,6 @@ export default {
         __dirname,
         '../../libs/features/modal-cart/src/index.ts'
       ),
-      '@states/atom-side-cart': join(
-        __dirname,
-        '../../libs/states/atom-side-cart/src/index.ts'
-      ),
       '@utils/pricing': join(
         __dirname,
         '../../libs/utils/pricing/src/index.ts'

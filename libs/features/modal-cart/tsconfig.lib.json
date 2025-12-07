@@ -48,9 +48,6 @@
       "path": "../../ui/image/tsconfig.lib.json"
     },
     {
-      "path": "../../states/atom-side-cart/tsconfig.lib.json"
-    },
-    {
       "path": "../../services/cart-api/tsconfig.lib.json"
     },
     {

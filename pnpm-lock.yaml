@@ -354,8 +354,6 @@ importers:
 
   libs/services/pokemon-api: {}
 
-  libs/states/atom-side-cart: {}
-
   libs/ui/box: {}
 
   libs/ui/button: {}
