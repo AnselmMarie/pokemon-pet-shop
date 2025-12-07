@@ -20,25 +20,7 @@ declare global {
       | 'steel'
       | 'water';
 
-    type IconPokeListType =
-      | 'bugType'
-      | 'darkType'
-      | 'dragonType'
-      | 'electricType'
-      | 'fairyType'
-      | 'fightingType'
-      | 'fireType'
-      | 'flyingType'
-      | 'ghostType'
-      | 'grassType'
-      | 'groundType'
-      | 'iceType'
-      | 'normalType'
-      | 'poisonType'
-      | 'psychicType'
-      | 'rockType'
-      | 'steelType'
-      | 'waterType';
+    type IconPokeListType = `${IconPokeList}Type`;
   }
 }
 
