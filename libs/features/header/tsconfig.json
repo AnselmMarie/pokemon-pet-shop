@@ -6,6 +6,9 @@
       "path": "../../ui/modal"
     },
     {
+      "path": "../../states/atom-side-cart"
+    },
+    {
       "path": "../../services/cart-api"
     },
     {

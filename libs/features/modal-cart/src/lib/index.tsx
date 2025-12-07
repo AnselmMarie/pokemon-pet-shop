@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { useAtomValue, useSetAtom } from 'jotai';
 
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
@@ -6,12 +7,20 @@ import { Modal, ModalScroll } from '@ui/modal';
 
 import { useGetCart } from '@services/cart-api';
 
+import {
+  isSideCartModalOpenAtom,
+  closeSideCartModalAtom,
+} from '@states/atom-side-cart';
+
 import { pricingFormatUSD } from '@utils/pricing';
 
 import CartModalItem from './cart-modal-item';
 
-export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
+export const CartModal = (): ReactElement => {
   const { data } = useGetCart();
+
+  const isOpen = useAtomValue(isSideCartModalOpenAtom);
+  const closeModal = useSetAtom(closeSideCartModalAtom);
 
   return (
     <Modal
@@ -19,7 +28,7 @@ export const CartModal = ({ isOpen, onCloseModal }: any): ReactElement => {
       headlineType="relative"
       modalAlignment="right"
       isOpen={isOpen}
-      onClick={onCloseModal}
+      onClick={closeModal}
     >
       <ModalScroll>
         <Box className="pb-[150px]">

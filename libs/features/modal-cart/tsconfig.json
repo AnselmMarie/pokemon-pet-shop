@@ -27,6 +27,9 @@
       "path": "../../ui/typography"
     },
     {
+      "path": "../../states/atom-side-cart"
+    },
+    {
       "path": "../../ui/box"
     },
     {

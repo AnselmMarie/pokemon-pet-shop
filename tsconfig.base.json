@@ -29,6 +29,7 @@
       "@dsTokens": ["libs/ds-tokens/src/index.ts"],
       "@features/*": ["libs/features/*"],
       "@services/*": ["libs/services/*"],
+      "@states/*": ["libs/states/*"],
       "@ui/*": ["libs/ui/*"],
       "@utils/*": ["libs/utils/*"],
       "footer/Module": ["remotes/footer/src/remote-entry.ts"],

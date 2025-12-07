@@ -66,6 +66,10 @@ export default {
         __dirname,
         '../../libs/services/cart-api/src/index.ts'
       ),
+      '@states/atom-side-cart': join(
+        __dirname,
+        '../../libs/states/atom-side-cart/src/index.ts'
+      ),
       '@ui/switch': join(__dirname, '../../libs/ui/switch/src/index.ts'),
       '@ui/hide-in-mobile': join(
         __dirname,

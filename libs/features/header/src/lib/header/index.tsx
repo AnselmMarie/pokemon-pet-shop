@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSetAtom } from 'jotai';
 
 import { SwitchTheme } from '@features/switch-theme';
 import { CartModal } from '@features/modal-cart';
@@ -12,13 +13,16 @@ import { Typography } from '@ui/typography';
 
 import { useGetCart } from '@services/cart-api';
 
+import { openSideCartModalAtom } from '@states/atom-side-cart';
+
 import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { NAV_FEATURE_FLAG } from './header.const';
 import pokeshopLogo from './assets/pokeshop-logo.png';
 
 export const Header = () => {
-  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
+  const openCartModal = useSetAtom(openSideCartModalAtom);
+
   const { data } = useGetCart();
 
   return (
@@ -26,10 +30,7 @@ export const Header = () => {
       as="header"
       className="space-between h-[93px] fixed w-full top-[0px] z-40 px-md py-xs shadow bg-white"
     >
-      <CartModal
-        isOpen={isCartModalOpen}
-        onCloseModal={() => setIsCartModalOpen(false)}
-      />
+      <CartModal />
       <NavMobileModal
         isOpen={isNavModalOpen}
         onCloseModal={() => setIsNavModalOpen(false)}
@@ -68,6 +69,12 @@ export const Header = () => {
             <SwitchTheme className="invisible md:visible" />
           </HideInMobile>
           <Box className="flex justify-center items-center relative">
+            <Box
+              className="absolute w-[51px] h-[47px] z-10 -top-[14px]"
+              onClick={() => {
+                openCartModal();
+              }}
+            />
             <Icon classNameIcon="ml-2 red" size={28} />
             {data?.counter ? (
               <Box className="rounded-circle bg-medYellow min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
@@ -76,11 +83,6 @@ export const Header = () => {
                 </Typography>
               </Box>
             ) : null}
-
-            <Box
-              className="absolute w-[51px] h-[47px] z-13 -top-[14px]"
-              onClick={() => setIsCartModalOpen(true)}
-            />
           </Box>
         </Box>
       </Container>
