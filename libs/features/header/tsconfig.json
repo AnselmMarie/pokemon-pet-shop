@@ -6,13 +6,7 @@
       "path": "../../ui/modal"
     },
     {
-      "path": "../../states/atom-side-cart"
-    },
-    {
-      "path": "../../services/cart-api"
-    },
-    {
-      "path": "../../ui/typography"
+      "path": "../../../remotes/modal-side-cart"
     },
     {
       "path": "../../ui/hide-in-mobile"
@@ -28,9 +22,6 @@
     },
     {
       "path": "../../ui/box"
-    },
-    {
-      "path": "../modal-cart"
     },
     {
       "path": "../switch-theme"

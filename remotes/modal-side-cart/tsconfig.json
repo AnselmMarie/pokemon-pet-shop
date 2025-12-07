@@ -6,6 +6,9 @@
       "path": "../../libs/ds-tokens"
     },
     {
+      "path": "../../libs/features/modal-cart"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

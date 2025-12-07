@@ -15,19 +15,19 @@
       "path": "../../utils/pricing"
     },
     {
+      "path": "../../ui/image"
+    },
+    {
+      "path": "../../states/atom-side-cart"
+    },
+    {
       "path": "../../services/cart-api"
     },
     {
       "path": "../../ui/icon"
     },
     {
-      "path": "../../ui/image"
-    },
-    {
       "path": "../../ui/typography"
-    },
-    {
-      "path": "../../states/atom-side-cart"
     },
     {
       "path": "../../ui/box"

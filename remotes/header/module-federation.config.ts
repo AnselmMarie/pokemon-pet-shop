@@ -8,7 +8,7 @@ const config: ModuleFederationConfig = {
   exposes: {
     './Module': './src/remote-entry.ts',
   },
-  remotes: ['atom-theme'],
+  remotes: ['atom-theme', 'modal-side-cart'],
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {
@@ -19,7 +19,11 @@ const config: ModuleFederationConfig = {
     }
 
     if (libraryName === 'jotai' || libraryName === 'jotai/utils') {
-      return { singleton: true };
+      return {
+        singleton: true,
+        strictVersion: false,
+        requiredVersion: false,
+      };
     }
 
     if (libraryName === 'react-native') {

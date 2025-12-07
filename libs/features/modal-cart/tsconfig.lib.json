@@ -36,13 +36,16 @@
       "path": "../../ui/modal/tsconfig.lib.json"
     },
     {
-      "path": "../../utils/text-transform/tsconfig.lib.json"
-    },
-    {
       "path": "../../utils/poke-type/tsconfig.lib.json"
     },
     {
+      "path": "../../utils/text-transform/tsconfig.lib.json"
+    },
+    {
       "path": "../../utils/pricing/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/image/tsconfig.lib.json"
     },
     {
       "path": "../../states/atom-side-cart/tsconfig.lib.json"
@@ -52,9 +55,6 @@
     },
     {
       "path": "../../ui/icon/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/image/tsconfig.lib.json"
     },
     {
       "path": "../../ui/typography/tsconfig.lib.json"

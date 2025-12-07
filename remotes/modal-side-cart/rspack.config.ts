@@ -15,7 +15,7 @@ export default {
     publicPath: 'auto',
   },
   devServer: {
-    port: 4205,
+    port: 4210,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -29,6 +29,26 @@ export default {
   resolve: {
     alias: {
       'react-native': require.resolve('react-native-web'),
+      '@features/modal-cart': join(
+        __dirname,
+        '../../libs/features/modal-cart/src/index.ts'
+      ),
+      '@states/atom-side-cart': join(
+        __dirname,
+        '../../libs/states/atom-side-cart/src/index.ts'
+      ),
+      '@utils/pricing': join(
+        __dirname,
+        '../../libs/utils/pricing/src/index.ts'
+      ),
+      '@services/cart-api': join(
+        __dirname,
+        '../../libs/services/cart-api/src/index.ts'
+      ),
+      '@utils/api-client': join(
+        __dirname,
+        '../../libs/utils/api-client/src/index.ts'
+      ),
       '@features/header': join(
         __dirname,
         '../../libs/features/header/src/index.ts'
@@ -38,10 +58,6 @@ export default {
         '../../libs/features/switch-theme/src/index.ts'
       ),
       '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
-      '@utils/api-client': join(
-        __dirname,
-        '../../libs/utils/api-client/src/index.ts'
-      ),
       '@utils/poke-type': join(
         __dirname,
         '../../libs/utils/poke-type/src/index.ts'
@@ -50,21 +66,9 @@ export default {
         __dirname,
         '../../libs/utils/text-transform/src/index.ts'
       ),
-      '@utils/pricing': join(
-        __dirname,
-        '../../libs/utils/pricing/src/index.ts'
-      ),
       '@ui/typography': join(
         __dirname,
         '../../libs/ui/typography/src/index.ts'
-      ),
-      '@services/cart-api': join(
-        __dirname,
-        '../../libs/services/cart-api/src/index.ts'
-      ),
-      '@states/atom-side-cart': join(
-        __dirname,
-        '../../libs/states/atom-side-cart/src/index.ts'
       ),
       '@ui/switch': join(__dirname, '../../libs/ui/switch/src/index.ts'),
       '@ui/hide-in-mobile': join(

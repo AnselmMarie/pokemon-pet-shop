@@ -1,36 +1,27 @@
-import { useState } from 'react';
-import { useSetAtom } from 'jotai';
+import { useState, lazy, Suspense } from 'react';
 
 import { SwitchTheme } from '@features/switch-theme';
-import { CartModal } from '@features/modal-cart';
 
 import { Box } from '@ui/box';
 import { Container } from '@ui/container';
 import { Icon } from '@ui/icon';
 import { Image } from '@ui/image';
 import { HideInMobile } from '@ui/hide-in-mobile';
-import { Typography } from '@ui/typography';
-
-import { useGetCart } from '@services/cart-api';
-
-import { openSideCartModalAtom } from '@states/atom-side-cart';
 
 import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { NAV_FEATURE_FLAG } from './header.const';
 import pokeshopLogo from './assets/pokeshop-logo.png';
 
+const SideCartModal = lazy(() => import('modal-side-cart/Module'));
+
 export const Header = () => {
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
-  const openCartModal = useSetAtom(openSideCartModalAtom);
-
-  const { data } = useGetCart();
 
   return (
     <Box
       as="header"
       className="space-between h-[93px] fixed w-full top-[0px] z-40 px-md py-xs shadow bg-white"
     >
-      <CartModal />
       <NavMobileModal
         isOpen={isNavModalOpen}
         onCloseModal={() => setIsNavModalOpen(false)}
@@ -68,22 +59,9 @@ export const Header = () => {
           <HideInMobile>
             <SwitchTheme className="invisible md:visible" />
           </HideInMobile>
-          <Box className="flex justify-center items-center relative">
-            <Box
-              className="absolute w-[51px] h-[47px] z-10 -top-[14px]"
-              onClick={() => {
-                openCartModal();
-              }}
-            />
-            <Icon classNameIcon="ml-2 red" size={28} />
-            {data?.counter ? (
-              <Box className="rounded-circle bg-medYellow min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
-                <Typography className="flex justify-center item-center text-primary font-bold">
-                  {data?.counter}
-                </Typography>
-              </Box>
-            ) : null}
-          </Box>
+          <Suspense fallback={null}>
+            <SideCartModal />
+          </Suspense>
         </Box>
       </Container>
       <Box />

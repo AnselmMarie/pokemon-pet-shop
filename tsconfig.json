@@ -22,7 +22,7 @@
       "path": "./remotes/homepage"
     },
     {
-      "path": "./remotes/side-cart"
+      "path": "./remotes/modal-side-cart"
     },
     {
       "path": "./libs/features/header"

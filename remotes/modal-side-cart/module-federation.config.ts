@@ -4,16 +4,25 @@ import { workspaceRoot } from '@nx/devkit';
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
 
 const config: ModuleFederationConfig = {
-  name: 'side-cart',
+  name: 'modal-side-cart',
   exposes: {
     './Module': './src/remote-entry.ts',
   },
+  remotes: ['atom-theme'],
   shared: (libraryName: string, defaultConfig: any) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {
         singleton: true,
         strictVersion: false,
         requiredVersion: deps[libraryName],
+      };
+    }
+
+    if (libraryName === 'jotai' || libraryName === 'jotai/utils') {
+      return {
+        singleton: true,
+        strictVersion: false,
+        requiredVersion: false,
       };
     }
 

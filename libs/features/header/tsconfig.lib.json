@@ -35,13 +35,7 @@
       "path": "../../ui/modal/tsconfig.lib.json"
     },
     {
-      "path": "../../states/atom-side-cart/tsconfig.lib.json"
-    },
-    {
-      "path": "../../services/cart-api/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/typography/tsconfig.lib.json"
+      "path": "../../../remotes/modal-side-cart/tsconfig.app.json"
     },
     {
       "path": "../../ui/hide-in-mobile/tsconfig.lib.json"
@@ -57,9 +51,6 @@
     },
     {
       "path": "../../ui/box/tsconfig.lib.json"
-    },
-    {
-      "path": "../modal-cart/tsconfig.lib.json"
     },
     {
       "path": "../switch-theme/tsconfig.lib.json"

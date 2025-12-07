@@ -18,7 +18,11 @@ const config: ModuleFederationConfig = {
     }
 
     if (libraryName === 'jotai' || libraryName === 'jotai/utils') {
-      return { singleton: true };
+      return {
+        singleton: true,
+        strictVersion: false,
+        requiredVersion: false,
+      };
     }
 
     if (libraryName === 'react-native') {

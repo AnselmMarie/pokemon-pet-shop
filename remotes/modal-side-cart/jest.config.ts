@@ -1,5 +1,5 @@
 export default {
-  displayName: 'side-cart',
+  displayName: 'modal-side-cart',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
