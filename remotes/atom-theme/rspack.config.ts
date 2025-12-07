@@ -24,6 +24,14 @@ export default {
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
   },
+  resolve: {
+    alias: {
+      '@utils/storage': join(
+        __dirname,
+        '../../libs/utils/storage/src/index.ts'
+      ),
+    },
+  },
   plugins: [
     new NxAppRspackPlugin({
       tsConfig: './tsconfig.app.json',
