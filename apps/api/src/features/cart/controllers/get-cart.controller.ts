@@ -16,7 +16,9 @@ export const getCartController = async (
     });
 
     res.status(200).json(pokemonDetail);
-  } catch (err: any) {
-    res.status(err?.status).json(errFormatResponseUtil(err));
+  } catch (err: unknown) {
+    res
+      .status((err as { status: number })?.status || 500)
+      .json(errFormatResponseUtil(err));
   }
 };

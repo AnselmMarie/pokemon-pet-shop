@@ -8,7 +8,7 @@ import {
 import { PokemonDetailsParamsProps } from '../pokemon.types';
 import { getPokemonDetailService } from '../services/pokemon-detail.service';
 
-const getPokemonDetailsController = async (
+export const getPokemonDetailsController = async (
   req: Request<PokemonDetailsParamsProps, null, null, null>,
   res: Response
 ) => {
@@ -22,9 +22,9 @@ const getPokemonDetailsController = async (
     });
 
     res.status(200).json(pokemonDetail);
-  } catch (err: any) {
-    res.status(err?.status).json(errFormatResponseUtil(err));
+  } catch (err: unknown) {
+    res
+      .status((err as { status: number })?.status || 500)
+      .json(errFormatResponseUtil(err));
   }
 };
-
-export { getPokemonDetailsController };

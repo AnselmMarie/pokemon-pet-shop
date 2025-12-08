@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 
 export const errFormatResponseUtil = (err: any) => {
   return {
@@ -16,13 +16,7 @@ export const errFormat500ResponseUtil = () => {
   };
 };
 
-export const errorMiddleware = (
-  err: any,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const status = err?.status || 500;
+export const errorMiddleware = (err: unknown, req: Request, res: Response) => {
+  const status = (err as { status: number })?.status || 500;
   res.status(status).json(errFormatResponseUtil(err));
 };
-

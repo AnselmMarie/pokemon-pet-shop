@@ -2,7 +2,12 @@ import { ReactElement } from 'react';
 
 import { IconSvgProps } from './icon.svg.interface';
 
-const IconShoppingCart = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
+export const IconShoppingCart = ({
+  size,
+  fill,
+  stroke,
+  onClick,
+}: IconSvgProps): ReactElement => {
   return (
     <svg
       width={size}
@@ -22,5 +27,3 @@ const IconShoppingCart = ({ size, fill, stroke, onClick }: IconSvgProps): ReactE
     </svg>
   );
 };
-
-export { IconShoppingCart };

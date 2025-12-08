@@ -1,4 +1,7 @@
-import { ModuleFederationConfig } from '@nx/module-federation';
+import {
+  ModuleFederationConfig,
+  SharedLibraryConfig,
+} from '@nx/module-federation';
 import { workspaceRoot } from '@nx/devkit';
 
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
@@ -8,7 +11,7 @@ const config: ModuleFederationConfig = {
   exposes: {
     './Module': './src/remote-entry.ts',
   },
-  shared: (libraryName: string, defaultConfig: any) => {
+  shared: (libraryName: string, defaultConfig: SharedLibraryConfig) => {
     if (['react', 'react-dom'].includes(libraryName)) {
       return {
         singleton: true,

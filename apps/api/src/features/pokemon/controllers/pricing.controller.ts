@@ -6,7 +6,7 @@ import {
 } from '../../../shared/middleware/error';
 import { getPricingService } from '../services/pricing.service';
 
-const getPricingController = async (
+export const getPricingController = async (
   req: Request<null, null, null, null>,
   res: Response
 ) => {
@@ -15,9 +15,9 @@ const getPricingController = async (
       throw errFormat500ResponseUtil();
     });
     res.status(200).json(finalRes);
-  } catch (err: any) {
-    res.status(err?.status).json(errFormatResponseUtil(err));
+  } catch (err: unknown) {
+    res
+      .status((err as { status: number })?.status || 500)
+      .json(errFormatResponseUtil(err));
   }
 };
-
-export { getPricingController };

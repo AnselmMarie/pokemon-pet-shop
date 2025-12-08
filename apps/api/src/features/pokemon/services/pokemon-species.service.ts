@@ -2,7 +2,9 @@
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { PokemonSpeciesParamsProps } from '../pokemon.types';
 
-const getPokemonSpeciesService = async ({ id }: PokemonSpeciesParamsProps) => {
+export const getPokemonSpeciesService = async ({
+  id,
+}: PokemonSpeciesParamsProps) => {
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon-species/${id}`
   ).catch(() => {
@@ -29,5 +31,3 @@ const getPokemonSpeciesService = async ({ id }: PokemonSpeciesParamsProps) => {
   }
   throw res;
 };
-
-export { getPokemonSpeciesService };

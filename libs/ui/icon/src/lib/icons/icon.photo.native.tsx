@@ -5,7 +5,7 @@ import { Svg, Path } from 'react-native-svg';
 
 import { IconSvgProps } from './icon.svg.interface';
 
-const IconPhoto = ({
+export const IconPhoto = ({
   size,
   fill,
   stroke,
@@ -32,5 +32,3 @@ const IconPhoto = ({
     </TouchableOpacity>
   );
 };
-
-export { IconPhoto };

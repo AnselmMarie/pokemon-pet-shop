@@ -1,11 +1,15 @@
 import { ReactElement } from 'react';
-
 import { TouchableOpacity } from 'react-native';
 import { Svg, Path } from 'react-native-svg';
 
 import { IconSvgProps } from './icon.svg.interface';
 
-const IconSearch = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
+export const IconSearch = ({
+  size,
+  fill,
+  stroke,
+  onClick,
+}: IconSvgProps): ReactElement => {
   return (
     <TouchableOpacity onPress={onClick}>
       <Svg
@@ -25,5 +29,3 @@ const IconSearch = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement
     </TouchableOpacity>
   );
 };
-
-export { IconSearch };

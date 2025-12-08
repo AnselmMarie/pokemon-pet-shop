@@ -1,10 +1,12 @@
 import { ReactElement } from 'react';
-
 import { Svg, Path } from 'react-native-svg';
 
 import { IconSvgProps } from './icon-svg.interface';
 
-const IconIce = ({ size, fill = 'none' }: IconSvgProps): ReactElement => {
+export const IconIce = ({
+  size,
+  fill = 'none',
+}: IconSvgProps): ReactElement => {
   return (
     <Svg width={size} height={size} fill={fill} viewBox="0 0 512 512">
       <Path
@@ -46,5 +48,3 @@ const IconIce = ({ size, fill = 'none' }: IconSvgProps): ReactElement => {
     </Svg>
   );
 };
-
-export { IconIce };
