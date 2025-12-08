@@ -6,7 +6,7 @@ import { Typography } from '@ui/typography';
 export const Footer = () => {
   return (
     <Box
-      className="flex flex-col md:flex-row items-center justify-center h-[40px] mt-2xl mx-md"
+      className="flex flex-col md:flex-row items-center justify-center h-[40px] mt-2xl mx-md gap-lg"
       as="footer"
     >
       <Link
@@ -16,15 +16,27 @@ export const Footer = () => {
         <Icon
           icon="IconGithub"
           size={20}
-          classNameIcon="mr-2"
+          classNameIcon="mr-xs"
+          fill="black"
           stroke="none"
-          // fill={
-          //   theme === ThemeTypeEnum.LIGHT
-          //     ? THEME_NETURAL_900
-          //     : THEME_NETURAL_100
-          // }
         />
         <Typography>Github Project</Typography>
+      </Link>
+
+      <Typography className="hidden md:p-10 md:block">|</Typography>
+
+      <Link
+        className="flex items-center"
+        link="https://github.com/AnselmMarie/pokemon-pet-shop/issues?q=state%3Aopen%20label%3A%22mfe%22"
+      >
+        <Icon
+          icon="IconSearch"
+          size={20}
+          classNameIcon="mr-xs"
+          stroke="black"
+          fill="white"
+        />
+        <Typography>Github Issues</Typography>
       </Link>
 
       {/* Once the mobile app version is built out I can uncomment the code below. */}

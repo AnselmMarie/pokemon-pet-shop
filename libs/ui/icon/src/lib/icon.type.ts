@@ -12,3 +12,13 @@ export type IconType =
   | 'IconPhoto'
   | 'IconGithub'
   | 'IconPokeBall';
+
+export type IconColors =
+  | 'white'
+  | 'blue'
+  | 'darkBlue'
+  | 'red'
+  | 'black'
+  | 'disabled'
+  | 'lightGrey'
+  | 'none';

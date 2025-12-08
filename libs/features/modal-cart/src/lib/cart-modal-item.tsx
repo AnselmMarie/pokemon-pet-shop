@@ -78,11 +78,7 @@ const CartModalItem = ({
             <Icon
               icon="IconMinus"
               size={24}
-              // stroke={
-              //   theme === ThemeTypeEnum.LIGHT
-              //     ? THEME_BLUE_600
-              //     : THEME_NETURAL_100
-              // }
+              stroke="blue"
               isDisabled={el?.quantity === 1 || updateIsPending}
               onClick={() => handleRemoveFromCart(el?.id)}
             />
@@ -90,11 +86,7 @@ const CartModalItem = ({
             <Icon
               icon="IconPlus"
               size={24}
-              // stroke={
-              //   theme === ThemeTypeEnum.LIGHT
-              //     ? THEME_BLUE_600
-              //     : THEME_NETURAL_100
-              // }
+              stroke="blue"
               isDisabled={updateIsPending}
               onClick={() => handleAddToCart(el?.id)}
             />
@@ -103,7 +95,8 @@ const CartModalItem = ({
 
         <Icon
           icon="IconTrash"
-          fill="bg-error"
+          stroke="red"
+          fill="white"
           isDisabled={deleteIsPending}
           onClick={() => handleRemoveCartItem(el?.id)}
         />

@@ -13,7 +13,15 @@ export const ModalCard = ({
 );
 
 export const ModalClose = ({ onClick }: { onClick: () => void }) => (
-  <Icon icon="IconX" size={24} onClick={onClick} />
+  <Icon
+    icon="IconX"
+    size={24}
+    stroke="blue"
+    fill="white"
+    classNameWrapper="rounded-circle bg-white p-sm"
+    displayWrapper
+    onClick={onClick}
+  />
 );
 
 export const ModalTitle = ({ title }: { title: string }) => (

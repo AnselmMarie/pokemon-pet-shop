@@ -1,7 +1,7 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
-const themeConfig = require('../../libs/ds-tokens/src/build/semantic.tailwind');
+const { semantic } = require('../../libs/ds-tokens');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,16 +13,16 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    ...themeConfig,
-    colors: themeConfig.color.colors,
-    borderColor: themeConfig.color.borderColor,
-    backgroundColor: themeConfig.color.backgroundColor,
-    spacing: themeConfig.size.spacing,
-    borderRadius: themeConfig.size.borderRadius,
-    fontSize: themeConfig.typography.fontSize,
-    fontFamily: themeConfig.typography.fontFamily,
-    fontWeight: themeConfig.typography.fontWeight,
-    lineHeight: themeConfig.typography.lineHeight
+    ...semantic,
+    colors: semantic.color.colors,
+    borderColor: semantic.color.borderColor,
+    backgroundColor: semantic.color.backgroundColor,
+    spacing: semantic.size.spacing,
+    borderRadius: semantic.size.borderRadius,
+    fontSize: semantic.typography.fontSize,
+    fontFamily: semantic.typography.fontFamily,
+    fontWeight: semantic.typography.fontWeight,
+    lineHeight: semantic.typography.lineHeight
   },
   plugins: [],
 };

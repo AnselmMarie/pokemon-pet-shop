@@ -17,7 +17,7 @@ export const Input = ({
   // control = null,
   // defaultValue = '',
   iconClassname = '',
-  appendIcon = null,
+  appendIcon,
 }: InputProps): ReactElement => {
   // const { field } = useController({
   //   control,

@@ -34,6 +34,9 @@
   "references": [
     {
       "path": "../box/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ds-tokens/tsconfig.lib.json"
     }
   ]
 }

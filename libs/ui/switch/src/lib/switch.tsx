@@ -31,10 +31,10 @@ export const Switch = ({
         <Icon
           icon={iconLeft}
           size={20}
-          // classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconLeft)}
-          // classNameWrapper={newStyles.iconWrapper}
+          stroke={val === 'ON' ? 'white' : 'blue'}
+          fill={val === 'ON' ? 'lightGrey' : 'none'}
           classNameIcon="z-10 cursor-pointer border-lightGrey"
-          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px]"
+          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px] z-10"
           isDisabled={val === 'ON' || isDisabled}
           displayWrapper
           onClick={onInitLeftClick}
@@ -45,10 +45,10 @@ export const Switch = ({
         <Icon
           icon={iconRight}
           size={20}
-          // classNameIcon={classNamesUtil(newStyles.icon, newStyles.iconRight)}
-          // classNameWrapper={newStyles.iconWrapper}
+          stroke={val === 'ON' ? 'blue' : 'white'}
+          fill={val === 'ON' ? 'none' : 'lightGrey'}
           classNameIcon="z-10 cursor-pointer"
-          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px]"
+          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px] z-10"
           isDisabled={val === 'OFF' || isDisabled}
           displayWrapper
           onClick={onInitRightClick}

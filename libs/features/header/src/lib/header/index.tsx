@@ -31,6 +31,8 @@ export const Header = () => {
           <Icon
             classNameIcon="md:hidden"
             icon="IconMenu"
+            stroke="blue"
+            fill="white"
             onClick={() => setIsNavModalOpen(true)}
           />
           <Image

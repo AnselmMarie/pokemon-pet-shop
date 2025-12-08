@@ -11,8 +11,6 @@ export enum ImageContentFitEnum {
   NONE = 'none',
 }
 
-// Types corresponding to the enums above. Use these in component props instead of the enum when
-// you only need the string literal type.
 export type MobSrcType = (typeof mobSrcTypeEnum)[keyof typeof mobSrcTypeEnum];
 export type ImageContentFit =
   (typeof ImageContentFitEnum)[keyof typeof ImageContentFitEnum];

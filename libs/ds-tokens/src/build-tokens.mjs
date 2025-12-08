@@ -69,6 +69,7 @@ StyleDictionaryModule.registerTransform({
 // Build root types of the design token JSON
 types.map((type) => {
   const StyleDictionary = new StyleDictionaryModule(
+    // Build out the tailwind file
     makeSdTailwindConfig({
       type,
       source: ['src/tokens/**/*.json'],
@@ -77,90 +78,26 @@ types.map((type) => {
     })
   )
 
-  console.log("Building type:", type);
-  console.log("tokens:", StyleDictionary.allTokens);
-  console.log("platform:", StyleDictionary.options.platforms.js);
+  // Build out the variables file
+  StyleDictionary.platforms['js'] = {
+    type,
+    transformGroup: 'js',
+    buildPath: './build/',
+    transforms: ['attribute/cti', 'name/camel', 'size/px', 'typography/fontSize', 'typography/fontFamily'],
+    // transforms: ['attribute/cti', 'name/camel', 'typography/px', 'typography/fontSize', 'typography/fontFamily'],
+    // transforms: [
+    //   'attribute/cti',
+    //   'name/camel',
+    //   'size/px',
+    //   'color/hex',
+    // ],
+    files: [
+      {
+        destination: 'variables.js',
+        format: 'javascript/es6',
+      }
+    ]
+  }
 
   StyleDictionary.buildAllPlatforms()
 })
-
-const sdConfig = makeSdTailwindConfig({
-  type: 'semantic',
-  formatType: 'js',
-  // isVariables: true,
-  // extend: true,
-  source: ['src/tokens/**/*.json'],
-  // transforms: ['attribute/cti',
-  //   'name/camel',
-  //   'size/px',
-  //   'color/hex'],
-  // buildPath: `./`,
-  // tailwind: {
-  //   content: [
-  //     './pages/**/*.{js,ts,jsx,tsx}',
-  //     './components/**/*.{js,ts,jsx,tsx}'
-  //   ],
-  //   plugins: ['typography', 'container-queries']
-  // }
-})
-
-sdConfig.platforms['js'] = {
-  // prefix: PREFIX,
-  transformGroup: 'js',
-  buildPath: './build/js/',
-  transforms: ['attribute/cti', 'name/camel', 'size/px', 'typography/fontSize', 'typography/fontFamily'],
-  // transforms: ['attribute/cti', 'name/camel', 'typography/px', 'typography/fontSize', 'typography/fontFamily'],
-  // transforms: [
-  //   'attribute/cti',
-  //   'name/camel',
-  //   'size/px',
-  //   'color/hex',
-  // ],
-  files: [
-    {
-      destination: 'variables.js',
-      format: 'javascript/es6',
-    }
-  ]
-}
-
-// sdConfig.platforms['css'] = {
-//   // prefix: PREFIX,
-//   transformGroup: 'css',
-//   buildPath: './styles/',
-//   files: [
-//     {
-//       destination: 'tailwind.css',
-//       format: 'css/variables'
-//     }
-//   ]
-// }
-
-const StyleDictionary = new StyleDictionaryModule(sdConfig)
-await StyleDictionary.hasInitialized
-await StyleDictionary.buildAllPlatforms()
-
-
-// TS variables transform group
-// StyleDictionaryModule.registerTransformGroup({
-//   name: 'ts',
-//   transforms: [
-// 'attribute/cti',
-// 'name/camel',
-// 'size/px',
-// 'color/hex',
-//   ],
-// });
-
-// platforms: {
-//   js: {
-//     transformGroup: 'ts',
-//       buildPath: './build/ts/',
-//         files: [
-//           {
-// destination: 'variables.ts',
-// format: 'javascript/es6',
-//           },
-//         ],
-//         },
-// },

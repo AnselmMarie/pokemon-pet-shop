@@ -1,20 +1,16 @@
 import { ReactElement, useCallback, useMemo } from 'react';
 
-// import { classNamesUtil } from '@pokemon-pet-shop/utils';
 import { Box } from '@ui/box';
 
-// import { globalStyles } from '../../styles/css/global.module';
-// import { THEME_BLUE_400, THEME_NETURAL_600 } from '../../styles/ts/variables';
-
-// import { IconTypeEnum } from './icon.type';
 import { IconProps } from './icon.interface';
 import { IconMap } from './icon.util';
+import { IconColors } from './icon.colors.const';
 
 export const Icon = ({
   icon = 'IconShoppingCart',
   size = 36,
   fill = 'white',
-  stroke = 'blue', //THEME_BLUE_400,
+  stroke = 'blue',
   classNameIcon = '',
   classNameWrapper = '',
   displayWrapper = false,
@@ -35,13 +31,11 @@ export const Icon = ({
     return (
       <IconComponent
         size={size}
-        fill={!isDisabled ? fill || 'white' : ''}
-        stroke={!isDisabled ? stroke : ''}
+        fill={!isDisabled ? IconColors?.[fill] : ''}
+        stroke={!isDisabled ? IconColors?.[stroke] : ''}
         className={`${classNameIcon} ${onClick ? 'cursor-pointer' : ''} ${
           isDisabled ? 'opacity-90 pointer-events-none' : ''
         }`}
-        // fill={!isDisabled ? fill || 'white' : THEME_NETURAL_600}
-        // stroke={!isDisabled ? stroke : THEME_NETURAL_600}
         onClick={iconClick}
       />
     );
