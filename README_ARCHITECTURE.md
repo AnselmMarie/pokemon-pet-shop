@@ -1,6 +1,6 @@
-## 🧠 Architecture Overview: PokemonPetShop
+## 🧠 Architecture Overview: Pokemon Pet Shop
 
-This document outlines the core architecture, technology choices, and high-level structure of the PokemonPetShop application.
+This document outlines the core architecture, technology choices, and high-level structure of the Pokemon Pet Shop application.
 
 ### 🌐 Current Technology Stack
 
@@ -20,7 +20,7 @@ The application is structured using a Monorepo pattern managed by **Nx** to sepa
 
 ### ✨ Future Architectural Roadmap
 
-These items represent the planned enhancements and architectural integrations for the next phases of the PokemonPetShop project.
+These items represent the planned enhancements and architectural integrations for the next phases of the Pokemon Pet Shop project.
 
 | Domain                   | Feature / Technology                            | Goal & Benefit                                                                                                                                       |
 | :----------------------- | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
