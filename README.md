@@ -1,6 +1,6 @@
-## 🏁 Getting Started with PokemonPetShop
+## 🏁 Getting Started with Pokemon Pet Shop
 
-This guide provides the necessary steps to set up and run the entire **PokemonPetShop** application on your local machine.
+This guide provides the necessary steps to set up and run the entire **Pokemon Pet Shop** application on your local machine.
 
 The project is currently under development. I created a backlog of tickets to address identified issues and integrate planned enhancements.
 
