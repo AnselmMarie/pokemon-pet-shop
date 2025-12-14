@@ -2,6 +2,8 @@
 
 This guide provides the necessary steps to set up and run the entire **PokemonPetShop** application on your local machine.
 
+The project is currently under development. I created a backlog of tickets to address identified issues and integrate planned enhancements.
+
 ### 📋 Prerequisites
 
 Before proceeding, ensure you have the following installed. Using the specified versions will prevent most common setup issues.
@@ -28,6 +30,12 @@ Use `pnpm i` to install dependencies for the project
 
 Run the commands below to begin the apps.
 
-Web app: `npx nx run web:serve`
+Web App: `npx nx run web:serve`
 
-backend app: `npx nx run @pokemon-pet-shop/api:serve:development`
+Backend App: `npx nx run @pokemon-pet-shop/api:serve:development`
+
+### 🧠 Architecture
+
+To understand the design choices, technology stack, and structure of the application, please refer to the **Architecture Overview**.
+
+➡️ **Read the full document: [README_ARCHITECTURE.md](./README_ARCHITECTURE.md)**
