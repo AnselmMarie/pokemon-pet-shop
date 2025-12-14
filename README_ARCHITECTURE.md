@@ -55,9 +55,9 @@ This application serves as a comprehensive Greenfield project, designed to showc
 
 #### 3. **UI and Styling Stack**
 
-| Decision                      | Rationale                                                                                                                                                                                                                                                                                            |
-| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Tailwind CSS & Nativewind** | The previous multi-tool styling approach was abandoned in favor of a unified **utility-first** CSS solution. This choice significantly reduces complexity and improves **maintainability** by allowing a single styling approach that works across both React Web and React Native/Mobile platforms. |
+| Decision                  | Rationale                                                                                                                                                                                                                                                                                            |
+| :------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tailwind & Nativewind** | The previous multi-tool styling approach was abandoned in favor of a unified **utility-first** CSS solution. This choice significantly reduces complexity and improves **maintainability** by allowing a single styling approach that works across both React Web and React Native/Mobile platforms. |
 
 #### 4. **Technology Trade-offs**
 
