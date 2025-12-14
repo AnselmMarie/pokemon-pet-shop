@@ -6,38 +6,38 @@ This document outlines the core architecture, technology choices, and high-level
 
 The application is structured using a Monorepo pattern managed by **Nx** to separate concerns between the primary layers.
 
-| Layer / Domain         | Core Technology       | Tooling & Utilities                                 | Purpose                                                                       |
-| :--------------------- | :-------------------- | :-------------------------------------------------- | :---------------------------------------------------------------------------- |
-| **General / Monorepo** | Nx (Workspace)        | Prettier, EsLint, Husky                             | Project scaffolding, task running, code quality, and git hooks.               |
-| **Design System**      | Figma                 | Design Tokens, Style Directory                      | Central source for UI/UX specifications and reusable styles.                  |
-| **Frontend (Web)**     | React, TypeScript     | Rspack, Nativewind, Tailwind CSS, Module Federation | Fast development and performant bundle generation for the web application.    |
-| **State Management**   | Jotai, Tanstack Query | N/A                                                 | Global state management and server state synchronization (caching).           |
-| **Backend API**        | Express, Node.js      | Webpack                                             | High-performance server-side logic and RESTful endpoint delivery.             |
-| **Data Persistence**   | In-Memory Store       | N/A                                                 | Temporary, non-persistent data storage (primarily for demonstration/testing). |
-| **Caching**            | Node Cache            | N/A                                                 | In-process caching layer for API responses.                                   |
+| Layer / Domain         | Core Technology       | Tooling & Utilities                             | Purpose                                                                       |
+| :--------------------- | :-------------------- | :---------------------------------------------- | :---------------------------------------------------------------------------- |
+| **General / Monorepo** | Nx (Workspace)        | Prettier, EsLint, Husky                         | Project scaffolding, task running, code quality, and git hooks.               |
+| **Design System**      | Figma                 | Design Tokens, Style Directory                  | Central source for UI/UX specifications and reusable styles.                  |
+| **Frontend (Web)**     | React, TypeScript     | Rspack, Nativewind, Tailwind, Module Federation | Fast development and performant bundle generation for the web application.    |
+| **State Management**   | Jotai, TanStack Query | N/A                                             | Global state management and server state synchronization (caching).           |
+| **Backend API**        | Express, Node.js      | Webpack                                         | High-performance server-side logic and RESTful endpoint delivery.             |
+| **Data Persistence**   | In-Memory Store       | N/A                                             | Temporary, non-persistent data storage (primarily for demonstration/testing). |
+| **Caching**            | Node Cache            | N/A                                             | In-process caching layer for API responses.                                   |
 
 ---
 
-### ✨ Future Architectural Roadma
+### ✨ Future Architectural Roadmap
 
 These items represent the planned enhancements and architectural integrations for the next phases of the PokemonPetShop project.
 
-| Domain                   | Feature / Technology                            | Goal & Benefit                                                                                                                                           |
-| :----------------------- | :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **DevOps / Automation**  | **CI/CD Deployment** (e.g., GitHub Actions)     | Automate the build, test, and deployment pipelines to ensure rapid, reliable, and consistent releases across all environments.                           |
-| **Frontend Testing**     | Storybook                                       | Isolate and document UI components for easier development, review, and state management.                                                                 |
-| **Frontend Testing**     | React Testing Library & Jest                    | Implement robust unit and integration tests for all components and complex client logic.                                                                 |
-| **Frontend Testing**     | **E2E Testing** (End-to-End)                    | Ensure critical user flows and application journeys function correctly from start to finish.                                                             |
-| **Frontend Development** | **Mock Service Worker (msw)**                   | Use request interception to mock API responses, enabling decoupled and reliable local development and testing without needing the live backend.          |
-| **Backend Testing**      | Jest & E2E Testing                              | Implement comprehensive unit, integration, and end-to-end testing for all API endpoints and server-side logic.                                           |
-| **Backend Development**  | **Mock Service Worker (msw)**                   | Mock external service dependencies (if applicable) for the API to ensure isolated and deterministic testing.                                             |
-| **Mobile Application**   | **Dedicated Mobile Stack** (React Native, etc.) | Leverage the existing web stack and technologies (Tailwind CSS, Jotai, Module Federation) to achieve native mobile deployment and maximize code sharing. |
+| Domain                   | Feature / Technology                            | Goal & Benefit                                                                                                                                       |
+| :----------------------- | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **DevOps / Automation**  | **CI/CD Deployment** (e.g., GitHub Actions)     | Automate the build, test, and deployment pipelines to ensure rapid, reliable, and consistent releases across all environments.                       |
+| **Frontend Testing**     | Storybook                                       | Isolate and document UI components for easier development, review, and state management.                                                             |
+| **Frontend Testing**     | React Testing Library & Jest                    | Implement robust unit and integration tests for all components and complex client logic.                                                             |
+| **Frontend Testing**     | **E2E Testing** (End-to-End)                    | Ensure critical user flows and application journeys function correctly from start to finish.                                                         |
+| **Frontend Development** | **Mock Service Worker (msw)**                   | Use request interception to mock API responses, enabling decoupled and reliable local development and testing without needing the live backend.      |
+| **Backend Testing**      | Jest & E2E Testing                              | Implement comprehensive unit, integration, and end-to-end testing for all API endpoints and server-side logic.                                       |
+| **Backend Development**  | **Mock Service Worker (msw)**                   | Mock external service dependencies (if applicable) for the API to ensure isolated and deterministic testing.                                         |
+| **Mobile Application**   | **Dedicated Mobile Stack** (React Native, etc.) | Leverage the existing web stack and technologies (Tailwind, Jotai, Module Federation) to achieve native mobile deployment and maximize code sharing. |
 
 ---
 
 ### 💡 Design Decisions
 
-This application serves as a comprehensive Greenfield project, designed to showcase key stages of development, from initial design to scalable architecture and future planning. Below, we outline the primary technical and architectural choices made during development.
+This application serves as a comprehensive Greenfield project, designed to showcase key stages of development, from initial design to scalable architecture and future planning. Below, I outline the primary technical and architectural choices made during development.
 
 #### 1. **Project Management and Structure (Monorepo)**
 
