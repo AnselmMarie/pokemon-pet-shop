@@ -1,5 +1,5 @@
 export default {
-  displayName: '@pokemon-pet-shop/modal-cart',
+  displayName: '@pokemon-pet-shop/feature-modal-cart',
   preset: '../../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

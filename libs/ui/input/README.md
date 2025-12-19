@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/input
+# @pokemon-pet-shop/ui-input
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/input` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/ui-input` to execute the unit tests via [Jest](https://jestjs.io).

@@ -1,5 +1,5 @@
 export default {
-  displayName: '@pokemon-pet-shop/server-error',
+  displayName: '@pokemon-pet-shop/ui-server-error',
   preset: '../../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

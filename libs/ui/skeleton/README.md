@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/skeleton
+# @pokemon-pet-shop/ui-skeleton
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/skeleton` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/ui-skeleton` to execute the unit tests via [Jest](https://jestjs.io).

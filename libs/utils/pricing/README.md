@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/pricing
+# @pokemon-pet-shop/util-pricing
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/pricing` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/util-pricing` to execute the unit tests via [Jest](https://jestjs.io).

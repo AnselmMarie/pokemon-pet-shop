@@ -1,5 +1,5 @@
 {
-  "name": "@pokemon-pet-shop/typography",
+  "name": "@pokemon-pet-shop/ui-typography",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

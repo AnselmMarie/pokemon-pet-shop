@@ -1,5 +1,5 @@
 {
-  "name": "@pokemon-pet-shop/hide-in-mobile",
+  "name": "@pokemon-pet-shop/ui-hide-in-mobile",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

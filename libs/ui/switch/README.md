@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/switch
+# @pokemon-pet-shop/ui-switch
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/switch` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/ui-switch` to execute the unit tests via [Jest](https://jestjs.io).

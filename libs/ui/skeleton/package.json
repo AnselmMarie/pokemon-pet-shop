@@ -1,5 +1,5 @@
 {
-  "name": "@pokemon-pet-shop/skeleton",
+  "name": "@pokemon-pet-shop/ui-skeleton",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

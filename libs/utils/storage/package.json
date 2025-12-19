@@ -1,5 +1,5 @@
 {
-  "name": "@pokemon-pet-shop/storage",
+  "name": "@pokemon-pet-shop/util-storage",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/text-transform
+# @pokemon-pet-shop/util-text-transform
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/text-transform` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/util-text-transform` to execute the unit tests via [Jest](https://jestjs.io).

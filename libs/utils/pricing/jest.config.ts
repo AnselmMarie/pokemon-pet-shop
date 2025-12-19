@@ -1,5 +1,5 @@
 export default {
-  displayName: '@pokemon-pet-shop/pricing',
+  displayName: '@pokemon-pet-shop/util-pricing',
   preset: '../../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

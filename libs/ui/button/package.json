@@ -1,5 +1,5 @@
 {
-  "name": "@pokemon-pet-shop/button",
+  "name": "@pokemon-pet-shop/ui-button",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

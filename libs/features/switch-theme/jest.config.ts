@@ -1,5 +1,5 @@
 export default {
-  displayName: '@pokemon-pet-shop/switch-theme',
+  displayName: '@pokemon-pet-shop/feature-switch-theme',
   preset: '../../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

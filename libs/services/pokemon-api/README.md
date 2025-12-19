@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/pokemon-api
+# @pokemon-pet-shop/service-pokemon
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/pokemon-api` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/service-pokemon` to execute the unit tests via [Jest](https://jestjs.io).

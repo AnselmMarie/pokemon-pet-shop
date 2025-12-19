@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/detect
+# @pokemon-pet-shop/util-detect
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/detect` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/util-detect` to execute the unit tests via [Jest](https://jestjs.io).

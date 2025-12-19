@@ -1,7 +1,7 @@
-# @pokemon-pet-shop/footer
+# @pokemon-pet-shop/feature-footer
 
 This library was generated with [Nx](https://nx.dev).
 
 ## Running unit tests
 
-Run `nx test @pokemon-pet-shop/footer` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @pokemon-pet-shop/feature-footer` to execute the unit tests via [Jest](https://jestjs.io).
