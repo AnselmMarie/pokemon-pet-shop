@@ -14,7 +14,11 @@ export default [
         'error',
         {
           enforceBuildableLibDependency: true,
-          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
+          allow: [
+            '^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$',
+            '^.*/rspack(\\.config|\\.config\\.prod)\\.[cm]?[jt]s$',
+            '^.*/rspack-tsconfig-paths\\.[cm]?js$'
+          ],
           depConstraints: [
             {
               sourceTag: '*',

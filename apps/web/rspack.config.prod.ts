@@ -8,6 +8,7 @@ import {
 import { ModuleFederationConfig } from '@nx/module-federation';
 
 import baseConfig from './module-federation.config';
+const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
 
 const prodConfig: ModuleFederationConfig = {
   ...baseConfig,
@@ -42,6 +43,11 @@ export default {
       index: '/index.html',
       disableDotRule: true,
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
+    },
+  },
+  resolve: {
+    alias: {
+      ...getTsconfigPaths(join(__dirname, '../../tsconfig.base.json'), join(__dirname, '../..')),
     },
   },
   plugins: [

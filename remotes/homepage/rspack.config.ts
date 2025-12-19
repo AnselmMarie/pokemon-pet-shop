@@ -8,6 +8,7 @@ import {
 } from '@nx/module-federation/rspack.js';
 
 import config from './module-federation.config';
+const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
 
 export default {
   output: {
@@ -29,59 +30,7 @@ export default {
   resolve: {
     alias: {
       'react-native': require.resolve('react-native-web'),
-      '@features/pokemon': join(
-        __dirname,
-        '../../libs/features/pokemon/src/index.ts'
-      ),
-      '@utils/api-client': join(
-        __dirname,
-        '../../libs/utils/api-client/src/index.ts'
-      ),
-      '@utils/detect': join(__dirname, '../../libs/utils/detect/src/index.ts'),
-      '@utils/pricing': join(
-        __dirname,
-        '../../libs/utils/pricing/src/index.ts'
-      ),
-      '@utils/text-transform': join(
-        __dirname,
-        '../../libs/utils/text-transform/src/index.ts'
-      ),
-      '@utils/poke-type': join(
-        __dirname,
-        '../../libs/utils/poke-type/src/index.ts'
-      ),
-      '@ui/box': join(__dirname, '../../libs/ui/box/src/index.ts'),
-      '@ui/skeleton': join(__dirname, '../../libs/ui/skeleton/src/index.ts'),
-      '@ui/modal': join(__dirname, '../../libs/ui/modal/src/index.ts'),
-      '@ui/tag': join(__dirname, '../../libs/ui/tag/src/index.ts'),
-      '@ui/scroll-wrapper': join(
-        __dirname,
-        '../../libs/ui/scroll-wrapper/src/index.ts'
-      ),
-      '@ui/card': join(__dirname, '../../libs/ui/card/src/index.ts'),
-      '@ui/hide-in-mobile': join(
-        __dirname,
-        '../../libs/ui/hide-in-mobile/src/index.ts'
-      ),
-      '@ui/button': join(__dirname, '../../libs/ui/button/src/index.ts'),
-      '@ui/image': join(__dirname, '../../libs/ui/image/src/index.ts'),
-      '@ui/icon': join(__dirname, '../../libs/ui/icon/src/index.ts'),
-      '@ui/icon-poke-type': join(
-        __dirname,
-        '../../libs/ui/icon-poke-type/src/index.ts'
-      ),
-      '@ui/typography': join(
-        __dirname,
-        '../../libs/ui/typography/src/index.ts'
-      ),
-      '@services/pokemon-api': join(
-        __dirname,
-        '../../libs/services/pokemon-api/src/index.ts'
-      ),
-      '@services/cart-api': join(
-        __dirname,
-        '../../libs/services/cart-api/src/index.ts'
-      ),
+      ...getTsconfigPaths(join(__dirname, '../../tsconfig.base.json'), join(__dirname, '../..')),
     },
   },
   plugins: [

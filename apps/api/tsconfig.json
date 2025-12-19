@@ -2,11 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "files": [],
   "include": [],
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
+  "compilerOptions": {},
   "tsc-alias": {
     "resolveFullPaths": true,
     "verbose": false

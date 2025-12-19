@@ -8,6 +8,7 @@ import {
 } from '@nx/module-federation/rspack.js';
 
 import config from './module-federation.config';
+const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
 
 export default {
   output: {
@@ -26,6 +27,7 @@ export default {
     alias: {
       'react-native': require.resolve('react-native-web'),
       // 'react-native$': 'react-native-web',
+      ...getTsconfigPaths(join(__dirname, '../../tsconfig.base.json'), join(__dirname, '../..')),
     },
   },
   plugins: [

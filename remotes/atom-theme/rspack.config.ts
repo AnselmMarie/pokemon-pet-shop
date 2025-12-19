@@ -1,12 +1,14 @@
+import { join } from 'path';
+
 import { NxAppRspackPlugin } from '@nx/rspack/app-plugin.js';
 import { NxReactRspackPlugin } from '@nx/rspack/react-plugin.js';
 import {
   NxModuleFederationPlugin,
   NxModuleFederationDevServerPlugin,
 } from '@nx/module-federation/rspack.js';
-import { join } from 'path';
 
 import config from './module-federation.config';
+const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
 
 export default {
   output: {
@@ -26,10 +28,7 @@ export default {
   },
   resolve: {
     alias: {
-      '@utils/storage': join(
-        __dirname,
-        '../../libs/utils/storage/src/index.ts'
-      ),
+      ...getTsconfigPaths(join(__dirname, '../../tsconfig.base.json'), join(__dirname, '../..')),
     },
   },
   plugins: [

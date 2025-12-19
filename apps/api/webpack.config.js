@@ -1,5 +1,6 @@
 const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
 const { join } = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   output: {
@@ -9,12 +10,13 @@ module.exports = {
     }),
   },
   resolve: {
-    alias: {
-      '@utils/pricing': join(
-        __dirname,
-        '../../libs/utils/pricing/src/index.ts'
-      ),
-    },
+    alias: {},
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: join(__dirname, '../../tsconfig.base.json'),
+        baseUrl: join(__dirname, '../..'),
+      }),
+    ],
   },
   plugins: [
     new NxAppWebpackPlugin({

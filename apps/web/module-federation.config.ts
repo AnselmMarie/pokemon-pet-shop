@@ -1,7 +1,4 @@
-import {
-  ModuleFederationConfig,
-  SharedLibraryConfig,
-} from '@nx/module-federation';
+import { ModuleFederationConfig, SharedLibraryConfig } from '@nx/module-federation';
 import { workspaceRoot } from '@nx/devkit';
 
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
