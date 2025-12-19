@@ -3,7 +3,23 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist out-tsc apps/*/dist apps/*/out-tsc remotes/*/dist remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc"
+    "clean": "rm -rf dist out-tsc apps/*/dist apps/*/out-tsc remotes/*/dist remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write",
+      "stylelint --fix"
+    ]
   },
   "private": true,
   "devDependencies": {
@@ -59,11 +75,13 @@
     "eslint-plugin-playwright": "^1.6.2",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-react-hooks": "5.0.0",
+    "husky": "^9.1.7",
     "jest": "^30.0.2",
     "jest-environment-jsdom": "^30.0.2",
     "jest-environment-node": "^30.0.2",
     "jest-util": "^30.0.2",
     "jsonc-eslint-parser": "^2.1.0",
+    "lint-staged": "^16.2.7",
     "metro-config": "~0.82.4",
     "metro-resolver": "~0.82.4",
     "nx": "21.6.3",
