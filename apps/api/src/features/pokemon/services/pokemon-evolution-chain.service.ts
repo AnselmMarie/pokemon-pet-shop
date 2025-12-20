@@ -4,9 +4,7 @@ import { PokemonEvolutionChainParamsProps } from '../pokemon.types';
 export const getPokemonEvolutionChainService = async ({
   id,
 }: PokemonEvolutionChainParamsProps): Promise<PokemonEvolution.Base> => {
-  const res = await fetch(
-    `https://pokeapi.co/api/v2/evolution-chain/${id}`
-  ).catch(() => {
+  const res = await fetch(`https://pokeapi.co/api/v2/evolution-chain/${id}`).catch(() => {
     throw errFormat500ResponseUtil();
   });
 

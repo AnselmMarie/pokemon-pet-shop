@@ -59,9 +59,8 @@ export const PokemonAbilityName = ({
         <HideInMobile>
           <Box
             className={`hidden md:block w-[30px] h-full ${
-              pokeAbilityTypeMap.get(pokeTypeClass)?.[
-                `${pokeTypeClass}AtkLine` as keyof object
-              ] ?? ''
+              pokeAbilityTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}AtkLine` as keyof object] ??
+              ''
             }`}
           />
         </HideInMobile>
@@ -71,9 +70,7 @@ export const PokemonAbilityName = ({
         className={`h-[17px] w-[17px] rounded-circle mr-xs md:mr-sm flex justify-center items-center ${
           displayInDetail ? 'w-[35px] h-[35px] mr-md' : ''
         } ${isAtkLineShownCircleClass} ${
-          pokeAbilityTypeMap.get(pokeTypeClass)?.[
-            `${pokeTypeClass}AtkCircle` as keyof object
-          ] ?? ''
+          pokeAbilityTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}AtkCircle` as keyof object] ?? ''
         }`}
       >
         <IconPokeType

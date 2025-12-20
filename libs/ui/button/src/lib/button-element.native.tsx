@@ -20,11 +20,7 @@ const ButtonElement = ({
   onClick,
 }: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity
-      className={className}
-      disabled={isDisabled || isLoading}
-      onPress={onClick}
-    >
+    <TouchableOpacity className={className} disabled={isDisabled || isLoading} onPress={onClick}>
       {isLoading ? (
         <Box className="w-full">
           <Skeleton />

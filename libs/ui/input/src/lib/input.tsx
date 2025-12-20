@@ -36,11 +36,7 @@ export const Input = ({
         // onChange={field?.onChange}
       />
       {appendIcon ? (
-        <Icon
-          classNameIcon={`ml-sm ${iconClassname}`}
-          icon={appendIcon}
-          size={29}
-        />
+        <Icon classNameIcon={`ml-sm ${iconClassname}`} icon={appendIcon} size={29} />
       ) : null}
     </Box>
   );

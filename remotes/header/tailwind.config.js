@@ -6,10 +6,7 @@ const { semantic } = require('../../libs/ds-tokens');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
+    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
@@ -22,7 +19,7 @@ module.exports = {
     fontSize: semantic.typography.fontSize,
     fontFamily: semantic.typography.fontFamily,
     fontWeight: semantic.typography.fontWeight,
-    lineHeight: semantic.typography.lineHeight
+    lineHeight: semantic.typography.lineHeight,
   },
   plugins: [],
 };

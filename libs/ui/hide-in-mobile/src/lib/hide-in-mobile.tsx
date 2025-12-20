@@ -1,7 +1,5 @@
 import { PropsWithChildren, ReactNode } from 'react';
 
-export const HideInMobile = ({
-  children = null,
-}: PropsWithChildren): ReactNode => {
+export const HideInMobile = ({ children = null }: PropsWithChildren): ReactNode => {
   return children;
 };

@@ -7,9 +7,7 @@ export const ModalCard = ({
   className = '',
   children,
 }: PropsWithChildren<{ className?: string }>) => (
-  <Box className={`w-full bg-white rounded-lg shadow-lg ${className}`}>
-    {children}
-  </Box>
+  <Box className={`w-full bg-white rounded-lg shadow-lg ${className}`}>{children}</Box>
 );
 
 export const ModalClose = ({ onClick }: { onClick: () => void }) => (

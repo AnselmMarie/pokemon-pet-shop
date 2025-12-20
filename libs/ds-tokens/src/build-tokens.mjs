@@ -11,23 +11,27 @@ StyleDictionaryModule.registerTransform({
   transitive: true,
   name: `typography/px`,
   filter: (token) => {
-    return token.attributes.item === 'spacing' || token.attributes.item === 'lineHeight' || token.attributes.item === 'borderRadius'
+    return (
+      token.attributes.item === 'spacing' ||
+      token.attributes.item === 'lineHeight' ||
+      token.attributes.item === 'borderRadius'
+    );
   },
   transform: (token) => {
-    const { value } = token
+    const { value } = token;
     let transformedValue = value;
 
     if (typeof value === 'number') {
-      transformedValue = `${value}px`
+      transformedValue = `${value}px`;
     }
 
     if (token.attributes.item === 'lineHeight') {
-      lineHeightMap.set(token.attributes.subitem, transformedValue)
+      lineHeightMap.set(token.attributes.subitem, transformedValue);
     }
 
-    return transformedValue
-  }
-})
+    return transformedValue;
+  },
+});
 
 // Combine font size with line height
 StyleDictionaryModule.registerTransform({
@@ -35,15 +39,18 @@ StyleDictionaryModule.registerTransform({
   transitive: true,
   name: `typography/fontSize`,
   filter: (token) => {
-    return token.attributes.item === 'fontSize'
+    return token.attributes.item === 'fontSize';
   },
   transform: (token) => {
-    const { value } = token
+    const { value } = token;
 
-    const fontAttributes = [`${value}px`, { lineHeight: lineHeightMap.get(token.attributes.subitem) }]
-    return fontAttributes
-  }
-})
+    const fontAttributes = [
+      `${value}px`,
+      { lineHeight: lineHeightMap.get(token.attributes.subitem) },
+    ];
+    return fontAttributes;
+  },
+});
 
 // Combine font family with fallback fonts
 StyleDictionaryModule.registerTransform({
@@ -51,20 +58,20 @@ StyleDictionaryModule.registerTransform({
   transitive: true,
   name: `typography/fontFamily`,
   filter: (token) => {
-    return token.attributes.subitem === 'sansFallback' || token.attributes.subitem === 'sans'
+    return token.attributes.subitem === 'sansFallback' || token.attributes.subitem === 'sans';
   },
   transform: (token) => {
-    const { value } = token
+    const { value } = token;
 
     if (token.attributes.subitem === 'sansFallback') {
-      sansFallback = value.replace(/\s/g, '').split(',')
-      return value
+      sansFallback = value.replace(/\s/g, '').split(',');
+      return value;
     }
 
-    sansFallback.unshift(value)
-    return sansFallback
-  }
-})
+    sansFallback.unshift(value);
+    return sansFallback;
+  },
+});
 
 // Build root types of the design token JSON
 types.map((type) => {
@@ -73,17 +80,29 @@ types.map((type) => {
     makeSdTailwindConfig({
       type,
       source: ['src/tokens/**/*.json'],
-      buildPath: "./build/",
-      transforms: ['attribute/cti', 'name/camel', 'typography/px', 'typography/fontSize', 'typography/fontFamily'],
+      buildPath: './build/',
+      transforms: [
+        'attribute/cti',
+        'name/camel',
+        'typography/px',
+        'typography/fontSize',
+        'typography/fontFamily',
+      ],
     })
-  )
+  );
 
   // Build out the variables file
   StyleDictionary.platforms['js'] = {
     type,
     transformGroup: 'js',
     buildPath: './build/',
-    transforms: ['attribute/cti', 'name/camel', 'size/px', 'typography/fontSize', 'typography/fontFamily'],
+    transforms: [
+      'attribute/cti',
+      'name/camel',
+      'size/px',
+      'typography/fontSize',
+      'typography/fontFamily',
+    ],
     // transforms: ['attribute/cti', 'name/camel', 'typography/px', 'typography/fontSize', 'typography/fontFamily'],
     // transforms: [
     //   'attribute/cti',
@@ -95,9 +114,9 @@ types.map((type) => {
       {
         destination: 'variables.js',
         format: 'javascript/es6',
-      }
-    ]
-  }
+      },
+    ],
+  };
 
-  StyleDictionary.buildAllPlatforms()
-})
+  StyleDictionary.buildAllPlatforms();
+});

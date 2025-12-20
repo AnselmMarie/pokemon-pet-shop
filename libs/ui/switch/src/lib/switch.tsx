@@ -20,8 +20,12 @@ export const Switch = ({
     // noopUtil();
   },
 }: SwitchProps): ReactElement => {
-  const { getCircleThemeStyle, onInitLeftClick, onInitRightClick } =
-    useSwitchLogic(defaultValue, val, onLeftClick, onRightClick);
+  const { getCircleThemeStyle, onInitLeftClick, onInitRightClick } = useSwitchLogic(
+    defaultValue,
+    val,
+    onLeftClick,
+    onRightClick
+  );
 
   return (
     <Box

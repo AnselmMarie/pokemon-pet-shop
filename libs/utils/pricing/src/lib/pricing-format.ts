@@ -54,9 +54,5 @@ export const pricingFormat = (
     price = checkChain(name, chainData, pricingData, 1);
   }
 
-  return price
-    ? returnAsNum
-      ? price
-      : pricingFormatUSD(Number(price))
-    : 'Price is Not Available';
+  return price ? (returnAsNum ? price : pricingFormatUSD(Number(price))) : 'Price is Not Available';
 };

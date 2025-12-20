@@ -3,10 +3,7 @@ import { workspaceRoot } from '@nx/devkit';
 
 const deps = require(`${workspaceRoot}/package.json`).dependencies;
 
-export const sharedMappings = (
-  libraryName: string,
-  defaultConfig: SharedLibraryConfig,
-) => {
+export const sharedMappings = (libraryName: string, defaultConfig: SharedLibraryConfig) => {
   if (['react', 'react-dom'].includes(libraryName)) {
     return {
       singleton: true,

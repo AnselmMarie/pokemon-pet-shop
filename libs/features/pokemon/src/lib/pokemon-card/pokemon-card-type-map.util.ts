@@ -2,10 +2,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'grassType',
     {
-      grassTypeWrapper:
-        'bg-veryDarkGrass md:bg-gradient-to-tr from-veryDarkGrass to-lightGrass',
-      grassTypeImageWrapper:
-        'bg-veryDarkGrass bg-gradient-to-tr from-veryDarkGrass to-lightGrass',
+      grassTypeWrapper: 'bg-veryDarkGrass md:bg-gradient-to-tr from-veryDarkGrass to-lightGrass',
+      grassTypeImageWrapper: 'bg-veryDarkGrass bg-gradient-to-tr from-veryDarkGrass to-lightGrass',
       grassTypeContentCardWrapper: 'md:bg-darkGrass',
       grassTypeContentCardText: 'text-white',
     },
@@ -13,10 +11,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'bugType',
     {
-      bugTypeWrapper:
-        'bg-veryDarkBug md:bg-gradient-to-tr from-veryDarkBug to-lightBug',
-      bugTypeImageWrapper:
-        'bg-veryDarkBug bg-gradient-to-tr from-veryDarkBug to-lightBug',
+      bugTypeWrapper: 'bg-veryDarkBug md:bg-gradient-to-tr from-veryDarkBug to-lightBug',
+      bugTypeImageWrapper: 'bg-veryDarkBug bg-gradient-to-tr from-veryDarkBug to-lightBug',
       bugTypeContentCardWrapper: 'md:bg-darkBug',
       bugTypeContentCardText: 'text-white',
     },
@@ -24,10 +20,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'darkType',
     {
-      darkTypeWrapper:
-        'bg-veryDarkDark md:bg-gradient-to-tr from-veryDarkDark to-lightDark',
-      darkTypeImageWrapper:
-        'bg-veryDarkDark bg-gradient-to-tr from-veryDarkDark to-lightDark',
+      darkTypeWrapper: 'bg-veryDarkDark md:bg-gradient-to-tr from-veryDarkDark to-lightDark',
+      darkTypeImageWrapper: 'bg-veryDarkDark bg-gradient-to-tr from-veryDarkDark to-lightDark',
       darkTypeContentCardWrapper: 'md:bg-darkDark',
       darkTypeContentCardText: 'text-white',
     },
@@ -57,10 +51,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'fairyType',
     {
-      fairyTypeWrapper:
-        'bg-veryDarkFairy md:bg-gradient-to-tr from-veryDarkFairy to-lightFairy',
-      fairyTypeImageWrapper:
-        'bg-veryDarkFairy bg-gradient-to-tr from-veryDarkFairy to-lightFairy',
+      fairyTypeWrapper: 'bg-veryDarkFairy md:bg-gradient-to-tr from-veryDarkFairy to-lightFairy',
+      fairyTypeImageWrapper: 'bg-veryDarkFairy bg-gradient-to-tr from-veryDarkFairy to-lightFairy',
       fairyTypeContentCardWrapper: 'md:bg-darkFairy',
       fairyTypeContentCardText: 'text-white',
     },
@@ -79,10 +71,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'fireType',
     {
-      fireTypeWrapper:
-        'bg-veryDarkFire md:bg-gradient-to-tr from-veryDarkFire to-lightFire',
-      fireTypeImageWrapper:
-        'bg-veryDarkFire bg-gradient-to-tr from-veryDarkFire to-lightFire',
+      fireTypeWrapper: 'bg-veryDarkFire md:bg-gradient-to-tr from-veryDarkFire to-lightFire',
+      fireTypeImageWrapper: 'bg-veryDarkFire bg-gradient-to-tr from-veryDarkFire to-lightFire',
       fireTypeContentCardWrapper: 'md:bg-darkFire',
       fireTypeContentCardText: 'text-white',
     },
@@ -101,10 +91,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'ghostType',
     {
-      ghostTypeWrapper:
-        'bg-veryDarkGhost md:bg-gradient-to-tr from-veryDarkGhost to-lightGhost',
-      ghostTypeImageWrapper:
-        'bg-veryDarkGhost bg-gradient-to-tr from-veryDarkGhost to-lightGhost',
+      ghostTypeWrapper: 'bg-veryDarkGhost md:bg-gradient-to-tr from-veryDarkGhost to-lightGhost',
+      ghostTypeImageWrapper: 'bg-veryDarkGhost bg-gradient-to-tr from-veryDarkGhost to-lightGhost',
       ghostTypeContentCardWrapper: 'md:bg-darkGhost',
       ghostTypeContentCardText: 'text-white',
     },
@@ -123,10 +111,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'iceType',
     {
-      iceTypeWrapper:
-        'bg-veryDarkIce md:bg-gradient-to-tr from-veryDarkIce to-lightIce',
-      iceTypeImageWrapper:
-        'bg-veryDarkIce bg-gradient-to-tr from-veryDarkIce to-lightIce',
+      iceTypeWrapper: 'bg-veryDarkIce md:bg-gradient-to-tr from-veryDarkIce to-lightIce',
+      iceTypeImageWrapper: 'bg-veryDarkIce bg-gradient-to-tr from-veryDarkIce to-lightIce',
       iceTypeContentCardWrapper: 'md:bg-darkIce',
       iceTypeContentCardText: 'text-white',
     },
@@ -167,10 +153,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'rockType',
     {
-      rockTypeWrapper:
-        'bg-veryDarkRock md:bg-gradient-to-tr from-veryDarkRock to-lightRock',
-      rockTypeImageWrapper:
-        'bg-veryDarkRock bg-gradient-to-tr from-veryDarkRock to-lightRock',
+      rockTypeWrapper: 'bg-veryDarkRock md:bg-gradient-to-tr from-veryDarkRock to-lightRock',
+      rockTypeImageWrapper: 'bg-veryDarkRock bg-gradient-to-tr from-veryDarkRock to-lightRock',
       rockTypeContentCardWrapper: 'md:bg-darkRock',
       rockTypeContentCardText: 'text-white',
     },
@@ -178,10 +162,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'steelType',
     {
-      steelTypeWrapper:
-        'bg-veryDarkSteel md:bg-gradient-to-tr from-veryDarkSteel to-lightSteel',
-      steelTypeImageWrapper:
-        'bg-veryDarkSteel bg-gradient-to-tr from-veryDarkSteel to-lightSteel',
+      steelTypeWrapper: 'bg-veryDarkSteel md:bg-gradient-to-tr from-veryDarkSteel to-lightSteel',
+      steelTypeImageWrapper: 'bg-veryDarkSteel bg-gradient-to-tr from-veryDarkSteel to-lightSteel',
       steelTypeContentCardWrapper: 'md:bg-darkSteel',
       steelTypeContentCardText: 'text-default',
     },
@@ -189,10 +171,8 @@ export const pokeCardTypeMap = new Map<string, object>([
   [
     'waterType',
     {
-      waterTypeWrapper:
-        'bg-veryDarkWater md:bg-gradient-to-tr from-veryDarkWater to-lightWater',
-      waterTypeImageWrapper:
-        'bg-veryDarkWater bg-gradient-to-tr from-veryDarkWater to-lightWater',
+      waterTypeWrapper: 'bg-veryDarkWater md:bg-gradient-to-tr from-veryDarkWater to-lightWater',
+      waterTypeImageWrapper: 'bg-veryDarkWater bg-gradient-to-tr from-veryDarkWater to-lightWater',
       waterTypeContentCardWrapper: 'md:bg-darkWater',
       waterTypeContentCardText: 'text-white',
     },

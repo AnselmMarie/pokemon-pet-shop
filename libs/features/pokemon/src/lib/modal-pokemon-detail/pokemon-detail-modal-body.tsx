@@ -80,10 +80,7 @@ export const PokemonDetailModalBody = ({
       m: `(${mDecimal} m)`,
     };
 
-    const convertFtInches = (
-      dFt: string | null = null,
-      dIn: string | null = null
-    ) => {
+    const convertFtInches = (dFt: string | null = null, dIn: string | null = null) => {
       const feet = Number(dFt);
       const inches = Math.round(Number(`.${dIn}`) * 12);
 
@@ -107,9 +104,7 @@ export const PokemonDetailModalBody = ({
   }, [pokeCreature?.height]);
 
   const removeHtmlCodeInDescription = useMemo((): string => {
-    return removeHtmlCodeInString(
-      speciesData?.flavor_text_entries?.flavor_text
-    );
+    return removeHtmlCodeInString(speciesData?.flavor_text_entries?.flavor_text);
   }, [speciesData?.flavor_text_entries?.flavor_text]);
 
   return (
@@ -121,26 +116,16 @@ export const PokemonDetailModalBody = ({
               NO. {pokeCreature?.order}
             </Typography>
           </Box>
-          <Typography
-            className="text-center mb-sm -mt-xl text-2xl"
-            variant="h1"
-          >
+          <Typography className="text-center mb-sm -mt-xl text-2xl" variant="h1">
             {capitalizeName(pokeCreature?.name)}
           </Typography>
           {pokeCreature?.types ? (
             <Box className="mb-xl">
               <TagWrapper>
                 {(pokeCreature?.types ?? []).map(
-                  (
-                    typeObj: PokemonDetail.PokemonDetailTypes,
-                    i: number
-                  ): ReactElement | null => {
+                  (typeObj: PokemonDetail.PokemonDetailTypes, i: number): ReactElement | null => {
                     return (
-                      <TagItem
-                        key={i}
-                        name={typeObj?.type?.name}
-                        pokeTypeClass={pokeTypeClass}
-                      />
+                      <TagItem key={i} name={typeObj?.type?.name} pokeTypeClass={pokeTypeClass} />
                     );
                   }
                 )}
@@ -149,9 +134,7 @@ export const PokemonDetailModalBody = ({
           ) : null}
 
           {!speciesIsLoading || !speciesIsFetching ? (
-            <Typography className="text-md mb-lg">
-              {removeHtmlCodeInDescription}
-            </Typography>
+            <Typography className="text-md mb-lg">{removeHtmlCodeInDescription}</Typography>
           ) : (
             <Skeleton count={2} />
           )}
@@ -199,9 +182,7 @@ export const PokemonDetailModalBody = ({
         <Box className="mt-lg flex justify-center">
           <Button
             text={
-              isPendingUpdateCart
-                ? `Catching ${capitalizeName(pokeCreature?.name)}`
-                : 'Get Pet'
+              isPendingUpdateCart ? `Catching ${capitalizeName(pokeCreature?.name)}` : 'Get Pet'
             }
             size="large"
             appendIcon={isPendingUpdateCart ? 'IconPokeBall' : undefined}

@@ -1,9 +1,6 @@
 import { Request, Response } from 'express';
 
-import {
-  errFormat500ResponseUtil,
-  errFormatResponseUtil,
-} from '../../../shared/middleware';
+import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 
 import { PokemonSpeciesParamsProps } from '../pokemon.types';
 import { getPokemonEvolutionChainService } from '../services/pokemon-evolution-chain.service';
@@ -24,12 +21,11 @@ export const getPokemonSpeciesController = async (
 
     const evolutionChainSplit = finalRes?.evolution_chain?.url?.split('/');
 
-    const finalEvolutionRes: PokemonEvolution.Base =
-      await getPokemonEvolutionChainService({
-        id: evolutionChainSplit[evolutionChainSplit.length - 2],
-      }).catch(() => {
-        throw errFormat500ResponseUtil();
-      });
+    const finalEvolutionRes: PokemonEvolution.Base = await getPokemonEvolutionChainService({
+      id: evolutionChainSplit[evolutionChainSplit.length - 2],
+    }).catch(() => {
+      throw errFormat500ResponseUtil();
+    });
 
     res.status(200).json({
       ...finalRes,
@@ -39,8 +35,6 @@ export const getPokemonSpeciesController = async (
       },
     });
   } catch (err: unknown) {
-    res
-      .status((err as { status: number })?.status || 500)
-      .json(errFormatResponseUtil(err));
+    res.status((err as { status: number })?.status || 500).json(errFormatResponseUtil(err));
   }
 };

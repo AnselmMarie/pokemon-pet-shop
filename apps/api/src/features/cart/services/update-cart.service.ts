@@ -2,14 +2,8 @@ import { clone } from 'lodash';
 
 import { pricingFormat } from '@utils/pricing';
 
-import {
-  errFormat500ResponseUtil,
-  errFormatResponseUtil,
-} from '../../../shared/middleware';
-import {
-  getCartDataCall,
-  updateCartDataCall,
-} from '../../../database/repositories';
+import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
+import { getCartDataCall, updateCartDataCall } from '../../../database/repositories';
 import { getPokemonSpeciesService } from '../../pokemon/services/pokemon-species.service';
 import { getPokemonDetailService } from '../../pokemon/services/pokemon-detail.service';
 import { getPricingService } from '../../pokemon/services/pricing.service';
@@ -72,11 +66,9 @@ export const updateCartItemService = async (payload: Cart.Payload) => {
     });
   }
 
-  const pricingData: PokemonPricing.Base = await getPricingService().catch(
-    () => {
-      throw errFormat500ResponseUtil();
-    }
-  );
+  const pricingData: PokemonPricing.Base = await getPricingService().catch(() => {
+    throw errFormat500ResponseUtil();
+  });
   const speciesData = await getSpeciesDetail(payload?.id).catch(() => {
     throw errFormat500ResponseUtil();
   });
@@ -104,14 +96,10 @@ export const updateCartItemService = async (payload: Cart.Payload) => {
 
   if (key !== null) {
     if (currentObj) {
-      currentObj.quantity = payload.addToCart
-        ? currentObj.quantity + 1
-        : currentObj.quantity - 1;
+      currentObj.quantity = payload.addToCart ? currentObj.quantity + 1 : currentObj.quantity - 1;
     }
     currentCartData.counter = payload.addToCart ? counter + 1 : counter - 1;
-    currentCartData.total = payload.addToCart
-      ? total + pokemonPrice
-      : total - pokemonPrice;
+    currentCartData.total = payload.addToCart ? total + pokemonPrice : total - pokemonPrice;
 
     await updateCartDataCall(currentCartData).catch(() => {
       throw errFormat500ResponseUtil();

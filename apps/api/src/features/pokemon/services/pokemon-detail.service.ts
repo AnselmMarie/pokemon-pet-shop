@@ -2,14 +2,10 @@
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { PokemonDetailQueryProps } from '../pokemon.types';
 
-export const getPokemonDetailService = async ({
-  id,
-}: PokemonDetailQueryProps) => {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).catch(
-    () => {
-      throw errFormat500ResponseUtil();
-    }
-  );
+export const getPokemonDetailService = async ({ id }: PokemonDetailQueryProps) => {
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).catch(() => {
+    throw errFormat500ResponseUtil();
+  });
 
   if (res.ok) {
     const {

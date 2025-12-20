@@ -13,12 +13,8 @@ export const useGetPokemonList = () => {
   return useInfiniteQuery({
     queryKey,
     queryFn,
-    select: (
-      r: InfiniteData<
-        AxiosResponse<(PokemonDetail.Base & { name: string })[]>,
-        number
-      >
-    ) => r,
+    select: (r: InfiniteData<AxiosResponse<(PokemonDetail.Base & { name: string })[]>, number>) =>
+      r,
     initialPageParam: 0,
     getNextPageParam: (
       lastPage: AxiosResponse<(PokemonDetail.Base & { name: string })[]>,

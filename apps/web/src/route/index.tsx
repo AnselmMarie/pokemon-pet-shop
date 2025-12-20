@@ -40,9 +40,5 @@ const catchAllRoute = createRoute({
   component: () => <Navigate to="/not-found" />,
 });
 
-const routeTree = rootRoute.addChildren([
-  homepageRoute,
-  notFoundRoute,
-  catchAllRoute,
-]);
+const routeTree = rootRoute.addChildren([homepageRoute, notFoundRoute, catchAllRoute]);
 export const router = createRouter({ routeTree });

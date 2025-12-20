@@ -1,9 +1,6 @@
 import { Request, Response } from 'express';
 
-import {
-  errFormat500ResponseUtil,
-  errFormatResponseUtil,
-} from '../../../shared/middleware/error';
+import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware/error';
 import { CartParamsProps } from '../cart.types';
 import { deleteCartItemService } from '../services/delete-cart.service';
 
@@ -20,8 +17,6 @@ export const deleteCartItemController = async (
 
     res.status(204).json();
   } catch (err: unknown) {
-    res
-      .status((err as { status: number })?.status || 500)
-      .json(errFormatResponseUtil(err));
+    res.status((err as { status: number })?.status || 500).json(errFormatResponseUtil(err));
   }
 };

@@ -2,12 +2,7 @@ import { PropsWithChildren, useEffect, useMemo, useState } from 'react';
 
 import { Box } from '@ui/box';
 
-import {
-  ModalBody,
-  ModalCard,
-  ModalClose,
-  ModalTitle,
-} from './modal-breakdown';
+import { ModalBody, ModalCard, ModalClose, ModalTitle } from './modal-breakdown';
 
 export const Modal = ({
   title = '',
@@ -71,9 +66,7 @@ export const Modal = ({
     >
       <ModalCard
         className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[450px] rounded-sm ${
-          startAnimation
-            ? 'ease-in duration-300 opacity-100'
-            : 'ease-out duration-300 opacity-0'
+          startAnimation ? 'ease-in duration-300 opacity-100' : 'ease-out duration-300 opacity-0'
         }`}
       >
         <Box className={getHeadlineClasses}>

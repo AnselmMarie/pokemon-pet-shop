@@ -8,10 +8,7 @@ import { Skeleton } from '@ui/skeleton';
 import { capitalizeName } from '@utils/text-transform';
 import { pricingFormat } from '@utils/pricing';
 
-import {
-  useGetPokemonSpecies,
-  useGetPokemonPricing,
-} from '@services/pokemon-api';
+import { useGetPokemonSpecies, useGetPokemonPricing } from '@services/pokemon-api';
 
 import { HalfCircle } from './components/half.circle';
 import { pokeDetailTypeMap } from './pokemon-detail-type-map.util';
@@ -68,9 +65,7 @@ export const PokemonDetailModalHeader = ({
   return (
     <Box
       className={`z-0 relative rounded-t-sm ${
-        pokeDetailTypeMap.get(pokeTypeClass)?.[
-          `${pokeTypeClass}ImageBg` as keyof object
-        ] ?? ''
+        pokeDetailTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}ImageBg` as keyof object] ?? ''
       }`}
     >
       <Box className="absolute flex w-fit bg-medYellow mt-md ml-md text-xl py-xs px-sm rounded-sm">

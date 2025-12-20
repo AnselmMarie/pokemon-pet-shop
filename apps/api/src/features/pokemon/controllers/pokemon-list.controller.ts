@@ -1,9 +1,6 @@
 import { Request, Response } from 'express';
 
-import {
-  errFormat500ResponseUtil,
-  errFormatResponseUtil,
-} from '../../../shared/middleware';
+import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 
 import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../constants';
 import { PokemonListQueryProps } from '../pokemon.types';
@@ -48,21 +45,14 @@ export const getPokemonListController = async (
       );
     }
 
-    const detailPromisesRes = await Promise.all(detailPromises).then(
-      (values) => {
-        return values;
-      }
-    );
+    const detailPromisesRes = await Promise.all(detailPromises).then((values) => {
+      return values;
+    });
 
-    const finalRes = combineListAndDetailDataUtil(
-      pokemonList,
-      detailPromisesRes
-    );
+    const finalRes = combineListAndDetailDataUtil(pokemonList, detailPromisesRes);
 
     res.status(200).json(finalRes);
   } catch (err: unknown) {
-    res
-      .status((err as { status: number })?.status || 500)
-      .json(errFormatResponseUtil(err));
+    res.status((err as { status: number })?.status || 500).json(errFormatResponseUtil(err));
   }
 };

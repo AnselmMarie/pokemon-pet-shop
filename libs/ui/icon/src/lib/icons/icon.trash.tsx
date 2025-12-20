@@ -2,12 +2,7 @@ import { ReactElement } from 'react';
 
 import { IconSvgProps } from './icon.svg.interface';
 
-export const IconTrash = ({
-  size,
-  fill,
-  stroke,
-  onClick,
-}: IconSvgProps): ReactElement => {
+export const IconTrash = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
   return (
     <svg
       width={size}

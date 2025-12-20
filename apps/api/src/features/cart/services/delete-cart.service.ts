@@ -1,10 +1,7 @@
 import { clone } from 'lodash';
 
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
-import {
-  getCartDataCall,
-  updateCartDataCall,
-} from '../../../database/repositories';
+import { getCartDataCall, updateCartDataCall } from '../../../database/repositories';
 
 export const deleteCartItemService = async (id: string) => {
   const currentCartData: Cart.Base = clone(

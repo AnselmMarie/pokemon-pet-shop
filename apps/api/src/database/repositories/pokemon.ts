@@ -15,4 +15,3 @@ export const getPricingDataCall = async (): Promise<PokemonPricing.Base> => {
     }, 500);
   });
 };
-

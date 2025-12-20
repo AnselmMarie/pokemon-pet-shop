@@ -2,29 +2,25 @@ export const pokeDetailTypeMap = new Map<string, object>([
   [
     'grassType',
     {
-      grassTypeImageBg:
-        'bg-veryDarkGrass bg-gradient-to-t from-veryDarkGrass to-lightGrass',
+      grassTypeImageBg: 'bg-veryDarkGrass bg-gradient-to-t from-veryDarkGrass to-lightGrass',
     },
   ],
   [
     'bugType',
     {
-      bugTypeImageBg:
-        'bg-veryDarkBug bg-gradient-to-t from-veryDarkBug to-lightBug',
+      bugTypeImageBg: 'bg-veryDarkBug bg-gradient-to-t from-veryDarkBug to-lightBug',
     },
   ],
   [
     'darkType',
     {
-      darkTypeImageBg:
-        'bg-veryDarkDark bg-gradient-to-t from-veryDarkDark to-lightDark',
+      darkTypeImageBg: 'bg-veryDarkDark bg-gradient-to-t from-veryDarkDark to-lightDark',
     },
   ],
   [
     'dragonType',
     {
-      dragonTypeImageBg:
-        'bg-veryDarkDragon bg-gradient-to-t from-veryDarkDragon to-lightDragon',
+      dragonTypeImageBg: 'bg-veryDarkDragon bg-gradient-to-t from-veryDarkDragon to-lightDragon',
     },
   ],
   [
@@ -37,8 +33,7 @@ export const pokeDetailTypeMap = new Map<string, object>([
   [
     'fairyType',
     {
-      fairyTypeImageBg:
-        'bg-veryDarkFairy bg-gradient-to-t from-veryDarkFairy to-lightFairy',
+      fairyTypeImageBg: 'bg-veryDarkFairy bg-gradient-to-t from-veryDarkFairy to-lightFairy',
     },
   ],
   [
@@ -51,50 +46,43 @@ export const pokeDetailTypeMap = new Map<string, object>([
   [
     'fireType',
     {
-      fireTypeImageBg:
-        'bg-veryDarkFire bg-gradient-to-t from-veryDarkFire to-lightFire',
+      fireTypeImageBg: 'bg-veryDarkFire bg-gradient-to-t from-veryDarkFire to-lightFire',
     },
   ],
   [
     'flyingType',
     {
-      flyingTypeImageBg:
-        'bg-veryDarkFlying bg-gradient-to-t from-veryDarkFlying to-lightFlying',
+      flyingTypeImageBg: 'bg-veryDarkFlying bg-gradient-to-t from-veryDarkFlying to-lightFlying',
     },
   ],
   [
     'ghostType',
     {
-      ghostTypeImageBg:
-        'bg-veryDarkGhost bg-gradient-to-t from-veryDarkGhost to-lightGhost',
+      ghostTypeImageBg: 'bg-veryDarkGhost bg-gradient-to-t from-veryDarkGhost to-lightGhost',
     },
   ],
   [
     'groundType',
     {
-      groundTypeImageBg:
-        'bg-veryDarkGround bg-gradient-to-t from-veryDarkGround to-lightGround',
+      groundTypeImageBg: 'bg-veryDarkGround bg-gradient-to-t from-veryDarkGround to-lightGround',
     },
   ],
   [
     'iceType',
     {
-      iceTypeImageBg:
-        'bg-veryDarkIce bg-gradient-to-t from-veryDarkIce to-lightIce',
+      iceTypeImageBg: 'bg-veryDarkIce bg-gradient-to-t from-veryDarkIce to-lightIce',
     },
   ],
   [
     'normalType',
     {
-      normalTypeImageBg:
-        'bg-veryDarkNormal bg-gradient-to-t from-veryDarkNormal to-lightNormal',
+      normalTypeImageBg: 'bg-veryDarkNormal bg-gradient-to-t from-veryDarkNormal to-lightNormal',
     },
   ],
   [
     'poisonType',
     {
-      poisonTypeImageBg:
-        'bg-veryDarkPoison bg-gradient-to-t from-veryDarkPoison to-lightPoison',
+      poisonTypeImageBg: 'bg-veryDarkPoison bg-gradient-to-t from-veryDarkPoison to-lightPoison',
     },
   ],
   [
@@ -107,22 +95,19 @@ export const pokeDetailTypeMap = new Map<string, object>([
   [
     'rockType',
     {
-      rockTypeImageBg:
-        'bg-veryDarkRock bg-gradient-to-t from-veryDarkRock to-lightRock',
+      rockTypeImageBg: 'bg-veryDarkRock bg-gradient-to-t from-veryDarkRock to-lightRock',
     },
   ],
   [
     'steelType',
     {
-      steelTypeImageBg:
-        'bg-veryDarkSteel bg-gradient-to-t from-veryDarkSteel to-lighkSteel',
+      steelTypeImageBg: 'bg-veryDarkSteel bg-gradient-to-t from-veryDarkSteel to-lighkSteel',
     },
   ],
   [
     'waterType',
     {
-      waterTypeImageBg:
-        'bg-veryDarkWater bg-gradient-to-t from-veryDarkWater to-lightWater',
+      waterTypeImageBg: 'bg-veryDarkWater bg-gradient-to-t from-veryDarkWater to-lightWater',
     },
   ],
 ]);

@@ -1,7 +1,4 @@
-import type {
-  SyncStorage,
-  AsyncStorage,
-} from 'jotai/vanilla/utils/atomWithStorage';
+import type { SyncStorage, AsyncStorage } from 'jotai/vanilla/utils/atomWithStorage';
 
 import { createInMemoryStorage } from './in-store-storage';
 
@@ -9,8 +6,7 @@ export const createStorage = <T>(): SyncStorage<T> | AsyncStorage<T> => {
   let AsyncStorageModule: any;
 
   try {
-    AsyncStorageModule =
-      require('@react-native-async-storage/async-storage').default;
+    AsyncStorageModule = require('@react-native-async-storage/async-storage').default;
   } catch (e) {
     return createInMemoryStorage<T>();
   }

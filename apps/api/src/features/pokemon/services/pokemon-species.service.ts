@@ -2,12 +2,8 @@
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { PokemonSpeciesParamsProps } from '../pokemon.types';
 
-export const getPokemonSpeciesService = async ({
-  id,
-}: PokemonSpeciesParamsProps) => {
-  const res = await fetch(
-    `https://pokeapi.co/api/v2/pokemon-species/${id}`
-  ).catch(() => {
+export const getPokemonSpeciesService = async ({ id }: PokemonSpeciesParamsProps) => {
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`).catch(() => {
     throw errFormat500ResponseUtil();
   });
 
@@ -23,9 +19,7 @@ export const getPokemonSpeciesService = async ({
     }: any = await res.json();
     return {
       ...args,
-      flavor_text_entries: flavor_text_entries.find(
-        (el: any) => el?.language?.name === 'en'
-      ),
+      flavor_text_entries: flavor_text_entries.find((el: any) => el?.language?.name === 'en'),
       genera: genera.find((el: any) => el?.language?.name === 'en'),
     };
   }

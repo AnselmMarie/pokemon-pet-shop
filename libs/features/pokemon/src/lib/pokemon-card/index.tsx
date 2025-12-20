@@ -21,10 +21,7 @@ interface PokemonCardProps {
   isLoading: boolean;
 }
 
-export const PokemonCard = ({
-  pokeCreature,
-  isLoading,
-}: PokemonCardProps): ReactElement => {
+export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const pokeTypeClass = getPokeTypePrefixClass(pokeCreature?.types);
@@ -40,11 +37,7 @@ export const PokemonCard = ({
       <Card
         className={`w-[352px] h-[167px] md:m-w-auto md:w-[250px] md:h-[367px] flex p-sm md:p-md rounded-md flex-row md:flex-col relative md:justify-between ${
           isLoading ? 'bg-medGrey' : ''
-        } ${
-          pokeCardTypeMap.get(pokeTypeClass)?.[
-            `${pokeTypeClass}Wrapper` as keyof object
-          ] ?? ''
-        }`}
+        } ${pokeCardTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}Wrapper` as keyof object] ?? ''}`}
       >
         {isLoading ? (
           <Box className="w-[50%] h-[70%] my-lg mx-md md:flex-1 md:w-[80%] md:h-full md:mx-auto md:mb-md">
@@ -59,10 +52,7 @@ export const PokemonCard = ({
             }`}
           >
             <Image
-              src={
-                pokeCreature?.sprites?.other?.['official-artwork']
-                  ?.front_default
-              }
+              src={pokeCreature?.sprites?.other?.['official-artwork']?.front_default}
               className="w-full md:w-[100%] h-auto md:absolute md:w-[87.5%] md:z-0"
               alt={`${pokeCreature?.name} Image`}
               isLoading={isLoading}
@@ -109,10 +99,7 @@ export const PokemonCard = ({
             )}
 
             {(pokeCreature?.abilities ?? []).map(
-              (
-                abilityObj: PokemonDetail.PokemonDetailAbility,
-                i: number
-              ): ReactElement | null => {
+              (abilityObj: PokemonDetail.PokemonDetailAbility, i: number): ReactElement | null => {
                 if (i > 1) {
                   return null;
                 }

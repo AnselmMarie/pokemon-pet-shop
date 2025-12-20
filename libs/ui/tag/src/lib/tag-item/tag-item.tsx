@@ -15,16 +15,12 @@ export const TagItem = ({
   return (
     <Box
       className={`rounded-pill py-xs px-md ${
-        pokeTagTypeMap.get(pokeTypeClass)?.[
-          `${pokeTypeClass}Bg` as keyof object
-        ] ?? ''
+        pokeTagTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}Bg` as keyof object] ?? ''
       }`}
     >
       <Typography
         className={`${
-          pokeTagTypeMap.get(pokeTypeClass)?.[
-            `${pokeTypeClass}Text` as keyof object
-          ] ?? ''
+          pokeTagTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}Text` as keyof object] ?? ''
         }`}
       >
         {capitalizeName(name)}

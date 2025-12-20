@@ -8,9 +8,7 @@ export const getCartDataCall = async (): Promise<Cart.Base> => {
   });
 };
 
-export const updateCartDataCall = async (
-  data: Cart.Base
-): Promise<Cart.Base> => {
+export const updateCartDataCall = async (data: Cart.Base): Promise<Cart.Base> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       cartDatabase.data = data.data;

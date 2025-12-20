@@ -19,16 +19,11 @@ interface CartModalItemProps {
   lastIndex: number;
 }
 
-const CartModalItem = ({
-  el,
-  currIndex,
-  lastIndex,
-}: CartModalItemProps): ReactElement => {
+const CartModalItem = ({ el, currIndex, lastIndex }: CartModalItemProps): ReactElement => {
   const pokeTypeClass = getPokeTypePrefixClass(el?.types);
 
   const { mutate: updateMutate, isPending: updateIsPending } = useUpdateCart();
-  const { mutate: deleteMutate, isPending: deleteIsPending } =
-    useDeleteCartItem();
+  const { mutate: deleteMutate, isPending: deleteIsPending } = useDeleteCartItem();
 
   const handleRemoveCartItem = (id: string) => {
     deleteMutate(id);
@@ -55,24 +50,17 @@ const CartModalItem = ({
       <Box className="flex flex-row gap-md">
         <Box
           className={`rounded-sm p-sm border-4 border-solid ${
-            cartModalTypeMap.get(pokeTypeClass)?.[
-              `${pokeTypeClass}ImageWrapper` as keyof object
-            ] ?? ''
+            cartModalTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}ImageWrapper` as keyof object] ??
+            ''
           }`}
         >
-          <Image
-            src={el?.image}
-            className="w-[115px] h-[115px]"
-            alt={`${el?.name} Image`}
-          />
+          <Image src={el?.image} className="w-[115px] h-[115px]" alt={`${el?.name} Image`} />
         </Box>
         <Box className="flex-1">
           <Typography className="text-lg mb-sm" variant="h1">
             {capitalizeName(el?.name)}
           </Typography>
-          <Typography className="font-bold text-lg">
-            {pricingFormatUSD(el?.price)}
-          </Typography>
+          <Typography className="font-bold text-lg">{pricingFormatUSD(el?.price)}</Typography>
 
           <Box className="flex bg-lightGrey gap-md rounded-pill w-fit items-center p-sm mt-sm">
             <Icon
@@ -101,9 +89,7 @@ const CartModalItem = ({
           onClick={() => handleRemoveCartItem(el?.id)}
         />
       </Box>
-      {currIndex !== lastIndex && (
-        <Box className="w-full my-lg border-t-[1px] border-medGrey" />
-      )}
+      {currIndex !== lastIndex && <Box className="w-full my-lg border-t-[1px] border-medGrey" />}
     </Box>
   );
 };

@@ -39,16 +39,7 @@ export const Icon = ({
         onClick={iconClick}
       />
     );
-  }, [
-    size,
-    IconComponent,
-    fill,
-    stroke,
-    classNameIcon,
-    iconClick,
-    isDisabled,
-    onClick,
-  ]);
+  }, [size, IconComponent, fill, stroke, classNameIcon, iconClick, isDisabled, onClick]);
 
   if (displayWrapper) {
     return (

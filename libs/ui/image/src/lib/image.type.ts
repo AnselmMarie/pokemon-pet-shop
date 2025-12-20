@@ -12,14 +12,8 @@ export enum ImageContentFitEnum {
 }
 
 export type MobSrcType = (typeof mobSrcTypeEnum)[keyof typeof mobSrcTypeEnum];
-export type ImageContentFit =
-  (typeof ImageContentFitEnum)[keyof typeof ImageContentFitEnum];
+export type ImageContentFit = (typeof ImageContentFitEnum)[keyof typeof ImageContentFitEnum];
 
 // Convenience exported union types (alternative simple form)
 export type MobSrcTypeLiteral = 'default' | 'uri';
-export type ImageContentFitLiteral =
-  | 'contain'
-  | 'cover'
-  | 'fill'
-  | 'scale-down'
-  | 'none';
+export type ImageContentFitLiteral = 'contain' | 'cover' | 'fill' | 'scale-down' | 'none';

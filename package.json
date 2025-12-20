@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rm -rf dist out-tsc apps/*/dist apps/*/out-tsc remotes/*/dist remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

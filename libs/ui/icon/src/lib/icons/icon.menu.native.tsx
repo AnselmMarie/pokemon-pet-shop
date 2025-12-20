@@ -5,12 +5,7 @@ import { Svg, Path } from 'react-native-svg';
 
 import { IconSvgProps } from './icon.svg.interface';
 
-export const IconMenu = ({
-  size,
-  fill,
-  stroke,
-  onClick,
-}: IconSvgProps): ReactElement => {
+export const IconMenu = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
   return (
     <TouchableOpacity onPress={onClick}>
       <Svg

@@ -17,14 +17,8 @@ import image from './assets/bulbasaur.small.gif';
  * React Native, use flashlist for long lists -> https://shopify.github.io/flash-list/
  * */
 export const PokemonList = (): ReactElement => {
-  const {
-    data,
-    isLoading,
-    isFetching,
-    isFetchingNextPage,
-    hasNextPage,
-    fetchNextPage,
-  } = useGetPokemonList();
+  const { data, isLoading, isFetching, isFetchingNextPage, hasNextPage, fetchNextPage } =
+    useGetPokemonList();
 
   const isDataLoading = isLoading || isFetching || isFetchingNextPage;
 
@@ -32,8 +26,7 @@ export const PokemonList = (): ReactElement => {
     const pageData = data?.pages;
     const countNum = 50;
     const template = { abilities: [{}, {}] };
-    const arrCount =
-      pageData && pageData.length !== 0 ? pageData.length * countNum : countNum;
+    const arrCount = pageData && pageData.length !== 0 ? pageData.length * countNum : countNum;
     return skeletonLoadDataUtil(pageData, isLoading, template, true, arrCount);
   }, [data, isLoading]);
 
@@ -52,21 +45,12 @@ export const PokemonList = (): ReactElement => {
     <>
       <Box className="flex justify-center flex-wrap gap-md m-lg pt-lg">
         {(newData ?? []).map(
-          (
-            arr: { data: (PokemonDetail.Base & { name: string })[] },
-            i: number
-          ): ReactElement => {
+          (arr: { data: (PokemonDetail.Base & { name: string })[] }, i: number): ReactElement => {
             return (
               <Fragment key={i}>
-                {(arr?.data ?? []).map(
-                  (el: PokemonDetail.Base & { name: string }, i: number) => (
-                    <PokemonCard
-                      key={el?.name || i}
-                      pokeCreature={el}
-                      isLoading={isDataLoading}
-                    />
-                  )
-                )}
+                {(arr?.data ?? []).map((el: PokemonDetail.Base & { name: string }, i: number) => (
+                  <PokemonCard key={el?.name || i} pokeCreature={el} isLoading={isDataLoading} />
+                ))}
               </Fragment>
             );
           }

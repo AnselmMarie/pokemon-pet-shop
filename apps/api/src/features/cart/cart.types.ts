@@ -5,4 +5,3 @@ export interface CartParamsProps {
 export interface CartBodyProps {
   id: string;
 }
-

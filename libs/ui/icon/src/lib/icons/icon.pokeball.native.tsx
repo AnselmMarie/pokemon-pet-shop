@@ -6,10 +6,7 @@ import { TouchableOpacity } from 'react-native';
 
 import { IconImageProps } from './icon.svg.interface';
 
-export const IconPokeBall = ({
-  className,
-  onClick,
-}: IconImageProps): ReactElement => {
+export const IconPokeBall = ({ className, onClick }: IconImageProps): ReactElement => {
   return (
     <TouchableOpacity onPress={onClick}>
       {/* <UiImage src={pokeBallImage} className={className} /> */}

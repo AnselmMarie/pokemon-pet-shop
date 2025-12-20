@@ -1,9 +1,6 @@
 import { Request, Response } from 'express';
 
-import {
-  errFormat500ResponseUtil,
-  errFormatResponseUtil,
-} from '../../../shared/middleware';
+import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 import type { CartBodyProps } from '../cart.types';
 import { updateCartItemService } from '../services/update-cart.service';
 
@@ -20,8 +17,6 @@ export const updateCartItemController = async (
 
     res.status(200).json(pokemonUpdate);
   } catch (err: unknown) {
-    res
-      .status((err as { status: number })?.status || 500)
-      .json(errFormatResponseUtil(err));
+    res.status((err as { status: number })?.status || 500).json(errFormatResponseUtil(err));
   }
 };

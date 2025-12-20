@@ -10,10 +10,7 @@ import { useGetCart } from '@services/cart-api';
 import { pricingFormatUSD } from '@utils/pricing';
 
 import CartModalItem from './cart-modal-item';
-import {
-  closeSideCartModalAtom,
-  isSideCartModalOpenAtom,
-} from './cart-modal-atom.state';
+import { closeSideCartModalAtom, isSideCartModalOpenAtom } from './cart-modal-atom.state';
 
 export const CartModal = (): ReactElement => {
   const { data } = useGetCart();

@@ -22,10 +22,7 @@ export const Header = () => {
       as="header"
       className="space-between h-[93px] fixed w-full top-[0px] z-40 px-md py-xs shadow bg-white"
     >
-      <NavMobileModal
-        isOpen={isNavModalOpen}
-        onCloseModal={() => setIsNavModalOpen(false)}
-      />
+      <NavMobileModal isOpen={isNavModalOpen} onCloseModal={() => setIsNavModalOpen(false)} />
       <Container className="flex item-center justify-between">
         <Box className="flex justify-center items-center">
           <Icon
@@ -35,11 +32,7 @@ export const Header = () => {
             fill="white"
             onClick={() => setIsNavModalOpen(true)}
           />
-          <Image
-            src={pokeshopLogo}
-            className="w-[195px]"
-            alt="Pokemon Pet Shop Logo"
-          />
+          <Image src={pokeshopLogo} className="w-[195px]" alt="Pokemon Pet Shop Logo" />
         </Box>
 
         {NAV_FEATURE_FLAG ? (

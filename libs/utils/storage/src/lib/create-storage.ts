@@ -1,17 +1,11 @@
 import { createJSONStorage } from 'jotai/utils';
-import type {
-  SyncStorage,
-  AsyncStorage,
-} from 'jotai/vanilla/utils/atomWithStorage';
+import type { SyncStorage, AsyncStorage } from 'jotai/vanilla/utils/atomWithStorage';
 
 import { createInMemoryStorage } from './in-store-storage';
 
 export const createStorage = <T>(): SyncStorage<T> | AsyncStorage<T> => {
   try {
-    const ls =
-      typeof globalThis !== 'undefined'
-        ? (globalThis as any).localStorage
-        : undefined;
+    const ls = typeof globalThis !== 'undefined' ? (globalThis as any).localStorage : undefined;
 
     if (!ls) {
       throw new Error('localStorage not available');

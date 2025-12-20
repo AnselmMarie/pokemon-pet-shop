@@ -18,4 +18,3 @@ export interface PokemonDetailsParamsProps {
 export interface PokemonEvolutionChainParamsProps {
   id: string;
 }
-

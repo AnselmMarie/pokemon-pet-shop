@@ -10,10 +10,7 @@ interface NavMobileModalProps {
   onCloseModal: () => void;
 }
 
-export const NavMobileModal = ({
-  isOpen,
-  onCloseModal,
-}: NavMobileModalProps): ReactElement => {
+export const NavMobileModal = ({ isOpen, onCloseModal }: NavMobileModalProps): ReactElement => {
   return (
     <Modal
       isOpen={isOpen}

@@ -10,7 +10,5 @@ export const ScrollWrapper = ({
   className = '',
   children,
 }: PropsWithChildren<ScrollWrapperProps>): ReactElement => {
-  return (
-    <Box className={`h-full overflow-x-scroll ${className}`}>{children}</Box>
-  );
+  return <Box className={`h-full overflow-x-scroll ${className}`}>{children}</Box>;
 };

@@ -1,10 +1,6 @@
 import cors from 'cors';
 
-const whitelist = [
-  'http://localhost:4200',
-  'http://localhost:80',
-  'http://localhost:3333',
-];
+const whitelist = ['http://localhost:4200', 'http://localhost:80', 'http://localhost:3333'];
 
 export const corsConfig = cors({
   origin: function (origin: string | undefined, callback) {

@@ -3,11 +3,7 @@ import NodeCache from 'node-cache';
 
 const cache = new NodeCache({ stdTTL: 100, checkperiod: 120 });
 
-export const cacheMiddleware = (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const cacheMiddleware = (req: Request, res: Response, next: NextFunction) => {
   const noCaching = req.originalUrl.includes('cart');
   const key = req.originalUrl;
   const cachedResponse = !noCaching ? cache.get(key) : null;
