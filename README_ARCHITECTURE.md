@@ -1,6 +1,6 @@
-## 🧠 Architecture Overview: Pokemon Pet Shop
+## 🧠 Architecture Overview: Pokémon Pet Shop
 
-This document outlines the core architecture, technology choices, and high-level structure of the Pokemon Pet Shop application.
+This document outlines the core architecture, technology choices, and high-level structure of the Pokémon Pet Shop application.
 
 ### 🌐 Current Technology Stack
 
@@ -20,11 +20,11 @@ The application is structured using a Monorepo pattern managed by **Nx** to sepa
 
 ### ✨ Future Architectural Roadmap
 
-These items represent the planned enhancements and architectural integrations for the next phases of the Pokemon Pet Shop project.
+These items represent the planned enhancements and architectural integrations for the next phases of the Pokémon Pet Shop project.
 
 | Domain                   | Feature / Technology                            | Goal & Benefit                                                                                                                                       |
 | :----------------------- | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **DevOps / Automation**  | **CI/CD Deployment** (e.g., GitHub Actions)     | Automate the build, test, and deployment pipelines to ensure rapid, reliable, and consistent releases across all environments.                       |
+| **DevOps / Automation**  | **CI/CD Deployment** (GitHub Actions)     | Automate the build, test, and deployment pipelines to ensure rapid, reliable, and consistent releases across all environments.                       |
 | **Frontend Testing**     | Storybook                                       | Isolate and document UI components for easier development, review, and state management.                                                             |
 | **Frontend Testing**     | React Testing Library & Jest                    | Implement robust unit and integration tests for all components and complex client logic.                                                             |
 | **Frontend Testing**     | **E2E Testing** (End-to-End)                    | Ensure critical user flows and application journeys function correctly from start to finish.                                                         |
@@ -70,10 +70,3 @@ This application serves as a comprehensive Greenfield project, designed to showc
 | Decision                             | Rationale                                                                                                                                                                                                                                                                       |
 | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Scalable API Directory Structure** | The API project directory was structured with **scalability** in mind. The organization of resources and services allows for a smooth, future transition to a **microservices** architecture should the project grow beyond the capabilities of the current monolithic service. |
-
----
-
-### 🛣️ Future Roadmap
-
-- **CI/CD:** To be implemented using **Github Actions** for automated testing and deployment.
-- **Deployment:** Details regarding hosting and environment setup are **TBD**.
