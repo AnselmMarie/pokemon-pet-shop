@@ -1,12 +1,12 @@
-## 🏁 Getting Started with Pokemon Pet Shop
+## 🏁 Getting Started with Pokémon Pet Shop
 
-This guide provides the necessary steps to set up and run the entire **Pokemon Pet Shop** application on your local machine.
+This guide provides the necessary steps to set up and run the entire **Pokémon Pet Shop** application on your local machine.
 
 The project is currently under development. I created a backlog of tickets to address identified issues and integrate planned enhancements.
 
 ### 📋 Prerequisites
 
-Before proceeding, ensure you have the following installed. Using the specified versions will prevent most common setup issues.
+Before proceeding, ensure you have the following installed. Using the specified versions will prevent the most common setup issues.
 
 | Tool        | Requirement      | Purpose                                                              |
 | :---------- | :--------------- | :------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ Before proceeding, ensure you have the following installed. Using the specified 
 
 #### 1. Clone the Repository
 
-Clone the project using Git on the command line or use a software to download the project to your machine.
+Clone the project using Git on the command line, or use software to download it to your machine.
 
 #### 2. Install Dependencies
 
@@ -36,6 +36,6 @@ Backend App: `npx nx run @pokemon-pet-shop/api:serve:development`
 
 ### 🧠 Architecture
 
-To understand the design choices, technology stack, and structure of the application, please refer to the **Architecture Overview**.
+To understand the design choices, technology stack, and structure of the application, please take a look at the **Architecture Overview**.
 
 ➡️ **Read the full document: [README_ARCHITECTURE.md](./README_ARCHITECTURE.md)**
