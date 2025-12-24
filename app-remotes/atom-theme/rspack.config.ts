@@ -28,6 +28,7 @@ export default {
   },
   resolve: {
     alias: {
+      'react-native': require.resolve('react-native-web'),
       ...getTsconfigPaths(join(__dirname, '../../tsconfig.base.json'), join(__dirname, '../..')),
     },
   },
