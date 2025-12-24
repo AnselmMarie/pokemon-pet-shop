@@ -1,4 +1,4 @@
-import { PokemonList } from '@features/pokemon';
+import { PokemonList } from '@pokemon-pet-shop/feature-pokemon';
 
 import '../styles.css';
 

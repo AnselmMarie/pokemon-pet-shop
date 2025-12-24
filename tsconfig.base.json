@@ -20,20 +20,6 @@
     "customConditions": ["@pokemon-pet-shop/source"],
     "baseUrl": ".",
     "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./apps"],
-    "paths": {
-      "@dsTokens": ["libs/ds-tokens/src/index.ts"],
-      "@features/*": ["libs/features/*"],
-      "@services/*": ["libs/services/*"],
-      "@states/*": ["libs/states/*"],
-      "@ui/*": ["libs/ui/*"],
-      "@utils/*": ["libs/utils/*"],
-      "footer/Module": ["remotes/footer/src/remote-entry.ts"],
-      "header/Module": ["remotes/header/src/remote-entry.ts"],
-      "homepage/Module": ["remotes/homepage/src/remote-entry.ts"],
-      "modal-side-cart/Module": ["remotes/modal-side-cart/src/remote-entry.ts"],
-      "not-found/Module": ["remotes/not-found/src/remote-entry.ts"],
-      "storeCart/Module": ["remotes/storeCart/src/remote-entry.ts"],
-      "storeTheme/Module": ["remotes/storeTheme/src/remote-entry.ts"]
-    }
+    "paths": {}
   }
 }

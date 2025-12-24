@@ -8,6 +8,11 @@
     "lint-staged": "lint-staged",
     "format": "prettier --write ."
   },
+  "workspaces": [
+    "apps/*",
+    "remotes/*",
+    "libs/*/*"
+  ],
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "prettier --write",

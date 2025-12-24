@@ -1,4 +1,4 @@
-import { Footer } from '@features/footer';
+import { Footer } from '@pokemon-pet-shop/feature-footer';
 
 import '../styles.css';
 

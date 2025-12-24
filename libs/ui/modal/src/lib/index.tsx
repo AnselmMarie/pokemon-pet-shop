@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect, useMemo, useState } from 'react';
 
-import { Box } from '@ui/box';
+import { Box } from '@pokemon-pet-shop/ui-box';
 
 import { ModalBody, ModalCard, ModalClose, ModalTitle } from './modal-breakdown';
 

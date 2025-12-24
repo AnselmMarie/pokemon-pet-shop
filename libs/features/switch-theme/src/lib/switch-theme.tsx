@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { useAtom } from 'jotai';
 
-import { Switch } from '@ui/switch';
+import { Switch } from '@pokemon-pet-shop/ui-switch';
 
 import { toggleThemeAtom } from 'atom-theme/State';
 

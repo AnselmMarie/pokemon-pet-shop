@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Box } from '@ui/box';
+import { Box } from '@pokemon-pet-shop/ui-box';
 
 import pokeBallImage from '../assets/poke.ball.png';
 

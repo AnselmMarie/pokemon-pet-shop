@@ -1,15 +1,15 @@
 import { ReactElement, useState } from 'react';
 
-import { Box } from '@ui/box';
-import { Card } from '@ui/card';
-import { Skeleton } from '@ui/skeleton';
-import { Button } from '@ui/button';
-import { Image } from '@ui/image';
-import { Typography } from '@ui/typography';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Card } from '@pokemon-pet-shop/ui-card';
+import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
+import { Button } from '@pokemon-pet-shop/ui-button';
+import { Image } from '@pokemon-pet-shop/ui-image';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
 
-import { isWeb } from '@utils/detect';
-import { capitalizeName } from '@utils/text-transform';
-import { getPokeTypePrefixClass } from '@utils/poke-type';
+import { isWeb } from '@pokemon-pet-shop/util-detect';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { getPokeTypePrefixClass } from '@pokemon-pet-shop/util-poke-type';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
 import { PokemonDetailModal } from '../modal-pokemon-detail/pokemon-detail-modal';

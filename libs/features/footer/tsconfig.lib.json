@@ -7,7 +7,13 @@
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "bundler",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "paths": {
+      "@pokemon-pet-shop/ui-box": ["libs/ui/box/src/index.ts"],
+      "@pokemon-pet-shop/ui-link": ["libs/ui/link/src/index.ts"],
+      "@pokemon-pet-shop/ui-icon": ["libs/ui/icon/src/index.ts"],
+      "@pokemon-pet-shop/ui-typography": ["libs/ui/typography/src/index.ts"]
+    }
   },
   "exclude": [
     "out-tsc",

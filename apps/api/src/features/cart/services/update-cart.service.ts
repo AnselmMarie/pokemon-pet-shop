@@ -1,6 +1,6 @@
 import { clone } from 'lodash';
 
-import { pricingFormat } from '@utils/pricing';
+import { pricingFormat } from '@pokemon-pet-shop/util-pricing';
 
 import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 import { getCartDataCall, updateCartDataCall } from '../../../database/repositories';

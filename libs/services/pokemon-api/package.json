@@ -10,5 +10,8 @@
       "default": "./src/index.ts"
     },
     "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@pokemon-pet-shop/util-api-client": "workspace:*"
   }
 }

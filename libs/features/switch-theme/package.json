@@ -10,5 +10,9 @@
       "default": "./src/index.ts"
     },
     "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@pokemon-pet-shop/ui-icon": "workspace:*",
+    "@pokemon-pet-shop/ui-switch": "workspace:*"
   }
 }

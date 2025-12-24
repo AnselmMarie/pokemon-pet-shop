@@ -7,7 +7,10 @@
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "bundler",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "paths": {
+      "@pokemon-pet-shop/ui-box": ["libs/ui/box/src/index.ts"]
+    }
   },
   "exclude": [
     "out-tsc",
