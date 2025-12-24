@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist out-tsc apps/*/dist apps/*/out-tsc remotes/*/dist remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
+    "clean": "rm -rf dist out-tsc app-hosts/*/dist app-hosts/*/out-tsc app-remotes/*/dist app-remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
     "prepare": "husky",
     "lint-staged": "lint-staged",
     "format": "prettier --write ."
   },
   "workspaces": [
-    "apps/*",
-    "remotes/*",
+    "app-hosts/*",
+    "app-remotes/*",
     "libs/*/*"
   ],
   "lint-staged": {
@@ -23,8 +23,7 @@
       "prettier --write"
     ],
     "*.css": [
-      "prettier --write",
-      "stylelint --fix"
+      "prettier --write"
     ]
   },
   "private": true,

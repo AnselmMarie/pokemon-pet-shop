@@ -1,11 +1,9 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
-  - 'apps/web/*'
+  - 'app-hosts/*'
+  - 'app-remotes/*'
   - 'libs/features/*'
   - 'libs/ui/*'
   - 'libs/ds-tokens'
-  - 'remotes/*'
   - 'libs/services/*'
   - 'libs/utils/*'
   - 'libs/states/*'

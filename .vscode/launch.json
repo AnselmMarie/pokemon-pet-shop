@@ -14,7 +14,7 @@
       "internalConsoleOptions": "neverOpen",
       "skipFiles": ["<node_internals>/**"],
       "sourceMaps": true,
-      "outFiles": ["${workspaceFolder}/apps/api/dist/**/*.(m|c|)js", "!**/node_modules/**"]
+      "outFiles": ["${workspaceFolder}/app-hosts/api/dist/**/*.(m|c|)js", "!**/node_modules/**"]
     }
   ]
 }

@@ -19,7 +19,7 @@
     "target": "es2022",
     "customConditions": ["@pokemon-pet-shop/source"],
     "baseUrl": ".",
-    "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./apps"],
+    "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./app-hosts"],
     "paths": {}
   }
 }

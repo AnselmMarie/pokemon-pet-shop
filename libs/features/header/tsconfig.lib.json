@@ -15,7 +15,7 @@
       "@pokemon-pet-shop/ui-icon": ["libs/ui/icon/src/index.ts"],
       "@pokemon-pet-shop/ui-image": ["libs/ui/image/src/index.ts"],
       "@pokemon-pet-shop/ui-hide-in-mobile": ["libs/ui/hide-in-mobile/src/index.ts"],
-      "@pokemon-pet-shop/remote-modal-side-cart": ["remotes/modal-side-cart/src/index.ts"],
+      "@pokemon-pet-shop/remote-modal-side-cart": ["app-remotes/modal-side-cart/src/index.ts"],
       "@pokemon-pet-shop/ui-modal": ["libs/ui/modal/src/index.ts"]
     }
   },
@@ -39,9 +39,6 @@
   "references": [
     {
       "path": "../../ui/modal/tsconfig.lib.json"
-    },
-    {
-      "path": "../../../remotes/modal-side-cart/tsconfig.app.json"
     },
     {
       "path": "../../ui/hide-in-mobile/tsconfig.lib.json"
