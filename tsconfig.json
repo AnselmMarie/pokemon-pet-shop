@@ -131,9 +131,6 @@
     },
     {
       "path": "./libs/utils/storage"
-    },
-    {
-      "path": "./app-hosts/mobile"
     }
   ]
 }
