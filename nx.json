@@ -52,7 +52,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/api-e2e/**/*"]
+      "exclude": ["app-hosts/api-e2e/**/*"]
     },
     {
       "plugin": "@nx/expo/plugin",

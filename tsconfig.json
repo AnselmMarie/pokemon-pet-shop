@@ -4,25 +4,25 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/api-e2e"
+      "path": "./app-hosts/api-e2e"
     },
     {
-      "path": "./apps/api"
+      "path": "./app-hosts/api"
     },
     {
-      "path": "./apps/web"
+      "path": "./app-hosts/web"
     },
     {
-      "path": "./remotes/header"
+      "path": "./app-remotes/header"
     },
     {
-      "path": "./remotes/footer"
+      "path": "./app-remotes/footer"
     },
     {
-      "path": "./remotes/homepage"
+      "path": "./app-remotes/homepage"
     },
     {
-      "path": "./remotes/modal-side-cart"
+      "path": "./app-remotes/modal-side-cart"
     },
     {
       "path": "./libs/features/header"
@@ -112,10 +112,10 @@
       "path": "./libs/utils/pricing"
     },
     {
-      "path": "./remotes/atom-theme-e2e"
+      "path": "./app-remotes/atom-theme-e2e"
     },
     {
-      "path": "./remotes/atom-theme"
+      "path": "./app-remotes/atom-theme"
     },
     {
       "path": "./libs/services/cart-api"
@@ -124,10 +124,10 @@
       "path": "./libs/utils/poke-type"
     },
     {
-      "path": "./remotes/not-found-e2e"
+      "path": "./app-remotes/not-found-e2e"
     },
     {
-      "path": "./remotes/not-found"
+      "path": "./app-remotes/not-found"
     },
     {
       "path": "./libs/utils/storage"

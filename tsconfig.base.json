@@ -19,7 +19,7 @@
     "target": "es2022",
     "customConditions": ["@pokemon-pet-shop/source"],
     "baseUrl": ".",
-    "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./apps"],
+    "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./app-hosts"],
     "paths": {
       "@dsTokens": ["libs/ds-tokens/src/index.ts"],
       "@features/*": ["libs/features/*"],
@@ -27,13 +27,13 @@
       "@states/*": ["libs/states/*"],
       "@ui/*": ["libs/ui/*"],
       "@utils/*": ["libs/utils/*"],
-      "footer/Module": ["remotes/footer/src/remote-entry.ts"],
-      "header/Module": ["remotes/header/src/remote-entry.ts"],
-      "homepage/Module": ["remotes/homepage/src/remote-entry.ts"],
-      "modal-side-cart/Module": ["remotes/modal-side-cart/src/remote-entry.ts"],
-      "not-found/Module": ["remotes/not-found/src/remote-entry.ts"],
-      "storeCart/Module": ["remotes/storeCart/src/remote-entry.ts"],
-      "storeTheme/Module": ["remotes/storeTheme/src/remote-entry.ts"]
+      "footer/Module": ["app-remotes/footer/src/remote-entry.ts"],
+      "header/Module": ["app-remotes/header/src/remote-entry.ts"],
+      "homepage/Module": ["app-remotes/homepage/src/remote-entry.ts"],
+      "modal-side-cart/Module": ["app-remotes/modal-side-cart/src/remote-entry.ts"],
+      "not-found/Module": ["app-remotes/not-found/src/remote-entry.ts"],
+      "storeCart/Module": ["app-remotes/storeCart/src/remote-entry.ts"],
+      "storeTheme/Module": ["app-remotes/storeTheme/src/remote-entry.ts"]
     }
   }
 }

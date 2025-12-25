@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "full-reset": "pnpm run clean && npx nx reset",
-    "clean": "rm -rf dist out-tsc apps/*/dist apps/*/out-tsc remotes/*/dist remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
+    "clean": "rm -rf dist out-tsc app-hosts/*/dist app-hosts/*/out-tsc app-remotes/*/dist app-remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
     "prepare": "husky",
     "lint-staged": "lint-staged",
     "format": "prettier --write ."

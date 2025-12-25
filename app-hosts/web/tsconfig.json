@@ -1,0 +1,28 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../libs/ds-tokens"
+    },
+    {
+      "path": "../../app-remotes/not-found"
+    },
+    {
+      "path": "../../app-remotes/homepage"
+    },
+    {
+      "path": "../../app-remotes/footer"
+    },
+    {
+      "path": "../../app-remotes/header"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "../../tsconfig.base.json"
+}
