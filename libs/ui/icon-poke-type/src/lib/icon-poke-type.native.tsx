@@ -1,8 +1,8 @@
 import { memo, ReactElement, useMemo } from 'react';
 
-import { capitalizeContent } from '@pokemon-pet-shop/util-text-transform';
+import { capitalizeContent } from '@utils/text-transform';
 
-import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
+import { Skeleton } from '@ui/skeleton';
 
 import { IconPokeSvgMap } from './icon-poke-type.util.native';
 import { IconPokeTypeProps } from './icon-poke-type.interface';

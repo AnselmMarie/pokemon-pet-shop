@@ -4,8 +4,8 @@ import { ReactElement } from 'react';
 
 // import { useController } from 'react-hook-form';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Box } from '@ui/box';
+import { Icon } from '@ui/icon';
 
 import InputElement from './input-element';
 import { InputProps } from './input.interface';

@@ -1,8 +1,0 @@
-{
-  "name": "@pokemon-pet-shop/remote-not-found",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "@pokemon-pet-shop/feature-page-not-found": "workspace:*"
-  }
-}

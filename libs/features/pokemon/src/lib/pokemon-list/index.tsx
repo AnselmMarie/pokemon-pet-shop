@@ -1,11 +1,11 @@
 import { ReactElement, useMemo, Fragment } from 'react';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { skeletonLoadDataUtil } from '@pokemon-pet-shop/ui-skeleton';
-import { Button } from '@pokemon-pet-shop/ui-button';
+import { Box } from '@ui/box';
+import { Typography } from '@ui/typography';
+import { skeletonLoadDataUtil } from '@ui/skeleton';
+import { Button } from '@ui/button';
 
-import { useGetPokemonList } from '@pokemon-pet-shop/service-pokemon';
+import { useGetPokemonList } from '@services/pokemon-api';
 
 import { PokemonCard } from '../pokemon-card';
 import image from './assets/bulbasaur.small.gif';

@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
-import { axiosInstance } from '@pokemon-pet-shop/util-api-client';
+import { axiosInstance } from '@utils/api-client';
 
 export const useGetCart = () => {
   const queryFn = () => axiosInstance.get<Cart.Base>('cart');

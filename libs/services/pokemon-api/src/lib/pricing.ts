@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
-import { axiosInstance } from '@pokemon-pet-shop/util-api-client';
+import { axiosInstance } from '@utils/api-client';
 
 export const useGetPokemonPricing = () => {
   const queryFn = () => axiosInstance.get<PokemonPricing.Base>('pokemon/pricing');

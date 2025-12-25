@@ -1,6 +1,6 @@
 import { PropsWithChildren, ReactElement } from 'react';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
+import { Box } from '@ui/box';
 
 import { LinkProps } from './link.interface';
 import { openLinkUtil } from './open-link.util';

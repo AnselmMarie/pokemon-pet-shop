@@ -1,7 +1,7 @@
 import { ReactElement, useMemo } from 'react';
 import { ReactSVG } from 'react-svg';
 
-import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
+import { Skeleton } from '@ui/skeleton';
 
 import { iconPokeSvgMap } from './icon-poke-type.util';
 import { IconPokeTypeProps } from './icon-poke-type.interface';

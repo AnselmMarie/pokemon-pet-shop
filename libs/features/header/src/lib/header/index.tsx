@@ -1,12 +1,12 @@
 import { useState, lazy, Suspense } from 'react';
 
-import { SwitchTheme } from '@pokemon-pet-shop/feature-switch-theme';
+import { SwitchTheme } from '@features/switch-theme';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Container } from '@pokemon-pet-shop/ui-container';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
-import { Image } from '@pokemon-pet-shop/ui-image';
-import { HideInMobile } from '@pokemon-pet-shop/ui-hide-in-mobile';
+import { Box } from '@ui/box';
+import { Container } from '@ui/container';
+import { Icon } from '@ui/icon';
+import { Image } from '@ui/image';
+import { HideInMobile } from '@ui/hide-in-mobile';
 
 import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { NAV_FEATURE_FLAG } from './header.const';

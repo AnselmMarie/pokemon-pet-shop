@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Box } from '@ui/box';
+import { Icon } from '@ui/icon';
 
 export const ModalCard = ({
   className = '',

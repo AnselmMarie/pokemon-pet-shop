@@ -1,10 +1,10 @@
 import { ReactElement } from 'react';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
-import { Image } from '@pokemon-pet-shop/ui-image';
-import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Box } from '@ui/box';
+import { Icon } from '@ui/icon';
+import { Image } from '@ui/image';
+import { Skeleton } from '@ui/skeleton';
+import { Typography } from '@ui/typography';
 
 import { ButtonProps } from './button-interface';
 

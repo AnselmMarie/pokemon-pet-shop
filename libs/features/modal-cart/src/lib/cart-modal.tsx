@@ -1,13 +1,13 @@
 import { ReactElement } from 'react';
 import { useAtomValue, useSetAtom } from 'jotai';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { Modal, ModalScroll } from '@pokemon-pet-shop/ui-modal';
+import { Box } from '@ui/box';
+import { Typography } from '@ui/typography';
+import { Modal, ModalScroll } from '@ui/modal';
 
-import { useGetCart } from '@pokemon-pet-shop/service-cart';
+import { useGetCart } from '@services/cart-api';
 
-import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
+import { pricingFormatUSD } from '@utils/pricing';
 
 import CartModalItem from './cart-modal-item';
 import { closeSideCartModalAtom, isSideCartModalOpenAtom } from './cart-modal-atom.state';

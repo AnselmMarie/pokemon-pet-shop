@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 
-import { SwitchTheme } from '@pokemon-pet-shop/feature-switch-theme';
+import { SwitchTheme } from '@features/switch-theme';
 
-import { Modal } from '@pokemon-pet-shop/ui-modal';
-import { Box } from '@pokemon-pet-shop/ui-box';
+import { Modal } from '@ui/modal';
+import { Box } from '@ui/box';
 
 interface NavMobileModalProps {
   isOpen: boolean;

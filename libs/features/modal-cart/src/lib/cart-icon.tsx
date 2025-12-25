@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
 import { useSetAtom } from 'jotai';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Box } from '@ui/box';
+import { Typography } from '@ui/typography';
+import { Icon } from '@ui/icon';
 
-import { useGetCart } from '@pokemon-pet-shop/service-cart';
+import { useGetCart } from '@services/cart-api';
 
 import { CartModal } from './cart-modal';
 import { openSideCartModalAtom } from './cart-modal-atom.state';

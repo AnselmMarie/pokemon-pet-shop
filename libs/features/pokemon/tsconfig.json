@@ -6,16 +6,13 @@
       "path": "../../utils/detect"
     },
     {
-      "path": "../../ui/card"
-    },
-    {
       "path": "../../utils/poke-type"
     },
     {
-      "path": "../../ui/modal"
+      "path": "../../ui/button"
     },
     {
-      "path": "../../ui/scroll-wrapper"
+      "path": "../../ui/card"
     },
     {
       "path": "../../utils/pricing"
@@ -24,10 +21,19 @@
       "path": "../../ui/image"
     },
     {
+      "path": "../../services/pokemon-api"
+    },
+    {
       "path": "../../services/cart-api"
     },
     {
-      "path": "../../services/pokemon-api"
+      "path": "../../ui/tag"
+    },
+    {
+      "path": "../../ui/modal"
+    },
+    {
+      "path": "../../ui/scroll-wrapper"
     },
     {
       "path": "../../utils/text-transform"
@@ -43,12 +49,6 @@
     },
     {
       "path": "../../ui/hide-in-mobile"
-    },
-    {
-      "path": "../../ui/tag"
-    },
-    {
-      "path": "../../ui/button"
     },
     {
       "path": "../../ui/box"

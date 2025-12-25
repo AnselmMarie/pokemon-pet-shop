@@ -3,29 +3,22 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "full-reset": "pnpm run clean && npx nx reset",
-    "clean": "rm -rf dist out-tsc app-hosts/*/dist app-hosts/*/out-tsc app-remotes/*/dist app-remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
+    "clean": "rm -rf dist out-tsc apps/*/dist apps/*/out-tsc remotes/*/dist remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
     "prepare": "husky",
     "lint-staged": "lint-staged",
     "format": "prettier --write ."
   },
-  "workspaces": [
-    "app-hosts/*",
-    "app-remotes/*",
-    "libs/*/*"
-  ],
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "pnpm exec prettier --write",
-      "pnpm exec eslint --fix"
+      "prettier --write",
+      "eslint --fix"
     ],
     "*.html": [
-      "pnpm exec eslint --fix",
-      "pnpm exec prettier --write"
+      "eslint --fix",
+      "prettier --write"
     ],
     "*.css": [
-      "pnpm exec prettier --write",
-      "pnpm exec stylelint --fix"
+      "prettier --write"
     ]
   },
   "private": true,
@@ -99,8 +92,6 @@
     "rimraf": "^6.1.2",
     "sd-tailwindcss-transformer": "^2.2.1",
     "style-dictionary": "^5.1.1",
-    "stylelint": "^16.26.1",
-    "stylelint-config-standard": "^39.0.1",
     "tailwindcss": "3.4.18",
     "ts-jest": "^29.4.0",
     "ts-node": "10.9.1",

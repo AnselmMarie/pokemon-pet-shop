@@ -1,6 +1,6 @@
 import { ReactElement, useCallback, useMemo } from 'react';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
+import { Box } from '@ui/box';
 
 import { IconProps } from './icon.interface';
 import { IconMap } from './icon.util';

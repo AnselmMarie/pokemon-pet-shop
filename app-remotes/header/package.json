@@ -1,8 +1,0 @@
-{
-  "name": "@pokemon-pet-shop/remote-header",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "@pokemon-pet-shop/feature-header": "workspace:*"
-  }
-}

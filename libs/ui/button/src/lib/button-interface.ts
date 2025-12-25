@@ -1,4 +1,4 @@
-import { IconType } from '@pokemon-pet-shop/ui-icon';
+import { IconType } from '@ui/icon';
 
 import type { ButtonSize, ButtonType } from './button.type';
 

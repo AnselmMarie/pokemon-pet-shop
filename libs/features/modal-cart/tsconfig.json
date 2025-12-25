@@ -3,25 +3,25 @@
   "include": [],
   "references": [
     {
+      "path": "../../ui/modal"
+    },
+    {
       "path": "../../utils/poke-type"
     },
     {
       "path": "../../utils/text-transform"
     },
     {
-      "path": "../../ui/image"
-    },
-    {
-      "path": "../../ui/icon"
-    },
-    {
       "path": "../../utils/pricing"
+    },
+    {
+      "path": "../../ui/image"
     },
     {
       "path": "../../services/cart-api"
     },
     {
-      "path": "../../ui/modal"
+      "path": "../../ui/icon"
     },
     {
       "path": "../../ui/typography"

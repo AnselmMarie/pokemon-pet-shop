@@ -2,8 +2,8 @@ import { ReactElement, useState } from 'react';
 import { Image as ExpoImage, ImageContentFit } from 'expo-image';
 import { cssInterop } from 'nativewind';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-// import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Box } from '@ui/box';
+// import { Icon } from '@ui/icon';
 
 // import { UiSkeleton } from '../skeleton';
 import { ImageProps } from './image.interface';

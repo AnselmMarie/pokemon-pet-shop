@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import { axiosInstance } from '@pokemon-pet-shop/util-api-client';
+import { axiosInstance } from '@utils/api-client';
 
 export const useUpdateCart = () => {
   const queryClient = useQueryClient();

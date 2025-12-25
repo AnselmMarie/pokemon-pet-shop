@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Box } from '@ui/box';
+import { Icon } from '@ui/icon';
 
 import { SwitchProps } from './switch.interface';
 import useSwitchLogic from './use.switch.logic';
