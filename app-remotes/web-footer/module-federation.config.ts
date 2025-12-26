@@ -1,12 +1,10 @@
 import { ModuleFederationConfig } from '@nx/module-federation';
-const { sharedMappings } = require('../../module-federation.shared');
 
 const config: ModuleFederationConfig = {
-  name: 'footer',
+  name: 'webFooter',
   exposes: {
     './Module': './src/remote-entry.ts',
   },
-  shared: sharedMappings,
 };
 
 /**

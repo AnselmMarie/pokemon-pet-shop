@@ -44,7 +44,7 @@
       "path": "../../app-remotes/homepage/tsconfig.app.json"
     },
     {
-      "path": "../../app-remotes/footer/tsconfig.app.json"
+      "path": "../../app-remotes/web-footer/tsconfig.app.json"
     },
     {
       "path": "../../app-remotes/web-header/tsconfig.app.json"

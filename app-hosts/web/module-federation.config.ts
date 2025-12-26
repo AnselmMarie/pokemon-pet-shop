@@ -20,7 +20,7 @@ const config: ModuleFederationConfig = {
   //   ['header', 'header@http://localhost:4202/remoteEntry.js'],
   //   ['footer', 'footer@http://localhost:4201/remoteEntry.js'],
   // ],
-  remotes: ['homepage', 'webHeader', 'footer', 'not-found'],
+  remotes: ['homepage', 'webHeader', 'webFooter', 'not-found'],
   shared: sharedMappings,
 };
 

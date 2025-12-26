@@ -1,4 +1,4 @@
-declare module 'footer/Module' {
+declare module 'webFooter/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;

@@ -1,7 +1,7 @@
 {
-  "name": "footer",
+  "name": "webFooter",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app-remotes/footer/src",
+  "sourceRoot": "app-remotes/web-footer/src",
   "projectType": "application",
   "tags": [],
   "targets": {
