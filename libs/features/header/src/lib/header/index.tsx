@@ -12,7 +12,7 @@ import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { NAV_FEATURE_FLAG } from './header.const';
 import pokeshopLogo from './assets/pokeshop-logo.png';
 
-const SideCartModal = lazy(() => import('modal-side-cart/Module'));
+const SideCartModal = lazy(() => import('webModalSideCart/Module'));
 
 export const Header = () => {
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);

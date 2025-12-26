@@ -22,7 +22,7 @@ declare module 'webNotFound/Module' {
   export default Module;
 }
 
-declare module 'modal-side-cart/Module' {
+declare module 'webModalSideCart/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;

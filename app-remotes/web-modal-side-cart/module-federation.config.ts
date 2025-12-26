@@ -2,7 +2,7 @@ import { ModuleFederationConfig } from '@nx/module-federation';
 const { sharedMappings } = require('../../module-federation.shared');
 
 const config: ModuleFederationConfig = {
-  name: 'modal-side-cart',
+  name: 'webModalSideCart',
   exposes: {
     './Module': './src/remote-entry.ts',
   },

@@ -16,9 +16,6 @@
       "path": "./app-remotes/web-footer"
     },
     {
-      "path": "./app-remotes/modal-side-cart"
-    },
-    {
       "path": "./libs/features/header"
     },
     {
@@ -140,6 +137,12 @@
     },
     {
       "path": "./app-remotes/web-homepage"
+    },
+    {
+      "path": "./app-remotes/web-modal-side-cart-e2e"
+    },
+    {
+      "path": "./app-remotes/web-modal-side-cart"
     }
   ]
 }

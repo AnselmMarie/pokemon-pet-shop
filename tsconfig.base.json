@@ -27,10 +27,10 @@
       "@states/*": ["libs/states/*"],
       "@ui/*": ["libs/ui/*"],
       "@utils/*": ["libs/utils/*"],
-      "modal-side-cart/Module": ["app-remotes/modal-side-cart/src/remote-entry.ts"],
       "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],
       "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"],
       "webHomepage/Module": ["app-remotes/web-homepage/src/remote-entry.ts"],
+      "webModalSideCart/Module": ["app-remotes/web-modal-side-cart/src/remote-entry.ts"],
       "webNotFound/Module": ["app-remotes/web-not-found/src/remote-entry.ts"]
     }
   }

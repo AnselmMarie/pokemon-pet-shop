@@ -7,13 +7,7 @@
     "lib": ["dom"],
     "types": ["node", "@nx/react/typings/cssmodule.d.ts", "@nx/react/typings/image.d.ts"],
     "module": "esnext",
-    "moduleResolution": "bundler",
-    "paths": {
-      "footer/Module": ["src/types/remote-modules.d.ts"],
-      "header/Module": ["src/types/remote-modules.d.ts"],
-      "homepage/Module": ["src/types/remote-modules.d.ts"],
-      "modal-side-cart/Module": ["src/types/remote-modules.d.ts"]
-    }
+    "moduleResolution": "bundler"
   },
   "rootDir": "../../",
   "exclude": [

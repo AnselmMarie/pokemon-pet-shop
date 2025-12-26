@@ -1,13 +1,13 @@
 {
-  "name": "modal-side-cart",
+  "name": "webModalSideCart",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app-remotes/modal-side-cart/src",
+  "sourceRoot": "app-remotes/web-modal-side-cart/src",
   "projectType": "application",
   "tags": [],
   "targets": {
     "serve": {
       "options": {
-        "port": 4210
+        "port": 4212
       },
       "dependsOn": ["typecheck"]
     },
