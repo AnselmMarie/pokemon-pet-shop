@@ -1,7 +1,7 @@
 {
-  "name": "header",
+  "name": "webHeader",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app-remotes/header/src",
+  "sourceRoot": "app-remotes/web-header/src",
   "projectType": "application",
   "tags": [],
   "targets": {

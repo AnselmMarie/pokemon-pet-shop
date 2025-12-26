@@ -4,7 +4,7 @@ import { RouterProvider } from '../route/route-provider';
 
 import '../styles.css';
 
-const Header = React.lazy(() => import('header/Module'));
+const Header = React.lazy(() => import('webHeader/Module'));
 const Footer = React.lazy(() => import('footer/Module'));
 
 export function App() {

@@ -4,7 +4,7 @@ declare module 'footer/Module' {
   export default Module;
 }
 
-declare module 'header/Module' {
+declare module 'webHeader/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;

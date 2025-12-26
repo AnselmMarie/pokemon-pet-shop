@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../../libs/ds-tokens"
+    },
+    {
+      "path": "../../libs/features/header"
+    }
+  ],
+  "extends": "../../tsconfig.base.json"
+}

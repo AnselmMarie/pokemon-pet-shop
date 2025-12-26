@@ -13,9 +13,6 @@
       "path": "./app-hosts/web"
     },
     {
-      "path": "./app-remotes/header"
-    },
-    {
       "path": "./app-remotes/footer"
     },
     {
@@ -131,6 +128,12 @@
     },
     {
       "path": "./libs/utils/storage"
+    },
+    {
+      "path": "./app-remotes/web-header-e2e"
+    },
+    {
+      "path": "./app-remotes/web-header"
     }
   ]
 }

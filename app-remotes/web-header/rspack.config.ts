@@ -16,7 +16,7 @@ export default {
     publicPath: 'auto',
   },
   devServer: {
-    port: 4205,
+    port: 4211,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Cache-Control': 'no-cache, no-store, must-revalidate',

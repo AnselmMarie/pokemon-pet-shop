@@ -32,8 +32,7 @@
       "homepage/Module": ["app-remotes/homepage/src/remote-entry.ts"],
       "modal-side-cart/Module": ["app-remotes/modal-side-cart/src/remote-entry.ts"],
       "not-found/Module": ["app-remotes/not-found/src/remote-entry.ts"],
-      "storeCart/Module": ["app-remotes/storeCart/src/remote-entry.ts"],
-      "storeTheme/Module": ["app-remotes/storeTheme/src/remote-entry.ts"]
+      "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"]
     }
   }
 }
