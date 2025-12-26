@@ -2,7 +2,7 @@ import { ModuleFederationConfig } from '@nx/module-federation';
 const { sharedMappings } = require('../../module-federation.shared');
 
 const config: ModuleFederationConfig = {
-  name: 'atom-theme',
+  name: 'atomTheme',
   exposes: {
     './State': './src/state/index.ts',
   },

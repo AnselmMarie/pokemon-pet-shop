@@ -6,7 +6,7 @@ const config: ModuleFederationConfig = {
   exposes: {
     './Module': './src/remote-entry.ts',
   },
-  remotes: ['atom-theme'],
+  remotes: ['atomTheme'],
   shared: sharedMappings,
 };
 
