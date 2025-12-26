@@ -7,8 +7,8 @@ import {
   Outlet,
 } from '@tanstack/react-router';
 
-const HomepageModule = lazy(() => import('homepage/Module'));
-const NotFoundModule = lazy(() => import('not-found/Module'));
+const HomepageModule = lazy(() => import('webHomepage/Module'));
+const NotFoundModule = lazy(() => import('webNotFound/Module'));
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,

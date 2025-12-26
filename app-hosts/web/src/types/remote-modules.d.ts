@@ -1,28 +1,28 @@
-declare module 'footer/Module' {
+declare module 'webFooter/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;
 }
 
-declare module 'header/Module' {
+declare module 'webHeader/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;
 }
 
-declare module 'homepage/Module' {
+declare module 'webHomepage/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;
 }
 
-declare module 'not-found/Module' {
+declare module 'webNotFound/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;
 }
 
-declare module 'modal-side-cart/Module' {
+declare module 'webModalSideCart/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;

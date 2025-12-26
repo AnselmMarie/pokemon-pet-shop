@@ -13,16 +13,7 @@
       "path": "./app-hosts/web"
     },
     {
-      "path": "./app-remotes/header"
-    },
-    {
-      "path": "./app-remotes/footer"
-    },
-    {
-      "path": "./app-remotes/homepage"
-    },
-    {
-      "path": "./app-remotes/modal-side-cart"
+      "path": "./app-remotes/web-footer"
     },
     {
       "path": "./libs/features/header"
@@ -124,13 +115,34 @@
       "path": "./libs/utils/poke-type"
     },
     {
-      "path": "./app-remotes/not-found-e2e"
-    },
-    {
-      "path": "./app-remotes/not-found"
-    },
-    {
       "path": "./libs/utils/storage"
+    },
+    {
+      "path": "./app-remotes/web-header-e2e"
+    },
+    {
+      "path": "./app-remotes/web-header"
+    },
+    {
+      "path": "./app-remotes/web-footer-e2e"
+    },
+    {
+      "path": "./app-remotes/web-not-found-e2e"
+    },
+    {
+      "path": "./app-remotes/web-not-found"
+    },
+    {
+      "path": "./app-remotes/web-homepage-e2e"
+    },
+    {
+      "path": "./app-remotes/web-homepage"
+    },
+    {
+      "path": "./app-remotes/web-modal-side-cart-e2e"
+    },
+    {
+      "path": "./app-remotes/web-modal-side-cart"
     }
   ]
 }

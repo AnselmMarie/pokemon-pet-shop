@@ -1,5 +1,5 @@
 {
-  "name": "atom-theme",
+  "name": "atomTheme",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "app-remotes/atom-theme/src",
   "projectType": "application",
