@@ -38,10 +38,10 @@
       "path": "../../libs/ds-tokens/tsconfig.lib.json"
     },
     {
-      "path": "../../app-remotes/not-found/tsconfig.app.json"
+      "path": "../../app-remotes/web-not-found/tsconfig.app.json"
     },
     {
-      "path": "../../app-remotes/homepage/tsconfig.app.json"
+      "path": "../../app-remotes/web-homepage/tsconfig.app.json"
     },
     {
       "path": "../../app-remotes/web-footer/tsconfig.app.json"

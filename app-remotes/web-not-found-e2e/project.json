@@ -1,0 +1,10 @@
+{
+  "name": "webNotFound-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "app-remotes/web-not-found-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["webNotFound"],
+  "// targets": "to see all targets run: nx show project webNotFound-e2e --web",
+  "targets": {}
+}

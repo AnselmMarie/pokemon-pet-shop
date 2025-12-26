@@ -1,13 +1,13 @@
 {
-  "name": "not-found",
+  "name": "webNotFound",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app-remotes/not-found/src",
+  "sourceRoot": "app-remotes/web-not-found/src",
   "projectType": "application",
   "tags": [],
   "targets": {
     "serve": {
       "options": {
-        "port": 4209
+        "port": 4211
       },
       "dependsOn": ["typecheck"]
     },

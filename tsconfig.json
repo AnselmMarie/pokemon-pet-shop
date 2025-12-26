@@ -16,9 +16,6 @@
       "path": "./app-remotes/web-footer"
     },
     {
-      "path": "./app-remotes/homepage"
-    },
-    {
       "path": "./app-remotes/modal-side-cart"
     },
     {
@@ -121,12 +118,6 @@
       "path": "./libs/utils/poke-type"
     },
     {
-      "path": "./app-remotes/not-found-e2e"
-    },
-    {
-      "path": "./app-remotes/not-found"
-    },
-    {
       "path": "./libs/utils/storage"
     },
     {
@@ -137,6 +128,18 @@
     },
     {
       "path": "./app-remotes/web-footer-e2e"
+    },
+    {
+      "path": "./app-remotes/web-not-found-e2e"
+    },
+    {
+      "path": "./app-remotes/web-not-found"
+    },
+    {
+      "path": "./app-remotes/web-homepage-e2e"
+    },
+    {
+      "path": "./app-remotes/web-homepage"
     }
   ]
 }

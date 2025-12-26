@@ -1,7 +1,7 @@
 {
-  "name": "homepage",
+  "name": "webHomepage",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app-remotes/homepage/src",
+  "sourceRoot": "app-remotes/web-homepage/src",
   "projectType": "application",
   "tags": [],
   "targets": {

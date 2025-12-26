@@ -27,11 +27,11 @@
       "@states/*": ["libs/states/*"],
       "@ui/*": ["libs/ui/*"],
       "@utils/*": ["libs/utils/*"],
-      "homepage/Module": ["app-remotes/homepage/src/remote-entry.ts"],
       "modal-side-cart/Module": ["app-remotes/modal-side-cart/src/remote-entry.ts"],
-      "not-found/Module": ["app-remotes/not-found/src/remote-entry.ts"],
       "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],
-      "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"]
+      "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"],
+      "webHomepage/Module": ["app-remotes/web-homepage/src/remote-entry.ts"],
+      "webNotFound/Module": ["app-remotes/web-not-found/src/remote-entry.ts"]
     }
   }
 }

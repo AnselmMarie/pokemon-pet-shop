@@ -6,10 +6,10 @@
       "path": "../../libs/ds-tokens"
     },
     {
-      "path": "../../app-remotes/not-found"
+      "path": "../../app-remotes/web-not-found"
     },
     {
-      "path": "../../app-remotes/homepage"
+      "path": "../../app-remotes/web-homepage"
     },
     {
       "path": "../../app-remotes/web-footer"

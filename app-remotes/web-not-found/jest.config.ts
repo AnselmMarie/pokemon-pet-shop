@@ -1,5 +1,5 @@
 export default {
-  displayName: 'not-found',
+  displayName: 'webNotFound',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

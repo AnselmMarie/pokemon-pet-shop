@@ -10,13 +10,13 @@ declare module 'webHeader/Module' {
   export default Module;
 }
 
-declare module 'homepage/Module' {
+declare module 'webHomepage/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;
 }
 
-declare module 'not-found/Module' {
+declare module 'webNotFound/Module' {
   import type { ComponentType } from 'react';
   const Module: ComponentType<unknown>;
   export default Module;
