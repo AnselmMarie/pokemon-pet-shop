@@ -16,19 +16,17 @@
     "expo-system-ui": "*",
     "metro-config": "*",
     "metro-resolver": "*",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
     "react-native": "*",
     "react-native-svg": "*",
     "react-native-svg-transformer": "*",
-    "react-native-web": "*"
+    "react-native-web": "*",
+    "react-native-safe-area-context": "*",
+    "react": "19.1.0"
   },
   "devDependencies": {
     "jest-expo": "*",
     "@types/jest": "29.5.14",
     "jest": "~29.7.0",
-    "@testing-library/react-native": "*",
-    "@types/react": "~19.1.10",
-    "@types/react-dom": "~19.1.7"
+    "@testing-library/react-native": "*"
   }
 }
