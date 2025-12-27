@@ -143,6 +143,9 @@
     },
     {
       "path": "./app-remotes/web-modal-side-cart"
+    },
+    {
+      "path": "./app-hosts/mobile"
     }
   ]
 }
