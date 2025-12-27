@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: 'webFooter',
   preset: '../../jest.preset.js',
   transform: {

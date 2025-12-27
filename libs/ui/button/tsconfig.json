@@ -7,21 +7,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../box"
-    },
-    {
-      "path": "../image"
-    },
-    {
-      "path": "../skeleton"
-    },
-    {
-      "path": "../typography"
-    },
-    {
-      "path": "../icon"
     }
   ],
   "extends": "../../../tsconfig.base.json"

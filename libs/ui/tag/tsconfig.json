@@ -7,15 +7,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../box"
-    },
-    {
-      "path": "../typography"
-    },
-    {
-      "path": "../../utils/text-transform"
     }
   ],
   "extends": "../../../tsconfig.base.json"

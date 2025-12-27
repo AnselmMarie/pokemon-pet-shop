@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: '@pokemon-pet-shop/feature-modal-cart',
   preset: '../../../jest.preset.js',
   transform: {

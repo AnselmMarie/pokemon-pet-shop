@@ -7,9 +7,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../libs/features/page-not-found"
     }
   ],
   "extends": "../../tsconfig.base.json"

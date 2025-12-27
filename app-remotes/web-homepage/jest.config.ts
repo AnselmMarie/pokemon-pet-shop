@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: 'webHomepage',
   preset: '../../jest.preset.js',
   transform: {

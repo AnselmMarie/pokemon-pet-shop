@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: '@pokemon-pet-shop/api',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',

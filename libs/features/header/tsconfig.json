@@ -3,30 +3,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../ui/modal"
-    },
-    {
-      "path": "../../../app-remotes/web-modal-side-cart"
-    },
-    {
-      "path": "../../ui/hide-in-mobile"
-    },
-    {
-      "path": "../../ui/image"
-    },
-    {
-      "path": "../../ui/icon"
-    },
-    {
-      "path": "../../ui/container"
-    },
-    {
-      "path": "../../ui/box"
-    },
-    {
-      "path": "../switch-theme"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

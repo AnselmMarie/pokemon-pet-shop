@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: '@pokemon-pet-shop/ui-icon-poke-type',
   preset: '../../../jest.preset.js',
   transform: {
