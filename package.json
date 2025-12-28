@@ -6,7 +6,7 @@
     "full-reset": "pnpm run clean && npx nx reset",
     "clean": "rm -rf dist out-tsc app-hosts/*/dist app-hosts/*/out-tsc app-remotes/*/dist app-remotes/*/out-tsc libs/*/*/dist libs/*/*/out-tsc",
     "prepare": "husky",
-    "lint-staged": "lint-staged",
+    "lint-staged": "npx lint-staged --verbose",
     "format": "prettier --write ."
   },
   "lint-staged": {

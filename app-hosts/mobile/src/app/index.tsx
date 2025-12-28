@@ -1,7 +1,11 @@
 import { Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Footer } from '@features/footer';
+
 import { AppProvider } from '../providers/app-provider';
+
+import '../styles.css';
 
 export const App = () => {
   return (
@@ -10,7 +14,7 @@ export const App = () => {
         {/* <Header />
         <HomepageModule /> */}
         <Text>fasdfsaf</Text>
-        {/* <Footer /> */}
+        <Footer />
       </SafeAreaView>
     </AppProvider>
   );

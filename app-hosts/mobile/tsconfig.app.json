@@ -31,5 +31,13 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "references": [
+    {
+      "path": "../../libs/ds-tokens/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/features/footer/tsconfig.lib.json"
+    }
+  ]
 }
