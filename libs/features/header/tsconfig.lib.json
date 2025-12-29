@@ -34,6 +34,9 @@
       "path": "../../../app-remotes/web-modal-side-cart/tsconfig.app.json"
     },
     {
+      "path": "../modal-cart/tsconfig.lib.json"
+    },
+    {
       "path": "../../ui/hide-in-mobile/tsconfig.lib.json"
     },
     {

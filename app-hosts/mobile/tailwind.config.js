@@ -6,8 +6,8 @@ const { semantic } = require('../../libs/ds-tokens');
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    `../../libs/ui/src/**/*.{js,jsx,ts,tsx}`,
-    `../../libs/features/**/*.{js,jsx,ts,tsx}`,
+    // `../../libs/ui/src/**/*.{js,jsx,ts,tsx}`,
+    // `../../libs/features/**/*.{js,jsx,ts,tsx}`,
     ...createGlobPatternsForDependencies(__dirname),
   ],
   presets: [require('nativewind/preset')],

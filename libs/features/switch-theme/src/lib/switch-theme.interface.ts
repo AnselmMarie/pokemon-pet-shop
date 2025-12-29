@@ -9,3 +9,9 @@ export interface SwitchProps {
   iconRight?: IconType;
   defaultValue?: Theme;
 }
+
+export interface SwitchItemProps {
+  theme: string;
+  className?: string;
+  onToggleThemeClick: () => void;
+}

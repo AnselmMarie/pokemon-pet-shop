@@ -38,6 +38,9 @@
     },
     {
       "path": "../../libs/features/footer/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/features/header/tsconfig.lib.json"
     }
   ]
 }

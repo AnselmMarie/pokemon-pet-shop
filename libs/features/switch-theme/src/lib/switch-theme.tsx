@@ -1,11 +1,10 @@
 import { ReactElement } from 'react';
 import { useAtom } from 'jotai';
 
-import { Switch } from '@ui/switch';
-
 import { toggleThemeAtom } from 'atomTheme/State';
 
 import { SwitchProps } from './switch-theme.interface';
+import { SwitchThemeItem } from './switch-theme-item';
 
 /**
  * SwitchTheme
@@ -30,13 +29,6 @@ export const SwitchTheme = ({ className }: SwitchProps): ReactElement => {
   };
 
   return (
-    <Switch
-      className={className}
-      iconLeft="IconSun"
-      iconRight="IconMoon"
-      val={theme === 'light' ? 'ON' : 'OFF'}
-      onLeftClick={toggleThemeClick}
-      onRightClick={toggleThemeClick}
-    />
+    <SwitchThemeItem theme={theme} className={className} onToggleThemeClick={toggleThemeClick} />
   );
 };

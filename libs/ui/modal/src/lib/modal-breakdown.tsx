@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react';
 
 import { Box } from '@ui/box';
 import { Icon } from '@ui/icon';
+import { Typography } from '@ui/typography';
 
 export const ModalCard = ({
   className = '',
@@ -23,6 +24,12 @@ export const ModalClose = ({ onClick }: { onClick: () => void }) => (
 );
 
 export const ModalTitle = ({ title }: { title: string }) => (
+  <Typography variant="h1" className="font-bold text-xl">
+    {title}
+  </Typography>
+);
+
+export const ModalHeader = ({ title }: { title: string }) => (
   <h1 className="font-bold text-xl">{title}</h1>
 );
 

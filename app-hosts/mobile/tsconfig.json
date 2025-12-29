@@ -10,6 +10,9 @@
       "path": "../../libs/features/footer"
     },
     {
+      "path": "../../libs/features/header"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {
