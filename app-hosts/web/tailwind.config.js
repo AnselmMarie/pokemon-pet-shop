@@ -1,12 +1,13 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
-const { join } = require('path');
 
 const { semantic } = require('../../libs/ds-tokens');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+    './src/**/*.{js,jsx,ts,tsx}',
+    `../../libs/ui/src/**/*.{js,jsx,ts,tsx}`,
+    `../../libs/features/**/*.{js,jsx,ts,tsx}`,
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {

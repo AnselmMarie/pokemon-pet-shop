@@ -1,29 +1,29 @@
 import { Box } from '@ui/box';
 import { Link } from '@ui/link';
-// import { Icon } from '@ui/icon';
+import { Icon } from '@ui/icon';
 import { Typography } from '@ui/typography';
 
 export const Footer = () => {
   return (
     <Box
-      className="flex flex-col md:flex-row items-center justify-center h-[40px] mt-2xl mx-md gap-lg"
+      className="flex flex-row items-center justify-center h-[40px] mt-2xl mx-md gap-lg"
       as="footer"
     >
       <Link
-        className="flex items-center"
+        className="flex flex-row items-center"
         link="https://github.com/AnselmMarie/pokemon-pet-shop/tree/mfe"
       >
-        {/* <Icon icon="IconGithub" size={20} classNameIcon="mr-xs" fill="black" stroke="none" /> */}
+        <Icon icon="IconGithub" size={20} classNameIcon="mr-xs" fill="black" stroke="none" />
         <Typography>Github Project</Typography>
       </Link>
 
-      <Typography className="hidden md:p-10 md:block">|</Typography>
+      <Typography className="p-10 md:block">|</Typography>
 
       <Link
-        className="flex items-center"
+        className="flex flex-row items-center"
         link="https://github.com/AnselmMarie/pokemon-pet-shop/issues?q=state%3Aopen%20label%3A%22mfe%22"
       >
-        {/* <Icon icon="IconSearch" size={20} classNameIcon="mr-xs" stroke="black" fill="white" /> */}
+        <Icon icon="IconSearch" size={20} classNameIcon="mr-xs" stroke="black" fill="white" />
         <Typography>Github Issues</Typography>
       </Link>
 
