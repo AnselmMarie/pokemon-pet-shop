@@ -2,10 +2,10 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "types": ["node"],
     "rootDir": "src",
     "jsx": "react-jsx",
     "module": "esnext",
+    "types": ["node", "nativewind/types"],
     "moduleResolution": "bundler",
     "noUnusedLocals": false,
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"

@@ -8,9 +8,9 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
-    "@expo/metro-config": "*",
-    "expo": "~54.0.30",
+    "expo": "*",
     "expo-linking": "*",
+    "expo-font": "*",
     "expo-splash-screen": "*",
     "expo-status-bar": "*",
     "expo-system-ui": "*",
@@ -21,10 +21,17 @@
     "react-native-svg-transformer": "*",
     "react-native-web": "*",
     "react-native-safe-area-context": "*",
-    "react": "19.1.0"
+    "react": "*",
+    "@expo/vector-icons": "*",
+    "@expo/metro-runtime": "*",
+    "react-dom": "*",
+    "react-native-css-interop": "*",
+    "nativewind": "*",
+    "react-native-reanimated": "*",
+    "react-native-worklets": "*"
   },
   "devDependencies": {
-    "jest-expo": "*",
+    "jest-expo": "~54.0.0",
     "@types/jest": "29.5.14",
     "jest": "~29.7.0",
     "@testing-library/react-native": "*"
