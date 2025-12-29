@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": ["nativewind-env.d.ts"],
+  "references": [
+    {
+      "path": "../../libs/ds-tokens"
+    },
+    {
+      "path": "../../libs/features/footer"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

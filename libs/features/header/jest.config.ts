@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: '@pokemon-pet-shop/feature-header',
   preset: '../../../jest.preset.js',
   transform: {

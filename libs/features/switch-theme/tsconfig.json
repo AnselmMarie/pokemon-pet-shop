@@ -3,12 +3,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../ui/switch"
-    },
-    {
-      "path": "../../ui/icon"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

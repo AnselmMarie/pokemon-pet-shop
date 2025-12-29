@@ -1,4 +1,4 @@
-import semantic = require('./build/semantic.tailwind');
-import variables = require('./build/variables');
+import semantic from './build/semantic.tailwind';
+import * as variables from './build/variables';
 
 export { semantic, variables };

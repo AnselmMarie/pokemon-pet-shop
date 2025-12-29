@@ -3,57 +3,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../utils/detect"
-    },
-    {
-      "path": "../../utils/poke-type"
-    },
-    {
-      "path": "../../ui/button"
-    },
-    {
-      "path": "../../ui/card"
-    },
-    {
-      "path": "../../utils/pricing"
-    },
-    {
-      "path": "../../ui/image"
-    },
-    {
-      "path": "../../services/pokemon-api"
-    },
-    {
-      "path": "../../services/cart-api"
-    },
-    {
-      "path": "../../ui/tag"
-    },
-    {
-      "path": "../../ui/modal"
-    },
-    {
-      "path": "../../ui/scroll-wrapper"
-    },
-    {
-      "path": "../../utils/text-transform"
-    },
-    {
-      "path": "../../ui/skeleton"
-    },
-    {
-      "path": "../../ui/typography"
-    },
-    {
-      "path": "../../ui/icon-poke-type"
-    },
-    {
-      "path": "../../ui/hide-in-mobile"
-    },
-    {
-      "path": "../../ui/box"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

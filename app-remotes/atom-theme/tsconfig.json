@@ -7,9 +7,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../../libs/utils/storage"
     }
   ],
   "extends": "../../tsconfig.base.json"

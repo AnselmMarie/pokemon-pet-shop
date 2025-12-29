@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: 'webNotFound',
   preset: '../../jest.preset.js',
   transform: {

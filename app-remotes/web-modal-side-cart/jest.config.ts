@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: 'webModalSideCart',
   preset: '../../jest.preset.js',
   transform: {
