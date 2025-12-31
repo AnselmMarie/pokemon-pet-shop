@@ -7,6 +7,9 @@
       "path": "../../libs/ds-tokens"
     },
     {
+      "path": "../../libs/features/pokemon"
+    },
+    {
       "path": "../../libs/features/footer"
     },
     {

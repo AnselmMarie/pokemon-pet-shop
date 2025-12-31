@@ -28,11 +28,17 @@ Use `pnpm i` to install dependencies for the project
 
 #### 3. Running the Applications
 
-Run the commands below to begin the apps.
+Run the commands below in seperate terminals to start the apps.
 
-Web App: `npx nx run web:serve`
+Backend App: `npx nx run @pokemon-pet-shop/api:serve:development` (http://localhost:3333/api)
 
-Backend App: `npx nx run @pokemon-pet-shop/api:serve:development`
+Web App: `npx nx run web:serve` (http://localhost:4200/)
+
+-- Additional instructions will be added for the mobile apps in the future. Note: A decent amount of work is still needed but certain elements are rendering. --
+
+iOS App: `npx nx run @pokemon-pet-shop/mobile:run-ios` -- Run iOS simulator
+
+Android App: `npx nx run @pokemon-pet-shop/mobile:run-android` -- Run Android emulator
 
 ### 🧠 Architecture
 

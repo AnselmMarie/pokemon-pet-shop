@@ -32,7 +32,7 @@ export const PokemonList = (): ReactElement => {
 
   if (newData?.length === 0 && !hasNextPage) {
     return (
-      <Box className="flex justify-center my-md">
+      <Box className="flex justify-center my-md mt-[100px]">
         <Typography variant="h2">
           No Pets are available at the moment. Please check back again.
         </Typography>
@@ -43,7 +43,7 @@ export const PokemonList = (): ReactElement => {
 
   return (
     <>
-      <Box className="flex justify-center flex-wrap gap-md m-lg pt-lg">
+      <Box className="flex flex-row justify-center flex-wrap gap-md m-lg pt-lg mt-[100px]">
         {(newData ?? []).map(
           (arr: { data: (PokemonDetail.Base & { name: string })[] }, i: number): ReactElement => {
             return (

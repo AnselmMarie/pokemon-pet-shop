@@ -41,6 +41,9 @@
     },
     {
       "path": "../../libs/features/header/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/features/pokemon/tsconfig.lib.json"
     }
   ]
 }
