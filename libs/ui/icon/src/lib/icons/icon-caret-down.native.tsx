@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Svg, Path } from 'react-native-svg';
 
-import { IconSvgProps } from './icon.svg.interface';
+import { IconSvgProps } from './icon-svg.interface';
 
 export const IconCaretDown = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
   return (

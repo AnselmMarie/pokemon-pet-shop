@@ -4,7 +4,7 @@ import { Box } from '@ui/box';
 
 import { IconProps } from './icon.interface';
 import { IconMap } from './icon.util';
-import { IconColors } from './icon.colors.const';
+import { IconColors } from './icon-colors.const';
 
 export const Icon = ({
   icon = 'IconShoppingCart',

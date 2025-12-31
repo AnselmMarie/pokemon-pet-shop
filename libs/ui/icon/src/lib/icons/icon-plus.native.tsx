@@ -1,11 +1,10 @@
 import { ReactElement } from 'react';
-
 import { TouchableOpacity } from 'react-native';
 import { Svg, Path } from 'react-native-svg';
 
-import { IconSvgProps } from './icon.svg.interface';
+import { IconSvgProps } from './icon-svg.interface';
 
-export const IconX = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
+export const IconPlus = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
   return (
     <TouchableOpacity onPress={onClick}>
       <Svg
@@ -19,8 +18,8 @@ export const IconX = ({ size, fill, stroke, onClick }: IconSvgProps): ReactEleme
         stroke-linejoin="round"
       >
         <Path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <Path d="M18 6l-12 12" />
-        <Path d="M6 6l12 12" />
+        <Path d="M12 5l0 14" />
+        <Path d="M5 12l14 0" />
       </Svg>
     </TouchableOpacity>
   );

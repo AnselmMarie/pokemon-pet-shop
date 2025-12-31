@@ -4,7 +4,7 @@ import { Box } from '@ui/box';
 
 import pokeBallImage from '../assets/poke.ball.png';
 
-import { IconImageProps } from './icon.svg.interface';
+import { IconImageProps } from './icon-svg.interface';
 
 export const IconPokeBall = ({ className, onClick }: IconImageProps): ReactElement => {
   return (

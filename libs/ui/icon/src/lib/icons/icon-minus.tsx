@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { IconSvgProps } from './icon.svg.interface';
+import { IconSvgProps } from './icon-svg.interface';
 
 export const IconMinus = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
   return (
