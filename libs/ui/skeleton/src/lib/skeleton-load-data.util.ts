@@ -1,6 +1,6 @@
 const getSkeletonArr = <T>(nestedArray: boolean, loadingTemplate: T, arrCount: number) => {
-  const data = Array(arrCount).fill(loadingTemplate);
-  return nestedArray ? [data] : data;
+  const data = { data: Array(arrCount).fill(loadingTemplate) };
+  return nestedArray ? [data] : [data];
 };
 
 export const skeletonLoadDataUtil = <T, U>(

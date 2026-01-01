@@ -30,7 +30,7 @@ export const PokemonList = (): ReactElement => {
     return skeletonLoadDataUtil(pageData, isLoading, template, true, arrCount);
   }, [data, isLoading]);
 
-  if (newData?.length === 0 && !hasNextPage) {
+  if ((!newData || newData.length === 0) && !hasNextPage) {
     return (
       <Box className="flex justify-center my-md mt-[100px]">
         <Typography variant="h2">

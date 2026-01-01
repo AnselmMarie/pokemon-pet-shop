@@ -33,7 +33,6 @@ export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): Reac
         isOpen={isModalOpen}
         onCloseModal={() => setIsModalOpen(false)}
       />
-
       <Card
         className={`w-[352px] h-[167px] md:m-w-auto md:w-[250px] md:h-[367px] flex p-sm md:p-md rounded-md flex-row md:flex-col relative md:justify-between ${
           isLoading ? 'bg-medGrey' : ''

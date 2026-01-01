@@ -1,5 +1,5 @@
-import * as Linking from 'expo-linking';
+import * as WebBrowser from 'expo-web-browser';
 
-export const openLinkUtil = (link: string) => {
-  Linking.openURL(link);
+export const openLinkUtil = async (link: string) => {
+  await WebBrowser.openBrowserAsync(link);
 };

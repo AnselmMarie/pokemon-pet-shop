@@ -16,6 +16,7 @@
     "expo-doctor": "*",
     "expo-constants": "*",
     "expo-status-bar": "*",
+    "expo-web-browser": "*",
     "expo-system-ui": "*",
     "expo-image": "*",
     "metro-config": "*",
