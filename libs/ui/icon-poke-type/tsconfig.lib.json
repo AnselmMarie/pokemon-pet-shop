@@ -7,9 +7,7 @@
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
-      "nativewind/types",
-      "global",
-      "pokemon/types"
+      "nativewind/types"
     ],
     "rootDir": "src",
     "jsx": "react-jsx",
@@ -33,13 +31,16 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "../../types/src/global/assets.d.ts"],
   "references": [
     {
       "path": "../skeleton/tsconfig.lib.json"
     },
     {
       "path": "../../utils/text-transform/tsconfig.lib.json"
+    },
+    {
+      "path": "../../types/tsconfig.lib.json"
     }
   ]
 }

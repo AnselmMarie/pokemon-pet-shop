@@ -146,6 +146,9 @@
     },
     {
       "path": "./app-hosts/mobile"
+    },
+    {
+      "path": "./libs/types"
     }
   ]
 }

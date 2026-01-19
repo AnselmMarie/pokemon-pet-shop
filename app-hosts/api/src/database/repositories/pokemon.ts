@@ -1,3 +1,5 @@
+import { PokemonPricing } from '@pokemon-pet-shop/types';
+
 export const pricingDatabase = {
   stages: {
     '1': { price: 49999 },
@@ -8,7 +10,7 @@ export const pricingDatabase = {
   mythical: { price: 15000000 },
 };
 
-export const getPricingDataCall = async (): Promise<PokemonPricing.Base> => {
+export const getPricingDataCall = async (): Promise<PokemonPricing> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(pricingDatabase);

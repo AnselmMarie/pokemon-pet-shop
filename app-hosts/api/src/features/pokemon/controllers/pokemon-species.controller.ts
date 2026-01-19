@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
 
+import { PokemonEvolution } from '@pokemon-pet-shop/types';
+
 import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 
 import { PokemonSpeciesParamsProps } from '../pokemon.types';
@@ -21,7 +23,7 @@ export const getPokemonSpeciesController = async (
 
     const evolutionChainSplit = finalRes?.evolution_chain?.url?.split('/');
 
-    const finalEvolutionRes: PokemonEvolution.Base = await getPokemonEvolutionChainService({
+    const finalEvolutionRes: PokemonEvolution = await getPokemonEvolutionChainService({
       id: evolutionChainSplit[evolutionChainSplit.length - 2],
     }).catch(() => {
       throw errFormat500ResponseUtil();

@@ -1,5 +1,6 @@
 import { ReactElement, useMemo, Fragment } from 'react';
 
+import { PokemonDetailBase } from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { skeletonLoadDataUtil } from '@ui/skeleton';
@@ -45,10 +46,10 @@ export const PokemonList = (): ReactElement => {
     <>
       <Box className="flex flex-row justify-center flex-wrap gap-md m-lg pt-lg mt-[100px]">
         {(newData ?? []).map(
-          (arr: { data: (PokemonDetail.Base & { name: string })[] }, i: number): ReactElement => {
+          (arr: { data: (PokemonDetailBase & { name: string })[] }, i: number): ReactElement => {
             return (
               <Fragment key={i}>
-                {(arr?.data ?? []).map((el: PokemonDetail.Base & { name: string }, i: number) => (
+                {(arr?.data ?? []).map((el: PokemonDetailBase & { name: string }, i: number) => (
                   <PokemonCard key={el?.name || i} pokeCreature={el} isLoading={isDataLoading} />
                 ))}
               </Fragment>

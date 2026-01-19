@@ -1,5 +1,7 @@
+import { IconPokeList } from '@pokemon-pet-shop/types';
+
 export interface IconPokeTypeProps {
-  type?: PokemonTypes.IconPokeList;
+  type?: IconPokeList;
   size?: number;
   className?: string;
   isLoading?: boolean;

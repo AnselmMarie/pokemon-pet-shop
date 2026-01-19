@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { CartData } from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { Image } from '@ui/image';
@@ -14,7 +15,7 @@ import { getPokeTypePrefixClass } from '@utils/poke-type';
 import { cartModalTypeMap } from './cart-modal-type-map.util';
 
 interface CartModalItemProps {
-  el: Cart.Data;
+  el: CartData;
   currIndex: number;
   lastIndex: number;
 }

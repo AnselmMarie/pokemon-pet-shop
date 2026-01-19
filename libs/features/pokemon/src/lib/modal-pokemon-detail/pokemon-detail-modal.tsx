@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { PokemonDetailBase } from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { ScrollWrapper } from '@ui/scroll-wrapper';
 import { Modal } from '@ui/modal';
@@ -10,7 +11,7 @@ import { PokemonDetailModalBody } from './pokemon-detail-modal-body';
 import { PokemonDetailModalHeader } from './pokemon-detail-modal-header';
 
 interface PokemonDetailModalProps {
-  pokeCreature: PokemonDetail.Base & { name: string };
+  pokeCreature: PokemonDetailBase & { name: string };
   isOpen: boolean;
   onCloseModal: () => void;
 }

@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
 
+import { Pokemon, PokemonCreature, PokemonDetailBase } from '@pokemon-pet-shop/types';
+
 import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 
 import { DEFAULT_LIMIT, DEFAULT_OFFSET } from '../constants';
@@ -8,10 +10,10 @@ import { getPokemonDetailService } from '../services/pokemon-detail.service';
 import { getPokemonListService } from '../services/pokemon-list.service';
 
 const combineListAndDetailDataUtil = (
-  pokemonList: Pokemon.Base,
-  detailPromisesRes: (PokemonDetail.Base | { id: string; err: unknown })[]
+  pokemonList: Pokemon,
+  detailPromisesRes: (PokemonDetailBase | { id: string; err: unknown })[]
 ) => {
-  return (pokemonList?.results ?? []).map((el: Pokemon.Creature, i: number) => {
+  return (pokemonList?.results ?? []).map((el: PokemonCreature, i: number) => {
     return {
       ...el,
       ...detailPromisesRes[i + 1],

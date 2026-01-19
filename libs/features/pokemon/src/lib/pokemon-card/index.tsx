@@ -1,5 +1,6 @@
 import { ReactElement, useState } from 'react';
 
+import { PokemonDetailAbility, PokemonDetailBase } from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { Card } from '@ui/card';
 import { Skeleton } from '@ui/skeleton';
@@ -17,7 +18,7 @@ import { PokemonDetailModal } from '../modal-pokemon-detail/pokemon-detail-modal
 import { pokeCardTypeMap } from './pokemon-card-type-map.util';
 
 interface PokemonCardProps {
-  pokeCreature: PokemonDetail.Base & { name: string };
+  pokeCreature: PokemonDetailBase & { name: string };
   isLoading: boolean;
 }
 
@@ -98,7 +99,7 @@ export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): Reac
             )}
 
             {(pokeCreature?.abilities ?? []).map(
-              (abilityObj: PokemonDetail.PokemonDetailAbility, i: number): ReactElement | null => {
+              (abilityObj: PokemonDetailAbility, i: number): ReactElement | null => {
                 if (i > 1) {
                   return null;
                 }

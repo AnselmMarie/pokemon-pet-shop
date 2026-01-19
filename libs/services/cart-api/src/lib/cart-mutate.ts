@@ -1,11 +1,12 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
+import { CartPayload } from '@pokemon-pet-shop/types';
 import { axiosInstance } from '@utils/api-client';
 
 export const useUpdateCart = () => {
   const queryClient = useQueryClient();
-  const mutationFn = (data: Cart.Payload) =>
-    axiosInstance.put<Cart.Payload>(`cart/item/${data?.id}`, data);
+  const mutationFn = (data: CartPayload) =>
+    axiosInstance.put<CartPayload>(`cart/item/${data?.id}`, data);
 
   return useMutation({
     mutationFn,
