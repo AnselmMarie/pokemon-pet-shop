@@ -8,3 +8,4 @@ packages:
   - 'libs/utils/*'
   - 'libs/states/*'
   - 'packages/*'
+  - 'libs/*'
