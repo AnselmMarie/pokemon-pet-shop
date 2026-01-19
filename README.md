@@ -34,7 +34,7 @@ Run the commands below in seperate terminals to start the apps.
 
 **Web App**: `npx nx run web:serve` (http://localhost:4200/)
 
--- Additional instructions will be added for the mobile apps in the future. Note: A decent amount of work is still needed but certain elements are rendering. --
+-- Additional instructions will be added for the native apps in the future. Note: A decent amount of work is still needed but certain elements are rendering. --
 
 **iOS App**: `npx nx run @pokemon-pet-shop/mobile:run-ios` -- Run iOS simulator
 
