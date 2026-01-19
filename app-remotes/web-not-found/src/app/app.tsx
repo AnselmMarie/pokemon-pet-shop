@@ -1,4 +1,4 @@
-import { NotFoundPage } from '@features/page-not-found';
+import { NotFoundPage } from '@pokemon-pet-shop/feature-page-not-found';
 
 export default function NotFoundModule() {
   return <NotFoundPage />;

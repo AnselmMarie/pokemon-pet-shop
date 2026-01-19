@@ -6,15 +6,15 @@ import {
   PokemonEvolution,
   PokemonSpecies,
 } from '@pokemon-pet-shop/types';
-import { Box } from '@ui/box';
-import { Image } from '@ui/image';
-import { Typography } from '@ui/typography';
-import { Skeleton } from '@ui/skeleton';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Image } from '@pokemon-pet-shop/ui-image';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
 
-import { capitalizeName } from '@utils/text-transform';
-import { pricingFormat } from '@utils/pricing';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { pricingFormat } from '@pokemon-pet-shop/util-pricing';
 
-import { useGetPokemonSpecies, useGetPokemonPricing } from '@services/pokemon-api';
+import { useGetPokemonSpecies, useGetPokemonPricing } from '@pokemon-pet-shop/service-pokemon';
 
 import { HalfCircle } from './components/half.circle';
 import { pokeDetailTypeMap } from './pokemon-detail-type-map.util';

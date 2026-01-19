@@ -4,7 +4,10 @@
       "Bash(npx nx sync)",
       "Bash(npx nx sync:*)",
       "Bash(npx nx typecheck:*)",
-      "Bash(npx nx:*)"
+      "Bash(npx nx:*)",
+      "Bash(pnpm install)",
+      "Bash(nx run-many:*)",
+      "Bash(pnpm nx run-many:*)"
     ]
   }
 }

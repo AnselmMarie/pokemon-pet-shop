@@ -6,13 +6,13 @@ import {
   PokemonDetailAbility,
   PokemonDetailTypes,
 } from '@pokemon-pet-shop/types';
-import { Box } from '@ui/box';
-import { HideInMobile } from '@ui/hide-in-mobile';
-import { IconPokeType } from '@ui/icon-poke-type';
-import { Typography } from '@ui/typography';
-import { Skeleton } from '@ui/skeleton';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { HideInMobile } from '@pokemon-pet-shop/ui-hide-in-mobile';
+import { IconPokeType } from '@pokemon-pet-shop/ui-icon-poke-type';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
 
-import { capitalizeName } from '@utils/text-transform';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 
 import { pokeAbilityTypeMap } from './pokemon-ability-type-map.util';
 

@@ -1,4 +1,4 @@
-import type { IconType } from '@ui/icon';
+import type { IconType } from '@pokemon-pet-shop/ui-icon';
 
 import { SwitchStatus } from './switch.type';
 

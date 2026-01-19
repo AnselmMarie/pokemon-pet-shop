@@ -10,5 +10,25 @@
       "default": "./src/index.ts"
     },
     "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@pokemon-pet-shop/service-cart": "workspace:*",
+    "@pokemon-pet-shop/service-pokemon": "workspace:*",
+    "@pokemon-pet-shop/types": "workspace:*",
+    "@pokemon-pet-shop/ui-box": "workspace:*",
+    "@pokemon-pet-shop/ui-button": "workspace:*",
+    "@pokemon-pet-shop/ui-card": "workspace:*",
+    "@pokemon-pet-shop/ui-hide-in-mobile": "workspace:*",
+    "@pokemon-pet-shop/ui-icon-poke-type": "workspace:*",
+    "@pokemon-pet-shop/ui-image": "workspace:*",
+    "@pokemon-pet-shop/ui-modal": "workspace:*",
+    "@pokemon-pet-shop/ui-scroll-wrapper": "workspace:*",
+    "@pokemon-pet-shop/ui-skeleton": "workspace:*",
+    "@pokemon-pet-shop/ui-tag": "workspace:*",
+    "@pokemon-pet-shop/ui-typography": "workspace:*",
+    "@pokemon-pet-shop/util-detect": "workspace:*",
+    "@pokemon-pet-shop/util-poke-type": "workspace:*",
+    "@pokemon-pet-shop/util-pricing": "workspace:*",
+    "@pokemon-pet-shop/util-text-transform": "workspace:*"
   }
 }

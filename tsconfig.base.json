@@ -22,13 +22,6 @@
     "baseUrl": ".",
     "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./app-hosts"],
     "paths": {
-      "@pokemon-pet-shop/types": ["libs/types/src/index.ts"],
-      "@dsTokens": ["libs/ds-tokens/src/index.ts"],
-      "@features/*": ["libs/features/*"],
-      "@services/*": ["libs/services/*"],
-      "@states/*": ["libs/states/*"],
-      "@ui/*": ["libs/ui/*"],
-      "@utils/*": ["libs/utils/*"],
       "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],
       "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"],
       "webHomepage/Module": ["app-remotes/web-homepage/src/remote-entry.ts"],

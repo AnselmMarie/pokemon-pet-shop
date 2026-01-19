@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Box } from '@ui/box';
+import { Box } from '@pokemon-pet-shop/ui-box';
 
 export const serverError = ({ messages = [] }): ReactElement => {
   return (

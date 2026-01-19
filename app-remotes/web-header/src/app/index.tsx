@@ -1,4 +1,4 @@
-import { Header } from '@features/header';
+import { Header } from '@pokemon-pet-shop/feature-header';
 
 import '../styles.css';
 

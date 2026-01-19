@@ -66,6 +66,8 @@
     }
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "@pokemon-pet-shop/types": "workspace:*",
+    "@pokemon-pet-shop/util-pricing": "workspace:*",
+    "express": "*"
   }
 }

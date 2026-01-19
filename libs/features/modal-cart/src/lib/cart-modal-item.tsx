@@ -1,16 +1,16 @@
 import { ReactElement } from 'react';
 
 import { CartData } from '@pokemon-pet-shop/types';
-import { Box } from '@ui/box';
-import { Typography } from '@ui/typography';
-import { Image } from '@ui/image';
-import { Icon } from '@ui/icon';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Image } from '@pokemon-pet-shop/ui-image';
+import { Icon } from '@pokemon-pet-shop/ui-icon';
 
-import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
+import { useDeleteCartItem, useUpdateCart } from '@pokemon-pet-shop/service-cart';
 
-import { pricingFormatUSD } from '@utils/pricing';
-import { capitalizeName } from '@utils/text-transform';
-import { getPokeTypePrefixClass } from '@utils/poke-type';
+import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { getPokeTypePrefixClass } from '@pokemon-pet-shop/util-poke-type';
 
 import { cartModalTypeMap } from './cart-modal-type-map.util';
 

@@ -1,4 +1,4 @@
-import { Image } from '@ui/image';
+import { Image } from '@pokemon-pet-shop/ui-image';
 
 import halfCircleSvg from '../../assets/half.circle.png';
 

@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 import { useInfiniteQuery, InfiniteData } from '@tanstack/react-query';
 
 import { PokemonDetailBase } from '@pokemon-pet-shop/types';
-import { axiosInstance } from '@utils/api-client';
+import { axiosInstance } from '@pokemon-pet-shop/util-api-client';
 
 export const useGetPokemonList = () => {
   const queryKey = ['pokemon-list'];

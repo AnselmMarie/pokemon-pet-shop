@@ -1,6 +1,6 @@
 import { type PropsWithChildren, type ReactElement } from 'react';
 
-import { Box } from '@ui/box';
+import { Box } from '@pokemon-pet-shop/ui-box';
 
 import type { TagProps } from './tag-wrapper.interface';
 
