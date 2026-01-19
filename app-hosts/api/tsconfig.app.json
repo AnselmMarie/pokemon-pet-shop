@@ -2,16 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "types": [
-      "node",
-      "express",
-      "pokemon",
-      "pokemon/pricing",
-      "cart",
-      "pokemon/evolution-chain",
-      "pokemon/detail",
-      "pokemon/species"
-    ],
+    "types": ["node"],
     "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
   },
@@ -29,6 +20,9 @@
   "references": [
     {
       "path": "../../libs/utils/pricing/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/types/tsconfig.lib.json"
     }
   ]
 }

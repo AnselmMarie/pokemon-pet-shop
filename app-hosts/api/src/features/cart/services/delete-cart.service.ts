@@ -1,17 +1,19 @@
 import { clone } from 'lodash';
 
+import { Cart, CartData } from '@pokemon-pet-shop/types';
+
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
 import { getCartDataCall, updateCartDataCall } from '../../../database/repositories';
 
 export const deleteCartItemService = async (id: string) => {
-  const currentCartData: Cart.Base = clone(
+  const currentCartData: Cart = clone(
     await getCartDataCall().catch(() => {
       throw errFormat500ResponseUtil();
     })
   );
   const data = clone(currentCartData.data);
   let keySplice: number | null = null;
-  const dataToRemove: Cart.Data[] = data.filter((data, i: number) => {
+  const dataToRemove: CartData[] = data.filter((data: CartData, i: number) => {
     if (data?.id == id) {
       keySplice = i;
       return true;

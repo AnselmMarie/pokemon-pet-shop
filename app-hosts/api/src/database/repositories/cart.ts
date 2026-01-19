@@ -1,6 +1,8 @@
-export const cartDatabase: Cart.Base = { data: [], total: 0, counter: 0 };
+import { Cart } from '@pokemon-pet-shop/types';
 
-export const getCartDataCall = async (): Promise<Cart.Base> => {
+export const cartDatabase: Cart = { data: [], total: 0, counter: 0 };
+
+export const getCartDataCall = async (): Promise<Cart> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(cartDatabase);
@@ -8,7 +10,7 @@ export const getCartDataCall = async (): Promise<Cart.Base> => {
   });
 };
 
-export const updateCartDataCall = async (data: Cart.Base): Promise<Cart.Base> => {
+export const updateCartDataCall = async (data: Cart): Promise<Cart> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       cartDatabase.data = data.data;

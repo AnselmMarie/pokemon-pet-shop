@@ -1,5 +1,6 @@
 import { clone } from 'lodash';
 
+import { Cart, CartData, CartPayload, PokemonPricing } from '@pokemon-pet-shop/types';
 import { pricingFormat } from '@utils/pricing';
 
 import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
@@ -10,7 +11,7 @@ import { getPricingService } from '../../pokemon/services/pricing.service';
 import { getPokemonEvolutionChainService } from '../../pokemon/services/pokemon-evolution-chain.service';
 
 const doesItemExistKeyFn = (
-  data: Cart.Data[],
+  data: CartData[],
   id: string
 ): { key: number | null; counter: number; total: number } => {
   const cartLength = data.length;
@@ -47,8 +48,8 @@ const getSpeciesDetail = async (id: string) => {
   });
 };
 
-export const updateCartItemService = async (payload: Cart.Payload) => {
-  const currentCartData: Cart.Base = clone(
+export const updateCartItemService = async (payload: CartPayload) => {
+  const currentCartData: Cart = clone(
     await getCartDataCall().catch(() => {
       throw errFormat500ResponseUtil();
     })
@@ -66,7 +67,7 @@ export const updateCartItemService = async (payload: Cart.Payload) => {
     });
   }
 
-  const pricingData: PokemonPricing.Base = await getPricingService().catch(() => {
+  const pricingData: PokemonPricing = await getPricingService().catch(() => {
     throw errFormat500ResponseUtil();
   });
   const speciesData = await getSpeciesDetail(payload?.id).catch(() => {
