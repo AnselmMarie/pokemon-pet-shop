@@ -6,7 +6,7 @@ import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { Modal, ModalScroll } from '@ui/modal';
 
-import { useGetCart } from '@services/cart-api';
+import { useGetCart } from '@pokemon-pet-shop/service-cart';
 
 import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
 

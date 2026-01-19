@@ -6,7 +6,7 @@ import { Typography } from '@ui/typography';
 import { Image } from '@ui/image';
 import { Icon } from '@ui/icon';
 
-import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
+import { useDeleteCartItem, useUpdateCart } from '@pokemon-pet-shop/service-cart';
 
 import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';

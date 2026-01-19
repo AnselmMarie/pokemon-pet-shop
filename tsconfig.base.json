@@ -24,7 +24,6 @@
     "paths": {
       "@dsTokens": ["libs/ds-tokens/src/index.ts"],
       "@features/*": ["libs/features/*"],
-      "@services/*": ["libs/services/*"],
       "@states/*": ["libs/states/*"],
       "@ui/*": ["libs/ui/*"],
       "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],

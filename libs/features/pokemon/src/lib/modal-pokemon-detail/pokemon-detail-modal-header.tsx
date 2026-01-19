@@ -14,7 +14,7 @@ import { Skeleton } from '@ui/skeleton';
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 import { pricingFormat } from '@pokemon-pet-shop/util-pricing';
 
-import { useGetPokemonSpecies, useGetPokemonPricing } from '@services/pokemon-api';
+import { useGetPokemonSpecies, useGetPokemonPricing } from '@pokemon-pet-shop/service-pokemon';
 
 import { HalfCircle } from './components/half.circle';
 import { pokeDetailTypeMap } from './pokemon-detail-type-map.util';

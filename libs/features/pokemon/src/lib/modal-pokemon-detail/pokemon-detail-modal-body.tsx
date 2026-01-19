@@ -13,8 +13,8 @@ import { Skeleton } from '@ui/skeleton';
 import { Button } from '@ui/button';
 import { TagWrapper, TagItem } from '@ui/tag';
 
-import { useGetPokemonSpecies } from '@services/pokemon-api';
-import { useUpdateCart } from '@services/cart-api';
+import { useGetPokemonSpecies } from '@pokemon-pet-shop/service-pokemon';
+import { useUpdateCart } from '@pokemon-pet-shop/service-cart';
 
 import { capitalizeName, removeHtmlCodeInString } from '@pokemon-pet-shop/util-text-transform';
 

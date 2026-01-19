@@ -12,6 +12,8 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
+    "@pokemon-pet-shop/service-cart": "workspace:*",
+    "@pokemon-pet-shop/service-pokemon": "workspace:*",
     "@pokemon-pet-shop/types": "workspace:*",
     "@pokemon-pet-shop/util-detect": "workspace:*",
     "@pokemon-pet-shop/util-poke-type": "workspace:*",

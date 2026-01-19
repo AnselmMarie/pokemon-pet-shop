@@ -6,7 +6,7 @@ import { Typography } from '@ui/typography';
 import { skeletonLoadDataUtil } from '@ui/skeleton';
 import { Button } from '@ui/button';
 
-import { useGetPokemonList } from '@services/pokemon-api';
+import { useGetPokemonList } from '@pokemon-pet-shop/service-pokemon';
 
 import { PokemonCard } from '../pokemon-card';
 import image from './assets/bulbasaur.small.gif';

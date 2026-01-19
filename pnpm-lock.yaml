@@ -563,6 +563,9 @@ importers:
 
   libs/features/modal-cart:
     dependencies:
+      '@pokemon-pet-shop/service-cart':
+        specifier: workspace:*
+        version: link:../../services/cart-api
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
@@ -580,6 +583,12 @@ importers:
 
   libs/features/pokemon:
     dependencies:
+      '@pokemon-pet-shop/service-cart':
+        specifier: workspace:*
+        version: link:../../services/cart-api
+      '@pokemon-pet-shop/service-pokemon':
+        specifier: workspace:*
+        version: link:../../services/pokemon-api
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types

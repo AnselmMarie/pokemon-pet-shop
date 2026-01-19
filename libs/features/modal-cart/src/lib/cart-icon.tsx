@@ -5,7 +5,7 @@ import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { Icon } from '@ui/icon';
 
-import { useGetCart } from '@services/cart-api';
+import { useGetCart } from '@pokemon-pet-shop/service-cart';
 
 import { CartModal } from './cart-modal';
 import { openSideCartModalAtom } from './cart-modal-atom.state';
