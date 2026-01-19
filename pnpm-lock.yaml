@@ -632,7 +632,7 @@ importers:
     dependencies:
       '@pokemon-pet-shop/service-cart':
         specifier: workspace:*
-        version: link:../../services/cart-api
+        version: link:../../services/cart
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
@@ -667,10 +667,10 @@ importers:
     dependencies:
       '@pokemon-pet-shop/service-cart':
         specifier: workspace:*
-        version: link:../../services/cart-api
+        version: link:../../services/cart
       '@pokemon-pet-shop/service-pokemon':
         specifier: workspace:*
-        version: link:../../services/pokemon-api
+        version: link:../../services/pokemon
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
@@ -729,7 +729,7 @@ importers:
         specifier: workspace:*
         version: link:../../ui/switch
 
-  libs/services/cart-api:
+  libs/services/cart:
     dependencies:
       '@pokemon-pet-shop/types':
         specifier: workspace:*
@@ -738,7 +738,7 @@ importers:
         specifier: workspace:*
         version: link:../../utils/api-client
 
-  libs/services/pokemon-api:
+  libs/services/pokemon:
     dependencies:
       '@pokemon-pet-shop/types':
         specifier: workspace:*

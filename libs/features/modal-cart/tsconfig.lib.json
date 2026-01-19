@@ -46,7 +46,7 @@
       "path": "../../types/tsconfig.lib.json"
     },
     {
-      "path": "../../services/cart-api/tsconfig.lib.json"
+      "path": "../../services/cart/tsconfig.lib.json"
     },
     {
       "path": "../../ui/icon/tsconfig.lib.json"

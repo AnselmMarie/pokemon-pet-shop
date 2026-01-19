@@ -73,7 +73,7 @@
       "path": "./libs/ui/modal"
     },
     {
-      "path": "./libs/services/pokemon-api"
+      "path": "./libs/services/pokemon"
     },
     {
       "path": "./libs/utils/api-client"
@@ -109,7 +109,7 @@
       "path": "./app-remotes/atom-theme"
     },
     {
-      "path": "./libs/services/cart-api"
+      "path": "./libs/services/cart"
     },
     {
       "path": "./libs/utils/poke-type"
