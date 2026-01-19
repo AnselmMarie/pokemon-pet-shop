@@ -8,9 +8,9 @@ import { Icon } from '@ui/icon';
 
 import { useDeleteCartItem, useUpdateCart } from '@services/cart-api';
 
-import { pricingFormatUSD } from '@utils/pricing';
-import { capitalizeName } from '@utils/text-transform';
-import { getPokeTypePrefixClass } from '@utils/poke-type';
+import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { getPokeTypePrefixClass } from '@pokemon-pet-shop/util-poke-type';
 
 import { cartModalTypeMap } from './cart-modal-type-map.util';
 

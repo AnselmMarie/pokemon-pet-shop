@@ -8,9 +8,9 @@ import { Button } from '@ui/button';
 import { Image } from '@ui/image';
 import { Typography } from '@ui/typography';
 
-import { isWeb } from '@utils/detect';
-import { capitalizeName } from '@utils/text-transform';
-import { getPokeTypePrefixClass } from '@utils/poke-type';
+import { isWeb } from '@pokemon-pet-shop/util-detect';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { getPokeTypePrefixClass } from '@pokemon-pet-shop/util-poke-type';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
 import { PokemonDetailModal } from '../modal-pokemon-detail/pokemon-detail-modal';

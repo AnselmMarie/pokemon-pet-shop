@@ -8,7 +8,7 @@ import { Modal, ModalScroll } from '@ui/modal';
 
 import { useGetCart } from '@services/cart-api';
 
-import { pricingFormatUSD } from '@utils/pricing';
+import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
 
 import CartModalItem from './cart-modal-item';
 import { closeSideCartModalAtom, isSideCartModalOpenAtom } from './cart-modal-atom.state';

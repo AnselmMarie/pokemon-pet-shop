@@ -10,5 +10,12 @@
       "default": "./src/index.ts"
     },
     "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@pokemon-pet-shop/types": "workspace:*",
+    "@pokemon-pet-shop/util-detect": "workspace:*",
+    "@pokemon-pet-shop/util-poke-type": "workspace:*",
+    "@pokemon-pet-shop/util-pricing": "workspace:*",
+    "@pokemon-pet-shop/util-text-transform": "workspace:*"
   }
 }

@@ -12,7 +12,7 @@ import { IconPokeType } from '@ui/icon-poke-type';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
 
-import { capitalizeName } from '@utils/text-transform';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 
 import { pokeAbilityTypeMap } from './pokemon-ability-type-map.util';
 

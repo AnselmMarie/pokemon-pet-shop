@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 import { useQueries } from '@tanstack/react-query';
 
 import { PokemonSpecies } from '@pokemon-pet-shop/types';
-import { axiosInstance } from '@utils/api-client';
+import { axiosInstance } from '@pokemon-pet-shop/util-api-client';
 
 export const useGetPokemonSpecies = (ids: (string | undefined)[] | undefined) => {
   const queryFn = (id: string | undefined) =>

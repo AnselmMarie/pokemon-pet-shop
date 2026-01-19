@@ -1,7 +1,7 @@
 import { atom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 
-import { createStorage, storageKey } from '@utils/storage';
+import { createStorage, storageKey } from '@pokemon-pet-shop/util-storage';
 
 export type Theme = 'light' | 'dark';
 

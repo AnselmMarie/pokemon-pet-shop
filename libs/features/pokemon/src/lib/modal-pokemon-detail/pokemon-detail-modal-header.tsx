@@ -11,8 +11,8 @@ import { Image } from '@ui/image';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
 
-import { capitalizeName } from '@utils/text-transform';
-import { pricingFormat } from '@utils/pricing';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { pricingFormat } from '@pokemon-pet-shop/util-pricing';
 
 import { useGetPokemonSpecies, useGetPokemonPricing } from '@services/pokemon-api';
 

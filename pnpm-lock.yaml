@@ -417,8 +417,14 @@ importers:
 
   app-hosts/api:
     dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../libs/types
+      '@pokemon-pet-shop/util-pricing':
+        specifier: workspace:*
+        version: link:../../libs/utils/pricing
       express:
-        specifier: ^4.21.2
+        specifier: '*'
         version: 4.22.1
 
   app-hosts/api-e2e: {}
@@ -521,7 +527,11 @@ importers:
 
   app-hosts/web-e2e: {}
 
-  app-remotes/atom-theme: {}
+  app-remotes/atom-theme:
+    dependencies:
+      '@pokemon-pet-shop/util-storage':
+        specifier: workspace:*
+        version: link:../../libs/utils/storage
 
   app-remotes/atom-theme-e2e: {}
 
@@ -551,23 +561,62 @@ importers:
 
   libs/features/header: {}
 
-  libs/features/modal-cart: {}
+  libs/features/modal-cart:
+    dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
+      '@pokemon-pet-shop/util-poke-type':
+        specifier: workspace:*
+        version: link:../../utils/poke-type
+      '@pokemon-pet-shop/util-pricing':
+        specifier: workspace:*
+        version: link:../../utils/pricing
+      '@pokemon-pet-shop/util-text-transform':
+        specifier: workspace:*
+        version: link:../../utils/text-transform
 
   libs/features/page-not-found: {}
 
-  libs/features/pokemon: {}
+  libs/features/pokemon:
+    dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
+      '@pokemon-pet-shop/util-detect':
+        specifier: workspace:*
+        version: link:../../utils/detect
+      '@pokemon-pet-shop/util-poke-type':
+        specifier: workspace:*
+        version: link:../../utils/poke-type
+      '@pokemon-pet-shop/util-pricing':
+        specifier: workspace:*
+        version: link:../../utils/pricing
+      '@pokemon-pet-shop/util-text-transform':
+        specifier: workspace:*
+        version: link:../../utils/text-transform
 
   libs/features/switch-theme: {}
 
-  libs/services/cart-api: {}
-
-  libs/services/pokemon-api: {}
-
-  libs/types:
+  libs/services/cart-api:
     dependencies:
-      tslib:
-        specifier: ^2.3.0
-        version: 2.8.1
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
+      '@pokemon-pet-shop/util-api-client':
+        specifier: workspace:*
+        version: link:../../utils/api-client
+
+  libs/services/pokemon-api:
+    dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
+      '@pokemon-pet-shop/util-api-client':
+        specifier: workspace:*
+        version: link:../../utils/api-client
+
+  libs/types: {}
 
   libs/ui/box: {}
 
@@ -581,7 +630,14 @@ importers:
 
   libs/ui/icon: {}
 
-  libs/ui/icon-poke-type: {}
+  libs/ui/icon-poke-type:
+    dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
+      '@pokemon-pet-shop/util-text-transform':
+        specifier: workspace:*
+        version: link:../../utils/text-transform
 
   libs/ui/image: {}
 
@@ -599,7 +655,11 @@ importers:
 
   libs/ui/switch: {}
 
-  libs/ui/tag: {}
+  libs/ui/tag:
+    dependencies:
+      '@pokemon-pet-shop/util-text-transform':
+        specifier: workspace:*
+        version: link:../../utils/text-transform
 
   libs/ui/typography: {}
 
@@ -607,9 +667,17 @@ importers:
 
   libs/utils/detect: {}
 
-  libs/utils/poke-type: {}
+  libs/utils/poke-type:
+    dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
 
-  libs/utils/pricing: {}
+  libs/utils/pricing:
+    dependencies:
+      '@pokemon-pet-shop/types':
+        specifier: workspace:*
+        version: link:../../types
 
   libs/utils/storage: {}
 

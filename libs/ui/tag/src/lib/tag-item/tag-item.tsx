@@ -3,7 +3,7 @@ import { PropsWithChildren, ReactElement } from 'react';
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 
-import { capitalizeName } from '@utils/text-transform';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 
 import type { TagProps } from './tag-item.interface';
 import { pokeTagTypeMap } from './pokemon-tag-type-map.util';

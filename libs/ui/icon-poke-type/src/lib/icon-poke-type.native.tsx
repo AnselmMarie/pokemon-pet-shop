@@ -1,6 +1,6 @@
 import { memo, ReactElement, useMemo } from 'react';
 
-import { capitalizeContent } from '@utils/text-transform';
+import { capitalizeContent } from '@pokemon-pet-shop/util-text-transform';
 
 import { Skeleton } from '@ui/skeleton';
 
