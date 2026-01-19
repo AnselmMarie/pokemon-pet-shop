@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npx nx sync)",
       "Bash(npx nx sync:*)",
-      "Bash(npx nx typecheck:*)"
+      "Bash(npx nx typecheck:*)",
+      "Bash(npx nx:*)"
     ]
   }
 }

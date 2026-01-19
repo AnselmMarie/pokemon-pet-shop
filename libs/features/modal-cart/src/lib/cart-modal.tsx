@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { useAtomValue, useSetAtom } from 'jotai';
 
+import { CartData } from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { Modal, ModalScroll } from '@ui/modal';
@@ -28,7 +29,7 @@ export const CartModal = (): ReactElement => {
     >
       <ModalScroll>
         <Box className="pb-[150px]">
-          {(data?.data ?? []).map((el: Cart.Data, i: number) => {
+          {(data?.data ?? []).map((el: CartData, i: number) => {
             return (
               <CartModalItem
                 key={i}

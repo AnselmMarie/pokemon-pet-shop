@@ -1,4 +1,4 @@
-import { PokemonDetailBase } from './pokemon-detail';
+import { PokemonDetailTypes } from './pokemon-detail';
 
 export interface CartPayload {
   id: string;
@@ -12,7 +12,7 @@ export interface CartData {
   price: number;
   quantity: number;
   image: string;
-  types: PokemonDetailBase;
+  types: PokemonDetailTypes[];
   isLegendary: boolean;
   isMythical: boolean;
 }

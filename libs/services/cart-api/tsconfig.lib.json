@@ -2,7 +2,7 @@
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "types": ["node", "@nx/react/typings/cssmodule.d.ts", "@nx/react/typings/image.d.ts", "cart"],
+    "types": ["node", "@nx/react/typings/cssmodule.d.ts", "@nx/react/typings/image.d.ts"],
     "rootDir": "src",
     "jsx": "react-jsx",
     "module": "esnext",
@@ -29,6 +29,9 @@
   "references": [
     {
       "path": "../../utils/api-client/tsconfig.lib.json"
+    },
+    {
+      "path": "../../types/tsconfig.lib.json"
     }
   ]
 }

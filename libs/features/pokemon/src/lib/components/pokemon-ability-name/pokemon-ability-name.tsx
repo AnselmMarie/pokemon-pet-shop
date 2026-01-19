@@ -1,5 +1,11 @@
 import { ReactElement, useMemo } from 'react';
 
+import {
+  IconPokeList,
+  IconPokeListType,
+  PokemonDetailAbility,
+  PokemonDetailTypes,
+} from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { HideInMobile } from '@ui/hide-in-mobile';
 import { IconPokeType } from '@ui/icon-poke-type';
@@ -11,9 +17,9 @@ import { capitalizeName } from '@utils/text-transform';
 import { pokeAbilityTypeMap } from './pokemon-ability-type-map.util';
 
 interface PokemonAbilityNameProps {
-  abilityData: PokemonDetail.PokemonDetailAbility;
-  typeData: PokemonDetail.PokemonDetailTypes[];
-  pokeTypeClass: PokemonTypes.IconPokeListType;
+  abilityData: PokemonDetailAbility;
+  typeData: PokemonDetailTypes[];
+  pokeTypeClass: IconPokeListType;
   showAtkLine?: boolean;
   displayInDetail?: boolean;
   isLoading?: boolean;
@@ -74,7 +80,7 @@ export const PokemonAbilityName = ({
         }`}
       >
         <IconPokeType
-          type={typeData?.[0]?.type?.name as PokemonTypes.IconPokeList}
+          type={typeData?.[0]?.type?.name as IconPokeList}
           size={displayInDetail ? 18 : 10}
         />
       </Box>

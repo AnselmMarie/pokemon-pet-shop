@@ -1,5 +1,12 @@
 import { ReactElement, useMemo } from 'react';
 
+import {
+  IconPokeListType,
+  PokemonDetailAbility,
+  PokemonDetailBase,
+  PokemonDetailTypes,
+  PokemonSpecies,
+} from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { Typography } from '@ui/typography';
 import { Skeleton } from '@ui/skeleton';
@@ -14,12 +21,12 @@ import { capitalizeName, removeHtmlCodeInString } from '@utils/text-transform';
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
 
 interface PokemonDetailModalBodyProps {
-  pokeCreature: PokemonDetail.Base & { name: string };
-  pokeTypeClass: PokemonTypes.IconPokeListType;
+  pokeCreature: PokemonDetailBase & { name: string };
+  pokeTypeClass: IconPokeListType;
 }
 
 interface PokeSpeciesResProps {
-  data: PokemonSpecies.Species;
+  data: PokemonSpecies;
   isLoading: boolean;
   isFetching: boolean;
 }
@@ -43,7 +50,7 @@ export const PokemonDetailModalBody = ({
 
   const handleUpdateCartSubmit = () => {
     mutateUpdateCart({
-      id: pokeCreature?.id,
+      id: String(pokeCreature?.id),
       addToCart: true,
     });
   };
@@ -123,7 +130,7 @@ export const PokemonDetailModalBody = ({
             <Box className="mb-xl">
               <TagWrapper>
                 {(pokeCreature?.types ?? []).map(
-                  (typeObj: PokemonDetail.PokemonDetailTypes, i: number): ReactElement | null => {
+                  (typeObj: PokemonDetailTypes, i: number): ReactElement | null => {
                     return (
                       <TagItem key={i} name={typeObj?.type?.name} pokeTypeClass={pokeTypeClass} />
                     );
@@ -156,10 +163,7 @@ export const PokemonDetailModalBody = ({
           {pokeCreature?.abilities.length > 0 && (
             <Box className="mb-2xl">
               {(pokeCreature?.abilities ?? []).map(
-                (
-                  abilityObj: PokemonDetail.PokemonDetailAbility,
-                  i: number
-                ): ReactElement | null => {
+                (abilityObj: PokemonDetailAbility, i: number): ReactElement | null => {
                   if (i > 1) {
                     return null;
                   }

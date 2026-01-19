@@ -1,5 +1,11 @@
 import { ReactElement, useMemo } from 'react';
 
+import {
+  IconPokeListType,
+  PokemonDetailBase,
+  PokemonEvolution,
+  PokemonSpecies,
+} from '@pokemon-pet-shop/types';
 import { Box } from '@ui/box';
 import { Image } from '@ui/image';
 import { Typography } from '@ui/typography';
@@ -14,13 +20,13 @@ import { HalfCircle } from './components/half.circle';
 import { pokeDetailTypeMap } from './pokemon-detail-type-map.util';
 
 interface PokemonDetailModalHeaderProps {
-  pokeCreature: PokemonDetail.Base & { name: string };
-  pokeTypeClass: PokemonTypes.IconPokeListType;
+  pokeCreature: PokemonDetailBase & { name: string };
+  pokeTypeClass: IconPokeListType;
 }
 
 interface PokeSpeciesResProps {
-  data: Omit<PokemonSpecies.Species, 'evolution_chain'> & {
-    evolution_chain: PokemonEvolution.Base;
+  data: Omit<PokemonSpecies, 'evolution_chain'> & {
+    evolution_chain: PokemonEvolution;
   };
   isLoading: boolean;
   isFetching: boolean;
@@ -52,7 +58,7 @@ export const PokemonDetailModalHeader = ({
         isMythical: speciesData?.is_mythical,
         chainData: speciesData?.evolution_chain?.chain,
       },
-      pricingData
+      pricingData!
     );
   }, [
     speciesData?.name,
