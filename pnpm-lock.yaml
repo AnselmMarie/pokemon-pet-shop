@@ -437,6 +437,15 @@ importers:
       '@expo/vector-icons':
         specifier: '*'
         version: 15.0.3(expo-font@14.0.10(expo@54.0.30)(react-native@0.81.5(@babel/core@7.28.5)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.28.5))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.28.5))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
+      '@pokemon-pet-shop/feature-footer':
+        specifier: workspace:*
+        version: link:../../libs/features/footer
+      '@pokemon-pet-shop/feature-header':
+        specifier: workspace:*
+        version: link:../../libs/features/header
+      '@pokemon-pet-shop/feature-pokemon':
+        specifier: workspace:*
+        version: link:../../libs/features/pokemon
       expo:
         specifier: '*'
         version: 54.0.30(@babel/core@7.28.5)(@expo/metro-runtime@6.1.2)(expo-router@6.0.21)(react-native@0.81.5(@babel/core@7.28.5)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.28.5))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -535,23 +544,43 @@ importers:
 
   app-remotes/atom-theme-e2e: {}
 
-  app-remotes/web-footer: {}
+  app-remotes/web-footer:
+    dependencies:
+      '@pokemon-pet-shop/feature-footer':
+        specifier: workspace:*
+        version: link:../../libs/features/footer
 
   app-remotes/web-footer-e2e: {}
 
-  app-remotes/web-header: {}
+  app-remotes/web-header:
+    dependencies:
+      '@pokemon-pet-shop/feature-header':
+        specifier: workspace:*
+        version: link:../../libs/features/header
 
   app-remotes/web-header-e2e: {}
 
-  app-remotes/web-homepage: {}
+  app-remotes/web-homepage:
+    dependencies:
+      '@pokemon-pet-shop/feature-pokemon':
+        specifier: workspace:*
+        version: link:../../libs/features/pokemon
 
   app-remotes/web-homepage-e2e: {}
 
-  app-remotes/web-modal-side-cart: {}
+  app-remotes/web-modal-side-cart:
+    dependencies:
+      '@pokemon-pet-shop/feature-modal-cart':
+        specifier: workspace:*
+        version: link:../../libs/features/modal-cart
 
   app-remotes/web-modal-side-cart-e2e: {}
 
-  app-remotes/web-not-found: {}
+  app-remotes/web-not-found:
+    dependencies:
+      '@pokemon-pet-shop/feature-page-not-found':
+        specifier: workspace:*
+        version: link:../../libs/features/page-not-found
 
   app-remotes/web-not-found-e2e: {}
 
@@ -574,6 +603,12 @@ importers:
 
   libs/features/header:
     dependencies:
+      '@pokemon-pet-shop/feature-modal-cart':
+        specifier: workspace:*
+        version: link:../modal-cart
+      '@pokemon-pet-shop/feature-switch-theme':
+        specifier: workspace:*
+        version: link:../switch-theme
       '@pokemon-pet-shop/ui-box':
         specifier: workspace:*
         version: link:../../ui/box

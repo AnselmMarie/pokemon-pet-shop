@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { SwitchTheme } from '@features/switch-theme';
+import { SwitchTheme } from '@pokemon-pet-shop/feature-switch-theme';
 
 import { Box } from '@pokemon-pet-shop/ui-box';
 import { Container } from '@pokemon-pet-shop/ui-container';

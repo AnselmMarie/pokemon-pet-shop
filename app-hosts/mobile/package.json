@@ -8,6 +8,9 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
+    "@pokemon-pet-shop/feature-footer": "workspace:*",
+    "@pokemon-pet-shop/feature-header": "workspace:*",
+    "@pokemon-pet-shop/feature-pokemon": "workspace:*",
     "expo": "*",
     "expo-linking": "*",
     "expo-font": "*",

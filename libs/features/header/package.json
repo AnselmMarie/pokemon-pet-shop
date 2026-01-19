@@ -12,6 +12,8 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
+    "@pokemon-pet-shop/feature-modal-cart": "workspace:*",
+    "@pokemon-pet-shop/feature-switch-theme": "workspace:*",
     "@pokemon-pet-shop/ui-box": "workspace:*",
     "@pokemon-pet-shop/ui-container": "workspace:*",
     "@pokemon-pet-shop/ui-hide-in-mobile": "workspace:*",

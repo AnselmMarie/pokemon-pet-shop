@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { SwitchTheme } from '@features/switch-theme';
+import { SwitchTheme } from '@pokemon-pet-shop/feature-switch-theme';
 
 import { Modal } from '@pokemon-pet-shop/ui-modal';
 import { Box } from '@pokemon-pet-shop/ui-box';
