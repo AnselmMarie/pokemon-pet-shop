@@ -7,11 +7,11 @@ import {
   PokemonDetailTypes,
   PokemonSpecies,
 } from '@pokemon-pet-shop/types';
-import { Box } from '@ui/box';
-import { Typography } from '@ui/typography';
-import { Skeleton } from '@ui/skeleton';
-import { Button } from '@ui/button';
-import { TagWrapper, TagItem } from '@ui/tag';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
+import { Button } from '@pokemon-pet-shop/ui-button';
+import { TagWrapper, TagItem } from '@pokemon-pet-shop/ui-tag';
 
 import { useGetPokemonSpecies } from '@pokemon-pet-shop/service-pokemon';
 import { useUpdateCart } from '@pokemon-pet-shop/service-cart';

@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactElement } from 'react';
 
-import { Box } from '@ui/box';
-import { Typography } from '@ui/typography';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
 
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 

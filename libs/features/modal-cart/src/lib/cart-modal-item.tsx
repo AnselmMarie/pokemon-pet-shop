@@ -1,10 +1,10 @@
 import { ReactElement } from 'react';
 
 import { CartData } from '@pokemon-pet-shop/types';
-import { Box } from '@ui/box';
-import { Typography } from '@ui/typography';
-import { Image } from '@ui/image';
-import { Icon } from '@ui/icon';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Image } from '@pokemon-pet-shop/ui-image';
+import { Icon } from '@pokemon-pet-shop/ui-icon';
 
 import { useDeleteCartItem, useUpdateCart } from '@pokemon-pet-shop/service-cart';
 

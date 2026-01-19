@@ -1,6 +1,6 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Box } from '@ui/box';
+import { Box } from '@pokemon-pet-shop/ui-box';
 
 import { HeaderContent } from './header-content';
 

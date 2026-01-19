@@ -25,7 +25,6 @@
       "@dsTokens": ["libs/ds-tokens/src/index.ts"],
       "@features/*": ["libs/features/*"],
       "@states/*": ["libs/states/*"],
-      "@ui/*": ["libs/ui/*"],
       "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],
       "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"],
       "webHomepage/Module": ["app-remotes/web-homepage/src/remote-entry.ts"],

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import ReactNativeSkeleton from 'react-native-reanimated-skeleton';
 
-import { Box } from '@ui/box';
+import { Box } from '@pokemon-pet-shop/ui-box';
 
 // import { THEME_RADIUS_PILL, THEME_SPACING_15 } from '../../styles/ts/variables';
 

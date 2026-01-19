@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@pokemon-pet-shop/types": "workspace:*",
+    "@pokemon-pet-shop/ui-skeleton": "workspace:*",
     "@pokemon-pet-shop/util-text-transform": "workspace:*"
   }
 }

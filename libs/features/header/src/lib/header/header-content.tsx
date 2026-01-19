@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import { SwitchTheme } from '@features/switch-theme';
 
-import { Box } from '@ui/box';
-import { Container } from '@ui/container';
-import { Icon } from '@ui/icon';
-import { Image } from '@ui/image';
-import { HideInMobile } from '@ui/hide-in-mobile';
+import { Box } from '@pokemon-pet-shop/ui-box';
+import { Container } from '@pokemon-pet-shop/ui-container';
+import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Image } from '@pokemon-pet-shop/ui-image';
+import { HideInMobile } from '@pokemon-pet-shop/ui-hide-in-mobile';
 
 import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { SideNavModal } from './side-nav-modal';

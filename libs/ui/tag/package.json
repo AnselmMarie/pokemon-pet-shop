@@ -12,6 +12,8 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
+    "@pokemon-pet-shop/ui-box": "workspace:*",
+    "@pokemon-pet-shop/ui-typography": "workspace:*",
     "@pokemon-pet-shop/util-text-transform": "workspace:*"
   }
 }

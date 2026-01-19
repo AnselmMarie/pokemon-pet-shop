@@ -557,9 +557,41 @@ importers:
 
   libs/ds-tokens: {}
 
-  libs/features/footer: {}
+  libs/features/footer:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../../ui/box
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../../ui/icon
+      '@pokemon-pet-shop/ui-link':
+        specifier: workspace:*
+        version: link:../../ui/link
+      '@pokemon-pet-shop/ui-typography':
+        specifier: workspace:*
+        version: link:../../ui/typography
 
-  libs/features/header: {}
+  libs/features/header:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../../ui/box
+      '@pokemon-pet-shop/ui-container':
+        specifier: workspace:*
+        version: link:../../ui/container
+      '@pokemon-pet-shop/ui-hide-in-mobile':
+        specifier: workspace:*
+        version: link:../../ui/hide-in-mobile
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../../ui/icon
+      '@pokemon-pet-shop/ui-image':
+        specifier: workspace:*
+        version: link:../../ui/image
+      '@pokemon-pet-shop/ui-modal':
+        specifier: workspace:*
+        version: link:../../ui/modal
 
   libs/features/modal-cart:
     dependencies:
@@ -569,6 +601,21 @@ importers:
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../../ui/box
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../../ui/icon
+      '@pokemon-pet-shop/ui-image':
+        specifier: workspace:*
+        version: link:../../ui/image
+      '@pokemon-pet-shop/ui-modal':
+        specifier: workspace:*
+        version: link:../../ui/modal
+      '@pokemon-pet-shop/ui-typography':
+        specifier: workspace:*
+        version: link:../../ui/typography
       '@pokemon-pet-shop/util-poke-type':
         specifier: workspace:*
         version: link:../../utils/poke-type
@@ -592,6 +639,39 @@ importers:
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../../ui/box
+      '@pokemon-pet-shop/ui-button':
+        specifier: workspace:*
+        version: link:../../ui/button
+      '@pokemon-pet-shop/ui-card':
+        specifier: workspace:*
+        version: link:../../ui/card
+      '@pokemon-pet-shop/ui-hide-in-mobile':
+        specifier: workspace:*
+        version: link:../../ui/hide-in-mobile
+      '@pokemon-pet-shop/ui-icon-poke-type':
+        specifier: workspace:*
+        version: link:../../ui/icon-poke-type
+      '@pokemon-pet-shop/ui-image':
+        specifier: workspace:*
+        version: link:../../ui/image
+      '@pokemon-pet-shop/ui-modal':
+        specifier: workspace:*
+        version: link:../../ui/modal
+      '@pokemon-pet-shop/ui-scroll-wrapper':
+        specifier: workspace:*
+        version: link:../../ui/scroll-wrapper
+      '@pokemon-pet-shop/ui-skeleton':
+        specifier: workspace:*
+        version: link:../../ui/skeleton
+      '@pokemon-pet-shop/ui-tag':
+        specifier: workspace:*
+        version: link:../../ui/tag
+      '@pokemon-pet-shop/ui-typography':
+        specifier: workspace:*
+        version: link:../../ui/typography
       '@pokemon-pet-shop/util-detect':
         specifier: workspace:*
         version: link:../../utils/detect
@@ -605,7 +685,14 @@ importers:
         specifier: workspace:*
         version: link:../../utils/text-transform
 
-  libs/features/switch-theme: {}
+  libs/features/switch-theme:
+    dependencies:
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../../ui/icon
+      '@pokemon-pet-shop/ui-switch':
+        specifier: workspace:*
+        version: link:../../ui/switch
 
   libs/services/cart-api:
     dependencies:
@@ -629,43 +716,124 @@ importers:
 
   libs/ui/box: {}
 
-  libs/ui/button: {}
+  libs/ui/button:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../icon
+      '@pokemon-pet-shop/ui-image':
+        specifier: workspace:*
+        version: link:../image
+      '@pokemon-pet-shop/ui-skeleton':
+        specifier: workspace:*
+        version: link:../skeleton
+      '@pokemon-pet-shop/ui-typography':
+        specifier: workspace:*
+        version: link:../typography
 
-  libs/ui/card: {}
+  libs/ui/card:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
-  libs/ui/container: {}
+  libs/ui/container:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
   libs/ui/hide-in-mobile: {}
 
-  libs/ui/icon: {}
+  libs/ui/icon:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
   libs/ui/icon-poke-type:
     dependencies:
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
+      '@pokemon-pet-shop/ui-skeleton':
+        specifier: workspace:*
+        version: link:../skeleton
       '@pokemon-pet-shop/util-text-transform':
         specifier: workspace:*
         version: link:../../utils/text-transform
 
-  libs/ui/image: {}
+  libs/ui/image:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
-  libs/ui/input: {}
+  libs/ui/input:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../icon
 
-  libs/ui/link: {}
+  libs/ui/link:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
-  libs/ui/modal: {}
+  libs/ui/modal:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../icon
+      '@pokemon-pet-shop/ui-typography':
+        specifier: workspace:*
+        version: link:../typography
 
-  libs/ui/scroll-wrapper: {}
+  libs/ui/scroll-wrapper:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
-  libs/ui/server-error: {}
+  libs/ui/server-error:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
-  libs/ui/skeleton: {}
+  libs/ui/skeleton:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
 
-  libs/ui/switch: {}
+  libs/ui/switch:
+    dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
+      '@pokemon-pet-shop/ui-icon':
+        specifier: workspace:*
+        version: link:../icon
 
   libs/ui/tag:
     dependencies:
+      '@pokemon-pet-shop/ui-box':
+        specifier: workspace:*
+        version: link:../box
+      '@pokemon-pet-shop/ui-typography':
+        specifier: workspace:*
+        version: link:../typography
       '@pokemon-pet-shop/util-text-transform':
         specifier: workspace:*
         version: link:../../utils/text-transform

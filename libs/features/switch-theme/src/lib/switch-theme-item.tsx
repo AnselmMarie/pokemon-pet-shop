@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Switch } from '@ui/switch';
+import { Switch } from '@pokemon-pet-shop/ui-switch';
 
 import { SwitchItemProps } from './switch-theme.interface';
 
