@@ -1,6 +1,7 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+const { workspaceRoot } = require('@nx/devkit');
 
-const { semantic } = require('../../libs/ds-tokens');
+const { sharedTheme } = require(`${workspaceRoot}/tailwind.shared`);
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,17 +12,6 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   presets: [require('nativewind/preset')],
-  theme: {
-    ...semantic,
-    colors: semantic.color.colors,
-    borderColor: semantic.color.borderColor,
-    backgroundColor: semantic.color.backgroundColor,
-    spacing: semantic.size.spacing,
-    borderRadius: semantic.size.borderRadius,
-    fontSize: semantic.typography.fontSize,
-    fontFamily: semantic.typography.fontFamily,
-    fontWeight: semantic.typography.fontWeight,
-    lineHeight: semantic.typography.lineHeight,
-  },
+  theme: sharedTheme,
   plugins: [],
 };

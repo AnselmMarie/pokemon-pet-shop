@@ -1,9 +1,8 @@
 import { ReactElement } from 'react';
 
 import { PokemonDetailBase } from '@pokemon-pet-shop/types';
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { ScrollWrapper } from '@pokemon-pet-shop/ui-scroll-wrapper';
-import { Modal } from '@pokemon-pet-shop/ui-modal';
+import { Box } from '@pokemon-pet-shop/ui-primitives';
+import { ScrollWrapper, Modal } from '@pokemon-pet-shop/ui-components';
 
 import { getPokeTypePrefixClass } from '@pokemon-pet-shop/util-poke-type';
 

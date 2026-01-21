@@ -28,31 +28,19 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../ui/modal/tsconfig.lib.json"
-    },
-    {
       "path": "../../../app-remotes/web-modal-side-cart/tsconfig.app.json"
     },
     {
-      "path": "../modal-cart/tsconfig.lib.json"
+      "path": "../../ui/components/tsconfig.lib.json"
     },
     {
-      "path": "../../ui/hide-in-mobile/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/image/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/icon/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/container/tsconfig.lib.json"
-    },
-    {
-      "path": "../../ui/box/tsconfig.lib.json"
+      "path": "../../ui/primitives/tsconfig.lib.json"
     },
     {
       "path": "../switch-theme/tsconfig.lib.json"
+    },
+    {
+      "path": "../modal-cart/tsconfig.lib.json"
     }
   ]
 }

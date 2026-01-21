@@ -1,0 +1,23 @@
+{
+  "name": "@pokemon-pet-shop/ds-tokens",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/ui/ds-tokens/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/ui/ds-tokens/tailwind",
+        "{workspaceRoot}/dist/libs/ui/ds-tokens/scss"
+      ],
+      "options": {
+        "cwd": "libs/ui/ds-tokens",
+        "command": "NODE_OPTIONS='--experimental-vm-modules' node src/build-tokens.mjs --verbose"
+      }
+    },
+    "lint": {
+      "command": "eslint libs/ui/ds-tokens/**/*.{js,ts} libs/ui/ds-tokens/package.json"
+    }
+  }
+}

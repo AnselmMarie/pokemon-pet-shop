@@ -1,4 +1,4 @@
-import { Image } from '@pokemon-pet-shop/ui-image';
+import { Image } from '@pokemon-pet-shop/ui-primitives';
 
 import halfCircleSvg from '../../assets/half.circle.png';
 

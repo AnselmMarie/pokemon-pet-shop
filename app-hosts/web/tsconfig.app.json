@@ -29,9 +29,6 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src/types/**/*.d.ts"],
   "references": [
     {
-      "path": "../../libs/ds-tokens/tsconfig.lib.json"
-    },
-    {
       "path": "../../app-remotes/web-not-found/tsconfig.app.json"
     },
     {

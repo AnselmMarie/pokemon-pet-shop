@@ -1,0 +1,15 @@
+import { ReactElement } from 'react';
+
+import { Box } from '@pokemon-pet-shop/ui-primitives';
+
+import pokeBallImage from '../assets/poke.ball.png';
+
+import { IconImageProps } from './icon-svg.interface';
+
+export const IconPokeBall = ({ className, onClick }: IconImageProps): ReactElement => {
+  return (
+    <Box onClick={onClick}>
+      <img className={className} src={pokeBallImage} alt="Pokeball" />
+    </Box>
+  );
+};

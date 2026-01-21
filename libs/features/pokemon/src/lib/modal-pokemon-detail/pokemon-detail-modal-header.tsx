@@ -6,10 +6,8 @@ import {
   PokemonEvolution,
   PokemonSpecies,
 } from '@pokemon-pet-shop/types';
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Image } from '@pokemon-pet-shop/ui-image';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
+import { Box, Image, Typography } from '@pokemon-pet-shop/ui-primitives';
+import { Skeleton } from '@pokemon-pet-shop/ui-components';
 
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 import { pricingFormat } from '@pokemon-pet-shop/util-pricing';
