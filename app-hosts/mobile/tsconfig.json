@@ -4,16 +4,16 @@
   "include": ["nativewind-env.d.ts"],
   "references": [
     {
-      "path": "../../libs/ds-tokens"
+      "path": "../../libs/ui/ds-tokens"
     },
     {
       "path": "../../libs/features/pokemon"
     },
     {
-      "path": "../../libs/features/footer"
+      "path": "../../libs/features/header"
     },
     {
-      "path": "../../libs/features/header"
+      "path": "../../libs/features/footer"
     },
     {
       "path": "./tsconfig.app.json"

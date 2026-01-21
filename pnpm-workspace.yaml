@@ -3,7 +3,6 @@ packages:
   - 'app-remotes/*'
   - 'libs/features/*'
   - 'libs/ui/*'
-  - 'libs/ds-tokens'
   - 'libs/services/*'
   - 'libs/utils/*'
   - 'libs/states/*'

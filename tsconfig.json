@@ -28,7 +28,7 @@
       "path": "./libs/features/page-not-found"
     },
     {
-      "path": "./libs/ds-tokens"
+      "path": "./libs/ui/ds-tokens"
     },
     {
       "path": "./libs/features/switch-theme"

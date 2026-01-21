@@ -28,7 +28,7 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../libs/ds-tokens/tsconfig.lib.json"
+      "path": "../../libs/ui/ds-tokens/tsconfig.lib.json"
     },
     {
       "path": "../../libs/features/header/tsconfig.lib.json"

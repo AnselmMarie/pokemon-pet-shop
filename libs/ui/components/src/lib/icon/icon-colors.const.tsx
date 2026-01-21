@@ -1,4 +1,4 @@
-const { variables } = require('../../../../../ds-tokens');
+const { variables } = require('../../../../ds-tokens');
 
 export const IconColors = {
   blue: variables.semanticColorBackgroundColorPrimary,

@@ -1,7 +1,7 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
-const { semantic } = require('../../libs/ds-tokens/src');
+const { semantic } = require('../../libs/ui/ds-tokens/src');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

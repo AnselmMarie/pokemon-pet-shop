@@ -33,7 +33,7 @@
   "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "../../types/src/global/**/*.d.ts"],
   "references": [
     {
-      "path": "../../ds-tokens/tsconfig.lib.json"
+      "path": "../ds-tokens/tsconfig.lib.json"
     },
     {
       "path": "../../utils/text-transform/tsconfig.lib.json"
