@@ -10,5 +10,10 @@
       "default": "./src/index.ts"
     },
     "./package.json": "./package.json"
+  },
+  "nx": {
+    "tags": [
+      "type:util"
+    ]
   }
 }

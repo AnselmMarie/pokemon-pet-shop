@@ -1,10 +1,8 @@
 import { ReactElement, useMemo, Fragment } from 'react';
 
 import { PokemonDetailBase } from '@pokemon-pet-shop/types';
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { skeletonLoadDataUtil } from '@pokemon-pet-shop/ui-skeleton';
-import { Button } from '@pokemon-pet-shop/ui-button';
+import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
+import { skeletonLoadDataUtil, Button } from '@pokemon-pet-shop/ui-components';
 
 import { useGetPokemonList } from '@pokemon-pet-shop/service-pokemon';
 

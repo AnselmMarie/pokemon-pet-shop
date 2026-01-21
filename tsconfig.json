@@ -28,49 +28,13 @@
       "path": "./libs/features/page-not-found"
     },
     {
-      "path": "./libs/ui/box"
-    },
-    {
-      "path": "./libs/ui/server-error"
-    },
-    {
-      "path": "./libs/ui/typography"
-    },
-    {
-      "path": "./libs/ui/icon"
-    },
-    {
-      "path": "./libs/ui/image"
-    },
-    {
-      "path": "./libs/ui/container"
-    },
-    {
-      "path": "./libs/ui/link"
-    },
-    {
-      "path": "./libs/ui/skeleton"
-    },
-    {
       "path": "./libs/ds-tokens"
-    },
-    {
-      "path": "./libs/ui/switch"
-    },
-    {
-      "path": "./libs/ui/input"
-    },
-    {
-      "path": "./libs/ui/hide-in-mobile"
     },
     {
       "path": "./libs/features/switch-theme"
     },
     {
       "path": "./libs/features/modal-cart"
-    },
-    {
-      "path": "./libs/ui/modal"
     },
     {
       "path": "./libs/services/pokemon"
@@ -82,22 +46,7 @@
       "path": "./libs/utils/text-transform"
     },
     {
-      "path": "./libs/ui/card"
-    },
-    {
-      "path": "./libs/ui/button"
-    },
-    {
       "path": "./libs/utils/detect"
-    },
-    {
-      "path": "./libs/ui/icon-poke-type"
-    },
-    {
-      "path": "./libs/ui/scroll-wrapper"
-    },
-    {
-      "path": "./libs/ui/tag"
     },
     {
       "path": "./libs/utils/pricing"
@@ -149,6 +98,12 @@
     },
     {
       "path": "./libs/types"
+    },
+    {
+      "path": "./libs/ui/primitives"
+    },
+    {
+      "path": "./libs/ui/components"
     }
   ]
 }

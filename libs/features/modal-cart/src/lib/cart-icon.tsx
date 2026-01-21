@@ -1,9 +1,8 @@
 import { ReactElement } from 'react';
 import { useSetAtom } from 'jotai';
 
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
+import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
+import { Icon } from '@pokemon-pet-shop/ui-components';
 
 import { useGetCart } from '@pokemon-pet-shop/service-cart';
 

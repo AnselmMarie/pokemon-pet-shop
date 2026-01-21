@@ -1,7 +1,5 @@
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Link } from '@pokemon-pet-shop/ui-link';
-import { Icon } from '@pokemon-pet-shop/ui-icon';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
+import { Box, Link, Typography } from '@pokemon-pet-shop/ui-primitives';
+import { Icon } from '@pokemon-pet-shop/ui-components';
 
 export const Footer = () => {
   return (

@@ -2,9 +2,8 @@ import { ReactElement } from 'react';
 import { useAtomValue, useSetAtom } from 'jotai';
 
 import { CartData } from '@pokemon-pet-shop/types';
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { Modal, ModalScroll } from '@pokemon-pet-shop/ui-modal';
+import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
+import { Modal, ModalScroll } from '@pokemon-pet-shop/ui-components';
 
 import { useGetCart } from '@pokemon-pet-shop/service-cart';
 

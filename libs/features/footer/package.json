@@ -12,9 +12,7 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "@pokemon-pet-shop/ui-box": "workspace:*",
-    "@pokemon-pet-shop/ui-icon": "workspace:*",
-    "@pokemon-pet-shop/ui-link": "workspace:*",
-    "@pokemon-pet-shop/ui-typography": "workspace:*"
+    "@pokemon-pet-shop/ui-primitives": "workspace:*",
+    "@pokemon-pet-shop/ui-components": "workspace:*"
   }
 }

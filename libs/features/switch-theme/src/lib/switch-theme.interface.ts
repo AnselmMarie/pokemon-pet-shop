@@ -1,6 +1,6 @@
 import type { Theme } from 'atomTheme/State';
 
-import { IconType } from '@pokemon-pet-shop/ui-icon';
+import { IconType } from '@pokemon-pet-shop/ui-components';
 
 export interface SwitchProps {
   className?: string;

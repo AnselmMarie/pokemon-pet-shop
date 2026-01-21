@@ -1,0 +1,48 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "types": ["node", "nativewind/types"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "rootDir": "src",
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+  },
+  "exclude": [
+    "out-tsc",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.test.tsx",
+    "**/*.spec.tsx",
+    "**/*.test.js",
+    "**/*.spec.js",
+    "**/*.test.jsx",
+    "**/*.spec.jsx",
+    "src/test-setup.ts",
+    "eslint.config.js",
+    "eslint.config.cjs",
+    "eslint.config.mjs",
+    "jest.config.ts",
+    "jest.config.cts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
+  ],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "../../types/src/global/**/*.d.ts"],
+  "references": [
+    {
+      "path": "../../ds-tokens/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/text-transform/tsconfig.lib.json"
+    },
+    {
+      "path": "../../types/tsconfig.lib.json"
+    },
+    {
+      "path": "../primitives/tsconfig.lib.json"
+    }
+  ]
+}

@@ -20,6 +20,34 @@ export default [
             '^.*/rspack-tsconfig-paths\\.[cm]?js$',
           ],
           depConstraints: [
+            // Primitives can only depend on other primitives or util libs
+            {
+              sourceTag: 'type:primitives',
+              onlyDependOnLibsWithTags: ['type:primitives', 'type:util'],
+            },
+            // Components can depend on primitives, other components, and util libs
+            {
+              sourceTag: 'type:components',
+              onlyDependOnLibsWithTags: [
+                'type:primitives',
+                'type:components',
+                'type:util',
+                'type:types',
+              ],
+            },
+            // Features can depend on any UI library
+            {
+              sourceTag: 'type:feature',
+              onlyDependOnLibsWithTags: [
+                'type:primitives',
+                'type:components',
+                'type:util',
+                'type:types',
+                'type:feature',
+                'type:service',
+              ],
+            },
+            // Default rule for untagged projects
             {
               sourceTag: '*',
               onlyDependOnLibsWithTags: ['*'],

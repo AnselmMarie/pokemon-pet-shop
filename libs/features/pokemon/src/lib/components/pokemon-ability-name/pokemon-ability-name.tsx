@@ -6,11 +6,8 @@ import {
   PokemonDetailAbility,
   PokemonDetailTypes,
 } from '@pokemon-pet-shop/types';
-import { Box } from '@pokemon-pet-shop/ui-box';
-import { HideInMobile } from '@pokemon-pet-shop/ui-hide-in-mobile';
-import { IconPokeType } from '@pokemon-pet-shop/ui-icon-poke-type';
-import { Typography } from '@pokemon-pet-shop/ui-typography';
-import { Skeleton } from '@pokemon-pet-shop/ui-skeleton';
+import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
+import { HideInMobile, IconPokeType, Skeleton } from '@pokemon-pet-shop/ui-components';
 
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 
