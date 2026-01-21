@@ -1,4 +1,4 @@
-const { variables } = require('../../../../ds-tokens');
+import { variables } from '@pokemon-pet-shop/ds-tokens';
 
 export const IconColors = {
   blue: variables.semanticColorBackgroundColorPrimary,

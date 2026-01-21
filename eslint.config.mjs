@@ -25,12 +25,13 @@ export default [
               sourceTag: 'type:primitives',
               onlyDependOnLibsWithTags: ['type:primitives', 'type:util'],
             },
-            // Components can depend on primitives, other components, and util libs
+            // Components can depend on primitives, other components, ds-tokens, and util libs
             {
               sourceTag: 'type:components',
               onlyDependOnLibsWithTags: [
                 'type:primitives',
                 'type:components',
+                'type:ds-tokens',
                 'type:util',
                 'type:types',
               ],
@@ -41,6 +42,7 @@ export default [
               onlyDependOnLibsWithTags: [
                 'type:primitives',
                 'type:components',
+                'type:ds-tokens',
                 'type:util',
                 'type:types',
                 'type:feature',

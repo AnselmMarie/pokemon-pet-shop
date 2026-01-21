@@ -34,9 +34,6 @@
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
   "references": [
     {
-      "path": "../../libs/ui/ds-tokens/tsconfig.lib.json"
-    },
-    {
       "path": "../../libs/features/pokemon/tsconfig.lib.json"
     },
     {

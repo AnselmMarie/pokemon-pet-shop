@@ -587,8 +587,6 @@ importers:
 
   app-remotes/web-not-found-e2e: {}
 
-  libs/ds-tokens: {}
-
   libs/features/footer:
     dependencies:
       '@pokemon-pet-shop/ui-components':
@@ -697,6 +695,9 @@ importers:
 
   libs/ui/components:
     dependencies:
+      '@pokemon-pet-shop/ds-tokens':
+        specifier: workspace:*
+        version: link:../ds-tokens
       '@pokemon-pet-shop/types':
         specifier: workspace:*
         version: link:../../types
@@ -712,6 +713,8 @@ importers:
       react-native:
         specifier: 0.81.5
         version: 0.81.5(@babel/core@7.28.5)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.28.5))(@types/react@19.1.17)(react@19.1.0)
+
+  libs/ui/ds-tokens: {}
 
   libs/ui/primitives:
     dependencies:

@@ -10,5 +10,9 @@
       "default": "./src/index.ts"
     },
     "./package.json": "./package.json"
+  },
+  "nx": {
+    "name": "@pokemon-pet-shop/ds-tokens",
+    "tags": ["scope:ui", "type:ds-tokens"]
   }
 }

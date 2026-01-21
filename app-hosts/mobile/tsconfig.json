@@ -4,9 +4,6 @@
   "include": ["nativewind-env.d.ts"],
   "references": [
     {
-      "path": "../../libs/ui/ds-tokens"
-    },
-    {
       "path": "../../libs/features/pokemon"
     },
     {
