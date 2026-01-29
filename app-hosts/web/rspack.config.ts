@@ -16,7 +16,10 @@ export default {
     publicPath: 'auto',
   },
   devServer: {
-    port: 4200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+    },
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,
@@ -45,7 +48,17 @@ export default {
       // See: https://react-svgr.com/
       // svgr: false
     }),
-    new NxModuleFederationPlugin({ config }, { dts: false }),
+    new NxModuleFederationPlugin(
+      { config },
+      {
+        dts: false,
+        runtimePlugins: [
+          require.resolve(
+            '@nx/module-federation/src/utils/plugins/runtime-library-control.plugin.js'
+          ),
+        ],
+      }
+    ),
     new NxModuleFederationDevServerPlugin({ config }),
   ],
 };

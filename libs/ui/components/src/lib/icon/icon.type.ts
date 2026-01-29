@@ -1,7 +1,9 @@
 export type IconType =
   | 'IconShoppingCart'
   | 'IconMoon'
+  | 'IconMoonFilled'
   | 'IconSun'
+  | 'IconSunFilled'
   | 'IconSearch'
   | 'IconCaretDown'
   | 'IconX'

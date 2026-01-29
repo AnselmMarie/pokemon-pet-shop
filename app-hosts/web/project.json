@@ -5,12 +5,23 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "clean-static-remotes": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf tmp/static-remotes",
+        "cwd": "{workspaceRoot}"
+      }
+    },
     "serve": {
       "options": {
         "port": 4200,
-        "devRemotes": ["homepage", "header", "footer"]
+        "env": {
+          "WEBPACK_SERVE": "true",
+          "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"CommonJS\",\"moduleResolution\":\"Node10\",\"customConditions\":null}"
+        },
+        "devRemotes": ["webHomepage", "webHeader", "webFooter"]
       },
-      "dependsOn": ["typecheck"]
+      "dependsOn": ["clean-static-remotes", "typecheck"]
     },
     "build": {
       "dependsOn": ["^build", "typecheck"]

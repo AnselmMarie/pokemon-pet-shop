@@ -8,9 +8,11 @@ import { IconPokeBall } from './icons/icon-pokeball';
 import { IconSearch } from './icons/icon-search';
 import { IconShoppingCart } from './icons/icon-shopping-cart';
 import { IconSun } from './icons/icon-sun';
+import { IconSunFilled } from './icons/icon-sun-filled';
 import { IconTrash } from './icons/icon-trash';
 import { IconX } from './icons/icon-x';
 import { IconPhoto } from './icons/icon-photo';
+import { IconMoonFilled } from './icons/icon-moon-filled';
 
 export const IconMap = {
   IconGithub,
@@ -18,8 +20,10 @@ export const IconMap = {
   IconX,
   IconPhoto,
   IconSun,
+  IconSunFilled,
   IconSearch,
   IconMoon,
+  IconMoonFilled,
   IconMenu,
   IconShoppingCart,
   IconTrash,

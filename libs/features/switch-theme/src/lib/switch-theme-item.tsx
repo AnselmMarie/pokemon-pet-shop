@@ -12,8 +12,8 @@ export const SwitchThemeItem = ({
   return (
     <Switch
       className={className}
-      iconLeft="IconSun"
-      iconRight="IconMoon"
+      iconLeft={theme === 'light' ? 'IconSunFilled' : 'IconSun'}
+      iconRight={theme === 'light' ? 'IconMoon' : 'IconMoonFilled'}
       val={theme === 'light' ? 'ON' : 'OFF'}
       onLeftClick={onToggleThemeClick}
       onRightClick={onToggleThemeClick}

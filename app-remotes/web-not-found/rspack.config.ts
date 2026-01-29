@@ -16,7 +16,6 @@ export default {
     publicPath: 'auto',
   },
   devServer: {
-    port: 4209,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },

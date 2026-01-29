@@ -11,7 +11,7 @@ export const Footer = () => {
         className="flex flex-row items-center"
         link="https://github.com/AnselmMarie/pokemon-pet-shop/tree/mfe"
       >
-        <Icon icon="IconGithub" size={20} classNameIcon="mr-xs" fill="black" stroke="none" />
+        <Icon icon="IconGithub" size={20} classNameIcon="mr-xs" color="black" />
         <Typography>Github Project</Typography>
       </Link>
 
@@ -21,7 +21,7 @@ export const Footer = () => {
         className="flex flex-row items-center"
         link="https://github.com/AnselmMarie/pokemon-pet-shop/issues?q=state%3Aopen%20label%3A%22mfe%22"
       >
-        <Icon icon="IconSearch" size={20} classNameIcon="mr-xs" stroke="black" fill="white" />
+        <Icon icon="IconSearch" size={20} classNameIcon="mr-xs" color="black" />
         <Typography>Github Issues</Typography>
       </Link>
 

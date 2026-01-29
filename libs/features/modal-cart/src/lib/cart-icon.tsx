@@ -19,12 +19,12 @@ export const CartIcon = (): ReactElement => {
       <CartModal />
       <Box className="flex justify-center items-center relative">
         <Box
-          className="absolute w-[51px] h-[47px] z-10 -top-[14px]"
+          className="absolute w-[51px] h-[47px] z-10 -top-[14px] cursor-pointer"
           onClick={() => {
             openCartModal();
           }}
         />
-        <Icon classNameIcon="ml-2 red" size={28} fill="none" stroke="blue" />
+        <Icon classNameIcon="ml-2 red" size={28} color="blue" />
         {data?.counter ? (
           <Box className="rounded-circle bg-medYellow min-w-[23px] min-h-[23px] align-center inline-block p-3 absolute -top-[15px] -right-[11px] pointer">
             <Typography className="flex justify-center item-center text-primary font-bold">

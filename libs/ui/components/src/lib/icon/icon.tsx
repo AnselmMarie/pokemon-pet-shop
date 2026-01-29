@@ -9,8 +9,8 @@ import { IconColors } from './icon-colors.const';
 export const Icon = ({
   icon = 'IconShoppingCart',
   size = 36,
-  fill = 'white',
-  stroke = 'blue',
+  color = 'white',
+  stroke = 2,
   classNameIcon = '',
   classNameWrapper = '',
   displayWrapper = false,
@@ -31,15 +31,15 @@ export const Icon = ({
     return (
       <IconComponent
         size={size}
-        fill={!isDisabled ? IconColors?.[fill] : ''}
-        stroke={!isDisabled ? IconColors?.[stroke] : ''}
+        color={IconColors?.[color]}
+        stroke={stroke}
         className={`${classNameIcon} ${onClick ? 'cursor-pointer' : ''} ${
           isDisabled ? 'opacity-90 pointer-events-none' : ''
         }`}
         onClick={iconClick}
       />
     );
-  }, [size, IconComponent, fill, stroke, classNameIcon, iconClick, isDisabled, onClick]);
+  }, [size, IconComponent, color, classNameIcon, stroke, isDisabled, iconClick, onClick]);
 
   if (displayWrapper) {
     return (

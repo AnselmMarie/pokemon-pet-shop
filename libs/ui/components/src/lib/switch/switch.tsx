@@ -36,9 +36,8 @@ export const Switch = ({
         <Icon
           icon={iconLeft}
           size={20}
-          stroke={val === 'ON' ? 'white' : 'blue'}
-          fill={val === 'ON' ? 'lightGrey' : 'none'}
-          classNameIcon="z-10 cursor-pointer border-lightGrey"
+          color={val === 'ON' ? 'white' : 'blue'}
+          classNameIcon="z-10 cursor-pointer"
           classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px] z-10"
           isDisabled={val === 'ON' || isDisabled}
           displayWrapper
@@ -50,8 +49,7 @@ export const Switch = ({
         <Icon
           icon={iconRight}
           size={20}
-          stroke={val === 'ON' ? 'blue' : 'white'}
-          fill={val === 'ON' ? 'none' : 'lightGrey'}
+          color={val === 'ON' ? 'blue' : 'white'}
           classNameIcon="z-10 cursor-pointer"
           classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px] z-10"
           isDisabled={val === 'OFF' || isDisabled}

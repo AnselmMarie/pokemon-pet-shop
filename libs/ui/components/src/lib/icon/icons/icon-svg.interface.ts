@@ -1,7 +1,6 @@
 export interface IconSvgProps {
   size?: number;
-  fill?: string;
-  stroke?: string;
+  color?: string;
   onClick?: () => void;
 }
 

@@ -21,8 +21,7 @@ export const HeaderContent = () => {
           <Icon
             classNameIcon="md:hidden"
             icon="IconMenu"
-            stroke="blue"
-            fill="white"
+            color="blue"
             onClick={() => setIsNavModalOpen(true)}
           />
           <Image src={pokeshopLogo} className="w-[195px]" alt="Pokemon Pet Shop Logo" />

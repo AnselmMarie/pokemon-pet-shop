@@ -5,15 +5,15 @@ import { Svg, Path } from 'react-native-svg';
 
 import { IconSvgProps } from './icon-svg.interface';
 
-export const IconShoppingCart = ({ size, fill, stroke, onClick }: IconSvgProps): ReactElement => {
+export const IconShoppingCart = ({ size, color, onClick }: IconSvgProps): ReactElement => {
   return (
     <TouchableOpacity onPress={onClick}>
       <Svg
         width={size}
         height={size}
         viewBox="0 0 24 24"
-        fill={fill}
-        stroke={stroke}
+        fill="none"
+        stroke={color}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"

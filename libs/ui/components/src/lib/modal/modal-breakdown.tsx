@@ -15,8 +15,7 @@ export const ModalClose = ({ onClick }: { onClick: () => void }) => (
   <Icon
     icon="IconX"
     size={24}
-    stroke="blue"
-    fill="white"
+    color="blue"
     classNameWrapper="rounded-circle bg-white p-sm"
     displayWrapper
     onClick={onClick}

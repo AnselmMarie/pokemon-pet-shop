@@ -65,7 +65,7 @@ const CartModalItem = ({ el, currIndex, lastIndex }: CartModalItemProps): ReactE
             <Icon
               icon="IconMinus"
               size={24}
-              stroke="blue"
+              color="blue"
               isDisabled={el?.quantity === 1 || updateIsPending}
               onClick={() => handleRemoveFromCart(el?.id)}
             />
@@ -73,7 +73,7 @@ const CartModalItem = ({ el, currIndex, lastIndex }: CartModalItemProps): ReactE
             <Icon
               icon="IconPlus"
               size={24}
-              stroke="blue"
+              color="blue"
               isDisabled={updateIsPending}
               onClick={() => handleAddToCart(el?.id)}
             />
@@ -82,8 +82,7 @@ const CartModalItem = ({ el, currIndex, lastIndex }: CartModalItemProps): ReactE
 
         <Icon
           icon="IconTrash"
-          stroke="red"
-          fill="white"
+          color="red"
           isDisabled={deleteIsPending}
           onClick={() => handleRemoveCartItem(el?.id)}
         />
