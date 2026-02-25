@@ -8,6 +8,7 @@ const Header = React.lazy(() => import('webHeader/Module'));
 const Footer = React.lazy(() => import('webFooter/Module'));
 
 export function App() {
+  // Testing this
   return (
     <React.Suspense fallback={null}>
       <React.Suspense fallback="Loading Header">

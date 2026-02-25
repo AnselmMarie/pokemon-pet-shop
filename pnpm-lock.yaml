@@ -67,7 +67,7 @@ importers:
         version: 19.1.0
       axios:
         specifier: ^1.12.2
-        version: 1.13.2
+        version: 1.13.2(debug@4.4.3)
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -170,6 +170,9 @@ importers:
       tailwind-variants:
         specifier: ^3.1.1
         version: 3.2.2(tailwindcss@3.4.19(yaml@2.8.2))
+      zephyr-rspack-plugin:
+        specifier: ^0.1.13
+        version: 0.1.13(@rspack/core@1.6.8(@swc/helpers@0.5.18))(https-proxy-agent@7.0.6)(webpack@5.104.1)
     devDependencies:
       '@babel/core':
         specifier: ^7.28.5
@@ -2148,6 +2151,11 @@ packages:
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==, tarball: https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz}
 
+  '@module-federation/automatic-vendor-federation@1.2.1':
+    resolution: {integrity: sha512-73wxkXM7pbRZ6GGM90JP5IPTPvY3fvrhQyTVdMCUx85cQRWqnbzbibcsz3pkOMOeXyYAO4tXXsG13yNaEEGhJA==, tarball: https://registry.npmjs.org/@module-federation/automatic-vendor-federation/-/automatic-vendor-federation-1.2.1.tgz}
+    peerDependencies:
+      webpack: ^5.0.0-beta.16
+
   '@module-federation/bridge-react-webpack-plugin@0.21.6':
     resolution: {integrity: sha512-lJMmdhD4VKVkeg8RHb+Jwe6Ou9zKVgjtb1inEURDG/sSS2ksdZA8pVKLYbRPRbdmjr193Y8gJfqFbI2dqoyc/g==, tarball: https://registry.npmjs.org/@module-federation/bridge-react-webpack-plugin/-/bridge-react-webpack-plugin-0.21.6.tgz}
 
@@ -3779,6 +3787,9 @@ packages:
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==, tarball: https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz}
 
+  '@toon-format/toon@0.9.0':
+    resolution: {integrity: sha512-BaMhGh1+/z8ceDrF2xL9Drd42hijbUJlivm/1goPR26RgCYsqlMkHbg48hx9a5UjZC7oZqxWPJ6ju5qvALi6Ag==, tarball: https://registry.npmjs.org/@toon-format/toon/-/toon-0.9.0.tgz}
+
   '@tootallnate/once@2.0.0':
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==, tarball: https://registry.npmjs.org/@tootallnate/once/-/once-2.0.0.tgz}
     engines: {node: '>= 10'}
@@ -4676,6 +4687,11 @@ packages:
   axe-core@4.11.0:
     resolution: {integrity: sha512-ilYanEU8vxxBexpJd8cWM4ElSQq4QctCLKih0TSfjIfCQTeyH/6zVrmIJfLPrKTKJRbiG+cfnZbQIjAlJmF1jQ==, tarball: https://registry.npmjs.org/axe-core/-/axe-core-4.11.0.tgz}
     engines: {node: '>=4'}
+
+  axios-retry@4.5.0:
+    resolution: {integrity: sha512-aR99oXhpEDGo0UuAlYcn2iGRds30k366Zfa05XWScR9QaQD4JYiP3/1Qt1u7YlefUOK+cn0CcwoL1oefavQUlQ==, tarball: https://registry.npmjs.org/axios-retry/-/axios-retry-4.5.0.tgz}
+    peerDependencies:
+      axios: 0.x || 1.x
 
   axios@1.13.2:
     resolution: {integrity: sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==, tarball: https://registry.npmjs.org/axios/-/axios-1.13.2.tgz}
@@ -6202,6 +6218,14 @@ packages:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==, tarball: https://registry.npmjs.org/events/-/events-3.3.0.tgz}
     engines: {node: '>=0.8.x'}
 
+  eventsource-parser@3.0.6:
+    resolution: {integrity: sha512-Vo1ab+QXPzZ4tCa8SwIHJFaSzy4R6SHf7BY79rFBDf0idraZWAkYrDjDj8uWaSm3S2TK+hJ7/t1CEmZ7jXw+pg==, tarball: https://registry.npmjs.org/eventsource-parser/-/eventsource-parser-3.0.6.tgz}
+    engines: {node: '>=18.0.0'}
+
+  eventsource@4.1.0:
+    resolution: {integrity: sha512-2GuF51iuHX6A9xdTccMTsNb7VO0lHZihApxhvQzJB5A03DvHDd2FQepodbMaztPBmBcE/ox7o2gqaxGhYB9LhQ==, tarball: https://registry.npmjs.org/eventsource/-/eventsource-4.1.0.tgz}
+    engines: {node: '>=20.0.0'}
+
   exec-async@2.2.0:
     resolution: {integrity: sha512-87OpwcEiMia/DeiKFzaQNBNFeN3XkkpYIh9FyOqq5mS2oKv3CBE67PXoEKcr6nodWdXNogTiQ0jE2NGuoffXPw==, tarball: https://registry.npmjs.org/exec-async/-/exec-async-2.2.0.tgz}
 
@@ -6519,6 +6543,9 @@ packages:
     resolution: {integrity: sha512-qVdaUhYO39zmh28/JLQM5CoYN9byEOKEH4qfa8K1eNV17W0UUMJ9WgbR/hHFH+t5rcl+6RTb5UC7ck/I+uRkpQ==, tarball: https://registry.npmjs.org/find-file-up/-/find-file-up-2.0.1.tgz}
     engines: {node: '>=8'}
 
+  find-package-json@1.2.0:
+    resolution: {integrity: sha512-+SOGcLGYDJHtyqHd87ysBhmaeQ95oWspDKnMXBrnQ9Eq4OkLNqejgoaD8xVWu6GPa0B6roa6KinCMEMcVeqONw==, tarball: https://registry.npmjs.org/find-package-json/-/find-package-json-1.2.0.tgz}
+
   find-pkg@2.0.0:
     resolution: {integrity: sha512-WgZ+nKbELDa6N3i/9nrHeNznm+lY3z4YfhDDWgW+5P0pdmMj26bxaxU11ookgY3NyP9GC7HvZ9etp0jRFqGEeQ==, tarball: https://registry.npmjs.org/find-pkg/-/find-pkg-2.0.0.tgz}
     engines: {node: '>=8'}
@@ -6715,6 +6742,12 @@ packages:
     resolution: {integrity: sha512-VilgtJj/ALgGY77fiLam5iD336eSWi96Q15JSAG1zi8NRBysm3LXKdGnHb4m5cuyxvOLQQKWpBZAT6ni4FI2iQ==, tarball: https://registry.npmjs.org/getenv/-/getenv-2.0.0.tgz}
     engines: {node: '>=6'}
 
+  git-up@7.0.0:
+    resolution: {integrity: sha512-ONdIrbBCFusq1Oy0sC71F5azx8bVkvtZtMJAsv+a6lz5YAmbNnLD6HAB4gptHZVLPR8S2/kVN6Gab7lryq5+lQ==, tarball: https://registry.npmjs.org/git-up/-/git-up-7.0.0.tgz}
+
+  git-url-parse@15.0.0:
+    resolution: {integrity: sha512-5reeBufLi+i4QD3ZFftcJs9jC26aULFLBU23FeKM/b1rI0K6ofIeAblmDVO7Ht22zTDE9+CkJ3ZVb0CgJmz3UQ==, tarball: https://registry.npmjs.org/git-url-parse/-/git-url-parse-15.0.0.tgz}
+
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, tarball: https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz}
     engines: {node: '>= 6'}
@@ -6734,11 +6767,13 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==, tarball: https://registry.npmjs.org/glob/-/glob-10.5.0.tgz}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==, tarball: https://registry.npmjs.org/glob/-/glob-11.1.0.tgz}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@13.0.0:
@@ -6747,16 +6782,16 @@ packages:
 
   glob@6.0.4:
     resolution: {integrity: sha512-MKZeRNyYZAVVVG1oZeLaWie1uweH40m9AZwIwxyPbTSX4hHrVYSzLg0Ro5Z5R7XKkIX+Cc6oD1rqeDJnwsB8/A==, tarball: https://registry.npmjs.org/glob/-/glob-6.0.4.tgz}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==, tarball: https://registry.npmjs.org/glob/-/glob-7.2.3.tgz}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==, tarball: https://registry.npmjs.org/glob/-/glob-8.1.0.tgz}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-dirs@0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==, tarball: https://registry.npmjs.org/global-dirs/-/global-dirs-0.1.1.tgz}
@@ -7151,6 +7186,10 @@ packages:
     resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==, tarball: https://registry.npmjs.org/is-callable/-/is-callable-1.2.7.tgz}
     engines: {node: '>= 0.4'}
 
+  is-ci@4.1.0:
+    resolution: {integrity: sha512-Ab9bQDQ11lWootZUI5qxgN2ZXwxNI5hTwnsvOc1wyxQ7zQ8OkEDw79mI0+9jI3x432NfwbVRru+3noJfXF6lSQ==, tarball: https://registry.npmjs.org/is-ci/-/is-ci-4.1.0.tgz}
+    hasBin: true
+
   is-core-module@2.16.1:
     resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==, tarball: https://registry.npmjs.org/is-core-module/-/is-core-module-2.16.1.tgz}
     engines: {node: '>= 0.4'}
@@ -7275,6 +7314,10 @@ packages:
     resolution: {integrity: sha512-MjYsKHO5O7mCsmRGxWcLWheFqN9DJ/2TmngvjKXihe6efViPqc274+Fx/4fYj/r03+ESvBdTXK0V6tA3rgez1g==, tarball: https://registry.npmjs.org/is-regex/-/is-regex-1.2.1.tgz}
     engines: {node: '>= 0.4'}
 
+  is-retry-allowed@2.2.0:
+    resolution: {integrity: sha512-XVm7LOeLpTW4jV19QSH38vkswxoLud8sQ57YwJVTPWdiaI9I8keEhGFpBlslyVsgdQy4Opg8QOLb8YRgsyZiQg==, tarball: https://registry.npmjs.org/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz}
+    engines: {node: '>=10'}
+
   is-set@2.0.3:
     resolution: {integrity: sha512-iPAjerrse27/ygGLxw+EBR9agv9Y6uLeYVJMu+QNCoouJ1/1ri0mGrcWpfCqFZuzzx3WjtwxG098X+n4OuRkPg==, tarball: https://registry.npmjs.org/is-set/-/is-set-2.0.3.tgz}
     engines: {node: '>= 0.4'}
@@ -7282,6 +7325,9 @@ packages:
   is-shared-array-buffer@1.0.4:
     resolution: {integrity: sha512-ISWac8drv4ZGfwKl5slpHG9OwPNty4jOWPRIhBpxOoD+hqITiwuipOQ2bNthAzwA3B4fIjO4Nln74N0S9byq8A==, tarball: https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.4.tgz}
     engines: {node: '>= 0.4'}
+
+  is-ssh@1.4.1:
+    resolution: {integrity: sha512-JNeu1wQsHjyHgn9NcWTaXq6zWSR6hqE0++zhfZlkFBbScNkyvxCdeV8sRkSBaeLKxmbpR21brail63ACNxJ0Tg==, tarball: https://registry.npmjs.org/is-ssh/-/is-ssh-1.4.1.tgz}
 
   is-stream@2.0.1:
     resolution: {integrity: sha512-hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==, tarball: https://registry.npmjs.org/is-stream/-/is-stream-2.0.1.tgz}
@@ -7707,6 +7753,9 @@ packages:
 
   joi@17.13.3:
     resolution: {integrity: sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==, tarball: https://registry.npmjs.org/joi/-/joi-17.13.3.tgz}
+
+  jose@5.10.0:
+    resolution: {integrity: sha512-s+3Al/p9g32Iq+oqXxkW//7jk2Vig6FF1CFqzVXoTUXt2qz89YWbL+OwS17NFYEvxC35n0FKeGO2LGYSxeM2Gg==, tarball: https://registry.npmjs.org/jose/-/jose-5.10.0.tgz}
 
   jotai@2.16.1:
     resolution: {integrity: sha512-vrHcAbo3P7Br37C8Bv6JshMtlKMPqqmx0DDREtTjT4nf3QChDrYdbH+4ik/9V0cXA57dK28RkJ5dctYvavcIlg==, tarball: https://registry.npmjs.org/jotai/-/jotai-2.16.1.tgz}
@@ -8534,6 +8583,10 @@ packages:
   node-machine-id@1.1.12:
     resolution: {integrity: sha512-QNABxbrPa3qEIfrE6GOJ7BYIuignnJw7iQ2YPbc3Nla1HzRJjXzZOiikfF8m7eAMfichLt3M4VgLOetqgDmgGQ==, tarball: https://registry.npmjs.org/node-machine-id/-/node-machine-id-1.1.12.tgz}
 
+  node-persist@4.0.4:
+    resolution: {integrity: sha512-8sPAz/7tw1mCCc8xBG4f0wi+flHkSSgQeX998iQ75Pu27evA6UUWCjSE7xnrYTg2q33oU5leJ061EKPDv6BocQ==, tarball: https://registry.npmjs.org/node-persist/-/node-persist-4.0.4.tgz}
+    engines: {node: '>=10.12.0'}
+
   node-releases@2.0.27:
     resolution: {integrity: sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==, tarball: https://registry.npmjs.org/node-releases/-/node-releases-2.0.27.tgz}
 
@@ -8777,9 +8830,15 @@ packages:
     resolution: {integrity: sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q==, tarball: https://registry.npmjs.org/parse-passwd/-/parse-passwd-1.0.0.tgz}
     engines: {node: '>=0.10.0'}
 
+  parse-path@7.1.0:
+    resolution: {integrity: sha512-EuCycjZtfPcjWk7KTksnJ5xPMvWGA/6i4zrLYhRG0hGvC3GPU/jGUj3Cy+ZR0v30duV3e23R95T1lE2+lsndSw==, tarball: https://registry.npmjs.org/parse-path/-/parse-path-7.1.0.tgz}
+
   parse-png@2.1.0:
     resolution: {integrity: sha512-Nt/a5SfCLiTnQAjx3fHlqp8hRgTL3z7kTQZzvIMS9uCAepnCyjpdEc6M/sz69WqMBdaDBw9sF1F1UaHROYzGkQ==, tarball: https://registry.npmjs.org/parse-png/-/parse-png-2.1.0.tgz}
     engines: {node: '>=10'}
+
+  parse-url@8.1.0:
+    resolution: {integrity: sha512-xDvOoLU5XRrcOZvnI6b8zA6n9O9ejNk/GExuz1yBuWUGn9KA97GI6HTs6u02wKara1CeVmZhH+0TZFdWScR89w==, tarball: https://registry.npmjs.org/parse-url/-/parse-url-8.1.0.tgz}
 
   parse5@4.0.0:
     resolution: {integrity: sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==, tarball: https://registry.npmjs.org/parse5/-/parse5-4.0.0.tgz}
@@ -9495,6 +9554,12 @@ packages:
 
   proper-lockfile@3.2.0:
     resolution: {integrity: sha512-iMghHHXv2bsxl6NchhEaFck8tvX3F9cknEEh1SUpguUOBjN7PAAW9BLzmbc1g/mCD1gY3EE2EABBHPJfFdHFmA==, tarball: https://registry.npmjs.org/proper-lockfile/-/proper-lockfile-3.2.0.tgz}
+
+  proper-lockfile@4.1.2:
+    resolution: {integrity: sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA==, tarball: https://registry.npmjs.org/proper-lockfile/-/proper-lockfile-4.1.2.tgz}
+
+  protocols@2.0.2:
+    resolution: {integrity: sha512-hHVTzba3wboROl0/aWRRG9dMytgH6ow//STBZh43l/wQgmMhYhOFi0EHWAPtoCz9IAUymsyP0TSBHkhgMEGNnQ==, tarball: https://registry.npmjs.org/protocols/-/protocols-2.0.2.tgz}
 
   proxy-addr@2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==, tarball: https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz}
@@ -10758,6 +10823,7 @@ packages:
   tar@7.5.2:
     resolution: {integrity: sha512-7NyxrTE4Anh8km8iEy7o0QYPs+0JKBTj5ZaqHg6B39erLg0qYXN3BijtShwbsNSvQ+LN75+KV+C4QR/f6Gwnpg==, tarball: https://registry.npmjs.org/tar/-/tar-7.5.2.tgz}
     engines: {node: '>=18'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tcp-port-used@1.0.2:
     resolution: {integrity: sha512-l7ar8lLUD3XS1V2lfoJlCBaeoaWo/2xfYt81hM7VlvR4RrMVFqfmzfhLVk40hAb368uitje5gPtBRL1m/DGvLA==, tarball: https://registry.npmjs.org/tcp-port-used/-/tcp-port-used-1.0.2.tgz}
@@ -11702,6 +11768,22 @@ packages:
   yocto-queue@1.2.2:
     resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==, tarball: https://registry.npmjs.org/yocto-queue/-/yocto-queue-1.2.2.tgz}
     engines: {node: '>=12.20'}
+
+  zephyr-agent@0.1.13:
+    resolution: {integrity: sha512-M6c0RlLXw4Asup8+RMoze9P9o8Oi5W9jX29bFLJbqschd0Bxzgh3RA8h+hFYB53E4hANVhJXegdyKAaAD/S8QA==, tarball: https://registry.npmjs.org/zephyr-agent/-/zephyr-agent-0.1.13.tgz}
+    peerDependencies:
+      https-proxy-agent: ^7.0.6
+
+  zephyr-edge-contract@0.1.13:
+    resolution: {integrity: sha512-S3vauLHCc45wACTP+8SxqFS5RyL9VqA0ETi0bzVdXj/XEvfpDqQqLauF0XDOxdHH/I8ZwCaL0egEv2pMqoRBug==, tarball: https://registry.npmjs.org/zephyr-edge-contract/-/zephyr-edge-contract-0.1.13.tgz}
+
+  zephyr-rspack-plugin@0.1.13:
+    resolution: {integrity: sha512-G5s5qQ3iD3waNoeC0PNmq48NSX6XcKGXkAzc1M9//HGlimM7tRT1A1vgJkvavJOUwlVO06yBZD8M+xVCVdrJ2w==, tarball: https://registry.npmjs.org/zephyr-rspack-plugin/-/zephyr-rspack-plugin-0.1.13.tgz}
+    peerDependencies:
+      '@rspack/core': ^1.0.0
+
+  zephyr-xpack-internal@0.1.13:
+    resolution: {integrity: sha512-gn5iCg9rbIbDME6WC6J4Qw14zL6pEtDVPSV33zw/ij3FH1qeSutyQ49V+5Muhxj+y+FUvTpIqr8PwYh7wGnFAA==, tarball: https://registry.npmjs.org/zephyr-xpack-internal/-/zephyr-xpack-internal-0.1.13.tgz}
 
 snapshots:
 
@@ -13577,6 +13659,11 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
+  '@module-federation/automatic-vendor-federation@1.2.1(webpack@5.104.1)':
+    dependencies:
+      find-package-json: 1.2.0
+      webpack: 5.104.1(@swc/core@1.5.29(@swc/helpers@0.5.18))(webpack-cli@5.1.4)
+
   '@module-federation/bridge-react-webpack-plugin@0.21.6':
     dependencies:
       '@module-federation/sdk': 0.21.6
@@ -13643,7 +13730,7 @@ snapshots:
       '@module-federation/third-party-dts-extractor': 0.21.6
       adm-zip: 0.5.16
       ansi-colors: 4.1.3
-      axios: 1.13.2
+      axios: 1.13.2(debug@4.4.3)
       chalk: 3.0.0
       fs-extra: 9.1.0
       isomorphic-ws: 5.0.0(ws@8.18.0)
@@ -13668,7 +13755,7 @@ snapshots:
       '@module-federation/third-party-dts-extractor': 0.22.0
       adm-zip: 0.5.16
       ansi-colors: 4.1.3
-      axios: 1.13.2
+      axios: 1.13.2(debug@4.4.3)
       chalk: 3.0.0
       fs-extra: 9.1.0
       isomorphic-ws: 5.0.0(ws@8.18.0)
@@ -15944,6 +16031,8 @@ snapshots:
 
   '@tokenizer/token@0.3.0': {}
 
+  '@toon-format/toon@0.9.0': {}
+
   '@tootallnate/once@2.0.0': {}
 
   '@trysound/sax@0.2.0': {}
@@ -16994,7 +17083,12 @@ snapshots:
 
   axe-core@4.11.0: {}
 
-  axios@1.13.2:
+  axios-retry@4.5.0(axios@1.13.2):
+    dependencies:
+      axios: 1.13.2(debug@4.4.3)
+      is-retry-allowed: 2.2.0
+
+  axios@1.13.2(debug@4.4.3):
     dependencies:
       follow-redirects: 1.15.11(debug@4.4.3)
       form-data: 4.0.5
@@ -18771,6 +18865,12 @@ snapshots:
 
   events@3.3.0: {}
 
+  eventsource-parser@3.0.6: {}
+
+  eventsource@4.1.0:
+    dependencies:
+      eventsource-parser: 3.0.6
+
   exec-async@2.2.0: {}
 
   execa@5.1.1:
@@ -19185,6 +19285,8 @@ snapshots:
     dependencies:
       resolve-dir: 1.0.1
 
+  find-package-json@1.2.0: {}
+
   find-pkg@2.0.0:
     dependencies:
       find-file-up: 2.0.1
@@ -19380,6 +19482,15 @@ snapshots:
   get-them-args@1.3.2: {}
 
   getenv@2.0.0: {}
+
+  git-up@7.0.0:
+    dependencies:
+      is-ssh: 1.4.1
+      parse-url: 8.1.0
+
+  git-url-parse@15.0.0:
+    dependencies:
+      git-up: 7.0.0
 
   glob-parent@5.1.2:
     dependencies:
@@ -19876,6 +19987,10 @@ snapshots:
 
   is-callable@1.2.7: {}
 
+  is-ci@4.1.0:
+    dependencies:
+      ci-info: 4.3.1
+
   is-core-module@2.16.1:
     dependencies:
       hasown: 2.0.2
@@ -19977,11 +20092,17 @@ snapshots:
       has-tostringtag: 1.0.2
       hasown: 2.0.2
 
+  is-retry-allowed@2.2.0: {}
+
   is-set@2.0.3: {}
 
   is-shared-array-buffer@1.0.4:
     dependencies:
       call-bound: 1.0.4
+
+  is-ssh@1.4.1:
+    dependencies:
+      protocols: 2.0.2
 
   is-stream@2.0.1: {}
 
@@ -20811,6 +20932,8 @@ snapshots:
       '@sideway/address': 4.1.5
       '@sideway/formula': 3.0.1
       '@sideway/pinpoint': 2.0.0
+
+  jose@5.10.0: {}
 
   jotai@2.16.1(@babel/core@7.28.5)(@babel/template@7.27.2)(@types/react@19.1.17)(react@19.1.0):
     optionalDependencies:
@@ -21714,6 +21837,10 @@ snapshots:
 
   node-machine-id@1.1.12: {}
 
+  node-persist@4.0.4:
+    dependencies:
+      p-limit: 3.1.0
+
   node-releases@2.0.27: {}
 
   node-schedule@2.1.1:
@@ -21757,7 +21884,7 @@ snapshots:
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.2
       '@zkochan/js-yaml': 0.0.7
-      axios: 1.13.2
+      axios: 1.13.2(debug@4.4.3)
       chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
@@ -22026,9 +22153,17 @@ snapshots:
 
   parse-passwd@1.0.0: {}
 
+  parse-path@7.1.0:
+    dependencies:
+      protocols: 2.0.2
+
   parse-png@2.1.0:
     dependencies:
       pngjs: 3.4.0
+
+  parse-url@8.1.0:
+    dependencies:
+      parse-path: 7.1.0
 
   parse5@4.0.0: {}
 
@@ -22624,6 +22759,14 @@ snapshots:
       signal-exit: 3.0.7
     optional: true
 
+  proper-lockfile@4.1.2:
+    dependencies:
+      graceful-fs: 4.2.11
+      retry: 0.12.0
+      signal-exit: 3.0.7
+
+  protocols@2.0.2: {}
+
   proxy-addr@2.0.7:
     dependencies:
       forwarded: 0.2.0
@@ -23103,8 +23246,7 @@ snapshots:
       onetime: 7.0.0
       signal-exit: 4.1.0
 
-  retry@0.12.0:
-    optional: true
+  retry@0.12.0: {}
 
   retry@0.13.1: {}
 
@@ -25107,3 +25249,48 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.2.2: {}
+
+  zephyr-agent@0.1.13(https-proxy-agent@7.0.6):
+    dependencies:
+      '@toon-format/toon': 0.9.0
+      axios: 1.13.2(debug@4.4.3)
+      axios-retry: 4.5.0(axios@1.13.2)
+      debug: 4.4.3
+      eventsource: 4.1.0
+      git-url-parse: 15.0.0
+      https-proxy-agent: 7.0.6
+      is-ci: 4.1.0
+      jose: 5.10.0
+      node-persist: 4.0.4
+      open: 10.2.0
+      proper-lockfile: 4.1.2
+      tslib: 2.8.1
+      zephyr-edge-contract: 0.1.13
+    transitivePeerDependencies:
+      - supports-color
+
+  zephyr-edge-contract@0.1.13:
+    dependencies:
+      tslib: 2.8.1
+
+  zephyr-rspack-plugin@0.1.13(@rspack/core@1.6.8(@swc/helpers@0.5.18))(https-proxy-agent@7.0.6)(webpack@5.104.1):
+    dependencies:
+      '@rspack/core': 1.6.8(@swc/helpers@0.5.18)
+      tslib: 2.8.1
+      zephyr-agent: 0.1.13(https-proxy-agent@7.0.6)
+      zephyr-xpack-internal: 0.1.13(https-proxy-agent@7.0.6)(webpack@5.104.1)
+    transitivePeerDependencies:
+      - https-proxy-agent
+      - supports-color
+      - webpack
+
+  zephyr-xpack-internal@0.1.13(https-proxy-agent@7.0.6)(webpack@5.104.1):
+    dependencies:
+      '@module-federation/automatic-vendor-federation': 1.2.1(webpack@5.104.1)
+      tslib: 2.8.1
+      zephyr-agent: 0.1.13(https-proxy-agent@7.0.6)
+      zephyr-edge-contract: 0.1.13
+    transitivePeerDependencies:
+      - https-proxy-agent
+      - supports-color
+      - webpack

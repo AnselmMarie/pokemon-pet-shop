@@ -6,6 +6,7 @@ import {
   NxModuleFederationDevServerPlugin,
 } from '@nx/module-federation/rspack.js';
 import { ModuleFederationConfig } from '@nx/module-federation';
+import { withZephyr } from 'zephyr-rspack-plugin';
 
 import baseConfig from './module-federation.config';
 const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
@@ -32,7 +33,7 @@ const prodConfig: ModuleFederationConfig = {
   remotes: [],
 };
 
-export default {
+export default withZephyr()({
   output: {
     path: join(__dirname, 'dist'),
     publicPath: 'auto',
@@ -69,4 +70,4 @@ export default {
     new NxModuleFederationPlugin({ config: prodConfig }, { dts: false }),
     new NxModuleFederationDevServerPlugin({ config: prodConfig }),
   ],
-};
+});
