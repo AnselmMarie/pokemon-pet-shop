@@ -6,12 +6,10 @@ import {
   NxModuleFederationPlugin,
   NxModuleFederationDevServerPlugin,
 } from '@nx/module-federation/rspack.js';
-import { withZephyr } from 'zephyr-rspack-plugin';
-
 import config from './module-federation.config';
-const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
+const { getTsconfigPaths, maybeWithZephyr } = require('../../rspack-tsconfig-paths.js');
 
-export default withZephyr()({
+export default maybeWithZephyr({
   output: {
     path: join(__dirname, 'dist'),
     publicPath: 'auto',
