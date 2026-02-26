@@ -3,11 +3,10 @@ import { join } from 'path';
 import { NxAppRspackPlugin } from '@nx/rspack/app-plugin.js';
 import { NxReactRspackPlugin } from '@nx/rspack/react-plugin.js';
 import { NxModuleFederationPlugin } from '@nx/module-federation/rspack.js';
-
 import config from './module-federation.config';
-const { getTsconfigPaths } = require('../../rspack-tsconfig-paths.js');
+const { getTsconfigPaths, maybeWithZephyr } = require('../../rspack-tsconfig-paths.js');
 
-export default {
+export default maybeWithZephyr({
   output: {
     path: join(__dirname, 'dist'),
     publicPath: 'auto',
@@ -57,4 +56,4 @@ export default {
       }
     ),
   ],
-};
+});

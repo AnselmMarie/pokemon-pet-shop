@@ -162,7 +162,8 @@
     "react-svg": "^16.3.0",
     "react-test-renderer": "^19.2.3",
     "swc-loader": "^0.2.6",
-    "tailwind-variants": "^3.1.1"
+    "tailwind-variants": "^3.1.1",
+    "zephyr-rspack-plugin": "^0.1.13"
   },
   "engines": {
     "node": ">=20"

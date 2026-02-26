@@ -39,4 +39,16 @@ function getTsconfigPaths(tsconfigPath, baseDir) {
   }
 }
 
-module.exports = { getTsconfigPaths };
+/**
+ * Conditionally wraps an Rspack config with Zephyr Cloud deployment.
+ * Only activates when ZE_SECRET_TOKEN is set (e.g. in deploy CI or local with token).
+ */
+function maybeWithZephyr(config) {
+  if (process.env.ZE_SECRET_TOKEN) {
+    const { withZephyr } = require('zephyr-rspack-plugin');
+    return withZephyr()(config);
+  }
+  return config;
+}
+
+module.exports = { getTsconfigPaths, maybeWithZephyr };

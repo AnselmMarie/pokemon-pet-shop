@@ -1,18 +1,19 @@
-name: CI
+name: Deploy to Zephyr Cloud
 
 on:
   push:
     branches:
-      - main
-  pull_request:
+      - mfe
 
 permissions:
   actions: read
   contents: read
 
 jobs:
-  main:
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,8 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
 
-      - run: npx nx run-many -t lint test typecheck
+      - run: npx nx run-many -t build

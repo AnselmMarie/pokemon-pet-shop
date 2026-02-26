@@ -1,5 +1,11 @@
 {
   "name": "@pokemon-pet-shop/web",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "zephyr:dependencies": {
+    "webHeader": "webHeader@dev",
+    "webFooter": "webFooter@dev",
+    "webHomepage": "webHomepage@dev",
+    "webNotFound": "webNotFound@dev"
+  }
 }
