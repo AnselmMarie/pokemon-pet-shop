@@ -3,7 +3,7 @@ name: Deploy to Zephyr Cloud
 on:
   push:
     branches:
-      - main
+      - mfe
 
 permissions:
   actions: read

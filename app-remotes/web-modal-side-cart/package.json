@@ -4,5 +4,8 @@
   "private": true,
   "dependencies": {
     "@pokemon-pet-shop/feature-modal-cart": "workspace:*"
+  },
+  "zephyr:dependencies": {
+    "atomTheme": "atomTheme@dev"
   }
 }

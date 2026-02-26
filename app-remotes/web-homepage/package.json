@@ -4,5 +4,8 @@
   "private": true,
   "dependencies": {
     "@pokemon-pet-shop/feature-pokemon": "workspace:*"
+  },
+  "zephyr:dependencies": {
+    "atomTheme": "atomTheme@dev"
   }
 }

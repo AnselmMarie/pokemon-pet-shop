@@ -10,7 +10,8 @@
       "Bash(pnpm nx run-many:*)",
       "Bash(pnpm nx reset:*)",
       "Bash(pnpm nx run:*)",
-      "Bash(pnpm nx sync:*)"
+      "Bash(pnpm nx sync:*)",
+      "Bash(du -sh /Users/anselmmarie/Development/GitHub/pokemon-pet-shop/dist/*)"
     ]
   }
 }
