@@ -41,10 +41,15 @@ function getTsconfigPaths(tsconfigPath, baseDir) {
 
 /**
  * Conditionally wraps an Rspack config with Zephyr Cloud deployment.
- * Only activates when ZE_SECRET_TOKEN is set (e.g. in deploy CI or local with token).
+ * Only activates for production builds (NODE_ENV=production) when ZE_SECRET_TOKEN is set.
+ * Skipped during dev serve since the explicit MF dev-server executor cannot pass env vars.
  */
 function maybeWithZephyr(config) {
-  if (process.env.ZE_SECRET_TOKEN) {
+  if (
+    process.env.ZE_SECRET_TOKEN &&
+    !process.env.SKIP_ZEPHYR &&
+    process.env.NODE_ENV === 'production'
+  ) {
     const { withZephyr } = require('zephyr-rspack-plugin');
     return withZephyr()(config);
   }
