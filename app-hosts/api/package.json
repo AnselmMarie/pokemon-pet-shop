@@ -62,6 +62,39 @@
         "options": {
           "passWithNoTests": true
         }
+      },
+      "docker-build": {
+        "executor": "nx:run-commands",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "command": "docker build -f app-hosts/api/Dockerfile -t pokemon-api .",
+          "cwd": "{workspaceRoot}"
+        }
+      },
+      "docker-run": {
+        "executor": "nx:run-commands",
+        "dependsOn": [
+          "docker-build"
+        ],
+        "options": {
+          "command": "docker run -p 3333:3333 pokemon-api",
+          "cwd": "{workspaceRoot}"
+        }
+      },
+      "docker-deploy-prod": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com",
+            "docker build -f app-hosts/api/Dockerfile -t pokemon-api .",
+            "docker tag pokemon-api:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/pokemon-api:prod",
+            "docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/pokemon-api:prod"
+          ],
+          "cwd": "{workspaceRoot}",
+          "parallel": false
+        }
       }
     }
   },
