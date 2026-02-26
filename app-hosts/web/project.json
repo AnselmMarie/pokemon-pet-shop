@@ -19,7 +19,7 @@
           "WEBPACK_SERVE": "true",
           "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"CommonJS\",\"moduleResolution\":\"Node10\",\"customConditions\":null}"
         },
-        "devRemotes": ["webHomepage", "webHeader", "webFooter"]
+        "devRemotes": ["webHomepage", "webHeader", "webFooter", "webNotFound"]
       },
       "dependsOn": ["clean-static-remotes", "typecheck"]
     },
