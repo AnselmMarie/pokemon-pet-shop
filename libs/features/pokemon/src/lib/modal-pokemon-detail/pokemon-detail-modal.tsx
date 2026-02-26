@@ -27,7 +27,6 @@ export const PokemonDetailModal = ({
       <ScrollWrapper>
         <Box className="relative">
           <PokemonDetailModalHeader pokeCreature={pokeCreature} pokeTypeClass={pokeTypeClass} />
-
           <PokemonDetailModalBody pokeCreature={pokeCreature} pokeTypeClass={pokeTypeClass} />
         </Box>
       </ScrollWrapper>
