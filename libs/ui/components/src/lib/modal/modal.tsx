@@ -65,7 +65,7 @@ export const Modal = ({
       className={`fixed flex top-[0px] left-[0px] z-50 w-full h-full ${getModalAlignmentClasses}`}
     >
       <ModalCard
-        className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[450px] rounded-sm ${
+        className={`relative flex flex-col inset-0 z-50 flex bg-white w-full md:max-w-[650px] rounded-sm ${
           startAnimation ? 'ease-in duration-300 opacity-100' : 'ease-out duration-300 opacity-0'
         }`}
       >

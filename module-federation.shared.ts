@@ -6,6 +6,7 @@ const deps = require(`${workspaceRoot}/package.json`).dependencies;
 export const sharedMappings = (libraryName: string, defaultConfig: SharedLibraryConfig) => {
   if (['react', 'react-dom'].includes(libraryName)) {
     return {
+      ...defaultConfig,
       singleton: true,
       strictVersion: false,
       requiredVersion: deps[libraryName],
@@ -14,6 +15,7 @@ export const sharedMappings = (libraryName: string, defaultConfig: SharedLibrary
 
   if (libraryName === 'jotai' || libraryName === 'jotai/utils') {
     return {
+      ...defaultConfig,
       singleton: true,
       strictVersion: false,
       requiredVersion: false,
@@ -22,13 +24,14 @@ export const sharedMappings = (libraryName: string, defaultConfig: SharedLibrary
 
   if (libraryName === 'react-native') {
     return {
+      ...defaultConfig,
       singleton: true,
-      import: 'react-native-web', // use the alias
-      shareKey: 'react-native', // ensure both sides share under same key
+      import: 'react-native-web',
+      shareKey: 'react-native',
       shareScope: 'default',
       strictVersion: false,
       requiredVersion: false,
-      eager: true, // optional: ensures only one copy is loaded early
+      eager: true,
     };
   }
 

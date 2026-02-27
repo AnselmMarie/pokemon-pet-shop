@@ -8,9 +8,12 @@ import { Box } from '../box';
 import { ImageProps } from './image.interface';
 // import { IconTypeEnum, UiIcon } from '../icon';
 
-const StyledExpoImage = cssInterop(ExpoImage as unknown as React.ComponentType<any>, {
-  className: 'style',
-});
+const StyledExpoImage = cssInterop(
+  ExpoImage as unknown as React.ComponentType<Record<string, unknown>>,
+  {
+    className: 'style',
+  }
+);
 
 export const Image = ({
   src = '',

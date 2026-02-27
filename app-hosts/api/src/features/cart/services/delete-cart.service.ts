@@ -25,7 +25,7 @@ export const deleteCartItemService = async (id: string) => {
   currentCartData.counter = currentCartData.counter - dataToRemove[0]?.quantity;
   currentCartData.total = currentCartData.total - totalPrice;
 
-  if (keySplice) {
+  if (keySplice !== null) {
     data.splice(keySplice, 1);
   }
   currentCartData.data = data;

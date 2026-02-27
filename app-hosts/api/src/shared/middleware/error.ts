@@ -1,10 +1,17 @@
 import { Request, Response } from 'express';
 
-export const errFormatResponseUtil = (err: any) => {
+interface AppError {
+  message?: string;
+  statusText?: string;
+  status?: number;
+}
+
+export const errFormatResponseUtil = (err: unknown) => {
+  const appErr = err as AppError;
   return {
-    message: err?.message,
-    statusText: err?.statusText,
-    status: err?.status,
+    message: appErr?.message,
+    statusText: appErr?.statusText,
+    status: appErr?.status,
   };
 };
 
@@ -17,6 +24,7 @@ export const errFormat500ResponseUtil = () => {
 };
 
 export const errorMiddleware = (err: unknown, req: Request, res: Response) => {
-  const status = (err as { status: number })?.status || 500;
-  res.status(status).json(errFormatResponseUtil(err));
+  const appErr = err as AppError;
+  const status = appErr?.status || 500;
+  res.status(status).json(errFormatResponseUtil(appErr));
 };

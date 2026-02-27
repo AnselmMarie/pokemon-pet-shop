@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
-import { PokemonSpeciesParamsProps } from '../pokemon.types';
+import {
+  PokemonSpeciesApiResponse,
+  PokemonSpeciesFlavorTextEntry,
+  PokemonSpeciesGeneraEntry,
+  PokemonSpeciesParamsProps,
+} from '../pokemon.types';
 
 export const getPokemonSpeciesService = async ({ id }: PokemonSpeciesParamsProps) => {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`).catch(() => {
@@ -16,11 +21,13 @@ export const getPokemonSpeciesService = async ({ id }: PokemonSpeciesParamsProps
       flavor_text_entries,
       names,
       ...args
-    }: any = await res.json();
+    }: PokemonSpeciesApiResponse = (await res.json()) as PokemonSpeciesApiResponse;
     return {
       ...args,
-      flavor_text_entries: flavor_text_entries.find((el: any) => el?.language?.name === 'en'),
-      genera: genera.find((el: any) => el?.language?.name === 'en'),
+      flavor_text_entries: flavor_text_entries.find(
+        (el: PokemonSpeciesFlavorTextEntry) => el?.language?.name === 'en'
+      ),
+      genera: genera.find((el: PokemonSpeciesGeneraEntry) => el?.language?.name === 'en'),
     };
   }
   throw res;

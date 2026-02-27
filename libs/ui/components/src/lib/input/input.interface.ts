@@ -1,3 +1,5 @@
+import { IconType } from '../icon';
+
 import { InputTypeEnum } from './input.enum';
 
 export interface InputProps {
@@ -6,7 +8,7 @@ export interface InputProps {
   control?: unknown;
   value?: string | number;
   iconClassname?: string;
-  appendIcon?: any;
+  appendIcon?: IconType;
   defaultValue?: string | number;
   onChange?: () => void;
 }

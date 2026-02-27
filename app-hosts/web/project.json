@@ -18,10 +18,20 @@
         "env": {
           "WEBPACK_SERVE": "true",
           "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"CommonJS\",\"moduleResolution\":\"Node10\",\"customConditions\":null}"
-        },
-        "devRemotes": ["webHomepage", "webHeader", "webFooter"]
+        }
       },
       "dependsOn": ["clean-static-remotes", "typecheck"]
+    },
+    "serve-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run-many --projects='app-remotes/*' --target=serve --parallel",
+          "sleep 25 && nx serve web"
+        ],
+        "parallel": true
+      },
+      "dependsOn": ["clean-static-remotes"]
     },
     "build": {
       "dependsOn": ["^build", "typecheck"]

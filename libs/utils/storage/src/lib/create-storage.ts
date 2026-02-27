@@ -3,9 +3,18 @@ import type { SyncStorage, AsyncStorage } from 'jotai/vanilla/utils/atomWithStor
 
 import { createInMemoryStorage } from './in-store-storage';
 
+interface WebStorage {
+  getItem(key: string): string | null;
+  setItem(key: string, value: string): void;
+  removeItem(key: string): void;
+}
+
 export const createStorage = <T>(): SyncStorage<T> | AsyncStorage<T> => {
   try {
-    const ls = typeof globalThis !== 'undefined' ? (globalThis as any).localStorage : undefined;
+    const ls =
+      typeof globalThis !== 'undefined'
+        ? (globalThis as unknown as { localStorage?: WebStorage }).localStorage
+        : undefined;
 
     if (!ls) {
       throw new Error('localStorage not available');

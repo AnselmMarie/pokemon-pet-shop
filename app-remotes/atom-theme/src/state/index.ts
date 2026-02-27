@@ -1,5 +1,6 @@
 import { atom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
+import type { SyncStorage } from 'jotai/vanilla/utils/atomWithStorage';
 
 import { createStorage, storageKey } from '@pokemon-pet-shop/util-storage';
 
@@ -8,7 +9,7 @@ export type Theme = 'light' | 'dark';
 export const themeAtom = atomWithStorage<Theme>(
   storageKey('theme'),
   'light',
-  createStorage<Theme>() as any,
+  createStorage<Theme>() as SyncStorage<Theme>,
   { getOnInit: true }
 );
 

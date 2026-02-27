@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { errFormat500ResponseUtil } from '../../../shared/middleware';
-import { PokemonDetailQueryProps } from '../pokemon.types';
+import { PokemonDetailApiResponse, PokemonDetailQueryProps } from '../pokemon.types';
 
 export const getPokemonDetailService = async ({ id }: PokemonDetailQueryProps) => {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).catch(() => {
@@ -19,7 +19,7 @@ export const getPokemonDetailService = async ({ id }: PokemonDetailQueryProps) =
       past_types,
       location_area_encounters,
       ...args
-    }: any = await res.json();
+    }: PokemonDetailApiResponse = (await res.json()) as PokemonDetailApiResponse;
 
     return {
       ...args,
@@ -30,4 +30,5 @@ export const getPokemonDetailService = async ({ id }: PokemonDetailQueryProps) =
       },
     };
   }
+  throw res;
 };

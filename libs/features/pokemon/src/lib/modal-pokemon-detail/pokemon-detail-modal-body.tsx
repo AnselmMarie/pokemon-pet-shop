@@ -16,6 +16,7 @@ import { useUpdateCart } from '@pokemon-pet-shop/service-cart';
 import { capitalizeName, removeHtmlCodeInString } from '@pokemon-pet-shop/util-text-transform';
 
 import { PokemonAbilityName } from '../components/pokemon-ability-name';
+import { convertKgToLbs, convertMetersToFtIn } from './pokemon-detail-modal-body.util';
 
 interface PokemonDetailModalBodyProps {
   pokeCreature: PokemonDetailBase & { name: string };
@@ -52,61 +53,11 @@ export const PokemonDetailModalBody = ({
     });
   };
 
-  const convertKgToLbs = useMemo(() => {
-    const stringKgNoDecimal = String(pokeCreature?.weight);
-
-    const kgDecimal = stringKgNoDecimal.replace(/\w$/, (el) => {
-      return `.${el}`;
-    });
-
-    const mathRound = Math.round(Number(kgDecimal));
-
-    let lbs = 0;
-    for (let loop = 0; loop < mathRound; loop++) {
-      lbs = lbs + 2.20462;
-    }
-
-    return { lbs: `${Math.trunc(lbs)} lbs`, kg: `(${kgDecimal} kg)` };
-  }, [pokeCreature?.weight]);
-
-  const convertMetersToFtIn = useMemo(() => {
-    const stringKgNoDecimal = String(pokeCreature?.height);
-
-    const mDecimal = stringKgNoDecimal.replace(/\w$/, (el) => {
-      return `.${el}`;
-    });
-
-    const ftTotal = Number(mDecimal) * 3.28084;
-    const ftTotalSplit = String(ftTotal).split('.');
-    const ftInObj = {
-      ft: '',
-      in: '',
-      m: `(${mDecimal} m)`,
-    };
-
-    const convertFtInches = (dFt: string | null = null, dIn: string | null = null) => {
-      const feet = Number(dFt);
-      const inches = Math.round(Number(`.${dIn}`) * 12);
-
-      if (inches === 12) {
-        ftInObj.ft = `${feet + 1}'`;
-        ftInObj.in = `0"`;
-        return;
-      }
-
-      ftInObj.ft = `${feet}'`;
-      ftInObj.in = `${String(inches)}"`;
-    };
-
-    if (ftTotalSplit.length === 2) {
-      convertFtInches(ftTotalSplit[0], ftTotalSplit[1]);
-    } else {
-      convertFtInches(ftTotalSplit[1]);
-    }
-
-    return ftInObj;
-  }, [pokeCreature?.height]);
-
+  const weightData = useMemo(() => convertKgToLbs(pokeCreature?.weight), [pokeCreature?.weight]);
+  const heightData = useMemo(
+    () => convertMetersToFtIn(pokeCreature?.height),
+    [pokeCreature?.height]
+  );
   const removeHtmlCodeInDescription = useMemo((): string => {
     return removeHtmlCodeInString(speciesData?.flavor_text_entries?.flavor_text);
   }, [speciesData?.flavor_text_entries?.flavor_text]);
@@ -146,14 +97,14 @@ export const PokemonDetailModalBody = ({
           <Box className="flex flex-col md:flex-row gap-md mb-lg">
             <Box className="flex flex-row md:flex-auto gap-xs text-md md:mb-sm">
               <Typography className="font-bold">Weight:</Typography>{' '}
-              <Typography>{`${convertKgToLbs?.lbs} ${convertKgToLbs?.kg}`}</Typography>
+              <Typography>{`${weightData?.lbs} ${weightData?.kg}`}</Typography>
             </Box>
 
             <Box className="flex flex-row md:flex-auto gap-xs text-md md:mb-sm">
               <Typography className="font-bold">Height:</Typography>{' '}
               <Typography>
-                {convertMetersToFtIn?.ft ? `${convertMetersToFtIn?.ft} ` : null}
-                {convertMetersToFtIn?.in} {convertMetersToFtIn?.m}
+                {heightData?.ft ? `${heightData?.ft} ` : null}
+                {heightData?.in} {heightData?.m}
               </Typography>
             </Box>
           </Box>
