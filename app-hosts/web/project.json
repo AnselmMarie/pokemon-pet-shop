@@ -26,18 +26,10 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "nx serve atomTheme",
-          "nx serve webModalSideCart",
-          "nx serve webHomepage",
-          "nx serve webHeader",
-          "nx serve webFooter",
-          "nx serve webNotFound",
+          "nx run-many --projects='app-remotes/*' --target=serve --parallel",
           "sleep 25 && nx serve web"
         ],
-        "parallel": true,
-        "env": {
-          "NX_MF_DEV_REMOTES": "atomTheme,webModalSideCart,webHomepage,webHeader,webFooter,webNotFound"
-        }
+        "parallel": true
       },
       "dependsOn": ["clean-static-remotes"]
     },
