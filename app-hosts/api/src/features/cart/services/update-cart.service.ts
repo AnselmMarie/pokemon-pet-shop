@@ -37,15 +37,16 @@ const doesItemExistKeyFn = (
 };
 
 const getSpeciesDetail = async (id: string) => {
-  return Promise.all([
-    await getPokemonSpeciesService({ id }).catch(() => 'err'),
-    await getPokemonDetailService({ id }).catch(() => 'err'),
-  ]).then((data) => {
-    if (data[0] === 'err' || data[1] === 'err') {
-      return 'err';
-    }
-    return { ...data[0], ...data[1] };
-  });
+  const [speciesResult, detailResult] = await Promise.all([
+    getPokemonSpeciesService({ id }).catch(() => 'err' as const),
+    getPokemonDetailService({ id }).catch(() => 'err' as const),
+  ]);
+
+  if (speciesResult === 'err' || detailResult === 'err') {
+    return 'err' as const;
+  }
+
+  return { ...speciesResult, ...detailResult };
 };
 
 export const updateCartItemService = async (payload: CartPayload) => {
@@ -73,6 +74,10 @@ export const updateCartItemService = async (payload: CartPayload) => {
   const speciesData = await getSpeciesDetail(payload?.id).catch(() => {
     throw errFormat500ResponseUtil();
   });
+
+  if (speciesData === 'err') {
+    throw errFormat500ResponseUtil();
+  }
 
   const evolutionChainSplit = speciesData?.evolution_chain?.url?.split('/');
 
@@ -122,7 +127,7 @@ export const updateCartItemService = async (payload: CartPayload) => {
     name: speciesData?.name,
     price: pokemonPrice,
     quantity: 1,
-    image: speciesData?.sprites?.other?.['official-artwork']?.front_default,
+    image: speciesData?.sprites?.other?.['official-artwork']?.front_default ?? '',
     isLegendary: speciesData?.is_legendary,
     isMythical: speciesData?.is_mythical,
     types: speciesData?.types,

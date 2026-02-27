@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { Pokemon, PokemonCreature, PokemonDetailBase } from '@pokemon-pet-shop/types';
+import { Pokemon, PokemonCreature } from '@pokemon-pet-shop/types';
 
 import { errFormat500ResponseUtil, errFormatResponseUtil } from '../../../shared/middleware';
 
@@ -11,7 +11,7 @@ import { getPokemonListService } from '../services/pokemon-list.service';
 
 const combineListAndDetailDataUtil = (
   pokemonList: Pokemon,
-  detailPromisesRes: (PokemonDetailBase | { id: string; err: unknown })[]
+  detailPromisesRes: (Record<string, unknown> | { id: string; err: unknown })[]
 ) => {
   return (pokemonList?.results ?? []).map((el: PokemonCreature, i: number) => {
     return {

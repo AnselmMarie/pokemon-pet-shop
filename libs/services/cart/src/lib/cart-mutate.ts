@@ -20,7 +20,7 @@ export const useUpdateCart = () => {
 
 export const useDeleteCartItem = () => {
   const queryClient = useQueryClient();
-  const mutationFn = (id: string) => axiosInstance.delete<any>(`cart/item/${id}`);
+  const mutationFn = (id: string) => axiosInstance.delete<void>(`cart/item/${id}`);
 
   return useMutation({
     mutationFn,
