@@ -2,7 +2,10 @@ import { join } from 'path';
 
 import { NxAppRspackPlugin } from '@nx/rspack/app-plugin.js';
 import { NxReactRspackPlugin } from '@nx/rspack/react-plugin.js';
-import { NxModuleFederationPlugin } from '@nx/module-federation/rspack.js';
+import {
+  NxModuleFederationPlugin,
+  NxModuleFederationDevServerPlugin,
+} from '@nx/module-federation/rspack.js';
 import config from './module-federation.config';
 const { getTsconfigPaths, maybeWithZephyr } = require('../../rspack-tsconfig-paths.js');
 
@@ -44,16 +47,7 @@ export default maybeWithZephyr({
       // See: https://react-svgr.com/
       // svgr: false
     }),
-    new NxModuleFederationPlugin(
-      { config },
-      {
-        dts: false,
-        runtimePlugins: [
-          require.resolve(
-            '@nx/module-federation/src/utils/plugins/runtime-library-control.plugin.js'
-          ),
-        ],
-      }
-    ),
+    new NxModuleFederationPlugin({ config }, { dts: false }),
+    new NxModuleFederationDevServerPlugin({ config }),
   ],
 });

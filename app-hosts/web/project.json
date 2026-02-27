@@ -18,10 +18,28 @@
         "env": {
           "WEBPACK_SERVE": "true",
           "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"CommonJS\",\"moduleResolution\":\"Node10\",\"customConditions\":null}"
-        },
-        "devRemotes": ["webHomepage", "webHeader", "webFooter", "webNotFound"]
+        }
       },
       "dependsOn": ["clean-static-remotes", "typecheck"]
+    },
+    "serve-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx serve atomTheme",
+          "nx serve webModalSideCart",
+          "nx serve webHomepage",
+          "nx serve webHeader",
+          "nx serve webFooter",
+          "nx serve webNotFound",
+          "sleep 25 && nx serve web"
+        ],
+        "parallel": true,
+        "env": {
+          "NX_MF_DEV_REMOTES": "atomTheme,webModalSideCart,webHomepage,webHeader,webFooter,webNotFound"
+        }
+      },
+      "dependsOn": ["clean-static-remotes"]
     },
     "build": {
       "dependsOn": ["^build", "typecheck"]

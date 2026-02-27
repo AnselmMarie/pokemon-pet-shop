@@ -44,16 +44,6 @@ export default maybeWithZephyr({
       // See: https://react-svgr.com/
       // svgr: false
     }),
-    new NxModuleFederationPlugin(
-      { config },
-      {
-        dts: false,
-        runtimePlugins: [
-          require.resolve(
-            '@nx/module-federation/src/utils/plugins/runtime-library-control.plugin.js'
-          ),
-        ],
-      }
-    ),
+    new NxModuleFederationPlugin({ config }, { dts: false }),
   ],
 });

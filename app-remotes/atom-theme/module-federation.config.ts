@@ -7,6 +7,10 @@ const config: ModuleFederationConfig = {
     './State': './src/state/index.ts',
   },
   shared: sharedMappings,
+  additionalShared: [
+    ['react', { singleton: true, strictVersion: false, requiredVersion: false, eager: true }],
+    ['react-dom', { singleton: true, strictVersion: false, requiredVersion: false, eager: true }],
+  ],
 };
 
 /**
