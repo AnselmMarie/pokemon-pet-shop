@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 
 import ReactSkeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 // import { THEME_RADIUS_8, THEME_SPACING_15 } from '../../styles/ts/variables';
 

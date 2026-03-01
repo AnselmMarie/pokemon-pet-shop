@@ -36,7 +36,7 @@ export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): Reac
         } ${pokeCardTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}Wrapper` as keyof object] ?? ''}`}
       >
         {isLoading ? (
-          <Box className="w-[50%] h-[70%] my-lg mx-md md:flex-1 md:w-[80%] md:h-full md:mx-auto md:mb-md">
+          <Box className="w-[50%] h-50%] my-lg mx-md md:flex-1 md:w-[60%] md:h-[80%] md:mx-auto md:mb-md">
             <Skeleton height={isWeb() ? '100%' : 100} circle />
           </Box>
         ) : (
