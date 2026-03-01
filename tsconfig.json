@@ -104,6 +104,9 @@
     },
     {
       "path": "./libs/ui/components"
+    },
+    {
+      "path": "./app-hosts/web-e2e"
     }
   ]
 }

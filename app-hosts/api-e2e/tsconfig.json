@@ -4,7 +4,9 @@
     "outDir": "out-tsc/@pokemon-pet-shop/api-e2e",
     "esModuleInterop": true,
     "noUnusedLocals": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "types": ["jest", "node"],
+    "typeRoots": ["../../node_modules/@types"]
   },
   "include": ["jest.config.ts", "src/**/*.ts"],
   "references": []
