@@ -1,4 +1,4 @@
-import type { IconType } from '../icon';
+import type { IconColors, IconType } from '../icon';
 
 import { SwitchStatus } from './switch.type';
 
@@ -16,4 +16,15 @@ export interface SwitchProps extends SwitchButtonProps {
   onChange?: (val: SwitchStatus) => void;
   onLeftClick?: () => void;
   onRightClick?: () => void;
+}
+
+export interface SwitchIconProps {
+  icon: IconType;
+  color: IconColors;
+  isDisabled: boolean;
+  onClick: () => void;
+}
+
+export interface SwitchIndicatorProps {
+  positionStyle: string;
 }
