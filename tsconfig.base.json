@@ -21,6 +21,7 @@
     "customConditions": ["@pokemon-pet-shop/source"],
     "baseUrl": ".",
     "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./app-hosts"],
+    "types": ["node"],
     "paths": {
       "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],
       "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"],

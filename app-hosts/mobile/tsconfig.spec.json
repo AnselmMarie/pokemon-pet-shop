@@ -4,6 +4,7 @@
     "outDir": "./out-tsc/jest",
     "jsx": "react-jsx",
     "types": ["jest", "node"],
+    "typeRoots": ["../../node_modules/@types"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "noUnusedLocals": false
