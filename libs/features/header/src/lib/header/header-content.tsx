@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import { SwitchTheme } from '@pokemon-pet-shop/feature-switch-theme';
+// import { SwitchTheme } from '@pokemon-pet-shop/feature-switch-theme';
 
 import { Box, Container, Image } from '@pokemon-pet-shop/ui-primitives';
-import { Icon, HideInMobile } from '@pokemon-pet-shop/ui-components';
+// import { Icon, HideInMobile } from '@pokemon-pet-shop/ui-components';
 
 import { NavMobileModal } from '../modal-mobile-nav/nav-mobile';
 import { SideNavModal } from './side-nav-modal';
@@ -18,12 +18,12 @@ export const HeaderContent = () => {
       <NavMobileModal isOpen={isNavModalOpen} onCloseModal={() => setIsNavModalOpen(false)} />
       <Container className="flex w-full flex-row items-center justify-between">
         <Box className="flex flex-row justify-start items-center">
-          <Icon
+          {/* <Icon
             classNameIcon="md:hidden"
             icon="IconMenu"
             color="blue"
             onClick={() => setIsNavModalOpen(true)}
-          />
+          /> */}
           <Image src={pokeshopLogo} className="w-[195px]" alt="Pokemon Pet Shop Logo" />
         </Box>
 
@@ -43,9 +43,9 @@ export const HeaderContent = () => {
         ) : null}
 
         <Box className="flex flex-row items-center gap-sm">
-          <HideInMobile>
+          {/* <HideInMobile>
             <SwitchTheme className="invisible md:visible" />
-          </HideInMobile>
+          </HideInMobile> */}
           <SideNavModal />
         </Box>
       </Container>
