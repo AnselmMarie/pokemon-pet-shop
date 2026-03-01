@@ -30,4 +30,5 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: npx nx run-many -t lint test typecheck
+      - run: npx nx run-many -t lint typecheck
+      - run: npx nx run-many -t test --coverage

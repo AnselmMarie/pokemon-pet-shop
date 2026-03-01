@@ -1,6 +1,6 @@
 module.exports = {
   displayName: '@pokemon-pet-shop/util-detect',
-  preset: '../../../jest.preset.js',
+  preset: '../../../jest.coverage-preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/react/babel'] }],
