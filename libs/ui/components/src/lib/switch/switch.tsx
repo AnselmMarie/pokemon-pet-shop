@@ -1,11 +1,10 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect, useMemo, useState } from 'react';
 
 import { Box } from '@pokemon-pet-shop/ui-primitives';
 
-import { Icon } from '../icon';
-
+import { SwitchIcon } from './switch-icon';
 import { SwitchProps } from './switch.interface';
-import useSwitchLogic from './use.switch.logic';
+import { SwitchStatus } from './switch.type';
 
 export const Switch = ({
   className,
@@ -21,44 +20,52 @@ export const Switch = ({
     // noopUtil();
   },
 }: SwitchProps): ReactElement => {
-  const { getCircleThemeStyle, onInitLeftClick, onInitRightClick } = useSwitchLogic(
-    defaultValue,
-    val,
-    onLeftClick,
-    onRightClick
-  );
+  const [switchState, setSwitchState] = useState<SwitchStatus>(defaultValue);
+
+  const handleLeftClick = () => {
+    setSwitchState('ON');
+    onLeftClick();
+  };
+
+  const handleRightClick = () => {
+    setSwitchState('OFF');
+    onRightClick();
+  };
+
+  const circlePositionStyle = useMemo(() => {
+    return switchState === 'ON' ? 'left-[10px]' : 'left-[60px]';
+  }, [switchState]);
+
+  useEffect(() => {
+    if (val) {
+      setSwitchState(val);
+    }
+  }, [val]);
 
   return (
     <Box
       className={`flex flex-row bg-lightGrey pl-2xs pr-2xs w-[109px] h-[61px] items-center justify-between relative rounded-pill ${className}`}
     >
       {iconLeft ? (
-        <Icon
+        <SwitchIcon
           icon={iconLeft}
-          size={20}
           color={val === 'ON' ? 'white' : 'blue'}
-          classNameIcon="z-10 cursor-pointer"
-          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px] z-10"
           isDisabled={val === 'ON' || isDisabled}
-          displayWrapper
-          onClick={onInitLeftClick}
+          onClick={handleLeftClick}
         />
       ) : null}
 
       {iconRight ? (
-        <Icon
+        <SwitchIcon
           icon={iconRight}
-          size={20}
           color={val === 'ON' ? 'blue' : 'white'}
-          classNameIcon="z-10 cursor-pointer"
-          classNameWrapper="flex justify-center items-center w-[100%] h-[39px] p-[2px] z-10"
           isDisabled={val === 'OFF' || isDisabled}
-          displayWrapper
-          onClick={onInitRightClick}
+          onClick={handleRightClick}
         />
       ) : null}
+
       <Box
-        className={`absolute top-[11px] h-[38px] w-[38px] bg-primary z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${getCircleThemeStyle}`}
+        className={`absolute top-[11px] h-[38px] w-[38px] bg-primary z-0 shadow transition-all duration-300 ease-in-out rounded-circle ${circlePositionStyle}`}
       />
     </Box>
   );
