@@ -33,19 +33,29 @@ export const Icon = ({
         size={size}
         color={IconColors?.[color]}
         stroke={stroke}
-        className={`${classNameIcon} ${onClick ? 'cursor-pointer' : ''} ${
+        className={`${classNameIcon} ${!displayWrapper && onClick ? 'cursor-pointer' : ''} ${
           isDisabled ? 'opacity-90 pointer-events-none' : ''
         }`}
-        onClick={iconClick}
+        onClick={!displayWrapper && onClick ? iconClick : undefined}
       />
     );
-  }, [size, IconComponent, color, classNameIcon, stroke, isDisabled, iconClick, onClick]);
+  }, [
+    size,
+    IconComponent,
+    color,
+    classNameIcon,
+    displayWrapper,
+    stroke,
+    isDisabled,
+    iconClick,
+    onClick,
+  ]);
 
   if (displayWrapper) {
     return (
       <Box
-        className={classNameWrapper}
-        // className={classNamesUtil(classNameWrapper, globalStyles.pointerCursor)}
+        className={`${classNameWrapper} ${onClick ? 'cursor-pointer' : ''}`}
+        onClick={iconClick ?? undefined}
       >
         <RenderIcon />
       </Box>

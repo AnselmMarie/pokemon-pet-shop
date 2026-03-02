@@ -6,6 +6,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       grassTypeImageWrapper: 'bg-veryDarkGrass bg-gradient-to-tr from-veryDarkGrass to-lightGrass',
       grassTypeContentCardWrapper: 'md:bg-darkGrass',
       grassTypeContentCardText: 'text-white',
+      grassTypeSkeletonBase: '#579d63',
+      grassTypeSkeletonHighlight: '#69b076',
     },
   ],
   [
@@ -15,6 +17,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       bugTypeImageWrapper: 'bg-veryDarkBug bg-gradient-to-tr from-veryDarkBug to-lightBug',
       bugTypeContentCardWrapper: 'md:bg-darkBug',
       bugTypeContentCardText: 'text-white',
+      bugTypeSkeletonBase: '#b3d958',
+      bugTypeSkeletonHighlight: '#cfee85',
     },
   ],
   [
@@ -24,6 +28,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       darkTypeImageWrapper: 'bg-veryDarkDark bg-gradient-to-tr from-veryDarkDark to-lightDark',
       darkTypeContentCardWrapper: 'md:bg-darkDark',
       darkTypeContentCardText: 'text-white',
+      darkTypeSkeletonBase: '#727272',
+      darkTypeSkeletonHighlight: '#969696',
     },
   ],
   [
@@ -35,6 +41,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkDragon bg-gradient-to-tr from-veryDarkDragon to-lightDragon',
       dragonTypeContentCardWrapper: 'md:bg-darkDragon',
       dragonTypeContentCardText: 'text-white',
+      dragonTypeSkeletonBase: '#9988e0',
+      dragonTypeSkeletonHighlight: '#bbb0eb',
     },
   ],
   [
@@ -46,6 +54,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkElectric bg-gradient-to-tr from-veryDarkElectric to-lightElectric',
       electricTypeContentCardWrapper: 'md:bg-darkElectric',
       electricTypeContentCardText: 'text-white',
+      electricTypeSkeletonBase: '#f2d94e',
+      electricTypeSkeletonHighlight: '#fce97d',
     },
   ],
   [
@@ -55,6 +65,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       fairyTypeImageWrapper: 'bg-veryDarkFairy bg-gradient-to-tr from-veryDarkFairy to-lightFairy',
       fairyTypeContentCardWrapper: 'md:bg-darkFairy',
       fairyTypeContentCardText: 'text-white',
+      fairyTypeSkeletonBase: '#ee90e6',
+      fairyTypeSkeletonHighlight: '#fcbef7',
     },
   ],
   [
@@ -66,6 +78,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkFighting bg-gradient-to-tr from-veryDarkFighting to-lightFighting',
       fightingTypeContentCardWrapper: 'md:bg-darkFighting',
       fightingTypeContentCardText: 'text-white',
+      fightingTypeSkeletonBase: '#e76a83',
+      fightingTypeSkeletonHighlight: '#f399ab',
     },
   ],
   [
@@ -75,6 +89,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       fireTypeImageWrapper: 'bg-veryDarkFire bg-gradient-to-tr from-veryDarkFire to-lightFire',
       fireTypeContentCardWrapper: 'md:bg-darkFire',
       fireTypeContentCardText: 'text-white',
+      fireTypeSkeletonBase: '#f5af67',
+      fireTypeSkeletonHighlight: '#f8c087',
     },
   ],
   [
@@ -86,6 +102,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkFlying bg-gradient-to-tr from-veryDarkFlying to-lightFlying',
       flyingTypeContentCardWrapper: 'md:bg-darkFlying',
       flyingTypeContentCardText: 'text-white',
+      flyingTypeSkeletonBase: '#8fa9de',
+      flyingTypeSkeletonHighlight: '#bbcdf2',
     },
   ],
   [
@@ -95,6 +113,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       ghostTypeImageWrapper: 'bg-veryDarkGhost bg-gradient-to-tr from-veryDarkGhost to-lightGhost',
       ghostTypeContentCardWrapper: 'md:bg-darkGhost',
       ghostTypeContentCardText: 'text-white',
+      ghostTypeSkeletonBase: '#5f6dbc',
+      ghostTypeSkeletonHighlight: '#8793db',
     },
   ],
   [
@@ -106,6 +126,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkGround bg-gradient-to-tr from-veryDarkGround to-lightGround',
       groundTypeContentCardWrapper: 'md:bg-darkGround',
       groundTypeContentCardText: 'text-white',
+      groundTypeSkeletonBase: '#da7c4d',
+      groundTypeSkeletonHighlight: '#f19e75',
     },
   ],
   [
@@ -115,6 +137,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       iceTypeImageWrapper: 'bg-veryDarkIce bg-gradient-to-tr from-veryDarkIce to-lightIce',
       iceTypeContentCardWrapper: 'md:bg-darkIce',
       iceTypeContentCardText: 'text-white',
+      iceTypeSkeletonBase: '#3fd0d4',
+      iceTypeSkeletonHighlight: '#86d6d8',
     },
   ],
   [
@@ -126,6 +150,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkNormal bg-gradient-to-tr from-veryDarkNormal to-lightNormal',
       normalTypeContentCardWrapper: 'md:bg-darkNormal',
       normalTypeContentCardText: 'text-white',
+      normalTypeSkeletonBase: '#a0a29f',
+      normalTypeSkeletonHighlight: '#d0d4cd',
     },
   ],
   [
@@ -137,6 +163,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkPoison bg-gradient-to-tr from-veryDarkPoison to-lightPoison',
       poisonTypeContentCardWrapper: 'md:bg-darkPoison',
       poisonTypeContentCardText: 'text-white',
+      poisonTypeSkeletonBase: '#b763cf',
+      poisonTypeSkeletonHighlight: '#d087e5',
     },
   ],
   [
@@ -148,6 +176,8 @@ export const pokeCardTypeMap = new Map<string, object>([
         'bg-veryDarkPsychic bg-gradient-to-tr from-veryDarkPsychic to-lightPsychic',
       psychicTypeContentCardWrapper: 'md:bg-darkPsychic',
       psychicTypeContentCardText: 'text-white',
+      psychicTypeSkeletonBase: '#8d536b',
+      psychicTypeSkeletonHighlight: '#b68c9d',
     },
   ],
   [
@@ -157,6 +187,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       rockTypeImageWrapper: 'bg-veryDarkRock bg-gradient-to-tr from-veryDarkRock to-lightRock',
       rockTypeContentCardWrapper: 'md:bg-darkRock',
       rockTypeContentCardText: 'text-white',
+      rockTypeSkeletonBase: '#c9bb8a',
+      rockTypeSkeletonHighlight: '#e7dcb3',
     },
   ],
   [
@@ -166,6 +198,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       steelTypeImageWrapper: 'bg-veryDarkSteel bg-gradient-to-tr from-veryDarkSteel to-lightSteel',
       steelTypeContentCardWrapper: 'md:bg-darkSteel',
       steelTypeContentCardText: 'text-default',
+      steelTypeSkeletonBase: '#c0c6c7',
+      steelTypeSkeletonHighlight: '#dde2e4',
     },
   ],
   [
@@ -175,6 +209,8 @@ export const pokeCardTypeMap = new Map<string, object>([
       waterTypeImageWrapper: 'bg-veryDarkWater bg-gradient-to-tr from-veryDarkWater to-lightWater',
       waterTypeContentCardWrapper: 'md:bg-darkWater',
       waterTypeContentCardText: 'text-white',
+      waterTypeSkeletonBase: '#539ddf',
+      waterTypeSkeletonHighlight: '#80bef6',
     },
   ],
 ]);

@@ -89,7 +89,23 @@ export const PokemonAbilityName = ({
           ] ?? ''
         }`}
       >
-        {isLoading ? <Skeleton width={100} /> : formatName}
+        {isLoading ? (
+          <Skeleton
+            width={100}
+            baseColor={
+              (pokeAbilityTypeMap.get(pokeTypeClass)?.[
+                `${pokeTypeClass}SkeletonBase` as keyof object
+              ] ?? undefined) as string | undefined
+            }
+            highlightColor={
+              (pokeAbilityTypeMap.get(pokeTypeClass)?.[
+                `${pokeTypeClass}SkeletonHighlight` as keyof object
+              ] ?? undefined) as string | undefined
+            }
+          />
+        ) : (
+          formatName
+        )}
       </Typography>
     </Box>
   );

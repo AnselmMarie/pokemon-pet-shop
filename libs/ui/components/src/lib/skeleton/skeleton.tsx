@@ -12,6 +12,9 @@ export const Skeleton = ({
   width,
   height = 15,
   circle = false,
+  borderRadius,
+  baseColor,
+  highlightColor,
 }: SkeletonWebProps): ReactElement => {
   let newCount;
 
@@ -31,11 +34,14 @@ export const Skeleton = ({
         return (
           <ReactSkeleton
             key={i}
+            borderRadius={borderRadius}
             width={width}
             height={height}
             // style={{ marginBottom: count === 1 ? 0 : THEME_SPACING_15 }}
             // borderRadius={THEME_RADIUS_8}
             circle={circle}
+            baseColor={baseColor}
+            highlightColor={highlightColor}
           />
         );
       })}
