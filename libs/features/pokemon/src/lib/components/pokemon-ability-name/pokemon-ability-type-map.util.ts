@@ -4,6 +4,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       grassTypeAtkLine: 'bg-lightGrass',
       grassTypeAtkCircle: 'bg-medGrass',
+      grassTypeSkeletonBase: '#579d63',
+      grassTypeSkeletonHighlight: '#69b076',
     },
   ],
   [
@@ -11,6 +13,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       bugTypeAtkLine: 'bg-lightBug',
       bugTypeAtkCircle: 'bg-medBug',
+      bugTypeSkeletonBase: '#b3d958',
+      bugTypeSkeletonHighlight: '#cfee85',
     },
   ],
   [
@@ -18,6 +22,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       darkTypeAtkLine: 'bg-lightDark',
       darkTypeAtkCircle: 'bg-medDark',
+      darkTypeSkeletonBase: '#727272',
+      darkTypeSkeletonHighlight: '#969696',
     },
   ],
   [
@@ -25,6 +31,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       dragonTypeAtkLine: 'bg-lightDragon',
       dragonTypeAtkCircle: 'bg-medDragon',
+      dragonTypeSkeletonBase: '#9988e0',
+      dragonTypeSkeletonHighlight: '#bbb0eb',
     },
   ],
   [
@@ -32,6 +40,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       electricTypeAtkLine: 'bg-lightElectric',
       electricTypeAtkCircle: 'bg-medElectric',
+      electricTypeSkeletonBase: '#f2d94e',
+      electricTypeSkeletonHighlight: '#fce97d',
     },
   ],
   [
@@ -39,6 +49,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       fairyTypeAtkLine: 'bg-lightFairy',
       fairyTypeAtkCircle: 'bg-medFairy',
+      fairyTypeSkeletonBase: '#ee90e6',
+      fairyTypeSkeletonHighlight: '#fcbef7',
     },
   ],
   [
@@ -46,6 +58,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       fightingTypeAtkLine: 'bg-lightFighting',
       fightingTypeAtkCircle: 'bg-medFighting',
+      fightingTypeSkeletonBase: '#e76a83',
+      fightingTypeSkeletonHighlight: '#f399ab',
     },
   ],
   [
@@ -53,6 +67,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       fireTypeAtkLine: 'bg-lightFire',
       fireTypeAtkCircle: 'bg-medFire',
+      fireTypeSkeletonBase: '#f5af67',
+      fireTypeSkeletonHighlight: '#f8c087',
     },
   ],
   [
@@ -60,6 +76,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       flyingTypeAtkLine: 'bg-lightFlying',
       flyingTypeAtkCircle: 'bg-medFlying',
+      flyingTypeSkeletonBase: '#8fa9de',
+      flyingTypeSkeletonHighlight: '#bbcdf2',
     },
   ],
   [
@@ -67,6 +85,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       ghostTypeAtkLine: 'bg-lightGhost',
       ghostTypeAtkCircle: 'bg-medGhost',
+      ghostTypeSkeletonBase: '#5f6dbc',
+      ghostTypeSkeletonHighlight: '#8793db',
     },
   ],
   [
@@ -74,6 +94,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       groundTypeAtkLine: 'bg-lightGround',
       groundTypeAtkCircle: 'bg-medGround',
+      groundTypeSkeletonBase: '#da7c4d',
+      groundTypeSkeletonHighlight: '#f19e75',
     },
   ],
   [
@@ -81,6 +103,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       iceTypeAtkLine: 'bg-lightIce',
       iceTypeAtkCircle: 'bg-medIce',
+      iceTypeSkeletonBase: '#3fd0d4',
+      iceTypeSkeletonHighlight: '#86d6d8',
     },
   ],
   [
@@ -88,6 +112,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       normalTypeAtkLine: 'bg-lightNormal',
       normalTypeAtkCircle: 'bg-medNormal',
+      normalTypeSkeletonBase: '#a0a29f',
+      normalTypeSkeletonHighlight: '#d0d4cd',
     },
   ],
   [
@@ -95,6 +121,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       poisonTypeAtkLine: 'bg-lightPoison',
       poisonTypeAtkCircle: 'bg-medPoison',
+      poisonTypeSkeletonBase: '#b763cf',
+      poisonTypeSkeletonHighlight: '#d087e5',
     },
   ],
   [
@@ -102,6 +130,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       psychicTypeAtkLine: 'bg-lightPsychic',
       psychicTypeAtkCircle: 'bg-medPsychic',
+      psychicTypeSkeletonBase: '#8d536b',
+      psychicTypeSkeletonHighlight: '#b68c9d',
     },
   ],
   [
@@ -109,6 +139,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       rockTypeAtkLine: 'bg-lightRock',
       rockTypeAtkCircle: 'bg-medRock',
+      rockTypeSkeletonBase: '#c9bb8a',
+      rockTypeSkeletonHighlight: '#e7dcb3',
     },
   ],
   [
@@ -116,6 +148,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       steelTypeAtkLine: 'bg-lightSteel',
       steelTypeAtkCircle: 'bg-medSteel',
+      steelTypeSkeletonBase: '#c0c6c7',
+      steelTypeSkeletonHighlight: '#dde2e4',
     },
   ],
   [
@@ -123,6 +157,8 @@ export const pokeAbilityTypeMap = new Map<string, object>([
     {
       waterTypeAtkLine: 'bg-lightWater',
       waterTypeAtkCircle: 'bg-medWater',
+      waterTypeSkeletonBase: '#539ddf',
+      waterTypeSkeletonHighlight: '#80bef6',
     },
   ],
 ]);

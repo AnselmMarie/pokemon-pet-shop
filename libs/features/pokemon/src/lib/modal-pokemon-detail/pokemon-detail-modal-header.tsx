@@ -4,6 +4,7 @@ import {
   IconPokeListType,
   PokemonDetailBase,
   PokemonEvolution,
+  PokemonPricing,
   PokemonSpecies,
 } from '@pokemon-pet-shop/types';
 import { Box, Image, Typography } from '@pokemon-pet-shop/ui-primitives';
@@ -56,7 +57,7 @@ export const PokemonDetailModalHeader = ({
         isMythical: speciesData?.is_mythical,
         chainData: speciesData?.evolution_chain?.chain,
       },
-      pricingData!
+      pricingData ?? ({} as PokemonPricing)
     );
   }, [
     speciesData?.name,
@@ -78,7 +79,7 @@ export const PokemonDetailModalHeader = ({
           (!speciesIsLoading || !speciesIsFetching) ? (
             getPricingFormat
           ) : (
-            <Skeleton width={100} />
+            <Skeleton width={100} baseColor="#cab22c" highlightColor="#fce97d" />
           )}
         </Typography>
       </Box>

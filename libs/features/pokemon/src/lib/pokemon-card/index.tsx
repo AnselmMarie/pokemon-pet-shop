@@ -36,8 +36,21 @@ export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): Reac
         } ${pokeCardTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}Wrapper` as keyof object] ?? ''}`}
       >
         {isLoading ? (
-          <Box className="w-[50%] h-[70%] my-lg mx-md md:flex-1 md:w-[80%] md:h-full md:mx-auto md:mb-md">
-            <Skeleton height={isWeb() ? '100%' : 100} circle />
+          <Box className="w-[50%] h-[50%] my-lg mx-md md:flex-1 md:w-[60%] md:h-[80%] md:mx-auto md:mb-md">
+            <Skeleton
+              height={isWeb() ? '100%' : 100}
+              circle
+              baseColor={
+                (pokeCardTypeMap.get(pokeTypeClass)?.[
+                  `${pokeTypeClass}SkeletonBase` as keyof object
+                ] ?? undefined) as string | undefined
+              }
+              highlightColor={
+                (pokeCardTypeMap.get(pokeTypeClass)?.[
+                  `${pokeTypeClass}SkeletonHighlight` as keyof object
+                ] ?? undefined) as string | undefined
+              }
+            />
           </Box>
         ) : (
           <Box
@@ -68,7 +81,18 @@ export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): Reac
           <Box className="w-full">
             {isLoading ? (
               <Box className="mb-sm">
-                <Skeleton />
+                <Skeleton
+                  baseColor={
+                    (pokeCardTypeMap.get(pokeTypeClass)?.[
+                      `${pokeTypeClass}SkeletonBase` as keyof object
+                    ] ?? undefined) as string | undefined
+                  }
+                  highlightColor={
+                    (pokeCardTypeMap.get(pokeTypeClass)?.[
+                      `${pokeTypeClass}SkeletonHighlight` as keyof object
+                    ] ?? undefined) as string | undefined
+                  }
+                />
               </Box>
             ) : (
               <Box className="flex justify-between items-center mb-sm">
@@ -112,15 +136,34 @@ export const PokemonCard = ({ pokeCreature, isLoading }: PokemonCardProps): Reac
             )}
           </Box>
 
-          <Box className="w-full flex gap-sm">
-            <Button
-              className="w-full"
-              type="secondary"
-              text="Learn More"
-              isLoading={isLoading}
-              onClick={() => setIsModalOpen(true)}
-            />
-          </Box>
+          {isLoading ? (
+            <Box className="w-[100%] h-[100%] mb-md">
+              <Skeleton
+                borderRadius="50px"
+                height={40}
+                baseColor={
+                  (pokeCardTypeMap.get(pokeTypeClass)?.[
+                    `${pokeTypeClass}SkeletonBase` as keyof object
+                  ] ?? undefined) as string | undefined
+                }
+                highlightColor={
+                  (pokeCardTypeMap.get(pokeTypeClass)?.[
+                    `${pokeTypeClass}SkeletonHighlight` as keyof object
+                  ] ?? undefined) as string | undefined
+                }
+              />
+            </Box>
+          ) : (
+            <Box className="w-full flex gap-sm">
+              <Button
+                className="w-full"
+                type="secondary"
+                text="Learn More"
+                isLoading={isLoading}
+                onClick={() => setIsModalOpen(true)}
+              />
+            </Box>
+          )}
         </Box>
       </Card>
     </>

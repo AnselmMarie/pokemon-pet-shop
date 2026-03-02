@@ -1,7 +1,10 @@
 interface SkeletonProps {
   count?: number;
   width?: number;
+  borderRadius?: string;
   circle?: boolean;
+  baseColor?: string;
+  highlightColor?: string;
 }
 
 export interface SkeletonNativeProps extends SkeletonProps {
