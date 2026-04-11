@@ -8,7 +8,7 @@ import {
   PokemonSpecies,
 } from '@pokemon-pet-shop/types';
 import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
-import { Skeleton, Button, TagWrapper, TagItem } from '@pokemon-pet-shop/ui-components';
+import { Button, TagWrapper, TagItem } from '@pokemon-pet-shop/ui-components';
 
 import { useGetPokemonSpecies } from '@pokemon-pet-shop/service-pokemon';
 import { useUpdateCart } from '@pokemon-pet-shop/service-cart';
@@ -23,22 +23,12 @@ interface PokemonDetailModalBodyProps {
   pokeTypeClass: IconPokeListType;
 }
 
-interface PokeSpeciesResProps {
-  data: PokemonSpecies;
-  isLoading: boolean;
-  isFetching: boolean;
-}
-
 export const PokemonDetailModalBody = ({
   pokeCreature,
   pokeTypeClass,
 }: PokemonDetailModalBodyProps): ReactElement => {
   const pokeSpeciesRes = useGetPokemonSpecies([String(pokeCreature?.id)]);
-  const {
-    data: speciesData,
-    isLoading: speciesIsLoading,
-    isFetching: speciesIsFetching,
-  } = pokeSpeciesRes[0] as PokeSpeciesResProps;
+  const speciesData = pokeSpeciesRes[0].data as PokemonSpecies;
 
   const {
     mutate: mutateUpdateCart,
@@ -88,11 +78,7 @@ export const PokemonDetailModalBody = ({
             </Box>
           ) : null}
 
-          {!speciesIsLoading || !speciesIsFetching ? (
-            <Typography className="text-md mb-lg">{removeHtmlCodeInDescription}</Typography>
-          ) : (
-            <Skeleton count={2} />
-          )}
+          <Typography className="text-md mb-lg">{removeHtmlCodeInDescription}</Typography>
 
           <Box className="flex flex-col md:flex-row gap-md mb-lg">
             <Box className="flex flex-row md:flex-auto gap-xs text-md md:mb-sm">

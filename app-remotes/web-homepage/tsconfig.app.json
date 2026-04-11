@@ -28,6 +28,9 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../../libs/ui/components/tsconfig.lib.json"
+    },
+    {
       "path": "../../libs/features/pokemon/tsconfig.lib.json"
     }
   ]

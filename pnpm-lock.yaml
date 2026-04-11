@@ -125,12 +125,18 @@ importers:
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
+      react-error-boundary:
+        specifier: ^6.1.1
+        version: 6.1.1(react@19.1.0)
       react-loading-skeleton:
         specifier: ^3.5.0
         version: 3.5.0(react@19.1.0)
       react-native:
         specifier: 0.81.5
         version: 0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0)
+      react-native-error-boundary:
+        specifier: ^3.1.0
+        version: 3.1.0(react-native-safe-area-context@5.6.2(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
       react-native-reanimated:
         specifier: ~4.1.1
         version: 4.1.6(@babel/core@7.29.0)(react-native-worklets@0.5.1(@babel/core@7.29.0)(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -538,7 +544,11 @@ importers:
         specifier: ~54.0.0
         version: 54.0.17(@babel/core@7.29.0)(expo@54.0.33)(jest@29.7.0(@types/node@20.19.9)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.19))(@types/node@20.19.9)(typescript@5.9.3)))(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
 
-  app-hosts/web: {}
+  app-hosts/web:
+    dependencies:
+      '@pokemon-pet-shop/ui-components':
+        specifier: workspace:*
+        version: link:../../libs/ui/components
 
   app-hosts/web-e2e: {}
 
@@ -571,6 +581,9 @@ importers:
       '@pokemon-pet-shop/feature-pokemon':
         specifier: workspace:*
         version: link:../../libs/features/pokemon
+      '@pokemon-pet-shop/ui-components':
+        specifier: workspace:*
+        version: link:../../libs/ui/components
 
   app-remotes/web-homepage-e2e: {}
 
@@ -4565,6 +4578,7 @@ packages:
   '@xmldom/xmldom@0.8.11':
     resolution: {integrity: sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==, tarball: https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.11.tgz}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==, tarball: https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz}
@@ -9917,6 +9931,11 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
+  react-error-boundary@6.1.1:
+    resolution: {integrity: sha512-BrYwPOdXi5mqkk5lw+Uvt0ThHx32rCt3BkukS4X23A2AIWDPSGX6iaWTc0y9TU/mHDA/6qOSGel+B2ERkOvD1w==, tarball: https://registry.npmjs.org/react-error-boundary/-/react-error-boundary-6.1.1.tgz}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==, tarball: https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.2.tgz}
 
@@ -9958,6 +9977,13 @@ packages:
         optional: true
       react-native-svg:
         optional: true
+
+  react-native-error-boundary@3.1.0:
+    resolution: {integrity: sha512-yOz3uEwhYae6WIqZB3332MqL7He0Dck1KwBUkLhD9UfEvizwX7TGSKNXdQo2uMB22GdZEiFRpCxz14u2HBnSNg==, tarball: https://registry.npmjs.org/react-native-error-boundary/-/react-native-error-boundary-3.1.0.tgz}
+    peerDependencies:
+      react: '>=16.6.0'
+      react-native: '>=0.74.0'
+      react-native-safe-area-context: '>=5.0.0'
 
   react-native-is-edge-to-edge@1.2.1:
     resolution: {integrity: sha512-FLbPWl/MyYQWz+KwqOZsSyj2JmLKglHatd3xLZWskXOpRaio4LfEDEz8E/A6uD8QoTHW6Aobw1jbEwK7KMgR7Q==, tarball: https://registry.npmjs.org/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.2.1.tgz}
@@ -23692,6 +23718,10 @@ snapshots:
       react: 19.1.0
       scheduler: 0.26.0
 
+  react-error-boundary@6.1.1(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
   react-fast-compare@3.2.2: {}
 
   react-freeze@1.0.4(react@19.1.0):
@@ -23727,6 +23757,12 @@ snapshots:
       react-native-svg: 15.12.1(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - supports-color
+
+  react-native-error-boundary@3.1.0(react-native-safe-area-context@5.6.2(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-native: 0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0)
+      react-native-safe-area-context: 5.6.2(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
 
   react-native-is-edge-to-edge@1.2.1(react-native@0.81.5(@babel/core@7.29.0)(@react-native-community/cli@20.0.0(typescript@5.9.3))(@react-native/metro-config@0.81.5(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0):
     dependencies:

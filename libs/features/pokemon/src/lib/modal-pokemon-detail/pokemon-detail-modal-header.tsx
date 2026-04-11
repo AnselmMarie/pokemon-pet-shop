@@ -8,7 +8,6 @@ import {
   PokemonSpecies,
 } from '@pokemon-pet-shop/types';
 import { Box, Image, Typography } from '@pokemon-pet-shop/ui-primitives';
-import { Skeleton } from '@pokemon-pet-shop/ui-components';
 
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 import { pricingFormat } from '@pokemon-pet-shop/util-pricing';
@@ -23,31 +22,16 @@ interface PokemonDetailModalHeaderProps {
   pokeTypeClass: IconPokeListType;
 }
 
-interface PokeSpeciesResProps {
-  data: Omit<PokemonSpecies, 'evolution_chain'> & {
-    evolution_chain: PokemonEvolution;
-  };
-  isLoading: boolean;
-  isFetching: boolean;
-}
-
 export const PokemonDetailModalHeader = ({
   pokeCreature,
   pokeTypeClass,
 }: PokemonDetailModalHeaderProps): ReactElement => {
   const res = useGetPokemonSpecies([String(pokeCreature?.id)]);
-  const {
-    data: speciesData,
-    isLoading: speciesIsLoading,
-    isFetching: speciesIsFetching,
-  } = res[0] as unknown as PokeSpeciesResProps;
+  const speciesData = res[0].data as unknown as Omit<PokemonSpecies, 'evolution_chain'> & {
+    evolution_chain: PokemonEvolution;
+  };
 
-  const pricingRes = useGetPokemonPricing();
-  const {
-    data: pricingData,
-    isLoading: pricingIsLoading,
-    isFetching: pricingIsFetching,
-  } = pricingRes;
+  const { data: pricingData } = useGetPokemonPricing();
 
   const getPricingFormat = useMemo((): number | string => {
     return pricingFormat(
@@ -74,14 +58,7 @@ export const PokemonDetailModalHeader = ({
       }`}
     >
       <Box className="absolute flex w-fit bg-medYellow mt-md ml-md text-xl py-xs px-sm rounded-sm">
-        <Typography>
-          {(!pricingIsLoading || !pricingIsFetching) &&
-          (!speciesIsLoading || !speciesIsFetching) ? (
-            getPricingFormat
-          ) : (
-            <Skeleton width={100} baseColor="#cab22c" highlightColor="#fce97d" />
-          )}
-        </Typography>
+        <Typography>{getPricingFormat}</Typography>
       </Box>
       <Image
         src={pokeCreature?.sprites?.other?.['official-artwork']?.front_default}

@@ -30,3 +30,9 @@ export * from './lib/server-error';
 
 // Hide In Mobile
 export * from './lib/hide-in-mobile';
+
+// Error Boundary
+export * from './lib/error-boundary';
+
+// Suspense Boundary
+export * from './lib/suspense-boundary';

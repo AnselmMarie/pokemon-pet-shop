@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import {
   createRootRoute,
   createRouter,
@@ -6,6 +6,7 @@ import {
   Navigate,
   Outlet,
 } from '@tanstack/react-router';
+import { SuspenseBoundary } from '@pokemon-pet-shop/ui-components';
 
 const HomepageModule = lazy(() => import('webHomepage/Module'));
 const NotFoundModule = lazy(() => import('webNotFound/Module'));
@@ -18,9 +19,9 @@ const homepageRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: () => (
-    <Suspense fallback={<div>Loading Homepage...</div>}>
+    <SuspenseBoundary fallback={<div>Loading Homepage...</div>}>
       <HomepageModule />
-    </Suspense>
+    </SuspenseBoundary>
   ),
 });
 
@@ -28,9 +29,9 @@ const notFoundRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/not-found',
   component: () => (
-    <Suspense fallback={<div>Loading...</div>}>
+    <SuspenseBoundary fallback={<div>Loading...</div>}>
       <NotFoundModule />
-    </Suspense>
+    </SuspenseBoundary>
   ),
 });
 

@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import { useInfiniteQuery, InfiniteData } from '@tanstack/react-query';
+import { useSuspenseInfiniteQuery, InfiniteData } from '@tanstack/react-query';
 
 import { PokemonDetailBase } from '@pokemon-pet-shop/types';
 import { axiosInstance } from '@pokemon-pet-shop/util-api-client';
@@ -11,7 +11,7 @@ export const useGetPokemonList = () => {
       `pokemon/list?limit=50&offset=${pageParam}`
     );
 
-  return useInfiniteQuery({
+  return useSuspenseInfiniteQuery({
     queryKey,
     queryFn,
     select: (r: InfiniteData<AxiosResponse<(PokemonDetailBase & { name: string })[]>, number>) => r,

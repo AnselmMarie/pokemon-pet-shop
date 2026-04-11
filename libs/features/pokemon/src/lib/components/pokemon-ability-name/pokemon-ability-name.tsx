@@ -7,7 +7,7 @@ import {
   PokemonDetailTypes,
 } from '@pokemon-pet-shop/types';
 import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
-import { HideInMobile, IconPokeType, Skeleton } from '@pokemon-pet-shop/ui-components';
+import { HideInMobile, IconPokeType } from '@pokemon-pet-shop/ui-components';
 
 import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
 
@@ -19,7 +19,6 @@ interface PokemonAbilityNameProps {
   pokeTypeClass: IconPokeListType;
   showAtkLine?: boolean;
   displayInDetail?: boolean;
-  isLoading?: boolean;
 }
 
 export const PokemonAbilityName = ({
@@ -28,7 +27,6 @@ export const PokemonAbilityName = ({
   pokeTypeClass,
   showAtkLine = true,
   displayInDetail = false,
-  isLoading = false,
 }: PokemonAbilityNameProps): ReactElement => {
   const isAtkLineShownCircleClass = useMemo(() => {
     return showAtkLine ? 'md:-ml-[12px]' : '';
@@ -89,23 +87,7 @@ export const PokemonAbilityName = ({
           ] ?? ''
         }`}
       >
-        {isLoading ? (
-          <Skeleton
-            width={100}
-            baseColor={
-              (pokeAbilityTypeMap.get(pokeTypeClass)?.[
-                `${pokeTypeClass}SkeletonBase` as keyof object
-              ] ?? undefined) as string | undefined
-            }
-            highlightColor={
-              (pokeAbilityTypeMap.get(pokeTypeClass)?.[
-                `${pokeTypeClass}SkeletonHighlight` as keyof object
-              ] ?? undefined) as string | undefined
-            }
-          />
-        ) : (
-          formatName
-        )}
+        {formatName}
       </Typography>
     </Box>
   );
