@@ -3,27 +3,18 @@ import { useAtomValue, useSetAtom } from 'jotai';
 
 import { CartData } from '@pokemon-pet-shop/types';
 import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
-import { Modal, ModalScroll } from '@pokemon-pet-shop/ui-components';
+import { Modal, ModalScroll, SuspenseBoundary, Skeleton } from '@pokemon-pet-shop/ui-components';
 import { useGetCart } from '@pokemon-pet-shop/service-cart';
 import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
 
 import CartModalItem from './cart-modal-item';
 import { closeSideCartModalAtom, isSideCartModalOpenAtom } from './cart-modal-atom.state';
 
-export const CartModal = (): ReactElement => {
+const CartModalContent = (): ReactElement => {
   const { data } = useGetCart();
 
-  const isOpen = useAtomValue(isSideCartModalOpenAtom);
-  const closeModal = useSetAtom(closeSideCartModalAtom);
-
   return (
-    <Modal
-      title="Pokecart"
-      headlineType="relative"
-      modalAlignment="right"
-      isOpen={isOpen}
-      onClick={closeModal}
-    >
+    <>
       <ModalScroll>
         <Box className="pb-[150px]">
           {(data?.data ?? []).map((el: CartData, i: number) => {
@@ -45,6 +36,33 @@ export const CartModal = (): ReactElement => {
           {pricingFormatUSD(Number(data?.total))}
         </Typography>
       </Box>
+    </>
+  );
+};
+
+const CartModalSkeleton = (): ReactElement => {
+  return (
+    <Box className="p-lg">
+      <Skeleton count={3} height={60} />
+    </Box>
+  );
+};
+
+export const CartModal = (): ReactElement => {
+  const isOpen = useAtomValue(isSideCartModalOpenAtom);
+  const closeModal = useSetAtom(closeSideCartModalAtom);
+
+  return (
+    <Modal
+      title="Pokecart"
+      headlineType="relative"
+      modalAlignment="right"
+      isOpen={isOpen}
+      onClick={closeModal}
+    >
+      <SuspenseBoundary fallback={<CartModalSkeleton />}>
+        <CartModalContent />
+      </SuspenseBoundary>
     </Modal>
   );
 };

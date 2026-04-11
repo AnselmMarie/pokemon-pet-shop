@@ -1,7 +1,14 @@
-import { PokemonList } from '@pokemon-pet-shop/feature-pokemon';
+import { PokemonList, PokemonListSkeleton } from '@pokemon-pet-shop/feature-pokemon';
+import { SuspenseBoundary } from '@pokemon-pet-shop/ui-components';
 
 import '../styles.css';
 
-export default function App() {
-  return <PokemonList />;
-}
+const App = () => {
+  return (
+    <SuspenseBoundary fallback={<PokemonListSkeleton />}>
+      <PokemonList />
+    </SuspenseBoundary>
+  );
+};
+
+export default App;

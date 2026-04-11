@@ -1,8 +1,8 @@
-import { ReactElement, useMemo, Fragment } from 'react';
+import { ReactElement, Fragment } from 'react';
 
 import { PokemonDetailBase } from '@pokemon-pet-shop/types';
 import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
-import { skeletonLoadDataUtil, Button } from '@pokemon-pet-shop/ui-components';
+import { Button } from '@pokemon-pet-shop/ui-components';
 
 import { useGetPokemonList } from '@pokemon-pet-shop/service-pokemon';
 
@@ -16,20 +16,11 @@ import image from './assets/bulbasaur.small.gif';
  * React Native, use flashlist for long lists -> https://shopify.github.io/flash-list/
  * */
 export const PokemonList = (): ReactElement => {
-  const { data, isLoading, isFetching, isFetchingNextPage, hasNextPage, fetchNextPage } =
-    useGetPokemonList();
+  const { data, isFetchingNextPage, hasNextPage, fetchNextPage } = useGetPokemonList();
 
-  const isDataLoading = isLoading || isFetching || isFetchingNextPage;
+  const pages = data?.pages;
 
-  const newData = useMemo(() => {
-    const pageData = data?.pages;
-    const countNum = 50;
-    const template = { abilities: [{}, {}] };
-    const arrCount = pageData && pageData.length !== 0 ? pageData.length * countNum : countNum;
-    return skeletonLoadDataUtil(pageData, isLoading, template, true, arrCount);
-  }, [data, isLoading]);
-
-  if ((!newData || newData.length === 0) && !hasNextPage) {
+  if ((!pages || pages.length === 0) && !hasNextPage) {
     return (
       <Box className="flex justify-center my-md mt-[100px]">
         <Typography variant="h2">
@@ -43,12 +34,12 @@ export const PokemonList = (): ReactElement => {
   return (
     <>
       <Box className="flex flex-row justify-center flex-wrap gap-md m-lg pt-lg mt-[100px]">
-        {(newData ?? []).map(
+        {(pages ?? []).map(
           (arr: { data: (PokemonDetailBase & { name: string })[] }, i: number): ReactElement => {
             return (
               <Fragment key={i}>
                 {(arr?.data ?? []).map((el: PokemonDetailBase & { name: string }, i: number) => (
-                  <PokemonCard key={el?.name || i} pokeCreature={el} isLoading={isDataLoading} />
+                  <PokemonCard key={el?.name || i} pokeCreature={el} />
                 ))}
               </Fragment>
             );
