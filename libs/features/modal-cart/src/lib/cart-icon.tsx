@@ -3,7 +3,6 @@ import { useSetAtom } from 'jotai';
 
 import { Box, Typography } from '@pokemon-pet-shop/ui-primitives';
 import { Icon, SuspenseBoundary } from '@pokemon-pet-shop/ui-components';
-
 import { useGetCart } from '@pokemon-pet-shop/service-cart';
 
 import { CartModal } from './cart-modal';
