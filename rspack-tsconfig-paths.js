@@ -45,15 +45,26 @@ function getTsconfigPaths(tsconfigPath, baseDir) {
  * Skipped during dev serve since the explicit MF dev-server executor cannot pass env vars.
  */
 function maybeWithZephyr(config) {
+  // Silence source-map-loader warnings from @module-federation packages,
+  // whose published builds reference .ts source files that are not shipped.
+  const ignoreWarnings = [
+    ...(config.ignoreWarnings || []),
+    {
+      module: /@module-federation[\\/]/,
+      message: /Failed to parse source map/,
+    },
+  ];
+  const configWithIgnores = { ...config, ignoreWarnings };
+
   if (
     process.env.ZE_SECRET_TOKEN &&
     !process.env.SKIP_ZEPHYR &&
     process.env.NODE_ENV === 'production'
   ) {
     const { withZephyr } = require('zephyr-rspack-plugin');
-    return withZephyr()(config);
+    return withZephyr()(configWithIgnores);
   }
-  return config;
+  return configWithIgnores;
 }
 
 module.exports = { getTsconfigPaths, maybeWithZephyr };
