@@ -1,1 +1,0 @@
-{"version":3,"file":"icon-svg.interface.d.ts","sourceRoot":"","sources":["../../../../src/lib/icon/icons/icon-svg.interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,YAAY;IAC3B,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,OAAO,CAAC,EAAE,MAAM,IAAI,CAAC;CACtB;AAED,MAAM,WAAW,cAAc;IAC7B,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,OAAO,CAAC,EAAE,MAAM,IAAI,CAAC;CACtB"}

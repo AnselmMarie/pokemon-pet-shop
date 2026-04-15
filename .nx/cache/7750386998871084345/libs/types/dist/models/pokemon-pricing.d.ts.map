@@ -1,1 +1,0 @@
-{"version":3,"file":"pokemon-pricing.d.ts","sourceRoot":"","sources":["../../src/models/pokemon-pricing.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,OAAO;IACtB,KAAK,EAAE,MAAM,CAAC;CACf;AAED,MAAM,WAAW,aAAa;IAC5B,CAAC,GAAG,EAAE,MAAM,GAAG,OAAO,CAAC;CACxB;AAED,MAAM,WAAW,cAAc;IAC7B,MAAM,EAAE,aAAa,CAAC;IACtB,SAAS,EAAE,OAAO,CAAC;IACnB,QAAQ,EAAE,OAAO,CAAC;CACnB"}
