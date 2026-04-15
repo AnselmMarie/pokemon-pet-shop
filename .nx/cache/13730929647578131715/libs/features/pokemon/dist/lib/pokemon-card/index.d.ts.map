@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/lib/pokemon-card/index.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAY,MAAM,OAAO,CAAC;AAE/C,OAAO,EAAwB,iBAAiB,EAAE,MAAM,yBAAyB,CAAC;AAYlF,UAAU,gBAAgB;IACxB,YAAY,EAAE,iBAAiB,GAAG;QAAE,IAAI,EAAE,MAAM,CAAA;KAAE,CAAC;CACpD;AAED,eAAO,MAAM,WAAW,GAAI,kBAAkB,gBAAgB,KAAG,YAyFhE,CAAC"}
