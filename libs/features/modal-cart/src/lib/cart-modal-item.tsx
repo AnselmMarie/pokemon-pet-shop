@@ -1,0 +1,95 @@
+import { ReactElement } from 'react';
+
+import { CartData } from '@pokemon-pet-shop/types';
+import { Box, Typography, Image } from '@pokemon-pet-shop/ui-primitives';
+import { Icon } from '@pokemon-pet-shop/ui-components';
+
+import { useDeleteCartItem, useUpdateCart } from '@pokemon-pet-shop/service-cart';
+
+import { pricingFormatUSD } from '@pokemon-pet-shop/util-pricing';
+import { capitalizeName } from '@pokemon-pet-shop/util-text-transform';
+import { getPokeTypePrefixClass } from '@pokemon-pet-shop/util-poke-type';
+
+import { cartModalTypeMap } from './cart-modal-type-map.util';
+
+interface CartModalItemProps {
+  el: CartData;
+  currIndex: number;
+  lastIndex: number;
+}
+
+const CartModalItem = ({ el, currIndex, lastIndex }: CartModalItemProps): ReactElement => {
+  const pokeTypeClass = getPokeTypePrefixClass(el?.types);
+
+  const { mutate: updateMutate, isPending: updateIsPending } = useUpdateCart();
+  const { mutate: deleteMutate, isPending: deleteIsPending } = useDeleteCartItem();
+
+  const handleRemoveCartItem = (id: string) => {
+    deleteMutate(id);
+  };
+
+  const handleAddToCart = (id: string) => {
+    updateMutate({
+      id,
+      addToCart: true,
+      removeFromCart: false,
+    });
+  };
+
+  const handleRemoveFromCart = (id: string) => {
+    updateMutate({
+      id,
+      addToCart: false,
+      removeFromCart: true,
+    });
+  };
+
+  return (
+    <Box className="flex flex-col justify-center relative">
+      <Box className="flex flex-row gap-md">
+        <Box
+          className={`rounded-sm p-sm border-4 border-solid ${
+            cartModalTypeMap.get(pokeTypeClass)?.[`${pokeTypeClass}ImageWrapper` as keyof object] ??
+            ''
+          }`}
+        >
+          <Image src={el?.image} className="w-[115px] h-[115px]" alt={`${el?.name} Image`} />
+        </Box>
+        <Box className="flex-1">
+          <Typography className="text-lg mb-sm" variant="h1">
+            {capitalizeName(el?.name)}
+          </Typography>
+          <Typography className="font-bold text-lg">{pricingFormatUSD(el?.price)}</Typography>
+
+          <Box className="flex bg-lightGrey gap-md rounded-pill w-fit items-center p-sm mt-sm">
+            <Icon
+              icon="IconMinus"
+              size={24}
+              color="blue"
+              isDisabled={el?.quantity === 1 || updateIsPending}
+              onClick={() => handleRemoveFromCart(el?.id)}
+            />
+            <Typography>{el?.quantity}</Typography>
+            <Icon
+              icon="IconPlus"
+              size={24}
+              color="blue"
+              isDisabled={updateIsPending}
+              onClick={() => handleAddToCart(el?.id)}
+            />
+          </Box>
+        </Box>
+
+        <Icon
+          icon="IconTrash"
+          color="red"
+          isDisabled={deleteIsPending}
+          onClick={() => handleRemoveCartItem(el?.id)}
+        />
+      </Box>
+      {currIndex !== lastIndex && <Box className="w-full my-lg border-t-[1px] border-medGrey" />}
+    </Box>
+  );
+};
+
+export default CartModalItem;

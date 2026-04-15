@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Build output (rebuilt inside Docker)
+**/dist/
+**/out-tsc/
+
+# Claude
+.claude/
+
+# Environment files
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation
+*.md
+
+# Test & config files not needed in build context
+coverage/
+.playwright/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Expo / mobile (not needed for API)
+app-hosts/mobile/
+app-remotes/
+
+# Husky
+.husky/

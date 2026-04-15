@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "composite": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": ["es2022"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2022",
+    "customConditions": ["@pokemon-pet-shop/source"],
+    "baseUrl": ".",
+    "typeRoots": ["./libs/types", "./node_modules", "./node_modules/@types", "./app-hosts"],
+    "types": ["node"],
+    "paths": {
+      "webFooter/Module": ["app-remotes/web-footer/src/remote-entry.ts"],
+      "webHeader/Module": ["app-remotes/web-header/src/remote-entry.ts"],
+      "webHomepage/Module": ["app-remotes/web-homepage/src/remote-entry.ts"],
+      "webModalSideCart/Module": ["app-remotes/web-modal-side-cart/src/remote-entry.ts"],
+      "webNotFound/Module": ["app-remotes/web-not-found/src/remote-entry.ts"]
+    }
+  }
+}

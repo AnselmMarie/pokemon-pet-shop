@@ -1,0 +1,10 @@
+packages:
+  - 'app-hosts/*'
+  - 'app-remotes/*'
+  - 'libs/features/*'
+  - 'libs/ui/*'
+  - 'libs/services/*'
+  - 'libs/utils/*'
+  - 'libs/states/*'
+  - 'packages/*'
+  - 'libs/*'

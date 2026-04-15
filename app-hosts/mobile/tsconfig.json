@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": ["nativewind-env.d.ts"],
+  "references": [
+    {
+      "path": "../../libs/features/pokemon"
+    },
+    {
+      "path": "../../libs/features/header"
+    },
+    {
+      "path": "../../libs/features/footer"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

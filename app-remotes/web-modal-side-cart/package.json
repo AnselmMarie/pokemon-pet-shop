@@ -1,0 +1,11 @@
+{
+  "name": "@pokemon-pet-shop/remote-web-modal-side-cart",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@pokemon-pet-shop/feature-modal-cart": "workspace:*"
+  },
+  "zephyr:dependencies": {
+    "atomTheme": "atomTheme@dev"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./app-hosts/api-e2e"
+    },
+    {
+      "path": "./app-hosts/api"
+    },
+    {
+      "path": "./app-hosts/web"
+    },
+    {
+      "path": "./app-remotes/web-footer"
+    },
+    {
+      "path": "./libs/features/header"
+    },
+    {
+      "path": "./libs/features/footer"
+    },
+    {
+      "path": "./libs/features/pokemon"
+    },
+    {
+      "path": "./libs/features/page-not-found"
+    },
+    {
+      "path": "./libs/ui/ds-tokens"
+    },
+    {
+      "path": "./libs/features/switch-theme"
+    },
+    {
+      "path": "./libs/features/modal-cart"
+    },
+    {
+      "path": "./libs/services/pokemon"
+    },
+    {
+      "path": "./libs/utils/api-client"
+    },
+    {
+      "path": "./libs/utils/text-transform"
+    },
+    {
+      "path": "./libs/utils/detect"
+    },
+    {
+      "path": "./libs/utils/pricing"
+    },
+    {
+      "path": "./app-remotes/atom-theme-e2e"
+    },
+    {
+      "path": "./app-remotes/atom-theme"
+    },
+    {
+      "path": "./libs/services/cart"
+    },
+    {
+      "path": "./libs/utils/poke-type"
+    },
+    {
+      "path": "./libs/utils/storage"
+    },
+    {
+      "path": "./app-remotes/web-header-e2e"
+    },
+    {
+      "path": "./app-remotes/web-header"
+    },
+    {
+      "path": "./app-remotes/web-footer-e2e"
+    },
+    {
+      "path": "./app-remotes/web-not-found-e2e"
+    },
+    {
+      "path": "./app-remotes/web-not-found"
+    },
+    {
+      "path": "./app-remotes/web-homepage-e2e"
+    },
+    {
+      "path": "./app-remotes/web-homepage"
+    },
+    {
+      "path": "./app-remotes/web-modal-side-cart-e2e"
+    },
+    {
+      "path": "./app-remotes/web-modal-side-cart"
+    },
+    {
+      "path": "./app-hosts/mobile"
+    },
+    {
+      "path": "./libs/types"
+    },
+    {
+      "path": "./libs/ui/primitives"
+    },
+    {
+      "path": "./libs/ui/components"
+    },
+    {
+      "path": "./app-hosts/web-e2e"
+    }
+  ]
+}

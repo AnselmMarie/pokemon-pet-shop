@@ -1,0 +1,40 @@
+{
+  "name": "web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "app-hosts/web/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "clean-static-remotes": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf tmp/static-remotes",
+        "cwd": "{workspaceRoot}"
+      }
+    },
+    "serve": {
+      "options": {
+        "port": 4200,
+        "env": {
+          "WEBPACK_SERVE": "true",
+          "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"CommonJS\",\"moduleResolution\":\"Node10\",\"customConditions\":null}"
+        }
+      },
+      "dependsOn": ["clean-static-remotes", "typecheck"]
+    },
+    "serve-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run-many --projects='app-remotes/*' --target=serve --parallel",
+          "sleep 25 && nx serve web"
+        ],
+        "parallel": true
+      },
+      "dependsOn": ["clean-static-remotes"]
+    },
+    "build": {
+      "dependsOn": ["^build", "typecheck"]
+    }
+  }
+}
