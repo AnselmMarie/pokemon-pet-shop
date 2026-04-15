@@ -1,0 +1,1 @@
+{"version":3,"file":"typography.interface.d.ts","sourceRoot":"","sources":["../../../src/lib/typography/typography.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,mBAAmB,CAAC;AAEtD,MAAM,WAAW,eAAe;IAC9B,OAAO,CAAC,EAAE,iBAAiB,CAAC;IAC5B,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,OAAO,CAAC,EAAE,MAAM,IAAI,CAAC;CACtB"}
